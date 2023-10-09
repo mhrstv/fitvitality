@@ -33,9 +33,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(225, 115);
+            button1.Font = new Font("Segoe UI", 72F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(105, 23);
+            button1.Size = new Size(517, 280);
             button1.TabIndex = 0;
             button1.Text = "Marto buton";
             button1.UseVisualStyleBackColor = true;

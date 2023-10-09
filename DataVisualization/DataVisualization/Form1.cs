@@ -6,5 +6,15 @@ namespace DataVisualization
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dobur vecher!");
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MessageBox.Show("neeeee");
+        }
     }
 }

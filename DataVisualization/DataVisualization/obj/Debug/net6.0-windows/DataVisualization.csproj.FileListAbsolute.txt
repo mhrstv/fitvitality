@@ -1,0 +1,16 @@
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\bin\Debug\net6.0-windows\DataVisualization.exe
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\bin\Debug\net6.0-windows\DataVisualization.deps.json
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\bin\Debug\net6.0-windows\DataVisualization.runtimeconfig.json
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\bin\Debug\net6.0-windows\DataVisualization.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\bin\Debug\net6.0-windows\DataVisualization.pdb
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.Form1.resources
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.csproj.GenerateResource.cache
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.AssemblyInfoInputs.cache
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.AssemblyInfo.cs
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.csproj.CoreCompileInputs.cache
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\refint\DataVisualization.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.pdb
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\DataVisualization.genruntimeconfig.cache
+C:\Users\User1\Desktop\Projects\olympiad-project\DataVisualization\DataVisualization\obj\Debug\net6.0-windows\ref\DataVisualization.dll

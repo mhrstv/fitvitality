@@ -33,12 +33,13 @@
             // 
             // button1
             // 
-            button1.Location = new Point(363, 140);
+            button1.Location = new Point(225, 115);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(105, 23);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "Marto buton";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
@@ -48,6 +49,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
+            FormClosing += Form1_FormClosing;
             ResumeLayout(false);
         }
 

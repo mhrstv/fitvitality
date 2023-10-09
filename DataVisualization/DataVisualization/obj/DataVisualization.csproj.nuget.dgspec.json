@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\olympiad-project\\DataVisualization\\DataVisualization\\DataVisualization.csproj": {}
+    "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\DataVisualization\\DataVisualization\\DataVisualization.csproj": {}
   },
   "projects": {
-    "E:\\Project\\olympiad-project\\DataVisualization\\DataVisualization\\DataVisualization.csproj": {
+    "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\DataVisualization\\DataVisualization\\DataVisualization.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\olympiad-project\\DataVisualization\\DataVisualization\\DataVisualization.csproj",
+        "projectUniqueName": "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\DataVisualization\\DataVisualization\\DataVisualization.csproj",
         "projectName": "DataVisualization",
-        "projectPath": "E:\\Project\\olympiad-project\\DataVisualization\\DataVisualization\\DataVisualization.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\olympiad-project\\DataVisualization\\DataVisualization\\obj\\",
+        "projectPath": "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\DataVisualization\\DataVisualization\\DataVisualization.csproj",
+        "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\DataVisualization\\DataVisualization\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

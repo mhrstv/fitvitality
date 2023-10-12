@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj": {}
+    "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj": {}
   },
   "projects": {
-    "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj": {
+    "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj",
+        "projectUniqueName": "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj",
         "projectName": "FitVitality",
-        "projectPath": "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\obj\\",
+        "projectPath": "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj",
+        "packagesPath": "C:\\Users\\User1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\FitVitality\\FitVitality\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,6 +43,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Krypton.Toolkit": {
+              "target": "Package",
+              "version": "[70.22.11.312, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

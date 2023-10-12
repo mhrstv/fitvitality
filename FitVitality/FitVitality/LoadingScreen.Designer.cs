@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            progressBar1 = new ProgressBar();
+            kryptonProgressBar1 = new Krypton.Toolkit.KryptonProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
-            // progressBar1
+            // kryptonProgressBar1
             // 
-            progressBar1.BackColor = Color.Black;
-            progressBar1.ForeColor = Color.Black;
-            progressBar1.Location = new Point(234, 340);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(243, 10);
-            progressBar1.Style = ProgressBarStyle.Continuous;
-            progressBar1.TabIndex = 0;
+            kryptonProgressBar1.BackColor = Color.Black;
+            kryptonProgressBar1.ForeColor = Color.Black;
+            kryptonProgressBar1.Location = new Point(235, 340);
+            kryptonProgressBar1.Name = "kryptonProgressBar1";
+            kryptonProgressBar1.Size = new Size(241, 10);
+            kryptonProgressBar1.TabIndex = 1;
+            kryptonProgressBar1.UseKrypton = true;
             // 
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Tick += timer1_Tick;
+            timer1.Tick += timer1_Tick_4;
             // 
             // startLoadScreen
             // 
@@ -54,7 +54,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fitvitality;
             ClientSize = new Size(692, 428);
-            Controls.Add(progressBar1);
+            Controls.Add(kryptonProgressBar1);
             Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.None;
             Name = "startLoadScreen";
@@ -66,7 +66,7 @@
 
         #endregion
 
-        private ProgressBar progressBar1;
+        private Krypton.Toolkit.KryptonProgressBar kryptonProgressBar1;
         private System.Windows.Forms.Timer timer1;
     }
 }

@@ -35,3 +35,6 @@ E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\ref
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.pdb
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.genruntimeconfig.cache
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\ref\FitVitality.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\Krypton.Toolkit.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.csproj.AssemblyReference.cache
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.csproj.CopyComplete

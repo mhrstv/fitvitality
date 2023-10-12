@@ -21,7 +21,7 @@ namespace FitVitality
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            
         }
 
         private void startLoadScreen_Load(object sender, EventArgs e)

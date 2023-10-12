@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace FitVitality
 {
-    public partial class formRegister : Form
+    public partial class Form1 : Form
     {
-        Form flog = new formLogin();
-        public formRegister()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            flog.Show();
-            
         }
     }
 }

@@ -35,8 +35,8 @@
             // 
             // progressBar1
             // 
-            progressBar1.BackColor = Color.FromArgb(128, 255, 255);
-            progressBar1.ForeColor = SystemColors.HotTrack;
+            progressBar1.BackColor = Color.Black;
+            progressBar1.ForeColor = Color.Red;
             progressBar1.Location = new Point(234, 340);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(243, 10);
@@ -55,10 +55,12 @@
             BackgroundImage = Properties.Resources.fitvitality;
             ClientSize = new Size(692, 428);
             Controls.Add(progressBar1);
+            Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.None;
             Name = "startLoadScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "startLoadScreen";
+            Load += startLoadScreen_Load;
             ResumeLayout(false);
         }
 

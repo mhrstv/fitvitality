@@ -24,7 +24,7 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if(Properties.Settings.Default.name == "" && Properties.Settings.Default.age == 0 && Properties.Settings.Default.heigth == 0 && Properties.Settings.Default.weigth == 0)
+            if (Properties.Settings.Default.name == "" && Properties.Settings.Default.age == 0 && Properties.Settings.Default.heigth == 0 && Properties.Settings.Default.weigth == 0)
             {
 
             }

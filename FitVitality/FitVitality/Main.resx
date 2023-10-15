@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -118,66 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIAAFdwAAZgAAAICAAAABACAAKAgBAGt3AABAQAAAAQAgAChCAACTfwEAMDAAAAEA

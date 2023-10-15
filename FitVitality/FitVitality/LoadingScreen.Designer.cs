@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loadingScreen));
             progressBar1 = new ProgressBar();
-            timer1 = new System.Windows.Forms.Timer(components);
+            loadTimer = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
             SuspendLayout();
             // 
@@ -43,10 +43,10 @@
             progressBar1.Style = ProgressBarStyle.Continuous;
             progressBar1.TabIndex = 0;
             // 
-            // timer1
+            // loadTimer
             // 
-            timer1.Enabled = true;
-            timer1.Tick += timer1_Tick;
+            loadTimer.Enabled = true;
+            loadTimer.Tick += timer1_Tick;
             // 
             // panel1
             // 
@@ -77,7 +77,7 @@
         #endregion
 
         private ProgressBar progressBar1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer loadTimer;
         private Panel panel1;
     }
 }

@@ -50,6 +50,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
+            Opacity = 0D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             FormClosed += Form1_FormClosed;

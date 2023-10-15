@@ -16,5 +16,10 @@ namespace FitVitality
         {
             InitializeComponent();
         }
+
+        private void WelcomeScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

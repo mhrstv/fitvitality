@@ -35,25 +35,40 @@ namespace FitVitality
         private void timer1_Tick(object sender, EventArgs e)
         {
             float j = 39;
-            timer1.Enabled = true;
-            progressBar1.Increment(4);
-            if (progressBar1.Value == 100)
+            if(this.Opacity == 1)
             {
-                Thread.Sleep(1000);
-                for (int i = 213; i > 12; i--)
+                loadTimer.Enabled = true;
+                progressBar1.Increment(3);
+                if (progressBar1.Value == 100)
                 {
-                    
+                    progressBar1.Visible = false;
+                    loadTimer.Enabled = false;
+                    Thread.Sleep(500);
+                    /*for (int i = 213; i > 12; i--)
+                    {
+
+                    }*/
+                    Thread.Sleep(200);
+                    Form1 form = new Form1();
+                    for (double i = this.Opacity; i >= 0 ; i = i - 0.00002)
+                    {
+                        this.Opacity = i;
+                    }
+                    Thread.Sleep(1000);
+                    form.Show();
+                    this.Hide();
                 }
-                Thread.Sleep(150);
-                Form1 form = new Form1();
-                form.Show();
-                this.Hide();
             }
         }
 
         private void loadingScreen_Load(object sender, EventArgs e)
         {
             this.ShowInTaskbar = false;
+            this.Opacity = 0;
+            while(this.Opacity != 1)
+            {
+                this.Opacity = this.Opacity + 0.00002;
+            }
         }
     }
 }

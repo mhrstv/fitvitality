@@ -41,6 +41,7 @@
             Name = "WelcomeScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "WelcomeScreen";
+            Load += WelcomeScreen_Load;
             ResumeLayout(false);
         }
 

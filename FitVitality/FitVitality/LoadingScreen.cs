@@ -10,26 +10,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Krypton.Toolkit;
 
 namespace FitVitality
 {
-    public partial class loadingScreen : Form
+    public partial class loadingScreen : KryptonForm
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // width of ellipse
-            int nHeightEllipse// height of ellipse
-        );
         public loadingScreen()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -82,7 +71,7 @@ namespace FitVitality
             this.Opacity = 0;
             while (this.Opacity != 1)
             {
-                this.Opacity = this.Opacity + 0.00002;
+                this.Opacity = this.Opacity + 0.00004;
             }
         }
     }

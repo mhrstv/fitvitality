@@ -8,28 +8,16 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Krypton.Toolkit;
+
 
 namespace FitVitality
 {
-    public partial class Form1 : Form
+    public partial class Form1 : KryptonForm
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-
-
-        private static extern IntPtr CreateRoundRectRgn
-        (
-            int nLeftRect,     // x-coordinate of upper-left corner
-            int nTopRect,      // y-coordinate of upper-left corner
-            int nRightRect,    // x-coordinate of lower-right corner
-            int nBottomRect,   // y-coordinate of lower-right corner
-            int nWidthEllipse, // width of ellipse
-            int nHeightEllipse // height of ellipse
-        );
         public Form1()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -39,7 +27,7 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -52,7 +40,7 @@ namespace FitVitality
             this.Opacity = 0;
             while (this.Opacity != 1)
             {
-                this.Opacity += 0.00002;
+                this.Opacity += 0.00004;
             }
         }
     }

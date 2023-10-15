@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace FitVitality
 {
@@ -33,11 +34,18 @@ namespace FitVitality
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            float j = 39;
             timer1.Enabled = true;
             progressBar1.Increment(4);
             if (progressBar1.Value == 100)
             {
+                Thread.Sleep(3000);
                 timer1.Enabled = false;
+                for (int i = 213; i > 12; i--)
+                {
+                    j = j - (float)0.2;
+                    panel1.Location = new Point(i, (int)j);
+                }
                 Form1 form = new Form1();
                 form.Show();
                 this.Hide();

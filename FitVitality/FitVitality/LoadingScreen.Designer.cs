@@ -32,11 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loadingScreen));
             progressBar1 = new ProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(235, 340);
+            progressBar1.Location = new Point(257, 338);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(242, 10);
             progressBar1.Style = ProgressBarStyle.Continuous;
@@ -47,12 +48,21 @@
             timer1.Enabled = true;
             timer1.Tick += timer1_Tick;
             // 
+            // panel1
+            // 
+            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(213, 30);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(335, 302);
+            panel1.TabIndex = 1;
+            // 
             // loadingScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.fitvitality;
-            ClientSize = new Size(708, 463);
+            ClientSize = new Size(750, 463);
+            Controls.Add(panel1);
             Controls.Add(progressBar1);
             Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.None;
@@ -67,5 +77,6 @@
 
         private ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
+        private Panel panel1;
     }
 }

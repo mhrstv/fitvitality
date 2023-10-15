@@ -6,7 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Krypton.Toolkit/70.22.11.312": {}
+      "Krypton.Toolkit/70.22.11.312": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Krypton.Toolkit.dll": {
+            "assemblyVersion": "70.22.11.312",
+            "fileVersion": "70.22.11.312"
+          }
+        }
+      }
     }
   },
   "libraries": {

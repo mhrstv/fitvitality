@@ -34,23 +34,19 @@ namespace FitVitality
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            float j = 39;
-            if(this.Opacity == 1)
+            if (this.Opacity >= 1)
             {
                 loadTimer.Enabled = true;
-                progressBar1.Increment(3);
-                if (progressBar1.Value == 100)
+                panel3.Width += 3;
+                if (panel3.Width >= panel2.Width)
                 {
-                    progressBar1.Visible = false;
-                    loadTimer.Enabled = false;
+                    loadTimer.Stop();
                     Thread.Sleep(500);
-                    /*for (int i = 213; i > 12; i--)
-                    {
-
-                    }*/
-                    Thread.Sleep(200);
+                    panel3.Visible = false;
+                    panel2.Visible = false;
+                    Thread.Sleep(500);
                     Form1 form = new Form1();
-                    for (double i = this.Opacity; i >= 0 ; i = i - 0.00002)
+                    for (double i = this.Opacity; i >= 0; i = i - 0.00002)
                     {
                         this.Opacity = i;
                     }
@@ -64,8 +60,18 @@ namespace FitVitality
         private void loadingScreen_Load(object sender, EventArgs e)
         {
             this.ShowInTaskbar = false;
+
+        }
+
+        private void loadingScreen_Activated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadingScreen_Enter(object sender, EventArgs e)
+        {
             this.Opacity = 0;
-            while(this.Opacity != 1)
+            while (this.Opacity != 1)
             {
                 this.Opacity = this.Opacity + 0.00002;
             }

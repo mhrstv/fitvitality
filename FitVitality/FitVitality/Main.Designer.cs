@@ -52,7 +52,8 @@
             Name = "Form1";
             Opacity = 0D;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "FitVitality";
+            Activated += Form1_Activated;
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             ResumeLayout(false);

@@ -43,5 +43,14 @@ namespace FitVitality
                 this.Opacity += 0.00002;
             }
         }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            this.Opacity = 0;
+            while (this.Opacity != 1)
+            {
+                this.Opacity += 0.00006;
+            }
+        }
     }
 }

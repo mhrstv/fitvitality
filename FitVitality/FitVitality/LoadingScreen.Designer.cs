@@ -30,18 +30,11 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loadingScreen));
-            progressBar1 = new ProgressBar();
             loadTimer = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
             SuspendLayout();
-            // 
-            // progressBar1
-            // 
-            progressBar1.Location = new Point(260, 387);
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(242, 10);
-            progressBar1.Style = ProgressBarStyle.Continuous;
-            progressBar1.TabIndex = 0;
             // 
             // loadTimer
             // 
@@ -57,27 +50,45 @@
             panel1.Size = new Size(335, 302);
             panel1.TabIndex = 1;
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(224, 224, 224);
+            panel2.Location = new Point(259, 392);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(242, 13);
+            panel2.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(92, 225, 230);
+            panel3.Location = new Point(259, 392);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1, 13);
+            panel3.TabIndex = 3;
+            // 
             // loadingScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(750, 463);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(progressBar1);
-            Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "loadingScreen";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "loadingScreen";
+            Text = " ";
+            Activated += loadingScreen_Activated;
             Load += loadingScreen_Load;
+            Enter += loadingScreen_Enter;
             ResumeLayout(false);
         }
 
         #endregion
-
-        private ProgressBar progressBar1;
         private System.Windows.Forms.Timer loadTimer;
         private Panel panel1;
+        private Panel panel2;
+        private Panel panel3;
     }
 }

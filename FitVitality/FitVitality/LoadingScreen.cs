@@ -37,7 +37,7 @@ namespace FitVitality
             if (this.Opacity >= 1)
             {
                 loadTimer.Enabled = true;
-                panel3.Width += 3;
+                panel3.Width += 4;
                 if (panel3.Width >= panel2.Width)
                 {
                     loadTimer.Stop();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loadingScreen));
             progressBar1 = new ProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
@@ -55,6 +56,7 @@
             Controls.Add(progressBar1);
             Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "loadingScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "loadingScreen";

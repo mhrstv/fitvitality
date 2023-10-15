@@ -39,17 +39,21 @@ namespace FitVitality
             progressBar1.Increment(4);
             if (progressBar1.Value == 100)
             {
-                Thread.Sleep(3000);
-                timer1.Enabled = false;
+                Thread.Sleep(1000);
                 for (int i = 213; i > 12; i--)
                 {
-                    j = j - (float)0.2;
-                    panel1.Location = new Point(i, (int)j);
+                    
                 }
+                Thread.Sleep(150);
                 Form1 form = new Form1();
                 form.Show();
                 this.Hide();
             }
+        }
+
+        private void loadingScreen_Load(object sender, EventArgs e)
+        {
+            this.ShowInTaskbar = false;
         }
     }
 }

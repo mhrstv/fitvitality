@@ -70,6 +70,7 @@
             Name = "loadingScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "loadingScreen";
+            Load += loadingScreen_Load;
             ResumeLayout(false);
         }
 

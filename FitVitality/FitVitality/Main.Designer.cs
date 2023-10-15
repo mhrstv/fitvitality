@@ -38,7 +38,7 @@
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(37, 29);
+            panel1.Size = new Size(53, 42);
             panel1.TabIndex = 0;
             // 
             // Form1

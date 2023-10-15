@@ -37,7 +37,7 @@
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(257, 338);
+            progressBar1.Location = new Point(260, 387);
             progressBar1.Name = "progressBar1";
             progressBar1.Size = new Size(242, 10);
             progressBar1.Style = ProgressBarStyle.Continuous;
@@ -52,7 +52,7 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(213, 30);
+            panel1.Location = new Point(213, 39);
             panel1.Name = "panel1";
             panel1.Size = new Size(335, 302);
             panel1.TabIndex = 1;

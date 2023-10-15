@@ -21,6 +21,7 @@ namespace FitVitality
             InitializeComponent();
         }
 
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (this.Opacity >= 1)
@@ -49,6 +50,7 @@ namespace FitVitality
         private void loadingScreen_Load(object sender, EventArgs e)
         {
             this.ShowInTaskbar = false;
+            this.ControlBox = false;
         }
 
         private void loadingScreen_Activated(object sender, EventArgs e)

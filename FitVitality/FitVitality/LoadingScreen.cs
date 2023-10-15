@@ -37,7 +37,7 @@ namespace FitVitality
             if (this.Opacity >= 1)
             {
                 loadTimer.Enabled = true;
-                panel3.Width += 4;
+                panel3.Width += 5;
                 if (panel3.Width >= panel2.Width)
                 {
                     loadTimer.Stop();
@@ -50,7 +50,7 @@ namespace FitVitality
                     {
                         this.Opacity = i;
                     }
-                    Thread.Sleep(1000);
+                    Thread.Sleep(500);
                     form.Show();
                     this.Hide();
                 }
@@ -60,7 +60,6 @@ namespace FitVitality
         private void loadingScreen_Load(object sender, EventArgs e)
         {
             this.ShowInTaskbar = false;
-
         }
 
         private void loadingScreen_Activated(object sender, EventArgs e)

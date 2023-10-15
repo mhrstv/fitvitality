@@ -13,6 +13,7 @@ namespace FitVitality
 {
     public partial class Form1 : Form
     {
+        public int parentY = Form1.ActiveForm.Location.Y;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -46,6 +47,10 @@ namespace FitVitality
 
         private void Form1_Activated(object sender, EventArgs e)
         {
+            for (int y = 1; y < parentY; y++)
+            {
+                Form1.ActiveForm.Location = new Point(Form1.ActiveForm.Location.X, y);
+            }
             this.Opacity = 0;
             while (this.Opacity != 1)
             {

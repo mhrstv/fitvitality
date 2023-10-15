@@ -76,5 +76,10 @@ namespace FitVitality
                 this.Opacity = this.Opacity + 0.00002;
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

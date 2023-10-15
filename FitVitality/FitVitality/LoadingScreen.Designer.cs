@@ -29,19 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            kryptonProgressBar1 = new Krypton.Toolkit.KryptonProgressBar();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(startLoadScreen));
             timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
-            // 
-            // kryptonProgressBar1
-            // 
-            kryptonProgressBar1.BackColor = Color.Black;
-            kryptonProgressBar1.ForeColor = Color.Black;
-            kryptonProgressBar1.Location = new Point(235, 340);
-            kryptonProgressBar1.Name = "kryptonProgressBar1";
-            kryptonProgressBar1.Size = new Size(241, 10);
-            kryptonProgressBar1.TabIndex = 1;
-            kryptonProgressBar1.UseKrypton = true;
             // 
             // timer1
             // 
@@ -54,9 +44,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fitvitality;
             ClientSize = new Size(692, 428);
-            Controls.Add(kryptonProgressBar1);
             Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "startLoadScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "startLoadScreen";

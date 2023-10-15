@@ -15,7 +15,6 @@ C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Deb
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\ref\FitVitality.dll
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Form1.resources
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Properties.Resources.resources
-C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.startLoadScreen.resources
 E:\Project\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\FitVitality.exe
 E:\Project\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\FitVitality.deps.json
 E:\Project\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\FitVitality.runtimeconfig.json
@@ -39,3 +38,4 @@ C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Deb
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.csproj.AssemblyReference.cache
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.csproj.CopyComplete
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\FitVitality.dll.config
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.loadingScreen.resources

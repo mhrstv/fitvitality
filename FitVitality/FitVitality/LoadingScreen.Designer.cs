@@ -1,6 +1,6 @@
 ﻿namespace FitVitality
 {
-    partial class startLoadScreen
+    partial class loadingScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,41 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(startLoadScreen));
+            progressBar1 = new ProgressBar();
             timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(235, 340);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(242, 10);
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            progressBar1.TabIndex = 0;
             // 
             // timer1
             // 
             timer1.Enabled = true;
-            timer1.Tick += timer1_Tick_4;
+            timer1.Tick += timer1_Tick;
             // 
-            // startLoadScreen
+            // loadingScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.fitvitality;
-            ClientSize = new Size(692, 428);
+            ClientSize = new Size(708, 463);
+            Controls.Add(progressBar1);
             Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.None;
-            Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "startLoadScreen";
+            Name = "loadingScreen";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "startLoadScreen";
-            Load += startLoadScreen_Load;
+            Text = "loadingScreen";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Krypton.Toolkit.KryptonProgressBar kryptonProgressBar1;
+        private ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer1;
     }
 }

@@ -45,6 +45,7 @@
             Activated += Form1_Activated;
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
+            Shown += Form1_Shown;
             ResumeLayout(false);
         }
 

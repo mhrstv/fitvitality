@@ -82,6 +82,7 @@
             Text = " ";
             Activated += loadingScreen_Activated;
             Load += loadingScreen_Load;
+            Shown += loadingScreen_Shown;
             Enter += loadingScreen_Enter;
             ResumeLayout(false);
         }

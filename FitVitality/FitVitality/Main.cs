@@ -14,6 +14,8 @@ namespace FitVitality
     public partial class Form1 : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+
         private static extern IntPtr CreateRoundRectRgn
         (
             int nLeftRect,     // x-coordinate of upper-left corner
@@ -37,19 +39,20 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Opacity = 0;
-            while (this.Opacity != 1)
-            {
-                this.Opacity += 0.00002;
-            }
+            
         }
 
         private void Form1_Activated(object sender, EventArgs e)
         {
+
+        }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
             this.Opacity = 0;
             while (this.Opacity != 1)
             {
-                this.Opacity += 0.00006;
+                this.Opacity += 0.00002;
             }
         }
     }

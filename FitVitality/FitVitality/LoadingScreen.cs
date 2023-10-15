@@ -69,16 +69,21 @@ namespace FitVitality
 
         private void loadingScreen_Enter(object sender, EventArgs e)
         {
-            this.Opacity = 0;
-            while (this.Opacity != 1)
-            {
-                this.Opacity = this.Opacity + 0.00002;
-            }
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void loadingScreen_Shown(object sender, EventArgs e)
+        {
+            this.Opacity = 0;
+            while (this.Opacity != 1)
+            {
+                this.Opacity = this.Opacity + 0.00002;
+            }
         }
     }
 }

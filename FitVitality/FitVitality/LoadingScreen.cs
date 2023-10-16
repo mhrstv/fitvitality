@@ -28,6 +28,7 @@ namespace FitVitality
             {
                 loadTimer.Enabled = true;
                 panel3.Width += 10;
+                textBox1.Text = ((int)(panel3.Width / 2.41)).ToString() + "%";
                 if (panel3.Width >= panel2.Width)
                 {
                     loadTimer.Stop();
@@ -35,13 +36,14 @@ namespace FitVitality
                     panel3.Visible = false;
                     panel2.Visible = false;
                     Thread.Sleep(500);
-                    Form1 form = new Form1();
+
+                    WelcomeScreen welcomeScreen = new WelcomeScreen();
                     for (double i = this.Opacity; i >= 0; i = i - 0.00002)
                     {
                         this.Opacity = i;
                     }
                     Thread.Sleep(500);
-                    form.Show();
+                    welcomeScreen.Show();
                     this.Hide();
                 }
             }
@@ -53,28 +55,27 @@ namespace FitVitality
             this.ControlBox = false;
         }
 
-        private void loadingScreen_Activated(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loadingScreen_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void loadingScreen_Shown(object sender, EventArgs e)
         {
             this.Opacity = 0;
             while (this.Opacity != 1)
             {
-                this.Opacity = this.Opacity + 0.00004;
+                this.Opacity += 0.00004;
             }
+        }
+
+        private void loadingScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

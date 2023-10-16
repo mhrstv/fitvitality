@@ -61,7 +61,7 @@
             // 
             // label1
             // 
-            label1.Font = new Font("Poppins", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(92, 225, 230);
             label1.Location = new Point(43, 0);
             label1.Name = "label1";

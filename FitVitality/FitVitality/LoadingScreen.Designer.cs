@@ -35,6 +35,8 @@
             panel2 = new Panel();
             panel3 = new Panel();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
+            textBox1 = new TextBox();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // loadTimer
@@ -46,24 +48,25 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(200, 39);
+            panel1.Location = new Point(182, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(335, 302);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(224, 224, 224);
-            panel2.Location = new Point(246, 392);
+            panel2.Controls.Add(panel3);
+            panel2.Location = new Point(234, 358);
             panel2.Name = "panel2";
             panel2.Size = new Size(242, 13);
             panel2.TabIndex = 2;
-            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(92, 225, 230);
-            panel3.Location = new Point(246, 392);
+            panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(1, 13);
             panel3.TabIndex = 3;
@@ -94,28 +97,47 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color2 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(250, 252, 252);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.ForeColor = Color.FromArgb(92, 225, 230);
+            textBox1.Location = new Point(313, 320);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(76, 28);
+            textBox1.TabIndex = 5;
+            textBox1.TabStop = false;
+            textBox1.TextAlign = HorizontalAlignment.Center;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // loadingScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
-            ClientSize = new Size(734, 444);
-            Controls.Add(panel3);
+            ClientSize = new Size(694, 404);
+            ControlBox = false;
+            Controls.Add(textBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MinimizeBox = false;
             Name = "loadingScreen";
             Palette = kryptonPalette1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
-            Activated += loadingScreen_Activated;
+            FormClosed += loadingScreen_FormClosed;
             Load += loadingScreen_Load;
             Shown += loadingScreen_Shown;
-            Enter += loadingScreen_Enter;
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -124,5 +146,6 @@
         private Panel panel2;
         private Panel panel3;
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private TextBox textBox1;
     }
 }

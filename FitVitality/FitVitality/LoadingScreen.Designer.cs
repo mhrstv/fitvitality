@@ -48,7 +48,7 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(182, 12);
+            panel1.Location = new Point(178, 21);
             panel1.Name = "panel1";
             panel1.Size = new Size(335, 302);
             panel1.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(panel3);
-            panel2.Location = new Point(234, 358);
+            panel2.Location = new Point(224, 367);
             panel2.Name = "panel2";
             panel2.Size = new Size(242, 13);
             panel2.TabIndex = 2;
@@ -103,7 +103,7 @@
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = Color.FromArgb(92, 225, 230);
-            textBox1.Location = new Point(313, 320);
+            textBox1.Location = new Point(307, 329);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(76, 28);
@@ -117,12 +117,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
-            ClientSize = new Size(694, 404);
+            ClientSize = new Size(690, 400);
             ControlBox = false;
             Controls.Add(textBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;

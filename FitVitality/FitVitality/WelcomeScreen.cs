@@ -40,6 +40,11 @@ namespace FitVitality
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
+            for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+            {
+                this.Opacity = i;
+            }
+            Thread.Sleep(500);
             form.Show();
             this.Hide();
         }

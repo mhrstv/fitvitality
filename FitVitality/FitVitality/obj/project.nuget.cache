@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZX5MiF96QUCd3uviRfN+aKTjhncTtN/YIcJbnlywxvGBkqVFopqSfm/OzQS9llhSqrkiNMcV9wiL2Mqr2LxSDQ==",
+  "dgSpecHash": "CTkBusioFbvZQCtAK7ZbMRuD8m+XotUYOfjSDH7RSho+YJOJmXSv9uRK6ZgeLjWI7MFgb+LeeOHAzWPGuRAnCA==",
   "success": true,
-  "projectFilePath": "E:\\FitVitality\\FitVitality\\FitVitality.csproj",
+  "projectFilePath": "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\krypton.toolkit\\70.22.11.312\\krypton.toolkit.70.22.11.312.nupkg.sha512"
   ],

@@ -66,11 +66,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FitVitality\\FitVitality\\FitVitality.csproj",
+      "projectUniqueName": "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj",
       "projectName": "FitVitality",
-      "projectPath": "E:\\FitVitality\\FitVitality\\FitVitality.csproj",
+      "projectPath": "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "E:\\FitVitality\\FitVitality\\obj\\",
+      "outputPath": "E:\\Project\\olympiad-project\\FitVitality\\FitVitality\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

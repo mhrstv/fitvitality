@@ -15,6 +15,7 @@ namespace FitVitality
     {
         private bool mouseDown;
         private Point lastLocation;
+
         public WelcomeScreen()
         {
             InitializeComponent();

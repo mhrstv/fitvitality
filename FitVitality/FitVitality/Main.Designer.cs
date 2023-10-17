@@ -142,8 +142,8 @@
             Opacity = 0D;
             Palette = kryptonPalette1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
+            Text = "FitVitality";
             Activated += Form1_Activated;
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;

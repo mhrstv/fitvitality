@@ -96,6 +96,7 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color1 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color2 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonPalette1.PalettePaint += kryptonPalette1_PalettePaint;
             // 
             // textBox1
             // 
@@ -122,6 +123,7 @@
             Controls.Add(textBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
@@ -129,7 +131,6 @@
             Name = "loadingScreen";
             Palette = kryptonPalette1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = " ";
             FormClosed += loadingScreen_FormClosed;

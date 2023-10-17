@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>FitVitality__5_-removebg-preview (1).ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="FitVitality__5_-removebg-preview (1).ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Krypton.Toolkit" Version="70.22.11.312" />

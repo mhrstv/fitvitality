@@ -20,8 +20,22 @@ namespace FitVitality
         {
             InitializeComponent();
         }
+        protected override void WndProc(ref Message message)
+        {
+            const int WM_SYSCOMMAND = 0x0112;
+            const int SC_MOVE = 0xF010;
 
+            switch (message.Msg)
+            {
+                case WM_SYSCOMMAND:
+                    int command = message.WParam.ToInt32() & 0xfff0;
+                    if (command == SC_MOVE)
+                        return;
+                    break;
+            }
 
+            base.WndProc(ref message);
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (this.Opacity >= 1)
@@ -76,6 +90,11 @@ namespace FitVitality
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e)
+        {
+
         }
     }
 }

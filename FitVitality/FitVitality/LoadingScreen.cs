@@ -47,6 +47,7 @@ namespace FitVitality
                 {
                     loadTimer.Stop();
                     Thread.Sleep(500);
+                    textBox1.Visible = false;
                     panel3.Visible = false;
                     panel2.Visible = false;
                     Thread.Sleep(500);

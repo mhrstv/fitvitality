@@ -23,7 +23,7 @@ namespace FitVitality
 
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void WelcomeScreen_Shown(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace FitVitality
             this.Hide();
             if (checkBox1.Checked == true)
             {
-                
+
             }
         }
 
@@ -119,6 +119,11 @@ namespace FitVitality
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

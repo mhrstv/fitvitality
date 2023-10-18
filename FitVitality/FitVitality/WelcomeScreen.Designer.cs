@@ -139,7 +139,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(150, 208, 250);
-            label4.Location = new Point(263, 315);
+            label4.Location = new Point(263, 345);
             label4.Name = "label4";
             label4.Size = new Size(69, 14);
             label4.TabIndex = 6;
@@ -151,16 +151,17 @@
             label5.Cursor = Cursors.Hand;
             label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(150, 208, 250);
-            label5.Location = new Point(331, 315);
+            label5.Location = new Point(331, 345);
             label5.Name = "label5";
             label5.Size = new Size(112, 14);
             label5.TabIndex = 7;
             label5.Text = "Create an account";
+            label5.Click += label5_Click;
             // 
             // kryptonButton1
             // 
             kryptonButton1.CornerRoundingRadius = 15F;
-            kryptonButton1.Location = new Point(308, 332);
+            kryptonButton1.Location = new Point(309, 308);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             kryptonButton1.Size = new Size(90, 25);
@@ -281,11 +282,11 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox1.Font = new Font("Calibri Light", 9F, FontStyle.Regular, GraphicsUnit.Point);
             checkBox1.ForeColor = Color.Black;
             checkBox1.Location = new Point(254, 284);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(110, 19);
+            checkBox1.Size = new Size(99, 18);
             checkBox1.TabIndex = 10;
             checkBox1.TabStop = false;
             checkBox1.Text = "Remember me";

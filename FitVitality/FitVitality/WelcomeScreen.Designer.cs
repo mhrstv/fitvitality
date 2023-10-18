@@ -44,6 +44,7 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            checkBox1 = new CheckBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -138,7 +139,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(150, 208, 250);
-            label4.Location = new Point(263, 290);
+            label4.Location = new Point(263, 315);
             label4.Name = "label4";
             label4.Size = new Size(69, 14);
             label4.TabIndex = 6;
@@ -150,7 +151,7 @@
             label5.Cursor = Cursors.Hand;
             label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(150, 208, 250);
-            label5.Location = new Point(331, 290);
+            label5.Location = new Point(331, 315);
             label5.Name = "label5";
             label5.Size = new Size(112, 14);
             label5.TabIndex = 7;
@@ -159,7 +160,7 @@
             // kryptonButton1
             // 
             kryptonButton1.CornerRoundingRadius = 15F;
-            kryptonButton1.Location = new Point(308, 321);
+            kryptonButton1.Location = new Point(308, 332);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             kryptonButton1.Size = new Size(90, 25);
@@ -175,7 +176,7 @@
             kryptonButton1.StateCommon.Border.Width = 1;
             kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.White;
             kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Poppins", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             kryptonButton1.StateNormal.Back.Color1 = Color.FromArgb(90, 220, 225);
             kryptonButton1.StateNormal.Back.Color2 = Color.FromArgb(90, 220, 225);
             kryptonButton1.StateNormal.Back.ColorAngle = 45F;
@@ -277,12 +278,27 @@
             pictureBox1.MouseLeave += pictureBox1_MouseLeave;
             pictureBox1.MouseHover += pictureBox1_MouseHover;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            checkBox1.ForeColor = Color.Black;
+            checkBox1.Location = new Point(254, 284);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(110, 19);
+            checkBox1.TabIndex = 10;
+            checkBox1.TabStop = false;
+            checkBox1.Text = "Remember me";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // WelcomeScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(706, 439);
+            Controls.Add(checkBox1);
             Controls.Add(panel1);
             Controls.Add(kryptonButton1);
             Controls.Add(label5);
@@ -330,5 +346,6 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
+        private CheckBox checkBox1;
     }
 }

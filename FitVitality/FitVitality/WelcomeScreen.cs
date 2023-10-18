@@ -23,7 +23,7 @@ namespace FitVitality
 
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void WelcomeScreen_Shown(object sender, EventArgs e)
@@ -50,6 +50,10 @@ namespace FitVitality
             Thread.Sleep(500);
             form.Show();
             this.Hide();
+            if (checkBox1.Checked == true)
+            {
+                
+            }
         }
 
         private void kryptonPalette2_PalettePaint(object sender, PaletteLayoutEventArgs e)
@@ -112,6 +116,11 @@ namespace FitVitality
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,6 +15,17 @@ namespace FitVitality
 {
     public partial class Form1 : KryptonForm
     {
+        public void loadform(object Form)
+        {
+            if (this.panel3.Controls.Count > 0)
+                this.panel3.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(f);
+            this.panel3.Tag = f;
+            f.Show();
+        }
         private bool mouseDown;
         private Point lastLocation;
         public Form1()
@@ -29,7 +40,7 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            loadform(new home());
         }
 
         private void Form1_Activated(object sender, EventArgs e)
@@ -110,6 +121,26 @@ namespace FitVitality
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void home_Click(object sender, EventArgs e)
+        {
+            loadform(new home());
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            loadform(new marto1());
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            loadform(new marto2());
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

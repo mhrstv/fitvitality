@@ -23,7 +23,18 @@ namespace FitVitality
 
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
-
+            var cfg = new Config("config.ini");
+            var username = cfg.Read("Username", "SETTINGS");
+            if (username != "")
+            {
+                kryptonTextBox1.Text = username.ToString();
+                checkBox1.Checked = true;
+            }
+            else
+            {
+                kryptonTextBox1.Text = "";
+                checkBox1.Checked = false;
+            }
         }
 
         private void WelcomeScreen_Shown(object sender, EventArgs e)
@@ -42,6 +53,7 @@ namespace FitVitality
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            var cfg = new Config("config.ini");
             Form1 form = new Form1();
             for (double i = this.Opacity; i >= 0; i = i - 0.00002)
             {
@@ -53,6 +65,11 @@ namespace FitVitality
             if (checkBox1.Checked == true)
             {
 
+                cfg.Write("Username", kryptonTextBox1.Text.ToString(), "SETTINGS");
+            }
+            else
+            {
+                cfg.Write("Username", "", "SETTINGS");
             }
         }
 

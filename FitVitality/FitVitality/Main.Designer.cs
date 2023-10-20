@@ -132,7 +132,6 @@
             pictureBox1.Click += pictureBox1_Click_1;
             pictureBox1.MouseEnter += pictureBox1_MouseEnter;
             pictureBox1.MouseLeave += pictureBox1_MouseLeave;
-            pictureBox1.MouseHover += pictureBox1_MouseHover;
             // 
             // panel2
             // 
@@ -196,7 +195,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(706, 384);
             panel3.TabIndex = 2;
-            panel3.Paint += panel3_Paint;
             // 
             // Form1
             // 
@@ -216,7 +214,6 @@
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FitVitality";
-            Activated += Form1_Activated;
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             Shown += Form1_Shown;

@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 400);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Register";
             Text = "Register";
             ResumeLayout(false);

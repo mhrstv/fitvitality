@@ -15,16 +15,18 @@ namespace FitVitality
 {
     public partial class Form1 : KryptonForm
     {
-        public void loadform(object Form)
+        public void loadForm(object Form)
         {
             if (this.panel3.Controls.Count > 0)
+            {
                 this.panel3.Controls.RemoveAt(0);
-            Form f = Form as Form;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.panel3.Controls.Add(f);
-            this.panel3.Tag = f;
-            f.Show();
+            }
+            Form x = Form as Form;
+            x.TopLevel = false;
+            x.Dock = DockStyle.Fill;
+            this.panel3.Controls.Add(x);
+            this.panel3.Tag = x;
+            x.Show();
         }
         private bool mouseDown;
         private Point lastLocation;
@@ -40,12 +42,7 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            loadform(new home());
-        }
-
-        private void Form1_Activated(object sender, EventArgs e)
-        {
-
+            loadForm(new home());
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -56,24 +53,9 @@ namespace FitVitality
                 this.Opacity += 0.00004;
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
@@ -125,22 +107,17 @@ namespace FitVitality
 
         private void home_Click(object sender, EventArgs e)
         {
-            loadform(new home());
+            loadForm(new home());
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            loadform(new marto1());
+            loadForm(new marto1());
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            loadform(new marto2());
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
+            loadForm(new marto2());
         }
     }
 }

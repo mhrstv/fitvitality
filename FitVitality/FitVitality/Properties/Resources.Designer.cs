@@ -73,6 +73,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dashboard3 {
+            get {
+                object obj = ResourceManager.GetObject("dashboard3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fitvitality {
             get {
                 object obj = ResourceManager.GetObject("fitvitality", resourceCulture);
@@ -86,6 +96,16 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap FitVitalityLogo_1 {
             get {
                 object obj = ResourceManager.GetObject("FitVitalityLogo_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximizebutton {
+            get {
+                object obj = ResourceManager.GetObject("maximizebutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -60,64 +60,77 @@ namespace FitVitality
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.IndianRed;
+
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.White;
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+
         }
 
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox2.BackColor = Color.Silver;
+
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox2.BackColor = Color.White;
+
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
-            mouseDown = true;
-            lastLocation = e.Location;
+
         }
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (mouseDown)
-            {
-                this.Location = new Point(
-                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
 
-                this.Update();
-            }
         }
 
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
-            mouseDown = false;
+
         }
 
         private void home_Click(object sender, EventArgs e)
         {
-            loadForm(new home());
+
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            loadForm(new marto1());
+
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            loadForm(new marto2());
+
+        }
+
+        private void kryptonButton2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonButton1_Click_1(object sender, EventArgs e)
+        {
+            loadForm(new home());
+        }
+
+        private void kryptonButton2_Click_2(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void kryptonButton2_Click_3(object sender, EventArgs e)
+        {
+            loadForm(new marto1());
         }
     }
 }

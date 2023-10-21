@@ -35,7 +35,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Showcard Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(270, 189);
+            label1.Location = new Point(266, 144);
             label1.Name = "label1";
             label1.Size = new Size(167, 60);
             label1.TabIndex = 1;
@@ -45,7 +45,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(706, 439);
+            BackColor = Color.White;
+            ClientSize = new Size(699, 348);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "home";

@@ -57,77 +57,10 @@ namespace FitVitality
         {
             Application.Exit();
         }
-
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void home_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonButton2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void kryptonButton1_Click_1(object sender, EventArgs e)
         {
             loadForm(new home());
         }
-
-        private void kryptonButton2_Click_2(object sender, EventArgs e)
-        {
-            
-        }
-
         private void kryptonButton2_Click_3(object sender, EventArgs e)
         {
             loadForm(new marto1());

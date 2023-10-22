@@ -142,7 +142,7 @@
         V43ND/SAshJjoxODAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="kryptonButton2.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonWorkout.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAxZJREFUWEfN
         lj1oU1EUx/MBJuZLAmZtFguOJoO6CS4OFjdxqDVtU4udKjjo5upWVxUKgg5OggpaEMFJQRF0cOjku7Tv
@@ -161,7 +161,7 @@
         k/sLuyGP0rOvogMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="kryptonButton2.StateNormal.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonWorkout.StateNormal.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAxZJREFUWEfN
         lj1oU1EUx/MBJuZLAmZtFguOJoO6CS4OFjdxqDVtU4udKjjo5upWVxUKgg5OggpaEMFJQRF0cOjku7Tv
@@ -180,7 +180,7 @@
         k/sLuyGP0rOvogMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="kryptonButton2.StatePressed.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonWorkout.StatePressed.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAxZJREFUWEfN
         lj1oU1EUx/MBJuZLAmZtFguOJoO6CS4OFjdxqDVtU4udKjjo5upWVxUKgg5OggpaEMFJQRF0cOjku7Tv
@@ -199,7 +199,7 @@
         k/sLuyGP0rOvogMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="kryptonButton2.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonWorkout.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAxZJREFUWEfN
         lj1oU1EUx/MBJuZLAmZtFguOJoO6CS4OFjdxqDVtU4udKjjo5upWVxUKgg5OggpaEMFJQRF0cOjku7Tv
@@ -218,7 +218,7 @@
         k/sLuyGP0rOvogMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="kryptonButton1.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonDashboard.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAA1tJREFUWEfN
         l79rFFEQx880VmqVxiqxuFZBW1FBsDlEgoUc5ocSBZEDOQTJH5DCP8DgP3AW9jYWdpYWYmGTZjeX2xi4
@@ -238,7 +238,7 @@
         /VxMYxMwjf+fTusP4DUquO1hqo4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="kryptonButton1.StateNormal.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonDashboard.StateNormal.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAA1tJREFUWEfN
         l79rFFEQx880VmqVxiqxuFZBW1FBsDlEgoUc5ocSBZEDOQTJH5DCP8DgP3AW9jYWdpYWYmGTZjeX2xi4
@@ -258,7 +258,7 @@
         /VxMYxMwjf+fTusP4DUquO1hqo4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="kryptonButton1.StatePressed.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonDashboard.StatePressed.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAA1tJREFUWEfN
         l79rFFEQx880VmqVxiqxuFZBW1FBsDlEgoUc5ocSBZEDOQTJH5DCP8DgP3AW9jYWdpYWYmGTZjeX2xi4
@@ -278,7 +278,7 @@
         /VxMYxMwjf+fTusP4DUquO1hqo4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="kryptonButton1.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonDashboard.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAABGdBTUEAALGPC/xhBQAAA1tJREFUWEfN
         l79rFFEQx880VmqVxiqxuFZBW1FBsDlEgoUc5ocSBZEDOQTJH5DCP8DgP3AW9jYWdpYWYmGTZjeX2xi4

@@ -86,17 +86,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(92, 225, 230);
-            label1.Location = new Point(263, 86);
+            label1.Location = new Point(68, 83);
             label1.Name = "label1";
-            label1.Size = new Size(180, 55);
+            label1.Size = new Size(151, 46);
             label1.TabIndex = 0;
             label1.Text = "LOGIN";
             // 
             // kryptonTextBox1
             // 
-            kryptonTextBox1.Location = new Point(254, 186);
+            kryptonTextBox1.Location = new Point(44, 191);
             kryptonTextBox1.MaxLength = 16;
             kryptonTextBox1.Name = "kryptonTextBox1";
             kryptonTextBox1.Size = new Size(199, 23);
@@ -104,7 +104,7 @@
             // 
             // kryptonTextBox2
             // 
-            kryptonTextBox2.Location = new Point(254, 248);
+            kryptonTextBox2.Location = new Point(44, 253);
             kryptonTextBox2.MaxLength = 32;
             kryptonTextBox2.Name = "kryptonTextBox2";
             kryptonTextBox2.PasswordChar = '●';
@@ -117,7 +117,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(254, 168);
+            label2.Location = new Point(44, 173);
             label2.Name = "label2";
             label2.Size = new Size(67, 14);
             label2.TabIndex = 3;
@@ -128,7 +128,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(254, 231);
+            label3.Location = new Point(44, 236);
             label3.Name = "label3";
             label3.Size = new Size(66, 14);
             label3.TabIndex = 4;
@@ -139,7 +139,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(150, 208, 250);
-            label4.Location = new Point(263, 338);
+            label4.Location = new Point(53, 343);
             label4.Name = "label4";
             label4.Size = new Size(69, 14);
             label4.TabIndex = 6;
@@ -151,7 +151,7 @@
             label5.Cursor = Cursors.Hand;
             label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(150, 208, 250);
-            label5.Location = new Point(331, 338);
+            label5.Location = new Point(121, 343);
             label5.Name = "label5";
             label5.Size = new Size(112, 14);
             label5.TabIndex = 7;
@@ -161,7 +161,7 @@
             // kryptonButton1
             // 
             kryptonButton1.CornerRoundingRadius = 15F;
-            kryptonButton1.Location = new Point(309, 301);
+            kryptonButton1.Location = new Point(99, 306);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             kryptonButton1.Size = new Size(90, 25);
@@ -238,7 +238,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(706, 32);
+            panel1.Size = new Size(287, 32);
             panel1.TabIndex = 9;
             panel1.MouseDown += panel1_MouseDown;
             panel1.MouseMove += panel1_MouseMove;
@@ -268,7 +268,7 @@
             // 
             pictureBox2.BackColor = Color.White;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(650, 7);
+            pictureBox2.Location = new Point(232, 7);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(19, 19);
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -282,7 +282,7 @@
             // 
             pictureBox1.BackColor = Color.White;
             pictureBox1.Image = Properties.Resources.closebutton;
-            pictureBox1.Location = new Point(675, 7);
+            pictureBox1.Location = new Point(257, 7);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(19, 19);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -298,7 +298,7 @@
             checkBox1.AutoSize = true;
             checkBox1.Font = new Font("Calibri Light", 9F, FontStyle.Regular, GraphicsUnit.Point);
             checkBox1.ForeColor = Color.Black;
-            checkBox1.Location = new Point(254, 277);
+            checkBox1.Location = new Point(44, 282);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(99, 18);
             checkBox1.TabIndex = 10;
@@ -307,12 +307,12 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // WelcomeScreen
+            // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
-            ClientSize = new Size(706, 439);
+            ClientSize = new Size(287, 415);
             Controls.Add(checkBox1);
             Controls.Add(panel1);
             Controls.Add(kryptonButton1);
@@ -327,12 +327,13 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            Name = "WelcomeScreen";
+            Name = "Login";
             Opacity = 0D;
             Palette = kryptonPalette1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             StartPosition = FormStartPosition.CenterScreen;
             Text = " FitVitality";
+            FormClosing += Login_FormClosing;
             FormClosed += WelcomeScreen_FormClosed;
             Load += WelcomeScreen_Load;
             Shown += WelcomeScreen_Shown;

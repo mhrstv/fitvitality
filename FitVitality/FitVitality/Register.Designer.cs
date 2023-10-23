@@ -55,7 +55,7 @@
             // kryptonButton1
             // 
             kryptonButton1.CornerRoundingRadius = 15F;
-            kryptonButton1.Location = new Point(308, 318);
+            kryptonButton1.Location = new Point(99, 323);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             kryptonButton1.Size = new Size(90, 25);
@@ -115,7 +115,7 @@
             label5.Cursor = Cursors.Hand;
             label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(150, 208, 250);
-            label5.Location = new Point(275, 357);
+            label5.Location = new Point(66, 362);
             label5.Name = "label5";
             label5.Size = new Size(157, 14);
             label5.TabIndex = 14;
@@ -127,7 +127,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(253, 258);
+            label3.Location = new Point(44, 257);
             label3.Name = "label3";
             label3.Size = new Size(66, 14);
             label3.TabIndex = 13;
@@ -138,7 +138,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(253, 147);
+            label2.Location = new Point(44, 146);
             label2.Name = "label2";
             label2.Size = new Size(67, 14);
             label2.TabIndex = 12;
@@ -146,7 +146,7 @@
             // 
             // kryptonTextBox2
             // 
-            kryptonTextBox2.Location = new Point(253, 275);
+            kryptonTextBox2.Location = new Point(44, 274);
             kryptonTextBox2.MaxLength = 32;
             kryptonTextBox2.Name = "kryptonTextBox2";
             kryptonTextBox2.PasswordChar = '●';
@@ -156,7 +156,7 @@
             // 
             // kryptonTextBox1
             // 
-            kryptonTextBox1.Location = new Point(253, 165);
+            kryptonTextBox1.Location = new Point(44, 164);
             kryptonTextBox1.MaxLength = 16;
             kryptonTextBox1.Name = "kryptonTextBox1";
             kryptonTextBox1.Size = new Size(199, 23);
@@ -165,11 +165,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(92, 225, 230);
-            label1.Location = new Point(217, 67);
+            label1.Location = new Point(29, 71);
             label1.Name = "label1";
-            label1.Size = new Size(273, 55);
+            label1.Size = new Size(229, 46);
             label1.TabIndex = 9;
             label1.Text = "REGISTER";
             // 
@@ -178,7 +178,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(253, 202);
+            label4.Location = new Point(44, 201);
             label4.Name = "label4";
             label4.Size = new Size(39, 14);
             label4.TabIndex = 17;
@@ -186,7 +186,7 @@
             // 
             // kryptonTextBox3
             // 
-            kryptonTextBox3.Location = new Point(253, 220);
+            kryptonTextBox3.Location = new Point(44, 219);
             kryptonTextBox3.MaxLength = 50;
             kryptonTextBox3.Name = "kryptonTextBox3";
             kryptonTextBox3.Size = new Size(199, 23);
@@ -198,10 +198,9 @@
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
-            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(706, 32);
+            panel1.Size = new Size(287, 32);
             panel1.TabIndex = 18;
             panel1.Paint += panel1_Paint;
             panel1.MouseDown += panel1_MouseDown;
@@ -232,7 +231,7 @@
             // 
             pictureBox2.BackColor = Color.White;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(650, 7);
+            pictureBox2.Location = new Point(232, 7);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(19, 19);
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
@@ -246,7 +245,7 @@
             // 
             pictureBox1.BackColor = Color.White;
             pictureBox1.Image = Properties.Resources.closebutton;
-            pictureBox1.Location = new Point(675, 7);
+            pictureBox1.Location = new Point(257, 7);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(19, 19);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -292,7 +291,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
-            ClientSize = new Size(706, 439);
+            ClientSize = new Size(287, 415);
             Controls.Add(panel1);
             Controls.Add(label4);
             Controls.Add(kryptonTextBox3);

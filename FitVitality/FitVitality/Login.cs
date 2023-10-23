@@ -13,13 +13,13 @@ using Krypton.Toolkit;
 using System.Data.Common;
 using Microsoft.Data.SqlClient;
 
+
 namespace FitVitality
 {
     public partial class Login : KryptonForm
     {
         private bool mouseDown;
         private Point lastLocation;
-
         public Login()
         {
             InitializeComponent();
@@ -27,7 +27,11 @@ namespace FitVitality
 
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
-
+            var activated = new Register();
+            if (activated.opened)
+            {
+                this.Location = Register.ActiveForm.Location;
+            }
             var cfg = new Config("config.ini");
             var username = cfg.Read("Username", "SETTINGS");
             if (username != "")
@@ -44,6 +48,7 @@ namespace FitVitality
 
         private void WelcomeScreen_Shown(object sender, EventArgs e)
         {
+            
             this.Opacity = 0;
             while (this.Opacity != 1)
             {
@@ -192,6 +197,11 @@ namespace FitVitality
         private void WelcomeScreen_MouseHover(object sender, EventArgs e)
         {
 
+        }
+
+        public void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
         }
     }
 }

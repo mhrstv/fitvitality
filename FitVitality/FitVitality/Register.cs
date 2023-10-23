@@ -9,11 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
+using Microsoft.Identity.Client;
 
 namespace FitVitality
 {
     public partial class Register : KryptonForm
     {
+        public bool opened;
         private bool mouseDown;
         private Point lastLocation;
         private string connectionstring = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
@@ -101,7 +103,8 @@ namespace FitVitality
 
         private void Register_Load(object sender, EventArgs e)
         {
-
+            opened = true;
+            this.Location = loadingScreen.ActiveForm.Location;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -109,7 +112,7 @@ namespace FitVitality
             for (double i = this.Opacity; i >= 0; i = i - 0.00002)
             {
                 this.Opacity = i;
-            }       
+            }
             Login welcomeScreen = new Login();
             welcomeScreen.Show();
             this.Hide();

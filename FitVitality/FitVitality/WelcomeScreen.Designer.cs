@@ -178,6 +178,19 @@
             kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.White;
             kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.White;
             kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            kryptonButton1.StateDisabled.Back.Color1 = Color.FromArgb(90, 220, 225);
+            kryptonButton1.StateDisabled.Back.Color2 = Color.FromArgb(94, 229, 235);
+            kryptonButton1.StateDisabled.Back.ColorAngle = 45F;
+            kryptonButton1.StateDisabled.Border.Color1 = Color.FromArgb(90, 220, 225);
+            kryptonButton1.StateDisabled.Border.Color2 = Color.FromArgb(90, 220, 225);
+            kryptonButton1.StateDisabled.Border.ColorAngle = 45F;
+            kryptonButton1.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.StateDisabled.Border.Rounding = 15F;
+            kryptonButton1.StateDisabled.Border.Width = 1;
+            kryptonButton1.StateDisabled.Content.ShortText.Color1 = Color.White;
+            kryptonButton1.StateDisabled.Content.ShortText.Color2 = Color.White;
+            kryptonButton1.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             kryptonButton1.StateNormal.Back.Color1 = Color.FromArgb(90, 220, 225);
             kryptonButton1.StateNormal.Back.Color2 = Color.FromArgb(90, 220, 225);
             kryptonButton1.StateNormal.Back.ColorAngle = 45F;
@@ -214,6 +227,7 @@
             kryptonButton1.TabIndex = 8;
             kryptonButton1.Values.Text = "Login";
             kryptonButton1.Click += kryptonButton1_Click;
+            kryptonButton1.MouseLeave += kryptonButton1_MouseLeave;
             // 
             // panel1
             // 
@@ -322,6 +336,7 @@
             FormClosed += WelcomeScreen_FormClosed;
             Load += WelcomeScreen_Load;
             Shown += WelcomeScreen_Shown;
+            MouseHover += WelcomeScreen_MouseHover;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

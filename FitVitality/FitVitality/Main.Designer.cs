@@ -32,15 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             panel2 = new Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             buttonWorkout = new Krypton.Toolkit.KryptonButton();
             buttonDashboard = new Krypton.Toolkit.KryptonButton();
             panel3 = new Panel();
-            kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).BeginInit();
-            kryptonPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -65,34 +60,27 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(flowLayoutPanel1);
             panel2.Controls.Add(buttonWorkout);
             panel2.Controls.Add(buttonDashboard);
-            panel2.Location = new Point(-8, 3);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(532, 53);
+            panel2.Size = new Size(690, 46);
             panel2.TabIndex = 1;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(586, -34);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(159, 169);
-            flowLayoutPanel1.TabIndex = 2;
             // 
             // buttonWorkout
             // 
             buttonWorkout.CornerRoundingRadius = 10F;
-            buttonWorkout.Location = new Point(107, 3);
+            buttonWorkout.Location = new Point(355, 3);
             buttonWorkout.Name = "buttonWorkout";
             buttonWorkout.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            buttonWorkout.Size = new Size(63, 49);
+            buttonWorkout.Size = new Size(39, 40);
             buttonWorkout.StateCommon.Back.Color1 = Color.White;
             buttonWorkout.StateCommon.Back.Color2 = Color.White;
             buttonWorkout.StateCommon.Back.ColorAngle = 45F;
             buttonWorkout.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             buttonWorkout.StateCommon.Back.Image = (Image)resources.GetObject("buttonWorkout.StateCommon.Back.Image");
-            buttonWorkout.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.TopMiddle;
+            buttonWorkout.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             buttonWorkout.StateCommon.Border.Color1 = Color.Silver;
             buttonWorkout.StateCommon.Border.Color2 = Color.Silver;
             buttonWorkout.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -105,7 +93,7 @@
             buttonWorkout.StateNormal.Back.ColorAngle = 45F;
             buttonWorkout.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             buttonWorkout.StateNormal.Back.Image = (Image)resources.GetObject("buttonWorkout.StateNormal.Back.Image");
-            buttonWorkout.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.TopMiddle;
+            buttonWorkout.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             buttonWorkout.StateNormal.Border.Color1 = Color.Silver;
             buttonWorkout.StateNormal.Border.Color2 = Color.Silver;
             buttonWorkout.StateNormal.Border.ColorAngle = 45F;
@@ -119,7 +107,7 @@
             buttonWorkout.StatePressed.Back.ColorAngle = 45F;
             buttonWorkout.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             buttonWorkout.StatePressed.Back.Image = (Image)resources.GetObject("buttonWorkout.StatePressed.Back.Image");
-            buttonWorkout.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.TopMiddle;
+            buttonWorkout.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             buttonWorkout.StatePressed.Border.Color1 = Color.Silver;
             buttonWorkout.StatePressed.Border.Color2 = Color.Silver;
             buttonWorkout.StatePressed.Border.ColorAngle = 45F;
@@ -133,7 +121,7 @@
             buttonWorkout.StateTracking.Back.ColorAngle = 45F;
             buttonWorkout.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             buttonWorkout.StateTracking.Back.Image = (Image)resources.GetObject("buttonWorkout.StateTracking.Back.Image");
-            buttonWorkout.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.TopMiddle;
+            buttonWorkout.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             buttonWorkout.StateTracking.Border.Color1 = Color.Silver;
             buttonWorkout.StateTracking.Border.Color2 = Color.Silver;
             buttonWorkout.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -142,16 +130,16 @@
             buttonWorkout.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
             buttonWorkout.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonWorkout.TabIndex = 1;
-            buttonWorkout.Values.Text = "Workout";
+            buttonWorkout.Values.Text = "";
             buttonWorkout.Click += kryptonButton2_Click_3;
             // 
             // buttonDashboard
             // 
             buttonDashboard.CornerRoundingRadius = 10F;
-            buttonDashboard.Location = new Point(28, 3);
+            buttonDashboard.Location = new Point(296, 3);
             buttonDashboard.Name = "buttonDashboard";
             buttonDashboard.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            buttonDashboard.Size = new Size(63, 49);
+            buttonDashboard.Size = new Size(39, 40);
             buttonDashboard.StateCommon.Back.Color1 = Color.White;
             buttonDashboard.StateCommon.Back.Color2 = Color.White;
             buttonDashboard.StateCommon.Back.ColorAngle = 45F;
@@ -207,37 +195,15 @@
             buttonDashboard.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
             buttonDashboard.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDashboard.TabIndex = 0;
-            buttonDashboard.Values.Text = "Dashboard";
+            buttonDashboard.Values.Text = "";
             buttonDashboard.Click += kryptonButton1_Click_1;
             // 
             // panel3
             // 
-            panel3.Location = new Point(-8, 57);
+            panel3.Location = new Point(-9, 49);
             panel3.Name = "panel3";
-            panel3.Size = new Size(707, 351);
+            panel3.Size = new Size(707, 359);
             panel3.TabIndex = 2;
-            // 
-            // kryptonPanel1
-            // 
-            kryptonPanel1.Controls.Add(kryptonButton1);
-            kryptonPanel1.Location = new Point(519, -31);
-            kryptonPanel1.Name = "kryptonPanel1";
-            kryptonPanel1.Size = new Size(190, 439);
-            kryptonPanel1.StateCommon.Color1 = Color.White;
-            kryptonPanel1.StateCommon.Color2 = Color.Gray;
-            kryptonPanel1.StateCommon.ColorAngle = 180F;
-            kryptonPanel1.StateCommon.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Linear25;
-            kryptonPanel1.StateCommon.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonPanel1.TabIndex = 3;
-            // 
-            // kryptonButton1
-            // 
-            kryptonButton1.CornerRoundingRadius = -1F;
-            kryptonButton1.Location = new Point(-37, 57);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.Size = new Size(90, 25);
-            kryptonButton1.TabIndex = 0;
-            kryptonButton1.Values.Text = "kryptonButton1";
             // 
             // Form1
             // 
@@ -245,7 +211,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 400);
-            Controls.Add(kryptonPanel1);
             Controls.Add(panel2);
             Controls.Add(panel3);
             CornerRoundingRadius = 15F;
@@ -263,8 +228,6 @@
             Load += Form1_Load;
             Shown += Form1_Shown;
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonPanel1).EndInit();
-            kryptonPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -275,8 +238,5 @@
         private Panel panel3;
         private Krypton.Toolkit.KryptonButton buttonDashboard;
         private Krypton.Toolkit.KryptonButton buttonWorkout;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

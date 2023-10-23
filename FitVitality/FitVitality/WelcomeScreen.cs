@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using Krypton.Toolkit;
 using System.Data.Common;
+using Microsoft.Data.SqlClient;
 
 namespace FitVitality
 {
@@ -18,7 +19,7 @@ namespace FitVitality
     {
         private bool mouseDown;
         private Point lastLocation;
-        
+
         public WelcomeScreen()
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace FitVitality
 
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
-            
+
             var cfg = new Config("config.ini");
             var username = cfg.Read("Username", "SETTINGS");
             if (username != "")
@@ -58,26 +59,50 @@ namespace FitVitality
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string connectionString;
-            
             connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-            
             var cfg = new Config("config.ini");
-            Form1 form = new Form1();
-            for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+            string username = kryptonTextBox1.Text;
+            string password = kryptonTextBox2.Text;
+            string query = "SELECT Username, Password FROM UserData WHERE Username = @Username AND Password = @Password";
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                this.Opacity = i;
-            }
-            Thread.Sleep(500);
-            form.Show();
-            this.Hide();
-            if (checkBox1.Checked == true)
-            {
-
-                cfg.Write("Username", kryptonTextBox1.Text.ToString(), "SETTINGS");
-            }
-            else
-            {
-                cfg.Write("Username", "", "SETTINGS");
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", username);
+                    command.Parameters.AddWithValue("@Password", password);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string dbUser = reader["Username"].ToString();
+                            string dbPass = reader["Password"].ToString();
+                            if (dbUser == username && dbPass == password)
+                            {
+                                if (checkBox1.Checked == true)
+                                {
+                                    cfg.Write("Username", username, "SETTINGS");
+                                }
+                                else
+                                {
+                                    cfg.Write("Username", "", "SETTINGS");
+                                }
+                                for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                                {
+                                    this.Opacity = i;
+                                }
+                                Form1 form = new Form1();
+                                Thread.Sleep(500);
+                                form.Show();
+                                this.Hide();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Account not found!");
+                        }
+                    }
+                }
             }
         }
 
@@ -150,7 +175,18 @@ namespace FitVitality
 
         private void label5_Click(object sender, EventArgs e)
         {
+            Register register = new Register();
+            register.Show();
+        }
 
+        private void kryptonButton1_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void WelcomeScreen_MouseHover(object sender, EventArgs e)
+        {
+            
         }
     }
 }

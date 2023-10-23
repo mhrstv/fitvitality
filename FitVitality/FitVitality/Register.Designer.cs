@@ -94,6 +94,7 @@
             kryptonButton1.StateTracking.Border.Width = 1;
             kryptonButton1.TabIndex = 15;
             kryptonButton1.Values.Text = "Register";
+            kryptonButton1.Click += kryptonButton1_Click;
             // 
             // label5
             // 

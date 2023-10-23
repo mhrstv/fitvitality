@@ -15,12 +15,12 @@ using Microsoft.Data.SqlClient;
 
 namespace FitVitality
 {
-    public partial class WelcomeScreen : KryptonForm
+    public partial class Login : KryptonForm
     {
         private bool mouseDown;
         private Point lastLocation;
 
-        public WelcomeScreen()
+        public Login()
         {
             InitializeComponent();
         }
@@ -175,18 +175,23 @@ namespace FitVitality
 
         private void label5_Click(object sender, EventArgs e)
         {
+            for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+            {
+                this.Opacity = i;
+            }
             Register register = new Register();
             register.Show();
+            this.Hide();
         }
 
         private void kryptonButton1_MouseLeave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void WelcomeScreen_MouseHover(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

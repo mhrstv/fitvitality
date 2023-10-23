@@ -52,7 +52,7 @@ namespace FitVitality
                     panel2.Visible = false;
                     Thread.Sleep(500);
 
-                    WelcomeScreen welcomeScreen = new WelcomeScreen();
+                    Login welcomeScreen = new Login();
                     for (double i = this.Opacity; i >= 0; i = i - 0.00002)
                     {
                         this.Opacity = i;

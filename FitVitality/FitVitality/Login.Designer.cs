@@ -1,6 +1,6 @@
 ﻿namespace FitVitality
 {
-    partial class WelcomeScreen
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeScreen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             label1 = new Label();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();

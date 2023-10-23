@@ -43,7 +43,6 @@ E:\Project\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\Kry
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.loadingScreen.resources
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.WelcomeScreen.resources
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.csproj.CopyComplete
-C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.WelcomeScreen.resources
 E:\Projects\FitVitality\FitVitality\bin\Debug\net6.0-windows\FitVitality.exe
 E:\Projects\FitVitality\FitVitality\bin\Debug\net6.0-windows\FitVitality.dll.config
 E:\Projects\FitVitality\FitVitality\bin\Debug\net6.0-windows\FitVitality.deps.json
@@ -143,3 +142,4 @@ C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Deb
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Login.resources

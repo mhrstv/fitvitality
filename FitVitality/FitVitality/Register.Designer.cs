@@ -45,6 +45,8 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
+            label6 = new Label();
+            kryptonTextBox4 = new Krypton.Toolkit.KryptonTextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -55,7 +57,7 @@
             // kryptonButton1
             // 
             kryptonButton1.CornerRoundingRadius = 15F;
-            kryptonButton1.Location = new Point(99, 323);
+            kryptonButton1.Location = new Point(96, 328);
             kryptonButton1.Name = "kryptonButton1";
             kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             kryptonButton1.Size = new Size(90, 25);
@@ -115,7 +117,7 @@
             label5.Cursor = Cursors.Hand;
             label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(150, 208, 250);
-            label5.Location = new Point(66, 362);
+            label5.Location = new Point(65, 368);
             label5.Name = "label5";
             label5.Size = new Size(157, 14);
             label5.TabIndex = 14;
@@ -127,7 +129,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(44, 257);
+            label3.Location = new Point(44, 217);
             label3.Name = "label3";
             label3.Size = new Size(66, 14);
             label3.TabIndex = 13;
@@ -138,7 +140,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(44, 146);
+            label2.Location = new Point(44, 108);
             label2.Name = "label2";
             label2.Size = new Size(67, 14);
             label2.TabIndex = 12;
@@ -146,7 +148,7 @@
             // 
             // kryptonTextBox2
             // 
-            kryptonTextBox2.Location = new Point(44, 274);
+            kryptonTextBox2.Location = new Point(44, 234);
             kryptonTextBox2.MaxLength = 32;
             kryptonTextBox2.Name = "kryptonTextBox2";
             kryptonTextBox2.PasswordChar = '●';
@@ -156,7 +158,7 @@
             // 
             // kryptonTextBox1
             // 
-            kryptonTextBox1.Location = new Point(44, 164);
+            kryptonTextBox1.Location = new Point(44, 126);
             kryptonTextBox1.MaxLength = 16;
             kryptonTextBox1.Name = "kryptonTextBox1";
             kryptonTextBox1.Size = new Size(199, 23);
@@ -167,7 +169,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(92, 225, 230);
-            label1.Location = new Point(29, 71);
+            label1.Location = new Point(29, 50);
             label1.Name = "label1";
             label1.Size = new Size(229, 46);
             label1.TabIndex = 9;
@@ -178,7 +180,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(44, 201);
+            label4.Location = new Point(44, 161);
             label4.Name = "label4";
             label4.Size = new Size(39, 14);
             label4.TabIndex = 17;
@@ -186,7 +188,7 @@
             // 
             // kryptonTextBox3
             // 
-            kryptonTextBox3.Location = new Point(44, 219);
+            kryptonTextBox3.Location = new Point(44, 179);
             kryptonTextBox3.MaxLength = 50;
             kryptonTextBox3.Name = "kryptonTextBox3";
             kryptonTextBox3.Size = new Size(199, 23);
@@ -286,12 +288,35 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color2 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(44, 270);
+            label6.Name = "label6";
+            label6.Size = new Size(115, 14);
+            label6.TabIndex = 20;
+            label6.Text = "Confirm Password";
+            // 
+            // kryptonTextBox4
+            // 
+            kryptonTextBox4.Location = new Point(44, 287);
+            kryptonTextBox4.MaxLength = 32;
+            kryptonTextBox4.Name = "kryptonTextBox4";
+            kryptonTextBox4.PasswordChar = '●';
+            kryptonTextBox4.Size = new Size(199, 23);
+            kryptonTextBox4.TabIndex = 19;
+            kryptonTextBox4.UseSystemPasswordChar = true;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(label6);
+            Controls.Add(kryptonTextBox4);
             Controls.Add(panel1);
             Controls.Add(label4);
             Controls.Add(kryptonTextBox3);
@@ -337,5 +362,7 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
+        private Label label6;
+        private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
     }
 }

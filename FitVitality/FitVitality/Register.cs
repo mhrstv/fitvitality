@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
 using Microsoft.Identity.Client;
+using System.Text.RegularExpressions;
+using System.ComponentModel.DataAnnotations;
+using System.Net.Mail;
 
 namespace FitVitality
 {
@@ -75,30 +78,139 @@ namespace FitVitality
                 }
             }
         }
+        private bool uppercaseLetters(string str)
+        {
+            foreach(var c in str)
+            {
+                if (Char.IsUpper(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private bool lowercaseLetters(string str)
+        {
+            foreach (var c in str)
+            {
+                if (Char.IsLower(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private bool containsDigit(string str)
+        {
+            foreach (var c in str)
+            {
+                if (Char.IsDigit(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private bool isValidEmail(string str)
+        {
+            var emailValidation = new EmailAddressAttribute();
+            return emailValidation.IsValid(str);
+        }
+        private static bool hasSpecialChar(string str)
+        {
+            string specialChar = @"\|!#$%&/()=?»«@£§€{}.-;'<>_,";
+            foreach (var c in specialChar)
+            {
+                if (str.Contains(c)) return true;
+            }
 
+            return false;
+        }
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string regUsername = kryptonTextBox1.Text;
             string regEmail = kryptonTextBox3.Text;
             string regPassword = kryptonTextBox2.Text;
-
-            if (!userExists(regUsername) && !emailExists(regEmail))
+            string confirmPass = kryptonTextBox4.Text;
+            if (regUsername.Length >= 4)
             {
-                InsertUser(regUsername, regEmail, regPassword);
-                MessageBox.Show("User successfully registered!");
-                for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                if (Regex.IsMatch(regUsername, @"^[a-zA-Z0-9_]+$"))
                 {
-                    this.Opacity = i;
+                    if (regPassword.Length >= 8)
+                    {
+                        if (uppercaseLetters(regPassword))
+                        {
+                            if (lowercaseLetters(regPassword))
+                            {
+                                if (containsDigit(regPassword))
+                                {
+                                    if (hasSpecialChar(regPassword))
+                                    {
+                                        if(regPassword == confirmPass)
+                                        {
+                                            if (isValidEmail(regEmail))
+                                            {
+                                                if (!userExists(regUsername) && !emailExists(regEmail))
+                                                {
+                                                    InsertUser(regUsername, regEmail, regPassword);
+                                                    MessageBox.Show("User successfully registered!");
+                                                    for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                                                    {
+                                                        this.Opacity = i;
+                                                    }
+                                                    Login welcomeScreen = new Login();
+                                                    welcomeScreen.Show();
+                                                    this.Hide();
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show("Username or email are already in use.");
+                                                }
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Email is not valid!");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Passwords do not match!");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Your password should contain atleast 1 symbol!");
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Your password should contain atleast 1 number!");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Your password should contain atleast 1 lowercase character!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Your password should contain atleast 1 uppercase character!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Your password should be atleast 8 characters long!");
+                    }
                 }
-                Login welcomeScreen = new Login();
-                welcomeScreen.Show();
-                this.Hide();
+                else
+                {
+                    MessageBox.Show("Please use only latin letters or numbers!");
+                }
             }
             else
             {
-                MessageBox.Show("Username or email are already in use.");
+                MessageBox.Show("Your username should be atleast 4 characters long!");
             }
-
         }
 
         private void Register_Load(object sender, EventArgs e)

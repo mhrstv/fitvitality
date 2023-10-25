@@ -46,7 +46,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
-            ClientSize = new Size(706, 359);
+            ClientSize = new Size(690, 368);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "marto1";

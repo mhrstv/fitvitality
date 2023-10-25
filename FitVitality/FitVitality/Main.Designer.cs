@@ -31,11 +31,19 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
-            panel2 = new Panel();
             buttonWorkout = new Krypton.Toolkit.KryptonButton();
             buttonDashboard = new Krypton.Toolkit.KryptonButton();
             panel3 = new Panel();
-            panel2.SuspendLayout();
+            topbar = new Panel();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            buttonMin = new PictureBox();
+            buttonClose = new PictureBox();
+            topbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -46,11 +54,13 @@
             kryptonPalette1.ButtonSpecs.FormRestore.Image = Properties.Resources.maximizebutton;
             kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Rounding = 15F;
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Width = 1;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 15F;
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Width = 1;
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -58,23 +68,13 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new Padding(11, -1, -1, -1);
             // 
-            // panel2
-            // 
-            panel2.Controls.Add(buttonWorkout);
-            panel2.Controls.Add(buttonDashboard);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(690, 46);
-            panel2.TabIndex = 1;
-            // 
             // buttonWorkout
             // 
             buttonWorkout.CornerRoundingRadius = 10F;
-            buttonWorkout.Location = new Point(355, 3);
+            buttonWorkout.Location = new Point(354, 3);
             buttonWorkout.Name = "buttonWorkout";
             buttonWorkout.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            buttonWorkout.Size = new Size(39, 40);
+            buttonWorkout.Size = new Size(25, 26);
             buttonWorkout.StateCommon.Back.Color1 = Color.White;
             buttonWorkout.StateCommon.Back.Color2 = Color.White;
             buttonWorkout.StateCommon.Back.ColorAngle = 45F;
@@ -136,10 +136,10 @@
             // buttonDashboard
             // 
             buttonDashboard.CornerRoundingRadius = 10F;
-            buttonDashboard.Location = new Point(296, 3);
+            buttonDashboard.Location = new Point(312, 3);
             buttonDashboard.Name = "buttonDashboard";
             buttonDashboard.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            buttonDashboard.Size = new Size(39, 40);
+            buttonDashboard.Size = new Size(19, 23);
             buttonDashboard.StateCommon.Back.Color1 = Color.White;
             buttonDashboard.StateCommon.Back.Color2 = Color.White;
             buttonDashboard.StateCommon.Back.ColorAngle = 45F;
@@ -200,10 +200,78 @@
             // 
             // panel3
             // 
-            panel3.Location = new Point(-9, 49);
+            panel3.Location = new Point(12, 32);
             panel3.Name = "panel3";
-            panel3.Size = new Size(707, 359);
+            panel3.Size = new Size(666, 356);
             panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
+            panel3.MouseDown += panel3_MouseDown;
+            panel3.MouseMove += panel3_MouseMove;
+            panel3.MouseUp += panel3_MouseUp;
+            // 
+            // topbar
+            // 
+            topbar.Controls.Add(buttonWorkout);
+            topbar.Controls.Add(buttonDashboard);
+            topbar.Controls.Add(pictureBox4);
+            topbar.Controls.Add(pictureBox3);
+            topbar.Controls.Add(buttonMin);
+            topbar.Controls.Add(buttonClose);
+            topbar.Location = new Point(12, 12);
+            topbar.Name = "topbar";
+            topbar.Size = new Size(674, 21);
+            topbar.TabIndex = 19;
+            topbar.MouseDown += panel1_MouseDown;
+            topbar.MouseMove += panel1_MouseMove;
+            topbar.MouseUp += panel1_MouseUp;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(40, 7);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(66, 20);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 1;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(8, 6);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(26, 24);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 1;
+            pictureBox3.TabStop = false;
+            // 
+            // buttonMin
+            // 
+            buttonMin.BackColor = Color.White;
+            buttonMin.Image = (Image)resources.GetObject("buttonMin.Image");
+            buttonMin.Location = new Point(636, 7);
+            buttonMin.Name = "buttonMin";
+            buttonMin.Size = new Size(19, 19);
+            buttonMin.SizeMode = PictureBoxSizeMode.CenterImage;
+            buttonMin.TabIndex = 2;
+            buttonMin.TabStop = false;
+            buttonMin.Click += pictureBox2_Click;
+            buttonMin.MouseEnter += pictureBox2_MouseEnter;
+            buttonMin.MouseLeave += pictureBox2_MouseLeave;
+            // 
+            // buttonClose
+            // 
+            buttonClose.BackColor = Color.White;
+            buttonClose.Image = Properties.Resources.closebutton;
+            buttonClose.Location = new Point(661, 7);
+            buttonClose.Name = "buttonClose";
+            buttonClose.Size = new Size(19, 19);
+            buttonClose.SizeMode = PictureBoxSizeMode.Zoom;
+            buttonClose.TabIndex = 1;
+            buttonClose.TabStop = false;
+            buttonClose.Click += pictureBox1_Click;
+            buttonClose.MouseEnter += pictureBox1_MouseEnter;
+            buttonClose.MouseLeave += pictureBox1_MouseLeave;
             // 
             // Form1
             // 
@@ -211,10 +279,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 400);
-            Controls.Add(panel2);
+            Controls.Add(topbar);
             Controls.Add(panel3);
             CornerRoundingRadius = 15F;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(1000, 600);
+            MinimumSize = new Size(690, 400);
             Name = "Form1";
             Opacity = 0D;
             Palette = kryptonPalette1;
@@ -227,16 +298,27 @@
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             Shown += Form1_Shown;
-            panel2.ResumeLayout(false);
+            MouseDown += Form1_MouseDown;
+            MouseMove += Form1_MouseMove;
+            MouseUp += Form1_MouseUp;
+            topbar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private Panel panel2;
         private Panel panel3;
         private Krypton.Toolkit.KryptonButton buttonDashboard;
         private Krypton.Toolkit.KryptonButton buttonWorkout;
+        private Panel topbar;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private PictureBox buttonMin;
+        private PictureBox buttonClose;
     }
 }

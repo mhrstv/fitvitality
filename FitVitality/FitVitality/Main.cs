@@ -64,5 +64,88 @@ namespace FitVitality
         {
             loadForm(new marto1());
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            buttonClose.BackColor = Color.IndianRed;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            buttonClose.BackColor = Color.White;
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            buttonMin.BackColor = Color.Silver;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            buttonMin.BackColor = Color.White;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panel3_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+        }
     }
 }

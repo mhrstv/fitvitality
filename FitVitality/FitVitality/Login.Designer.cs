@@ -240,6 +240,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(287, 32);
             panel1.TabIndex = 9;
+            panel1.Paint += panel1_Paint;
             panel1.MouseDown += panel1_MouseDown;
             panel1.MouseMove += panel1_MouseMove;
             panel1.MouseUp += panel1_MouseUp;

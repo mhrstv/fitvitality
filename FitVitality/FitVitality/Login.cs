@@ -24,7 +24,6 @@ namespace FitVitality
         {
             InitializeComponent();
         }
-
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
             var activated = new Register();
@@ -48,7 +47,7 @@ namespace FitVitality
 
         private void WelcomeScreen_Shown(object sender, EventArgs e)
         {
-            
+
             this.Opacity = 0;
             while (this.Opacity != 1)
             {
@@ -201,7 +200,12 @@ namespace FitVitality
 
         public void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

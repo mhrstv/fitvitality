@@ -61,7 +61,7 @@ namespace FitVitality
             }
         }
 
-        private void InsertUser(string username, string email, string password)
+        private void createUser(string username, string email, string password)
         {
             using (SqlConnection connection = new SqlConnection(connectionstring))
             {
@@ -146,36 +146,43 @@ namespace FitVitality
                                 {
                                     if (hasSpecialChar(regPassword))
                                     {
-                                        if(regPassword == confirmPass)
-                                        {
-                                            if (isValidEmail(regEmail))
-                                            {
-                                                if (!userExists(regUsername) && !emailExists(regEmail))
+                                          if (regPassword == confirmPass)
+                                          {
+                                                if (isValidEmail(regEmail))
                                                 {
-                                                    InsertUser(regUsername, regEmail, regPassword);
-                                                    MessageBox.Show("User successfully registered!");
-                                                    for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                                                    if (!userExists(regUsername))
                                                     {
-                                                        this.Opacity = i;
+                                                        if (!emailExists(regEmail))
+                                                        {
+                                                        createUser(regUsername, regEmail, regPassword);
+                                                        MessageBox.Show("User successfully registered!");
+                                                        for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                                                        {
+                                                            this.Opacity = i;
+                                                        }
+                                                        Login welcomeScreen = new Login();
+                                                        welcomeScreen.Show();
+                                                        this.Hide();
+                                                        }
+                                                        else
+                                                        {
+                                                            MessageBox.Show("Email is already in use!");
+                                                        }
                                                     }
-                                                    Login welcomeScreen = new Login();
-                                                    welcomeScreen.Show();
-                                                    this.Hide();
+                                                    else
+                                                    {
+                                                        MessageBox.Show("Username is already in use!");
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    MessageBox.Show("Username or email are already in use.");
+                                                    MessageBox.Show("Email is not valid!");
                                                 }
-                                            }
-                                            else
-                                            {
-                                                MessageBox.Show("Email is not valid!");
-                                            }
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("Passwords do not match!");
-                                        }
+                                          }
+                                          else
+                                          {
+                                               MessageBox.Show("Passwords do not match!");
+                                          }
                                     }
                                     else
                                     {
@@ -209,8 +216,8 @@ namespace FitVitality
             }
             else
             {
-                MessageBox.Show("Your username should be atleast 4 characters long!");
-            }
+                 MessageBox.Show("Your username should be atleast 4 characters long!");
+            }                              
         }
 
         private void Register_Load(object sender, EventArgs e)

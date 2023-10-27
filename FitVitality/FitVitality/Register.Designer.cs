@@ -148,6 +148,9 @@
             // 
             // kryptonTextBox2
             // 
+            kryptonTextBox2.CueHint.CueHintText = "Enter password";
+            kryptonTextBox2.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            kryptonTextBox2.CueHint.Padding = new Padding(0);
             kryptonTextBox2.Location = new Point(44, 234);
             kryptonTextBox2.MaxLength = 32;
             kryptonTextBox2.Name = "kryptonTextBox2";
@@ -158,6 +161,9 @@
             // 
             // kryptonTextBox1
             // 
+            kryptonTextBox1.CueHint.CueHintText = "Enter username";
+            kryptonTextBox1.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            kryptonTextBox1.CueHint.Padding = new Padding(0);
             kryptonTextBox1.Location = new Point(44, 126);
             kryptonTextBox1.MaxLength = 16;
             kryptonTextBox1.Name = "kryptonTextBox1";
@@ -188,6 +194,9 @@
             // 
             // kryptonTextBox3
             // 
+            kryptonTextBox3.CueHint.CueHintText = "Enter email";
+            kryptonTextBox3.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            kryptonTextBox3.CueHint.Padding = new Padding(0);
             kryptonTextBox3.Location = new Point(44, 179);
             kryptonTextBox3.MaxLength = 50;
             kryptonTextBox3.Name = "kryptonTextBox3";
@@ -301,6 +310,9 @@
             // 
             // kryptonTextBox4
             // 
+            kryptonTextBox4.CueHint.CueHintText = "Re-enter password";
+            kryptonTextBox4.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            kryptonTextBox4.CueHint.Padding = new Padding(0);
             kryptonTextBox4.Location = new Point(44, 287);
             kryptonTextBox4.MaxLength = 32;
             kryptonTextBox4.Name = "kryptonTextBox4";

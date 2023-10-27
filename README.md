@@ -1,1 +1,1 @@
-# olympiad-project
+# fitvitality

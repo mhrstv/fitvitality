@@ -333,7 +333,7 @@
             Palette = kryptonPalette1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Register";
+            Text = "FitVitality";
             Load += Register_Load;
             Shown += Register_Shown;
             panel1.ResumeLayout(false);

@@ -333,7 +333,7 @@
             Palette = kryptonPalette1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = " FitVitality";
+            Text = "FitVitality";
             FormClosing += Login_FormClosing;
             FormClosed += WelcomeScreen_FormClosed;
             Load += WelcomeScreen_Load;

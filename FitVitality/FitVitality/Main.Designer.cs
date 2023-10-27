@@ -200,9 +200,10 @@
             // 
             // panel3
             // 
-            panel3.Location = new Point(12, 32);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(0, 44);
             panel3.Name = "panel3";
-            panel3.Size = new Size(666, 356);
+            panel3.Size = new Size(690, 356);
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
             panel3.MouseDown += panel3_MouseDown;
@@ -217,9 +218,10 @@
             topbar.Controls.Add(pictureBox3);
             topbar.Controls.Add(buttonMin);
             topbar.Controls.Add(buttonClose);
-            topbar.Location = new Point(12, 12);
+            topbar.Dock = DockStyle.Top;
+            topbar.Location = new Point(0, 0);
             topbar.Name = "topbar";
-            topbar.Size = new Size(674, 21);
+            topbar.Size = new Size(690, 32);
             topbar.TabIndex = 19;
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;

@@ -48,7 +48,7 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(178, 21);
+            panel1.Location = new Point(28, 11);
             panel1.Name = "panel1";
             panel1.Size = new Size(335, 302);
             panel1.TabIndex = 1;
@@ -56,9 +56,9 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(224, 224, 224);
+            panel2.BackColor = Color.Black;
             panel2.Controls.Add(panel3);
-            panel2.Location = new Point(224, 367);
+            panel2.Location = new Point(74, 365);
             panel2.Name = "panel2";
             panel2.Size = new Size(242, 13);
             panel2.TabIndex = 2;
@@ -85,26 +85,28 @@
             kryptonPalette1.ButtonSpecs.FormMin.AllowInheritImage = false;
             kryptonPalette1.ButtonSpecs.FormMin.AllowInheritText = false;
             kryptonPalette1.ButtonSpecs.FormMin.AllowInheritToolTipTitle = false;
-            kryptonPalette1.FormStyles.FormCommon.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.FormStyles.FormCommon.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Back.Color1 = Color.Black;
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Back.Color2 = Color.Black;
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Color1 = Color.Black;
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Color2 = Color.Black;
             kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.None;
-            kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Rounding = 15F;
+            kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Rounding = 0F;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Back.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Back.Color2 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color1 = Color.FromArgb(250, 252, 252);
-            kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color2 = Color.FromArgb(250, 252, 252);
+            kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Back.Color1 = Color.Black;
+            kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Back.Color2 = Color.Black;
+            kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color1 = Color.Black;
+            kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color2 = Color.Black;
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.PalettePaint += kryptonPalette1_PalettePaint;
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.FromArgb(250, 252, 252);
+            textBox1.BackColor = Color.Black;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = Color.FromArgb(92, 225, 230);
-            textBox1.Location = new Point(307, 329);
+            textBox1.Location = new Point(157, 319);
             textBox1.Name = "textBox1";
             textBox1.ReadOnly = true;
             textBox1.Size = new Size(76, 28);
@@ -117,13 +119,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(250, 252, 252);
-            ClientSize = new Size(690, 400);
+            BackColor = Color.Black;
+            ClientSize = new Size(390, 400);
             ControlBox = false;
             Controls.Add(textBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Cursor = Cursors.Arrow;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;

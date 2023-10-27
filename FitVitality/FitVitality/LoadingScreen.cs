@@ -66,6 +66,7 @@ namespace FitVitality
 
         private void loadingScreen_Load(object sender, EventArgs e)
         {
+            this.TransparencyKey = Color.FromArgb(0, 0, 0);
             this.ShowInTaskbar = false;
             this.ControlBox = false;
         }

@@ -80,7 +80,7 @@ namespace FitVitality
         }
         private bool uppercaseLetters(string str)
         {
-            foreach(var c in str)
+            foreach (var c in str)
             {
                 if (Char.IsUpper(c))
                 {

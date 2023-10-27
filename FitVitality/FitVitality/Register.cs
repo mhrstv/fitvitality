@@ -126,6 +126,12 @@ namespace FitVitality
 
             return false;
         }
+        private bool underscoreRepeated(string str)
+        {
+
+
+            return false;
+        }
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             string regUsername = kryptonTextBox1.Text;
@@ -136,33 +142,35 @@ namespace FitVitality
             {
                 if (Regex.IsMatch(regUsername, @"^[a-zA-Z0-9_]+$"))
                 {
-                    if (regPassword.Length >= 8)
+                    if (underscoreRepeated(regUsername))
                     {
-                        if (uppercaseLetters(regPassword))
+                        if (regPassword.Length >= 8)
                         {
-                            if (lowercaseLetters(regPassword))
+                            if (uppercaseLetters(regPassword))
                             {
-                                if (containsDigit(regPassword))
+                                if (lowercaseLetters(regPassword))
                                 {
-                                    if (hasSpecialChar(regPassword))
+                                    if (containsDigit(regPassword))
                                     {
-                                          if (regPassword == confirmPass)
-                                          {
+                                        if (hasSpecialChar(regPassword))
+                                        {
+                                            if (regPassword == confirmPass)
+                                            {
                                                 if (isValidEmail(regEmail))
                                                 {
                                                     if (!userExists(regUsername))
                                                     {
                                                         if (!emailExists(regEmail))
                                                         {
-                                                        createUser(regUsername, regEmail, regPassword);
-                                                        MessageBox.Show("User successfully registered!");
-                                                        for (double i = this.Opacity; i >= 0; i = i - 0.00002)
-                                                        {
-                                                            this.Opacity = i;
-                                                        }
-                                                        Login welcomeScreen = new Login();
-                                                        welcomeScreen.Show();
-                                                        this.Hide();
+                                                            createUser(regUsername, regEmail, regPassword);
+                                                            MessageBox.Show("User successfully registered!");
+                                                            for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                                                            {
+                                                                this.Opacity = i;
+                                                            }
+                                                            Login welcomeScreen = new Login();
+                                                            welcomeScreen.Show();
+                                                            this.Hide();
                                                         }
                                                         else
                                                         {
@@ -178,46 +186,51 @@ namespace FitVitality
                                                 {
                                                     MessageBox.Show("Email is not valid!");
                                                 }
-                                          }
-                                          else
-                                          {
-                                               MessageBox.Show("Passwords do not match!");
-                                          }
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Passwords do not match!");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Your password should contain atleast 1 symbol!");
+                                        }
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Your password should contain atleast 1 symbol!");
+                                        MessageBox.Show("Your password should contain atleast 1 number!");
                                     }
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Your password should contain atleast 1 number!");
+                                    MessageBox.Show("Your password should contain atleast 1 lowercase character!");
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Your password should contain atleast 1 lowercase character!");
+                                MessageBox.Show("Your password should contain atleast 1 uppercase character!");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Your password should contain atleast 1 uppercase character!");
+                            MessageBox.Show("Your password should be atleast 8 characters long!");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Your password should be atleast 8 characters long!");
+                        MessageBox.Show("Do not use more than 1 underscore in your username!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please use only latin letters or numbers!");
+                    MessageBox.Show("Please use only english letters or numbers!");
                 }
             }
             else
             {
-                 MessageBox.Show("Your username should be atleast 4 characters long!");
-            }                              
+                MessageBox.Show("Your username should be atleast 4 characters long!");
+            }
         }
 
         private void Register_Load(object sender, EventArgs e)

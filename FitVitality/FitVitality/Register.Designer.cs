@@ -366,11 +366,11 @@
             // 
             usrLabel.BackColor = Color.FromArgb(255, 0, 42);
             usrLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            usrLabel.Location = new Point(16, 2);
+            usrLabel.Location = new Point(6, 4);
             usrLabel.Name = "usrLabel";
-            usrLabel.Size = new Size(240, 32);
+            usrLabel.Size = new Size(255, 20);
             usrLabel.TabIndex = 0;
-            usrLabel.Text = "Username must be at least 4 letters, does not have special characters and does not exist!";
+            usrLabel.Text = "Username must be at least 4 letters!";
             usrLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // pictureBox5
@@ -426,11 +426,11 @@
             // 
             passLabel.BackColor = Color.FromArgb(255, 0, 42);
             passLabel.Font = new Font("Calibri", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            passLabel.Location = new Point(27, 0);
+            passLabel.Location = new Point(27, 2);
             passLabel.Name = "passLabel";
-            passLabel.Size = new Size(238, 27);
+            passLabel.Size = new Size(217, 26);
             passLabel.TabIndex = 16;
-            passLabel.Text = "The password must be at least 8 characters with upper and a lowercase letter, a digit and a symbol!";
+            passLabel.Text = "The password must be at least 8 characters         ( a combination of letters, digits & symbols ) !";
             // 
             // pictureBox7
             // 

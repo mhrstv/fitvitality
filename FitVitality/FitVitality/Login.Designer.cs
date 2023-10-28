@@ -91,7 +91,7 @@
             label1.Location = new Point(68, 83);
             label1.Name = "label1";
             label1.Size = new Size(151, 46);
-            label1.TabIndex = 0;
+            label1.TabIndex = 2;
             label1.Text = "LOGIN";
             // 
             // kryptonTextBox1
@@ -103,7 +103,8 @@
             kryptonTextBox1.MaxLength = 16;
             kryptonTextBox1.Name = "kryptonTextBox1";
             kryptonTextBox1.Size = new Size(199, 23);
-            kryptonTextBox1.TabIndex = 1;
+            kryptonTextBox1.TabIndex = 7;
+            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
             // 
             // kryptonTextBox2
             // 
@@ -115,7 +116,7 @@
             kryptonTextBox2.Name = "kryptonTextBox2";
             kryptonTextBox2.PasswordChar = '●';
             kryptonTextBox2.Size = new Size(199, 23);
-            kryptonTextBox2.TabIndex = 2;
+            kryptonTextBox2.TabIndex = 8;
             kryptonTextBox2.UseSystemPasswordChar = true;
             // 
             // label2
@@ -160,7 +161,7 @@
             label5.Location = new Point(121, 343);
             label5.Name = "label5";
             label5.Size = new Size(112, 14);
-            label5.TabIndex = 7;
+            label5.TabIndex = 6;
             label5.Text = "Create an account";
             label5.Click += label5_Click;
             // 
@@ -173,10 +174,10 @@
             kryptonButton1.Size = new Size(90, 25);
             kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
             kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            kryptonButton1.StateCommon.Back.ColorAngle = 45F;
+            kryptonButton1.StateCommon.Back.ColorAngle = 0F;
             kryptonButton1.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
             kryptonButton1.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            kryptonButton1.StateCommon.Border.ColorAngle = 45F;
+            kryptonButton1.StateCommon.Border.ColorAngle = 0F;
             kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonButton1.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonButton1.StateCommon.Border.Rounding = 15F;
@@ -199,11 +200,11 @@
             kryptonButton1.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             kryptonButton1.StateNormal.Back.Color1 = Color.FromArgb(90, 220, 225);
             kryptonButton1.StateNormal.Back.Color2 = Color.FromArgb(90, 220, 225);
-            kryptonButton1.StateNormal.Back.ColorAngle = 45F;
+            kryptonButton1.StateNormal.Back.ColorAngle = 0F;
             kryptonButton1.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonButton1.StateNormal.Border.Color1 = Color.FromArgb(90, 220, 225);
             kryptonButton1.StateNormal.Border.Color2 = Color.FromArgb(90, 220, 225);
-            kryptonButton1.StateNormal.Border.ColorAngle = 45F;
+            kryptonButton1.StateNormal.Border.ColorAngle = 0F;
             kryptonButton1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonButton1.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonButton1.StateNormal.Border.Rounding = 15F;
@@ -230,7 +231,7 @@
             kryptonButton1.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonButton1.StateTracking.Border.Rounding = 15F;
             kryptonButton1.StateTracking.Border.Width = 1;
-            kryptonButton1.TabIndex = 8;
+            kryptonButton1.TabIndex = 9;
             kryptonButton1.Values.Text = "Login";
             kryptonButton1.Click += kryptonButton1_Click;
             kryptonButton1.MouseLeave += kryptonButton1_MouseLeave;
@@ -245,7 +246,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(287, 32);
-            panel1.TabIndex = 9;
+            panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             panel1.MouseDown += panel1_MouseDown;
             panel1.MouseMove += panel1_MouseMove;
@@ -308,7 +309,7 @@
             checkBox1.Location = new Point(44, 282);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(99, 18);
-            checkBox1.TabIndex = 10;
+            checkBox1.TabIndex = 5;
             checkBox1.TabStop = false;
             checkBox1.Text = "Remember me";
             checkBox1.UseVisualStyleBackColor = true;
@@ -320,9 +321,9 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(kryptonButton1);
             Controls.Add(checkBox1);
             Controls.Add(panel1);
-            Controls.Add(kryptonButton1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);

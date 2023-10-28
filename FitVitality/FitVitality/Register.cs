@@ -134,102 +134,200 @@ namespace FitVitality
         }
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            string regUsername = kryptonTextBox1.Text;
-            string regEmail = kryptonTextBox3.Text;
-            string regPassword = kryptonTextBox2.Text;
-            string confirmPass = kryptonTextBox4.Text;
+            string regUsername = tbusername.Text;
+            string regEmail = tbemail.Text;
+            string regPassword = tbpass.Text;
+            string confirmPass = tbrepass.Text;
             if (regUsername.Length >= 4)
             {
+                usrmark.Visible = false;
+                userError.Visible = false;
+                tbusername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                tbusername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
                 if (Regex.IsMatch(regUsername, @"^[a-zA-Z0-9_]+$"))
                 {
-                    if (underscoreRepeated(regUsername))
+                    usrmark.Visible = false;
+                    userError.Visible = false;
+                    tbusername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                    tbusername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                    if (regPassword.Length >= 8)
                     {
-                        if (regPassword.Length >= 8)
+                        passmark.Visible = false;
+                        passError.Visible = false;
+                        tbpass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                        tbpass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                        if (uppercaseLetters(regPassword))
                         {
-                            if (uppercaseLetters(regPassword))
+                            passmark.Visible = false;
+                            passError.Visible = false;
+                            tbpass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            tbpass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            if (lowercaseLetters(regPassword))
                             {
-                                if (lowercaseLetters(regPassword))
+                                passmark.Visible = false;
+                                passError.Visible = false;
+                                tbpass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                tbpass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                if (containsDigit(regPassword))
                                 {
-                                    if (containsDigit(regPassword))
+                                    passmark.Visible = false;
+                                    passError.Visible = false;
+                                    tbpass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                    tbpass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                    if (hasSpecialChar(regPassword))
                                     {
-                                        if (hasSpecialChar(regPassword))
+                                        passmark.Visible = false;
+                                        passError.Visible = false;
+                                        tbpass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                        tbpass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                        if (regPassword == confirmPass)
                                         {
-                                            if (regPassword == confirmPass)
+                                            repassmark.Visible = false;
+                                            passError.Visible = false;
+                                            tbpass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                            tbpass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                            repassError.Visible = false;
+                                            tbrepass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                            tbrepass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                            if (isValidEmail(regEmail))
                                             {
-                                                if (isValidEmail(regEmail))
+                                                emailmark.Visible = false;
+                                                emailError.Visible = false;
+                                                tbemail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                                tbemail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                                if (!userExists(regUsername))
                                                 {
-                                                    if (!userExists(regUsername))
+                                                    usrmark.Visible = false;
+                                                    tbusername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                                    tbusername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                                    if (!emailExists(regEmail))
                                                     {
-                                                        if (!emailExists(regEmail))
+                                                        emailmark.Visible = false;
+                                                        tbemail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                                        tbemail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                                        createUser(regUsername, regEmail, regPassword);
+                                                        MessageBox.Show("User successfully registered!");
+                                                        for (double i = this.Opacity; i >= 0; i = i - 0.00002)
                                                         {
-                                                            createUser(regUsername, regEmail, regPassword);
-                                                            MessageBox.Show("User successfully registered!");
-                                                            for (double i = this.Opacity; i >= 0; i = i - 0.00002)
-                                                            {
-                                                                this.Opacity = i;
-                                                            }
-                                                            Login welcomeScreen = new Login();
-                                                            welcomeScreen.Show();
-                                                            this.Hide();
+                                                            this.Opacity = i;
                                                         }
-                                                        else
-                                                        {
-                                                            MessageBox.Show("Email is already in use!");
-                                                        }
+                                                        Login welcomeScreen = new Login();
+                                                        welcomeScreen.Show();
+                                                        this.Hide();
                                                     }
                                                     else
                                                     {
-                                                        MessageBox.Show("Username is already in use!");
+                                                        emailmark.Visible = true;
+                                                        emailError.Visible = true;
+                                                        emailLabel.Text = "Email either already exists or not valid!";
+                                                        tbemail.Text = "";
+                                                        tbemail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                                        tbemail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                                                     }
                                                 }
                                                 else
                                                 {
-                                                    MessageBox.Show("Email is not valid!");
+                                                    usrmark.Visible = true;
+                                                    userError.Visible = true;
+                                                    usrLabel.Text = "Username must be at least 4 letters, does not have special characters and does not exist!";
+                                                    tbusername.Text = "";
+                                                    tbusername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                                    tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                                                 }
                                             }
                                             else
                                             {
-                                                MessageBox.Show("Passwords do not match!");
+                                                emailmark.Visible = true;
+                                                emailError.Visible = true;
+                                                emailLabel.Text = "Email either already exists or not valid!";
+                                                tbemail.Text = "";
+                                                tbemail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                                tbemail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                                             }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Your password should contain atleast 1 symbol!");
+                                            repassmark.Visible = true;
+                                            repassError.Visible = true;
+                                            repassLabel.Text = "Passwords do not match!";
+                                            tbrepass.Text = "";
+                                            tbrepass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                            tbrepass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                                         }
                                     }
                                     else
                                     {
-                                        MessageBox.Show("Your password should contain atleast 1 number!");
+                                        passmark.Visible = true;
+                                        passError.Visible = true;
+                                        passLabel.Text = "The password must be at least 8 characters with upper and a lowercase letter, a digit and a symbol!";
+                                        tbpass.Text = "";
+                                        tbrepass.Text = "";
+                                        tbpass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                        tbpass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                                     }
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Your password should contain atleast 1 lowercase character!");
+                                    passmark.Visible = true;
+                                    passError.Visible = true;
+                                    passLabel.Text = "The password must be at least 8 characters with upper and a lowercase letter, a digit and a symbol!";
+                                    tbpass.Text = "";
+                                    tbrepass.Text = "";
+                                    tbpass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                    tbpass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Your password should contain atleast 1 uppercase character!");
+                                passmark.Visible = true;
+                                passError.Visible = true;
+                                passLabel.Text = "The password must be at least 8 characters with upper and a lowercase letter, a digit and a symbol!";
+                                tbpass.Text = "";
+                                tbrepass.Text = "";
+                                tbpass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                tbpass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Your password should be atleast 8 characters long!");
+                            passmark.Visible = true;
+                            passError.Visible = true;
+                            passLabel.Text = "The password must be at least 8 characters with upper and a lowercase letter, a digit and a symbol!";
+                            tbpass.Text = "";
+                            tbrepass.Text = "";
+                            tbpass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                            tbpass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Do not use more than 1 underscore in your username!");
+                        passmark.Visible = true;
+                        passError.Visible = true;
+                        passLabel.Text = "The password must be at least 8 characters with upper and a lowercase letter, a digit and a symbol!";
+                        tbpass.Text = "";
+                        tbrepass.Text = "";
+                        tbpass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                        tbpass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please use only english letters or numbers!");
+                    usrmark.Visible = true;
+                    userError.Visible = true;
+                    usrLabel.Text = "Username must be at least 4 letters, does not have special characters and does not exist!";
+                    tbusername.Text = "";
+                    tbusername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                    tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                 }
             }
             else
             {
-                MessageBox.Show("Your username should be atleast 4 characters long!");
+                usrmark.Visible = true;
+                userError.Visible = true;
+                usrLabel.Text = "Username must be at least 4 letters, does not have special characters and does not exist!";
+                tbusername.Text = "";
+                tbusername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }
         }
 
@@ -314,6 +412,11 @@ namespace FitVitality
             {
                 this.Opacity += 0.00004;
             }
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,7 +46,6 @@ namespace FitVitality
                 }
                 connection.Close();
             }
-
         }
 
         private void Settings_Load(object sender, EventArgs e)

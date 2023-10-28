@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -181,6 +181,63 @@
 </value>
   </data>
   <data name="buttonDashboard.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAxZJREFUWEfN
+        lj1oU1EUx/MBJuZLAmZtFguOJoO6CS4OFjdxqDVtU4udKjjo5upWVxUKgg5OggpaEMFJQRF0cOjku7Tv
+        oWOXLi3x/l5zwu3LCe85yO3wM83/3nPOn3PPvTF36fbMkUMVfaOKvlFF36iib1TRN6roG1X0jSpmZclE
+        Z+aD8KFG30TXtJgsqGJWKHw9CAca1ti6FpMFVczK0NRe0hD0g/CRFpMFVczKsokuzwXhjmaKI9RisqCK
+        aayYqLVowjsLJnw1ydRCEL5b2f7d1uLTUMVms3mxXC4/HfKsXq9flTUKUVAzkgTjbl7ykE9yU8ddF8YE
+        qNVqq7lcbiCUSqUHssasaAboWLJrvSB84eatVqtrbl5b55a7Loz+sK67lUrlfr1x4m4yWEzRpZ4JN93C
+        wryJPt0w0VZSuxf+OS41yOPk3acO9ahLfdk3MoVrNufz+V27eYMgSeCaShYGNDtfH+zfh25iz0TfmT+p
+        oZjaoB7f3a7F/7Tb7RaOWcxqik+K0g1mTI5uzkS79nOPddbcYU8xtYqP2NSpbnfKtu9lrV5/y0bNlP2+
+        xr4rT9bPiymGGLj63EI6hTlY+rX1HEPMH3FAQfJITvI7pvbxwCVgXzx8x0qlH1b8yKJmCsPsmTp77rWY
+        4sWmU4AhZg1zdIlPOjb7c/MbscVicZt42403kpP8CVPv2RMbZ2OaKQLQT05Pf5FBp6h0B43jozusoYsp
+        cpOjUCjskEdyWlRT8Yk1Go1+minaatfjmzn7+esi3YmNWSMcEd8nmZLbTDx5JCf5VVNcuE6nUybQPmyP
+        2ayZkkEXGF5mCTMHpg46hZmhqfil5zPlSRiZoj7Djp9RodhhRlMCv33LJlyIh90eIz/QzNpNE15gjf/a
+        uPtTbt/hJwE4Rs6doWTOCJIEk0wJdMPtyCSSpqhDPepSX/aNAriKvKogb5aQZiorCVMD6khNeaNgLBCG
+        R0mn4m79B1Nxbrc7LmMCtFqt0/yiC3zX9v0rybw8qtq+MeEooIq+UUXfqKJvVNE3qugbVfSNKvpGFf0y
+        k/sLuyGP0rOvogMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="kryptonButton1.StateCommon.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAxZJREFUWEfN
+        lj1oU1EUx/MBJuZLAmZtFguOJoO6CS4OFjdxqDVtU4udKjjo5upWVxUKgg5OggpaEMFJQRF0cOjku7Tv
+        oWOXLi3x/l5zwu3LCe85yO3wM83/3nPOn3PPvTF36fbMkUMVfaOKvlFF36iib1TRN6roG1X0jSpmZclE
+        Z+aD8KFG30TXtJgsqGJWKHw9CAca1ti6FpMFVczK0NRe0hD0g/CRFpMFVczKsokuzwXhjmaKI9RisqCK
+        aayYqLVowjsLJnw1ydRCEL5b2f7d1uLTUMVms3mxXC4/HfKsXq9flTUKUVAzkgTjbl7ykE9yU8ddF8YE
+        qNVqq7lcbiCUSqUHssasaAboWLJrvSB84eatVqtrbl5b55a7Loz+sK67lUrlfr1x4m4yWEzRpZ4JN93C
+        wryJPt0w0VZSuxf+OS41yOPk3acO9ahLfdk3MoVrNufz+V27eYMgSeCaShYGNDtfH+zfh25iz0TfmT+p
+        oZjaoB7f3a7F/7Tb7RaOWcxqik+K0g1mTI5uzkS79nOPddbcYU8xtYqP2NSpbnfKtu9lrV5/y0bNlP2+
+        xr4rT9bPiymGGLj63EI6hTlY+rX1HEPMH3FAQfJITvI7pvbxwCVgXzx8x0qlH1b8yKJmCsPsmTp77rWY
+        4sWmU4AhZg1zdIlPOjb7c/MbscVicZt42403kpP8CVPv2RMbZ2OaKQLQT05Pf5FBp6h0B43jozusoYsp
+        cpOjUCjskEdyWlRT8Yk1Go1+minaatfjmzn7+esi3YmNWSMcEd8nmZLbTDx5JCf5VVNcuE6nUybQPmyP
+        2ayZkkEXGF5mCTMHpg46hZmhqfil5zPlSRiZoj7Djp9RodhhRlMCv33LJlyIh90eIz/QzNpNE15gjf/a
+        uPtTbt/hJwE4Rs6doWTOCJIEk0wJdMPtyCSSpqhDPepSX/aNAriKvKogb5aQZiorCVMD6khNeaNgLBCG
+        R0mn4m79B1Nxbrc7LmMCtFqt0/yiC3zX9v0rybw8qtq+MeEooIq+UUXfqKJvVNE3qugbVfSNKvpGFf0y
+        k/sLuyGP0rOvogMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="kryptonButton1.StateNormal.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAxZJREFUWEfN
+        lj1oU1EUx/MBJuZLAmZtFguOJoO6CS4OFjdxqDVtU4udKjjo5upWVxUKgg5OggpaEMFJQRF0cOjku7Tv
+        oWOXLi3x/l5zwu3LCe85yO3wM83/3nPOn3PPvTF36fbMkUMVfaOKvlFF36iib1TRN6roG1X0jSpmZclE
+        Z+aD8KFG30TXtJgsqGJWKHw9CAca1ti6FpMFVczK0NRe0hD0g/CRFpMFVczKsokuzwXhjmaKI9RisqCK
+        aayYqLVowjsLJnw1ydRCEL5b2f7d1uLTUMVms3mxXC4/HfKsXq9flTUKUVAzkgTjbl7ykE9yU8ddF8YE
+        qNVqq7lcbiCUSqUHssasaAboWLJrvSB84eatVqtrbl5b55a7Loz+sK67lUrlfr1x4m4yWEzRpZ4JN93C
+        wryJPt0w0VZSuxf+OS41yOPk3acO9ahLfdk3MoVrNufz+V27eYMgSeCaShYGNDtfH+zfh25iz0TfmT+p
+        oZjaoB7f3a7F/7Tb7RaOWcxqik+K0g1mTI5uzkS79nOPddbcYU8xtYqP2NSpbnfKtu9lrV5/y0bNlP2+
+        xr4rT9bPiymGGLj63EI6hTlY+rX1HEPMH3FAQfJITvI7pvbxwCVgXzx8x0qlH1b8yKJmCsPsmTp77rWY
+        4sWmU4AhZg1zdIlPOjb7c/MbscVicZt42403kpP8CVPv2RMbZ2OaKQLQT05Pf5FBp6h0B43jozusoYsp
+        cpOjUCjskEdyWlRT8Yk1Go1+minaatfjmzn7+esi3YmNWSMcEd8nmZLbTDx5JCf5VVNcuE6nUybQPmyP
+        2ayZkkEXGF5mCTMHpg46hZmhqfil5zPlSRiZoj7Djp9RodhhRlMCv33LJlyIh90eIz/QzNpNE15gjf/a
+        uPtTbt/hJwE4Rs6doWTOCJIEk0wJdMPtyCSSpqhDPepSX/aNAriKvKogb5aQZiorCVMD6khNeaNgLBCG
+        R0mn4m79B1Nxbrc7LmMCtFqt0/yiC3zX9v0rybw8qtq+MeEooIq+UUXfqKJvVNE3qugbVfSNKvpGFf0y
+        k/sLuyGP0rOvogMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="kryptonButton1.StateTracking.Back.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABGdBTUEAALGPC/xhBQAAAxZJREFUWEfN
         lj1oU1EUx/MBJuZLAmZtFguOJoO6CS4OFjdxqDVtU4udKjjo5upWVxUKgg5OggpaEMFJQRF0cOjku7Tv

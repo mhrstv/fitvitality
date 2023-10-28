@@ -147,5 +147,10 @@ namespace FitVitality
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
         }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            loadForm(new Settings());
+        }
     }
 }

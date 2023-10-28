@@ -167,3 +167,4 @@ E:\Project\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\run
 E:\Project\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 E:\Project\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Login.resources
+E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Settings.resources

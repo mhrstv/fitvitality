@@ -204,7 +204,7 @@ namespace FitVitality
                 tbpass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 tbpass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }
-            if (regUsername != confirmPass || confirmPass == "")
+            if ((regPassword != confirmPass) || confirmPass == "")
             {
                 repassmark.Visible = true;
                 repassError.Visible = true;
@@ -220,46 +220,49 @@ namespace FitVitality
                 tbrepass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
                 tbrepass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
             }
-
-            if (!userExists(regUsername) && validEmail && validPassword && validUsername && passMatch)
+            if(validEmail && validPassword && validUsername && passMatch)
             {
-                usrmark.Visible = false;
-                tbusername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                tbusername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
-                if (!emailExists(regEmail))
+                if (!userExists(regUsername))
                 {
-                    emailmark.Visible = false;
-                    tbemail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                    tbemail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
-                    createUser(regUsername, regEmail, regPassword);
-                    MessageBox.Show("Account successfully created!");
-                    for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                    usrmark.Visible = false;
+                    tbusername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                    tbusername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                    if (!emailExists(regEmail))
                     {
-                        this.Opacity = i;
+                        emailmark.Visible = false;
+                        tbemail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                        tbemail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                        createUser(regUsername, regEmail, regPassword);
+                        MessageBox.Show("Account successfully created!");
+                        for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                        {
+                            this.Opacity = i;
+                        }
+                        Login welcomeScreen = new Login();
+                        welcomeScreen.Show();
+                        this.Hide();
                     }
-                    Login welcomeScreen = new Login();
-                    welcomeScreen.Show();
-                    this.Hide();
+                    else
+                    {
+                        emailmark.Visible = true;
+                        emailError.Visible = true;
+                        emailLabel.Text = "Email is already in use!";
+                        tbemail.Text = "";
+                        tbemail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                        tbemail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                    }
                 }
                 else
                 {
-                    emailmark.Visible = true;
-                    emailError.Visible = true;
-                    emailLabel.Text = "Email is already in use!";
-                    tbemail.Text = "";
-                    tbemail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                    tbemail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                    usrmark.Visible = true;
+                    userError.Visible = true;
+                    usrLabel.Text = "Username is already in use!";
+                    tbusername.Text = "";
+                    tbusername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                    tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                 }
             }
-            else
-            {
-                usrmark.Visible = true;
-                userError.Visible = true;
-                usrLabel.Text = "Username is already in use!";
-                tbusername.Text = "";
-                tbusername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
-            }
+            
         }
 
         private void Register_Load(object sender, EventArgs e)

@@ -12,7 +12,7 @@ using System.Data.SqlTypes;
 using Krypton.Toolkit;
 using System.Data.Common;
 using Microsoft.Data.SqlClient;
-
+using Microsoft.Identity.Client;
 
 namespace FitVitality
 {
@@ -20,6 +20,7 @@ namespace FitVitality
     {
         private bool mouseDown;
         private Point lastLocation;
+        public string userID;
         public Login()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace FitVitality
             {
                 this.Location = Register.ActiveForm.Location;
             }
-            var cfg = new Config("config.ini");
+            var cfg = new Config("FitVitality.ini");
             var username = cfg.Read("Username", "SETTINGS");
             if (username != "")
             {
@@ -64,10 +65,10 @@ namespace FitVitality
         {
             string connectionString;
             connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-            var cfg = new Config("config.ini");
+            var cfg = new Config("FitVitality.ini");
             string username = kryptonTextBox1.Text;
             string password = kryptonTextBox2.Text;
-            string query = "SELECT Username, Password FROM UserData WHERE Username = @Username AND Password = @Password";
+            string query = "SELECT UserID, Username, Password FROM UserData WHERE Username = @Username AND Password = @Password";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -95,6 +96,8 @@ namespace FitVitality
                                 {
                                     this.Opacity = i;
                                 }
+                                userID = reader["UserID"].ToString();
+                                cfg.Write("UserID", userID, "SETTINGS");
                                 Form1 form = new Form1();
                                 Thread.Sleep(500);
                                 form.Show();

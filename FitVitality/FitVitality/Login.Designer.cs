@@ -45,6 +45,7 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             checkBox1 = new CheckBox();
+            label6 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -315,12 +316,22 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(133, 143);
+            label6.Name = "label6";
+            label6.Size = new Size(38, 15);
+            label6.TabIndex = 10;
+            label6.Text = "label6";
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(label6);
             Controls.Add(kryptonButton1);
             Controls.Add(checkBox1);
             Controls.Add(panel1);
@@ -372,5 +383,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private CheckBox checkBox1;
+        private Label label6;
     }
 }

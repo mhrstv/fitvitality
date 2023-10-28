@@ -356,9 +356,9 @@
             // 
             userError.Controls.Add(usrLabel);
             userError.Controls.Add(pictureBox5);
-            userError.Location = new Point(6, 84);
+            userError.Location = new Point(43, 99);
             userError.Name = "userError";
-            userError.Size = new Size(270, 42);
+            userError.Size = new Size(201, 27);
             userError.TabIndex = 13;
             userError.Visible = false;
             // 
@@ -366,9 +366,9 @@
             // 
             usrLabel.BackColor = Color.FromArgb(255, 0, 42);
             usrLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            usrLabel.Location = new Point(6, 4);
+            usrLabel.Location = new Point(5, 4);
             usrLabel.Name = "usrLabel";
-            usrLabel.Size = new Size(255, 20);
+            usrLabel.Size = new Size(191, 16);
             usrLabel.TabIndex = 0;
             usrLabel.Text = "Username must be at least 4 letters!";
             usrLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -378,7 +378,7 @@
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(0, 0);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(270, 42);
+            pictureBox5.Size = new Size(201, 27);
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
             // 
@@ -386,9 +386,9 @@
             // 
             emailError.Controls.Add(emailLabel);
             emailError.Controls.Add(pictureBox6);
-            emailError.Location = new Point(9, 150);
+            emailError.Location = new Point(20, 151);
             emailError.Name = "emailError";
-            emailError.Size = new Size(270, 29);
+            emailError.Size = new Size(246, 27);
             emailError.TabIndex = 14;
             emailError.Visible = false;
             // 
@@ -396,17 +396,17 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.BackColor = Color.FromArgb(255, 0, 42);
-            emailLabel.Font = new Font("Calibri", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            emailLabel.Location = new Point(18, 6);
+            emailLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            emailLabel.Location = new Point(25, 4);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(214, 15);
+            emailLabel.Size = new Size(197, 14);
             emailLabel.TabIndex = 0;
             emailLabel.Text = "Email either already exist or not valid!";
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(12, 2);
+            pictureBox6.Location = new Point(0, 0);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(246, 27);
             pictureBox6.TabIndex = 16;
@@ -416,9 +416,9 @@
             // 
             passError.Controls.Add(passLabel);
             passError.Controls.Add(pictureBox7);
-            passError.Location = new Point(0, 202);
+            passError.Location = new Point(20, 202);
             passError.Name = "passError";
-            passError.Size = new Size(287, 32);
+            passError.Size = new Size(242, 34);
             passError.TabIndex = 15;
             passError.Visible = false;
             // 
@@ -426,18 +426,18 @@
             // 
             passLabel.BackColor = Color.FromArgb(255, 0, 42);
             passLabel.Font = new Font("Calibri", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            passLabel.Location = new Point(27, 2);
+            passLabel.Location = new Point(20, 1);
             passLabel.Name = "passLabel";
-            passLabel.Size = new Size(217, 26);
+            passLabel.Size = new Size(203, 28);
             passLabel.TabIndex = 16;
-            passLabel.Text = "The password must be at least 8 characters         ( a combination of letters, digits & symbols ) !";
+            passLabel.Text = "The password must be at least 8 characters ( a combination of letters, digits & symbols ) !";
             // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(4, 0);
+            pictureBox7.Location = new Point(0, 0);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(284, 32);
+            pictureBox7.Size = new Size(242, 34);
             pictureBox7.TabIndex = 0;
             pictureBox7.TabStop = false;
             // 
@@ -455,10 +455,10 @@
             // 
             repassLabel.AutoSize = true;
             repassLabel.BackColor = Color.FromArgb(255, 0, 42);
-            repassLabel.Font = new Font("Calibri", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            repassLabel.Location = new Point(40, 8);
+            repassLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            repassLabel.Location = new Point(70, 9);
             repassLabel.Name = "repassLabel";
-            repassLabel.Size = new Size(144, 15);
+            repassLabel.Size = new Size(131, 14);
             repassLabel.TabIndex = 17;
             repassLabel.Text = "Passwords do not match!";
             // 

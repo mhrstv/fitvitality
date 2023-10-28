@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -3141,15 +3141,14 @@
   </metadata>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQ4AAAArCAYAAACJp2aUAAAABGdBTUEAALGPC/xhBQAAAcFJREFUeF7t
-        3bFOU3EUx3EIcWH0DdQNooObPIC+A8+ikDA7iYmLiYmzC4mzcXJ1YuM1gPHQE+6AOfQemiaV3n6+ySdN
-        Q3uZ/r+UMtytkKQF64fj6jri6DTixbuInZezd+wBU5LnOs93nvM87w9ofDguZxc5OKy/CJimPO957pvG
-        h+PDp3phYNqOPw8DML/x4ciPL/ddGJiu52+HAZjf+HD4TgM2T577pvHhuO+iwPQ1GQ6gajIcQNVkOICq
-        yXAAVZPhAKomwwFUTYYDqJoMB1A1GQ6gajIcQNVkOICqyXAAVZPhAKomwwFUTYYDqJoMB1A1GQ6gajIc
-        QNVkOICqyXAAVZPhAKomwwFUTYYDqJoMB1A1jQ+HO7nB5ln6Tm7uHQub59my94597271sHGOTocBmN/4
-        cFxeRxwc1gsD05TnPc990/hwZFezi+QC5Z8tvvOA6clznec7z3me9wfUD4ek5Tv5ErG9Xw/tXfnzj9+G
-        NzzuDIe0qr7+mP+p/cmriO9nwwsff4ZDWmVnvyJ2X/87Gvn85+/hBeuR4ZBW3Z+/EU/f3I5GPubzNctw
-        SP+j84vb/2Dk4xpmOCQtnOGQtGARN6Z5617C5ZS3AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAMgAAAAaCAYAAADyrhO6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAFUSURBVHhe7Zu/LkRhEEeJRukBNOiIQiXRaXgHT+Ah/Ik3EJSqrTcRvUKtUnoRNJuM7zd7Y8Id
+        N7a9c05yptid7e7ZzSbft2QA8CcEAjDAz0A+Ps0ubs22js1Wdtu724g11POu517PvzroiEDe24sHJ/0P
+        IlZTHaiHRgRyftNfRKzq5Z1nEYHo5yVbRKzo5pFnEYHwnwMxVA+NCCRbQqyssvApsgXEyioLnyJbQKys
+        svApsgXEyioLnyJbQKyssvApsgXEyioLnyJbQKyssvApsgXEyioLnyJbQKyssvApsgXEyioLn4KjJohh
+        76gJhxURw43fhxXPOO6O+K0uTjUiEC5MIc5NL0wJrtxiVfW8D165BRgL99PhL/jTK7PZrFsehkBgnDw8
+        ma3u9ePQf+0FIBAYL88vZmv78zCWd8yuJ90b/4dAYNy8vpmtH5pNHrsXFsHsC0h1zPsOJ809AAAAAElF
+        TkSuQmCC
 </value>
   </data>
   <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -3165,14 +3164,14 @@
   </data>
   <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAARkAAAAgCAYAAAAmEgzGAAAABGdBTUEAALGPC/xhBQAAAY5JREFUeF7t
-        3TFKXFEUx2FBbAQt7HUBQlIICrE0u8gCNLtI3EcqaxtBsAuBgK2VXUCLuI6jh9EijIHLuSPPuXw/+JCB
-        QV5z/8or3lsJSXrDFjcy9w8RX08jdj5HrH54+s27wDLK85vn+OT77Fx3tpiRufodsbE/f7HAcstznee7
-        o/6RufsbsXkwf3HAGHJo8pwX6x+Z42/zFwWMJW+FFOsfme2j+QsCxpL3aIr1j4ybvDC+POfF+kfmtQsC
-        xlPMyABtihkZoE0xIwO0KWZkgDbFjAzQppiRAdoUMzJAm2JGBmhTzMgAbYoZGaBNMSMDtClmZIA2xYwM
-        0KaYkQHaFOsfGc+TgfFN+jwZT8aD8U36ZDzP+IXx5Tkv1j8y+RRzr0OBcU3+toLMe5dgTO/ivUsv5Zvm
-        8o1zeY/GzWBYXnl+8xznee74D+alxY2MpLZ+nP//D/Hax4izi+cvjpGRkabo4mfE+t6/A5OfL389f2Gc
-        jIw0Vdc3EVufZgOTP/PzgBkZacpu/0Qcfpn9HLKIR8DQo+HO7XtRAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAPYAAAAkCAYAAAC65MfsAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAFwSURBVHhe7d09LoRRFMdhiWiUdoBOQqFjAezBWnzsAaVKrZlELSqtSmcbKI+5mWmYGWPeHHG8
+        nl/yZDLJRF7FPz6Ke5dCUu/KHfbrW8TpRcTmYcTy9vCrbwGftW20jbSttM38QHnDfhk+4P7R5DcBzNY2
+        07aTXN6wT84nHxqY7+xyPKK88obdfrWY9tDA1zYOxiPKK2/Y/qaGbtp2kssb9rQHBr4nOcOGCpIzbKgg
+        OcOGCpIzbKggOcOGCpIzbKggOcOGCpIzbKggOcOGCpIzbKggOcOGCpIzbKggOcOGCpIzbKggOcOGCpIz
+        bKggOcOGCpLLG7ajkaCb0kcjOcwQulmvfJjhseOHoZN2cUByecN2YQAsrvyFAS1X/MB8bRt/5oof6T90
+        dTP7h9bKTsT1YPzB382wpUUb3EWs7n4cdXt/ez/+wO9n2FKXHh4j1vZGo26v7X2hDFvq2tPz6J9f7bVY
+        hi31MMOWephhS70r4h3uy0Rmexli/QAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="pictureBox8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

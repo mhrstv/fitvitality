@@ -220,7 +220,7 @@ namespace FitVitality
                 tbrepass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
                 tbrepass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
             }
-            if(validEmail && validPassword && validUsername && passMatch)
+            if (validEmail && validPassword && validUsername && passMatch)
             {
                 if (!userExists(regUsername))
                 {
@@ -262,7 +262,7 @@ namespace FitVitality
                     tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                 }
             }
-            
+
         }
 
         private void Register_Load(object sender, EventArgs e)

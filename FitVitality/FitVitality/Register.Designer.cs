@@ -360,9 +360,9 @@
             // 
             userError.Controls.Add(usrLabel);
             userError.Controls.Add(pictureBox5);
-            userError.Location = new Point(43, 96);
+            userError.Location = new Point(20, 96);
             userError.Name = "userError";
-            userError.Size = new Size(201, 27);
+            userError.Size = new Size(246, 27);
             userError.TabIndex = 13;
             userError.Visible = false;
             // 
@@ -370,9 +370,9 @@
             // 
             usrLabel.BackColor = Color.FromArgb(255, 0, 42);
             usrLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            usrLabel.Location = new Point(5, 4);
+            usrLabel.Location = new Point(6, 3);
             usrLabel.Name = "usrLabel";
-            usrLabel.Size = new Size(191, 16);
+            usrLabel.Size = new Size(236, 16);
             usrLabel.TabIndex = 0;
             usrLabel.Text = "Username must contain only digits or letters!";
             usrLabel.TextAlign = ContentAlignment.MiddleLeft;
@@ -382,7 +382,7 @@
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(0, 0);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(201, 27);
+            pictureBox5.Size = new Size(246, 27);
             pictureBox5.TabIndex = 0;
             pictureBox5.TabStop = false;
             // 
@@ -401,47 +401,46 @@
             emailLabel.AutoSize = true;
             emailLabel.BackColor = Color.FromArgb(255, 0, 42);
             emailLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            emailLabel.Location = new Point(25, 4);
+            emailLabel.Location = new Point(87, 5);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(96, 14);
+            emailLabel.Size = new Size(122, 14);
             emailLabel.TabIndex = 0;
-            emailLabel.Text = "Email is not valid!";
+            emailLabel.Text = "Email is already in use!";
             // 
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(0, 0);
+            pictureBox6.Location = new Point(23, 0);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(246, 27);
+            pictureBox6.Size = new Size(203, 27);
             pictureBox6.TabIndex = 16;
             pictureBox6.TabStop = false;
             // 
             // passError
             // 
             passError.Controls.Add(passLabel);
-            passError.Controls.Add(pictureBox7);
-            passError.Location = new Point(20, 199);
+            passError.Location = new Point(20, 198);
             passError.Name = "passError";
-            passError.Size = new Size(242, 34);
+            passError.Size = new Size(236, 33);
             passError.TabIndex = 15;
             passError.Visible = false;
             // 
             // passLabel
             // 
             passLabel.BackColor = Color.FromArgb(255, 0, 42);
-            passLabel.Font = new Font("Calibri", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            passLabel.Location = new Point(20, 1);
+            passLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            passLabel.Location = new Point(58, 0);
             passLabel.Name = "passLabel";
-            passLabel.Size = new Size(203, 28);
+            passLabel.Size = new Size(169, 28);
             passLabel.TabIndex = 16;
             passLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
             // 
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(0, 0);
+            pictureBox7.Location = new Point(21, 198);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(242, 34);
+            pictureBox7.Size = new Size(236, 33);
             pictureBox7.TabIndex = 0;
             pictureBox7.TabStop = false;
             // 
@@ -460,7 +459,7 @@
             repassLabel.AutoSize = true;
             repassLabel.BackColor = Color.FromArgb(255, 0, 42);
             repassLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            repassLabel.Location = new Point(99, 9);
+            repassLabel.Location = new Point(94, 7);
             repassLabel.Name = "repassLabel";
             repassLabel.Size = new Size(131, 14);
             repassLabel.TabIndex = 17;
@@ -469,9 +468,9 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(34, 4);
+            pictureBox8.Location = new Point(34, 2);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(201, 28);
+            pictureBox8.Size = new Size(203, 27);
             pictureBox8.TabIndex = 0;
             pictureBox8.TabStop = false;
             // 
@@ -549,6 +548,7 @@
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
             Controls.Add(panel2);
+            Controls.Add(pictureBox7);
             Controls.Add(repassmark);
             Controls.Add(passmark);
             Controls.Add(emailmark);

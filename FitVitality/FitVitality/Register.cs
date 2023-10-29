@@ -233,14 +233,13 @@ namespace FitVitality
                         tbemail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
                         tbemail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
                         createUser(regUsername, regEmail, regPassword);
-                        MessageBox.Show("Account successfully created!");
-                        for (double i = this.Opacity; i >= 0; i = i - 0.00002)
-                        {
-                            this.Opacity = i;
-                        }
-                        Login welcomeScreen = new Login();
-                        welcomeScreen.Show();
-                        this.Hide();
+
+                        timer1.Enabled = true;
+
+                        tbusername.Text = "";
+                        tbemail.Text = "";
+                        tbpass.Text = "";
+                        tbrepass.Text = "";
                     }
                     else
                     {
@@ -351,6 +350,16 @@ namespace FitVitality
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            panel2.Width += 2;
+            if (panel2.Width >= 168)
+            {
+                timer1.Stop();
+                timer1.Enabled = false;
+            }
         }
     }
 }

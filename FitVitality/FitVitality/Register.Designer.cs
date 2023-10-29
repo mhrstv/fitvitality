@@ -63,6 +63,9 @@
             emailmark = new PictureBox();
             passmark = new PictureBox();
             repassmark = new PictureBox();
+            labelcreated = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -80,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)emailmark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passmark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repassmark).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonButton1
@@ -157,7 +161,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(44, 217);
+            label3.Location = new Point(44, 214);
             label3.Name = "label3";
             label3.Size = new Size(66, 14);
             label3.TabIndex = 5;
@@ -168,7 +172,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(44, 108);
+            label2.Location = new Point(44, 105);
             label2.Name = "label2";
             label2.Size = new Size(67, 14);
             label2.TabIndex = 3;
@@ -179,7 +183,7 @@
             tbpass.CueHint.CueHintText = "Enter password";
             tbpass.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             tbpass.CueHint.Padding = new Padding(0);
-            tbpass.Location = new Point(44, 234);
+            tbpass.Location = new Point(44, 231);
             tbpass.MaxLength = 32;
             tbpass.Name = "tbpass";
             tbpass.PasswordChar = '●';
@@ -192,7 +196,7 @@
             tbusername.CueHint.CueHintText = "Enter username";
             tbusername.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             tbusername.CueHint.Padding = new Padding(0);
-            tbusername.Location = new Point(44, 126);
+            tbusername.Location = new Point(44, 123);
             tbusername.MaxLength = 16;
             tbusername.Name = "tbusername";
             tbusername.Size = new Size(199, 23);
@@ -205,7 +209,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(92, 225, 230);
-            label1.Location = new Point(29, 50);
+            label1.Location = new Point(29, 47);
             label1.Name = "label1";
             label1.Size = new Size(229, 46);
             label1.TabIndex = 2;
@@ -216,7 +220,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(44, 161);
+            label4.Location = new Point(44, 158);
             label4.Name = "label4";
             label4.Size = new Size(39, 14);
             label4.TabIndex = 4;
@@ -227,7 +231,7 @@
             tbemail.CueHint.CueHintText = "Enter email";
             tbemail.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             tbemail.CueHint.Padding = new Padding(0);
-            tbemail.Location = new Point(44, 179);
+            tbemail.Location = new Point(44, 176);
             tbemail.MaxLength = 50;
             tbemail.Name = "tbemail";
             tbemail.Size = new Size(199, 23);
@@ -333,7 +337,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(44, 270);
+            label6.Location = new Point(44, 267);
             label6.Name = "label6";
             label6.Size = new Size(115, 14);
             label6.TabIndex = 6;
@@ -344,7 +348,7 @@
             tbrepass.CueHint.CueHintText = "Re-enter password";
             tbrepass.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             tbrepass.CueHint.Padding = new Padding(0);
-            tbrepass.Location = new Point(44, 287);
+            tbrepass.Location = new Point(44, 284);
             tbrepass.MaxLength = 32;
             tbrepass.Name = "tbrepass";
             tbrepass.PasswordChar = '●';
@@ -356,7 +360,7 @@
             // 
             userError.Controls.Add(usrLabel);
             userError.Controls.Add(pictureBox5);
-            userError.Location = new Point(43, 99);
+            userError.Location = new Point(43, 96);
             userError.Name = "userError";
             userError.Size = new Size(201, 27);
             userError.TabIndex = 13;
@@ -386,7 +390,7 @@
             // 
             emailError.Controls.Add(emailLabel);
             emailError.Controls.Add(pictureBox6);
-            emailError.Location = new Point(20, 151);
+            emailError.Location = new Point(20, 148);
             emailError.Name = "emailError";
             emailError.Size = new Size(246, 27);
             emailError.TabIndex = 14;
@@ -416,7 +420,7 @@
             // 
             passError.Controls.Add(passLabel);
             passError.Controls.Add(pictureBox7);
-            passError.Location = new Point(20, 202);
+            passError.Location = new Point(20, 199);
             passError.Name = "passError";
             passError.Size = new Size(242, 34);
             passError.TabIndex = 15;
@@ -445,7 +449,7 @@
             // 
             repassError.Controls.Add(repassLabel);
             repassError.Controls.Add(pictureBox8);
-            repassError.Location = new Point(9, 257);
+            repassError.Location = new Point(9, 254);
             repassError.Name = "repassError";
             repassError.Size = new Size(270, 30);
             repassError.TabIndex = 15;
@@ -474,7 +478,7 @@
             // usrmark
             // 
             usrmark.Image = (Image)resources.GetObject("usrmark.Image");
-            usrmark.Location = new Point(217, 127);
+            usrmark.Location = new Point(217, 124);
             usrmark.Name = "usrmark";
             usrmark.Size = new Size(24, 21);
             usrmark.SizeMode = PictureBoxSizeMode.Zoom;
@@ -485,7 +489,7 @@
             // emailmark
             // 
             emailmark.Image = (Image)resources.GetObject("emailmark.Image");
-            emailmark.Location = new Point(217, 180);
+            emailmark.Location = new Point(217, 177);
             emailmark.Name = "emailmark";
             emailmark.Size = new Size(24, 21);
             emailmark.SizeMode = PictureBoxSizeMode.Zoom;
@@ -496,7 +500,7 @@
             // passmark
             // 
             passmark.Image = (Image)resources.GetObject("passmark.Image");
-            passmark.Location = new Point(217, 235);
+            passmark.Location = new Point(217, 232);
             passmark.Name = "passmark";
             passmark.Size = new Size(24, 21);
             passmark.SizeMode = PictureBoxSizeMode.Zoom;
@@ -507,7 +511,7 @@
             // repassmark
             // 
             repassmark.Image = (Image)resources.GetObject("repassmark.Image");
-            repassmark.Location = new Point(217, 288);
+            repassmark.Location = new Point(217, 285);
             repassmark.Name = "repassmark";
             repassmark.Size = new Size(24, 21);
             repassmark.SizeMode = PictureBoxSizeMode.Zoom;
@@ -515,12 +519,36 @@
             repassmark.TabStop = false;
             repassmark.Visible = false;
             // 
+            // labelcreated
+            // 
+            labelcreated.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelcreated.ForeColor = Color.FromArgb(19, 228, 8);
+            labelcreated.Location = new Point(0, 0);
+            labelcreated.Name = "labelcreated";
+            labelcreated.Size = new Size(168, 15);
+            labelcreated.TabIndex = 23;
+            labelcreated.Text = "Account created successfully.";
+            // 
+            // timer1
+            // 
+            timer1.Interval = 3;
+            timer1.Tick += timer1_Tick;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(labelcreated);
+            panel2.Location = new Point(59, 310);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(0, 15);
+            panel2.TabIndex = 24;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(panel2);
             Controls.Add(repassmark);
             Controls.Add(passmark);
             Controls.Add(emailmark);
@@ -569,6 +597,7 @@
             ((System.ComponentModel.ISupportInitialize)emailmark).EndInit();
             ((System.ComponentModel.ISupportInitialize)passmark).EndInit();
             ((System.ComponentModel.ISupportInitialize)repassmark).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -608,5 +637,8 @@
         private PictureBox emailmark;
         private PictureBox passmark;
         private PictureBox repassmark;
+        private Label labelcreated;
+        private System.Windows.Forms.Timer timer1;
+        private Panel panel2;
     }
 }

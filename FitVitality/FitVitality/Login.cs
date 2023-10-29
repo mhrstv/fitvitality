@@ -92,6 +92,14 @@ namespace FitVitality
                                 {
                                     cfg.Write("Username", "", "SETTINGS");
                                 }
+                                usrmark.Visible = false;
+                                passmark.Visible = false;
+                                kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                panel2.Visible = false;
+                                panel2.Height = 0;
                                 for (double i = this.Opacity; i >= 0; i = i - 0.00002)
                                 {
                                     this.Opacity = i;
@@ -106,7 +114,15 @@ namespace FitVitality
                         }
                         else
                         {
-                            MessageBox.Show("Account not found!");
+                            panel2.Visible = true;
+                            kryptonTextBox2.Text = "";
+                            usrmark.Visible = true;
+                            passmark.Visible = true;
+                            kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                            kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                            kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                            kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                            timer1.Enabled = true;
                         }
                     }
                 }
@@ -214,6 +230,16 @@ namespace FitVitality
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            panel2.Height += 2;
+            if (panel2.Height >= 33)
+            {
+                timer1.Stop();
+                timer1.Enabled = false;
+            }
         }
     }
 }

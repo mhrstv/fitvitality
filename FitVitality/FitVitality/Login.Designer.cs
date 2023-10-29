@@ -45,12 +45,21 @@
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             checkBox1 = new CheckBox();
-            label6 = new Label();
+            loginFail = new Label();
+            panel2 = new Panel();
+            pictureBox5 = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
+            usrmark = new PictureBox();
+            passmark = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)usrmark).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passmark).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -89,7 +98,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(92, 225, 230);
-            label1.Location = new Point(68, 83);
+            label1.Location = new Point(68, 67);
             label1.Name = "label1";
             label1.Size = new Size(151, 46);
             label1.TabIndex = 2;
@@ -316,14 +325,62 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // label6
+            // loginFail
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(133, 143);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 15);
-            label6.TabIndex = 10;
-            label6.Text = "label6";
+            loginFail.AutoSize = true;
+            loginFail.BackColor = Color.FromArgb(255, 0, 43);
+            loginFail.Font = new Font("Calibri", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            loginFail.ForeColor = Color.White;
+            loginFail.Location = new Point(5, 9);
+            loginFail.Name = "loginFail";
+            loginFail.Size = new Size(188, 15);
+            loginFail.TabIndex = 10;
+            loginFail.Text = "Incorrect username or password!";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(loginFail);
+            panel2.Controls.Add(pictureBox5);
+            panel2.Location = new Point(44, 131);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(199, 0);
+            panel2.TabIndex = 11;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(0, 0);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(199, 33);
+            pictureBox5.TabIndex = 12;
+            pictureBox5.TabStop = false;
+            // 
+            // timer1
+            // 
+            timer1.Interval = 15;
+            timer1.Tick += timer1_Tick;
+            // 
+            // usrmark
+            // 
+            usrmark.Image = (Image)resources.GetObject("usrmark.Image");
+            usrmark.Location = new Point(217, 192);
+            usrmark.Name = "usrmark";
+            usrmark.Size = new Size(24, 21);
+            usrmark.SizeMode = PictureBoxSizeMode.Zoom;
+            usrmark.TabIndex = 20;
+            usrmark.TabStop = false;
+            usrmark.Visible = false;
+            // 
+            // passmark
+            // 
+            passmark.Image = (Image)resources.GetObject("passmark.Image");
+            passmark.Location = new Point(217, 254);
+            passmark.Name = "passmark";
+            passmark.Size = new Size(24, 21);
+            passmark.SizeMode = PictureBoxSizeMode.Zoom;
+            passmark.TabIndex = 21;
+            passmark.TabStop = false;
+            passmark.Visible = false;
             // 
             // Login
             // 
@@ -331,7 +388,9 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
-            Controls.Add(label6);
+            Controls.Add(panel2);
+            Controls.Add(passmark);
+            Controls.Add(usrmark);
             Controls.Add(kryptonButton1);
             Controls.Add(checkBox1);
             Controls.Add(panel1);
@@ -362,6 +421,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)usrmark).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passmark).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -383,6 +447,11 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private CheckBox checkBox1;
-        private Label label6;
+        private Label loginFail;
+        private Panel panel2;
+        private System.Windows.Forms.Timer timer1;
+        private PictureBox pictureBox5;
+        private PictureBox usrmark;
+        private PictureBox passmark;
     }
 }

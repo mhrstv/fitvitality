@@ -125,6 +125,7 @@
             Controls.Add(textBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;

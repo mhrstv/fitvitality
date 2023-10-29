@@ -84,14 +84,6 @@ namespace FitVitality
                             string dbPass = reader["Password"].ToString();
                             if (dbUser == username && dbPass == password)
                             {
-                                if (checkBox1.Checked == true)
-                                {
-                                    cfg.Write("Username", username, "SETTINGS");
-                                }
-                                else
-                                {
-                                    cfg.Write("Username", "", "SETTINGS");
-                                }
                                 usrmark.Visible = false;
                                 passmark.Visible = false;
                                 kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
@@ -100,6 +92,15 @@ namespace FitVitality
                                 kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
                                 panel2.Visible = false;
                                 panel2.Height = 0;
+                                if (checkBox1.Checked == true)
+                                {
+                                    cfg.Write("Username", username, "SETTINGS");
+                                }
+                                else
+                                {
+                                    cfg.Write("Username", "", "SETTINGS");
+                                }
+                                
                                 for (double i = this.Opacity; i >= 0; i = i - 0.00002)
                                 {
                                     this.Opacity = i;
@@ -115,7 +116,6 @@ namespace FitVitality
                         else
                         {
                             panel2.Visible = true;
-                            kryptonTextBox2.Text = "";
                             usrmark.Visible = true;
                             passmark.Visible = true;
                             kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);

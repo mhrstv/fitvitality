@@ -374,7 +374,7 @@
             usrLabel.Name = "usrLabel";
             usrLabel.Size = new Size(191, 16);
             usrLabel.TabIndex = 0;
-            usrLabel.Text = "Username must be at least 4 letters!";
+            usrLabel.Text = "Username must contain only digits or letters!";
             usrLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // pictureBox5
@@ -403,9 +403,9 @@
             emailLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
             emailLabel.Location = new Point(25, 4);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(197, 14);
+            emailLabel.Size = new Size(96, 14);
             emailLabel.TabIndex = 0;
-            emailLabel.Text = "Email either already exist or not valid!";
+            emailLabel.Text = "Email is not valid!";
             // 
             // pictureBox6
             // 
@@ -434,7 +434,7 @@
             passLabel.Name = "passLabel";
             passLabel.Size = new Size(203, 28);
             passLabel.TabIndex = 16;
-            passLabel.Text = "The password must be at least 8 characters ( a combination of letters, digits & symbols ) !";
+            passLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
             // 
             // pictureBox7
             // 
@@ -460,7 +460,7 @@
             repassLabel.AutoSize = true;
             repassLabel.BackColor = Color.FromArgb(255, 0, 42);
             repassLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            repassLabel.Location = new Point(70, 9);
+            repassLabel.Location = new Point(99, 9);
             repassLabel.Name = "repassLabel";
             repassLabel.Size = new Size(131, 14);
             repassLabel.TabIndex = 17;

@@ -101,13 +101,16 @@ namespace FitVitality
 
             return false;
         }
-        private bool underscore_SingleUse(string str)
+        private bool containsLetters(string str)
         {
-            if (str.IndexOf('_') != str.LastIndexOf('_'))
+            foreach (char c in str)
             {
-                return true;
+                if (Char.IsLetter(c))
+                {
+                    return true;
+                }
             }
-            return true;
+            return false;
         }
         private bool isValidEmail(string str)
         {
@@ -120,10 +123,7 @@ namespace FitVitality
             {
                 if (Regex.IsMatch(str, @"^[a-zA-Z0-9_]+$"))
                 {
-                    if (underscore_SingleUse(str))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
             return false;
@@ -132,11 +132,14 @@ namespace FitVitality
         {
             if (str.Length >= 8)
             {
-                if (containsDigit(str))
+                if (containsLetters(str))
                 {
-                    if (hasSpecialChar(str))
+                    if (containsDigit(str))
                     {
-                        return true;
+                        if (hasSpecialChar(str))
+                        {
+                            return true;
+                        }
                     }
                 }
             }
@@ -164,7 +167,7 @@ namespace FitVitality
             {
                 usrmark.Visible = true;
                 userError.Visible = true;
-                usrLabel.Text = "Username must contain only digits, numbers and an underscore!";
+                usrLabel.Text = "Username must contain only digits or letters!";
                 tbusername.Text = "";
                 tbusername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);

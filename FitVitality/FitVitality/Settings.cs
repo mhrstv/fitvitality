@@ -87,5 +87,15 @@ namespace FitVitality
             panel1.Visible = false;
             kryptonButton1.Visible = true;
         }
+
+        private void buttonClose_MouseEnter(object sender, EventArgs e)
+        {
+            this.buttonClose.Image = Properties.Resources.closebuttonsenter;
+        }
+
+        private void buttonClose_MouseLeave(object sender, EventArgs e)
+        {
+            this.buttonClose.Image = Properties.Resources.closebuttonss;
+        }
     }
 }

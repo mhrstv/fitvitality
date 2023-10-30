@@ -155,7 +155,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(175, 97);
             panel1.Name = "panel1";
-            panel1.Size = new Size(0, 0);
+            panel1.Size = new Size(341, 174);
             panel1.TabIndex = 11;
             panel1.Visible = false;
             // 
@@ -171,13 +171,15 @@
             // buttonClose
             // 
             buttonClose.BackColor = Color.White;
-            buttonClose.Image = (Image)resources.GetObject("buttonClose.Image");
+            buttonClose.Image = Properties.Resources.closebuttonss;
             buttonClose.Location = new Point(0, 0);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(17, 17);
             buttonClose.TabIndex = 12;
             buttonClose.TabStop = false;
             buttonClose.Click += buttonClose_Click;
+            buttonClose.MouseEnter += buttonClose_MouseEnter;
+            buttonClose.MouseLeave += buttonClose_MouseLeave;
             // 
             // panel2
             // 

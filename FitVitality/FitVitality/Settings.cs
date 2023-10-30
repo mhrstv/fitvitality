@@ -34,6 +34,8 @@ namespace FitVitality
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
+            panel2.Visible = true;
+            panel3.Visible = true;
             panel1.Height = 174;
             panel1.Width = 341;
             kryptonButton1.Visible = false;
@@ -80,8 +82,7 @@ namespace FitVitality
                 connection.Close();
             }
         }
-
-        private void kryptonButton3_Click(object sender, EventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
             kryptonButton1.Visible = true;

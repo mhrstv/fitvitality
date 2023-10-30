@@ -231,7 +231,7 @@
             tbemail.CueHint.CueHintText = "Enter email";
             tbemail.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             tbemail.CueHint.Padding = new Padding(0);
-            tbemail.Location = new Point(44, 176);
+            tbemail.Location = new Point(44, 175);
             tbemail.MaxLength = 50;
             tbemail.Name = "tbemail";
             tbemail.Size = new Size(199, 23);
@@ -390,7 +390,7 @@
             // 
             emailError.Controls.Add(emailLabel);
             emailError.Controls.Add(pictureBox6);
-            emailError.Location = new Point(20, 148);
+            emailError.Location = new Point(20, 147);
             emailError.Name = "emailError";
             emailError.Size = new Size(246, 27);
             emailError.TabIndex = 14;
@@ -419,6 +419,7 @@
             // passError
             // 
             passError.Controls.Add(passLabel);
+            passError.Controls.Add(pictureBox7);
             passError.Location = new Point(20, 198);
             passError.Name = "passError";
             passError.Size = new Size(236, 33);
@@ -429,7 +430,7 @@
             // 
             passLabel.BackColor = Color.FromArgb(255, 0, 42);
             passLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            passLabel.Location = new Point(58, 0);
+            passLabel.Location = new Point(48, 0);
             passLabel.Name = "passLabel";
             passLabel.Size = new Size(169, 28);
             passLabel.TabIndex = 16;
@@ -438,7 +439,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(21, 198);
+            pictureBox7.Location = new Point(-10, 0);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(236, 33);
             pictureBox7.TabIndex = 0;
@@ -488,7 +489,7 @@
             // emailmark
             // 
             emailmark.Image = (Image)resources.GetObject("emailmark.Image");
-            emailmark.Location = new Point(217, 177);
+            emailmark.Location = new Point(217, 176);
             emailmark.Name = "emailmark";
             emailmark.Size = new Size(24, 21);
             emailmark.SizeMode = PictureBoxSizeMode.Zoom;
@@ -548,7 +549,6 @@
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
             Controls.Add(panel2);
-            Controls.Add(pictureBox7);
             Controls.Add(repassmark);
             Controls.Add(passmark);
             Controls.Add(emailmark);

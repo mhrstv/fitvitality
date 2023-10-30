@@ -42,14 +42,14 @@
             kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Rounding = 15F;
             kryptonPalette1.FormStyles.FormCommon.StateCommon.Border.Width = 1;
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(36, 41, 46);
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(36, 41, 46);
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 15F;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Width = 1;
-            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(36, 41, 46);
+            kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(36, 41, 46);
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Border.Width = 0;
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 10;
@@ -59,9 +59,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(92, 225, 230);
-            ClientSize = new Size(800, 450);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            BackColor = Color.FromArgb(36, 41, 46);
+            ClientSize = new Size(690, 400);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Welcome";
             Palette = kryptonPalette1;

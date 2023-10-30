@@ -100,7 +100,7 @@ namespace FitVitality
                                 {
                                     cfg.Write("Username", "", "SETTINGS");
                                 }
-                                
+
                                 for (double i = this.Opacity; i >= 0; i = i - 0.00002)
                                 {
                                     this.Opacity = i;

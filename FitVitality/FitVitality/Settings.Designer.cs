@@ -289,7 +289,7 @@
             label2.Name = "label2";
             label2.Size = new Size(315, 33);
             label2.TabIndex = 14;
-            label2.Text = "WARNING: All your data and stored settings will be GONE.";
+            label2.Text = "WARNING: All your data and stored information will be GONE.";
             // 
             // pictureBox1
             // 

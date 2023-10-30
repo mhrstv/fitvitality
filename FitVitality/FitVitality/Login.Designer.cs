@@ -115,6 +115,7 @@
             kryptonTextBox1.Size = new Size(199, 23);
             kryptonTextBox1.TabIndex = 7;
             kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
+            kryptonTextBox1.KeyDown += kryptonTextBox1_KeyDown;
             // 
             // kryptonTextBox2
             // 
@@ -128,6 +129,7 @@
             kryptonTextBox2.Size = new Size(199, 23);
             kryptonTextBox2.TabIndex = 8;
             kryptonTextBox2.UseSystemPasswordChar = true;
+            kryptonTextBox2.KeyDown += kryptonTextBox2_KeyDown;
             // 
             // label2
             // 

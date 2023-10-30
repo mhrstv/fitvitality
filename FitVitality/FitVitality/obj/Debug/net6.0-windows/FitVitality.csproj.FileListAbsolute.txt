@@ -169,3 +169,4 @@ E:\Project\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\run
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Login.resources
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Settings.resources
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Settings.resources
+E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Welcome.resources

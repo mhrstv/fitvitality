@@ -234,11 +234,33 @@ namespace FitVitality
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel2.Height += 2;
+            if (panel2.Height <= 33)
+            {
+                panel2.Height += 2;
+            }
             if (panel2.Height >= 33)
             {
                 timer1.Stop();
-                timer1.Enabled = false;
+                timer1.Enabled = false; 
+            }
+            
+        }
+
+        private void kryptonTextBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = e.SuppressKeyPress = true;
+            if (e.KeyCode == Keys.Enter)
+            {
+                kryptonButton1_Click(this, new EventArgs());
+            }
+        }
+
+        private void kryptonTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = e.SuppressKeyPress = true;
+            if (e.KeyCode == Keys.Enter)
+            {
+                kryptonButton1_Click(this, new EventArgs());
             }
         }
     }

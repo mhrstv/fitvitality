@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,10 @@ namespace FitVitality
 {
     public partial class Welcome : KryptonForm
     {
+        List<Panel> listPanels = new List<Panel>();
         private bool mouseDown;
         private Point lastLocation;
+        int index;
 
         public Welcome()
         {
@@ -23,7 +26,14 @@ namespace FitVitality
 
         private void Welcome_Load(object sender, EventArgs e)
         {
-
+            listPanels.Add(name);
+            listPanels.Add(age);
+            listPanels.Add(gender);
+            listPanels.Add(weight);
+            listPanels.Add(height);
+            listPanels.Add(goal);
+            listPanels.Add(activity);
+            listPanels[0].BringToFront();
         }
 
         private void buttonMin_Click(object sender, EventArgs e)
@@ -87,6 +97,27 @@ namespace FitVitality
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void next_Click(object sender, EventArgs e)
+        {
+            if (index < listPanels.Count - 1)
+            {
+                listPanels[++index].BringToFront();
+            }
+        }
+
+        private void previous_Click(object sender, EventArgs e)
+        {
+            if (index > 0)
+            {
+                listPanels[--index].BringToFront();
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

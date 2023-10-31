@@ -26,6 +26,15 @@ namespace FitVitality
 
         private void Welcome_Load(object sender, EventArgs e)
         {
+            buttonPrevious.Visible = false;
+            buttonNext.Visible = false;
+            name.Visible = false;
+            age.Visible = false;
+            gender.Visible = false;
+            weight.Visible = false;
+            height.Visible = false;
+            goal.Visible = false;
+            activity.Visible = false;
             listPanels.Add(name);
             listPanels.Add(age);
             listPanels.Add(gender);
@@ -34,6 +43,7 @@ namespace FitVitality
             listPanels.Add(goal);
             listPanels.Add(activity);
             listPanels[0].BringToFront();
+            timer1.Enabled = true;
         }
 
         private void buttonMin_Click(object sender, EventArgs e)
@@ -101,15 +111,12 @@ namespace FitVitality
 
         }
 
-        private void next_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            if (index < listPanels.Count - 1)
-            {
-                listPanels[++index].BringToFront();
-            }
+
         }
 
-        private void previous_Click(object sender, EventArgs e)
+        private void buttonPrevious_Click(object sender, EventArgs e)
         {
             if (index > 0)
             {
@@ -117,9 +124,25 @@ namespace FitVitality
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void buttonNext_Click(object sender, EventArgs e)
         {
+            if (index < listPanels.Count - 1)
+            {
+                listPanels[++index].BringToFront();
+            }
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (panel1.Width <= 609)
+            {
+                panel1.Width += 6;
+            }
+            if (panel1.Width >= 609)
+            {
+                timer1.Enabled = false;
+
+            }
         }
     }
 }

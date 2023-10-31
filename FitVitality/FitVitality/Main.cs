@@ -152,5 +152,18 @@ namespace FitVitality
         {
             loadForm(new Settings());
         }
+
+        private void topbar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

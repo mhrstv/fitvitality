@@ -107,7 +107,7 @@ namespace FitVitality
                                 }
                                 userID = reader["UserID"].ToString();
                                 cfg.Write("UserID", userID, "SETTINGS");
-                                Form1 form = new Form1();
+                                Welcome form = new Welcome();
                                 Thread.Sleep(500);
                                 form.Show();
                                 this.Hide();

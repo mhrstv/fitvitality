@@ -161,7 +161,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.FromArgb(111, 85, 85);
+            panel3.BackColor = Color.FromArgb(74, 74, 74);
             panel3.Controls.Add(buttonClose);
             panel3.Location = new Point(314, 8);
             panel3.Name = "panel3";
@@ -170,8 +170,8 @@
             // 
             // buttonClose
             // 
-            buttonClose.BackColor = Color.White;
-            buttonClose.Image = Properties.Resources.closebuttonss;
+            buttonClose.BackColor = Color.FromArgb(74, 74, 74);
+            buttonClose.Image = (Image)resources.GetObject("buttonClose.Image");
             buttonClose.Location = new Point(0, 0);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(17, 17);
@@ -183,7 +183,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(111, 85, 85);
+            panel2.BackColor = Color.FromArgb(74, 74, 74);
             panel2.Controls.Add(kryptonButton2);
             panel2.Location = new Point(101, 133);
             panel2.Name = "panel2";
@@ -275,8 +275,9 @@
             // 
             // label1
             // 
-            label1.BackColor = Color.FromArgb(111, 85, 85);
+            label1.BackColor = Color.FromArgb(74, 74, 74);
             label1.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(13, 28);
             label1.Name = "label1";
             label1.Size = new Size(315, 33);
@@ -285,8 +286,9 @@
             // 
             // label2
             // 
-            label2.BackColor = Color.FromArgb(111, 85, 85);
+            label2.BackColor = Color.FromArgb(74, 74, 74);
             label2.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
             label2.Location = new Point(13, 61);
             label2.Name = "label2";
             label2.Size = new Size(315, 33);

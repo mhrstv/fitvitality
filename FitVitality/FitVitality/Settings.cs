@@ -90,12 +90,12 @@ namespace FitVitality
 
         private void buttonClose_MouseEnter(object sender, EventArgs e)
         {
-            this.buttonClose.Image = Properties.Resources.closebuttonsenter;
+            buttonClose.BackColor = Color.DimGray;
         }
 
         private void buttonClose_MouseLeave(object sender, EventArgs e)
         {
-            this.buttonClose.Image = Properties.Resources.closebuttonss;
+            buttonClose.BackColor = Color.FromArgb(74, 74, 74);
         }
     }
 }

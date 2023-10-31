@@ -13,6 +13,7 @@ using Krypton.Toolkit;
 using System.Data.Common;
 using Microsoft.Data.SqlClient;
 using Microsoft.Identity.Client;
+using System.Security.Cryptography;
 
 namespace FitVitality
 {
@@ -63,15 +64,16 @@ namespace FitVitality
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            bool login = false;
             string connectionString;
             connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             var cfg = new Config("FitVitality.ini");
             string username = kryptonTextBox1.Text;
             string password = kryptonTextBox2.Text;
-            string query = "SELECT UserID, Username, Password FROM UserData WHERE Username = @Username AND Password = @Password";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
+                string query = "SELECT UserID, Username, Password FROM UserData WHERE Username = @Username AND Password = @Password";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
@@ -84,6 +86,7 @@ namespace FitVitality
                             string dbPass = reader["Password"].ToString();
                             if (dbUser == username && dbPass == password)
                             {
+                                login = true;
                                 usrmark.Visible = false;
                                 passmark.Visible = false;
                                 kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
@@ -105,29 +108,140 @@ namespace FitVitality
                                 {
                                     this.Opacity = i;
                                 }
+
                                 userID = reader["UserID"].ToString();
                                 cfg.Write("UserID", userID, "SETTINGS");
-                                Welcome form = new Welcome();
-                                Thread.Sleep(500);
-                                form.Show();
-                                this.Hide();
                             }
-                        }
-                        else
-                        {
-                            panel2.Visible = true;
-                            usrmark.Visible = true;
-                            passmark.Visible = true;
-                            kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                            kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
-                            kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                            kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
-                            timer1.Enabled = true;
+                            else
+                            {
+                                panel2.Visible = true;
+                                usrmark.Visible = true;
+                                passmark.Visible = true;
+                                kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                                kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                                timer1.Enabled = true;
+                            }
                         }
                     }
                 }
             }
+            if (login)
+            {
+                using (SqlConnection connection2 = new SqlConnection(connectionString))
+                {
+                    connection2.Open();
+                    string queryIDCheck = "SELECT UserID FROM UserSettings WHERE UserID = @UserID";
+                    string queryID = "INSERT INTO UserSettings (UserID) VALUES (@UserID)";
+                    
+                    using (SqlCommand command2 = new SqlCommand(queryIDCheck, connection2))
+                    {
+                        command2.Parameters.AddWithValue("@UserID", userID);
+                        using (SqlDataReader reader = command2.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string readID = reader["UserID"].ToString();
+                                if (readID != userID)
+                                {
+                                    SqlCommand commandInputID = new SqlCommand(queryID, connection2);
+                                    commandInputID.Parameters.AddWithValue("@UserID", userID);
+                                    commandInputID.ExecuteNonQuery();
+                                }
+                            }
+                        }
+                    }
+                }
+
+                using (SqlConnection connection3 = new SqlConnection(connectionString))
+                {
+                    connection3.Open();
+                    string checkData = "SELECT COUNT(*) FROM UserSettings " +
+                                       "WHERE UserID = @UserID " +
+                                       "AND Name IS NOT NULL " +
+                                       "AND Age IS NOT NULL " +
+                                       "AND Gender IS NOT NULL " +
+                                       "AND Weight IS NOT NULL " +
+                                       "AND Height IS NOT NULL " +
+                                       "AND Goal IS NOT NULL " +
+                                       "AND ActivityLevel IS NOT NULL";
+                    using (SqlCommand commandCheckData = new SqlCommand(checkData, connection3))
+                    {
+                        commandCheckData.Parameters.AddWithValue("@UserID", userID);
+                        int count = (int)commandCheckData.ExecuteScalar();
+                        if (count != 1)
+                        {
+                            usrmark.Visible = false;
+                            passmark.Visible = false;
+                            kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            panel2.Visible = false;
+                            panel2.Height = 0;
+                            if (checkBox1.Checked == true)
+                            {
+                                cfg.Write("Username", username, "SETTINGS");
+                            }
+                            else
+                            {
+                                cfg.Write("Username", "", "SETTINGS");
+                            }
+
+                            for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                            {
+                                this.Opacity = i;
+                            }
+                            Welcome welcome = new Welcome();
+                            Thread.Sleep(500);
+                            welcome.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            usrmark.Visible = false;
+                            passmark.Visible = false;
+                            kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            panel2.Visible = false;
+                            panel2.Height = 0;
+                            if (checkBox1.Checked == true)
+                            {
+                                cfg.Write("Username", username, "SETTINGS");
+                            }
+                            else
+                            {
+                                cfg.Write("Username", "", "SETTINGS");
+                            }
+
+                            for (double i = this.Opacity; i >= 0; i = i - 0.00002)
+                            {
+                                this.Opacity = i;
+                            }
+                            Form1 form = new Form1();
+                            Thread.Sleep(500);
+                            form.Show();
+                            this.Hide();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                panel2.Visible = true;
+                usrmark.Visible = true;
+                passmark.Visible = true;
+                kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                timer1.Enabled = true;
+            }
         }
+        
 
         private void kryptonPalette2_PalettePaint(object sender, PaletteLayoutEventArgs e)
         {
@@ -248,20 +362,21 @@ namespace FitVitality
 
         private void kryptonTextBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            /*e.Handled = e.SuppressKeyPress = true;
             if (e.KeyCode == Keys.Enter)
             {
+                e.Handled = e.SuppressKeyPress = true;
                 kryptonButton1_Click(this, new EventArgs());
-            }*/
+            }
+
         }
 
         private void kryptonTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            /*e.Handled = e.SuppressKeyPress = true;
             if (e.KeyCode == Keys.Enter)
             {
+                e.Handled = e.SuppressKeyPress = true;
                 kryptonButton1_Click(this, new EventArgs());
-            }*/
+            }
         }
     }
 }

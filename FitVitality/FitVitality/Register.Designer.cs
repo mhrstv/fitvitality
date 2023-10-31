@@ -195,6 +195,7 @@
             tbpass.Size = new Size(199, 23);
             tbpass.TabIndex = 10;
             tbpass.UseSystemPasswordChar = true;
+            tbpass.KeyDown += tbpass_KeyDown;
             // 
             // tbusername
             // 
@@ -208,6 +209,7 @@
             tbusername.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             tbusername.TabIndex = 8;
             tbusername.TextChanged += kryptonTextBox1_TextChanged;
+            tbusername.KeyDown += tbusername_KeyDown;
             // 
             // label1
             // 
@@ -242,6 +244,7 @@
             tbemail.Size = new Size(199, 23);
             tbemail.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             tbemail.TabIndex = 9;
+            tbemail.KeyDown += tbemail_KeyDown;
             // 
             // panel1
             // 
@@ -360,6 +363,7 @@
             tbrepass.Size = new Size(199, 23);
             tbrepass.TabIndex = 11;
             tbrepass.UseSystemPasswordChar = true;
+            tbrepass.KeyDown += tbrepass_KeyDown;
             // 
             // userError
             // 

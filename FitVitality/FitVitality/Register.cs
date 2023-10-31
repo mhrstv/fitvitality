@@ -364,5 +364,41 @@ namespace FitVitality
                 timer1.Enabled = false;
             }
         }
+
+        private void tbusername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                kryptonButton1_Click(this, new EventArgs());
+            }
+        }
+
+        private void tbemail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                kryptonButton1_Click(this, new EventArgs());
+            }
+        }
+
+        private void tbpass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                kryptonButton1_Click(this, new EventArgs());
+            }
+        }
+
+        private void tbrepass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                kryptonButton1_Click(this, new EventArgs());
+            }
+        }
     }
 }

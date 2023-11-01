@@ -37,9 +37,10 @@
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
             name = new Panel();
+            nameLabel2 = new Panel();
+            label1 = new Label();
             nameLabel1 = new Panel();
             label8 = new Label();
-            label1 = new Label();
             textBox1 = new TextBox();
             age = new Panel();
             kryptonRadioButton2 = new Krypton.Toolkit.KryptonRadioButton();
@@ -62,12 +63,14 @@
             panelWelcome = new Panel();
             done = new Krypton.Toolkit.KryptonButton();
             timername1 = new System.Windows.Forms.Timer(components);
+            timerName = new System.Windows.Forms.Timer(components);
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             name.SuspendLayout();
+            nameLabel2.SuspendLayout();
             nameLabel1.SuspendLayout();
             age.SuspendLayout();
             weight.SuspendLayout();
@@ -167,8 +170,8 @@
             // 
             // name
             // 
+            name.Controls.Add(nameLabel2);
             name.Controls.Add(nameLabel1);
-            name.Controls.Add(label1);
             name.Controls.Add(textBox1);
             name.Location = new Point(75, 50);
             name.Name = "name";
@@ -176,11 +179,29 @@
             name.TabIndex = 21;
             name.Paint += panel1_Paint;
             // 
+            // nameLabel2
+            // 
+            nameLabel2.Controls.Add(label1);
+            nameLabel2.Location = new Point(199, 112);
+            nameLabel2.Name = "nameLabel2";
+            nameLabel2.Size = new Size(0, 21);
+            nameLabel2.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(142, 21);
+            label1.TabIndex = 1;
+            label1.Text = "What is your name?";
+            // 
             // nameLabel1
             // 
             nameLabel1.Controls.Add(label8);
             nameLabel1.ForeColor = Color.White;
-            nameLabel1.Location = new Point(51, 26);
+            nameLabel1.Location = new Point(29, 26);
             nameLabel1.Name = "nameLabel1";
             nameLabel1.Size = new Size(1, 23);
             nameLabel1.TabIndex = 2;
@@ -190,26 +211,17 @@
             label8.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
-            label8.Size = new Size(438, 23);
+            label8.Size = new Size(482, 23);
             label8.TabIndex = 0;
-            label8.Text = "Now to get to know each other better we will ask a few questions.";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(214, 108);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 15);
-            label1.TabIndex = 1;
-            label1.Text = "What is your name?";
+            label8.Text = "Now to get to know each other we would like to ask you a few questions.";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(217, 140);
+            textBox1.Location = new Point(220, 140);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 0;
+            textBox1.Visible = false;
             // 
             // age
             // 
@@ -224,29 +236,29 @@
             // 
             // kryptonRadioButton2
             // 
-            kryptonRadioButton2.Location = new Point(291, 188);
+            kryptonRadioButton2.Location = new Point(278, 188);
             kryptonRadioButton2.Name = "kryptonRadioButton2";
-            kryptonRadioButton2.Size = new Size(59, 20);
+            kryptonRadioButton2.Size = new Size(61, 20);
             kryptonRadioButton2.StateNormal.ShortText.Color1 = Color.White;
             kryptonRadioButton2.StateNormal.ShortText.Color2 = Color.White;
             kryptonRadioButton2.TabIndex = 3;
-            kryptonRadioButton2.Values.Text = "female";
+            kryptonRadioButton2.Values.Text = "Female";
             // 
             // kryptonRadioButton1
             // 
-            kryptonRadioButton1.Location = new Point(185, 188);
+            kryptonRadioButton1.Location = new Point(212, 188);
             kryptonRadioButton1.Name = "kryptonRadioButton1";
             kryptonRadioButton1.Size = new Size(49, 20);
             kryptonRadioButton1.StateNormal.ShortText.Color1 = Color.White;
             kryptonRadioButton1.StateNormal.ShortText.Color2 = Color.White;
             kryptonRadioButton1.TabIndex = 2;
-            kryptonRadioButton1.Values.Text = "male";
+            kryptonRadioButton1.Values.Text = "Male";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(228, 108);
+            label2.Location = new Point(229, 108);
             label2.Name = "label2";
             label2.Size = new Size(83, 15);
             label2.TabIndex = 1;
@@ -254,7 +266,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(217, 140);
+            textBox2.Location = new Point(220, 140);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 0;
@@ -463,22 +475,27 @@
             timername1.Interval = 5;
             timername1.Tick += timername1_Tick;
             // 
+            // timerName
+            // 
+            timerName.Interval = 10;
+            timerName.Tick += timerName_Tick;
+            // 
             // Welcome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
+            Controls.Add(name);
+            Controls.Add(age);
             Controls.Add(buttonPrevious);
             Controls.Add(done);
-            Controls.Add(name);
             Controls.Add(panelWelcome);
             Controls.Add(buttonNext);
             Controls.Add(topbar);
             Controls.Add(goal);
             Controls.Add(weight);
             Controls.Add(activity);
-            Controls.Add(age);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Welcome";
@@ -495,6 +512,7 @@
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             name.ResumeLayout(false);
             name.PerformLayout();
+            nameLabel2.ResumeLayout(false);
             nameLabel1.ResumeLayout(false);
             age.ResumeLayout(false);
             age.PerformLayout();
@@ -546,5 +564,7 @@
         private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton1;
         private Krypton.Toolkit.KryptonButton done;
         private System.Windows.Forms.Timer timername1;
+        private Panel nameLabel2;
+        private System.Windows.Forms.Timer timerName;
     }
 }

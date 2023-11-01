@@ -185,13 +185,27 @@ namespace FitVitality
 
         private void timername1_Tick(object sender, EventArgs e)
         {
-            if (nameLabel1.Width <= 438)
+            if (nameLabel1.Width <= 482)
             {
                 nameLabel1.Width += 6;
             }
-            if (nameLabel1.Width >= 438)
+            if (nameLabel1.Width >= 482)
             {
                 timername1.Enabled = false;
+                timerName.Enabled = true;
+            }
+        }
+
+        private void timerName_Tick(object sender, EventArgs e)
+        {
+            if (nameLabel2.Width <= 142)
+            {
+                nameLabel2.Width += 2;
+            }
+            if (nameLabel2.Width >= 142)
+            {
+                timerName.Enabled = false;
+                textBox1.Visible = true;
             }
         }
     }

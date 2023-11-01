@@ -205,8 +205,33 @@ namespace FitVitality
             if (nameLabel2.Width >= 142)
             {
                 timerName.Enabled = false;
-                textBox1.Visible = true;
+                kryptonTextBox1.Visible = true;
             }
+        }
+
+        private void buttonPrevious_MouseEnter(object sender, EventArgs e)
+        {
+            buttonPrevious.Image = Properties.Resources.previoustracked;
+        }
+
+        private void buttonPrevious_MouseLeave(object sender, EventArgs e)
+        {
+            buttonPrevious.Image = Properties.Resources.triangleprevious;
+        }
+
+        private void buttonNext_MouseEnter(object sender, EventArgs e)
+        {
+            buttonNext.Image = Properties.Resources.nexttracked;
+        }
+
+        private void buttonNext_MouseLeave(object sender, EventArgs e)
+        {
+            buttonNext.Image = Properties.Resources.trianglenext;
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="closebuttonsenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closebuttonsenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="closebuttonss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closebuttonss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fitvitality" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fitvitality.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,10 +154,16 @@
   <data name="errorReg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\errorReg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="closebuttonsenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closebuttonsenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trianglenext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trianglenext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="closebuttonss" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closebuttonss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nexttracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nexttracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="triangleprevious" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\triangleprevious.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="previoustracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\previoustracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

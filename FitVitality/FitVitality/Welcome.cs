@@ -17,7 +17,7 @@ namespace FitVitality
         List<Panel> listPanels = new List<Panel>();
         private bool mouseDown;
         private Point lastLocation;
-        int index;
+        int index = 0;
 
         public Welcome()
         {
@@ -116,9 +116,15 @@ namespace FitVitality
         {
             if (index > 0)
             {
-                listPanels[--index].BringToFront();
+                index--;
+                listPanels[index].BringToFront();
+                buttonNext.Visible = true;
             }
-            else if (index == 0)
+            else if (index < listPanels.Count - 1)
+            {
+                buttonPrevious.Visible = false;
+            }
+            if(index == 0)
             {
                 buttonPrevious.Visible = false;
             }
@@ -128,11 +134,17 @@ namespace FitVitality
         {
             if (index < listPanels.Count - 1)
             {
-                listPanels[++index].BringToFront();
+                index++;
+                listPanels[index].BringToFront();
+                buttonPrevious.Visible = true;
             }
             else if (index > 0)
             {
-                buttonPrevious.Visible = true;
+                buttonNext.Visible = false;
+            }
+            if(index == listPanels.Count - 1)
+            {
+                buttonNext.Visible = false;
             }
         }
 

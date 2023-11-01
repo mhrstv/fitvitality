@@ -37,49 +37,45 @@
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
             name = new Panel();
+            nameLabel1 = new Panel();
+            label8 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
             age = new Panel();
+            kryptonRadioButton2 = new Krypton.Toolkit.KryptonRadioButton();
+            kryptonRadioButton1 = new Krypton.Toolkit.KryptonRadioButton();
             label2 = new Label();
             textBox2 = new TextBox();
-            gender = new Panel();
-            kryptonThemeComboBox1 = new Krypton.Toolkit.KryptonThemeComboBox();
-            label3 = new Label();
             weight = new Panel();
             kryptonNumericUpDown1 = new Krypton.Toolkit.KryptonNumericUpDown();
             label4 = new Label();
-            height = new Panel();
             goal = new Panel();
             kryptonThemeComboBox2 = new Krypton.Toolkit.KryptonThemeComboBox();
             label6 = new Label();
-            kryptonNumericUpDown2 = new Krypton.Toolkit.KryptonNumericUpDown();
-            label5 = new Label();
             activity = new Panel();
             kryptonThemeComboBox3 = new Krypton.Toolkit.KryptonThemeComboBox();
             label7 = new Label();
             buttonNext = new PictureBox();
             buttonPrevious = new PictureBox();
             labelWelcome = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
-            panel1 = new Panel();
+            welcomelabeltimer = new System.Windows.Forms.Timer(components);
+            panelWelcome = new Panel();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             name.SuspendLayout();
+            nameLabel1.SuspendLayout();
             age.SuspendLayout();
-            gender.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox1).BeginInit();
             weight.SuspendLayout();
-            height.SuspendLayout();
             goal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox2).BeginInit();
             activity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonNext).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonPrevious).BeginInit();
-            panel1.SuspendLayout();
+            panelWelcome.SuspendLayout();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -169,6 +165,7 @@
             // 
             // name
             // 
+            name.Controls.Add(nameLabel1);
             name.Controls.Add(label1);
             name.Controls.Add(textBox1);
             name.Location = new Point(75, 50);
@@ -177,11 +174,29 @@
             name.TabIndex = 21;
             name.Paint += panel1_Paint;
             // 
+            // nameLabel1
+            // 
+            nameLabel1.Controls.Add(label8);
+            nameLabel1.Location = new Point(51, 26);
+            nameLabel1.Name = "nameLabel1";
+            nameLabel1.Size = new Size(442, 23);
+            nameLabel1.TabIndex = 2;
+            // 
+            // label8
+            // 
+            label8.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(0, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(438, 23);
+            label8.TabIndex = 0;
+            label8.Text = "Now to get to know each other better we will ask a few questions.";
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(217, 108);
+            label1.Location = new Point(220, 121);
             label1.Name = "label1";
             label1.Size = new Size(94, 15);
             label1.TabIndex = 1;
@@ -196,12 +211,34 @@
             // 
             // age
             // 
+            age.Controls.Add(kryptonRadioButton2);
+            age.Controls.Add(kryptonRadioButton1);
             age.Controls.Add(label2);
             age.Controls.Add(textBox2);
             age.Location = new Point(75, 50);
             age.Name = "age";
             age.Size = new Size(540, 300);
             age.TabIndex = 22;
+            // 
+            // kryptonRadioButton2
+            // 
+            kryptonRadioButton2.Location = new Point(291, 188);
+            kryptonRadioButton2.Name = "kryptonRadioButton2";
+            kryptonRadioButton2.Size = new Size(59, 20);
+            kryptonRadioButton2.StateNormal.ShortText.Color1 = Color.White;
+            kryptonRadioButton2.StateNormal.ShortText.Color2 = Color.White;
+            kryptonRadioButton2.TabIndex = 3;
+            kryptonRadioButton2.Values.Text = "female";
+            // 
+            // kryptonRadioButton1
+            // 
+            kryptonRadioButton1.Location = new Point(185, 188);
+            kryptonRadioButton1.Name = "kryptonRadioButton1";
+            kryptonRadioButton1.Size = new Size(49, 20);
+            kryptonRadioButton1.StateNormal.ShortText.Color1 = Color.White;
+            kryptonRadioButton1.StateNormal.ShortText.Color2 = Color.White;
+            kryptonRadioButton1.TabIndex = 2;
+            kryptonRadioButton1.Values.Text = "male";
             // 
             // label2
             // 
@@ -219,39 +256,6 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 0;
-            // 
-            // gender
-            // 
-            gender.Controls.Add(kryptonThemeComboBox1);
-            gender.Controls.Add(label3);
-            gender.Location = new Point(0, 0);
-            gender.Name = "gender";
-            gender.Size = new Size(540, 300);
-            gender.TabIndex = 22;
-            // 
-            // kryptonThemeComboBox1
-            // 
-            kryptonThemeComboBox1.CornerRoundingRadius = -1F;
-            kryptonThemeComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            kryptonThemeComboBox1.DropDownWidth = 121;
-            kryptonThemeComboBox1.IntegralHeight = false;
-            kryptonThemeComboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            kryptonThemeComboBox1.Location = new Point(212, 143);
-            kryptonThemeComboBox1.Name = "kryptonThemeComboBox1";
-            kryptonThemeComboBox1.Size = new Size(121, 21);
-            kryptonThemeComboBox1.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            kryptonThemeComboBox1.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(218, 122);
-            label3.Name = "label3";
-            label3.Size = new Size(107, 15);
-            label3.TabIndex = 1;
-            label3.Text = "Whats your gender";
-            label3.Click += label3_Click;
             // 
             // weight
             // 
@@ -279,22 +283,11 @@
             label4.TabIndex = 1;
             label4.Text = "how much do you weigh";
             // 
-            // height
-            // 
-            height.Controls.Add(goal);
-            height.Controls.Add(kryptonNumericUpDown2);
-            height.Controls.Add(label5);
-            height.Location = new Point(75, 50);
-            height.Name = "height";
-            height.Size = new Size(540, 300);
-            height.TabIndex = 23;
-            // 
             // goal
             // 
-            goal.Controls.Add(gender);
             goal.Controls.Add(kryptonThemeComboBox2);
             goal.Controls.Add(label6);
-            goal.Location = new Point(0, 0);
+            goal.Location = new Point(75, 50);
             goal.Name = "goal";
             goal.Size = new Size(540, 300);
             goal.TabIndex = 23;
@@ -321,23 +314,6 @@
             label6.Size = new Size(97, 15);
             label6.TabIndex = 1;
             label6.Text = "what is your goal";
-            // 
-            // kryptonNumericUpDown2
-            // 
-            kryptonNumericUpDown2.Location = new Point(204, 143);
-            kryptonNumericUpDown2.Name = "kryptonNumericUpDown2";
-            kryptonNumericUpDown2.Size = new Size(120, 22);
-            kryptonNumericUpDown2.TabIndex = 2;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.ForeColor = SystemColors.Control;
-            label5.Location = new Point(212, 108);
-            label5.Name = "label5";
-            label5.Size = new Size(91, 15);
-            label5.TabIndex = 1;
-            label5.Text = "how tall are you";
             // 
             // activity
             // 
@@ -373,20 +349,24 @@
             // 
             // buttonNext
             // 
-            buttonNext.Location = new Point(624, 154);
+            buttonNext.Image = (Image)resources.GetObject("buttonNext.Image");
+            buttonNext.Location = new Point(624, 158);
             buttonNext.Name = "buttonNext";
-            buttonNext.Size = new Size(58, 92);
+            buttonNext.Size = new Size(58, 70);
             buttonNext.TabIndex = 27;
             buttonNext.TabStop = false;
+            buttonNext.Visible = false;
             buttonNext.Click += buttonNext_Click;
             // 
             // buttonPrevious
             // 
-            buttonPrevious.Location = new Point(8, 154);
+            buttonPrevious.Image = (Image)resources.GetObject("buttonPrevious.Image");
+            buttonPrevious.Location = new Point(8, 158);
             buttonPrevious.Name = "buttonPrevious";
-            buttonPrevious.Size = new Size(58, 92);
+            buttonPrevious.Size = new Size(58, 70);
             buttonPrevious.TabIndex = 28;
             buttonPrevious.TabStop = false;
+            buttonPrevious.Visible = false;
             buttonPrevious.Click += buttonPrevious_Click;
             // 
             // labelWelcome
@@ -400,18 +380,18 @@
             labelWelcome.Text = "Welcome!";
             labelWelcome.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // timer1
+            // welcomelabeltimer
             // 
-            timer1.Interval = 5;
-            timer1.Tick += timer1_Tick;
+            welcomelabeltimer.Interval = 5;
+            welcomelabeltimer.Tick += timer1_Tick;
             // 
-            // panel1
+            // panelWelcome
             // 
-            panel1.Controls.Add(labelWelcome);
-            panel1.Location = new Point(41, 134);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(0, 133);
-            panel1.TabIndex = 29;
+            panelWelcome.Controls.Add(labelWelcome);
+            panelWelcome.Location = new Point(41, 134);
+            panelWelcome.Name = "panelWelcome";
+            panelWelcome.Size = new Size(0, 133);
+            panelWelcome.TabIndex = 29;
             // 
             // Welcome
             // 
@@ -419,15 +399,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
-            Controls.Add(panel1);
+            Controls.Add(name);
+            Controls.Add(panelWelcome);
             Controls.Add(buttonPrevious);
             Controls.Add(buttonNext);
-            Controls.Add(height);
-            Controls.Add(weight);
-            Controls.Add(age);
-            Controls.Add(activity);
-            Controls.Add(name);
             Controls.Add(topbar);
+            Controls.Add(goal);
+            Controls.Add(weight);
+            Controls.Add(activity);
+            Controls.Add(age);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Welcome";
@@ -444,15 +424,11 @@
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             name.ResumeLayout(false);
             name.PerformLayout();
+            nameLabel1.ResumeLayout(false);
             age.ResumeLayout(false);
             age.PerformLayout();
-            gender.ResumeLayout(false);
-            gender.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox1).EndInit();
             weight.ResumeLayout(false);
             weight.PerformLayout();
-            height.ResumeLayout(false);
-            height.PerformLayout();
             goal.ResumeLayout(false);
             goal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox2).EndInit();
@@ -461,7 +437,7 @@
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonNext).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonPrevious).EndInit();
-            panel1.ResumeLayout(false);
+            panelWelcome.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -479,17 +455,11 @@
         private Label label2;
         private TextBox textBox2;
         private Label label1;
-        private Panel gender;
         private Panel weight;
         private Label label4;
-        private Krypton.Toolkit.KryptonThemeComboBox kryptonThemeComboBox1;
-        private Label label3;
-        private Panel height;
         private Panel goal;
         private Krypton.Toolkit.KryptonThemeComboBox kryptonThemeComboBox2;
         private Label label6;
-        private Krypton.Toolkit.KryptonNumericUpDown kryptonNumericUpDown2;
-        private Label label5;
         private Krypton.Toolkit.KryptonNumericUpDown kryptonNumericUpDown1;
         private Panel activity;
         private Krypton.Toolkit.KryptonThemeComboBox kryptonThemeComboBox3;
@@ -497,7 +467,11 @@
         private PictureBox buttonNext;
         private PictureBox buttonPrevious;
         private Label labelWelcome;
-        private System.Windows.Forms.Timer timer1;
-        private Panel panel1;
+        private System.Windows.Forms.Timer welcomelabeltimer;
+        private Panel panelWelcome;
+        private Panel nameLabel1;
+        private Label label8;
+        private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton2;
+        private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton1;
     }
 }

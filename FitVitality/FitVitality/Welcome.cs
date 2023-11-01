@@ -30,20 +30,16 @@ namespace FitVitality
             buttonNext.Visible = false;
             name.Visible = false;
             age.Visible = false;
-            gender.Visible = false;
             weight.Visible = false;
-            height.Visible = false;
             goal.Visible = false;
             activity.Visible = false;
             listPanels.Add(name);
             listPanels.Add(age);
-            listPanels.Add(gender);
             listPanels.Add(weight);
-            listPanels.Add(height);
             listPanels.Add(goal);
             listPanels.Add(activity);
-            listPanels[0].BringToFront();
-            timer1.Enabled = true;
+            listPanels[index].BringToFront();
+            welcomelabeltimer.Enabled = true;
         }
 
         private void buttonMin_Click(object sender, EventArgs e)
@@ -122,6 +118,10 @@ namespace FitVitality
             {
                 listPanels[--index].BringToFront();
             }
+            else if (index == 0)
+            {
+                buttonPrevious.Visible = false;
+            }
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
@@ -130,18 +130,29 @@ namespace FitVitality
             {
                 listPanels[++index].BringToFront();
             }
+            else if (index > 0)
+            {
+                buttonPrevious.Visible = true;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (panel1.Width <= 609)
+            if (panelWelcome.Width <= 609)
             {
-                panel1.Width += 6;
+                panelWelcome.Width += 6;
             }
-            if (panel1.Width >= 609)
+            if (panelWelcome.Width >= 609)
             {
-                timer1.Enabled = false;
-
+                welcomelabeltimer.Enabled = false;
+                Thread.Sleep(200);
+                panelWelcome.Visible = false;
+                name.Visible = true;
+                age.Visible = true;
+                weight.Visible = true;
+                goal.Visible = true;
+                activity.Visible = true;
+                buttonNext.Visible = true;
             }
         }
     }

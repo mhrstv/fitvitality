@@ -60,6 +60,8 @@
             labelWelcome = new Label();
             welcomelabeltimer = new System.Windows.Forms.Timer(components);
             panelWelcome = new Panel();
+            done = new Krypton.Toolkit.KryptonButton();
+            timername1 = new System.Windows.Forms.Timer(components);
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -177,15 +179,15 @@
             // nameLabel1
             // 
             nameLabel1.Controls.Add(label8);
+            nameLabel1.ForeColor = Color.White;
             nameLabel1.Location = new Point(51, 26);
             nameLabel1.Name = "nameLabel1";
-            nameLabel1.Size = new Size(442, 23);
+            nameLabel1.Size = new Size(1, 23);
             nameLabel1.TabIndex = 2;
             // 
             // label8
             // 
             label8.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
             label8.Size = new Size(438, 23);
@@ -196,11 +198,11 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(220, 121);
+            label1.Location = new Point(214, 108);
             label1.Name = "label1";
-            label1.Size = new Size(94, 15);
+            label1.Size = new Size(111, 15);
             label1.TabIndex = 1;
-            label1.Text = "Enter your name";
+            label1.Text = "What is your name?";
             // 
             // textBox1
             // 
@@ -388,10 +390,78 @@
             // panelWelcome
             // 
             panelWelcome.Controls.Add(labelWelcome);
-            panelWelcome.Location = new Point(41, 134);
+            panelWelcome.Location = new Point(33, 134);
             panelWelcome.Name = "panelWelcome";
-            panelWelcome.Size = new Size(0, 133);
+            panelWelcome.Size = new Size(10, 133);
             panelWelcome.TabIndex = 29;
+            // 
+            // done
+            // 
+            done.CornerRoundingRadius = 15F;
+            done.Location = new Point(300, 363);
+            done.Name = "done";
+            done.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            done.Size = new Size(90, 25);
+            done.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            done.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            done.StateCommon.Back.ColorAngle = 45F;
+            done.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            done.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            done.StateCommon.Border.ColorAngle = 45F;
+            done.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            done.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            done.StateCommon.Border.Rounding = 15F;
+            done.StateCommon.Border.Width = 1;
+            done.StateCommon.Content.ShortText.Color1 = Color.White;
+            done.StateCommon.Content.ShortText.Color2 = Color.White;
+            done.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            done.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            done.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            done.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            done.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            done.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            done.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            done.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            done.StateNormal.Back.ColorAngle = 45F;
+            done.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            done.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            done.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            done.StateNormal.Border.ColorAngle = 45F;
+            done.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            done.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            done.StateNormal.Border.Rounding = 15F;
+            done.StateNormal.Border.Width = 1;
+            done.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            done.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            done.StatePressed.Back.ColorAngle = 45F;
+            done.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            done.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            done.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            done.StatePressed.Border.ColorAngle = 45F;
+            done.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            done.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            done.StatePressed.Border.Rounding = 15F;
+            done.StatePressed.Border.Width = 1;
+            done.StateTracking.Back.Color1 = Color.FromArgb(92, 225, 230);
+            done.StateTracking.Back.Color2 = Color.FromArgb(92, 225, 230);
+            done.StateTracking.Back.ColorAngle = 45F;
+            done.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            done.StateTracking.Border.Color1 = Color.FromArgb(92, 225, 230);
+            done.StateTracking.Border.Color2 = Color.FromArgb(92, 225, 230);
+            done.StateTracking.Border.ColorAngle = 45F;
+            done.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            done.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            done.StateTracking.Border.Rounding = 15F;
+            done.StateTracking.Border.Width = 1;
+            done.TabIndex = 30;
+            done.Values.Text = "Done";
+            done.Visible = false;
+            done.Click += done_Click;
+            // 
+            // timername1
+            // 
+            timername1.Interval = 5;
+            timername1.Tick += timername1_Tick;
             // 
             // Welcome
             // 
@@ -399,9 +469,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
+            Controls.Add(buttonPrevious);
+            Controls.Add(done);
             Controls.Add(name);
             Controls.Add(panelWelcome);
-            Controls.Add(buttonPrevious);
             Controls.Add(buttonNext);
             Controls.Add(topbar);
             Controls.Add(goal);
@@ -473,5 +544,7 @@
         private Label label8;
         private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton2;
         private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton1;
+        private Krypton.Toolkit.KryptonButton done;
+        private System.Windows.Forms.Timer timername1;
     }
 }

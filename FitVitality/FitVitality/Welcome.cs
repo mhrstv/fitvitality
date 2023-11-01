@@ -123,8 +123,9 @@ namespace FitVitality
             else if (index < listPanels.Count - 1)
             {
                 buttonPrevious.Visible = false;
+                done.Visible = false;
             }
-            if(index == 0)
+            if (index == 0)
             {
                 buttonPrevious.Visible = false;
             }
@@ -142,9 +143,10 @@ namespace FitVitality
             {
                 buttonNext.Visible = false;
             }
-            if(index == listPanels.Count - 1)
+            if (index == listPanels.Count - 1)
             {
                 buttonNext.Visible = false;
+                done.Visible = true;
             }
         }
 
@@ -157,7 +159,8 @@ namespace FitVitality
             if (panelWelcome.Width >= 609)
             {
                 welcomelabeltimer.Enabled = false;
-                Thread.Sleep(200);
+                Thread.Sleep(400);
+                timername1.Enabled = true;
                 panelWelcome.Visible = false;
                 name.Visible = true;
                 age.Visible = true;
@@ -165,6 +168,30 @@ namespace FitVitality
                 goal.Visible = true;
                 activity.Visible = true;
                 buttonNext.Visible = true;
+            }
+        }
+
+        private void done_Click(object sender, EventArgs e)
+        {
+            Form1 main = new Form1();
+            for (double i = this.Opacity; i >= 0; i = i - 0.00004)
+            {
+                this.Opacity = i;
+            }
+            Thread.Sleep(500);
+            this.Hide();
+            main.Show();
+        }
+
+        private void timername1_Tick(object sender, EventArgs e)
+        {
+            if (nameLabel1.Width <= 438)
+            {
+                nameLabel1.Width += 6;
+            }
+            if (nameLabel1.Width >= 438)
+            {
+                timername1.Enabled = false;
             }
         }
     }

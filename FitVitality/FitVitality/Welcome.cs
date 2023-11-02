@@ -18,6 +18,8 @@ namespace FitVitality
         private bool mouseDown;
         private Point lastLocation;
         int index = 0;
+        private bool bfemale = false;
+        private bool bmale = false;
 
         public Welcome()
         {
@@ -243,97 +245,52 @@ namespace FitVitality
             }
         }
 
-        private void label9_MouseEnter(object sender, EventArgs e)
+        private void male_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            label9.BackColor = Color.FromArgb(92, 225, 230);
-            female.Image = Properties.Resources.femalepressed;
-            if (female.Image == Properties.Resources.femalepressed)
-            {
-                label9.BackColor = Color.FromArgb(92, 225, 230);
-                female.Enabled = false;
-                male.Enabled = true;
-                female.Image = Properties.Resources.female;
-            }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            label6.BackColor = Color.FromArgb(92, 225, 230);
             male.Image = Properties.Resources.malepressed;
-            if (male.Image == Properties.Resources.malepressed)
-            {
-                label6.BackColor = Color.FromArgb(92, 225, 230);
-                male.Enabled = false;
-                female.Enabled = true;
-                female.Image = Properties.Resources.female;
-            }
+            female.Image = Properties.Resources.female;
+            bmale = true;
+            bfemale = false;
+        }
+
+        private void female_Click(object sender, EventArgs e)
+        {
+            female.Image = Properties.Resources.femalepressed;
+            male.Image = Properties.Resources.male;
+            bfemale = true;
+            bmale = false;
         }
 
         private void male_MouseEnter(object sender, EventArgs e)
         {
-            if (male.Image == Properties.Resources.malepressed)
+            if (!bmale)
             {
-                male.Image = Properties.Resources.malepressed;
-            }
-            else
-            {
-                label6.BackColor = Color.FromArgb(83, 95, 106);
                 male.Image = Properties.Resources.maletracked;
-            }
-        }
-
-        private void male_MouseLeave(object sender, EventArgs e)
-        {
-            if (male.Image == Properties.Resources.malepressed)
-            {
-                male.Image = Properties.Resources.malepressed;
-            }
-            else
-            {
-                label6.BackColor = Color.FromArgb(36, 41, 46);
-                male.Image = Properties.Resources.male;
             }
         }
 
         private void female_MouseEnter(object sender, EventArgs e)
         {
-            if (female.Image == Properties.Resources.femalepressed)
+            if (!bfemale)
             {
-                female.Image = Properties.Resources.femalepressed;
-            }
-            else
-            {
-                label9.BackColor = Color.FromArgb(83, 95, 106);
                 female.Image = Properties.Resources.femaletracked;
+            }
+        }
+
+        private void male_MouseLeave(object sender, EventArgs e)
+        {
+            if (!bmale)
+            {
+                male.Image = Properties.Resources.male;
             }
         }
 
         private void female_MouseLeave(object sender, EventArgs e)
         {
-            if (female.Image == Properties.Resources.femalepressed)
+            if (!bfemale)
             {
-                female.Image = Properties.Resources.femalepressed;
-            }
-            else
-            {
-                label9.BackColor = Color.FromArgb(36, 41, 46);
                 female.Image = Properties.Resources.female;
             }
-        }
-
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void kryptonButton2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -205,7 +205,7 @@ namespace FitVitality
             if (nameLabel2.Width >= 142)
             {
                 timerName.Enabled = false;
-                kryptonTextBox1.Visible = true;
+                tbName.Visible = true;
             }
         }
 
@@ -232,6 +232,98 @@ namespace FitVitality
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                buttonNext_Click(this, new EventArgs());
+            }
+        }
+
+        private void label9_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            label9.BackColor = Color.FromArgb(92, 225, 230);
+            female.Image = Properties.Resources.femalepressed;
+            if (female.Image == Properties.Resources.femalepressed)
+            {
+                label9.BackColor = Color.FromArgb(92, 225, 230);
+                female.Enabled = false;
+                male.Enabled = true;
+                female.Image = Properties.Resources.female;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            label6.BackColor = Color.FromArgb(92, 225, 230);
+            male.Image = Properties.Resources.malepressed;
+            if (male.Image == Properties.Resources.malepressed)
+            {
+                label6.BackColor = Color.FromArgb(92, 225, 230);
+                male.Enabled = false;
+                female.Enabled = true;
+                female.Image = Properties.Resources.female;
+            }
+        }
+
+        private void male_MouseEnter(object sender, EventArgs e)
+        {
+            if (male.Image == Properties.Resources.malepressed)
+            {
+                male.Image = Properties.Resources.malepressed;
+            }
+            else
+            {
+                label6.BackColor = Color.FromArgb(83, 95, 106);
+                male.Image = Properties.Resources.maletracked;
+            }
+        }
+
+        private void male_MouseLeave(object sender, EventArgs e)
+        {
+            if (male.Image == Properties.Resources.malepressed)
+            {
+                male.Image = Properties.Resources.malepressed;
+            }
+            else
+            {
+                label6.BackColor = Color.FromArgb(36, 41, 46);
+                male.Image = Properties.Resources.male;
+            }
+        }
+
+        private void female_MouseEnter(object sender, EventArgs e)
+        {
+            if (female.Image == Properties.Resources.femalepressed)
+            {
+                female.Image = Properties.Resources.femalepressed;
+            }
+            else
+            {
+                label9.BackColor = Color.FromArgb(83, 95, 106);
+                female.Image = Properties.Resources.femaletracked;
+            }
+        }
+
+        private void female_MouseLeave(object sender, EventArgs e)
+        {
+            if (female.Image == Properties.Resources.femalepressed)
+            {
+                female.Image = Properties.Resources.femalepressed;
+            }
+            else
+            {
+                label9.BackColor = Color.FromArgb(36, 41, 46);
+                female.Image = Properties.Resources.female;
+            }
         }
     }
 }

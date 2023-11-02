@@ -37,14 +37,16 @@
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
             name = new Panel();
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            tbName = new Krypton.Toolkit.KryptonTextBox();
             nameLabel2 = new Panel();
             label1 = new Label();
             nameLabel1 = new Panel();
             label8 = new Label();
             age = new Panel();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
+            label9 = new Label();
+            label6 = new Label();
+            female = new PictureBox();
+            male = new PictureBox();
             kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
             label2 = new Label();
             weight = new Panel();
@@ -74,8 +76,8 @@
             nameLabel2.SuspendLayout();
             nameLabel1.SuspendLayout();
             age.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)female).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)male).BeginInit();
             weight.SuspendLayout();
             activity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox3).BeginInit();
@@ -171,6 +173,7 @@
             // 
             // name
             // 
+            name.Controls.Add(tbName);
             name.Controls.Add(nameLabel2);
             name.Controls.Add(nameLabel1);
             name.Location = new Point(75, 50);
@@ -179,29 +182,30 @@
             name.TabIndex = 21;
             name.Paint += panel1_Paint;
             // 
-            // kryptonTextBox1
+            // tbName
             // 
-            kryptonTextBox1.CueHint.CueHintText = "ex. \"John Doe\"";
-            kryptonTextBox1.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            kryptonTextBox1.CueHint.Padding = new Padding(0);
-            kryptonTextBox1.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            kryptonTextBox1.Location = new Point(21, 35);
-            kryptonTextBox1.MaxLength = 15;
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(101, 23);
-            kryptonTextBox1.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonTextBox1.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonTextBox1.TabIndex = 4;
-            kryptonTextBox1.TextAlign = HorizontalAlignment.Center;
-            kryptonTextBox1.TextChanged += kryptonTextBox1_TextChanged;
+            tbName.CueHint.CueHintText = "ex. \"John Doe\"";
+            tbName.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            tbName.CueHint.Padding = new Padding(0);
+            tbName.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            tbName.Location = new Point(220, 147);
+            tbName.MaxLength = 15;
+            tbName.Name = "tbName";
+            tbName.Size = new Size(101, 23);
+            tbName.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tbName.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tbName.TabIndex = 4;
+            tbName.TextAlign = HorizontalAlignment.Center;
+            tbName.Visible = false;
+            tbName.TextChanged += kryptonTextBox1_TextChanged;
+            tbName.KeyDown += kryptonTextBox1_KeyDown;
             // 
             // nameLabel2
             // 
-            nameLabel2.Controls.Add(kryptonTextBox1);
             nameLabel2.Controls.Add(label1);
             nameLabel2.Location = new Point(199, 112);
             nameLabel2.Name = "nameLabel2";
-            nameLabel2.Size = new Size(1, 71);
+            nameLabel2.Size = new Size(1, 23);
             nameLabel2.TabIndex = 3;
             // 
             // label1
@@ -234,8 +238,10 @@
             // 
             // age
             // 
-            age.Controls.Add(pictureBox2);
-            age.Controls.Add(pictureBox1);
+            age.Controls.Add(label9);
+            age.Controls.Add(label6);
+            age.Controls.Add(female);
+            age.Controls.Add(male);
             age.Controls.Add(kryptonTextBox2);
             age.Controls.Add(label2);
             age.Location = new Point(75, 50);
@@ -243,21 +249,54 @@
             age.Size = new Size(540, 300);
             age.TabIndex = 22;
             // 
-            // pictureBox2
+            // label9
             // 
-            pictureBox2.Location = new Point(269, 180);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(83, 37);
-            pictureBox2.TabIndex = 6;
-            pictureBox2.TabStop = false;
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.Control;
+            label9.Location = new Point(283, 204);
+            label9.Name = "label9";
+            label9.Size = new Size(56, 19);
+            label9.TabIndex = 8;
+            label9.Text = "Female";
+            label9.MouseEnter += label9_MouseEnter;
             // 
-            // pictureBox1
+            // label6
             // 
-            pictureBox1.Location = new Point(187, 180);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(83, 37);
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(208, 204);
+            label6.Name = "label6";
+            label6.Size = new Size(42, 19);
+            label6.TabIndex = 7;
+            label6.Text = "Male";
+            // 
+            // female
+            // 
+            female.Image = Properties.Resources.female;
+            female.Location = new Point(269, 195);
+            female.Name = "female";
+            female.Size = new Size(83, 37);
+            female.TabIndex = 6;
+            female.TabStop = false;
+            female.Click += pictureBox2_Click;
+            female.MouseEnter += female_MouseEnter;
+            female.MouseLeave += female_MouseLeave;
+            // 
+            // male
+            // 
+            male.Image = Properties.Resources.male;
+            male.Location = new Point(187, 195);
+            male.Name = "male";
+            male.Size = new Size(83, 37);
+            male.TabIndex = 5;
+            male.TabStop = false;
+            male.Click += pictureBox1_Click;
+            male.MouseEnter += male_MouseEnter;
+            male.MouseLeave += male_MouseLeave;
             // 
             // kryptonTextBox2
             // 
@@ -265,7 +304,7 @@
             kryptonTextBox2.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             kryptonTextBox2.CueHint.Padding = new Padding(0);
             kryptonTextBox2.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            kryptonTextBox2.Location = new Point(246, 118);
+            kryptonTextBox2.Location = new Point(246, 99);
             kryptonTextBox2.MaxLength = 3;
             kryptonTextBox2.Name = "kryptonTextBox2";
             kryptonTextBox2.Size = new Size(49, 23);
@@ -279,7 +318,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(218, 83);
+            label2.Location = new Point(218, 64);
             label2.Name = "label2";
             label2.Size = new Size(103, 19);
             label2.TabIndex = 1;
@@ -528,10 +567,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
+            Controls.Add(age);
             Controls.Add(name);
             Controls.Add(goal);
             Controls.Add(weight);
-            Controls.Add(age);
             Controls.Add(buttonPrevious);
             Controls.Add(done);
             Controls.Add(panelWelcome);
@@ -553,13 +592,13 @@
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             name.ResumeLayout(false);
+            name.PerformLayout();
             nameLabel2.ResumeLayout(false);
-            nameLabel2.PerformLayout();
             nameLabel1.ResumeLayout(false);
             age.ResumeLayout(false);
             age.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)female).EndInit();
+            ((System.ComponentModel.ISupportInitialize)male).EndInit();
             weight.ResumeLayout(false);
             weight.PerformLayout();
             activity.ResumeLayout(false);
@@ -600,13 +639,15 @@
         private System.Windows.Forms.Timer timername1;
         private Panel nameLabel2;
         private System.Windows.Forms.Timer timerName;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonTextBox tbName;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
+        private PictureBox male;
+        private PictureBox female;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
         private Label label3;
         private Label label5;
+        private Label label9;
+        private Label label6;
     }
 }

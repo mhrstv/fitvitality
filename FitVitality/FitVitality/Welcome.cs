@@ -262,16 +262,16 @@ namespace FitVitality
 
         private void male_Click(object sender, EventArgs e)
         {
-            male.Image = Properties.Resources.malepressed;
-            female.Image = Properties.Resources.female;
+            male.Image = Properties.Resources.malepressed1;
+            female.Image = Properties.Resources.female1;
             bmale = true;
             bfemale = false;
         }
 
         private void female_Click(object sender, EventArgs e)
         {
-            female.Image = Properties.Resources.femalepressed;
-            male.Image = Properties.Resources.male;
+            female.Image = Properties.Resources.femalepressed1;
+            male.Image = Properties.Resources.male1;
             bfemale = true;
             bmale = false;
         }
@@ -280,7 +280,7 @@ namespace FitVitality
         {
             if (!bmale)
             {
-                male.Image = Properties.Resources.maletracked;
+                male.Image = Properties.Resources.maletracked1;
             }
         }
 
@@ -288,7 +288,7 @@ namespace FitVitality
         {
             if (!bfemale)
             {
-                female.Image = Properties.Resources.femaletracked;
+                female.Image = Properties.Resources.femaletracked1;
             }
         }
 
@@ -296,7 +296,7 @@ namespace FitVitality
         {
             if (!bmale)
             {
-                male.Image = Properties.Resources.male;
+                male.Image = Properties.Resources.male1;
             }
         }
 
@@ -304,7 +304,7 @@ namespace FitVitality
         {
             if (!bfemale)
             {
-                female.Image = Properties.Resources.female;
+                female.Image = Properties.Resources.female1;
             }
         }
 

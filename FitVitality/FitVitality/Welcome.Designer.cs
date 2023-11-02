@@ -354,7 +354,7 @@
             // 
             // female
             // 
-            female.Image = Properties.Resources.female;
+            female.Image = Properties.Resources.female1;
             female.Location = new Point(270, 195);
             female.Name = "female";
             female.Size = new Size(83, 37);
@@ -367,7 +367,7 @@
             // 
             // male
             // 
-            male.Image = Properties.Resources.male;
+            male.Image = Properties.Resources.male1;
             male.Location = new Point(187, 195);
             male.Name = "male";
             male.Size = new Size(83, 37);

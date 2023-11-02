@@ -43,10 +43,18 @@
             nameLabel1 = new Panel();
             label8 = new Label();
             age = new Panel();
+            panel4 = new Panel();
+            label10 = new Label();
+            label11 = new Label();
+            panel3 = new Panel();
+            label2 = new Label();
+            panel2 = new Panel();
+            label9 = new Label();
+            panel1 = new Panel();
+            label6 = new Label();
             female = new PictureBox();
             male = new PictureBox();
             kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
-            label2 = new Label();
             weight = new Panel();
             label5 = new Label();
             kryptonTextBox4 = new Krypton.Toolkit.KryptonTextBox();
@@ -65,6 +73,10 @@
             done = new Krypton.Toolkit.KryptonButton();
             timername1 = new System.Windows.Forms.Timer(components);
             timerName = new System.Windows.Forms.Timer(components);
+            timerage1 = new System.Windows.Forms.Timer(components);
+            timerage2 = new System.Windows.Forms.Timer(components);
+            timerage3 = new System.Windows.Forms.Timer(components);
+            timerage4 = new System.Windows.Forms.Timer(components);
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -74,6 +86,10 @@
             nameLabel2.SuspendLayout();
             nameLabel1.SuspendLayout();
             age.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)female).BeginInit();
             ((System.ComponentModel.ISupportInitialize)male).BeginInit();
             weight.SuspendLayout();
@@ -220,7 +236,7 @@
             // 
             nameLabel1.Controls.Add(label8);
             nameLabel1.ForeColor = Color.White;
-            nameLabel1.Location = new Point(29, 26);
+            nameLabel1.Location = new Point(30, 26);
             nameLabel1.Name = "nameLabel1";
             nameLabel1.Size = new Size(1, 23);
             nameLabel1.TabIndex = 2;
@@ -236,14 +252,105 @@
             // 
             // age
             // 
+            age.Controls.Add(panel4);
+            age.Controls.Add(label11);
+            age.Controls.Add(panel3);
+            age.Controls.Add(panel2);
+            age.Controls.Add(panel1);
             age.Controls.Add(female);
             age.Controls.Add(male);
             age.Controls.Add(kryptonTextBox2);
-            age.Controls.Add(label2);
             age.Location = new Point(75, 50);
             age.Name = "age";
             age.Size = new Size(540, 300);
             age.TabIndex = 22;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(label10);
+            panel4.Location = new Point(197, 170);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1, 19);
+            panel4.TabIndex = 13;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.Control;
+            label10.Location = new Point(0, 0);
+            label10.Name = "label10";
+            label10.Size = new Size(147, 19);
+            label10.TabIndex = 2;
+            label10.Text = "What is your gender?";
+            // 
+            // label11
+            // 
+            label11.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.ForeColor = Color.FromArgb(92, 90, 90);
+            label11.Location = new Point(116, 253);
+            label11.Name = "label11";
+            label11.Size = new Size(309, 44);
+            label11.TabIndex = 12;
+            label11.Text = "We do NOT share any of your private data and use it only for in-app use such as formulas.";
+            label11.TextAlign = ContentAlignment.MiddleCenter;
+            label11.Visible = false;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(label2);
+            panel3.Location = new Point(210, 98);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1, 19);
+            panel3.TabIndex = 11;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.Control;
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(121, 19);
+            label2.TabIndex = 1;
+            label2.Text = "How old are you?";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label9);
+            panel2.Location = new Point(57, 42);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1, 26);
+            panel2.TabIndex = 10;
+            // 
+            // label9
+            // 
+            label9.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.Control;
+            label9.Location = new Point(0, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(427, 26);
+            label9.TabIndex = 8;
+            label9.Text = "We would like to know a bit more about you before we continue.";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(label6);
+            panel1.Location = new Point(81, 15);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1, 26);
+            panel1.TabIndex = 9;
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(0, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(378, 26);
+            label6.TabIndex = 7;
+            label6.Text = "Hello, {name}! Thank you for choosing FitVitality!";
+            label6.TextAlign = ContentAlignment.TopCenter;
             // 
             // female
             // 
@@ -253,6 +360,7 @@
             female.Size = new Size(83, 37);
             female.TabIndex = 6;
             female.TabStop = false;
+            female.Visible = false;
             female.Click += female_Click;
             female.MouseEnter += female_MouseEnter;
             female.MouseLeave += female_MouseLeave;
@@ -265,6 +373,7 @@
             male.Size = new Size(83, 37);
             male.TabIndex = 5;
             male.TabStop = false;
+            male.Visible = false;
             male.Click += male_Click;
             male.MouseEnter += male_MouseEnter;
             male.MouseLeave += male_MouseLeave;
@@ -275,7 +384,7 @@
             kryptonTextBox2.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             kryptonTextBox2.CueHint.Padding = new Padding(0);
             kryptonTextBox2.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            kryptonTextBox2.Location = new Point(246, 99);
+            kryptonTextBox2.Location = new Point(246, 126);
             kryptonTextBox2.MaxLength = 3;
             kryptonTextBox2.Name = "kryptonTextBox2";
             kryptonTextBox2.Size = new Size(49, 23);
@@ -283,17 +392,7 @@
             kryptonTextBox2.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             kryptonTextBox2.TabIndex = 4;
             kryptonTextBox2.TextAlign = HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(218, 64);
-            label2.Name = "label2";
-            label2.Size = new Size(103, 19);
-            label2.TabIndex = 1;
-            label2.Text = "Enter your age";
+            kryptonTextBox2.Visible = false;
             // 
             // weight
             // 
@@ -532,6 +631,26 @@
             timerName.Interval = 10;
             timerName.Tick += timerName_Tick;
             // 
+            // timerage1
+            // 
+            timerage1.Interval = 5;
+            timerage1.Tick += timerage1_Tick;
+            // 
+            // timerage2
+            // 
+            timerage2.Interval = 5;
+            timerage2.Tick += timerage2_Tick;
+            // 
+            // timerage3
+            // 
+            timerage3.Interval = 10;
+            timerage3.Tick += timerage3_Tick;
+            // 
+            // timerage4
+            // 
+            timerage4.Interval = 10;
+            timerage4.Tick += timerage4_Tick;
+            // 
             // Welcome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -568,6 +687,12 @@
             nameLabel1.ResumeLayout(false);
             age.ResumeLayout(false);
             age.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)female).EndInit();
             ((System.ComponentModel.ISupportInitialize)male).EndInit();
             weight.ResumeLayout(false);
@@ -618,5 +743,17 @@
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
         private Label label3;
         private Label label5;
+        private Label label6;
+        private Panel panel2;
+        private Label label9;
+        private Panel panel1;
+        private Panel panel3;
+        private Panel panel4;
+        private Label label10;
+        private Label label11;
+        private System.Windows.Forms.Timer timerage1;
+        private System.Windows.Forms.Timer timerage2;
+        private System.Windows.Forms.Timer timerage3;
+        private System.Windows.Forms.Timer timerage4;
     }
 }

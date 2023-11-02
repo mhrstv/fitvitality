@@ -20,6 +20,13 @@ namespace FitVitality
         int index = 0;
         private bool bfemale = false;
         private bool bmale = false;
+        private string dbName;
+        private int dbAge;
+        private string dbGender;
+        private double dbWeight;
+        private double dbHeight;
+        private string dbGoal;
+        private string dbActivity;
 
         public Welcome()
         {
@@ -116,6 +123,8 @@ namespace FitVitality
 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
+            dbName = tbName.Text.ToString();
+            label6.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
             if (index > 0)
             {
                 index--;
@@ -135,6 +144,8 @@ namespace FitVitality
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
+            dbName = tbName.Text.ToString();
+            label6.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
             if (index < listPanels.Count - 1)
             {
                 index++;
@@ -149,6 +160,10 @@ namespace FitVitality
             {
                 buttonNext.Visible = false;
                 done.Visible = true;
+            }
+            if (index == 1 && label11.Visible == false)
+            {
+                timerage1.Enabled = true;
             }
         }
 
@@ -290,6 +305,61 @@ namespace FitVitality
             if (!bfemale)
             {
                 female.Image = Properties.Resources.female;
+            }
+        }
+
+        private void timerage1_Tick(object sender, EventArgs e)
+        {
+            if (panel1.Width <= 378)
+            {
+                panel1.Width += 6;
+            }
+            if (panel1.Width >= 378)
+            {
+                timerage1.Enabled = false;
+                timerage2.Enabled = true;
+            }
+        }
+
+        private void timerage2_Tick(object sender, EventArgs e)
+        {
+            if (panel2.Width <= 427)
+            {
+                panel2.Width += 6;
+            }
+            if (panel2.Width >= 427)
+            {
+                timerage2.Enabled = false;
+                timerage3.Enabled = true;
+            }
+        }
+
+        private void timerage3_Tick(object sender, EventArgs e)
+        {
+            if (panel3.Width <= 121)
+            {
+                panel3.Width += 6;
+            }
+            if (panel3.Width >= 121)
+            {
+                timerage3.Enabled = false;
+                kryptonTextBox2.Visible = true;
+                timerage4.Enabled = true;
+            }
+        }
+
+        private void timerage4_Tick(object sender, EventArgs e)
+        {
+            if (panel4.Width <= 147)
+            {
+                panel4.Width += 6;
+            }
+            if (panel4.Width >= 147)
+            {
+                timerage4.Enabled = false;
+                male.Visible = true;
+                female.Visible = true;
+                label11.Visible = true;
             }
         }
     }

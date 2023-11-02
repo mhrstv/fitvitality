@@ -325,5 +325,15 @@ namespace FitVitality
                 female.Image = Properties.Resources.female;
             }
         }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

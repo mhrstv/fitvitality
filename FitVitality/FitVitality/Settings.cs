@@ -38,7 +38,7 @@ namespace FitVitality
             panel3.Visible = true;
             panel1.Height = 174;
             panel1.Width = 341;
-            kryptonButton1.Visible = false;
+            deleteAccButton.Visible = false;
         }
 
         private void Settings_Load(object sender, EventArgs e)
@@ -50,13 +50,13 @@ namespace FitVitality
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (kryptonTextBox1.Text == "CONFIRM")
+            if (textBoxConfirm.Text == "CONFIRM")
             {
-                kryptonButton2.Enabled = true;
+                confirmButton.Enabled = true;
             }
             else
             {
-                kryptonButton2.Enabled = false;
+                confirmButton.Enabled = false;
             }
         }
 
@@ -85,7 +85,7 @@ namespace FitVitality
         private void buttonClose_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            kryptonButton1.Visible = true;
+            deleteAccButton.Visible = true;
         }
 
         private void buttonClose_MouseEnter(object sender, EventArgs e)

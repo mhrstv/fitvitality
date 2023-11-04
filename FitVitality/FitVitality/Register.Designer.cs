@@ -30,284 +30,284 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            label5 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            tbpass = new Krypton.Toolkit.KryptonTextBox();
-            tbusername = new Krypton.Toolkit.KryptonTextBox();
-            label1 = new Label();
-            label4 = new Label();
-            tbemail = new Krypton.Toolkit.KryptonTextBox();
-            panel1 = new Panel();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
-            kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
-            label6 = new Label();
-            tbrepass = new Krypton.Toolkit.KryptonTextBox();
-            userError = new Panel();
-            usrLabel = new Label();
-            pictureBox5 = new PictureBox();
-            emailError = new Panel();
-            emailLabel = new Label();
-            pictureBox6 = new PictureBox();
-            passError = new Panel();
+            buttonRegister = new Krypton.Toolkit.KryptonButton();
+            haveAnAccButton = new Label();
             passLabel = new Label();
-            pictureBox7 = new PictureBox();
-            repassError = new Panel();
+            usrLabel = new Label();
+            textBoxPass = new Krypton.Toolkit.KryptonTextBox();
+            textBoxUsername = new Krypton.Toolkit.KryptonTextBox();
+            registerLabel = new Label();
+            emailLabel = new Label();
+            textBoxEmail = new Krypton.Toolkit.KryptonTextBox();
+            topbar = new Panel();
+            logo2 = new PictureBox();
+            logo1 = new PictureBox();
+            buttonMin = new PictureBox();
+            buttonClose = new PictureBox();
+            kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             repassLabel = new Label();
-            pictureBox8 = new PictureBox();
+            textBoxRepass = new Krypton.Toolkit.KryptonTextBox();
+            userError = new Panel();
+            usrError = new Label();
+            errPanel1 = new PictureBox();
+            emailPanel = new Panel();
+            emailErrorLabel = new Label();
+            emailError = new PictureBox();
+            passPanel = new Panel();
+            passErrorLabel = new Label();
+            passError = new PictureBox();
+            repassErrorPanel = new Panel();
+            repassErrorLabel = new Label();
+            repassError = new PictureBox();
             usrmark = new PictureBox();
             emailmark = new PictureBox();
             passmark = new PictureBox();
             repassmark = new PictureBox();
             labelcreated = new Label();
-            timer1 = new System.Windows.Forms.Timer(components);
-            panel2 = new Panel();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            accCreated = new System.Windows.Forms.Timer(components);
+            panelAccCreated = new Panel();
+            topbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             userError.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            emailError.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            passError.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            repassError.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errPanel1).BeginInit();
+            emailPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)emailError).BeginInit();
+            passPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)passError).BeginInit();
+            repassErrorPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)repassError).BeginInit();
             ((System.ComponentModel.ISupportInitialize)usrmark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)emailmark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passmark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repassmark).BeginInit();
-            panel2.SuspendLayout();
+            panelAccCreated.SuspendLayout();
             SuspendLayout();
             // 
-            // kryptonButton1
+            // buttonRegister
             // 
-            kryptonButton1.CornerRoundingRadius = 15F;
-            kryptonButton1.Location = new Point(96, 328);
-            kryptonButton1.Name = "kryptonButton1";
-            kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            kryptonButton1.Size = new Size(90, 25);
-            kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateCommon.Back.ColorAngle = 45F;
-            kryptonButton1.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateCommon.Border.ColorAngle = 45F;
-            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.StateCommon.Border.Rounding = 15F;
-            kryptonButton1.StateCommon.Border.Width = 1;
-            kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.White;
-            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            kryptonButton1.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateNormal.Back.ColorAngle = 45F;
-            kryptonButton1.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateNormal.Border.ColorAngle = 45F;
-            kryptonButton1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.StateNormal.Border.Rounding = 15F;
-            kryptonButton1.StateNormal.Border.Width = 1;
-            kryptonButton1.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            kryptonButton1.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            kryptonButton1.StatePressed.Back.ColorAngle = 45F;
-            kryptonButton1.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            kryptonButton1.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            kryptonButton1.StatePressed.Border.ColorAngle = 45F;
-            kryptonButton1.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.StatePressed.Border.Rounding = 15F;
-            kryptonButton1.StatePressed.Border.Width = 1;
-            kryptonButton1.StateTracking.Back.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateTracking.Back.Color2 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateTracking.Back.ColorAngle = 45F;
-            kryptonButton1.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.StateTracking.Border.Color1 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateTracking.Border.Color2 = Color.FromArgb(92, 225, 230);
-            kryptonButton1.StateTracking.Border.ColorAngle = 45F;
-            kryptonButton1.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonButton1.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            kryptonButton1.StateTracking.Border.Rounding = 15F;
-            kryptonButton1.StateTracking.Border.Width = 1;
-            kryptonButton1.TabIndex = 12;
-            kryptonButton1.Values.Text = "Register";
-            kryptonButton1.Click += kryptonButton1_Click;
+            buttonRegister.CornerRoundingRadius = 15F;
+            buttonRegister.Location = new Point(96, 328);
+            buttonRegister.Name = "buttonRegister";
+            buttonRegister.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            buttonRegister.Size = new Size(90, 25);
+            buttonRegister.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateCommon.Back.ColorAngle = 45F;
+            buttonRegister.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateCommon.Border.ColorAngle = 45F;
+            buttonRegister.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonRegister.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonRegister.StateCommon.Border.Rounding = 15F;
+            buttonRegister.StateCommon.Border.Width = 1;
+            buttonRegister.StateCommon.Content.ShortText.Color1 = Color.White;
+            buttonRegister.StateCommon.Content.ShortText.Color2 = Color.White;
+            buttonRegister.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonRegister.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonRegister.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateNormal.Back.ColorAngle = 45F;
+            buttonRegister.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonRegister.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            buttonRegister.StateNormal.Border.ColorAngle = 45F;
+            buttonRegister.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonRegister.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonRegister.StateNormal.Border.Rounding = 15F;
+            buttonRegister.StateNormal.Border.Width = 1;
+            buttonRegister.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            buttonRegister.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            buttonRegister.StatePressed.Back.ColorAngle = 45F;
+            buttonRegister.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonRegister.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            buttonRegister.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            buttonRegister.StatePressed.Border.ColorAngle = 45F;
+            buttonRegister.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonRegister.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonRegister.StatePressed.Border.Rounding = 15F;
+            buttonRegister.StatePressed.Border.Width = 1;
+            buttonRegister.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            buttonRegister.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            buttonRegister.StateTracking.Back.ColorAngle = 45F;
+            buttonRegister.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonRegister.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            buttonRegister.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            buttonRegister.StateTracking.Border.ColorAngle = 45F;
+            buttonRegister.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonRegister.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonRegister.StateTracking.Border.Rounding = 15F;
+            buttonRegister.StateTracking.Border.Width = 1;
+            buttonRegister.TabIndex = 12;
+            buttonRegister.Values.Text = "Register";
+            buttonRegister.Click += kryptonButton1_Click;
             // 
-            // label5
+            // haveAnAccButton
             // 
-            label5.AutoSize = true;
-            label5.Cursor = Cursors.Hand;
-            label5.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(150, 208, 250);
-            label5.Location = new Point(65, 368);
-            label5.Name = "label5";
-            label5.Size = new Size(157, 14);
-            label5.TabIndex = 7;
-            label5.Text = "Already have an account?";
-            label5.Click += label5_Click;
+            haveAnAccButton.AutoSize = true;
+            haveAnAccButton.Cursor = Cursors.Hand;
+            haveAnAccButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            haveAnAccButton.ForeColor = Color.FromArgb(150, 208, 250);
+            haveAnAccButton.Location = new Point(65, 368);
+            haveAnAccButton.Name = "haveAnAccButton";
+            haveAnAccButton.Size = new Size(157, 14);
+            haveAnAccButton.TabIndex = 7;
+            haveAnAccButton.Text = "Already have an account?";
+            haveAnAccButton.Click += label5_Click;
             // 
-            // label3
+            // passLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Black;
-            label3.Location = new Point(44, 214);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 14);
-            label3.TabIndex = 5;
-            label3.Text = "Password";
+            passLabel.AutoSize = true;
+            passLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            passLabel.ForeColor = Color.Black;
+            passLabel.Location = new Point(44, 214);
+            passLabel.Name = "passLabel";
+            passLabel.Size = new Size(66, 14);
+            passLabel.TabIndex = 5;
+            passLabel.Text = "Password";
             // 
-            // label2
+            // usrLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.Black;
-            label2.Location = new Point(44, 105);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 14);
-            label2.TabIndex = 3;
-            label2.Text = "Username";
+            usrLabel.AutoSize = true;
+            usrLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            usrLabel.ForeColor = Color.Black;
+            usrLabel.Location = new Point(44, 105);
+            usrLabel.Name = "usrLabel";
+            usrLabel.Size = new Size(67, 14);
+            usrLabel.TabIndex = 3;
+            usrLabel.Text = "Username";
             // 
-            // tbpass
+            // textBoxPass
             // 
-            tbpass.CueHint.CueHintText = "Enter password";
-            tbpass.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbpass.CueHint.Padding = new Padding(0);
-            tbpass.Location = new Point(44, 231);
-            tbpass.MaxLength = 32;
-            tbpass.Name = "tbpass";
-            tbpass.PasswordChar = '●';
-            tbpass.Size = new Size(199, 23);
-            tbpass.TabIndex = 10;
-            tbpass.UseSystemPasswordChar = true;
-            tbpass.KeyDown += tbpass_KeyDown;
+            textBoxPass.CueHint.CueHintText = "Enter password";
+            textBoxPass.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxPass.CueHint.Padding = new Padding(0);
+            textBoxPass.Location = new Point(44, 231);
+            textBoxPass.MaxLength = 32;
+            textBoxPass.Name = "textBoxPass";
+            textBoxPass.PasswordChar = '●';
+            textBoxPass.Size = new Size(199, 23);
+            textBoxPass.TabIndex = 10;
+            textBoxPass.UseSystemPasswordChar = true;
+            textBoxPass.KeyDown += tbpass_KeyDown;
             // 
-            // tbusername
+            // textBoxUsername
             // 
-            tbusername.CueHint.CueHintText = "Enter username";
-            tbusername.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbusername.CueHint.Padding = new Padding(0);
-            tbusername.Location = new Point(44, 123);
-            tbusername.MaxLength = 16;
-            tbusername.Name = "tbusername";
-            tbusername.Size = new Size(199, 23);
-            tbusername.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            tbusername.TabIndex = 8;
-            tbusername.TextChanged += kryptonTextBox1_TextChanged;
-            tbusername.KeyDown += tbusername_KeyDown;
+            textBoxUsername.CueHint.CueHintText = "Enter username";
+            textBoxUsername.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxUsername.CueHint.Padding = new Padding(0);
+            textBoxUsername.Location = new Point(44, 123);
+            textBoxUsername.MaxLength = 16;
+            textBoxUsername.Name = "textBoxUsername";
+            textBoxUsername.Size = new Size(199, 23);
+            textBoxUsername.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            textBoxUsername.TabIndex = 8;
+            textBoxUsername.TextChanged += kryptonTextBox1_TextChanged;
+            textBoxUsername.KeyDown += tbusername_KeyDown;
             // 
-            // label1
+            // registerLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(92, 225, 230);
-            label1.Location = new Point(29, 47);
-            label1.Name = "label1";
-            label1.Size = new Size(229, 46);
-            label1.TabIndex = 2;
-            label1.Text = "REGISTER";
+            registerLabel.AutoSize = true;
+            registerLabel.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            registerLabel.ForeColor = Color.FromArgb(92, 225, 230);
+            registerLabel.Location = new Point(29, 47);
+            registerLabel.Name = "registerLabel";
+            registerLabel.Size = new Size(229, 46);
+            registerLabel.TabIndex = 2;
+            registerLabel.Text = "REGISTER";
             // 
-            // label4
+            // emailLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(44, 158);
-            label4.Name = "label4";
-            label4.Size = new Size(39, 14);
-            label4.TabIndex = 4;
-            label4.Text = "Email";
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            emailLabel.ForeColor = Color.Black;
+            emailLabel.Location = new Point(44, 158);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new Size(39, 14);
+            emailLabel.TabIndex = 4;
+            emailLabel.Text = "Email";
             // 
-            // tbemail
+            // textBoxEmail
             // 
-            tbemail.CueHint.CueHintText = "Enter email";
-            tbemail.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbemail.CueHint.Padding = new Padding(0);
-            tbemail.Location = new Point(44, 175);
-            tbemail.MaxLength = 50;
-            tbemail.Name = "tbemail";
-            tbemail.Size = new Size(199, 23);
-            tbemail.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            tbemail.TabIndex = 9;
-            tbemail.KeyDown += tbemail_KeyDown;
+            textBoxEmail.CueHint.CueHintText = "Enter email";
+            textBoxEmail.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxEmail.CueHint.Padding = new Padding(0);
+            textBoxEmail.Location = new Point(44, 175);
+            textBoxEmail.MaxLength = 50;
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.Size = new Size(199, 23);
+            textBoxEmail.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            textBoxEmail.TabIndex = 9;
+            textBoxEmail.KeyDown += tbemail_KeyDown;
             // 
-            // panel1
+            // topbar
             // 
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(287, 32);
-            panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
-            panel1.MouseDown += panel1_MouseDown;
-            panel1.MouseMove += panel1_MouseMove;
-            panel1.MouseUp += panel1_MouseUp;
+            topbar.Controls.Add(logo2);
+            topbar.Controls.Add(logo1);
+            topbar.Controls.Add(buttonMin);
+            topbar.Controls.Add(buttonClose);
+            topbar.Location = new Point(0, 0);
+            topbar.Name = "topbar";
+            topbar.Size = new Size(287, 32);
+            topbar.TabIndex = 1;
+            topbar.Paint += panel1_Paint;
+            topbar.MouseDown += panel1_MouseDown;
+            topbar.MouseMove += panel1_MouseMove;
+            topbar.MouseUp += panel1_MouseUp;
             // 
-            // pictureBox4
+            // logo2
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(44, 9);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(66, 20);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
+            logo2.Image = (Image)resources.GetObject("logo2.Image");
+            logo2.Location = new Point(44, 9);
+            logo2.Name = "logo2";
+            logo2.Size = new Size(66, 20);
+            logo2.SizeMode = PictureBoxSizeMode.Zoom;
+            logo2.TabIndex = 1;
+            logo2.TabStop = false;
             // 
-            // pictureBox3
+            // logo1
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 8);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(26, 24);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
+            logo1.Image = (Image)resources.GetObject("logo1.Image");
+            logo1.Location = new Point(12, 8);
+            logo1.Name = "logo1";
+            logo1.Size = new Size(26, 24);
+            logo1.SizeMode = PictureBoxSizeMode.Zoom;
+            logo1.TabIndex = 1;
+            logo1.TabStop = false;
             // 
-            // pictureBox2
+            // buttonMin
             // 
-            pictureBox2.BackColor = Color.White;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(232, 7);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(19, 19);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            pictureBox2.MouseEnter += pictureBox2_MouseEnter;
-            pictureBox2.MouseLeave += pictureBox2_MouseLeave;
+            buttonMin.BackColor = Color.White;
+            buttonMin.Image = (Image)resources.GetObject("buttonMin.Image");
+            buttonMin.Location = new Point(232, 7);
+            buttonMin.Name = "buttonMin";
+            buttonMin.Size = new Size(19, 19);
+            buttonMin.SizeMode = PictureBoxSizeMode.CenterImage;
+            buttonMin.TabIndex = 2;
+            buttonMin.TabStop = false;
+            buttonMin.Click += pictureBox2_Click;
+            buttonMin.MouseEnter += pictureBox2_MouseEnter;
+            buttonMin.MouseLeave += pictureBox2_MouseLeave;
             // 
-            // pictureBox1
+            // buttonClose
             // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.Image = Properties.Resources.closebutton;
-            pictureBox1.Location = new Point(257, 7);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(19, 19);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            pictureBox1.MouseEnter += pictureBox1_MouseEnter;
-            pictureBox1.MouseLeave += pictureBox1_MouseLeave;
+            buttonClose.BackColor = Color.White;
+            buttonClose.Image = Properties.Resources.closebutton;
+            buttonClose.Location = new Point(257, 7);
+            buttonClose.Name = "buttonClose";
+            buttonClose.Size = new Size(19, 19);
+            buttonClose.SizeMode = PictureBoxSizeMode.Zoom;
+            buttonClose.TabIndex = 1;
+            buttonClose.TabStop = false;
+            buttonClose.Click += pictureBox1_Click;
+            buttonClose.MouseEnter += pictureBox1_MouseEnter;
+            buttonClose.MouseLeave += pictureBox1_MouseLeave;
             // 
             // kryptonPalette1
             // 
@@ -340,149 +340,149 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color2 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             // 
-            // label6
+            // repassLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(44, 267);
-            label6.Name = "label6";
-            label6.Size = new Size(115, 14);
-            label6.TabIndex = 6;
-            label6.Text = "Confirm Password";
+            repassLabel.AutoSize = true;
+            repassLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            repassLabel.ForeColor = Color.Black;
+            repassLabel.Location = new Point(44, 267);
+            repassLabel.Name = "repassLabel";
+            repassLabel.Size = new Size(115, 14);
+            repassLabel.TabIndex = 6;
+            repassLabel.Text = "Confirm Password";
             // 
-            // tbrepass
+            // textBoxRepass
             // 
-            tbrepass.CueHint.CueHintText = "Re-enter password";
-            tbrepass.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbrepass.CueHint.Padding = new Padding(0);
-            tbrepass.Location = new Point(44, 284);
-            tbrepass.MaxLength = 32;
-            tbrepass.Name = "tbrepass";
-            tbrepass.PasswordChar = '●';
-            tbrepass.Size = new Size(199, 23);
-            tbrepass.TabIndex = 11;
-            tbrepass.UseSystemPasswordChar = true;
-            tbrepass.KeyDown += tbrepass_KeyDown;
+            textBoxRepass.CueHint.CueHintText = "Re-enter password";
+            textBoxRepass.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxRepass.CueHint.Padding = new Padding(0);
+            textBoxRepass.Location = new Point(44, 284);
+            textBoxRepass.MaxLength = 32;
+            textBoxRepass.Name = "textBoxRepass";
+            textBoxRepass.PasswordChar = '●';
+            textBoxRepass.Size = new Size(199, 23);
+            textBoxRepass.TabIndex = 11;
+            textBoxRepass.UseSystemPasswordChar = true;
+            textBoxRepass.KeyDown += tbrepass_KeyDown;
             // 
             // userError
             // 
-            userError.Controls.Add(usrLabel);
-            userError.Controls.Add(pictureBox5);
+            userError.Controls.Add(usrError);
+            userError.Controls.Add(errPanel1);
             userError.Location = new Point(20, 96);
             userError.Name = "userError";
             userError.Size = new Size(246, 27);
             userError.TabIndex = 13;
             userError.Visible = false;
             // 
-            // usrLabel
+            // usrError
             // 
-            usrLabel.BackColor = Color.FromArgb(255, 0, 42);
-            usrLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            usrLabel.Location = new Point(6, 3);
-            usrLabel.Name = "usrLabel";
-            usrLabel.Size = new Size(236, 16);
-            usrLabel.TabIndex = 0;
-            usrLabel.Text = "Username must contain only digits or letters!";
-            usrLabel.TextAlign = ContentAlignment.MiddleLeft;
+            usrError.BackColor = Color.FromArgb(255, 0, 42);
+            usrError.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            usrError.Location = new Point(6, 3);
+            usrError.Name = "usrError";
+            usrError.Size = new Size(236, 16);
+            usrError.TabIndex = 0;
+            usrError.Text = "Username must contain only digits or letters!";
+            usrError.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // pictureBox5
+            // errPanel1
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(0, 0);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(246, 27);
-            pictureBox5.TabIndex = 0;
-            pictureBox5.TabStop = false;
+            errPanel1.Image = (Image)resources.GetObject("errPanel1.Image");
+            errPanel1.Location = new Point(0, 0);
+            errPanel1.Name = "errPanel1";
+            errPanel1.Size = new Size(246, 27);
+            errPanel1.TabIndex = 0;
+            errPanel1.TabStop = false;
+            // 
+            // emailPanel
+            // 
+            emailPanel.Controls.Add(emailErrorLabel);
+            emailPanel.Controls.Add(emailError);
+            emailPanel.Location = new Point(20, 147);
+            emailPanel.Name = "emailPanel";
+            emailPanel.Size = new Size(246, 27);
+            emailPanel.TabIndex = 14;
+            emailPanel.Visible = false;
+            // 
+            // emailErrorLabel
+            // 
+            emailErrorLabel.AutoSize = true;
+            emailErrorLabel.BackColor = Color.FromArgb(255, 0, 42);
+            emailErrorLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            emailErrorLabel.Location = new Point(87, 5);
+            emailErrorLabel.Name = "emailErrorLabel";
+            emailErrorLabel.Size = new Size(122, 14);
+            emailErrorLabel.TabIndex = 0;
+            emailErrorLabel.Text = "Email is already in use!";
             // 
             // emailError
             // 
-            emailError.Controls.Add(emailLabel);
-            emailError.Controls.Add(pictureBox6);
-            emailError.Location = new Point(20, 147);
+            emailError.Image = (Image)resources.GetObject("emailError.Image");
+            emailError.Location = new Point(23, 0);
             emailError.Name = "emailError";
-            emailError.Size = new Size(246, 27);
-            emailError.TabIndex = 14;
-            emailError.Visible = false;
+            emailError.Size = new Size(203, 27);
+            emailError.TabIndex = 16;
+            emailError.TabStop = false;
             // 
-            // emailLabel
+            // passPanel
             // 
-            emailLabel.AutoSize = true;
-            emailLabel.BackColor = Color.FromArgb(255, 0, 42);
-            emailLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            emailLabel.Location = new Point(87, 5);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(122, 14);
-            emailLabel.TabIndex = 0;
-            emailLabel.Text = "Email is already in use!";
+            passPanel.Controls.Add(passErrorLabel);
+            passPanel.Controls.Add(passError);
+            passPanel.Location = new Point(20, 198);
+            passPanel.Name = "passPanel";
+            passPanel.Size = new Size(236, 33);
+            passPanel.TabIndex = 15;
+            passPanel.Visible = false;
             // 
-            // pictureBox6
+            // passErrorLabel
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(23, 0);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(203, 27);
-            pictureBox6.TabIndex = 16;
-            pictureBox6.TabStop = false;
+            passErrorLabel.BackColor = Color.FromArgb(255, 0, 42);
+            passErrorLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            passErrorLabel.Location = new Point(48, 0);
+            passErrorLabel.Name = "passErrorLabel";
+            passErrorLabel.Size = new Size(169, 28);
+            passErrorLabel.TabIndex = 16;
+            passErrorLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
             // 
             // passError
             // 
-            passError.Controls.Add(passLabel);
-            passError.Controls.Add(pictureBox7);
-            passError.Location = new Point(20, 198);
+            passError.Image = (Image)resources.GetObject("passError.Image");
+            passError.Location = new Point(-10, 0);
             passError.Name = "passError";
             passError.Size = new Size(236, 33);
-            passError.TabIndex = 15;
-            passError.Visible = false;
+            passError.TabIndex = 0;
+            passError.TabStop = false;
             // 
-            // passLabel
+            // repassErrorPanel
             // 
-            passLabel.BackColor = Color.FromArgb(255, 0, 42);
-            passLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            passLabel.Location = new Point(48, 0);
-            passLabel.Name = "passLabel";
-            passLabel.Size = new Size(169, 28);
-            passLabel.TabIndex = 16;
-            passLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
+            repassErrorPanel.Controls.Add(repassErrorLabel);
+            repassErrorPanel.Controls.Add(repassError);
+            repassErrorPanel.Location = new Point(9, 254);
+            repassErrorPanel.Name = "repassErrorPanel";
+            repassErrorPanel.Size = new Size(270, 30);
+            repassErrorPanel.TabIndex = 15;
+            repassErrorPanel.Visible = false;
             // 
-            // pictureBox7
+            // repassErrorLabel
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(-10, 0);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(236, 33);
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
+            repassErrorLabel.AutoSize = true;
+            repassErrorLabel.BackColor = Color.FromArgb(255, 0, 42);
+            repassErrorLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            repassErrorLabel.Location = new Point(94, 7);
+            repassErrorLabel.Name = "repassErrorLabel";
+            repassErrorLabel.Size = new Size(131, 14);
+            repassErrorLabel.TabIndex = 17;
+            repassErrorLabel.Text = "Passwords do not match!";
             // 
             // repassError
             // 
-            repassError.Controls.Add(repassLabel);
-            repassError.Controls.Add(pictureBox8);
-            repassError.Location = new Point(9, 254);
+            repassError.Image = (Image)resources.GetObject("repassError.Image");
+            repassError.Location = new Point(34, 2);
             repassError.Name = "repassError";
-            repassError.Size = new Size(270, 30);
-            repassError.TabIndex = 15;
-            repassError.Visible = false;
-            // 
-            // repassLabel
-            // 
-            repassLabel.AutoSize = true;
-            repassLabel.BackColor = Color.FromArgb(255, 0, 42);
-            repassLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            repassLabel.Location = new Point(94, 7);
-            repassLabel.Name = "repassLabel";
-            repassLabel.Size = new Size(131, 14);
-            repassLabel.TabIndex = 17;
-            repassLabel.Text = "Passwords do not match!";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(34, 2);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(203, 27);
-            pictureBox8.TabIndex = 0;
-            pictureBox8.TabStop = false;
+            repassError.Size = new Size(203, 27);
+            repassError.TabIndex = 0;
+            repassError.TabStop = false;
             // 
             // usrmark
             // 
@@ -538,18 +538,18 @@
             labelcreated.TabIndex = 23;
             labelcreated.Text = "Account created successfully.";
             // 
-            // timer1
+            // accCreated
             // 
-            timer1.Interval = 3;
-            timer1.Tick += timer1_Tick;
+            accCreated.Interval = 3;
+            accCreated.Tick += timer1_Tick;
             // 
-            // panel2
+            // panelAccCreated
             // 
-            panel2.Controls.Add(labelcreated);
-            panel2.Location = new Point(59, 310);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(0, 15);
-            panel2.TabIndex = 24;
+            panelAccCreated.Controls.Add(labelcreated);
+            panelAccCreated.Location = new Point(59, 310);
+            panelAccCreated.Name = "panelAccCreated";
+            panelAccCreated.Size = new Size(0, 15);
+            panelAccCreated.TabIndex = 24;
             // 
             // Register
             // 
@@ -557,27 +557,27 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
-            Controls.Add(panel2);
+            Controls.Add(panelAccCreated);
             Controls.Add(repassmark);
             Controls.Add(passmark);
             Controls.Add(emailmark);
             Controls.Add(usrmark);
-            Controls.Add(repassError);
-            Controls.Add(passError);
-            Controls.Add(emailError);
+            Controls.Add(repassErrorPanel);
+            Controls.Add(passPanel);
+            Controls.Add(emailPanel);
             Controls.Add(userError);
-            Controls.Add(label6);
-            Controls.Add(tbrepass);
-            Controls.Add(panel1);
-            Controls.Add(label4);
-            Controls.Add(tbemail);
-            Controls.Add(kryptonButton1);
-            Controls.Add(label5);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(tbpass);
-            Controls.Add(tbusername);
-            Controls.Add(label1);
+            Controls.Add(repassLabel);
+            Controls.Add(textBoxRepass);
+            Controls.Add(topbar);
+            Controls.Add(emailLabel);
+            Controls.Add(textBoxEmail);
+            Controls.Add(buttonRegister);
+            Controls.Add(haveAnAccButton);
+            Controls.Add(passLabel);
+            Controls.Add(usrLabel);
+            Controls.Add(textBoxPass);
+            Controls.Add(textBoxUsername);
+            Controls.Add(registerLabel);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Register";
@@ -587,67 +587,67 @@
             Text = "FitVitality";
             Load += Register_Load;
             Shown += Register_Shown;
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            topbar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             userError.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            emailError.ResumeLayout(false);
-            emailError.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            passError.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            repassError.ResumeLayout(false);
-            repassError.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errPanel1).EndInit();
+            emailPanel.ResumeLayout(false);
+            emailPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)emailError).EndInit();
+            passPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)passError).EndInit();
+            repassErrorPanel.ResumeLayout(false);
+            repassErrorPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)repassError).EndInit();
             ((System.ComponentModel.ISupportInitialize)usrmark).EndInit();
             ((System.ComponentModel.ISupportInitialize)emailmark).EndInit();
             ((System.ComponentModel.ISupportInitialize)passmark).EndInit();
             ((System.ComponentModel.ISupportInitialize)repassmark).EndInit();
-            panel2.ResumeLayout(false);
+            panelAccCreated.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
-        private Label label5;
-        private Label label3;
-        private Label label2;
-        private Krypton.Toolkit.KryptonTextBox tbpass;
-        private Krypton.Toolkit.KryptonTextBox tbusername;
-        private Label label1;
-        private Label label4;
-        private Krypton.Toolkit.KryptonTextBox tbemail;
-        private Panel panel1;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox1;
-        private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private Label label6;
-        private Krypton.Toolkit.KryptonTextBox tbrepass;
-        private Panel userError;
-        private Label usrLabel;
-        private PictureBox pictureBox5;
-        private Panel emailError;
-        private Panel passError;
-        private Panel repassError;
-        private PictureBox pictureBox6;
-        private Label emailLabel;
+        private Krypton.Toolkit.KryptonButton buttonRegister;
+        private Label haveAnAccButton;
         private Label passLabel;
-        private PictureBox pictureBox7;
+        private Label usrLabel;
+        private Krypton.Toolkit.KryptonTextBox textBoxPass;
+        private Krypton.Toolkit.KryptonTextBox textBoxUsername;
+        private Label registerLabel;
+        private Label emailLabel;
+        private Krypton.Toolkit.KryptonTextBox textBoxEmail;
+        private Panel topbar;
+        private PictureBox logo2;
+        private PictureBox logo1;
+        private PictureBox buttonMin;
+        private PictureBox buttonClose;
+        private Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private Label repassLabel;
-        private PictureBox pictureBox8;
+        private Krypton.Toolkit.KryptonTextBox textBoxRepass;
+        private Panel userError;
+        private Label usrError;
+        private PictureBox errPanel1;
+        private Panel emailPanel;
+        private Panel passPanel;
+        private Panel repassErrorPanel;
+        private PictureBox emailError;
+        private Label emailErrorLabel;
+        private Label passErrorLabel;
+        private PictureBox passError;
+        private Label repassErrorLabel;
+        private PictureBox repassError;
         private PictureBox usrmark;
         private PictureBox emailmark;
         private PictureBox passmark;
         private PictureBox repassmark;
         private Label labelcreated;
-        private System.Windows.Forms.Timer timer1;
-        private Panel panel2;
+        private System.Windows.Forms.Timer accCreated;
+        private Panel panelAccCreated;
     }
 }

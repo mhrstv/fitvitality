@@ -31,12 +31,12 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loadingScreen));
             loadTimer = new System.Windows.Forms.Timer(components);
-            panel1 = new Panel();
-            panel2 = new Panel();
-            panel3 = new Panel();
+            panelLogo = new Panel();
+            panelLoad2 = new Panel();
+            panelLoad = new Panel();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
-            textBox1 = new TextBox();
-            panel2.SuspendLayout();
+            percentages = new TextBox();
+            panelLoad2.SuspendLayout();
             SuspendLayout();
             // 
             // loadTimer
@@ -44,32 +44,32 @@
             loadTimer.Enabled = true;
             loadTimer.Tick += timer1_Tick;
             // 
-            // panel1
+            // panelLogo
             // 
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(28, 11);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(335, 302);
-            panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
+            panelLogo.BackgroundImage = (Image)resources.GetObject("panelLogo.BackgroundImage");
+            panelLogo.BackgroundImageLayout = ImageLayout.Stretch;
+            panelLogo.Location = new Point(28, 11);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(335, 302);
+            panelLogo.TabIndex = 1;
+            panelLogo.Paint += panel1_Paint;
             // 
-            // panel2
+            // panelLoad2
             // 
-            panel2.BackColor = Color.Black;
-            panel2.Controls.Add(panel3);
-            panel2.Location = new Point(74, 365);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(242, 13);
-            panel2.TabIndex = 2;
+            panelLoad2.BackColor = Color.Black;
+            panelLoad2.Controls.Add(panelLoad);
+            panelLoad2.Location = new Point(74, 365);
+            panelLoad2.Name = "panelLoad2";
+            panelLoad2.Size = new Size(242, 13);
+            panelLoad2.TabIndex = 2;
             // 
-            // panel3
+            // panelLoad
             // 
-            panel3.BackColor = Color.FromArgb(92, 225, 230);
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1, 13);
-            panel3.TabIndex = 3;
+            panelLoad.BackColor = Color.FromArgb(92, 225, 230);
+            panelLoad.Location = new Point(0, 0);
+            panelLoad.Name = "panelLoad";
+            panelLoad.Size = new Size(1, 13);
+            panelLoad.TabIndex = 3;
             // 
             // kryptonPalette1
             // 
@@ -100,20 +100,20 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.PalettePaint += kryptonPalette1_PalettePaint;
             // 
-            // textBox1
+            // percentages
             // 
-            textBox1.BackColor = Color.Black;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.FromArgb(92, 225, 230);
-            textBox1.Location = new Point(157, 319);
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(76, 28);
-            textBox1.TabIndex = 5;
-            textBox1.TabStop = false;
-            textBox1.TextAlign = HorizontalAlignment.Center;
-            textBox1.TextChanged += textBox1_TextChanged;
+            percentages.BackColor = Color.Black;
+            percentages.BorderStyle = BorderStyle.None;
+            percentages.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            percentages.ForeColor = Color.FromArgb(92, 225, 230);
+            percentages.Location = new Point(157, 319);
+            percentages.Name = "percentages";
+            percentages.ReadOnly = true;
+            percentages.Size = new Size(76, 28);
+            percentages.TabIndex = 5;
+            percentages.TabStop = false;
+            percentages.TextAlign = HorizontalAlignment.Center;
+            percentages.TextChanged += textBox1_TextChanged;
             // 
             // loadingScreen
             // 
@@ -122,9 +122,9 @@
             BackColor = Color.Black;
             ClientSize = new Size(390, 400);
             ControlBox = false;
-            Controls.Add(textBox1);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(percentages);
+            Controls.Add(panelLoad2);
+            Controls.Add(panelLogo);
             Cursor = Cursors.AppStarting;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -138,17 +138,17 @@
             FormClosed += loadingScreen_FormClosed;
             Load += loadingScreen_Load;
             Shown += loadingScreen_Shown;
-            panel2.ResumeLayout(false);
+            panelLoad2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private System.Windows.Forms.Timer loadTimer;
-        private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
+        private Panel panelLogo;
+        private Panel panelLoad2;
+        private Panel panelLoad;
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private TextBox textBox1;
+        private TextBox percentages;
     }
 }

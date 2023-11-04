@@ -17,15 +17,15 @@ namespace FitVitality
     {
         public void loadForm(object Form)
         {
-            if (this.panel3.Controls.Count > 0)
+            if (this.mainPanel.Controls.Count > 0)
             {
-                this.panel3.Controls.RemoveAt(0);
+                this.mainPanel.Controls.RemoveAt(0);
             }
             Form x = Form as Form;
             x.TopLevel = false;
             x.Dock = DockStyle.Fill;
-            this.panel3.Controls.Add(x);
-            this.panel3.Tag = x;
+            this.mainPanel.Controls.Add(x);
+            this.mainPanel.Tag = x;
             x.Show();
         }
         private bool mouseDown;
@@ -62,7 +62,6 @@ namespace FitVitality
         }
         private void kryptonButton2_Click_3(object sender, EventArgs e)
         {
-            loadForm(new marto1());
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

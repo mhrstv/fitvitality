@@ -28,18 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Showcard Gothic", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(266, 144);
-            label1.Name = "label1";
-            label1.Size = new Size(167, 60);
-            label1.TabIndex = 1;
-            label1.Text = "HOME";
             // 
             // home
             // 
@@ -47,16 +36,12 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.Red;
             ClientSize = new Size(690, 368);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "home";
             Text = "home";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
     }
 }

@@ -151,117 +151,117 @@ namespace FitVitality
             bool validEmail = false;
             bool validPassword = false;
             bool passMatch = false;
-            string regUsername = tbusername.Text;
-            string regEmail = tbemail.Text;
-            string regPassword = tbpass.Text;
-            string confirmPass = tbrepass.Text;
+            string regUsername = textBoxUsername.Text;
+            string regEmail = textBoxEmail.Text;
+            string regPassword = textBoxPass.Text;
+            string confirmPass = textBoxRepass.Text;
             if (isValidUsername(regUsername))
             {
                 validUsername = true;
                 usrmark.Visible = false;
                 userError.Visible = false;
-                tbusername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                tbusername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
             }
             else
             {
                 usrmark.Visible = true;
                 userError.Visible = true;
-                usrLabel.Text = "Username must contain only digits or letters!";
-                tbusername.Text = "";
-                tbusername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                usrError.Text = "Username must contain only digits or letters!";
+                textBoxUsername.Text = "";
+                textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }
             if (isValidEmail(regEmail))
             {
                 validEmail = true;
                 emailmark.Visible = false;
-                emailError.Visible = false;
-                tbemail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                tbemail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                emailPanel.Visible = false;
+                textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
             }
             else
             {
                 emailmark.Visible = true;
-                emailError.Visible = true;
-                emailLabel.Text = "Email is not valid!";
-                tbemail.Text = "";
-                tbemail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                tbemail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                emailPanel.Visible = true;
+                emailErrorLabel.Text = "Email is not valid!";
+                textBoxEmail.Text = "";
+                textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }
             if (isValidPassword(regPassword))
             {
                 validPassword = true;
                 passmark.Visible = false;
-                passError.Visible = false;
-                tbpass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                tbpass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                passPanel.Visible = false;
+                textBoxPass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                textBoxPass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
 
             }
             else
             {
                 passmark.Visible = true;
-                passError.Visible = true;
-                passLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
-                tbpass.Text = "";
-                tbpass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                tbpass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                passPanel.Visible = true;
+                passErrorLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
+                textBoxPass.Text = "";
+                textBoxPass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                textBoxPass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }
             if ((regPassword != confirmPass) || confirmPass == "")
             {
                 repassmark.Visible = true;
-                repassError.Visible = true;
-                tbrepass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                tbrepass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                repassErrorPanel.Visible = true;
+                textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
 
             }
             else
             {
                 passMatch = true;
                 repassmark.Visible = false;
-                repassError.Visible = false;
-                tbrepass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                tbrepass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                repassErrorPanel.Visible = false;
+                textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
             }
             if (validEmail && validPassword && validUsername && passMatch)
             {
                 if (!userExists(regUsername))
                 {
                     usrmark.Visible = false;
-                    tbusername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                    tbusername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                    textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                    textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
                     if (!emailExists(regEmail))
                     {
                         emailmark.Visible = false;
-                        tbemail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                        tbemail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                        textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                        textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
                         createUser(regUsername, regEmail, regPassword);
 
-                        timer1.Enabled = true;
+                        accCreated.Enabled = true;
 
-                        tbusername.Text = "";
-                        tbemail.Text = "";
-                        tbpass.Text = "";
-                        tbrepass.Text = "";
+                        textBoxUsername.Text = "";
+                        textBoxEmail.Text = "";
+                        textBoxPass.Text = "";
+                        textBoxRepass.Text = "";
                     }
                     else
                     {
                         emailmark.Visible = true;
-                        emailError.Visible = true;
-                        emailLabel.Text = "Email is already in use!";
-                        tbemail.Text = "";
-                        tbemail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                        tbemail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                        emailPanel.Visible = true;
+                        emailErrorLabel.Text = "Email is already in use!";
+                        textBoxEmail.Text = "";
+                        textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                        textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                     }
                 }
                 else
                 {
                     usrmark.Visible = true;
                     userError.Visible = true;
-                    usrLabel.Text = "Username is already in use!";
-                    tbusername.Text = "";
-                    tbusername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                    tbusername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                    usrError.Text = "Username is already in use!";
+                    textBoxUsername.Text = "";
+                    textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                    textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
                 }
             }
 
@@ -296,22 +296,22 @@ namespace FitVitality
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.IndianRed;
+            buttonClose.BackColor = Color.IndianRed;
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.White;
+            buttonClose.BackColor = Color.White;
         }
 
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox2.BackColor = Color.Silver;
+            buttonMin.BackColor = Color.Silver;
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox2.BackColor = Color.White;
+            buttonMin.BackColor = Color.White;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -357,11 +357,11 @@ namespace FitVitality
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel2.Width += 2;
-            if (panel2.Width >= 168)
+            panelAccCreated.Width += 2;
+            if (panelAccCreated.Width >= 168)
             {
-                timer1.Stop();
-                timer1.Enabled = false;
+                accCreated.Stop();
+                accCreated.Enabled = false;
             }
         }
 

@@ -37,13 +37,13 @@ namespace FitVitality
             var username = cfg.Read("Username", "SETTINGS");
             if (username != "")
             {
-                kryptonTextBox1.Text = username.ToString();
-                checkBox1.Checked = true;
+                textBoxUsername.Text = username.ToString();
+                rememberMe.Checked = true;
             }
             else
             {
-                kryptonTextBox1.Text = "";
-                checkBox1.Checked = false;
+                textBoxUsername.Text = "";
+                rememberMe.Checked = false;
             }
         }
 
@@ -68,8 +68,8 @@ namespace FitVitality
             string connectionString;
             connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             var cfg = new Config("FitVitality.ini");
-            string username = kryptonTextBox1.Text;
-            string password = kryptonTextBox2.Text;
+            string username = textBoxUsername.Text;
+            string password = textBoxPassword.Text;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -89,13 +89,13 @@ namespace FitVitality
                                 login = true;
                                 usrmark.Visible = false;
                                 passmark.Visible = false;
-                                kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                                kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
-                                kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                                kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
-                                panel2.Visible = false;
-                                panel2.Height = 0;
-                                if (checkBox1.Checked == true)
+                                textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                textBoxPassword.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                                textBoxPassword.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                                errorPanel.Visible = false;
+                                errorPanel.Height = 0;
+                                if (rememberMe.Checked == true)
                                 {
                                     cfg.Write("Username", username, "SETTINGS");
                                 }
@@ -114,14 +114,14 @@ namespace FitVitality
                             }
                             else
                             {
-                                panel2.Visible = true;
+                                errorPanel.Visible = true;
                                 usrmark.Visible = true;
                                 passmark.Visible = true;
-                                kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                                kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
-                                kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                                kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
-                                timer1.Enabled = true;
+                                textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                                textBoxPassword.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                                textBoxPassword.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                                timerError.Enabled = true;
                             }
                         }
                     }
@@ -134,7 +134,7 @@ namespace FitVitality
                     connection2.Open();
                     string queryIDCheck = "SELECT UserID FROM UserSettings WHERE UserID = @UserID";
                     string queryID = "INSERT INTO UserSettings (UserID) VALUES (@UserID)";
-                    
+
                     using (SqlCommand command2 = new SqlCommand(queryIDCheck, connection2))
                     {
                         command2.Parameters.AddWithValue("@UserID", userID);
@@ -174,13 +174,13 @@ namespace FitVitality
                         {
                             usrmark.Visible = false;
                             passmark.Visible = false;
-                            kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                            kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
-                            kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                            kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
-                            panel2.Visible = false;
-                            panel2.Height = 0;
-                            if (checkBox1.Checked == true)
+                            textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            textBoxPassword.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            textBoxPassword.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            errorPanel.Visible = false;
+                            errorPanel.Height = 0;
+                            if (rememberMe.Checked == true)
                             {
                                 cfg.Write("Username", username, "SETTINGS");
                             }
@@ -202,13 +202,13 @@ namespace FitVitality
                         {
                             usrmark.Visible = false;
                             passmark.Visible = false;
-                            kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                            kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
-                            kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-                            kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
-                            panel2.Visible = false;
-                            panel2.Height = 0;
-                            if (checkBox1.Checked == true)
+                            textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            textBoxPassword.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                            textBoxPassword.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+                            errorPanel.Visible = false;
+                            errorPanel.Height = 0;
+                            if (rememberMe.Checked == true)
                             {
                                 cfg.Write("Username", username, "SETTINGS");
                             }
@@ -231,17 +231,17 @@ namespace FitVitality
             }
             else
             {
-                panel2.Visible = true;
+                errorPanel.Visible = true;
                 usrmark.Visible = true;
                 passmark.Visible = true;
-                kryptonTextBox1.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                kryptonTextBox1.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
-                kryptonTextBox2.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
-                kryptonTextBox2.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
-                timer1.Enabled = true;
+                textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                textBoxPassword.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                textBoxPassword.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+                timerError.Enabled = true;
             }
         }
-        
+
 
         private void kryptonPalette2_PalettePaint(object sender, PaletteLayoutEventArgs e)
         {
@@ -265,22 +265,22 @@ namespace FitVitality
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.IndianRed;
+            buttonClose.BackColor = Color.IndianRed;
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = Color.White;
+            buttonClose.BackColor = Color.White;
         }
 
         private void pictureBox2_MouseEnter(object sender, EventArgs e)
         {
-            pictureBox2.BackColor = Color.Silver;
+            buttonMin.BackColor = Color.Silver;
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox2.BackColor = Color.White;
+            buttonMin.BackColor = Color.White;
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -348,14 +348,14 @@ namespace FitVitality
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (panel2.Height <= 33)
+            if (errorPanel.Height <= 33)
             {
-                panel2.Height += 2;
+                errorPanel.Height += 2;
             }
-            if (panel2.Height >= 33)
+            if (errorPanel.Height >= 33)
             {
-                timer1.Stop();
-                timer1.Enabled = false;
+                timerError.Stop();
+                timerError.Enabled = false;
             }
 
         }

@@ -112,7 +112,6 @@ E:\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.pdb
 E:\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.genruntimeconfig.cache
 E:\FitVitality\FitVitality\obj\Debug\net6.0-windows\ref\FitVitality.dll
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.home.resources
-C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.marto1.resources
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Register.resources
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.home.resources
 E:\Project\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.marto1.resources

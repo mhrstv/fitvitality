@@ -41,15 +41,15 @@ namespace FitVitality
             if (this.Opacity >= 1)
             {
                 loadTimer.Enabled = true;
-                panel3.Width += 10;
-                textBox1.Text = ((int)(panel3.Width / 2.41)).ToString() + "%";
-                if (panel3.Width >= panel2.Width)
+                panelLoad.Width += 10;
+                percentages.Text = ((int)(panelLoad.Width / 2.41)).ToString() + "%";
+                if (panelLoad.Width >= panelLoad2.Width)
                 {
                     loadTimer.Stop();
                     Thread.Sleep(500);
-                    textBox1.Visible = false;
-                    panel3.Visible = false;
-                    panel2.Visible = false;
+                    percentages.Visible = false;
+                    panelLoad.Visible = false;
+                    panelLoad2.Visible = false;
                     Thread.Sleep(500);
 
                     Login welcomeScreen = new Login();

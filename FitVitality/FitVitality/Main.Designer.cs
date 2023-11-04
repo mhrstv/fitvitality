@@ -32,16 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             buttonDashboard = new Krypton.Toolkit.KryptonButton();
-            panel3 = new Panel();
+            mainPanel = new Panel();
             topbar = new Panel();
             buttonSettings = new Krypton.Toolkit.KryptonButton();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            logo2 = new PictureBox();
+            logo1 = new PictureBox();
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
             topbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             SuspendLayout();
@@ -133,24 +133,24 @@
             buttonDashboard.Values.Text = "";
             buttonDashboard.Click += kryptonButton1_Click_1;
             // 
-            // panel3
+            // mainPanel
             // 
-            panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 32);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(690, 368);
-            panel3.TabIndex = 2;
-            panel3.Paint += panel3_Paint;
-            panel3.MouseDown += panel3_MouseDown;
-            panel3.MouseMove += panel3_MouseMove;
-            panel3.MouseUp += panel3_MouseUp;
+            mainPanel.Dock = DockStyle.Bottom;
+            mainPanel.Location = new Point(0, 32);
+            mainPanel.Name = "mainPanel";
+            mainPanel.Size = new Size(690, 368);
+            mainPanel.TabIndex = 2;
+            mainPanel.Paint += panel3_Paint;
+            mainPanel.MouseDown += panel3_MouseDown;
+            mainPanel.MouseMove += panel3_MouseMove;
+            mainPanel.MouseUp += panel3_MouseUp;
             // 
             // topbar
             // 
             topbar.Controls.Add(buttonSettings);
             topbar.Controls.Add(buttonDashboard);
-            topbar.Controls.Add(pictureBox4);
-            topbar.Controls.Add(pictureBox3);
+            topbar.Controls.Add(logo2);
+            topbar.Controls.Add(logo1);
             topbar.Controls.Add(buttonMin);
             topbar.Controls.Add(buttonClose);
             topbar.Dock = DockStyle.Top;
@@ -228,27 +228,27 @@
             buttonSettings.Values.Text = "";
             buttonSettings.Click += buttonSettings_Click;
             // 
-            // pictureBox4
+            // logo2
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(40, 7);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(66, 20);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
+            logo2.Image = (Image)resources.GetObject("logo2.Image");
+            logo2.Location = new Point(40, 7);
+            logo2.Name = "logo2";
+            logo2.Size = new Size(66, 20);
+            logo2.SizeMode = PictureBoxSizeMode.Zoom;
+            logo2.TabIndex = 1;
+            logo2.TabStop = false;
+            logo2.Click += pictureBox4_Click;
             // 
-            // pictureBox3
+            // logo1
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(8, 6);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(26, 24);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
+            logo1.Image = (Image)resources.GetObject("logo1.Image");
+            logo1.Location = new Point(8, 6);
+            logo1.Name = "logo1";
+            logo1.Size = new Size(26, 24);
+            logo1.SizeMode = PictureBoxSizeMode.Zoom;
+            logo1.TabIndex = 1;
+            logo1.TabStop = false;
+            logo1.Click += pictureBox3_Click;
             // 
             // buttonMin
             // 
@@ -285,7 +285,7 @@
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 400);
             Controls.Add(topbar);
-            Controls.Add(panel3);
+            Controls.Add(mainPanel);
             CornerRoundingRadius = 15F;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -307,8 +307,8 @@
             MouseMove += Form1_MouseMove;
             MouseUp += Form1_MouseUp;
             topbar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             ResumeLayout(false);
@@ -317,11 +317,11 @@
         #endregion
 
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private Panel panel3;
+        private Panel mainPanel;
         private Krypton.Toolkit.KryptonButton buttonDashboard;
         private Panel topbar;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
+        private PictureBox logo2;
+        private PictureBox logo1;
         private PictureBox buttonMin;
         private PictureBox buttonClose;
         private Krypton.Toolkit.KryptonButton buttonSettings;

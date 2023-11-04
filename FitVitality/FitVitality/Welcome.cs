@@ -20,13 +20,15 @@ namespace FitVitality
         int index = 0;
         private bool bfemale = false;
         private bool bmale = false;
+        private bool bCut = false;
+        private bool bMaintain = false;
+        private bool bBulk = false;
         private string dbName;
         private int dbAge;
         private string dbGender;
         private double dbWeight;
         private double dbHeight;
         private string dbGoal;
-        private string dbActivity;
 
         public Welcome()
         {
@@ -37,18 +39,16 @@ namespace FitVitality
         {
             buttonPrevious.Visible = false;
             buttonNext.Visible = false;
-            name.Visible = false;
-            age.Visible = false;
-            weight.Visible = false;
-            goal.Visible = false;
-            activity.Visible = false;
-            listPanels.Add(name);
-            listPanels.Add(age);
-            listPanels.Add(weight);
-            listPanels.Add(goal);
-            listPanels.Add(activity);
+            namePanel.Visible = false;
+            ageGender_Panel.Visible = false;
+            weightHeight_Panel.Visible = false;
+            goalPanel.Visible = false;
+            listPanels.Add(namePanel);
+            listPanels.Add(ageGender_Panel);
+            listPanels.Add(weightHeight_Panel);
+            listPanels.Add(goalPanel);
             listPanels[index].BringToFront();
-            welcomelabeltimer.Enabled = true;
+            welcomeLabelTimer.Enabled = true;
         }
 
         private void buttonMin_Click(object sender, EventArgs e)
@@ -123,8 +123,8 @@ namespace FitVitality
 
         private void buttonPrevious_Click(object sender, EventArgs e)
         {
-            dbName = tbName.Text.ToString();
-            label6.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
+            dbName = textBox_Name.Text.ToString();
+            helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
             if (index > 0)
             {
                 index--;
@@ -134,7 +134,7 @@ namespace FitVitality
             else if (index < listPanels.Count - 1)
             {
                 buttonPrevious.Visible = false;
-                done.Visible = false;
+                doneButton.Visible = false;
             }
             if (index == 0)
             {
@@ -144,8 +144,8 @@ namespace FitVitality
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            dbName = tbName.Text.ToString();
-            label6.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
+            dbName = textBox_Name.Text.ToString();
+            helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
             if (index < listPanels.Count - 1)
             {
                 index++;
@@ -159,15 +159,19 @@ namespace FitVitality
             if (index == listPanels.Count - 1)
             {
                 buttonNext.Visible = false;
-                done.Visible = true;
+                doneButton.Visible = true;
             }
-            if (index == 1 && label11.Visible == false)
+            if (index == 1 && info_ageGender.Visible == false)
             {
-                timerage1.Enabled = true;
+                timerAge1.Enabled = true;
             }
-            if (index == 2 && label12.Visible == false)
+            if (index == 2 && info1_weightHeight.Visible == false)
             {
                 timerWeight1.Enabled = true;
+            }
+            if (index == 3 && timerLabel.Visible == false)
+            {
+                timerGoal1.Enabled = true;
             }
         }
 
@@ -179,15 +183,14 @@ namespace FitVitality
             }
             if (panelWelcome.Width >= 609)
             {
-                welcomelabeltimer.Enabled = false;
+                welcomeLabelTimer.Enabled = false;
                 Thread.Sleep(400);
-                timername1.Enabled = true;
+                timerName1.Enabled = true;
                 panelWelcome.Visible = false;
-                name.Visible = true;
-                age.Visible = true;
-                weight.Visible = true;
-                goal.Visible = true;
-                activity.Visible = true;
+                namePanel.Visible = true;
+                ageGender_Panel.Visible = true;
+                weightHeight_Panel.Visible = true;
+                goalPanel.Visible = true;
                 buttonNext.Visible = true;
             }
         }
@@ -212,8 +215,8 @@ namespace FitVitality
             }
             if (nameLabel1.Width >= 482)
             {
-                timername1.Enabled = false;
-                timerName.Enabled = true;
+                timerName1.Enabled = false;
+                timerName2.Enabled = true;
             }
         }
 
@@ -225,8 +228,8 @@ namespace FitVitality
             }
             if (nameLabel2.Width >= 142)
             {
-                timerName.Enabled = false;
-                tbName.Visible = true;
+                timerName2.Enabled = false;
+                textBox_Name.Visible = true;
             }
         }
 
@@ -257,25 +260,21 @@ namespace FitVitality
 
         private void kryptonTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                e.Handled = e.SuppressKeyPress = true;
-                buttonNext_Click(this, new EventArgs());
-            }
+
         }
 
         private void male_Click(object sender, EventArgs e)
         {
-            male.Image = Properties.Resources.malepressed1;
-            female.Image = Properties.Resources.female1;
+            maleButton.Image = Properties.Resources.malepressed1;
+            femaleButton.Image = Properties.Resources.female1;
             bmale = true;
             bfemale = false;
         }
 
         private void female_Click(object sender, EventArgs e)
         {
-            female.Image = Properties.Resources.femalepressed1;
-            male.Image = Properties.Resources.male1;
+            femaleButton.Image = Properties.Resources.femalepressed1;
+            maleButton.Image = Properties.Resources.male1;
             bfemale = true;
             bmale = false;
         }
@@ -284,7 +283,7 @@ namespace FitVitality
         {
             if (!bmale)
             {
-                male.Image = Properties.Resources.maletracked1;
+                maleButton.Image = Properties.Resources.maletracked1;
             }
         }
 
@@ -292,7 +291,7 @@ namespace FitVitality
         {
             if (!bfemale)
             {
-                female.Image = Properties.Resources.femaletracked1;
+                femaleButton.Image = Properties.Resources.femaletracked1;
             }
         }
 
@@ -300,7 +299,7 @@ namespace FitVitality
         {
             if (!bmale)
             {
-                male.Image = Properties.Resources.male1;
+                maleButton.Image = Properties.Resources.male1;
             }
         }
 
@@ -308,72 +307,72 @@ namespace FitVitality
         {
             if (!bfemale)
             {
-                female.Image = Properties.Resources.female1;
+                femaleButton.Image = Properties.Resources.female1;
             }
         }
 
         private void timerage1_Tick(object sender, EventArgs e)
         {
-            if (panel1.Width <= 378)
+            if (helloPanel.Width <= 378)
             {
-                panel1.Width += 6;
+                helloPanel.Width += 6;
             }
-            if (panel1.Width >= 378)
+            if (helloPanel.Width >= 378)
             {
-                timerage1.Enabled = false;
-                timerage2.Enabled = true;
+                timerAge1.Enabled = false;
+                timerAge2.Enabled = true;
             }
         }
 
         private void timerage2_Tick(object sender, EventArgs e)
         {
-            if (panel2.Width <= 427)
+            if (ageGenderPanel1.Width <= 427)
             {
-                panel2.Width += 6;
+                ageGenderPanel1.Width += 6;
             }
-            if (panel2.Width >= 427)
+            if (ageGenderPanel1.Width >= 427)
             {
-                timerage2.Enabled = false;
-                timerage3.Enabled = true;
+                timerAge2.Enabled = false;
+                timerAge3.Enabled = true;
             }
         }
 
         private void timerage3_Tick(object sender, EventArgs e)
         {
-            if (panel3.Width <= 121)
+            if (ageGenderPanel3.Width <= 121)
             {
-                panel3.Width += 6;
+                ageGenderPanel3.Width += 6;
             }
-            if (panel3.Width >= 121)
+            if (ageGenderPanel3.Width >= 121)
             {
-                timerage3.Enabled = false;
+                timerAge3.Enabled = false;
                 tbAge.Visible = true;
-                timerage4.Enabled = true;
+                timerAge4.Enabled = true;
             }
         }
 
         private void timerage4_Tick(object sender, EventArgs e)
         {
-            if (panel4.Width <= 147)
+            if (ageGenderPanel4.Width <= 147)
             {
-                panel4.Width += 6;
+                ageGenderPanel4.Width += 6;
             }
-            if (panel4.Width >= 147)
+            if (ageGenderPanel4.Width >= 147)
             {
-                timerage4.Enabled = false;
-                male.Visible = true;
-                female.Visible = true;
-                label11.Visible = true;
+                timerAge4.Enabled = false;
+                maleButton.Visible = true;
+                femaleButton.Visible = true;
+                info_ageGender.Visible = true;
             }
         }
 
         private void timerWeight1_Tick(object sender, EventArgs e)
         {
-            if (panel5.Width <= 320)
+            if (weightHeightPanel1.Width <= 320)
             {
-                panel5.Width += 6;
+                weightHeightPanel1.Width += 6;
             }
-            if (panel5.Width >= 320)
+            if (weightHeightPanel1.Width >= 320)
             {
                 timerWeight1.Enabled = false;
                 timerWeight2.Enabled = true;
@@ -382,11 +381,11 @@ namespace FitVitality
 
         private void timerWeight2_Tick(object sender, EventArgs e)
         {
-            if (panel6.Width <= 420)
+            if (weightHeightPanel2.Width <= 420)
             {
-                panel6.Width += 6;
+                weightHeightPanel2.Width += 6;
             }
-            if (panel6.Width >= 420)
+            if (weightHeightPanel2.Width >= 420)
             {
                 timerWeight2.Enabled = false;
                 timerWeight3.Enabled = true;
@@ -395,11 +394,11 @@ namespace FitVitality
 
         private void timerWeight3_Tick(object sender, EventArgs e)
         {
-            if (panel7.Width <= 180)
+            if (weightHeightPanel3.Width <= 180)
             {
-                panel7.Width += 6;
+                weightHeightPanel3.Width += 6;
             }
-            if (panel7.Width >= 180)
+            if (weightHeightPanel3.Width >= 180)
             {
                 timerWeight3.Enabled = false;
                 tbWeight.Visible = true;
@@ -409,16 +408,16 @@ namespace FitVitality
 
         private void timerWeight4_Tick(object sender, EventArgs e)
         {
-            if (panel8.Width <= 130)
+            if (weightHeightPanel4.Width <= 130)
             {
-                panel8.Width += 6;
+                weightHeightPanel4.Width += 6;
             }
-            if (panel8.Width >= 130)
+            if (weightHeightPanel4.Width >= 130)
             {
                 timerWeight4.Enabled = false;
                 tbHeight.Visible = true;
-                label12.Visible = true;
-                label13.Visible = true;
+                info1_weightHeight.Visible = true;
+                info2_weightHeight.Visible = true;
             }
         }
 
@@ -429,19 +428,114 @@ namespace FitVitality
 
         private void tbAge_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                e.Handled = e.SuppressKeyPress = true;
-                buttonNext_Click(this, new EventArgs());
-            }
+
         }
 
         private void tbHeight_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            buttonBulk.Image = Properties.Resources.gainPressed;
+            buttonCut.Image = Properties.Resources.loseNormal;
+            buttonMaintain.Image = Properties.Resources.maintainNormal;
+            bBulk = true;
+            bMaintain = false;
+            bCut = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            buttonBulk.Image = Properties.Resources.gainNormal;
+            buttonCut.Image = Properties.Resources.losePressed;
+            buttonMaintain.Image = Properties.Resources.maintainNormal;
+            bBulk = false;
+            bMaintain = false;
+            bCut = true;
+        }
+
+        private void buttonMaintain_Click(object sender, EventArgs e)
+        {
+            buttonBulk.Image = Properties.Resources.gainNormal;
+            buttonCut.Image = Properties.Resources.loseNormal;
+            buttonMaintain.Image = Properties.Resources.maintainPressed;
+            bBulk = false;
+            bMaintain = true;
+            bCut = false;
+        }
+
+        private void buttonCut_MouseEnter(object sender, EventArgs e)
+        {
+            if (!bCut)
             {
-                e.Handled = e.SuppressKeyPress = true;
-                buttonNext_Click(this, new EventArgs());
+                buttonCut.Image = Properties.Resources.loseTracked;
+            }
+        }
+
+        private void buttonCut_MouseLeave(object sender, EventArgs e)
+        {
+            if (!bCut)
+            {
+                buttonCut.Image = Properties.Resources.loseNormal;
+            }
+        }
+
+        private void buttonMaintain_MouseEnter(object sender, EventArgs e)
+        {
+            if (!bMaintain)
+            {
+                buttonMaintain.Image = Properties.Resources.maintainTracked;
+            }
+        }
+
+        private void buttonMaintain_MouseLeave(object sender, EventArgs e)
+        {
+            if (!bMaintain)
+            {
+                buttonMaintain.Image = Properties.Resources.maintainNormal;
+            }
+        }
+
+        private void buttonBulk_MouseEnter(object sender, EventArgs e)
+        {
+            if (!bBulk)
+            {
+                buttonBulk.Image = Properties.Resources.gainTracked;
+            }
+        }
+
+        private void buttonBulk_MouseLeave(object sender, EventArgs e)
+        {
+            if (!bBulk)
+            {
+                buttonBulk.Image = Properties.Resources.gainNormal;
+            }
+        }
+
+        private void timerGoal1_Tick(object sender, EventArgs e)
+        {
+            if (goalPanel1.Width <= 278)
+            {
+                goalPanel1.Width += 6;
+            }
+            if (goalPanel1.Width >= 278)
+            {
+                timerGoal1.Enabled = false;
+                timerGoal2.Enabled = true;
+            }
+        }
+
+        private void timerGoal2_Tick(object sender, EventArgs e)
+        {
+            if (goalsPanel.Height <= 133)
+            {
+                goalsPanel.Height += 6;
+            }
+            if (goalsPanel.Height >= 133)
+            {
+                timerGoal2.Enabled = false;
             }
         }
     }

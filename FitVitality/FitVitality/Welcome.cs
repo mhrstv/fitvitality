@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
+using Microsoft.Data.SqlClient;
 
 namespace FitVitality
 {
@@ -24,11 +26,12 @@ namespace FitVitality
         private bool maintain_Clicked = false;
         private bool bulk_Clicked = false;
         private string dbName;
-        private int dbAge;
+        private string dbAge;
         private string dbGender;
-        private double dbWeight;
-        private double dbHeight;
+        private string dbWeight;
+        private string dbHeight;
         private string dbGoal;
+        public string userID;
 
         public Welcome()
         {
@@ -37,6 +40,8 @@ namespace FitVitality
 
         private void Welcome_Load(object sender, EventArgs e)
         {
+            var cfg = new Config("FitVitality.ini");
+            userID = cfg.Read("UserID", "SETTINGS");
             buttonPrevious.Visible = false;
             buttonNext.Visible = false;
             namePanel.Visible = false;
@@ -221,11 +226,69 @@ namespace FitVitality
                 currentPage.Image = Properties.Resources.firstPage;
             }
         }
+        private bool validName(string name)
+        {
+            foreach (char c in name)
+            {
+                if (!char.IsLetter(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        private bool validAge(string age)
+        {
+            foreach(char c in age)
+            {
+                if(!char.IsNumber(c))
+                {
+                    return false;
+                }
+            }
+            if(int.Parse(age) < 13 || int.Parse(age) > 120)
+            {
+                return false;
+            }
+            return true;
+        }
+        private bool validWeight(string weight)
+        {
+            foreach (char c in weight)
+            {
+                if (!char.IsNumber(c))
+                {
+                    return false;
+                }
+            }
+            if (double.Parse(weight) < 30.00 && double.Parse(weight) > 400.00)
+            {
+                return false;
+            }
+            return true;
+        }
+        private bool validHeight(string height)
+        {
+            foreach (char c in height)
+            {
+                if (!char.IsNumber(c))
+                {
+                    return false;
+                }
+            }
+            if (double.Parse(height) < 50 && double.Parse(height) > 300)
+            {
+                return false;
+            }
+            return true;
+        }
 
         private void done_Click(object sender, EventArgs e)
         {
+            string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            var cfg = new Config("FitVitality.ini");
             dbName = textBox_Name.Text.ToString();
-            dbAge = int.Parse(textBox_Age.Text);
+            dbAge = textBox_Age.Text;
             if (male_Clicked)
             {
                 dbGender = "Male";
@@ -234,9 +297,8 @@ namespace FitVitality
             {
                 dbGender = "Female";
             }
-            dbWeight = double.Parse(textBox_Weight.Text);
-            dbWeight = Math.Round(dbWeight, 1);
-            dbHeight = double.Parse(textBox_Height.Text);
+            dbWeight = textBox_Weight.Text;
+            dbHeight = textBox_Height.Text;
             if (bulk_Clicked)
             {
                 dbGoal = "Bulk";
@@ -249,14 +311,43 @@ namespace FitVitality
             {
                 dbGoal = "Maintain";
             }
-            Form1 main = new Form1();
-            for (double i = this.Opacity; i >= 0; i = i - 0.00004)
+            if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && dbGender != "" && dbGoal != "")
             {
-                this.Opacity = i;
+                using(SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "UPDATE UserSettings " +
+                               "SET Name = @Name, Age = @Age, Gender = @Gender, Weight = @Weight, Height = @Height, Goal = @Goal " +
+                               "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        int age = int.Parse(dbAge);
+                        double weight = double.Parse(dbWeight);
+                        weight = Math.Round(weight, 1);
+                        int height = int.Parse(dbHeight);
+                        command.Parameters.AddWithValue("@UserID", userID);
+                        command.Parameters.AddWithValue("@Name", dbName);
+                        command.Parameters.AddWithValue("@Age", age);
+                        command.Parameters.AddWithValue("@Gender", dbGender);
+                        command.Parameters.AddWithValue("@Weight", weight);
+                        command.Parameters.AddWithValue("@Height", height);
+                        command.Parameters.AddWithValue("@Goal", dbGoal);
+                        command.ExecuteNonQuery();
+                        Form1 main = new Form1();
+                        for (double i = this.Opacity; i >= 0; i = i - 0.00004)
+                        {
+                            this.Opacity = i;
+                        }
+                        Thread.Sleep(500);
+                        this.Hide();
+                        main.Show();
+                    }
+                }
             }
-            Thread.Sleep(500);
-            this.Hide();
-            main.Show();
+            else
+            {
+                MessageBox.Show("gg");
+            }
         }
 
         private void timername1_Tick(object sender, EventArgs e)

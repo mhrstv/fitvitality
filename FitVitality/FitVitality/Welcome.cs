@@ -224,6 +224,31 @@ namespace FitVitality
 
         private void done_Click(object sender, EventArgs e)
         {
+            dbName = textBox_Name.Text.ToString();
+            dbAge = int.Parse(textBox_Age.Text);
+            if (male_Clicked)
+            {
+                dbGender = "Male";
+            }
+            else
+            {
+                dbGender = "Female";
+            }
+            dbWeight = double.Parse(textBox_Weight.Text);
+            dbWeight = Math.Round(dbWeight, 1);
+            dbHeight = double.Parse(textBox_Height.Text);
+            if (bulk_Clicked)
+            {
+                dbGoal = "Bulk";
+            }
+            else if (cut_Clicked)
+            {
+                dbGoal = "Cut";
+            }
+            else
+            {
+                dbGoal = "Maintain";
+            }
             Form1 main = new Form1();
             for (double i = this.Opacity; i >= 0; i = i - 0.00004)
             {

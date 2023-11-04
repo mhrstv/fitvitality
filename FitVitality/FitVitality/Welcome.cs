@@ -17,12 +17,12 @@ namespace FitVitality
         List<Panel> listPanels = new List<Panel>();
         private bool mouseDown;
         private Point lastLocation;
-        int index = 0;
-        private bool bfemale = false;
-        private bool bmale = false;
-        private bool bCut = false;
-        private bool bMaintain = false;
-        private bool bBulk = false;
+        int page = 0;
+        private bool female_Clicked = false;
+        private bool male_Clicked = false;
+        private bool cut_Clicked = false;
+        private bool maintain_Clicked = false;
+        private bool bulk_Clicked = false;
         private string dbName;
         private int dbAge;
         private string dbGender;
@@ -47,7 +47,7 @@ namespace FitVitality
             listPanels.Add(ageGender_Panel);
             listPanels.Add(weightHeight_Panel);
             listPanels.Add(goalPanel);
-            listPanels[index].BringToFront();
+            listPanels[page].BringToFront();
             welcomeLabelTimer.Enabled = true;
         }
 
@@ -125,18 +125,18 @@ namespace FitVitality
         {
             dbName = textBox_Name.Text.ToString();
             helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
-            if (index > 0)
+            if (page > 0)
             {
-                index--;
-                listPanels[index].BringToFront();
+                page--;
+                listPanels[page].BringToFront();
                 buttonNext.Visible = true;
             }
-            else if (index < listPanels.Count - 1)
+            else if (page < listPanels.Count - 1)
             {
                 buttonPrevious.Visible = true;
                 doneButton.Visible = false;
             }
-            if (index == 0)
+            if (page == 0)
             {
                 buttonPrevious.Visible = false;
             }
@@ -146,30 +146,30 @@ namespace FitVitality
         {
             dbName = textBox_Name.Text.ToString();
             helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
-            if (index < listPanels.Count - 1)
+            if (page < listPanels.Count - 1)
             {
-                index++;
-                listPanels[index].BringToFront();
+                page++;
+                listPanels[page].BringToFront();
                 buttonPrevious.Visible = true;
             }
-            else if (index > 0)
+            else if (page > 0)
             {
                 buttonNext.Visible = true;
             }
-            if (index == listPanels.Count - 1)
+            if (page == listPanels.Count - 1)
             {
                 buttonNext.Visible = false;
                 doneButton.Visible = true;
             }
-            if (index == 1 && timerLabel3.Visible == false)
+            if (page == 1 && timerLabel3.Visible == false)
             {
                 timerAge1.Enabled = true;
             }
-            if (index == 2 && timerLabel2.Visible == false)
+            if (page == 2 && timerLabel2.Visible == false)
             {
                 timerWeight1.Enabled = true;
             }
-            if (index == 3 && timerLabel.Visible == false)
+            if (page == 3 && timerLabel.Visible == false)
             {
                 timerGoal1.Enabled = true;
             }
@@ -208,11 +208,11 @@ namespace FitVitality
 
         private void timername1_Tick(object sender, EventArgs e)
         {
-            if (nameLabel1.Width <= 482)
+            if (namePanel1.Width <= 482)
             {
-                nameLabel1.Width += 6;
+                namePanel1.Width += 6;
             }
-            if (nameLabel1.Width >= 482)
+            if (namePanel1.Width >= 482)
             {
                 timerName1.Enabled = false;
                 timerName2.Enabled = true;
@@ -221,11 +221,11 @@ namespace FitVitality
 
         private void timerName_Tick(object sender, EventArgs e)
         {
-            if (nameLabel2.Width <= 142)
+            if (namePanel2.Width <= 142)
             {
-                nameLabel2.Width += 2;
+                namePanel2.Width += 2;
             }
-            if (nameLabel2.Width >= 142)
+            if (namePanel2.Width >= 142)
             {
                 timerName2.Enabled = false;
                 textBox_Name.Visible = true;
@@ -274,21 +274,21 @@ namespace FitVitality
         {
             maleButton.Image = Properties.Resources.malepressed1;
             femaleButton.Image = Properties.Resources.female1;
-            bmale = true;
-            bfemale = false;
+            male_Clicked = true;
+            female_Clicked = false;
         }
 
         private void female_Click(object sender, EventArgs e)
         {
             femaleButton.Image = Properties.Resources.femalepressed1;
             maleButton.Image = Properties.Resources.male1;
-            bfemale = true;
-            bmale = false;
+            female_Clicked = true;
+            male_Clicked = false;
         }
 
         private void male_MouseEnter(object sender, EventArgs e)
         {
-            if (!bmale)
+            if (!male_Clicked)
             {
                 maleButton.Image = Properties.Resources.maletracked1;
             }
@@ -296,7 +296,7 @@ namespace FitVitality
 
         private void female_MouseEnter(object sender, EventArgs e)
         {
-            if (!bfemale)
+            if (!female_Clicked)
             {
                 femaleButton.Image = Properties.Resources.femaletracked1;
             }
@@ -304,7 +304,7 @@ namespace FitVitality
 
         private void male_MouseLeave(object sender, EventArgs e)
         {
-            if (!bmale)
+            if (!male_Clicked)
             {
                 maleButton.Image = Properties.Resources.male1;
             }
@@ -312,7 +312,7 @@ namespace FitVitality
 
         private void female_MouseLeave(object sender, EventArgs e)
         {
-            if (!bfemale)
+            if (!female_Clicked)
             {
                 femaleButton.Image = Properties.Resources.female1;
             }
@@ -346,11 +346,11 @@ namespace FitVitality
 
         private void timerage3_Tick(object sender, EventArgs e)
         {
-            if (ageGenderPanel3.Width <= 121)
+            if (ageGenderPanel2.Width <= 121)
             {
-                ageGenderPanel3.Width += 6;
+                ageGenderPanel2.Width += 6;
             }
-            if (ageGenderPanel3.Width >= 121)
+            if (ageGenderPanel2.Width >= 121)
             {
                 timerAge3.Enabled = false;
                 textBox_Age.Visible = true;
@@ -360,11 +360,11 @@ namespace FitVitality
 
         private void timerage4_Tick(object sender, EventArgs e)
         {
-            if (ageGenderPanel4.Width <= 147)
+            if (ageGenderPanel3.Width <= 147)
             {
-                ageGenderPanel4.Width += 6;
+                ageGenderPanel3.Width += 6;
             }
-            if (ageGenderPanel4.Width >= 147)
+            if (ageGenderPanel3.Width >= 147)
             {
                 timerAge4.Enabled = false;
                 timerAge5.Enabled = true;
@@ -445,9 +445,9 @@ namespace FitVitality
             buttonBulk.Image = Properties.Resources.gainPressed;
             buttonCut.Image = Properties.Resources.loseNormal;
             buttonMaintain.Image = Properties.Resources.maintainNormal;
-            bBulk = true;
-            bMaintain = false;
-            bCut = false;
+            bulk_Clicked = true;
+            maintain_Clicked = false;
+            cut_Clicked = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -455,9 +455,9 @@ namespace FitVitality
             buttonBulk.Image = Properties.Resources.gainNormal;
             buttonCut.Image = Properties.Resources.losePressed;
             buttonMaintain.Image = Properties.Resources.maintainNormal;
-            bBulk = false;
-            bMaintain = false;
-            bCut = true;
+            bulk_Clicked = false;
+            maintain_Clicked = false;
+            cut_Clicked = true;
         }
 
         private void buttonMaintain_Click(object sender, EventArgs e)
@@ -465,14 +465,14 @@ namespace FitVitality
             buttonBulk.Image = Properties.Resources.gainNormal;
             buttonCut.Image = Properties.Resources.loseNormal;
             buttonMaintain.Image = Properties.Resources.maintainPressed;
-            bBulk = false;
-            bMaintain = true;
-            bCut = false;
+            bulk_Clicked = false;
+            maintain_Clicked = true;
+            cut_Clicked = false;
         }
 
         private void buttonCut_MouseEnter(object sender, EventArgs e)
         {
-            if (!bCut)
+            if (!cut_Clicked)
             {
                 buttonCut.Image = Properties.Resources.loseTracked;
             }
@@ -480,7 +480,7 @@ namespace FitVitality
 
         private void buttonCut_MouseLeave(object sender, EventArgs e)
         {
-            if (!bCut)
+            if (!cut_Clicked)
             {
                 buttonCut.Image = Properties.Resources.loseNormal;
             }
@@ -488,7 +488,7 @@ namespace FitVitality
 
         private void buttonMaintain_MouseEnter(object sender, EventArgs e)
         {
-            if (!bMaintain)
+            if (!maintain_Clicked)
             {
                 buttonMaintain.Image = Properties.Resources.maintainTracked;
             }
@@ -496,7 +496,7 @@ namespace FitVitality
 
         private void buttonMaintain_MouseLeave(object sender, EventArgs e)
         {
-            if (!bMaintain)
+            if (!maintain_Clicked)
             {
                 buttonMaintain.Image = Properties.Resources.maintainNormal;
             }
@@ -504,7 +504,7 @@ namespace FitVitality
 
         private void buttonBulk_MouseEnter(object sender, EventArgs e)
         {
-            if (!bBulk)
+            if (!bulk_Clicked)
             {
                 buttonBulk.Image = Properties.Resources.gainTracked;
             }
@@ -512,7 +512,7 @@ namespace FitVitality
 
         private void buttonBulk_MouseLeave(object sender, EventArgs e)
         {
-            if (!bBulk)
+            if (!bulk_Clicked)
             {
                 buttonBulk.Image = Properties.Resources.gainNormal;
             }

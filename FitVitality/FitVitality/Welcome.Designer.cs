@@ -38,11 +38,11 @@
             buttonClose = new PictureBox();
             namePanel = new Panel();
             panel_nameUsage = new Panel();
-            nameUsageLabel = new Label();
+            name_UsageLabel = new Label();
             textBox_Name = new Krypton.Toolkit.KryptonTextBox();
-            nameLabel2 = new Panel();
+            namePanel2 = new Panel();
             nameQuestion = new Label();
-            nameLabel1 = new Panel();
+            namePanel1 = new Panel();
             nameLabelFirst = new Label();
             ageGender_Panel = new Panel();
             timerLabel3 = new Label();
@@ -53,12 +53,12 @@
             info2_ageGender = new Label();
             info1_ageGender_Panel = new Panel();
             info1_ageGender = new Label();
-            ageGenderPanel4 = new Panel();
-            genderQuestion = new Label();
             ageGenderPanel3 = new Panel();
+            genderQuestion = new Label();
+            ageGenderPanel2 = new Panel();
             ageQuestion = new Label();
             ageGenderPanel1 = new Panel();
-            label9 = new Label();
+            nameLabel1 = new Label();
             helloPanel = new Panel();
             helloLabel = new Label();
             textBox_Age = new Krypton.Toolkit.KryptonTextBox();
@@ -120,16 +120,16 @@
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             namePanel.SuspendLayout();
             panel_nameUsage.SuspendLayout();
-            nameLabel2.SuspendLayout();
-            nameLabel1.SuspendLayout();
+            namePanel2.SuspendLayout();
+            namePanel1.SuspendLayout();
             ageGender_Panel.SuspendLayout();
             genderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)femaleButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)maleButton).BeginInit();
             info2_ageGender_Panel.SuspendLayout();
             info1_ageGender_Panel.SuspendLayout();
-            ageGenderPanel4.SuspendLayout();
             ageGenderPanel3.SuspendLayout();
+            ageGenderPanel2.SuspendLayout();
             ageGenderPanel1.SuspendLayout();
             helloPanel.SuspendLayout();
             weightHeight_Panel.SuspendLayout();
@@ -240,8 +240,8 @@
             // 
             namePanel.Controls.Add(panel_nameUsage);
             namePanel.Controls.Add(textBox_Name);
-            namePanel.Controls.Add(nameLabel2);
-            namePanel.Controls.Add(nameLabel1);
+            namePanel.Controls.Add(namePanel2);
+            namePanel.Controls.Add(namePanel1);
             namePanel.Location = new Point(75, 50);
             namePanel.Name = "namePanel";
             namePanel.Size = new Size(540, 300);
@@ -250,22 +250,22 @@
             // 
             // panel_nameUsage
             // 
-            panel_nameUsage.Controls.Add(nameUsageLabel);
+            panel_nameUsage.Controls.Add(name_UsageLabel);
             panel_nameUsage.Location = new Point(29, 204);
             panel_nameUsage.Name = "panel_nameUsage";
             panel_nameUsage.Size = new Size(0, 19);
             panel_nameUsage.TabIndex = 5;
             // 
-            // nameUsageLabel
+            // name_UsageLabel
             // 
-            nameUsageLabel.AutoSize = true;
-            nameUsageLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            nameUsageLabel.ForeColor = SystemColors.Control;
-            nameUsageLabel.Location = new Point(0, 0);
-            nameUsageLabel.Name = "nameUsageLabel";
-            nameUsageLabel.Size = new Size(482, 19);
-            nameUsageLabel.TabIndex = 6;
-            nameUsageLabel.Text = "Note that we will only be using your name to address you within the app.";
+            name_UsageLabel.AutoSize = true;
+            name_UsageLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            name_UsageLabel.ForeColor = SystemColors.Control;
+            name_UsageLabel.Location = new Point(0, 0);
+            name_UsageLabel.Name = "name_UsageLabel";
+            name_UsageLabel.Size = new Size(482, 19);
+            name_UsageLabel.TabIndex = 6;
+            name_UsageLabel.Text = "Note that we will only be using your name to address you within the app.";
             // 
             // textBox_Name
             // 
@@ -285,13 +285,13 @@
             textBox_Name.TextChanged += kryptonTextBox1_TextChanged;
             textBox_Name.KeyDown += kryptonTextBox1_KeyDown;
             // 
-            // nameLabel2
+            // namePanel2
             // 
-            nameLabel2.Controls.Add(nameQuestion);
-            nameLabel2.Location = new Point(199, 112);
-            nameLabel2.Name = "nameLabel2";
-            nameLabel2.Size = new Size(0, 23);
-            nameLabel2.TabIndex = 3;
+            namePanel2.Controls.Add(nameQuestion);
+            namePanel2.Location = new Point(199, 112);
+            namePanel2.Name = "namePanel2";
+            namePanel2.Size = new Size(0, 23);
+            namePanel2.TabIndex = 3;
             // 
             // nameQuestion
             // 
@@ -303,14 +303,14 @@
             nameQuestion.TabIndex = 1;
             nameQuestion.Text = "What is your name?";
             // 
-            // nameLabel1
+            // namePanel1
             // 
-            nameLabel1.Controls.Add(nameLabelFirst);
-            nameLabel1.ForeColor = Color.White;
-            nameLabel1.Location = new Point(30, 26);
-            nameLabel1.Name = "nameLabel1";
-            nameLabel1.Size = new Size(0, 23);
-            nameLabel1.TabIndex = 2;
+            namePanel1.Controls.Add(nameLabelFirst);
+            namePanel1.ForeColor = Color.White;
+            namePanel1.Location = new Point(30, 26);
+            namePanel1.Name = "namePanel1";
+            namePanel1.Size = new Size(0, 23);
+            namePanel1.TabIndex = 2;
             // 
             // nameLabelFirst
             // 
@@ -327,8 +327,8 @@
             ageGender_Panel.Controls.Add(genderPanel);
             ageGender_Panel.Controls.Add(info2_ageGender_Panel);
             ageGender_Panel.Controls.Add(info1_ageGender_Panel);
-            ageGender_Panel.Controls.Add(ageGenderPanel4);
             ageGender_Panel.Controls.Add(ageGenderPanel3);
+            ageGender_Panel.Controls.Add(ageGenderPanel2);
             ageGender_Panel.Controls.Add(ageGenderPanel1);
             ageGender_Panel.Controls.Add(helloPanel);
             ageGender_Panel.Controls.Add(textBox_Age);
@@ -418,13 +418,13 @@
             info1_ageGender.Text = "We do NOT share any of your private data and";
             info1_ageGender.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // ageGenderPanel4
+            // ageGenderPanel3
             // 
-            ageGenderPanel4.Controls.Add(genderQuestion);
-            ageGenderPanel4.Location = new Point(197, 170);
-            ageGenderPanel4.Name = "ageGenderPanel4";
-            ageGenderPanel4.Size = new Size(1, 19);
-            ageGenderPanel4.TabIndex = 13;
+            ageGenderPanel3.Controls.Add(genderQuestion);
+            ageGenderPanel3.Location = new Point(197, 170);
+            ageGenderPanel3.Name = "ageGenderPanel3";
+            ageGenderPanel3.Size = new Size(1, 19);
+            ageGenderPanel3.TabIndex = 13;
             // 
             // genderQuestion
             // 
@@ -437,13 +437,13 @@
             genderQuestion.TabIndex = 2;
             genderQuestion.Text = "What is your gender?";
             // 
-            // ageGenderPanel3
+            // ageGenderPanel2
             // 
-            ageGenderPanel3.Controls.Add(ageQuestion);
-            ageGenderPanel3.Location = new Point(210, 98);
-            ageGenderPanel3.Name = "ageGenderPanel3";
-            ageGenderPanel3.Size = new Size(1, 19);
-            ageGenderPanel3.TabIndex = 11;
+            ageGenderPanel2.Controls.Add(ageQuestion);
+            ageGenderPanel2.Location = new Point(210, 98);
+            ageGenderPanel2.Name = "ageGenderPanel2";
+            ageGenderPanel2.Size = new Size(1, 19);
+            ageGenderPanel2.TabIndex = 11;
             // 
             // ageQuestion
             // 
@@ -458,21 +458,21 @@
             // 
             // ageGenderPanel1
             // 
-            ageGenderPanel1.Controls.Add(label9);
+            ageGenderPanel1.Controls.Add(nameLabel1);
             ageGenderPanel1.Location = new Point(57, 42);
             ageGenderPanel1.Name = "ageGenderPanel1";
             ageGenderPanel1.Size = new Size(1, 26);
             ageGenderPanel1.TabIndex = 10;
             // 
-            // label9
+            // nameLabel1
             // 
-            label9.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = SystemColors.Control;
-            label9.Location = new Point(0, 0);
-            label9.Name = "label9";
-            label9.Size = new Size(427, 26);
-            label9.TabIndex = 8;
-            label9.Text = "We would like to know a bit more about you before we continue.";
+            nameLabel1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            nameLabel1.ForeColor = SystemColors.Control;
+            nameLabel1.Location = new Point(0, 0);
+            nameLabel1.Name = "nameLabel1";
+            nameLabel1.Size = new Size(427, 26);
+            nameLabel1.TabIndex = 8;
+            nameLabel1.Text = "We would like to know a bit more about you before we continue.";
             // 
             // helloPanel
             // 
@@ -1029,8 +1029,8 @@
             namePanel.PerformLayout();
             panel_nameUsage.ResumeLayout(false);
             panel_nameUsage.PerformLayout();
-            nameLabel2.ResumeLayout(false);
-            nameLabel1.ResumeLayout(false);
+            namePanel2.ResumeLayout(false);
+            namePanel1.ResumeLayout(false);
             ageGender_Panel.ResumeLayout(false);
             ageGender_Panel.PerformLayout();
             genderPanel.ResumeLayout(false);
@@ -1038,10 +1038,10 @@
             ((System.ComponentModel.ISupportInitialize)maleButton).EndInit();
             info2_ageGender_Panel.ResumeLayout(false);
             info1_ageGender_Panel.ResumeLayout(false);
-            ageGenderPanel4.ResumeLayout(false);
-            ageGenderPanel4.PerformLayout();
             ageGenderPanel3.ResumeLayout(false);
             ageGenderPanel3.PerformLayout();
+            ageGenderPanel2.ResumeLayout(false);
+            ageGenderPanel2.PerformLayout();
             ageGenderPanel1.ResumeLayout(false);
             helloPanel.ResumeLayout(false);
             weightHeight_Panel.ResumeLayout(false);
@@ -1089,11 +1089,11 @@
         private Label labelWelcome;
         private System.Windows.Forms.Timer welcomeLabelTimer;
         private Panel panelWelcome;
-        private Panel nameLabel1;
+        private Panel namePanel1;
         private Label nameLabelFirst;
         private Krypton.Toolkit.KryptonButton doneButton;
         private System.Windows.Forms.Timer timerName1;
-        private Panel nameLabel2;
+        private Panel namePanel2;
         private System.Windows.Forms.Timer timerName2;
         private Krypton.Toolkit.KryptonTextBox textBox_Name;
         private Krypton.Toolkit.KryptonTextBox textBox_Age;
@@ -1105,10 +1105,10 @@
         private Label label5;
         private Label label6;
         private Panel ageGenderPanel1;
-        private Label label9;
+        private Label nameLabel1;
         private Panel helloPanel;
+        private Panel ageGenderPanel2;
         private Panel ageGenderPanel3;
-        private Panel ageGenderPanel4;
         private Label genderQuestion;
         private System.Windows.Forms.Timer timerAge1;
         private System.Windows.Forms.Timer timerAge2;
@@ -1154,7 +1154,7 @@
         private System.Windows.Forms.Timer timerAge7;
         private Label timerLabel3;
         private Panel panel_nameUsage;
-        private Label nameUsageLabel;
+        private Label name_UsageLabel;
         private System.Windows.Forms.Timer timerName3;
     }
 }

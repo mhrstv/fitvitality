@@ -164,8 +164,7 @@ namespace FitVitality
                                        "AND Gender IS NOT NULL " +
                                        "AND Weight IS NOT NULL " +
                                        "AND Height IS NOT NULL " +
-                                       "AND Goal IS NOT NULL " +
-                                       "AND ActivityLevel IS NOT NULL";
+                                       "AND Goal IS NOT NULL ";
                     using (SqlCommand commandCheckData = new SqlCommand(checkData, connection3))
                     {
                         commandCheckData.Parameters.AddWithValue("@UserID", userID);

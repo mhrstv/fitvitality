@@ -165,6 +165,10 @@ namespace FitVitality
             {
                 timerage1.Enabled = true;
             }
+            if (index == 2 && label12.Visible == false)
+            {
+                timerWeight1.Enabled = true;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -343,7 +347,7 @@ namespace FitVitality
             if (panel3.Width >= 121)
             {
                 timerage3.Enabled = false;
-                kryptonTextBox2.Visible = true;
+                tbAge.Visible = true;
                 timerage4.Enabled = true;
             }
         }
@@ -360,6 +364,84 @@ namespace FitVitality
                 male.Visible = true;
                 female.Visible = true;
                 label11.Visible = true;
+            }
+        }
+
+        private void timerWeight1_Tick(object sender, EventArgs e)
+        {
+            if (panel5.Width <= 320)
+            {
+                panel5.Width += 6;
+            }
+            if (panel5.Width >= 320)
+            {
+                timerWeight1.Enabled = false;
+                timerWeight2.Enabled = true;
+            }
+        }
+
+        private void timerWeight2_Tick(object sender, EventArgs e)
+        {
+            if (panel6.Width <= 420)
+            {
+                panel6.Width += 6;
+            }
+            if (panel6.Width >= 420)
+            {
+                timerWeight2.Enabled = false;
+                timerWeight3.Enabled = true;
+            }
+        }
+
+        private void timerWeight3_Tick(object sender, EventArgs e)
+        {
+            if (panel7.Width <= 180)
+            {
+                panel7.Width += 6;
+            }
+            if (panel7.Width >= 180)
+            {
+                timerWeight3.Enabled = false;
+                tbWeight.Visible = true;
+                timerWeight4.Enabled = true;
+            }
+        }
+
+        private void timerWeight4_Tick(object sender, EventArgs e)
+        {
+            if (panel8.Width <= 130)
+            {
+                panel8.Width += 6;
+            }
+            if (panel8.Width >= 130)
+            {
+                timerWeight4.Enabled = false;
+                tbHeight.Visible = true;
+                label12.Visible = true;
+                label13.Visible = true;
+            }
+        }
+
+        private void tbAge_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbAge_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                buttonNext_Click(this, new EventArgs());
+            }
+        }
+
+        private void tbHeight_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                buttonNext_Click(this, new EventArgs());
             }
         }
     }

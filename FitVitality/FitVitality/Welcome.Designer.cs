@@ -54,13 +54,21 @@
             label6 = new Label();
             female = new PictureBox();
             male = new PictureBox();
-            kryptonTextBox2 = new Krypton.Toolkit.KryptonTextBox();
+            tbAge = new Krypton.Toolkit.KryptonTextBox();
             weight = new Panel();
-            label5 = new Label();
-            kryptonTextBox4 = new Krypton.Toolkit.KryptonTextBox();
+            panel8 = new Panel();
             label3 = new Label();
-            kryptonTextBox3 = new Krypton.Toolkit.KryptonTextBox();
+            panel7 = new Panel();
             label4 = new Label();
+            panel6 = new Panel();
+            label15 = new Label();
+            panel5 = new Panel();
+            label14 = new Label();
+            label13 = new Label();
+            label12 = new Label();
+            label5 = new Label();
+            tbHeight = new Krypton.Toolkit.KryptonTextBox();
+            tbWeight = new Krypton.Toolkit.KryptonTextBox();
             goal = new Panel();
             activity = new Panel();
             kryptonThemeComboBox3 = new Krypton.Toolkit.KryptonThemeComboBox();
@@ -77,6 +85,10 @@
             timerage2 = new System.Windows.Forms.Timer(components);
             timerage3 = new System.Windows.Forms.Timer(components);
             timerage4 = new System.Windows.Forms.Timer(components);
+            timerWeight1 = new System.Windows.Forms.Timer(components);
+            timerWeight2 = new System.Windows.Forms.Timer(components);
+            timerWeight3 = new System.Windows.Forms.Timer(components);
+            timerWeight4 = new System.Windows.Forms.Timer(components);
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -93,6 +105,10 @@
             ((System.ComponentModel.ISupportInitialize)female).BeginInit();
             ((System.ComponentModel.ISupportInitialize)male).BeginInit();
             weight.SuspendLayout();
+            panel8.SuspendLayout();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
             activity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonNext).BeginInit();
@@ -259,7 +275,7 @@
             age.Controls.Add(panel1);
             age.Controls.Add(female);
             age.Controls.Add(male);
-            age.Controls.Add(kryptonTextBox2);
+            age.Controls.Add(tbAge);
             age.Location = new Point(75, 50);
             age.Name = "age";
             age.Size = new Size(540, 300);
@@ -378,33 +394,137 @@
             male.MouseEnter += male_MouseEnter;
             male.MouseLeave += male_MouseLeave;
             // 
-            // kryptonTextBox2
+            // tbAge
             // 
-            kryptonTextBox2.CueHint.CueHintText = "ex. 25";
-            kryptonTextBox2.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            kryptonTextBox2.CueHint.Padding = new Padding(0);
-            kryptonTextBox2.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            kryptonTextBox2.Location = new Point(246, 126);
-            kryptonTextBox2.MaxLength = 3;
-            kryptonTextBox2.Name = "kryptonTextBox2";
-            kryptonTextBox2.Size = new Size(49, 23);
-            kryptonTextBox2.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonTextBox2.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonTextBox2.TabIndex = 4;
-            kryptonTextBox2.TextAlign = HorizontalAlignment.Center;
-            kryptonTextBox2.Visible = false;
+            tbAge.CueHint.CueHintText = "ex. 25";
+            tbAge.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            tbAge.CueHint.Padding = new Padding(0);
+            tbAge.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            tbAge.Location = new Point(246, 126);
+            tbAge.MaxLength = 3;
+            tbAge.Name = "tbAge";
+            tbAge.Size = new Size(49, 23);
+            tbAge.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tbAge.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tbAge.TabIndex = 4;
+            tbAge.TextAlign = HorizontalAlignment.Center;
+            tbAge.Visible = false;
+            tbAge.TextChanged += tbAge_TextChanged;
+            tbAge.KeyDown += tbAge_KeyDown;
             // 
             // weight
             // 
+            weight.Controls.Add(panel8);
+            weight.Controls.Add(panel7);
+            weight.Controls.Add(panel6);
+            weight.Controls.Add(panel5);
+            weight.Controls.Add(label13);
+            weight.Controls.Add(label12);
             weight.Controls.Add(label5);
-            weight.Controls.Add(kryptonTextBox4);
-            weight.Controls.Add(label3);
-            weight.Controls.Add(kryptonTextBox3);
-            weight.Controls.Add(label4);
+            weight.Controls.Add(tbHeight);
+            weight.Controls.Add(tbWeight);
             weight.Location = new Point(75, 50);
             weight.Name = "weight";
             weight.Size = new Size(540, 300);
             weight.TabIndex = 22;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(label3);
+            panel8.Location = new Point(209, 170);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(1, 19);
+            panel8.TabIndex = 20;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(0, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(122, 19);
+            label3.TabIndex = 3;
+            label3.Text = "How tall are you?";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(label4);
+            panel7.Location = new Point(185, 95);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(1, 19);
+            panel7.TabIndex = 19;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.Control;
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(174, 19);
+            label4.TabIndex = 1;
+            label4.Text = "How much do you weigh?";
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(label15);
+            panel6.Location = new Point(64, 59);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(1, 19);
+            panel6.TabIndex = 18;
+            // 
+            // label15
+            // 
+            label15.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.ForeColor = SystemColors.Control;
+            label15.Location = new Point(0, 0);
+            label15.Name = "label15";
+            label15.Size = new Size(417, 19);
+            label15.TabIndex = 16;
+            label15.Text = "We will be using these measurements for future calculations.";
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(label14);
+            panel5.Location = new Point(116, 21);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(1, 19);
+            panel5.TabIndex = 17;
+            // 
+            // label14
+            // 
+            label14.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.ForeColor = SystemColors.Control;
+            label14.Location = new Point(0, 0);
+            label14.Name = "label14";
+            label14.Size = new Size(318, 19);
+            label14.TabIndex = 15;
+            label14.Text = "Please provide us with your weight and height.";
+            // 
+            // label13
+            // 
+            label13.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label13.ForeColor = Color.FromArgb(92, 90, 90);
+            label13.Location = new Point(181, 221);
+            label13.Name = "label13";
+            label13.Size = new Size(179, 18);
+            label13.TabIndex = 14;
+            label13.Text = "You can update these later!";
+            label13.TextAlign = ContentAlignment.MiddleCenter;
+            label13.Visible = false;
+            // 
+            // label12
+            // 
+            label12.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.ForeColor = Color.FromArgb(92, 90, 90);
+            label12.Location = new Point(116, 253);
+            label12.Name = "label12";
+            label12.Size = new Size(309, 44);
+            label12.TabIndex = 13;
+            label12.Text = "We do NOT share any of your private data and use it only for in-app use such as formulas.";
+            label12.TextAlign = ContentAlignment.MiddleCenter;
+            label12.Visible = false;
             // 
             // label5
             // 
@@ -413,61 +533,41 @@
             label5.ForeColor = SystemColors.Control;
             label5.Location = new Point(148, 30);
             label5.Name = "label5";
-            label5.Size = new Size(233, 19);
+            label5.Size = new Size(0, 19);
             label5.TabIndex = 5;
-            label5.Text = "niganiganiganiganiganiganiganiga";
             // 
-            // kryptonTextBox4
+            // tbHeight
             // 
-            kryptonTextBox4.CueHint.CueHintText = "ex. 182";
-            kryptonTextBox4.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            kryptonTextBox4.CueHint.Padding = new Padding(0);
-            kryptonTextBox4.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            kryptonTextBox4.Location = new Point(220, 195);
-            kryptonTextBox4.MaxLength = 5;
-            kryptonTextBox4.Name = "kryptonTextBox4";
-            kryptonTextBox4.Size = new Size(100, 23);
-            kryptonTextBox4.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonTextBox4.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonTextBox4.TabIndex = 4;
-            kryptonTextBox4.TextAlign = HorizontalAlignment.Center;
+            tbHeight.CueHint.CueHintText = "ex. 182";
+            tbHeight.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            tbHeight.CueHint.Padding = new Padding(0);
+            tbHeight.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            tbHeight.Location = new Point(220, 195);
+            tbHeight.MaxLength = 5;
+            tbHeight.Name = "tbHeight";
+            tbHeight.Size = new Size(100, 23);
+            tbHeight.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tbHeight.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tbHeight.TabIndex = 4;
+            tbHeight.TextAlign = HorizontalAlignment.Center;
+            tbHeight.Visible = false;
+            tbHeight.KeyDown += tbHeight_KeyDown;
             // 
-            // label3
+            // tbWeight
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(209, 167);
-            label3.Name = "label3";
-            label3.Size = new Size(122, 19);
-            label3.TabIndex = 3;
-            label3.Text = "How tall are you?";
-            // 
-            // kryptonTextBox3
-            // 
-            kryptonTextBox3.CueHint.CueHintText = "ex. 103,5";
-            kryptonTextBox3.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            kryptonTextBox3.CueHint.Padding = new Padding(0);
-            kryptonTextBox3.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            kryptonTextBox3.Location = new Point(220, 123);
-            kryptonTextBox3.MaxLength = 5;
-            kryptonTextBox3.Name = "kryptonTextBox3";
-            kryptonTextBox3.Size = new Size(100, 23);
-            kryptonTextBox3.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonTextBox3.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kryptonTextBox3.TabIndex = 2;
-            kryptonTextBox3.TextAlign = HorizontalAlignment.Center;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.Control;
-            label4.Location = new Point(183, 95);
-            label4.Name = "label4";
-            label4.Size = new Size(174, 19);
-            label4.TabIndex = 1;
-            label4.Text = "How much do you weigh?";
+            tbWeight.CueHint.CueHintText = "ex. 103,5";
+            tbWeight.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            tbWeight.CueHint.Padding = new Padding(0);
+            tbWeight.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            tbWeight.Location = new Point(220, 123);
+            tbWeight.MaxLength = 5;
+            tbWeight.Name = "tbWeight";
+            tbWeight.Size = new Size(100, 23);
+            tbWeight.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tbWeight.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tbWeight.TabIndex = 2;
+            tbWeight.TextAlign = HorizontalAlignment.Center;
+            tbWeight.Visible = false;
             // 
             // goal
             // 
@@ -643,13 +743,33 @@
             // 
             // timerage3
             // 
-            timerage3.Interval = 10;
+            timerage3.Interval = 15;
             timerage3.Tick += timerage3_Tick;
             // 
             // timerage4
             // 
-            timerage4.Interval = 10;
+            timerage4.Interval = 15;
             timerage4.Tick += timerage4_Tick;
+            // 
+            // timerWeight1
+            // 
+            timerWeight1.Interval = 5;
+            timerWeight1.Tick += timerWeight1_Tick;
+            // 
+            // timerWeight2
+            // 
+            timerWeight2.Interval = 5;
+            timerWeight2.Tick += timerWeight2_Tick;
+            // 
+            // timerWeight3
+            // 
+            timerWeight3.Interval = 10;
+            timerWeight3.Tick += timerWeight3_Tick;
+            // 
+            // timerWeight4
+            // 
+            timerWeight4.Interval = 15;
+            timerWeight4.Tick += timerWeight4_Tick;
             // 
             // Welcome
             // 
@@ -657,10 +777,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
-            Controls.Add(age);
-            Controls.Add(name);
             Controls.Add(goal);
+            Controls.Add(age);
             Controls.Add(weight);
+            Controls.Add(name);
             Controls.Add(buttonPrevious);
             Controls.Add(done);
             Controls.Add(panelWelcome);
@@ -697,6 +817,12 @@
             ((System.ComponentModel.ISupportInitialize)male).EndInit();
             weight.ResumeLayout(false);
             weight.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             activity.ResumeLayout(false);
             activity.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)kryptonThemeComboBox3).EndInit();
@@ -736,11 +862,11 @@
         private Panel nameLabel2;
         private System.Windows.Forms.Timer timerName;
         private Krypton.Toolkit.KryptonTextBox tbName;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private Krypton.Toolkit.KryptonTextBox tbAge;
         private PictureBox male;
         private PictureBox female;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
+        private Krypton.Toolkit.KryptonTextBox tbWeight;
+        private Krypton.Toolkit.KryptonTextBox tbHeight;
         private Label label3;
         private Label label5;
         private Label label6;
@@ -755,5 +881,17 @@
         private System.Windows.Forms.Timer timerage2;
         private System.Windows.Forms.Timer timerage3;
         private System.Windows.Forms.Timer timerage4;
+        private Label label12;
+        private Label label14;
+        private Label label13;
+        private Panel panel7;
+        private Panel panel6;
+        private Label label15;
+        private Panel panel5;
+        private Panel panel8;
+        private System.Windows.Forms.Timer timerWeight1;
+        private System.Windows.Forms.Timer timerWeight2;
+        private System.Windows.Forms.Timer timerWeight3;
+        private System.Windows.Forms.Timer timerWeight4;
     }
 }

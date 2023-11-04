@@ -183,6 +183,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap firstPage {
+            get {
+                object obj = ResourceManager.GetObject("firstPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fitvitality {
             get {
                 object obj = ResourceManager.GetObject("fitvitality", resourceCulture);
@@ -196,6 +206,16 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap FitVitalityLogo_1 {
             get {
                 object obj = ResourceManager.GetObject("FitVitalityLogo_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fourthPage {
+            get {
+                object obj = ResourceManager.GetObject("fourthPage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -393,9 +413,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap secondPage {
+            get {
+                object obj = ResourceManager.GetObject("secondPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sett_1_1 {
             get {
                 object obj = ResourceManager.GetObject("sett_1_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap thirdPage {
+            get {
+                object obj = ResourceManager.GetObject("thirdPage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

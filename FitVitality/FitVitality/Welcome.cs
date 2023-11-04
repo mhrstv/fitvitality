@@ -134,11 +134,23 @@ namespace FitVitality
             else if (page < listPanels.Count - 1)
             {
                 buttonPrevious.Visible = true;
-                doneButton.Visible = false;
             }
             if (page == 0)
             {
                 buttonPrevious.Visible = false;
+                currentPage.Image = Properties.Resources.firstPage;
+            }
+            if (page == 1)
+            {
+                currentPage.Image = Properties.Resources.secondPage;
+            }
+            if (page == 2)
+            {
+                currentPage.Image = Properties.Resources.thirdPage;
+            }
+            if (page == 3)
+            {
+                currentPage.Image = Properties.Resources.fourthPage;
             }
         }
 
@@ -159,7 +171,6 @@ namespace FitVitality
             if (page == listPanels.Count - 1)
             {
                 buttonNext.Visible = false;
-                doneButton.Visible = true;
             }
             if (page == 1 && timerLabel3.Visible == false)
             {
@@ -172,6 +183,22 @@ namespace FitVitality
             if (page == 3 && timerLabel.Visible == false)
             {
                 timerGoal1.Enabled = true;
+            }
+            if (page == 0)
+            {
+                currentPage.Image = Properties.Resources.firstPage;
+            }
+            if (page == 1)
+            {
+                currentPage.Image = Properties.Resources.secondPage;
+            }
+            if (page == 2)
+            {
+                currentPage.Image = Properties.Resources.thirdPage;
+            }
+            if (page == 3)
+            {
+                currentPage.Image = Properties.Resources.fourthPage;
             }
         }
 
@@ -191,6 +218,7 @@ namespace FitVitality
                 ageGender_Panel.Visible = true;
                 weightHeight_Panel.Visible = true;
                 goalPanel.Visible = true;
+                currentPage.Image = Properties.Resources.firstPage;
             }
         }
 
@@ -541,6 +569,7 @@ namespace FitVitality
             {
                 timerGoal2.Enabled = false;
                 timerLabel.Visible = true;
+                doneButton.Visible = true;
             }
         }
 

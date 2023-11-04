@@ -88,12 +88,12 @@
             timerLabel = new Label();
             goalPanel1 = new Panel();
             goalLabel1 = new Label();
+            doneButton = new Krypton.Toolkit.KryptonButton();
             buttonNext = new PictureBox();
             buttonPrevious = new PictureBox();
             labelWelcome = new Label();
             welcomeLabelTimer = new System.Windows.Forms.Timer(components);
             panelWelcome = new Panel();
-            doneButton = new Krypton.Toolkit.KryptonButton();
             timerName1 = new System.Windows.Forms.Timer(components);
             timerName2 = new System.Windows.Forms.Timer(components);
             timerAge1 = new System.Windows.Forms.Timer(components);
@@ -113,6 +113,7 @@
             timerAge6 = new System.Windows.Forms.Timer(components);
             timerAge7 = new System.Windows.Forms.Timer(components);
             timerName3 = new System.Windows.Forms.Timer(components);
+            currentPage = new PictureBox();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
@@ -149,6 +150,7 @@
             ((System.ComponentModel.ISupportInitialize)buttonNext).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonPrevious).BeginInit();
             panelWelcome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)currentPage).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -391,7 +393,7 @@
             // info2_ageGender
             // 
             info2_ageGender.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            info2_ageGender.ForeColor = Color.FromArgb(92, 90, 90);
+            info2_ageGender.ForeColor = Color.FromArgb(255, 166, 166);
             info2_ageGender.Location = new Point(0, 0);
             info2_ageGender.Name = "info2_ageGender";
             info2_ageGender.Size = new Size(309, 22);
@@ -410,7 +412,7 @@
             // info1_ageGender
             // 
             info1_ageGender.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            info1_ageGender.ForeColor = Color.FromArgb(92, 90, 90);
+            info1_ageGender.ForeColor = Color.FromArgb(255, 166, 166);
             info1_ageGender.Location = new Point(0, 0);
             info1_ageGender.Name = "info1_ageGender";
             info1_ageGender.Size = new Size(309, 22);
@@ -549,7 +551,7 @@
             // info3_weightHeight
             // 
             info3_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            info3_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
+            info3_weightHeight.ForeColor = Color.FromArgb(255, 166, 166);
             info3_weightHeight.Location = new Point(0, 0);
             info3_weightHeight.Name = "info3_weightHeight";
             info3_weightHeight.Size = new Size(309, 22);
@@ -568,7 +570,7 @@
             // info1_weightHeight
             // 
             info1_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            info1_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
+            info1_weightHeight.ForeColor = Color.FromArgb(255, 166, 166);
             info1_weightHeight.Location = new Point(0, 0);
             info1_weightHeight.Name = "info1_weightHeight";
             info1_weightHeight.Size = new Size(309, 22);
@@ -579,7 +581,7 @@
             // info2_Panel
             // 
             info2_Panel.Controls.Add(info2_weightHeight);
-            info2_Panel.Location = new Point(181, 230);
+            info2_Panel.Location = new Point(181, 228);
             info2_Panel.Name = "info2_Panel";
             info2_Panel.Size = new Size(1, 18);
             info2_Panel.TabIndex = 21;
@@ -707,6 +709,7 @@
             goalPanel.Controls.Add(goalsPanel);
             goalPanel.Controls.Add(timerLabel);
             goalPanel.Controls.Add(goalPanel1);
+            goalPanel.Controls.Add(doneButton);
             goalPanel.Location = new Point(75, 50);
             goalPanel.Name = "goalPanel";
             goalPanel.Size = new Size(540, 300);
@@ -717,7 +720,7 @@
             goalsPanel.Controls.Add(buttonCut);
             goalsPanel.Controls.Add(buttonMaintain);
             goalsPanel.Controls.Add(buttonBulk);
-            goalsPanel.Location = new Point(180, 115);
+            goalsPanel.Location = new Point(180, 95);
             goalsPanel.Name = "goalsPanel";
             goalsPanel.Size = new Size(181, 0);
             goalsPanel.TabIndex = 12;
@@ -772,7 +775,7 @@
             // goalPanel1
             // 
             goalPanel1.Controls.Add(goalLabel1);
-            goalPanel1.Location = new Point(131, 62);
+            goalPanel1.Location = new Point(131, 42);
             goalPanel1.Name = "goalPanel1";
             goalPanel1.Size = new Size(1, 19);
             goalPanel1.TabIndex = 10;
@@ -788,60 +791,10 @@
             goalLabel1.TabIndex = 9;
             goalLabel1.Text = "Lastly, we need to know what your goal is.";
             // 
-            // buttonNext
-            // 
-            buttonNext.Image = Properties.Resources.trianglenext;
-            buttonNext.Location = new Point(624, 158);
-            buttonNext.Name = "buttonNext";
-            buttonNext.Size = new Size(58, 70);
-            buttonNext.TabIndex = 27;
-            buttonNext.TabStop = false;
-            buttonNext.Visible = false;
-            buttonNext.Click += buttonNext_Click;
-            buttonNext.MouseEnter += buttonNext_MouseEnter;
-            buttonNext.MouseLeave += buttonNext_MouseLeave;
-            // 
-            // buttonPrevious
-            // 
-            buttonPrevious.Image = Properties.Resources.triangleprevious;
-            buttonPrevious.Location = new Point(8, 158);
-            buttonPrevious.Name = "buttonPrevious";
-            buttonPrevious.Size = new Size(58, 70);
-            buttonPrevious.TabIndex = 28;
-            buttonPrevious.TabStop = false;
-            buttonPrevious.Visible = false;
-            buttonPrevious.Click += buttonPrevious_Click;
-            buttonPrevious.MouseEnter += buttonPrevious_MouseEnter;
-            buttonPrevious.MouseLeave += buttonPrevious_MouseLeave;
-            // 
-            // labelWelcome
-            // 
-            labelWelcome.Font = new Font("Arial Rounded MT Bold", 48F, FontStyle.Regular, GraphicsUnit.Point);
-            labelWelcome.ForeColor = Color.FromArgb(250, 252, 252);
-            labelWelcome.Location = new Point(0, 0);
-            labelWelcome.Name = "labelWelcome";
-            labelWelcome.Size = new Size(609, 133);
-            labelWelcome.TabIndex = 3;
-            labelWelcome.Text = "Welcome!";
-            labelWelcome.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // welcomeLabelTimer
-            // 
-            welcomeLabelTimer.Interval = 5;
-            welcomeLabelTimer.Tick += timer1_Tick;
-            // 
-            // panelWelcome
-            // 
-            panelWelcome.Controls.Add(labelWelcome);
-            panelWelcome.Location = new Point(33, 134);
-            panelWelcome.Name = "panelWelcome";
-            panelWelcome.Size = new Size(10, 133);
-            panelWelcome.TabIndex = 29;
-            // 
             // doneButton
             // 
             doneButton.CornerRoundingRadius = 15F;
-            doneButton.Location = new Point(300, 363);
+            doneButton.Location = new Point(225, 246);
             doneButton.Name = "doneButton";
             doneButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             doneButton.Size = new Size(90, 25);
@@ -901,6 +854,56 @@
             doneButton.Visible = false;
             doneButton.Click += done_Click;
             // 
+            // buttonNext
+            // 
+            buttonNext.Image = Properties.Resources.trianglenext;
+            buttonNext.Location = new Point(624, 158);
+            buttonNext.Name = "buttonNext";
+            buttonNext.Size = new Size(58, 70);
+            buttonNext.TabIndex = 27;
+            buttonNext.TabStop = false;
+            buttonNext.Visible = false;
+            buttonNext.Click += buttonNext_Click;
+            buttonNext.MouseEnter += buttonNext_MouseEnter;
+            buttonNext.MouseLeave += buttonNext_MouseLeave;
+            // 
+            // buttonPrevious
+            // 
+            buttonPrevious.Image = Properties.Resources.triangleprevious;
+            buttonPrevious.Location = new Point(8, 158);
+            buttonPrevious.Name = "buttonPrevious";
+            buttonPrevious.Size = new Size(58, 70);
+            buttonPrevious.TabIndex = 28;
+            buttonPrevious.TabStop = false;
+            buttonPrevious.Visible = false;
+            buttonPrevious.Click += buttonPrevious_Click;
+            buttonPrevious.MouseEnter += buttonPrevious_MouseEnter;
+            buttonPrevious.MouseLeave += buttonPrevious_MouseLeave;
+            // 
+            // labelWelcome
+            // 
+            labelWelcome.Font = new Font("Arial Rounded MT Bold", 48F, FontStyle.Regular, GraphicsUnit.Point);
+            labelWelcome.ForeColor = Color.FromArgb(250, 252, 252);
+            labelWelcome.Location = new Point(0, 0);
+            labelWelcome.Name = "labelWelcome";
+            labelWelcome.Size = new Size(609, 133);
+            labelWelcome.TabIndex = 3;
+            labelWelcome.Text = "Welcome!";
+            labelWelcome.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // welcomeLabelTimer
+            // 
+            welcomeLabelTimer.Interval = 5;
+            welcomeLabelTimer.Tick += timer1_Tick;
+            // 
+            // panelWelcome
+            // 
+            panelWelcome.Controls.Add(labelWelcome);
+            panelWelcome.Location = new Point(33, 134);
+            panelWelcome.Name = "panelWelcome";
+            panelWelcome.Size = new Size(10, 133);
+            panelWelcome.TabIndex = 29;
+            // 
             // timerName1
             // 
             timerName1.Interval = 5;
@@ -953,7 +956,7 @@
             // 
             // timerGoal1
             // 
-            timerGoal1.Interval = 20;
+            timerGoal1.Interval = 15;
             timerGoal1.Tick += timerGoal1_Tick;
             // 
             // timerGoal2
@@ -996,18 +999,26 @@
             timerName3.Interval = 15;
             timerName3.Tick += timerName3_Tick;
             // 
+            // currentPage
+            // 
+            currentPage.Location = new Point(316, 363);
+            currentPage.Name = "currentPage";
+            currentPage.Size = new Size(58, 13);
+            currentPage.TabIndex = 31;
+            currentPage.TabStop = false;
+            // 
             // Welcome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
+            Controls.Add(goalPanel);
+            Controls.Add(weightHeight_Panel);
+            Controls.Add(currentPage);
             Controls.Add(namePanel);
             Controls.Add(ageGender_Panel);
-            Controls.Add(weightHeight_Panel);
-            Controls.Add(goalPanel);
             Controls.Add(buttonPrevious);
-            Controls.Add(doneButton);
             Controls.Add(panelWelcome);
             Controls.Add(buttonNext);
             Controls.Add(topbar);
@@ -1066,6 +1077,7 @@
             ((System.ComponentModel.ISupportInitialize)buttonNext).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonPrevious).EndInit();
             panelWelcome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)currentPage).EndInit();
             ResumeLayout(false);
         }
 
@@ -1156,5 +1168,6 @@
         private Panel panel_nameUsage;
         private Label name_UsageLabel;
         private System.Windows.Forms.Timer timerName3;
+        private PictureBox currentPage;
     }
 }

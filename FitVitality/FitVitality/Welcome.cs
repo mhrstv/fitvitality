@@ -133,7 +133,7 @@ namespace FitVitality
             }
             else if (index < listPanels.Count - 1)
             {
-                buttonPrevious.Visible = false;
+                buttonPrevious.Visible = true;
                 doneButton.Visible = false;
             }
             if (index == 0)
@@ -154,18 +154,18 @@ namespace FitVitality
             }
             else if (index > 0)
             {
-                buttonNext.Visible = false;
+                buttonNext.Visible = true;
             }
             if (index == listPanels.Count - 1)
             {
                 buttonNext.Visible = false;
                 doneButton.Visible = true;
             }
-            if (index == 1 && info_ageGender.Visible == false)
+            if (index == 1 && timerLabel3.Visible == false)
             {
                 timerAge1.Enabled = true;
             }
-            if (index == 2 && info1_weightHeight.Visible == false)
+            if (index == 2 && timerLabel2.Visible == false)
             {
                 timerWeight1.Enabled = true;
             }
@@ -191,7 +191,6 @@ namespace FitVitality
                 ageGender_Panel.Visible = true;
                 weightHeight_Panel.Visible = true;
                 goalPanel.Visible = true;
-                buttonNext.Visible = true;
             }
         }
 
@@ -230,6 +229,7 @@ namespace FitVitality
             {
                 timerName2.Enabled = false;
                 textBox_Name.Visible = true;
+                timerName3.Enabled = true;
             }
         }
 
@@ -255,7 +255,14 @@ namespace FitVitality
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox_Name.Text != "")
+            {
+                buttonNext.Visible = true;
+            }
+            else
+            {
+                buttonNext.Visible = false;
+            }
         }
 
         private void kryptonTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -346,7 +353,7 @@ namespace FitVitality
             if (ageGenderPanel3.Width >= 121)
             {
                 timerAge3.Enabled = false;
-                tbAge.Visible = true;
+                textBox_Age.Visible = true;
                 timerAge4.Enabled = true;
             }
         }
@@ -360,9 +367,7 @@ namespace FitVitality
             if (ageGenderPanel4.Width >= 147)
             {
                 timerAge4.Enabled = false;
-                maleButton.Visible = true;
-                femaleButton.Visible = true;
-                info_ageGender.Visible = true;
+                timerAge5.Enabled = true;
             }
         }
 
@@ -401,7 +406,7 @@ namespace FitVitality
             if (weightHeightPanel3.Width >= 180)
             {
                 timerWeight3.Enabled = false;
-                tbWeight.Visible = true;
+                textBox_Weight.Visible = true;
                 timerWeight4.Enabled = true;
             }
         }
@@ -415,9 +420,8 @@ namespace FitVitality
             if (weightHeightPanel4.Width >= 130)
             {
                 timerWeight4.Enabled = false;
-                tbHeight.Visible = true;
-                info1_weightHeight.Visible = true;
-                info2_weightHeight.Visible = true;
+                textBox_Height.Visible = true;
+                timerWeight5.Enabled = true;
             }
         }
 
@@ -536,6 +540,97 @@ namespace FitVitality
             if (goalsPanel.Height >= 133)
             {
                 timerGoal2.Enabled = false;
+                timerLabel.Visible = true;
+            }
+        }
+
+        private void timerWeight5_Tick(object sender, EventArgs e)
+        {
+            if (info2_Panel.Width <= 179)
+            {
+                info2_Panel.Width += 6;
+            }
+            if (info2_Panel.Width >= 179)
+            {
+                timerWeight5.Enabled = false;
+                timerWeight6.Enabled = true;
+            }
+        }
+
+        private void timerWeight6_Tick(object sender, EventArgs e)
+        {
+            if (info1_Panel.Width <= 309)
+            {
+                info1_Panel.Width += 6;
+            }
+            if (info1_Panel.Width >= 309)
+            {
+                timerWeight6.Enabled = false;
+                timerWeight7.Enabled = true;
+            }
+        }
+
+        private void timerWeight7_Tick(object sender, EventArgs e)
+        {
+            if (info3_Panel.Width <= 309)
+            {
+                info3_Panel.Width += 6;
+            }
+            if (info3_Panel.Width >= 309)
+            {
+                timerWeight7.Enabled = false;
+                timerLabel2.Visible = true;
+            }
+        }
+
+        private void timerAge5_Tick(object sender, EventArgs e)
+        {
+            if (genderPanel.Height <= 40)
+            {
+                genderPanel.Height += 5;
+            }
+            if (genderPanel.Height >= 40)
+            {
+                timerAge5.Enabled = false;
+                timerAge6.Enabled = true;
+            }
+        }
+
+        private void timerAge6_Tick(object sender, EventArgs e)
+        {
+            if (info1_ageGender_Panel.Width <= 309)
+            {
+                info1_ageGender_Panel.Width += 5;
+            }
+            if (info1_ageGender_Panel.Width >= 309)
+            {
+                timerAge6.Enabled = false;
+                timerAge7.Enabled = true;
+            }
+        }
+
+        private void timerAge7_Tick(object sender, EventArgs e)
+        {
+            if (info2_ageGender_Panel.Width <= 309)
+            {
+                info2_ageGender_Panel.Width += 5;
+            }
+            if (info2_ageGender_Panel.Width >= 309)
+            {
+                timerAge7.Enabled = false;
+                timerLabel3.Visible = true;
+            }
+        }
+
+        private void timerName3_Tick(object sender, EventArgs e)
+        {
+            if (panel_nameUsage.Width <= 482)
+            {
+                panel_nameUsage.Width += 8;
+            }
+            if (panel_nameUsage.Width >= 482)
+            {
+                timerName3.Enabled = false;
             }
         }
     }

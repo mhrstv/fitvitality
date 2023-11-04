@@ -37,25 +37,39 @@
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
             namePanel = new Panel();
+            panel_nameUsage = new Panel();
+            nameUsageLabel = new Label();
             textBox_Name = new Krypton.Toolkit.KryptonTextBox();
             nameLabel2 = new Panel();
             nameQuestion = new Label();
             nameLabel1 = new Panel();
             nameLabelFirst = new Label();
             ageGender_Panel = new Panel();
+            timerLabel3 = new Label();
+            genderPanel = new Panel();
+            femaleButton = new PictureBox();
+            maleButton = new PictureBox();
+            info2_ageGender_Panel = new Panel();
+            info2_ageGender = new Label();
+            info1_ageGender_Panel = new Panel();
+            info1_ageGender = new Label();
             ageGenderPanel4 = new Panel();
             genderQuestion = new Label();
-            info_ageGender = new Label();
             ageGenderPanel3 = new Panel();
             ageQuestion = new Label();
             ageGenderPanel1 = new Panel();
             label9 = new Label();
             helloPanel = new Panel();
             helloLabel = new Label();
-            femaleButton = new PictureBox();
-            maleButton = new PictureBox();
-            tbAge = new Krypton.Toolkit.KryptonTextBox();
+            textBox_Age = new Krypton.Toolkit.KryptonTextBox();
             weightHeight_Panel = new Panel();
+            timerLabel2 = new Label();
+            info3_Panel = new Panel();
+            info3_weightHeight = new Label();
+            info1_Panel = new Panel();
+            info1_weightHeight = new Label();
+            info2_Panel = new Panel();
+            info2_weightHeight = new Label();
             weightHeightPanel4 = new Panel();
             heightQuestion = new Label();
             weightHeightPanel3 = new Panel();
@@ -64,10 +78,8 @@
             weightHeightQuestion2 = new Label();
             weightHeightPanel1 = new Panel();
             weightHeightQuestion1 = new Label();
-            info2_weightHeight = new Label();
-            info1_weightHeight = new Label();
-            tbHeight = new Krypton.Toolkit.KryptonTextBox();
-            tbWeight = new Krypton.Toolkit.KryptonTextBox();
+            textBox_Height = new Krypton.Toolkit.KryptonTextBox();
+            textBox_Weight = new Krypton.Toolkit.KryptonTextBox();
             goalPanel = new Panel();
             goalsPanel = new Panel();
             buttonCut = new PictureBox();
@@ -94,22 +106,36 @@
             timerWeight4 = new System.Windows.Forms.Timer(components);
             timerGoal1 = new System.Windows.Forms.Timer(components);
             timerGoal2 = new System.Windows.Forms.Timer(components);
+            timerWeight5 = new System.Windows.Forms.Timer(components);
+            timerWeight6 = new System.Windows.Forms.Timer(components);
+            timerWeight7 = new System.Windows.Forms.Timer(components);
+            timerAge5 = new System.Windows.Forms.Timer(components);
+            timerAge6 = new System.Windows.Forms.Timer(components);
+            timerAge7 = new System.Windows.Forms.Timer(components);
+            timerName3 = new System.Windows.Forms.Timer(components);
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             namePanel.SuspendLayout();
+            panel_nameUsage.SuspendLayout();
             nameLabel2.SuspendLayout();
             nameLabel1.SuspendLayout();
             ageGender_Panel.SuspendLayout();
+            genderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)femaleButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)maleButton).BeginInit();
+            info2_ageGender_Panel.SuspendLayout();
+            info1_ageGender_Panel.SuspendLayout();
             ageGenderPanel4.SuspendLayout();
             ageGenderPanel3.SuspendLayout();
             ageGenderPanel1.SuspendLayout();
             helloPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)femaleButton).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)maleButton).BeginInit();
             weightHeight_Panel.SuspendLayout();
+            info3_Panel.SuspendLayout();
+            info1_Panel.SuspendLayout();
+            info2_Panel.SuspendLayout();
             weightHeightPanel4.SuspendLayout();
             weightHeightPanel3.SuspendLayout();
             weightHeightPanel2.SuspendLayout();
@@ -212,6 +238,7 @@
             // 
             // namePanel
             // 
+            namePanel.Controls.Add(panel_nameUsage);
             namePanel.Controls.Add(textBox_Name);
             namePanel.Controls.Add(nameLabel2);
             namePanel.Controls.Add(nameLabel1);
@@ -220,6 +247,25 @@
             namePanel.Size = new Size(540, 300);
             namePanel.TabIndex = 21;
             namePanel.Paint += panel1_Paint;
+            // 
+            // panel_nameUsage
+            // 
+            panel_nameUsage.Controls.Add(nameUsageLabel);
+            panel_nameUsage.Location = new Point(29, 204);
+            panel_nameUsage.Name = "panel_nameUsage";
+            panel_nameUsage.Size = new Size(0, 19);
+            panel_nameUsage.TabIndex = 5;
+            // 
+            // nameUsageLabel
+            // 
+            nameUsageLabel.AutoSize = true;
+            nameUsageLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            nameUsageLabel.ForeColor = SystemColors.Control;
+            nameUsageLabel.Location = new Point(0, 0);
+            nameUsageLabel.Name = "nameUsageLabel";
+            nameUsageLabel.Size = new Size(482, 19);
+            nameUsageLabel.TabIndex = 6;
+            nameUsageLabel.Text = "Note that we will only be using your name to address you within the app.";
             // 
             // textBox_Name
             // 
@@ -244,7 +290,7 @@
             nameLabel2.Controls.Add(nameQuestion);
             nameLabel2.Location = new Point(199, 112);
             nameLabel2.Name = "nameLabel2";
-            nameLabel2.Size = new Size(1, 23);
+            nameLabel2.Size = new Size(0, 23);
             nameLabel2.TabIndex = 3;
             // 
             // nameQuestion
@@ -263,7 +309,7 @@
             nameLabel1.ForeColor = Color.White;
             nameLabel1.Location = new Point(30, 26);
             nameLabel1.Name = "nameLabel1";
-            nameLabel1.Size = new Size(1, 23);
+            nameLabel1.Size = new Size(0, 23);
             nameLabel1.TabIndex = 2;
             // 
             // nameLabelFirst
@@ -277,18 +323,100 @@
             // 
             // ageGender_Panel
             // 
+            ageGender_Panel.Controls.Add(timerLabel3);
+            ageGender_Panel.Controls.Add(genderPanel);
+            ageGender_Panel.Controls.Add(info2_ageGender_Panel);
+            ageGender_Panel.Controls.Add(info1_ageGender_Panel);
             ageGender_Panel.Controls.Add(ageGenderPanel4);
-            ageGender_Panel.Controls.Add(info_ageGender);
             ageGender_Panel.Controls.Add(ageGenderPanel3);
             ageGender_Panel.Controls.Add(ageGenderPanel1);
             ageGender_Panel.Controls.Add(helloPanel);
-            ageGender_Panel.Controls.Add(femaleButton);
-            ageGender_Panel.Controls.Add(maleButton);
-            ageGender_Panel.Controls.Add(tbAge);
+            ageGender_Panel.Controls.Add(textBox_Age);
             ageGender_Panel.Location = new Point(75, 50);
             ageGender_Panel.Name = "ageGender_Panel";
             ageGender_Panel.Size = new Size(540, 300);
             ageGender_Panel.TabIndex = 22;
+            // 
+            // timerLabel3
+            // 
+            timerLabel3.AutoSize = true;
+            timerLabel3.ForeColor = Color.FromArgb(36, 41, 46);
+            timerLabel3.Location = new Point(414, 169);
+            timerLabel3.Name = "timerLabel3";
+            timerLabel3.Size = new Size(0, 15);
+            timerLabel3.TabIndex = 27;
+            timerLabel3.Visible = false;
+            // 
+            // genderPanel
+            // 
+            genderPanel.Controls.Add(femaleButton);
+            genderPanel.Controls.Add(maleButton);
+            genderPanel.Location = new Point(186, 198);
+            genderPanel.Name = "genderPanel";
+            genderPanel.Size = new Size(168, 0);
+            genderPanel.TabIndex = 26;
+            // 
+            // femaleButton
+            // 
+            femaleButton.Image = Properties.Resources.female1;
+            femaleButton.Location = new Point(85, 0);
+            femaleButton.Name = "femaleButton";
+            femaleButton.Size = new Size(83, 37);
+            femaleButton.TabIndex = 6;
+            femaleButton.TabStop = false;
+            femaleButton.Click += female_Click;
+            femaleButton.MouseEnter += female_MouseEnter;
+            femaleButton.MouseLeave += female_MouseLeave;
+            // 
+            // maleButton
+            // 
+            maleButton.Image = Properties.Resources.male1;
+            maleButton.Location = new Point(2, 0);
+            maleButton.Name = "maleButton";
+            maleButton.Size = new Size(83, 37);
+            maleButton.TabIndex = 5;
+            maleButton.TabStop = false;
+            maleButton.Click += male_Click;
+            maleButton.MouseEnter += male_MouseEnter;
+            maleButton.MouseLeave += male_MouseLeave;
+            // 
+            // info2_ageGender_Panel
+            // 
+            info2_ageGender_Panel.Controls.Add(info2_ageGender);
+            info2_ageGender_Panel.Location = new Point(116, 272);
+            info2_ageGender_Panel.Name = "info2_ageGender_Panel";
+            info2_ageGender_Panel.Size = new Size(1, 22);
+            info2_ageGender_Panel.TabIndex = 25;
+            // 
+            // info2_ageGender
+            // 
+            info2_ageGender.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            info2_ageGender.ForeColor = Color.FromArgb(92, 90, 90);
+            info2_ageGender.Location = new Point(0, 0);
+            info2_ageGender.Name = "info2_ageGender";
+            info2_ageGender.Size = new Size(309, 22);
+            info2_ageGender.TabIndex = 23;
+            info2_ageGender.Text = "use it only for in-app use such as formulas.";
+            info2_ageGender.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // info1_ageGender_Panel
+            // 
+            info1_ageGender_Panel.Controls.Add(info1_ageGender);
+            info1_ageGender_Panel.Location = new Point(116, 254);
+            info1_ageGender_Panel.Name = "info1_ageGender_Panel";
+            info1_ageGender_Panel.Size = new Size(1, 22);
+            info1_ageGender_Panel.TabIndex = 24;
+            // 
+            // info1_ageGender
+            // 
+            info1_ageGender.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            info1_ageGender.ForeColor = Color.FromArgb(92, 90, 90);
+            info1_ageGender.Location = new Point(0, 0);
+            info1_ageGender.Name = "info1_ageGender";
+            info1_ageGender.Size = new Size(309, 22);
+            info1_ageGender.TabIndex = 13;
+            info1_ageGender.Text = "We do NOT share any of your private data and";
+            info1_ageGender.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ageGenderPanel4
             // 
@@ -308,18 +436,6 @@
             genderQuestion.Size = new Size(147, 19);
             genderQuestion.TabIndex = 2;
             genderQuestion.Text = "What is your gender?";
-            // 
-            // info_ageGender
-            // 
-            info_ageGender.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            info_ageGender.ForeColor = Color.FromArgb(92, 90, 90);
-            info_ageGender.Location = new Point(116, 253);
-            info_ageGender.Name = "info_ageGender";
-            info_ageGender.Size = new Size(309, 44);
-            info_ageGender.TabIndex = 12;
-            info_ageGender.Text = "We do NOT share any of your private data and use it only for in-app use such as formulas.";
-            info_ageGender.TextAlign = ContentAlignment.MiddleCenter;
-            info_ageGender.Visible = false;
             // 
             // ageGenderPanel3
             // 
@@ -377,64 +493,107 @@
             helloLabel.Text = "Hello, ! Thank you for choosing FitVitality!";
             helloLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // femaleButton
+            // textBox_Age
             // 
-            femaleButton.Image = Properties.Resources.female1;
-            femaleButton.Location = new Point(270, 195);
-            femaleButton.Name = "femaleButton";
-            femaleButton.Size = new Size(83, 37);
-            femaleButton.TabIndex = 6;
-            femaleButton.TabStop = false;
-            femaleButton.Visible = false;
-            femaleButton.Click += female_Click;
-            femaleButton.MouseEnter += female_MouseEnter;
-            femaleButton.MouseLeave += female_MouseLeave;
-            // 
-            // maleButton
-            // 
-            maleButton.Image = Properties.Resources.male1;
-            maleButton.Location = new Point(187, 195);
-            maleButton.Name = "maleButton";
-            maleButton.Size = new Size(83, 37);
-            maleButton.TabIndex = 5;
-            maleButton.TabStop = false;
-            maleButton.Visible = false;
-            maleButton.Click += male_Click;
-            maleButton.MouseEnter += male_MouseEnter;
-            maleButton.MouseLeave += male_MouseLeave;
-            // 
-            // tbAge
-            // 
-            tbAge.CueHint.CueHintText = "ex. 25";
-            tbAge.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            tbAge.CueHint.Padding = new Padding(0);
-            tbAge.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            tbAge.Location = new Point(246, 126);
-            tbAge.MaxLength = 3;
-            tbAge.Name = "tbAge";
-            tbAge.Size = new Size(49, 23);
-            tbAge.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbAge.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbAge.TabIndex = 4;
-            tbAge.TextAlign = HorizontalAlignment.Center;
-            tbAge.Visible = false;
-            tbAge.TextChanged += tbAge_TextChanged;
-            tbAge.KeyDown += tbAge_KeyDown;
+            textBox_Age.CueHint.CueHintText = "ex. 25";
+            textBox_Age.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            textBox_Age.CueHint.Padding = new Padding(0);
+            textBox_Age.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            textBox_Age.Location = new Point(246, 126);
+            textBox_Age.MaxLength = 3;
+            textBox_Age.Name = "textBox_Age";
+            textBox_Age.Size = new Size(49, 23);
+            textBox_Age.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox_Age.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox_Age.TabIndex = 4;
+            textBox_Age.TextAlign = HorizontalAlignment.Center;
+            textBox_Age.Visible = false;
+            textBox_Age.TextChanged += tbAge_TextChanged;
+            textBox_Age.KeyDown += tbAge_KeyDown;
             // 
             // weightHeight_Panel
             // 
+            weightHeight_Panel.Controls.Add(timerLabel2);
+            weightHeight_Panel.Controls.Add(info3_Panel);
+            weightHeight_Panel.Controls.Add(info1_Panel);
+            weightHeight_Panel.Controls.Add(info2_Panel);
             weightHeight_Panel.Controls.Add(weightHeightPanel4);
             weightHeight_Panel.Controls.Add(weightHeightPanel3);
             weightHeight_Panel.Controls.Add(weightHeightPanel2);
             weightHeight_Panel.Controls.Add(weightHeightPanel1);
-            weightHeight_Panel.Controls.Add(info2_weightHeight);
-            weightHeight_Panel.Controls.Add(info1_weightHeight);
-            weightHeight_Panel.Controls.Add(tbHeight);
-            weightHeight_Panel.Controls.Add(tbWeight);
+            weightHeight_Panel.Controls.Add(textBox_Height);
+            weightHeight_Panel.Controls.Add(textBox_Weight);
             weightHeight_Panel.Location = new Point(75, 50);
             weightHeight_Panel.Name = "weightHeight_Panel";
             weightHeight_Panel.Size = new Size(540, 300);
             weightHeight_Panel.TabIndex = 22;
+            // 
+            // timerLabel2
+            // 
+            timerLabel2.AutoSize = true;
+            timerLabel2.ForeColor = Color.FromArgb(36, 41, 46);
+            timerLabel2.Location = new Point(423, 161);
+            timerLabel2.Name = "timerLabel2";
+            timerLabel2.Size = new Size(0, 15);
+            timerLabel2.TabIndex = 24;
+            timerLabel2.Visible = false;
+            // 
+            // info3_Panel
+            // 
+            info3_Panel.Controls.Add(info3_weightHeight);
+            info3_Panel.Location = new Point(116, 268);
+            info3_Panel.Name = "info3_Panel";
+            info3_Panel.Size = new Size(1, 22);
+            info3_Panel.TabIndex = 23;
+            // 
+            // info3_weightHeight
+            // 
+            info3_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            info3_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
+            info3_weightHeight.Location = new Point(0, 0);
+            info3_weightHeight.Name = "info3_weightHeight";
+            info3_weightHeight.Size = new Size(309, 22);
+            info3_weightHeight.TabIndex = 23;
+            info3_weightHeight.Text = "use it only for in-app use such as formulas.";
+            info3_weightHeight.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // info1_Panel
+            // 
+            info1_Panel.Controls.Add(info1_weightHeight);
+            info1_Panel.Location = new Point(116, 250);
+            info1_Panel.Name = "info1_Panel";
+            info1_Panel.Size = new Size(1, 22);
+            info1_Panel.TabIndex = 22;
+            // 
+            // info1_weightHeight
+            // 
+            info1_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            info1_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
+            info1_weightHeight.Location = new Point(0, 0);
+            info1_weightHeight.Name = "info1_weightHeight";
+            info1_weightHeight.Size = new Size(309, 22);
+            info1_weightHeight.TabIndex = 13;
+            info1_weightHeight.Text = "We do NOT share any of your private data and";
+            info1_weightHeight.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // info2_Panel
+            // 
+            info2_Panel.Controls.Add(info2_weightHeight);
+            info2_Panel.Location = new Point(181, 230);
+            info2_Panel.Name = "info2_Panel";
+            info2_Panel.Size = new Size(1, 18);
+            info2_Panel.TabIndex = 21;
+            // 
+            // info2_weightHeight
+            // 
+            info2_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            info2_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
+            info2_weightHeight.Location = new Point(0, 0);
+            info2_weightHeight.Name = "info2_weightHeight";
+            info2_weightHeight.Size = new Size(179, 18);
+            info2_weightHeight.TabIndex = 14;
+            info2_weightHeight.Text = "You can update these later!";
+            info2_weightHeight.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // weightHeightPanel4
             // 
@@ -510,62 +669,38 @@
             weightHeightQuestion1.TabIndex = 15;
             weightHeightQuestion1.Text = "Please provide us with your weight and height.";
             // 
-            // info2_weightHeight
+            // textBox_Height
             // 
-            info2_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            info2_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
-            info2_weightHeight.Location = new Point(181, 221);
-            info2_weightHeight.Name = "info2_weightHeight";
-            info2_weightHeight.Size = new Size(179, 18);
-            info2_weightHeight.TabIndex = 14;
-            info2_weightHeight.Text = "You can update these later!";
-            info2_weightHeight.TextAlign = ContentAlignment.MiddleCenter;
-            info2_weightHeight.Visible = false;
+            textBox_Height.CueHint.CueHintText = "ex. 182";
+            textBox_Height.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            textBox_Height.CueHint.Padding = new Padding(0);
+            textBox_Height.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            textBox_Height.Location = new Point(220, 195);
+            textBox_Height.MaxLength = 5;
+            textBox_Height.Name = "textBox_Height";
+            textBox_Height.Size = new Size(100, 23);
+            textBox_Height.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox_Height.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox_Height.TabIndex = 4;
+            textBox_Height.TextAlign = HorizontalAlignment.Center;
+            textBox_Height.Visible = false;
+            textBox_Height.KeyDown += tbHeight_KeyDown;
             // 
-            // info1_weightHeight
+            // textBox_Weight
             // 
-            info1_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            info1_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
-            info1_weightHeight.Location = new Point(116, 253);
-            info1_weightHeight.Name = "info1_weightHeight";
-            info1_weightHeight.Size = new Size(309, 44);
-            info1_weightHeight.TabIndex = 13;
-            info1_weightHeight.Text = "We do NOT share any of your private data and use it only for in-app use such as formulas.";
-            info1_weightHeight.TextAlign = ContentAlignment.MiddleCenter;
-            info1_weightHeight.Visible = false;
-            // 
-            // tbHeight
-            // 
-            tbHeight.CueHint.CueHintText = "ex. 182";
-            tbHeight.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            tbHeight.CueHint.Padding = new Padding(0);
-            tbHeight.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            tbHeight.Location = new Point(220, 195);
-            tbHeight.MaxLength = 5;
-            tbHeight.Name = "tbHeight";
-            tbHeight.Size = new Size(100, 23);
-            tbHeight.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbHeight.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbHeight.TabIndex = 4;
-            tbHeight.TextAlign = HorizontalAlignment.Center;
-            tbHeight.Visible = false;
-            tbHeight.KeyDown += tbHeight_KeyDown;
-            // 
-            // tbWeight
-            // 
-            tbWeight.CueHint.CueHintText = "ex. 103,5";
-            tbWeight.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            tbWeight.CueHint.Padding = new Padding(0);
-            tbWeight.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
-            tbWeight.Location = new Point(220, 123);
-            tbWeight.MaxLength = 5;
-            tbWeight.Name = "tbWeight";
-            tbWeight.Size = new Size(100, 23);
-            tbWeight.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbWeight.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tbWeight.TabIndex = 2;
-            tbWeight.TextAlign = HorizontalAlignment.Center;
-            tbWeight.Visible = false;
+            textBox_Weight.CueHint.CueHintText = "ex. 103,5";
+            textBox_Weight.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            textBox_Weight.CueHint.Padding = new Padding(0);
+            textBox_Weight.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            textBox_Weight.Location = new Point(220, 123);
+            textBox_Weight.MaxLength = 5;
+            textBox_Weight.Name = "textBox_Weight";
+            textBox_Weight.Size = new Size(100, 23);
+            textBox_Weight.StateCommon.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox_Weight.StateNormal.Content.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox_Weight.TabIndex = 2;
+            textBox_Weight.TextAlign = HorizontalAlignment.Center;
+            textBox_Weight.Visible = false;
             // 
             // goalPanel
             // 
@@ -826,15 +961,50 @@
             timerGoal2.Interval = 25;
             timerGoal2.Tick += timerGoal2_Tick;
             // 
+            // timerWeight5
+            // 
+            timerWeight5.Interval = 25;
+            timerWeight5.Tick += timerWeight5_Tick;
+            // 
+            // timerWeight6
+            // 
+            timerWeight6.Interval = 15;
+            timerWeight6.Tick += timerWeight6_Tick;
+            // 
+            // timerWeight7
+            // 
+            timerWeight7.Interval = 15;
+            timerWeight7.Tick += timerWeight7_Tick;
+            // 
+            // timerAge5
+            // 
+            timerAge5.Interval = 25;
+            timerAge5.Tick += timerAge5_Tick;
+            // 
+            // timerAge6
+            // 
+            timerAge6.Interval = 15;
+            timerAge6.Tick += timerAge6_Tick;
+            // 
+            // timerAge7
+            // 
+            timerAge7.Interval = 15;
+            timerAge7.Tick += timerAge7_Tick;
+            // 
+            // timerName3
+            // 
+            timerName3.Interval = 15;
+            timerName3.Tick += timerName3_Tick;
+            // 
             // Welcome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
-            Controls.Add(weightHeight_Panel);
-            Controls.Add(ageGender_Panel);
             Controls.Add(namePanel);
+            Controls.Add(ageGender_Panel);
+            Controls.Add(weightHeight_Panel);
             Controls.Add(goalPanel);
             Controls.Add(buttonPrevious);
             Controls.Add(doneButton);
@@ -857,20 +1027,28 @@
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             namePanel.ResumeLayout(false);
             namePanel.PerformLayout();
+            panel_nameUsage.ResumeLayout(false);
+            panel_nameUsage.PerformLayout();
             nameLabel2.ResumeLayout(false);
             nameLabel1.ResumeLayout(false);
             ageGender_Panel.ResumeLayout(false);
             ageGender_Panel.PerformLayout();
+            genderPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)femaleButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)maleButton).EndInit();
+            info2_ageGender_Panel.ResumeLayout(false);
+            info1_ageGender_Panel.ResumeLayout(false);
             ageGenderPanel4.ResumeLayout(false);
             ageGenderPanel4.PerformLayout();
             ageGenderPanel3.ResumeLayout(false);
             ageGenderPanel3.PerformLayout();
             ageGenderPanel1.ResumeLayout(false);
             helloPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)femaleButton).EndInit();
-            ((System.ComponentModel.ISupportInitialize)maleButton).EndInit();
             weightHeight_Panel.ResumeLayout(false);
             weightHeight_Panel.PerformLayout();
+            info3_Panel.ResumeLayout(false);
+            info1_Panel.ResumeLayout(false);
+            info2_Panel.ResumeLayout(false);
             weightHeightPanel4.ResumeLayout(false);
             weightHeightPanel4.PerformLayout();
             weightHeightPanel3.ResumeLayout(false);
@@ -918,11 +1096,11 @@
         private Panel nameLabel2;
         private System.Windows.Forms.Timer timerName2;
         private Krypton.Toolkit.KryptonTextBox textBox_Name;
-        private Krypton.Toolkit.KryptonTextBox tbAge;
+        private Krypton.Toolkit.KryptonTextBox textBox_Age;
         private PictureBox maleButton;
         private PictureBox femaleButton;
-        private Krypton.Toolkit.KryptonTextBox tbWeight;
-        private Krypton.Toolkit.KryptonTextBox tbHeight;
+        private Krypton.Toolkit.KryptonTextBox textBox_Weight;
+        private Krypton.Toolkit.KryptonTextBox textBox_Height;
         private Label heightQuestion;
         private Label label5;
         private Label label6;
@@ -932,7 +1110,6 @@
         private Panel ageGenderPanel3;
         private Panel ageGenderPanel4;
         private Label genderQuestion;
-        private Label info_ageGender;
         private System.Windows.Forms.Timer timerAge1;
         private System.Windows.Forms.Timer timerAge2;
         private System.Windows.Forms.Timer timerAge3;
@@ -959,5 +1136,25 @@
         private System.Windows.Forms.Timer timerGoal2;
         private Panel goalsPanel;
         private Label helloLabel;
+        private Panel info1_Panel;
+        private Panel info2_Panel;
+        private System.Windows.Forms.Timer timerWeight5;
+        private System.Windows.Forms.Timer timerWeight6;
+        private Panel info3_Panel;
+        private Label info3_weightHeight;
+        private System.Windows.Forms.Timer timerWeight7;
+        private Label timerLabel2;
+        private Panel info2_ageGender_Panel;
+        private Label info2_ageGender;
+        private Panel info1_ageGender_Panel;
+        private Label info1_ageGender;
+        private Panel genderPanel;
+        private System.Windows.Forms.Timer timerAge5;
+        private System.Windows.Forms.Timer timerAge6;
+        private System.Windows.Forms.Timer timerAge7;
+        private Label timerLabel3;
+        private Panel panel_nameUsage;
+        private Label nameUsageLabel;
+        private System.Windows.Forms.Timer timerName3;
     }
 }

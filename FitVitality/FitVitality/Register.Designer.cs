@@ -195,7 +195,9 @@
             textBoxPass.Size = new Size(199, 23);
             textBoxPass.TabIndex = 10;
             textBoxPass.UseSystemPasswordChar = true;
+            textBoxPass.Enter += textBoxPass_Enter;
             textBoxPass.KeyDown += tbpass_KeyDown;
+            textBoxPass.Leave += textBoxPass_Leave;
             // 
             // textBoxUsername
             // 
@@ -209,7 +211,9 @@
             textBoxUsername.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             textBoxUsername.TabIndex = 8;
             textBoxUsername.TextChanged += kryptonTextBox1_TextChanged;
+            textBoxUsername.Enter += textBoxUsername_Enter;
             textBoxUsername.KeyDown += tbusername_KeyDown;
+            textBoxUsername.Leave += textBoxUsername_Leave;
             // 
             // registerLabel
             // 
@@ -244,7 +248,9 @@
             textBoxEmail.Size = new Size(199, 23);
             textBoxEmail.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             textBoxEmail.TabIndex = 9;
+            textBoxEmail.Enter += textBoxEmail_Enter;
             textBoxEmail.KeyDown += tbemail_KeyDown;
+            textBoxEmail.Leave += textBoxEmail_Leave;
             // 
             // topbar
             // 
@@ -363,7 +369,9 @@
             textBoxRepass.Size = new Size(199, 23);
             textBoxRepass.TabIndex = 11;
             textBoxRepass.UseSystemPasswordChar = true;
+            textBoxRepass.Enter += textBoxRepass_Enter;
             textBoxRepass.KeyDown += tbrepass_KeyDown;
+            textBoxRepass.Leave += textBoxRepass_Leave;
             // 
             // userError
             // 

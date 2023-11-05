@@ -22,6 +22,10 @@ namespace FitVitality
         public bool opened;
         private bool mouseDown;
         private Point lastLocation;
+        private bool user_Error = false;
+        private bool password_Error = false;
+        private bool email_Error = false;
+        private bool passMatch_Error = false;
         private string connectionstring = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         public Register()
         {
@@ -165,9 +169,8 @@ namespace FitVitality
             }
             else
             {
+                user_Error = true;
                 usrmark.Visible = true;
-                userError.Visible = true;
-                usrError.Text = "Username must contain only digits or letters!";
                 textBoxUsername.Text = "";
                 textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
@@ -182,9 +185,8 @@ namespace FitVitality
             }
             else
             {
+                email_Error = true;
                 emailmark.Visible = true;
-                emailPanel.Visible = true;
-                emailErrorLabel.Text = "Email is not valid!";
                 textBoxEmail.Text = "";
                 textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
@@ -200,17 +202,16 @@ namespace FitVitality
             }
             else
             {
+                password_Error = true;
                 passmark.Visible = true;
-                passPanel.Visible = true;
-                passErrorLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
                 textBoxPass.Text = "";
                 textBoxPass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxPass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }
             if ((regPassword != confirmPass) || confirmPass == "")
             {
+                passMatch_Error = true;
                 repassmark.Visible = true;
-                repassErrorPanel.Visible = true;
                 textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
 
@@ -398,6 +399,75 @@ namespace FitVitality
             {
                 e.Handled = e.SuppressKeyPress = true;
                 kryptonButton1_Click(this, new EventArgs());
+            }
+        }
+
+        private void textBoxUsername_Enter(object sender, EventArgs e)
+        {
+            if (user_Error)
+            {
+                userError.Visible = true;
+                usrError.Text = "Username must contain only digits or letters!";
+            }
+        }
+
+        private void textBoxUsername_Leave(object sender, EventArgs e)
+        {
+            if (user_Error)
+            {
+                userError.Visible = false;
+            }
+        }
+
+        private void textBoxEmail_Enter(object sender, EventArgs e)
+        {
+            if (email_Error)
+            {
+                emailPanel.Visible = true;
+                emailErrorLabel.Text = "Email is not valid!";
+            }
+
+        }
+
+        private void textBoxEmail_Leave(object sender, EventArgs e)
+        {
+            if (email_Error)
+            {
+                emailPanel.Visible = false;
+            }
+        }
+
+        private void textBoxPass_Enter(object sender, EventArgs e)
+        {
+            if (password_Error)
+            {
+                passPanel.Visible = true;
+                passErrorLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
+            }
+        }
+
+        private void textBoxPass_Leave(object sender, EventArgs e)
+        {
+            if (password_Error)
+            {
+                passPanel.Visible = false;
+            }
+        }
+
+        private void textBoxRepass_Enter(object sender, EventArgs e)
+        {
+            if(passMatch_Error)
+            {
+                repassErrorPanel.Visible = true;
+                repassErrorLabel.Text = "Passwords do not match!";
+            }
+        }
+
+        private void textBoxRepass_Leave(object sender, EventArgs e)
+        {
+            if (passMatch_Error)
+            {
+                repassErrorPanel.Visible = false;
             }
         }
     }

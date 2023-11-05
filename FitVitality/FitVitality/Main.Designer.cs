@@ -34,6 +34,7 @@
             buttonDashboard = new Krypton.Toolkit.KryptonButton();
             mainPanel = new Panel();
             topbar = new Panel();
+            buttonHome = new Krypton.Toolkit.KryptonButton();
             buttonSettings = new Krypton.Toolkit.KryptonButton();
             logo2 = new PictureBox();
             logo1 = new PictureBox();
@@ -71,7 +72,7 @@
             // buttonDashboard
             // 
             buttonDashboard.CornerRoundingRadius = 15F;
-            buttonDashboard.Location = new Point(118, 2);
+            buttonDashboard.Location = new Point(169, 2);
             buttonDashboard.Name = "buttonDashboard";
             buttonDashboard.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             buttonDashboard.Size = new Size(42, 28);
@@ -147,6 +148,7 @@
             // 
             // topbar
             // 
+            topbar.Controls.Add(buttonHome);
             topbar.Controls.Add(buttonSettings);
             topbar.Controls.Add(buttonDashboard);
             topbar.Controls.Add(logo2);
@@ -162,6 +164,71 @@
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
+            // 
+            // buttonHome
+            // 
+            buttonHome.CornerRoundingRadius = 15F;
+            buttonHome.Location = new Point(120, 2);
+            buttonHome.Name = "buttonHome";
+            buttonHome.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            buttonHome.Size = new Size(42, 28);
+            buttonHome.StateCommon.Back.Color1 = Color.White;
+            buttonHome.StateCommon.Back.Color2 = Color.White;
+            buttonHome.StateCommon.Back.ColorAngle = 45F;
+            buttonHome.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonHome.StateCommon.Back.Image = Properties.Resources.home;
+            buttonHome.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Tile;
+            buttonHome.StateCommon.Border.Color1 = Color.Silver;
+            buttonHome.StateCommon.Border.Color2 = Color.Silver;
+            buttonHome.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonHome.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonHome.StateCommon.Border.Rounding = 15F;
+            buttonHome.StateCommon.Content.Padding = new Padding(-1, 32, -1, -1);
+            buttonHome.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonHome.StateNormal.Back.Color1 = Color.FromArgb(250, 252, 252);
+            buttonHome.StateNormal.Back.Color2 = Color.FromArgb(250, 252, 252);
+            buttonHome.StateNormal.Back.ColorAngle = 45F;
+            buttonHome.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonHome.StateNormal.Back.Image = Properties.Resources.home;
+            buttonHome.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            buttonHome.StateNormal.Border.Color1 = Color.Transparent;
+            buttonHome.StateNormal.Border.Color2 = Color.Transparent;
+            buttonHome.StateNormal.Border.ColorAngle = 45F;
+            buttonHome.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonHome.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonHome.StateNormal.Border.Rounding = 22F;
+            buttonHome.StateNormal.Content.Padding = new Padding(-1, 32, -1, -1);
+            buttonHome.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonHome.StatePressed.Back.Color1 = Color.FromArgb(250, 252, 252);
+            buttonHome.StatePressed.Back.Color2 = Color.FromArgb(250, 252, 252);
+            buttonHome.StatePressed.Back.ColorAngle = 45F;
+            buttonHome.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonHome.StatePressed.Back.Image = Properties.Resources.home;
+            buttonHome.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            buttonHome.StatePressed.Border.Color1 = Color.Transparent;
+            buttonHome.StatePressed.Border.Color2 = Color.Transparent;
+            buttonHome.StatePressed.Border.ColorAngle = 45F;
+            buttonHome.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonHome.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonHome.StatePressed.Border.Rounding = 10F;
+            buttonHome.StatePressed.Content.Padding = new Padding(-1, 32, -1, -1);
+            buttonHome.StatePressed.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonHome.StateTracking.Back.Color1 = Color.FromArgb(224, 224, 224);
+            buttonHome.StateTracking.Back.Color2 = Color.FromArgb(224, 224, 224);
+            buttonHome.StateTracking.Back.ColorAngle = 45F;
+            buttonHome.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonHome.StateTracking.Back.Image = Properties.Resources.home;
+            buttonHome.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            buttonHome.StateTracking.Border.Color1 = Color.Transparent;
+            buttonHome.StateTracking.Border.Color2 = Color.Transparent;
+            buttonHome.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            buttonHome.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            buttonHome.StateTracking.Border.Rounding = 10F;
+            buttonHome.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
+            buttonHome.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonHome.TabIndex = 4;
+            buttonHome.Values.Text = "";
+            buttonHome.Click += kryptonButton1_Click;
             // 
             // buttonSettings
             // 
@@ -325,5 +392,6 @@
         private PictureBox buttonMin;
         private PictureBox buttonClose;
         private Krypton.Toolkit.KryptonButton buttonSettings;
+        private Krypton.Toolkit.KryptonButton buttonHome;
     }
 }

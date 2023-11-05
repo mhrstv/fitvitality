@@ -58,7 +58,7 @@ namespace FitVitality
         }
         private void kryptonButton1_Click_1(object sender, EventArgs e)
         {
-            loadForm(new home());
+
         }
         private void kryptonButton2_Click_3(object sender, EventArgs e)
         {
@@ -163,6 +163,11 @@ namespace FitVitality
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            loadForm(new home());
         }
     }
 }

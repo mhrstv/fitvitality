@@ -239,14 +239,14 @@ namespace FitVitality
         }
         private bool validAge(string age)
         {
-            foreach(char c in age)
+            foreach (char c in age)
             {
-                if(!char.IsNumber(c))
+                if (!char.IsNumber(c))
                 {
                     return false;
                 }
             }
-            if(int.Parse(age) < 13 || int.Parse(age) > 120)
+            if (int.Parse(age) < 13 || int.Parse(age) > 120)
             {
                 return false;
             }
@@ -313,7 +313,7 @@ namespace FitVitality
             }
             if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && dbGender != "" && dbGoal != "")
             {
-                using(SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = "UPDATE UserSettings " +

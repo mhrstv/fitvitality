@@ -456,7 +456,7 @@ namespace FitVitality
 
         private void textBoxRepass_Enter(object sender, EventArgs e)
         {
-            if(passMatch_Error)
+            if (passMatch_Error)
             {
                 repassErrorPanel.Visible = true;
                 repassErrorLabel.Text = "Passwords do not match!";

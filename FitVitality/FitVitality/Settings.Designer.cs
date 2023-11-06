@@ -529,6 +529,8 @@
             languageComboBox.Name = "languageComboBox";
             languageComboBox.Size = new Size(121, 21);
             languageComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            languageComboBox.StateCommon.DropBack.Color1 = Color.Red;
+            languageComboBox.StateCommon.DropBack.Color2 = Color.Red;
             languageComboBox.TabIndex = 32;
             languageComboBox.SelectedIndexChanged += languageComboBox_SelectedIndexChanged;
             // 

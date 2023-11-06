@@ -272,7 +272,7 @@ namespace FitVitality
             {
                 cfg.Write("Language", "bg", "SETTINGS");
             }
-            else if(languageComboBox.SelectedItem == "English")
+            else if (languageComboBox.SelectedItem == "English")
             {
                 cfg.Write("Language", "en", "SETTINGS");
             }

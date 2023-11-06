@@ -407,9 +407,9 @@
             // 
             emailPanel.Controls.Add(emailErrorLabel);
             emailPanel.Controls.Add(emailError);
-            emailPanel.Location = new Point(20, 147);
+            emailPanel.Location = new Point(94, 147);
             emailPanel.Name = "emailPanel";
-            emailPanel.Size = new Size(246, 27);
+            emailPanel.Size = new Size(154, 27);
             emailPanel.TabIndex = 14;
             emailPanel.Visible = false;
             // 
@@ -418,18 +418,18 @@
             emailErrorLabel.AutoSize = true;
             emailErrorLabel.BackColor = Color.FromArgb(255, 0, 42);
             emailErrorLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            emailErrorLabel.Location = new Point(87, 5);
+            emailErrorLabel.Location = new Point(49, 5);
             emailErrorLabel.Name = "emailErrorLabel";
-            emailErrorLabel.Size = new Size(122, 14);
+            emailErrorLabel.Size = new Size(96, 14);
             emailErrorLabel.TabIndex = 0;
-            emailErrorLabel.Text = "Email is already in use!";
+            emailErrorLabel.Text = "Email is not valid!";
             // 
             // emailError
             // 
-            emailError.Image = (Image)resources.GetObject("emailError.Image");
-            emailError.Location = new Point(23, 0);
+            emailError.Image = Properties.Resources.email21;
+            emailError.Location = new Point(45, 0);
             emailError.Name = "emailError";
-            emailError.Size = new Size(203, 27);
+            emailError.Size = new Size(107, 27);
             emailError.TabIndex = 16;
             emailError.TabStop = false;
             // 
@@ -437,9 +437,9 @@
             // 
             passPanel.Controls.Add(passErrorLabel);
             passPanel.Controls.Add(passError);
-            passPanel.Location = new Point(20, 198);
+            passPanel.Location = new Point(63, 198);
             passPanel.Name = "passPanel";
-            passPanel.Size = new Size(236, 33);
+            passPanel.Size = new Size(186, 33);
             passPanel.TabIndex = 15;
             passPanel.Visible = false;
             // 
@@ -447,7 +447,7 @@
             // 
             passErrorLabel.BackColor = Color.FromArgb(255, 0, 42);
             passErrorLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            passErrorLabel.Location = new Point(48, 0);
+            passErrorLabel.Location = new Point(5, 1);
             passErrorLabel.Name = "passErrorLabel";
             passErrorLabel.Size = new Size(169, 28);
             passErrorLabel.TabIndex = 16;
@@ -456,9 +456,9 @@
             // passError
             // 
             passError.Image = (Image)resources.GetObject("passError.Image");
-            passError.Location = new Point(-10, 0);
+            passError.Location = new Point(0, 0);
             passError.Name = "passError";
-            passError.Size = new Size(236, 33);
+            passError.Size = new Size(182, 33);
             passError.TabIndex = 0;
             passError.TabStop = false;
             // 
@@ -466,9 +466,9 @@
             // 
             repassErrorPanel.Controls.Add(repassErrorLabel);
             repassErrorPanel.Controls.Add(repassError);
-            repassErrorPanel.Location = new Point(9, 254);
+            repassErrorPanel.Location = new Point(94, 257);
             repassErrorPanel.Name = "repassErrorPanel";
-            repassErrorPanel.Size = new Size(270, 30);
+            repassErrorPanel.Size = new Size(153, 27);
             repassErrorPanel.TabIndex = 15;
             repassErrorPanel.Visible = false;
             // 
@@ -477,7 +477,7 @@
             repassErrorLabel.AutoSize = true;
             repassErrorLabel.BackColor = Color.FromArgb(255, 0, 42);
             repassErrorLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            repassErrorLabel.Location = new Point(94, 7);
+            repassErrorLabel.Location = new Point(9, 5);
             repassErrorLabel.Name = "repassErrorLabel";
             repassErrorLabel.Size = new Size(131, 14);
             repassErrorLabel.TabIndex = 17;
@@ -486,9 +486,9 @@
             // repassError
             // 
             repassError.Image = (Image)resources.GetObject("repassError.Image");
-            repassError.Location = new Point(34, 2);
+            repassError.Location = new Point(0, 0);
             repassError.Name = "repassError";
-            repassError.Size = new Size(203, 27);
+            repassError.Size = new Size(150, 27);
             repassError.TabIndex = 0;
             repassError.TabStop = false;
             // 

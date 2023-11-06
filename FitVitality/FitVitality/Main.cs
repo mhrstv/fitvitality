@@ -146,12 +146,6 @@ namespace FitVitality
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
         }
-
-        private void buttonSettings_Click(object sender, EventArgs e)
-        {
-            loadForm(new Settings());
-        }
-
         private void topbar_Paint(object sender, PaintEventArgs e)
         {
 
@@ -168,6 +162,21 @@ namespace FitVitality
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             loadForm(new home());
+        }
+
+        private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
+        {
+            settingsButton.BackColor = Color.Silver;
+        }
+
+        private void pictureBox1_MouseLeave_1(object sender, EventArgs e)
+        {
+            settingsButton.BackColor = Color.White;
+        }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            loadForm(new Settings());
         }
     }
 }

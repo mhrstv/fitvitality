@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -3150,40 +3150,26 @@
         N5SakFUyfYvYOclC61XvRxJKTciqef/If1DpdTSJ+AHP+7dUIt3luQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="emailError.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMgAAAAaCAYAAADyrhO6AAAABGdBTUEAALGPC/xhBQAAAWNJREFUeF7t
-        m61OA2EQRSEYJA+AARwEgSLBYco78AQ8BD/hDQggUdUkBF+BRiF5EcA0GfYO63ZYdlg3e05yRrQ1t7nT
-        ZpPvWzEA+BUWBKCH2gvy+WV2eWe2c2K2tt+k3UWMVT/UE/VFvWmpuyAfTcij0+4XgfiX6o3601B3QS5u
-        u8ERh3p17zWquyD6u4yCIw5xe+Y1qrsgPHPgGNWfhroLEoVGzKga+axIFBgxo2rksyJRYMSMqpHPikSB
-        ETOqRj4rEgVGzKga+axIFBgxo2rksyJRYMSMqpHPikSBETOqRj4rEgVGzKga+axIFBgxo2rksyIcNcEx
-        lj9qwmFFHONW9cOK5xx3xxHq4lRD3QXhwhT+10lcmBJcucWhqh+TunIL0+Xhsf8H8ezabLlsP9wPCwI1
-        eVqYrR90l0PPpglYEKjLy6vZxuHPYqzumd3M2zeGw4JAbd7ezTaPzebP7QsZzL4BkdA6s7Qe5WAAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
   <data name="passError.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAARkAAAAgCAYAAAAmEgzGAAAABGdBTUEAALGPC/xhBQAAAYRJREFUeF7t
-        3cEqRHEYhvEp2SgW9lyAYqEoltyFC8Bd4D6srG2m1OyklK2VnWLBdbz6mrHQYTl5v3eep35panbn34uz
-        OGek9N4/pfMrafNYWtqWRluAnzqbdUbPLqdnNqjskZk8Sqt7wwsKOKszW2c3pNyRefuQ1vaHFxDooIam
-        znBAuSNzejG8cEAn9W9+QLkjs3E0vGhAJ3WPJqDckeEmL7qrMxxQ7sj8dtGAbgJiZABnATEygLOAGBnA
-        WUCMDOAsIEYGcBYQIwM4C4iRAZwFxMgAzgJiZABnATEygLOAGBnAWUCMDOAsIEYGcBYQIwM4C4iRAZwF
-        lDsyPLQK3fHQKvN4/Ca64/Gb5vEgcXRXZzig3JGp10nwziV0xStRmsTL3dARL3drVr3ys179WfdouBkM
-        V3U264zWWQ35C+a7/JEh+o+ub//+pba8I92MZ1/Mj5Ehmlfje2ll9+fA1Oe7h9kXFiNGhmiePT1L6wfT
-        gamf9XnBYmSI5t3Lq3R4Mv25cElf4OByeIptFHIAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAALQAAAAhCAYAAABwZoHCAAAABGdBTUEAALGPC/xhBQAAAXhJREFUeF7t
+        3EEuRFEQheEWTAQDCzDXwkCQMDVlAxaAXdCrsgALYcA6yj3O6+jOLYk28Sr5K/kKqWf2p9OjN4nFefuI
+        eJhF7F9FrB9FTKbA+KhNNXr/5GYX5jvo55eInbP+n4ExU7NqdxgH/foesXvePwxUoKjVcBsHfffYPwRU
+        oq/KbRz09mn/AFCJGm7joLMHgGqUsndyBKpRyt7JEahGKXsnR6AapeydHIFqlLJ3cgSqUcreyRGoRil7
+        J0egGqXsnRyBapSyd3IEqlHK3skRqEYpeydHoBql7J0cgWqUsndyBKpRyt7JEahGKXsnR6AapeydHIFq
+        lLJ3cgSqUcreyRGoRil/bd7Bgeo2WsNtHPTBdf8AUIkabuOg9U6DtcP+IaACtbv0Xg6N3j5D1KhGzXZv
+        TpqP3hM2veE7NcZPjarV4ZN5PstBM8x/zU8fopvHwwO/G4JmxjNbJ8sx6+8Vh6CZcc3ehWPWzz8MQTPj
+        m8vb4ZdVJ+ITDgaqjmcUsE4AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="repassError.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAMgAAAAaCAYAAADyrhO6AAAABGdBTUEAALGPC/xhBQAAAWNJREFUeF7t
-        m61OA2EQRSEYJA+AARwEgSLBYco78AQ8BD/hDQggUdUkBF+BRiF5EcA0GfYO63ZYdlg3e05yRrQ1t7nT
-        ZpPvWzEA+BUWBKCH2gvy+WV2eWe2c2K2tt+k3UWMVT/UE/VFvWmpuyAfTcij0+4XgfiX6o3601B3QS5u
-        u8ERh3p17zWquyD6u4yCIw5xe+Y1qrsgPHPgGNWfhroLEoVGzKga+axIFBgxo2rksyJRYMSMqpHPikSB
-        ETOqRj4rEgVGzKga+axIFBgxo2rksyJRYMSMqpHPikSBETOqRj4rEgVGzKga+axIFBgxo2rksyIcNcEx
-        lj9qwmFFHONW9cOK5xx3xxHq4lRD3QXhwhT+10lcmBJcucWhqh+TunIL0+Xhsf8H8ezabLlsP9wPCwI1
-        eVqYrR90l0PPpglYEKjLy6vZxuHPYqzumd3M2zeGw4JAbd7ezTaPzebP7QsZzL4BkdA6s7Qe5WAAAAAA
-        SUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAJYAAAAaCAYAAABVc6VBAAAABGdBTUEAALGPC/xhBQAAARRJREFUaEPt
+        mjFOw0AQRROlocwBaAgdUQoqJDqa5A6cIIcIQbkBAk6QG3DCwSP/SFl2bdZ4UvGe9GSttXb1ZFnamRjA
+        BSAsuAjlsPYfZrcbs9mq2XGHWNb78E68lx/kYT0+5y9A/E3v5ow0rJf3/AHEWl8/FVKz1LXFP2ulBxBr
+        XKwVUrPUtYV/Khyj9yPSsEqbEYcoCAtjFYSFsQrCwlgFYWGsgrAwVkFYGKsgLIxVEBbGKggLYxVpWBzp
+        4Bg7j3Q4hMYx3nQdQu8Ym8ERng38pWE5DPrhX+wd9DvBaDLW6H1UjybD/6XvQ7I9aFMdhAUpV/d5VP7v
+        PRDCgpz5QxvUdGn2dtTNYRAWlLl+Mjt+aTEUs2/WpwB89x3tvwAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="usrmark.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -161,6 +161,7 @@ namespace FitVitality
             string confirmPass = textBoxRepass.Text;
             if (isValidUsername(regUsername))
             {
+                user_Error = false;
                 validUsername = true;
                 usrmark.Visible = false;
                 userError.Visible = false;
@@ -177,6 +178,7 @@ namespace FitVitality
             }
             if (isValidEmail(regEmail))
             {
+                email_Error = false;
                 validEmail = true;
                 emailmark.Visible = false;
                 emailPanel.Visible = false;
@@ -187,12 +189,19 @@ namespace FitVitality
             {
                 email_Error = true;
                 emailmark.Visible = true;
+                emailError.Image = Properties.Resources.email21;
+                emailErrorLabel.Location = new Point(49, 5);
+                emailError.Location = new Point(45, 0);
+                emailError.Size = new Size(107, 27);
+                emailErrorLabel.Size = new Size(96, 14);
+                emailErrorLabel.Text = "Email is not valid!";
                 textBoxEmail.Text = "";
                 textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }
             if (isValidPassword(regPassword))
             {
+                password_Error = false;
                 validPassword = true;
                 passmark.Visible = false;
                 passPanel.Visible = false;
@@ -214,10 +223,10 @@ namespace FitVitality
                 repassmark.Visible = true;
                 textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
-
             }
             else
             {
+                passMatch_Error = false;
                 passMatch = true;
                 repassmark.Visible = false;
                 repassErrorPanel.Visible = false;
@@ -233,6 +242,7 @@ namespace FitVitality
                     textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
                     if (!emailExists(regEmail))
                     {
+                        email_Error = false;
                         emailmark.Visible = false;
                         textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
                         textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
@@ -247,8 +257,13 @@ namespace FitVitality
                     }
                     else
                     {
+                        email_Error = true;
+                        emailError.Image = Properties.Resources.repassError;
+                        emailErrorLabel.Location = new Point(14, 5);
+                        emailError.Location = new Point(0, 0);
+                        emailError.Size = new Size(151, 27);
+                        emailErrorLabel.Size = new Size(122, 14);
                         emailmark.Visible = true;
-                        emailPanel.Visible = true;
                         emailErrorLabel.Text = "Email is already in use!";
                         textBoxEmail.Text = "";
                         textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
@@ -424,7 +439,6 @@ namespace FitVitality
             if (email_Error)
             {
                 emailPanel.Visible = true;
-                emailErrorLabel.Text = "Email is not valid!";
             }
 
         }

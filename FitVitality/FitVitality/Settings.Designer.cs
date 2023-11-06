@@ -433,6 +433,7 @@
             // 
             nameTextBox.Location = new Point(494, 77);
             nameTextBox.Name = "nameTextBox";
+            nameTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             nameTextBox.Size = new Size(100, 23);
             nameTextBox.TabIndex = 23;
             // 
@@ -440,6 +441,7 @@
             // 
             ageTextBox.Location = new Point(494, 106);
             ageTextBox.Name = "ageTextBox";
+            ageTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             ageTextBox.Size = new Size(100, 23);
             ageTextBox.TabIndex = 24;
             // 
@@ -447,6 +449,7 @@
             // 
             weightTextBox.Location = new Point(494, 165);
             weightTextBox.Name = "weightTextBox";
+            weightTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             weightTextBox.Size = new Size(100, 23);
             weightTextBox.TabIndex = 26;
             // 
@@ -454,6 +457,7 @@
             // 
             heightTextBox.Location = new Point(494, 195);
             heightTextBox.Name = "heightTextBox";
+            heightTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             heightTextBox.Size = new Size(100, 23);
             heightTextBox.TabIndex = 27;
             // 
@@ -527,10 +531,27 @@
             languageComboBox.Items.AddRange(new object[] { "Bulgarian", "English" });
             languageComboBox.Location = new Point(127, 78);
             languageComboBox.Name = "languageComboBox";
+            languageComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             languageComboBox.Size = new Size(121, 21);
+            languageComboBox.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             languageComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            languageComboBox.StateCommon.DropBack.Color1 = Color.Red;
-            languageComboBox.StateCommon.DropBack.Color2 = Color.Red;
+            languageComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
+            languageComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
+            languageComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            languageComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            languageComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            languageComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             languageComboBox.TabIndex = 32;
             languageComboBox.SelectedIndexChanged += languageComboBox_SelectedIndexChanged;
             // 
@@ -542,8 +563,26 @@
             genderComboBox.Items.AddRange(new object[] { "Male", "Female" });
             genderComboBox.Location = new Point(494, 136);
             genderComboBox.Name = "genderComboBox";
+            genderComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             genderComboBox.Size = new Size(100, 21);
             genderComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            genderComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
+            genderComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
+            genderComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            genderComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            genderComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            genderComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             genderComboBox.TabIndex = 33;
             // 
             // goalComboBox
@@ -554,8 +593,26 @@
             goalComboBox.Items.AddRange(new object[] { "Cut", "Maintain", "Bulk" });
             goalComboBox.Location = new Point(494, 225);
             goalComboBox.Name = "goalComboBox";
+            goalComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             goalComboBox.Size = new Size(100, 21);
             goalComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            goalComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
+            goalComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
+            goalComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            goalComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            goalComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            goalComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             goalComboBox.TabIndex = 34;
             // 
             // Settings

@@ -893,7 +893,7 @@
             // 
             // welcomeLabelTimer
             // 
-            welcomeLabelTimer.Interval = 5;
+            welcomeLabelTimer.Interval = 10;
             welcomeLabelTimer.Tick += timer1_Tick;
             // 
             // panelWelcome

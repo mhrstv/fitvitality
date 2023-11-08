@@ -65,7 +65,7 @@ namespace FitVitality
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             bool login = false;
-            string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             var cfg = new Config("FitVitality.ini");
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;

@@ -29,6 +29,8 @@ namespace FitVitality
         private string dbGoal;
         public string userID;
         private PictureBox pb;
+        string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
         public Settings()
         {
             InitializeComponent();
@@ -60,7 +62,6 @@ namespace FitVitality
             {
                 languageComboBox.SelectedItem = "English";
             }
-            string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -116,7 +117,6 @@ namespace FitVitality
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             string query = "DELETE FROM UserData WHERE UserID = @ID";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -208,7 +208,6 @@ namespace FitVitality
         }
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             var cfg = new Config("FitVitality.ini");
             dbName = nameTextBox.Text.ToString();
             dbAge = ageTextBox.Text;

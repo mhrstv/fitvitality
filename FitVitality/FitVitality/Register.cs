@@ -14,11 +14,13 @@ using System.Text.RegularExpressions;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Mail;
 using System.Runtime.CompilerServices;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace FitVitality
 {
     public partial class Register : KryptonForm
     {
+        public int userID;
         public bool opened;
         private bool mouseDown;
         private Point lastLocation;
@@ -72,14 +74,33 @@ namespace FitVitality
             {
                 connection.Open();
 
-                string query = "INSERT INTO UserData (Username, Email, Password) VALUES (@Username, @Email, @Password)";
+                string query = "INSERT INTO UserData (Username, Email, Password) OUTPUT INSERTED.UserID VALUES (@Username, @Email, @Password)";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
                     command.Parameters.AddWithValue("@Email", email);
                     command.Parameters.AddWithValue("@Password", password);
 
-                    command.ExecuteNonQuery();
+                    object result = command.ExecuteScalar();
+                    if (result != null)
+                    {
+                        userID = Convert.ToInt32(result);
+                    }
+                }
+            }
+            if (userID != null)
+            {
+                string query = "INSERT INTO UserSettings (UserID) VALUES (@UserID)";
+
+                using (SqlConnection connection = new SqlConnection(connectionstring))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", userID);
+                        command.ExecuteNonQuery();
+                    }
                 }
             }
         }

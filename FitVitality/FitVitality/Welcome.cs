@@ -16,103 +16,112 @@ namespace FitVitality
 {
     public partial class Welcome : KryptonForm
     {
-        List<Panel> listPanels = new List<Panel>();
-        private bool mouseDown;
-        private Point lastLocation;
-        int page = 0;
-        private bool female_Clicked = false;
-        private bool male_Clicked = false;
-        private bool cut_Clicked = false;
-        private bool maintain_Clicked = false;
-        private bool bulk_Clicked = false;
-        private string dbName;
-        private string dbAge;
-        private string dbGender;
-        private string dbWeight;
-        private string dbHeight;
-        private string dbGoal;
-        public string userID;
+        List<Panel> listPanels = new List<Panel>(); // Създаване на лист от панели (съответно страниците във формата)
+        int page = 0; // Променлива за сегашната страница
+
+        private bool mouseDown; // Променлива за проверка дали е натиснат бутон на мишката
+        private Point lastLocation; // Променлива за последната позиция на мишката
+
+
+        private bool female_Clicked = false; // Променлива за проверка дали е натиснат бутона за женски пол
+        private bool male_Clicked = false; // Променлива за проверка дали е натиснат бутона за мъжки пол
+        private bool cut_Clicked = false; // Променлива за проверка дали е натиснат бутона за цел, в случая Cut
+        private bool maintain_Clicked = false; // Променлива за проверка дали е натиснат бутона за цел, в случая Maintain
+        private bool bulk_Clicked = false; // Променлива за проверка дали е натиснат бутона за цел, в случая Bulk
+
+        private string dbName; // Променлива за името
+        private string dbAge; // Променлива за възрастта
+        private string dbGender; // Променлива за пола
+        private string dbWeight; // Променлива за теглото
+        private string dbHeight; // Променлива за височината
+        private string dbGoal; // Променлива за целта
+        public string userID; // Променлива за UserID
 
         public Welcome()
         {
             InitializeComponent();
         }
 
-        private void Welcome_Load(object sender, EventArgs e)
+        private void Welcome_Load(object sender, EventArgs e) // Анимация при зареждане на формата
         {
-            var cfg = new Config("FitVitality.ini");
-            userID = cfg.Read("UserID", "SETTINGS");
-            buttonPrevious.Visible = false;
-            buttonNext.Visible = false;
-            namePanel.Visible = false;
-            ageGender_Panel.Visible = false;
-            weightHeight_Panel.Visible = false;
-            goalPanel.Visible = false;
-            listPanels.Add(namePanel);
-            listPanels.Add(ageGender_Panel);
-            listPanels.Add(weightHeight_Panel);
-            listPanels.Add(goalPanel);
-            listPanels[page].BringToFront();
-            welcomeLabelTimer.Enabled = true;
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            userID = config.Read("UserID", "SETTINGS"); // Присвояване на UserID от конфигурационния файл
+
+            buttonPrevious.Visible = false; // Скриване на бутона за предишна страница
+            buttonNext.Visible = false; // Скриване на бутона за следваща страница
+            namePanel.Visible = false; // Скриване на панела за въвеждане на име
+            ageGender_Panel.Visible = false; // Скриване на панела за въвеждане на възраст и пол
+            weightHeight_Panel.Visible = false; // Скриване на панела за въвеждане на тегло и височина
+            goalPanel.Visible = false; // Скриване на панела за избор на цел
+            //
+            // Скрива панелите за да се изпълни анимацията
+            //
+            listPanels.Add(namePanel); // Добавяне на панела за въвеждане на име в листа с панели
+            listPanels.Add(ageGender_Panel); // Добавяне на панела за въвеждане на възраст и пол в листа с панели
+            listPanels.Add(weightHeight_Panel); // Добавяне на панела за въвеждане на тегло и височина в листа с панели
+            listPanels.Add(goalPanel); // Добавяне на панела за избор на цел в листа с панели
+            listPanels[page].BringToFront(); // Показване на първия панел от листа с панели
+
+            welcomeLabelTimer.Enabled = true; // Включване на таймера за анимация на надписа за добре дошли"
         }
 
-        private void buttonMin_Click(object sender, EventArgs e)
+        private void buttonMin_Click(object sender, EventArgs e) // Метод при натискане на бутона за минимизиране на формата
         {
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized; // Минимизиране на формата
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e) // Метод при натискане на бутона за затваряне на формата
         {
-            Application.Exit();
+            Application.Exit(); // Затваряне на програмата и всички нейни процеси
         }
 
-        private void buttonMin_MouseEnter(object sender, EventArgs e)
+        private void buttonMin_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за минимизиране на формата, цвета на бутона се променя
         {
-            buttonMin.BackColor = Color.Silver;
+            buttonMin.BackColor = Color.Silver; // Промяна на цвета на бутона
         }
 
-        private void buttonMin_MouseLeave(object sender, EventArgs e)
+        private void buttonMin_MouseLeave(object sender, EventArgs e) // При премахване на мишката от бутона за минимизиране на формата, цвета на бутона се връща към нормалния
         {
-            buttonMin.BackColor = Color.FromArgb(36, 41, 46);
+            buttonMin.BackColor = Color.FromArgb(36, 41, 46); // Промяна на цвета на бутона
         }
 
-        private void buttonClose_MouseEnter(object sender, EventArgs e)
+        private void buttonClose_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за затваряне на формата, цвета на бутона се променя
         {
-            buttonClose.BackColor = Color.IndianRed;
+            buttonClose.BackColor = Color.IndianRed; // Промяна на цвета на бутона
         }
 
-        private void buttonClose_MouseLeave(object sender, EventArgs e)
+        private void buttonClose_MouseLeave(object sender, EventArgs e) // При премахване на мишката от бутона за затваряне на формата, цвета на бутона се връща към нормалния
         {
-            buttonClose.BackColor = Color.FromArgb(36, 41, 46);
+            buttonClose.BackColor = Color.FromArgb(36, 41, 46); // Промяна на цвета на бутона
         }
 
-        private void topbar_MouseDown(object sender, MouseEventArgs e)
+        private void topbar_MouseDown(object sender, MouseEventArgs e) // Метод при натискане на бутона на мишката върху горната лента на формата (местене из екрана)
         {
-            mouseDown = true;
-            lastLocation = e.Location;
+            mouseDown = true; // Променливата mouseDown се променя на true
+            lastLocation = e.Location; // Променливата lastLocation се променя на последната позиция на мишката
         }
 
-        private void topbar_MouseMove(object sender, MouseEventArgs e)
+        private void topbar_MouseMove(object sender, MouseEventArgs e) // Метод при движение на мишката върху горната лента на формата (местене из екрана)
         {
-            if (mouseDown)
+            if (mouseDown) // Проверка дали е натиснат бутон на мишката
             {
                 this.Location = new Point(
-                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y); // Променяне на позицията на формата
 
-                this.Update();
+                this.Update(); // Обновяване на формата
             }
         }
 
-        private void topbar_MouseUp(object sender, MouseEventArgs e)
+        private void topbar_MouseUp(object sender, MouseEventArgs e) // Метод при отпускане на бутона на мишката върху горната лента на формата (местене из екрана)
         {
-            mouseDown = false;
+            mouseDown = false; // Променливата mouseDown се променя на false
         }
-        private void Welcome_Shown(object sender, EventArgs e)
+        private void Welcome_Shown(object sender, EventArgs e) // Метод за анимация при първо показване на формата
         {
-            this.Opacity = 0;
-            while (this.Opacity != 1)
+            this.Opacity = 0; // Прозрачността на формата се променя на 0
+            while (this.Opacity != 1) // Цикъл докато прозрачността на формата не стане 1
             {
-                this.Opacity += 0.00004;
+                this.Opacity += 0.00004; // Увеличаване на прозрачността на формата с 0.00004
             }
         }
 
@@ -126,221 +135,224 @@ namespace FitVitality
 
         }
 
-        private void buttonPrevious_Click(object sender, EventArgs e)
+        private void buttonPrevious_Click(object sender, EventArgs e) // Метод при натискане на бутона за предишна страница
         {
-            dbName = textBox_Name.Text.ToString();
-            helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
-            if (page > 0)
+            dbName = textBox_Name.Text.ToString(); // Присвояване на въведеното име в променливата dbName
+            helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!"; // Промяна на текста в надписа
+            if (page > 0) // Проверка дали сегашната страница е по-голяма от 0
             {
-                page--;
-                listPanels[page].BringToFront();
-                buttonNext.Visible = true;
+                page--; // Намаляне на сегашната страница с 1
+                listPanels[page].BringToFront(); // Показване на предишната страница
+                buttonNext.Visible = true; // Показване на бутона за следваща страница
             }
-            else if (page < listPanels.Count - 1)
+            else if (page < listPanels.Count - 1) // Проверка дали сегашната страница е по-малка от броя на страниците
             {
-                buttonPrevious.Visible = true;
+                buttonPrevious.Visible = true; // Показване на бутона за предишна страница
             }
-            if (page == 0)
+            if (page == 0) // Проверка дали сегашната страница е с индекс 0
             {
-                buttonPrevious.Visible = false;
-                currentPage.Image = Properties.Resources.firstPage;
+                buttonPrevious.Visible = false; // Скриване на бутона за предишна страница
+                currentPage.Image = Properties.Resources.firstPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
-            if (page == 1)
+            if (page == 1) // Проверка дали сегашната страница е с индекс 1
             {
-                currentPage.Image = Properties.Resources.secondPage;
+                currentPage.Image = Properties.Resources.secondPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
-            if (page == 2)
+            if (page == 2) // Проверка дали сегашната страница е с индекс 2
             {
-                currentPage.Image = Properties.Resources.thirdPage;
+                currentPage.Image = Properties.Resources.thirdPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
-            if (page == 3)
+            if (page == 3)// Проверка дали сегашната страница е с индекс 3
             {
-                currentPage.Image = Properties.Resources.fourthPage;
+                currentPage.Image = Properties.Resources.fourthPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
         }
 
-        private void buttonNext_Click(object sender, EventArgs e)
+        private void buttonNext_Click(object sender, EventArgs e) // Метод при натискане на бутона за следваща страница
         {
-            dbName = textBox_Name.Text.ToString();
-            helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!";
-            if (page < listPanels.Count - 1)
+            dbName = textBox_Name.Text.ToString(); // Присвояване на въведеното име в променливата dbName
+            helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!"; // Промяна на текста в надписа
+            if (page < listPanels.Count - 1) // Проверка дали сегашната страница е по-малка от броя на страниците
             {
-                page++;
-                listPanels[page].BringToFront();
-                buttonPrevious.Visible = true;
+                page++; // Увеличаване на сегашната страница с 1
+                listPanels[page].BringToFront(); // Показване на следващата страница
+                buttonPrevious.Visible = true; // Показване на бутона за предишна страница
             }
-            else if (page > 0)
+            else if (page > 0) // Проверява дали сегашната страница е по-голяма от 0
             {
-                buttonNext.Visible = true;
+                buttonNext.Visible = true; // Показване на бутона за следваща страница
             }
-            if (page == listPanels.Count - 1)
+            if (page == listPanels.Count - 1) // Проверка дали сегашната страница е с индекс равен на броя на страниците
             {
-                buttonNext.Visible = false;
+                buttonNext.Visible = false; // Скриване на бутона за следваща страница
             }
-            if (page == 1 && timerLabel3.Visible == false)
+            if (page == 1 && timerLabel3.Visible == false) // Проверка дали сегашната страница е с индекс 1 и дали таймера за анимация на надписа е изключен
             {
-                timerAge1.Enabled = true;
+                timerAge1.Enabled = true; // Включване на таймера за анимация на страницата за въвеждане на възраст и пол
             }
-            if (page == 2 && timerLabel2.Visible == false)
+            if (page == 2 && timerLabel2.Visible == false) // Проверка дали сегашната страница е с индекс 2 и дали таймера за анимация на надписа е изключен
             {
-                timerWeight1.Enabled = true;
+                timerWeight1.Enabled = true; // Включване на таймера за анимация на страницата за въвеждане на тегло и височина
             }
-            if (page == 3 && timerLabel.Visible == false)
+            if (page == 3 && timerLabel.Visible == false) // Проверка дали сегашната страница е с индекс 3 и дали таймера за анимация на надписа е изключен
             {
-                timerGoal1.Enabled = true;
+                timerGoal1.Enabled = true; // Включване на таймера за анимация на страницата за избор на цел
             }
-            if (page == 0)
+            if (page == 0) // Проверка дали сегашната страница е с индекс 0
             {
-                currentPage.Image = Properties.Resources.firstPage;
+                currentPage.Image = Properties.Resources.firstPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
-            if (page == 1)
+            if (page == 1) // Проверка дали сегашната страница е с индекс 1
             {
-                currentPage.Image = Properties.Resources.secondPage;
+                currentPage.Image = Properties.Resources.secondPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
-            if (page == 2)
+            if (page == 2) // Проверка дали сегашната страница е с индекс 2
             {
-                currentPage.Image = Properties.Resources.thirdPage;
+                currentPage.Image = Properties.Resources.thirdPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
-            if (page == 3)
+            if (page == 3) // Проверка дали сегашната страница е с индекс 3
             {
-                currentPage.Image = Properties.Resources.fourthPage;
+                currentPage.Image = Properties.Resources.fourthPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) // Таймер за анимация на надписа за добре дошли
         {
-            if (panelWelcome.Width <= 609)
+            if (panelWelcome.Width <= 609) // Проверка дали ширината на панела е по-малка от 609
             {
-                panelWelcome.Width += 6;
+                panelWelcome.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (panelWelcome.Width >= 609)
+            if (panelWelcome.Width >= 609) // Проверка дали ширината на панела е по-голяма от 609
             {
-                welcomeLabelTimer.Enabled = false;
-                Thread.Sleep(400);
-                timerName1.Enabled = true;
-                panelWelcome.Visible = false;
-                namePanel.Visible = true;
-                ageGender_Panel.Visible = true;
-                weightHeight_Panel.Visible = true;
-                goalPanel.Visible = true;
-                currentPage.Image = Properties.Resources.firstPage;
+                welcomeLabelTimer.Enabled = false; // Изключване на таймера
+                Thread.Sleep(500); // Паузира програмата за 0.5 секунди
+                timerName1.Enabled = true; // Включване на следващия таймер
+                panelWelcome.Visible = false; // Скриване на панела за добре дошли
+                namePanel.Visible = true; // Показване на панела за въвеждане на име
+                ageGender_Panel.Visible = true; // Показване на панела за въвеждане на възраст и пол
+                weightHeight_Panel.Visible = true; // Показване на панела за въвеждане на тегло и височина
+                goalPanel.Visible = true; // Показване на панела за избор на цел
+                currentPage.Image = Properties.Resources.firstPage; // Промяна на изображението на сегашната страница (долна снимка, представляваща номера на страницата, на която сте)
             }
         }
-        private bool validName(string name)
+        private bool validName(string name) // Метод за проверка на въведеното име
         {
-            foreach (char c in name)
+            foreach (char c in name) // Преминава през всеки символ от въведеното име
             {
-                if (!char.IsLetter(c))
+                if (!char.IsLetter(c)) // Проверка дали въведеното име съдържа само букви
                 {
-                    return false;
+                    return false; // Връща false ако името съдържа символи различни от букви
                 }
             }
-            return true;
+            return true; // Връща true ако името съдържа само букви
         }
-        private bool validAge(string age)
+        private bool validAge(string age) // Метод за проверка на въведената възраст
         {
-            foreach (char c in age)
+            foreach (char c in age) // Преминава през всеки символ от въведената възраст
             {
-                if (!char.IsNumber(c))
+                if (!char.IsNumber(c)) // Проверка дали въведената възраст съдържа само цифри
                 {
-                    return false;
+                    return false; // Връща false ако въведената възраст съдържа символи различни от цифри
                 }
             }
-            if (int.Parse(age) < 13 || int.Parse(age) > 120)
+            if (int.Parse(age) < 13 || int.Parse(age) > 120) // Проверка дали въведената възраст е между 13 и 120 години
             {
-                return false;
+                return false; // Връща false ако въведената възраст е по-малка от 13 или по-голяма от 120
             }
-            return true;
+            return true; // Връща true ако успешно премине през проверките в метода
         }
-        private bool validWeight(string weight)
+        private bool validWeight(string weight) // Метод за проверка на въведеното тегло
         {
-            foreach (char c in weight)
+            foreach (char c in weight) // Преминава през всеки символ от въведеното тегло
             {
-                if (!char.IsNumber(c))
+                if (!char.IsNumber(c)) // Проверка дали въведеното тегло съдържа само цифри
                 {
-                    return false;
+                    return false; // Връща false ако въведеното тегло съдържа символи различни от цифри
                 }
             }
-            if (double.Parse(weight) < 30.00 && double.Parse(weight) > 400.00)
+            if (double.Parse(weight) < 30.00 && double.Parse(weight) > 400.00) // Проверка дали въведеното тегло е между 30 и 400 килограма
             {
-                return false;
+                return false; // Връща false ако въведеното тегло е по-малко от 30 или по-голямо от 400
             }
-            return true;
+            return true; // Връща true ако успешно премине през проверките в метода
         }
-        private bool validHeight(string height)
+        private bool validHeight(string height) // Метод за проверка на въведената височина
         {
-            foreach (char c in height)
+            foreach (char c in height) // Преминава през всеки символ от въведената височина
             {
-                if (!char.IsNumber(c))
+                if (!char.IsNumber(c)) // Проверка дали въведената височина съдържа само цифри
                 {
-                    return false;
+                    return false; // Връща false ако въведената височина съдържа символи различни от цифри
                 }
             }
-            if (double.Parse(height) < 50 && double.Parse(height) > 300)
+            if (double.Parse(height) < 50 && double.Parse(height) > 300) // Проверка дали въведената височина е между 50 и 300 сантиметра
             {
-                return false;
+                return false; // Връща false ако въведената височина е по-малка от 50 или по-голяма от 300
             }
-            return true;
+            return true; // Връща true ако успешно премине през проверките в метода
         }
 
-        private void done_Click(object sender, EventArgs e)
+        private void done_Click(object sender, EventArgs e) // Метод за приключване на регистрацията
         {
             string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-            var cfg = new Config("FitVitality.ini");
-            dbName = textBox_Name.Text.ToString();
-            dbAge = textBox_Age.Text;
-            if (male_Clicked)
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            dbName = textBox_Name.Text.ToString(); // Присвояване на въведеното име в променливата dbName
+            dbAge = textBox_Age.Text; // Присвояване на въведената възраст в променливата dbAge
+            if (male_Clicked) // Проверка дали е натиснат бутона за мъжки пол
             {
-                dbGender = "Male";
+                dbGender = "Male"; // Присвоява съответно избраният пол в променливата dbGender
             }
             else
             {
-                dbGender = "Female";
+                dbGender = "Female"; // Присвоява съответно избраният пол в променливата dbGender
             }
-            dbWeight = textBox_Weight.Text;
-            dbHeight = textBox_Height.Text;
-            if (bulk_Clicked)
+            dbWeight = textBox_Weight.Text; // Присвояване на въведеното тегло в променливата dbWeight
+            dbHeight = textBox_Height.Text; // Присвояване на въведената височина в променливата dbHeight
+            if (bulk_Clicked) // Проверка дали е натиснат бутона за цел, в случая Bulk
             {
-                dbGoal = "Bulk";
+                dbGoal = "Bulk"; // Присвоява съответно избраната цел в променливата dbGoal
             }
-            else if (cut_Clicked)
+            else if (cut_Clicked) // Проверка дали е натиснат бутона за цел, в случая Cut
             {
-                dbGoal = "Cut";
+                dbGoal = "Cut"; // Присвоява съответно избраната цел в променливата dbGoal
             }
             else
             {
-                dbGoal = "Maintain";
+                dbGoal = "Maintain"; // Присвоява съответно избраната цел в променливата dbGoal
             }
-            if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && dbGender != "" && dbGoal != "")
+            if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && dbGender != "" && dbGoal != "") // Валидация за въведи данни чрез методи
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString)) // Създаване на връзка с базата данни
                 {
-                    connection.Open();
+                    connection.Open(); // Отваряне на връзката с базата данни
                     string query = "UPDATE UserSettings " +
                                "SET Name = @Name, Age = @Age, Gender = @Gender, Weight = @Weight, Height = @Height, Goal = @Goal " +
-                               "WHERE UserID = @UserID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                               "WHERE UserID = @UserID"; // Заявка за обновяване на данните в таблицата UserSettings
+                    using (SqlCommand command = new SqlCommand(query, connection)) // Създаване на команда за изпълнение на заявката
                     {
-                        int age = int.Parse(dbAge);
-                        double weight = double.Parse(dbWeight);
-                        weight = Math.Round(weight, 1);
-                        int height = int.Parse(dbHeight);
-                        command.Parameters.AddWithValue("@UserID", userID);
-                        command.Parameters.AddWithValue("@Name", dbName);
-                        command.Parameters.AddWithValue("@Age", age);
-                        command.Parameters.AddWithValue("@Gender", dbGender);
-                        command.Parameters.AddWithValue("@Weight", weight);
-                        command.Parameters.AddWithValue("@Height", height);
-                        command.Parameters.AddWithValue("@Goal", dbGoal);
-                        command.ExecuteNonQuery();
-                        Form1 main = new Form1();
-                        for (double i = this.Opacity; i >= 0; i = i - 0.00004)
+                        int age = int.Parse(dbAge); // Преобразуване на въведената възраст от стринг в инт
+                        double weight = double.Parse(dbWeight); // Преобразуване на въведеното тегло от стринг в дабъл(реално число)
+                        weight = Math.Round(weight, 1); // Закръгляне на въведеното тегло до 1 десетична запетая
+                        int height = int.Parse(dbHeight); // Преобразуване на въведената височина от стринг в инт
+                        command.Parameters.AddWithValue("@UserID", userID); // Добавяне на параметър за UserID
+                        command.Parameters.AddWithValue("@Name", dbName); // Добавяне на параметър за Name
+                        command.Parameters.AddWithValue("@Age", age); // Добавяне на параметър за Age
+                        command.Parameters.AddWithValue("@Gender", dbGender); // Добавяне на параметър за Gender
+                        command.Parameters.AddWithValue("@Weight", weight); // Добавяне на параметър за Weight
+                        command.Parameters.AddWithValue("@Height", height); // Добавяне на параметър за Height
+                        command.Parameters.AddWithValue("@Goal", dbGoal); // Добавяне на параметър за Goal
+                        command.ExecuteNonQuery(); // Изпълнение на командата
+                        //
+                        // При използването на по-горе въведените параметри се изгражда защита срещу SQL Injection!
+                        //
+                        Form1 main = new Form1(); // Създаване на обект от класа Form1 (главната форма [Main])
+                        for (double i = this.Opacity; i >= 0; i = i - 0.00004) // Анимация за затваряне на активната форма
                         {
                             this.Opacity = i;
                         }
-                        Thread.Sleep(500);
-                        this.Hide();
-                        main.Show();
+                        Thread.Sleep(500); // Паузира програмата за 0.5 секунди, създава се ефект на затъмняване и натоварване
+                        this.Hide(); // Скриване на активната форма
+                        main.Show(); // Показване на главната форма
                     }
                 }
             }
@@ -350,62 +362,62 @@ namespace FitVitality
             }
         }
 
-        private void timername1_Tick(object sender, EventArgs e)
+        private void timername1_Tick(object sender, EventArgs e) // Таймер за анимация на панела за въвеждане на име
         {
-            if (namePanel1.Width <= 482)
+            if (namePanel1.Width <= 482) // Проверка дали ширината на панела е по-малка от 482
             {
-                namePanel1.Width += 6;
+                namePanel1.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (namePanel1.Width >= 482)
+            if (namePanel1.Width >= 482) // Проверка дали ширината на панела е по-голяма от 482
             {
-                timerName1.Enabled = false;
-                timerName2.Enabled = true;
-            }
-        }
-
-        private void timerName_Tick(object sender, EventArgs e)
-        {
-            if (namePanel2.Width <= 142)
-            {
-                namePanel2.Width += 2;
-            }
-            if (namePanel2.Width >= 142)
-            {
-                timerName2.Enabled = false;
-                textBox_Name.Visible = true;
-                timerName3.Enabled = true;
+                timerName1.Enabled = false; // Изключване на таймера
+                timerName2.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void buttonPrevious_MouseEnter(object sender, EventArgs e)
+        private void timerName_Tick(object sender, EventArgs e) // Таймер за анимация на панела за въвеждане на име
         {
-            buttonPrevious.Image = Properties.Resources.previoustracked;
-        }
-
-        private void buttonPrevious_MouseLeave(object sender, EventArgs e)
-        {
-            buttonPrevious.Image = Properties.Resources.triangleprevious;
-        }
-
-        private void buttonNext_MouseEnter(object sender, EventArgs e)
-        {
-            buttonNext.Image = Properties.Resources.nexttracked;
-        }
-
-        private void buttonNext_MouseLeave(object sender, EventArgs e)
-        {
-            buttonNext.Image = Properties.Resources.trianglenext;
-        }
-
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox_Name.Text != "")
+            if (namePanel2.Width <= 142) // Проверка дали ширината на панела е по-малка от 142
             {
-                buttonNext.Visible = true;
+                namePanel2.Width += 2; // Увеличаване на ширината на панела с 2
+            }
+            if (namePanel2.Width >= 142)  // Проверка дали ширината на панела е по-голяма от 142
+            {
+                timerName2.Enabled = false; // Изключване на таймера
+                textBox_Name.Visible = true; // Показване на текстовото поле за въвеждане на име
+                timerName3.Enabled = true; // Включване на следващия таймер
+            }
+        }
+
+        private void buttonPrevious_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за предишна страница се анимира чрез снимка (Правена чрез Photoshop)
+        {
+            buttonPrevious.Image = Properties.Resources.previoustracked; // Промяна на изображението на бутона
+        }
+
+        private void buttonPrevious_MouseLeave(object sender, EventArgs e) // При премахване на мишката от бутона за предишна страница се връща нормалното състояние на снимката
+        {
+            buttonPrevious.Image = Properties.Resources.triangleprevious; // Промяна на изображението на бутона
+        }
+
+        private void buttonNext_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за следваща страница се анимира чрез снимка (Правена чрез Photoshop)
+        {
+            buttonNext.Image = Properties.Resources.nexttracked; // Промяна на изображението на бутона
+        }
+
+        private void buttonNext_MouseLeave(object sender, EventArgs e) // При премахване на мишката от бутона за следваща страница се връща нормалното състояние на снимката
+        {
+            buttonNext.Image = Properties.Resources.trianglenext; // Промяна на изображението на бутона
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e) // При въвеждане на текст в текстовото поле за име се проверява дали е празно
+        {
+            if (textBox_Name.Text != "") // Проверка дали текстовото поле за име не е празно
+            {
+                buttonNext.Visible = true; // Показване на бутона за следваща страница
             }
             else
             {
-                buttonNext.Visible = false;
+                buttonNext.Visible = false; // Скриване на бутона за следваща страница
             }
         }
 
@@ -414,158 +426,158 @@ namespace FitVitality
 
         }
 
-        private void male_Click(object sender, EventArgs e)
+        private void male_Click(object sender, EventArgs e) // Метод при натискане на бутона за мъжки пол
         {
-            maleButton.Image = Properties.Resources.malepressed1;
-            femaleButton.Image = Properties.Resources.female1;
-            male_Clicked = true;
-            female_Clicked = false;
+            maleButton.Image = Properties.Resources.malepressed1; // Промяна на изображението на бутона на натиснато състояние
+            femaleButton.Image = Properties.Resources.female1; // Промяна на изображението на бутона на нормално състояние
+            male_Clicked = true; // Променя променливата за натиснато състояние на бутона за мъжки пол на true
+            female_Clicked = false; // Променя променливата за натиснато състояние на бутона за женски пол на false
         }
 
-        private void female_Click(object sender, EventArgs e)
+        private void female_Click(object sender, EventArgs e) // Метод при натискане на бутона за женски пол
         {
-            femaleButton.Image = Properties.Resources.femalepressed1;
-            maleButton.Image = Properties.Resources.male1;
-            female_Clicked = true;
-            male_Clicked = false;
+            femaleButton.Image = Properties.Resources.femalepressed1; // Промяна на изображението на бутона на натиснато състояние
+            maleButton.Image = Properties.Resources.male1; // Промяна на изображението на бутона на нормално състояние
+            female_Clicked = true; // Променя променливата за натиснато състояние на бутона за женски пол на true
+            male_Clicked = false; // Променя променливата за натиснато състояние на бутона за мъжки пол на false
         }
 
-        private void male_MouseEnter(object sender, EventArgs e)
+        private void male_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за мъжки пол се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!male_Clicked)
+            if (!male_Clicked) // Проверка дали бутона за мъжки пол не е натиснат
             {
-                maleButton.Image = Properties.Resources.maletracked1;
-            }
-        }
-
-        private void female_MouseEnter(object sender, EventArgs e)
-        {
-            if (!female_Clicked)
-            {
-                femaleButton.Image = Properties.Resources.femaletracked1;
+                maleButton.Image = Properties.Resources.maletracked1; // Промяна на изображението на бутона ( анимация )
             }
         }
 
-        private void male_MouseLeave(object sender, EventArgs e)
+        private void female_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за женски пол се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!male_Clicked)
+            if (!female_Clicked) // Проверка дали бутона за женски пол не е натиснат
             {
-                maleButton.Image = Properties.Resources.male1;
+                femaleButton.Image = Properties.Resources.femaletracked1; // Промяна на изображението на бутона ( анимация )
             }
         }
 
-        private void female_MouseLeave(object sender, EventArgs e)
+        private void male_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за мъжки пол се връща в нормално състояние
         {
-            if (!female_Clicked)
+            if (!male_Clicked) // Проверка дали бутона за мъжки пол не е натиснат
             {
-                femaleButton.Image = Properties.Resources.female1;
+                maleButton.Image = Properties.Resources.male1; // Промяна на изображението на бутона ( нормално състояние )
             }
         }
 
-        private void timerage1_Tick(object sender, EventArgs e)
+        private void female_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за женски пол се връща в нормално състояние
         {
-            if (helloPanel.Width <= 378)
+            if (!female_Clicked) // Проверка дали бутона за женски пол не е натиснат
             {
-                helloPanel.Width += 6;
-            }
-            if (helloPanel.Width >= 378)
-            {
-                timerAge1.Enabled = false;
-                timerAge2.Enabled = true;
+                femaleButton.Image = Properties.Resources.female1; // Промяна на изображението на бутона ( нормално състояние )
             }
         }
 
-        private void timerage2_Tick(object sender, EventArgs e)
+        private void timerage1_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
         {
-            if (ageGenderPanel1.Width <= 427)
+            if (helloPanel.Width <= 378) // Проверка дали ширината на панела е по-малка от 378
             {
-                ageGenderPanel1.Width += 6;
+                helloPanel.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (ageGenderPanel1.Width >= 427)
+            if (helloPanel.Width >= 378) // Проверка дали ширината на панела  е по-голяма от 378
             {
-                timerAge2.Enabled = false;
-                timerAge3.Enabled = true;
+                timerAge1.Enabled = false; // Изключване на таймера
+                timerAge2.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerage3_Tick(object sender, EventArgs e)
+        private void timerage2_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
         {
-            if (ageGenderPanel2.Width <= 121)
+            if (ageGenderPanel1.Width <= 427) // Проверка дали ширината на панела е по-малка от 427
             {
-                ageGenderPanel2.Width += 6;
+                ageGenderPanel1.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (ageGenderPanel2.Width >= 121)
+            if (ageGenderPanel1.Width >= 427) // Проверка дали ширината на панела е по-голяма от 427
             {
-                timerAge3.Enabled = false;
-                textBox_Age.Visible = true;
-                timerAge4.Enabled = true;
+                timerAge2.Enabled = false; // Изключване на таймера
+                timerAge3.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerage4_Tick(object sender, EventArgs e)
+        private void timerage3_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
         {
-            if (ageGenderPanel3.Width <= 147)
+            if (ageGenderPanel2.Width <= 121) // Проверка дали ширината на панела е по-малка от 121
             {
-                ageGenderPanel3.Width += 6;
+                ageGenderPanel2.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (ageGenderPanel3.Width >= 147)
+            if (ageGenderPanel2.Width >= 121) // Проверка дали ширината на панела е по-голяма от 121
             {
-                timerAge4.Enabled = false;
-                timerAge5.Enabled = true;
+                timerAge3.Enabled = false; // Изключване на таймера
+                textBox_Age.Visible = true; // Показване на текстовото поле за въвеждане на възраст
+                timerAge4.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerWeight1_Tick(object sender, EventArgs e)
+        private void timerage4_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
         {
-            if (weightHeightPanel1.Width <= 320)
+            if (ageGenderPanel3.Width <= 147) // Проверка дали ширината на панела е по-малка от 147
             {
-                weightHeightPanel1.Width += 6;
+                ageGenderPanel3.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (weightHeightPanel1.Width >= 320)
+            if (ageGenderPanel3.Width >= 147) // Проверка дали ширината на панела е по-голяма от 147
             {
-                timerWeight1.Enabled = false;
-                timerWeight2.Enabled = true;
+                timerAge4.Enabled = false; // Изключване на таймера
+                timerAge5.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerWeight2_Tick(object sender, EventArgs e)
+        private void timerWeight1_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
         {
-            if (weightHeightPanel2.Width <= 420)
+            if (weightHeightPanel1.Width <= 320) // Проверка дали ширината на панела е по-малка от 320
             {
-                weightHeightPanel2.Width += 6;
+                weightHeightPanel1.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (weightHeightPanel2.Width >= 420)
+            if (weightHeightPanel1.Width >= 320) // Проверка дали ширината на панела е по-голяма от 320
             {
-                timerWeight2.Enabled = false;
-                timerWeight3.Enabled = true;
+                timerWeight1.Enabled = false; // Изключване на таймера
+                timerWeight2.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerWeight3_Tick(object sender, EventArgs e)
+        private void timerWeight2_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
         {
-            if (weightHeightPanel3.Width <= 180)
+            if (weightHeightPanel2.Width <= 420) // Проверка дали ширината на панела е по-малка от 420
             {
-                weightHeightPanel3.Width += 6;
+                weightHeightPanel2.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (weightHeightPanel3.Width >= 180)
+            if (weightHeightPanel2.Width >= 420) // Проверка дали ширината на панела е по-голяма от 420
             {
-                timerWeight3.Enabled = false;
-                textBox_Weight.Visible = true;
-                timerWeight4.Enabled = true;
+                timerWeight2.Enabled = false; // Изключване на таймера
+                timerWeight3.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerWeight4_Tick(object sender, EventArgs e)
+        private void timerWeight3_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
         {
-            if (weightHeightPanel4.Width <= 130)
+            if (weightHeightPanel3.Width <= 180) // Проверка дали ширината на панела е по-малка от 180
             {
-                weightHeightPanel4.Width += 6;
+                weightHeightPanel3.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (weightHeightPanel4.Width >= 130)
+            if (weightHeightPanel3.Width >= 180) // Проверка дали ширината на панела е по-голяма от 180
             {
-                timerWeight4.Enabled = false;
-                textBox_Height.Visible = true;
-                timerWeight5.Enabled = true;
+                timerWeight3.Enabled = false; // Изключване на таймера
+                textBox_Weight.Visible = true; // Показване на текстовото поле за въвеждане на тегло
+                timerWeight4.Enabled = true; // Включване на следващия таймер
+            }
+        }
+
+        private void timerWeight4_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
+        {
+            if (weightHeightPanel4.Width <= 130) // Проверка дали ширината на панела е по-малка от 130
+            {
+                weightHeightPanel4.Width += 6; // Увеличаване на ширината на панела с 6
+            }
+            if (weightHeightPanel4.Width >= 130) // Проверка дали ширината на панела е по-голяма от 130
+            {
+                timerWeight4.Enabled = false; // Изключване на таймера
+                textBox_Height.Visible = true; // Показване на текстовото поле за въвеждане на височина
+                timerWeight5.Enabled = true; // Включване на следващия таймер
             }
         }
 
@@ -584,198 +596,198 @@ namespace FitVitality
 
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e) // Метод при натискането на бутона за цел Bulk
         {
-            buttonBulk.Image = Properties.Resources.gainPressed;
-            buttonCut.Image = Properties.Resources.loseNormal;
-            buttonMaintain.Image = Properties.Resources.maintainNormal;
-            bulk_Clicked = true;
-            maintain_Clicked = false;
-            cut_Clicked = false;
+            buttonBulk.Image = Properties.Resources.gainPressed; // Промяна на изображението на бутона на натиснато състояние
+            buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона на нормално състояние
+            buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона на нормално състояние
+            bulk_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Bulk на true
+            maintain_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Maintain на false
+            cut_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Cut на false
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e) // Метод при натискането на бутона за цел Cut
         {
-            buttonBulk.Image = Properties.Resources.gainNormal;
-            buttonCut.Image = Properties.Resources.losePressed;
-            buttonMaintain.Image = Properties.Resources.maintainNormal;
-            bulk_Clicked = false;
-            maintain_Clicked = false;
-            cut_Clicked = true;
+            buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона на нормално състояние
+            buttonCut.Image = Properties.Resources.losePressed; // Промяна на изображението на бутона на натиснато състояние
+            buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона на нормално състояние
+            bulk_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Bulk на false
+            maintain_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Maintain на false
+            cut_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Cut на true
         }
 
-        private void buttonMaintain_Click(object sender, EventArgs e)
+        private void buttonMaintain_Click(object sender, EventArgs e) // Метод при натискането на бутона за цел Maintain
         {
-            buttonBulk.Image = Properties.Resources.gainNormal;
-            buttonCut.Image = Properties.Resources.loseNormal;
-            buttonMaintain.Image = Properties.Resources.maintainPressed;
-            bulk_Clicked = false;
-            maintain_Clicked = true;
-            cut_Clicked = false;
+            buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона на нормално състояние
+            buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона на нормално състояние
+            buttonMaintain.Image = Properties.Resources.maintainPressed; // Промяна на изображението на бутона на натиснато състояние
+            bulk_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Bulk на false
+            maintain_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Maintain на true
+            cut_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Cut на false
         }
 
-        private void buttonCut_MouseEnter(object sender, EventArgs e)
+        private void buttonCut_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за цел Cut се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!cut_Clicked)
+            if (!cut_Clicked) // Проверка дали бутона за цел Cut не е натиснат
             {
-                buttonCut.Image = Properties.Resources.loseTracked;
-            }
-        }
-
-        private void buttonCut_MouseLeave(object sender, EventArgs e)
-        {
-            if (!cut_Clicked)
-            {
-                buttonCut.Image = Properties.Resources.loseNormal;
+                buttonCut.Image = Properties.Resources.loseTracked; // Промяна на изображението на бутона ( анимация )
             }
         }
 
-        private void buttonMaintain_MouseEnter(object sender, EventArgs e)
+        private void buttonCut_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за цел Cut се връща в нормално състояние
         {
-            if (!maintain_Clicked)
+            if (!cut_Clicked) // Проверка дали бутона за цел Cut не е натиснат
             {
-                buttonMaintain.Image = Properties.Resources.maintainTracked;
+                buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона ( нормално състояние )
             }
         }
 
-        private void buttonMaintain_MouseLeave(object sender, EventArgs e)
+        private void buttonMaintain_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за цел Maintain се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!maintain_Clicked)
+            if (!maintain_Clicked) // Проверка дали бутона за цел Maintain не е натиснат
             {
-                buttonMaintain.Image = Properties.Resources.maintainNormal;
+                buttonMaintain.Image = Properties.Resources.maintainTracked; // Промяна на изображението на бутона ( анимация )
             }
         }
 
-        private void buttonBulk_MouseEnter(object sender, EventArgs e)
+        private void buttonMaintain_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за цел Maintain се връща в нормално състояние
         {
-            if (!bulk_Clicked)
+            if (!maintain_Clicked) // Проверка дали бутона за цел Maintain не е натиснат
             {
-                buttonBulk.Image = Properties.Resources.gainTracked;
+                buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона ( нормално състояние )
             }
         }
 
-        private void buttonBulk_MouseLeave(object sender, EventArgs e)
+        private void buttonBulk_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за цел Bulk се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!bulk_Clicked)
+            if (!bulk_Clicked) // Проверка дали бутона за цел Bulk не е натиснат
             {
-                buttonBulk.Image = Properties.Resources.gainNormal;
+                buttonBulk.Image = Properties.Resources.gainTracked; // Промяна на изображението на бутона ( анимация )
             }
         }
 
-        private void timerGoal1_Tick(object sender, EventArgs e)
+        private void buttonBulk_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за цел Bulk се връща в нормално състояние
         {
-            if (goalPanel1.Width <= 278)
+            if (!bulk_Clicked) // Проверка дали бутона за цел Bulk не е натиснат
             {
-                goalPanel1.Width += 6;
-            }
-            if (goalPanel1.Width >= 278)
-            {
-                timerGoal1.Enabled = false;
-                timerGoal2.Enabled = true;
+                buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона ( нормално състояние )
             }
         }
 
-        private void timerGoal2_Tick(object sender, EventArgs e)
+        private void timerGoal1_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на цел
         {
-            if (goalsPanel.Height <= 133)
+            if (goalPanel1.Width <= 278) // Проверка дали ширината на панела е по-малка от 278
             {
-                goalsPanel.Height += 6;
+                goalPanel1.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (goalsPanel.Height >= 133)
+            if (goalPanel1.Width >= 278) // Проверка дали ширината на панела е по-голяма от 278
             {
-                timerGoal2.Enabled = false;
-                timerLabel.Visible = true;
-                doneButton.Visible = true;
+                timerGoal1.Enabled = false; // Изключване на таймера
+                timerGoal2.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerWeight5_Tick(object sender, EventArgs e)
+        private void timerGoal2_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на цел
         {
-            if (info2_Panel.Width <= 179)
+            if (goalsPanel.Height <= 133) // Проверка дали височината на панела е по-малка от 133
             {
-                info2_Panel.Width += 6;
+                goalsPanel.Height += 6; // Увеличаване на височината на панела с 6
             }
-            if (info2_Panel.Width >= 179)
+            if (goalsPanel.Height >= 133) // Проверка дали височината на панела е по-голяма от 133
             {
-                timerWeight5.Enabled = false;
-                timerWeight6.Enabled = true;
+                timerGoal2.Enabled = false; // Изключване на таймера
+                timerLabel.Visible = true; // Показване на надписа, служещ за индикатор на анимациите
+                doneButton.Visible = true; // Показване на бутона за завършване на регистрацията
             }
         }
 
-        private void timerWeight6_Tick(object sender, EventArgs e)
+        private void timerWeight5_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
         {
-            if (info1_Panel.Width <= 309)
+            if (info2_Panel.Width <= 179) // Проверка дали ширината на панела е по-малка от 179
             {
-                info1_Panel.Width += 6;
+                info2_Panel.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (info1_Panel.Width >= 309)
+            if (info2_Panel.Width >= 179) // Проверка дали ширината на панела е по-голяма от 179
             {
-                timerWeight6.Enabled = false;
-                timerWeight7.Enabled = true;
+                timerWeight5.Enabled = false; // Изключване на таймера
+                timerWeight6.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerWeight7_Tick(object sender, EventArgs e)
+        private void timerWeight6_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
         {
-            if (info3_Panel.Width <= 309)
+            if (info1_Panel.Width <= 309) // Проверка дали ширината на панела е по-малка от 309
             {
-                info3_Panel.Width += 6;
+                info1_Panel.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (info3_Panel.Width >= 309)
+            if (info1_Panel.Width >= 309) // Проверка дали ширината на панела е по-голяма от 309
             {
-                timerWeight7.Enabled = false;
-                timerLabel2.Visible = true;
+                timerWeight6.Enabled = false; // Изключване на таймера
+                timerWeight7.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerAge5_Tick(object sender, EventArgs e)
+        private void timerWeight7_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
         {
-            if (genderPanel.Height <= 40)
+            if (info3_Panel.Width <= 309) // Проверка дали ширината на панела е по-малка от 309
             {
-                genderPanel.Height += 5;
+                info3_Panel.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (genderPanel.Height >= 40)
+            if (info3_Panel.Width >= 309) // Проверка дали ширината на панела е по-голяма от 309
             {
-                timerAge5.Enabled = false;
-                timerAge6.Enabled = true;
+                timerWeight7.Enabled = false; // Изключване на таймера
+                timerLabel2.Visible = true; // Показване на надписа, служещ за индикатор на анимациите
             }
         }
 
-        private void timerAge6_Tick(object sender, EventArgs e)
+        private void timerAge5_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
         {
-            if (info1_ageGender_Panel.Width <= 309)
+            if (genderPanel.Height <= 40) // Проверка дали височината на панела е по-малка от 40
             {
-                info1_ageGender_Panel.Width += 5;
+                genderPanel.Height += 5; // Увеличаване на височината на панела с 5
             }
-            if (info1_ageGender_Panel.Width >= 309)
+            if (genderPanel.Height >= 40) // Проверка дали височината на панела е по-голяма от 40
             {
-                timerAge6.Enabled = false;
-                timerAge7.Enabled = true;
+                timerAge5.Enabled = false; // Изключване на таймера
+                timerAge6.Enabled = true; // Включване на следващия таймер
             }
         }
 
-        private void timerAge7_Tick(object sender, EventArgs e)
+        private void timerAge6_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
         {
-            if (info2_ageGender_Panel.Width <= 309)
+            if (info1_ageGender_Panel.Width <= 309) // Проверка дали ширината на панела е по-малка от 309
             {
-                info2_ageGender_Panel.Width += 5;
+                info1_ageGender_Panel.Width += 5; // Увеличаване на ширината на панела с 5
             }
-            if (info2_ageGender_Panel.Width >= 309)
+            if (info1_ageGender_Panel.Width >= 309) // Проверка дали ширината на панела е по-голяма от 309
             {
-                timerAge7.Enabled = false;
-                timerLabel3.Visible = true;
+                timerAge6.Enabled = false; // Изключване на таймера
+                timerAge7.Enabled = true; // Включване на следващия таймер
+            }
+        }
+
+        private void timerAge7_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
+        {
+            if (info2_ageGender_Panel.Width <= 309) // Проверка дали ширината на панела е по-малка от 309
+            {
+                info2_ageGender_Panel.Width += 5; // Увеличаване на ширината на панела с 5
+            }
+            if (info2_ageGender_Panel.Width >= 309) // Проверка дали ширината на панела е по-голяма от 309
+            {
+                timerAge7.Enabled = false; // Изключване на таймера
+                timerLabel3.Visible = true; // Показване на надписа, служещ за индикатор на анимациите
             }
         }
 
         private void timerName3_Tick(object sender, EventArgs e)
         {
-            if (panel_nameUsage.Width <= 482)
+            if (panel_nameUsage.Width <= 482) // Проверка дали ширината на панела е по-малка от 482
             {
-                panel_nameUsage.Width += 8;
+                panel_nameUsage.Width += 8; // Увеличаване на ширината на панела с 8
             }
-            if (panel_nameUsage.Width >= 482)
+            if (panel_nameUsage.Width >= 482) // Проверка дали ширината на панела е по-голяма от 482
             {
-                timerName3.Enabled = false;
+                timerName3.Enabled = false; // Изключване на таймера
             }
         }
     }

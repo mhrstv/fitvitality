@@ -128,34 +128,11 @@ namespace FitVitality
             }
             if (login)
             {
-                using (SqlConnection connection2 = new SqlConnection(connectionString))
-                {
-                    connection2.Open();
-                    string queryIDCheck = "SELECT UserID FROM UserSettings WHERE UserID = @UserID";
-                    string queryID = "INSERT INTO UserSettings (UserID) VALUES (@UserID)";
+                
 
-                    using (SqlCommand command2 = new SqlCommand(queryIDCheck, connection2))
-                    {
-                        command2.Parameters.AddWithValue("@UserID", userID);
-                        using (SqlDataReader reader = command2.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                string readID = reader["UserID"].ToString();
-                                if (readID != userID)
-                                {
-                                    SqlCommand commandInputID = new SqlCommand(queryID, connection2);
-                                    commandInputID.Parameters.AddWithValue("@UserID", userID);
-                                    commandInputID.ExecuteNonQuery();
-                                }
-                            }
-                        }
-                    }
-                }
-
-                using (SqlConnection connection3 = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    connection3.Open();
+                    connection.Open();
                     string checkData = "SELECT COUNT(*) FROM UserSettings " +
                                        "WHERE UserID = @UserID " +
                                        "AND Name IS NOT NULL " +
@@ -164,7 +141,7 @@ namespace FitVitality
                                        "AND Weight IS NOT NULL " +
                                        "AND Height IS NOT NULL " +
                                        "AND Goal IS NOT NULL ";
-                    using (SqlCommand commandCheckData = new SqlCommand(checkData, connection3))
+                    using (SqlCommand commandCheckData = new SqlCommand(checkData, connection))
                     {
                         commandCheckData.Parameters.AddWithValue("@UserID", userID);
                         int count = (int)commandCheckData.ExecuteScalar();

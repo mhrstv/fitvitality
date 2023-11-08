@@ -271,7 +271,7 @@
             // 
             // textBox_Name
             // 
-            textBox_Name.CueHint.CueHintText = "ex. \"John Doe\"";
+            textBox_Name.CueHint.CueHintText = "ex. \"John\"";
             textBox_Name.CueHint.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             textBox_Name.CueHint.Padding = new Padding(0);
             textBox_Name.CueHint.TextH = Krypton.Toolkit.PaletteRelativeAlign.Center;

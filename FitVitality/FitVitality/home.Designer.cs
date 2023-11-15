@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
             bmicalc_label = new Label();
             bmi_label = new Label();
             bmicategory_label = new Label();
             bmi_panel = new Panel();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
             bmi_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // bmicalc_label
@@ -49,12 +55,13 @@
             // bmi_label
             // 
             bmi_label.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            bmi_label.Location = new Point(52, 133);
+            bmi_label.Location = new Point(61, 140);
             bmi_label.Name = "bmi_label";
-            bmi_label.Size = new Size(156, 23);
+            bmi_label.Size = new Size(138, 23);
             bmi_label.TabIndex = 1;
             bmi_label.Text = "{BMI}";
             bmi_label.TextAlign = ContentAlignment.MiddleCenter;
+            bmi_label.Click += bmi_label_Click;
             // 
             // bmicategory_label
             // 
@@ -68,13 +75,45 @@
             // 
             // bmi_panel
             // 
+            bmi_panel.Controls.Add(label1);
+            bmi_panel.Controls.Add(pictureBox2);
             bmi_panel.Controls.Add(bmi_label);
+            bmi_panel.Controls.Add(pictureBox1);
             bmi_panel.Controls.Add(bmicategory_label);
             bmi_panel.Controls.Add(bmicalc_label);
             bmi_panel.Location = new Point(418, 12);
             bmi_panel.Name = "bmi_panel";
             bmi_panel.Size = new Size(260, 164);
             bmi_panel.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(109, 116);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(48, 21);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(61, 70);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(138, 88);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(13, 55);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 15);
+            label1.TabIndex = 5;
+            label1.Text = "label1";
             // 
             // home
             // 
@@ -90,6 +129,8 @@
             Load += home_Load;
             bmi_panel.ResumeLayout(false);
             bmi_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -99,5 +140,8 @@
         private Label bmi_label;
         private Label bmicategory_label;
         private Panel bmi_panel;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private Label label1;
     }
 }

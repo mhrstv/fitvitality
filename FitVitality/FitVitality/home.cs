@@ -76,9 +76,9 @@ namespace FitVitality
             bmi = Math.Round((Convert.ToDouble(weight) / Math.Pow(Convert.ToDouble(height) / 100, 2)), 2);
             bmi_label.Text = $"BMI = {bmi.ToString()} kg/m²";
             double percentages = Math.Round((((double)bmi - 16) / 24) * 100, 0);
-            if(percentages < 0)
+            if (percentages < 0)
                 percentages = 0;
-            else if(percentages > 100)
+            else if (percentages > 100)
                 percentages = 100;
             label1.Text = percentages.ToString();
             if (age < 20 && age > 2)

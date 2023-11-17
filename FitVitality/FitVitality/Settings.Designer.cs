@@ -43,8 +43,8 @@
             deletePanel = new PictureBox();
             appSettings_label = new Label();
             accSettings_label = new Label();
-            label1 = new Label();
-            label2 = new Label();
+            langLabel = new Label();
+            themeLabel = new Label();
             nameLabel = new Label();
             ageLabel = new Label();
             genderLabel = new Label();
@@ -349,25 +349,25 @@
             accSettings_label.TabIndex = 13;
             accSettings_label.Text = "Account Settings";
             // 
-            // label1
+            // langLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(48, 81);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 16);
-            label1.TabIndex = 14;
-            label1.Text = "Language";
+            langLabel.AutoSize = true;
+            langLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            langLabel.Location = new Point(48, 81);
+            langLabel.Name = "langLabel";
+            langLabel.Size = new Size(63, 16);
+            langLabel.TabIndex = 14;
+            langLabel.Text = "Language";
             // 
-            // label2
+            // themeLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(65, 124);
-            label2.Name = "label2";
-            label2.Size = new Size(46, 16);
-            label2.TabIndex = 15;
-            label2.Text = "Theme";
+            themeLabel.AutoSize = true;
+            themeLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            themeLabel.Location = new Point(65, 124);
+            themeLabel.Name = "themeLabel";
+            themeLabel.Size = new Size(46, 16);
+            themeLabel.TabIndex = 15;
+            themeLabel.Text = "Theme";
             // 
             // nameLabel
             // 
@@ -635,8 +635,8 @@
             Controls.Add(genderLabel);
             Controls.Add(ageLabel);
             Controls.Add(nameLabel);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(themeLabel);
+            Controls.Add(langLabel);
             Controls.Add(accSettings_label);
             Controls.Add(appSettings_label);
             Controls.Add(panel1);
@@ -673,8 +673,8 @@
         private Panel panel3;
         private Label appSettings_label;
         private Label accSettings_label;
-        private Label label1;
-        private Label label2;
+        private Label langLabel;
+        private Label themeLabel;
         private Label nameLabel;
         private Label ageLabel;
         private Label genderLabel;

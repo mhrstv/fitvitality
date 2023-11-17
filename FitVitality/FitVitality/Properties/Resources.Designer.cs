@@ -63,6 +63,26 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrowFinal {
+            get {
+                object obj = ResourceManager.GetObject("arrowFinal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bmiFinal {
+            get {
+                object obj = ResourceManager.GetObject("bmiFinal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap closebutton {
             get {
                 object obj = ResourceManager.GetObject("closebutton", resourceCulture);
@@ -86,16 +106,6 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap closebuttonss {
             get {
                 object obj = ResourceManager.GetObject("closebuttonss", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dashboard3 {
-            get {
-                object obj = ResourceManager.GetObject("dashboard3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,16 +216,6 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap firstPage {
             get {
                 object obj = ResourceManager.GetObject("firstPage", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap fitvitality {
-            get {
-                object obj = ResourceManager.GetObject("fitvitality", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,46 +466,6 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap sett__1___1__removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("sett__1___1_-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sett_1_1 {
-            get {
-                object obj = ResourceManager.GetObject("sett_1_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap settings {
-            get {
-                object obj = ResourceManager.GetObject("settings", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap settings1 {
-            get {
-                object obj = ResourceManager.GetObject("settings1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap settingsbg {
-            get {
-                object obj = ResourceManager.GetObject("settingsbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

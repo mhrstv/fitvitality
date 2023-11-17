@@ -48,6 +48,24 @@ namespace FitVitality
             panel1.Height = 174;
             panel1.Width = 341;
             deleteAccButton.Visible = false;
+            appSettings_label.Visible = false;
+            accSettings_label.Visible = false;
+            langLabel.Visible = false;
+            languageComboBox.Visible = false;
+            themeLabel.Visible = false;
+            nameLabel.Visible = false;
+            ageLabel.Visible = false;
+            genderLabel.Visible = false;
+            goalLabel.Visible = false;
+            weightLabel.Visible = false;
+            heightLabel.Visible = false;
+            nameTextBox.Visible = false;
+            ageTextBox.Visible = false;
+            genderComboBox.Visible = false;
+            weightTextBox.Visible = false;
+            heightTextBox.Visible = false;
+            goalComboBox.Visible = false;
+            buttonSave.Visible = false;
         }
 
         private void Settings_Load(object sender, EventArgs e)
@@ -139,6 +157,24 @@ namespace FitVitality
         {
             panel1.Visible = false;
             deleteAccButton.Visible = true;
+            appSettings_label.Visible = true;
+            accSettings_label.Visible = true;
+            langLabel.Visible = true;
+            languageComboBox.Visible = true;
+            themeLabel.Visible = true;
+            nameLabel.Visible = true;
+            ageLabel.Visible = true;
+            genderLabel.Visible = true;
+            goalLabel.Visible = true;
+            weightLabel.Visible = true;
+            heightLabel.Visible = true;
+            nameTextBox.Visible = true;
+            ageTextBox.Visible = true;
+            genderComboBox.Visible = true;
+            weightTextBox.Visible = true;
+            heightTextBox.Visible = true;
+            goalComboBox.Visible = true;
+            buttonSave.Visible = true;
         }
 
         private void buttonClose_MouseEnter(object sender, EventArgs e)

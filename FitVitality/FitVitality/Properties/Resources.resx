@@ -127,14 +127,14 @@
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="femalepressed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\femalepressed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fitvitality" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fitvitality.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="male1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\male1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="female1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\female1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,6 +148,12 @@
   <data name="maximizebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximizebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="closebuttonss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closebuttonss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="male" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gainPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gainPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,11 +163,11 @@
   <data name="loseTracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loseTracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="secondPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\secondPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="femalepressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\femalepressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settingsbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settingsbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="malepressed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\malepressed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,26 +178,17 @@
   <data name="minimizebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="male1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\male1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="repassError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\repassError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="femaletracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\femaletracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sett__1___1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sett__1___1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmiFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmiFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="thirdPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thirdPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maintainNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maintainNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maletracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maletracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maletracked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maletracked1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gainNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gainNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,9 +199,6 @@
   <data name="closebuttonsenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closebuttonsenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashboard3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashboard3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="maintainPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maintainPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,17 +208,14 @@
   <data name="email2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sett_1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sett_1_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="errorReg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\errorReg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="femaletracked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\femaletracked1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FitVitalityLogo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FitVitalityLogo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="workout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\workout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fourthPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fourthPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,37 +223,34 @@
   <data name="errorReg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\errorReg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="workout" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\workout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="losePressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\losePressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="closebuttonss" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closebuttonss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maintainNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maintainNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="femalepressed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\femalepressed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="errorReg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\errorReg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loseNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loseNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="repassError" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\repassError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="femaletracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\femaletracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="female" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="male" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maletracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maletracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="triangleprevious" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\triangleprevious.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="secondPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\secondPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maletracked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maletracked1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sett__1___1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sett__1___1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrowFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrowFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

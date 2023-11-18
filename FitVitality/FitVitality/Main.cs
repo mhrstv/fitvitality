@@ -178,5 +178,10 @@ namespace FitVitality
         {
             loadForm(new Settings());
         }
+
+        private void buttonCalculators_Click(object sender, EventArgs e)
+        {
+            loadForm(new Calculators());
+        }
     }
 }

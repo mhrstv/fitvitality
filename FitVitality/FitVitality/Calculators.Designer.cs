@@ -133,6 +133,7 @@
             bmi_openButton.StateTracking.Border.Width = 1;
             bmi_openButton.TabIndex = 1;
             bmi_openButton.Values.Text = "Open";
+            bmi_openButton.Click += bmi_openButton_Click;
             // 
             // bmi_label
             // 

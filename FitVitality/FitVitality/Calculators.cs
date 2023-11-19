@@ -16,5 +16,10 @@ namespace FitVitality
         {
             InitializeComponent();
         }
+
+        private void bmi_openButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

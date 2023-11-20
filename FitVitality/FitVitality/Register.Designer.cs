@@ -40,16 +40,15 @@
             emailLabel = new Label();
             textBoxEmail = new Krypton.Toolkit.KryptonTextBox();
             topbar = new Panel();
-            pictureBox12 = new PictureBox();
             pictureBox4 = new PictureBox();
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox1 = new PictureBox();
+            hLine1 = new PictureBox();
+            rightCUp = new PictureBox();
             logo2 = new PictureBox();
             logo1 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            vLine1 = new PictureBox();
+            leftCUp = new PictureBox();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             repassLabel = new Label();
             textBoxRepass = new Krypton.Toolkit.KryptonTextBox();
@@ -72,23 +71,21 @@
             labelcreated = new Label();
             accCreated = new System.Windows.Forms.Timer(components);
             panelAccCreated = new Panel();
-            pictureBox8 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox9 = new PictureBox();
-            pictureBox10 = new PictureBox();
-            pictureBox11 = new PictureBox();
+            leftC = new PictureBox();
+            vLine3 = new PictureBox();
+            rightC = new PictureBox();
+            hLine2 = new PictureBox();
+            vLine2 = new PictureBox();
             topbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rightCUp).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)leftCUp).BeginInit();
             userError.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errPanel1).BeginInit();
             emailPanel.SuspendLayout();
@@ -102,12 +99,11 @@
             ((System.ComponentModel.ISupportInitialize)passmark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repassmark).BeginInit();
             panelAccCreated.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
             SuspendLayout();
             // 
             // buttonRegister
@@ -278,16 +274,15 @@
             // 
             // topbar
             // 
-            topbar.Controls.Add(pictureBox12);
             topbar.Controls.Add(pictureBox4);
             topbar.Controls.Add(buttonMin);
             topbar.Controls.Add(buttonClose);
-            topbar.Controls.Add(pictureBox5);
-            topbar.Controls.Add(pictureBox1);
+            topbar.Controls.Add(hLine1);
+            topbar.Controls.Add(rightCUp);
             topbar.Controls.Add(logo2);
             topbar.Controls.Add(logo1);
-            topbar.Controls.Add(pictureBox3);
-            topbar.Controls.Add(pictureBox2);
+            topbar.Controls.Add(vLine1);
+            topbar.Controls.Add(leftCUp);
             topbar.Location = new Point(0, 0);
             topbar.Name = "topbar";
             topbar.Size = new Size(287, 32);
@@ -297,19 +292,10 @@
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
             // 
-            // pictureBox12
-            // 
-            pictureBox12.Image = Properties.Resources.vline;
-            pictureBox12.Location = new Point(286, 12);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(1, 19);
-            pictureBox12.TabIndex = 16;
-            pictureBox12.TabStop = false;
-            // 
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.vline;
-            pictureBox4.Location = new Point(287, 12);
+            pictureBox4.Location = new Point(286, 12);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(1, 19);
             pictureBox4.TabIndex = 14;
@@ -343,23 +329,23 @@
             buttonClose.MouseEnter += pictureBox1_MouseEnter;
             buttonClose.MouseLeave += pictureBox1_MouseLeave;
             // 
-            // pictureBox5
+            // hLine1
             // 
-            pictureBox5.Image = Properties.Resources.hLine;
-            pictureBox5.Location = new Point(14, 0);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(260, 1);
-            pictureBox5.TabIndex = 15;
-            pictureBox5.TabStop = false;
+            hLine1.Image = Properties.Resources.hLine;
+            hLine1.Location = new Point(14, 0);
+            hLine1.Name = "hLine1";
+            hLine1.Size = new Size(260, 1);
+            hLine1.TabIndex = 15;
+            hLine1.TabStop = false;
             // 
-            // pictureBox1
+            // rightCUp
             // 
-            pictureBox1.Image = Properties.Resources.rightCUp;
-            pictureBox1.Location = new Point(272, 1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(16, 15);
-            pictureBox1.TabIndex = 13;
-            pictureBox1.TabStop = false;
+            rightCUp.Image = Properties.Resources.rightCUp;
+            rightCUp.Location = new Point(272, 1);
+            rightCUp.Name = "rightCUp";
+            rightCUp.Size = new Size(16, 15);
+            rightCUp.TabIndex = 13;
+            rightCUp.TabStop = false;
             // 
             // logo2
             // 
@@ -381,23 +367,23 @@
             logo1.TabIndex = 1;
             logo1.TabStop = false;
             // 
-            // pictureBox3
+            // vLine1
             // 
-            pictureBox3.Image = Properties.Resources.vline;
-            pictureBox3.Location = new Point(0, 15);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(1, 17);
-            pictureBox3.TabIndex = 12;
-            pictureBox3.TabStop = false;
+            vLine1.Image = Properties.Resources.vline;
+            vLine1.Location = new Point(0, 15);
+            vLine1.Name = "vLine1";
+            vLine1.Size = new Size(1, 17);
+            vLine1.TabIndex = 12;
+            vLine1.TabStop = false;
             // 
-            // pictureBox2
+            // leftCUp
             // 
-            pictureBox2.Image = Properties.Resources.leftCUp;
-            pictureBox2.Location = new Point(1, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(16, 15);
-            pictureBox2.TabIndex = 11;
-            pictureBox2.TabStop = false;
+            leftCUp.Image = Properties.Resources.leftCUp;
+            leftCUp.Location = new Point(1, 0);
+            leftCUp.Name = "leftCUp";
+            leftCUp.Size = new Size(16, 15);
+            leftCUp.TabIndex = 11;
+            leftCUp.TabStop = false;
             // 
             // kryptonPalette1
             // 
@@ -643,59 +629,50 @@
             panelAccCreated.Size = new Size(0, 15);
             panelAccCreated.TabIndex = 24;
             // 
-            // pictureBox8
+            // leftC
             // 
-            pictureBox8.Image = Properties.Resources.leftC;
-            pictureBox8.Location = new Point(0, 401);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(16, 15);
-            pictureBox8.TabIndex = 27;
-            pictureBox8.TabStop = false;
+            leftC.Image = Properties.Resources.leftC;
+            leftC.Location = new Point(0, 401);
+            leftC.Name = "leftC";
+            leftC.Size = new Size(16, 15);
+            leftC.TabIndex = 27;
+            leftC.TabStop = false;
             // 
-            // pictureBox7
+            // vLine3
             // 
-            pictureBox7.Image = Properties.Resources.logregVline;
-            pictureBox7.Location = new Point(0, 31);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(1, 370);
-            pictureBox7.TabIndex = 26;
-            pictureBox7.TabStop = false;
+            vLine3.Image = Properties.Resources.logregVline;
+            vLine3.Location = new Point(286, 31);
+            vLine3.Name = "vLine3";
+            vLine3.Size = new Size(1, 370);
+            vLine3.TabIndex = 29;
+            vLine3.TabStop = false;
             // 
-            // pictureBox6
+            // rightC
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(-1, 46);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(1, 355);
-            pictureBox6.TabIndex = 25;
-            pictureBox6.TabStop = false;
+            rightC.Image = Properties.Resources.rightC;
+            rightC.Location = new Point(272, 401);
+            rightC.Name = "rightC";
+            rightC.Size = new Size(16, 15);
+            rightC.TabIndex = 30;
+            rightC.TabStop = false;
             // 
-            // pictureBox9
+            // hLine2
             // 
-            pictureBox9.Image = Properties.Resources.logregVline;
-            pictureBox9.Location = new Point(286, 31);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(1, 370);
-            pictureBox9.TabIndex = 29;
-            pictureBox9.TabStop = false;
+            hLine2.Image = Properties.Resources.hLine;
+            hLine2.Location = new Point(16, 414);
+            hLine2.Name = "hLine2";
+            hLine2.Size = new Size(260, 1);
+            hLine2.TabIndex = 31;
+            hLine2.TabStop = false;
             // 
-            // pictureBox10
+            // vLine2
             // 
-            pictureBox10.Image = Properties.Resources.rightC;
-            pictureBox10.Location = new Point(272, 401);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(16, 15);
-            pictureBox10.TabIndex = 30;
-            pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Image = Properties.Resources.hLine;
-            pictureBox11.Location = new Point(16, 414);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(260, 1);
-            pictureBox11.TabIndex = 31;
-            pictureBox11.TabStop = false;
+            vLine2.Image = Properties.Resources.logregVline;
+            vLine2.Location = new Point(0, 32);
+            vLine2.Name = "vLine2";
+            vLine2.Size = new Size(1, 370);
+            vLine2.TabIndex = 32;
+            vLine2.TabStop = false;
             // 
             // Register
             // 
@@ -703,12 +680,11 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
-            Controls.Add(pictureBox11);
-            Controls.Add(pictureBox10);
-            Controls.Add(pictureBox9);
-            Controls.Add(pictureBox8);
-            Controls.Add(pictureBox7);
-            Controls.Add(pictureBox6);
+            Controls.Add(vLine2);
+            Controls.Add(hLine2);
+            Controls.Add(rightC);
+            Controls.Add(vLine3);
+            Controls.Add(leftC);
             Controls.Add(panelAccCreated);
             Controls.Add(repassmark);
             Controls.Add(passmark);
@@ -740,16 +716,15 @@
             Load += Register_Load;
             Shown += Register_Shown;
             topbar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rightCUp).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)leftCUp).EndInit();
             userError.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)errPanel1).EndInit();
             emailPanel.ResumeLayout(false);
@@ -765,12 +740,11 @@
             ((System.ComponentModel.ISupportInitialize)passmark).EndInit();
             ((System.ComponentModel.ISupportInitialize)repassmark).EndInit();
             panelAccCreated.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)leftC).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rightC).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -813,17 +787,15 @@
         private Label labelcreated;
         private System.Windows.Forms.Timer accCreated;
         private Panel panelAccCreated;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
+        private PictureBox vLine1;
+        private PictureBox leftCUp;
         private PictureBox pictureBox4;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox12;
+        private PictureBox rightCUp;
+        private PictureBox hLine1;
+        private PictureBox leftC;
+        private PictureBox vLine3;
+        private PictureBox rightC;
+        private PictureBox hLine2;
+        private PictureBox vLine2;
     }
 }

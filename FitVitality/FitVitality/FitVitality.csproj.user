@@ -4,6 +4,9 @@
     <Compile Update="Calculators.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Diet.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,6 +26,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Workouts.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

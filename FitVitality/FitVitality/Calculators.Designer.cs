@@ -43,7 +43,6 @@
             kryptonButton3 = new Krypton.Toolkit.KryptonButton();
             label5 = new Label();
             pictureBox8 = new PictureBox();
-            pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -54,7 +53,6 @@
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -438,15 +436,6 @@
             pictureBox8.TabIndex = 19;
             pictureBox8.TabStop = false;
             // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = Properties.Resources.vline;
-            pictureBox7.Location = new Point(0, 0);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(1, 357);
-            pictureBox7.TabIndex = 18;
-            pictureBox7.TabStop = false;
-            // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.rightC;
@@ -459,7 +448,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(-1, -1);
+            pictureBox5.Location = new Point(0, -1);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(1, 355);
             pictureBox5.TabIndex = 16;
@@ -499,7 +488,6 @@
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
             Controls.Add(pictureBox8);
-            Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
@@ -522,7 +510,6 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -548,7 +535,6 @@
         private Krypton.Toolkit.KryptonButton kryptonButton3;
         private Label label5;
         private PictureBox pictureBox8;
-        private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
         private PictureBox pictureBox4;

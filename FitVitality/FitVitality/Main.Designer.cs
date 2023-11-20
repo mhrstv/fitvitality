@@ -34,6 +34,7 @@
             buttonDashboard = new Krypton.Toolkit.KryptonButton();
             mainPanel = new Panel();
             topbar = new Panel();
+            dietButton = new Krypton.Toolkit.KryptonButton();
             settingsButton = new PictureBox();
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
@@ -41,22 +42,22 @@
             buttonHome = new Krypton.Toolkit.KryptonButton();
             logo2 = new PictureBox();
             logo1 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            hLine = new PictureBox();
+            vLine1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox1 = new PictureBox();
+            vLine2 = new PictureBox();
+            topRightC = new PictureBox();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)settingsButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)topRightC).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -165,6 +166,7 @@
             // 
             // topbar
             // 
+            topbar.Controls.Add(dietButton);
             topbar.Controls.Add(settingsButton);
             topbar.Controls.Add(buttonMin);
             topbar.Controls.Add(buttonClose);
@@ -173,11 +175,11 @@
             topbar.Controls.Add(buttonDashboard);
             topbar.Controls.Add(logo2);
             topbar.Controls.Add(logo1);
-            topbar.Controls.Add(pictureBox5);
-            topbar.Controls.Add(pictureBox3);
+            topbar.Controls.Add(hLine);
+            topbar.Controls.Add(vLine1);
             topbar.Controls.Add(pictureBox2);
-            topbar.Controls.Add(pictureBox4);
-            topbar.Controls.Add(pictureBox1);
+            topbar.Controls.Add(vLine2);
+            topbar.Controls.Add(topRightC);
             topbar.Dock = DockStyle.Top;
             topbar.Location = new Point(0, 0);
             topbar.Name = "topbar";
@@ -187,6 +189,71 @@
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
+            // 
+            // dietButton
+            // 
+            dietButton.CornerRoundingRadius = 15F;
+            dietButton.Location = new Point(263, 2);
+            dietButton.Name = "dietButton";
+            dietButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            dietButton.Size = new Size(42, 28);
+            dietButton.StateCommon.Back.Color1 = Color.White;
+            dietButton.StateCommon.Back.Color2 = Color.White;
+            dietButton.StateCommon.Back.ColorAngle = 45F;
+            dietButton.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            dietButton.StateCommon.Back.Image = Properties.Resources.dietButton;
+            dietButton.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.Tile;
+            dietButton.StateCommon.Border.Color1 = Color.Silver;
+            dietButton.StateCommon.Border.Color2 = Color.Silver;
+            dietButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            dietButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            dietButton.StateCommon.Border.Rounding = 15F;
+            dietButton.StateCommon.Content.Padding = new Padding(-1, 32, -1, -1);
+            dietButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dietButton.StateNormal.Back.Color1 = Color.FromArgb(250, 252, 252);
+            dietButton.StateNormal.Back.Color2 = Color.FromArgb(250, 252, 252);
+            dietButton.StateNormal.Back.ColorAngle = 45F;
+            dietButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            dietButton.StateNormal.Back.Image = Properties.Resources.dietButton;
+            dietButton.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            dietButton.StateNormal.Border.Color1 = Color.Transparent;
+            dietButton.StateNormal.Border.Color2 = Color.Transparent;
+            dietButton.StateNormal.Border.ColorAngle = 45F;
+            dietButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            dietButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            dietButton.StateNormal.Border.Rounding = 22F;
+            dietButton.StateNormal.Content.Padding = new Padding(-1, 32, -1, -1);
+            dietButton.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dietButton.StatePressed.Back.Color1 = Color.FromArgb(250, 252, 252);
+            dietButton.StatePressed.Back.Color2 = Color.FromArgb(250, 252, 252);
+            dietButton.StatePressed.Back.ColorAngle = 45F;
+            dietButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            dietButton.StatePressed.Back.Image = Properties.Resources.dietButton;
+            dietButton.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            dietButton.StatePressed.Border.Color1 = Color.Transparent;
+            dietButton.StatePressed.Border.Color2 = Color.Transparent;
+            dietButton.StatePressed.Border.ColorAngle = 45F;
+            dietButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            dietButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            dietButton.StatePressed.Border.Rounding = 10F;
+            dietButton.StatePressed.Content.Padding = new Padding(-1, 32, -1, -1);
+            dietButton.StatePressed.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dietButton.StateTracking.Back.Color1 = Color.FromArgb(224, 224, 224);
+            dietButton.StateTracking.Back.Color2 = Color.FromArgb(224, 224, 224);
+            dietButton.StateTracking.Back.ColorAngle = 45F;
+            dietButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            dietButton.StateTracking.Back.Image = Properties.Resources.dietButton;
+            dietButton.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            dietButton.StateTracking.Border.Color1 = Color.Transparent;
+            dietButton.StateTracking.Border.Color2 = Color.Transparent;
+            dietButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            dietButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            dietButton.StateTracking.Border.Rounding = 10F;
+            dietButton.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
+            dietButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dietButton.TabIndex = 12;
+            dietButton.Values.Text = "";
+            dietButton.Click += kryptonButton1_Click_2;
             // 
             // settingsButton
             // 
@@ -231,7 +298,7 @@
             // buttonCalculators
             // 
             buttonCalculators.CornerRoundingRadius = 15F;
-            buttonCalculators.Location = new Point(217, 3);
+            buttonCalculators.Location = new Point(218, 3);
             buttonCalculators.Name = "buttonCalculators";
             buttonCalculators.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             buttonCalculators.Size = new Size(42, 28);
@@ -380,23 +447,23 @@
             logo1.TabStop = false;
             logo1.Click += pictureBox3_Click;
             // 
-            // pictureBox5
+            // hLine
             // 
-            pictureBox5.Image = Properties.Resources.hLine;
-            pictureBox5.Location = new Point(12, 0);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(667, 1);
-            pictureBox5.TabIndex = 11;
-            pictureBox5.TabStop = false;
+            hLine.Image = Properties.Resources.hLine;
+            hLine.Location = new Point(12, 0);
+            hLine.Name = "hLine";
+            hLine.Size = new Size(667, 1);
+            hLine.TabIndex = 11;
+            hLine.TabStop = false;
             // 
-            // pictureBox3
+            // vLine1
             // 
-            pictureBox3.Image = Properties.Resources.vline;
-            pictureBox3.Location = new Point(0, 15);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(1, 17);
-            pictureBox3.TabIndex = 10;
-            pictureBox3.TabStop = false;
+            vLine1.Image = Properties.Resources.vline;
+            vLine1.Location = new Point(0, 15);
+            vLine1.Name = "vLine1";
+            vLine1.Size = new Size(1, 17);
+            vLine1.TabIndex = 10;
+            vLine1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -407,23 +474,23 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
-            // pictureBox4
+            // vLine2
             // 
-            pictureBox4.Image = Properties.Resources.vline;
-            pictureBox4.Location = new Point(689, 14);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(1, 17);
-            pictureBox4.TabIndex = 9;
-            pictureBox4.TabStop = false;
+            vLine2.Image = Properties.Resources.vline;
+            vLine2.Location = new Point(689, 14);
+            vLine2.Name = "vLine2";
+            vLine2.Size = new Size(1, 17);
+            vLine2.TabIndex = 9;
+            vLine2.TabStop = false;
             // 
-            // pictureBox1
+            // topRightC
             // 
-            pictureBox1.Image = Properties.Resources.rightCUp;
-            pictureBox1.Location = new Point(674, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(16, 15);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            topRightC.Image = Properties.Resources.rightCUp;
+            topRightC.Location = new Point(674, 0);
+            topRightC.Name = "topRightC";
+            topRightC.Size = new Size(16, 15);
+            topRightC.TabIndex = 0;
+            topRightC.TabStop = false;
             // 
             // Form1
             // 
@@ -463,11 +530,11 @@
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)topRightC).EndInit();
             ResumeLayout(false);
         }
 
@@ -484,10 +551,11 @@
         private Krypton.Toolkit.KryptonButton buttonHome;
         private PictureBox settingsButton;
         private Krypton.Toolkit.KryptonButton buttonCalculators;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
+        private PictureBox topRightC;
+        private PictureBox vLine2;
+        private PictureBox vLine1;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox5;
+        private PictureBox hLine;
+        private Krypton.Toolkit.KryptonButton dietButton;
     }
 }

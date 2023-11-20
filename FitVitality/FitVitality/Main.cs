@@ -58,7 +58,7 @@ namespace FitVitality
         }
         private void kryptonButton1_Click_1(object sender, EventArgs e)
         {
-
+            loadForm(new Workouts());
         }
         private void kryptonButton2_Click_3(object sender, EventArgs e)
         {
@@ -187,6 +187,11 @@ namespace FitVitality
         private void pictureBox1_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void kryptonButton1_Click_2(object sender, EventArgs e)
+        {
+            loadForm(new Diet());
         }
     }
 }

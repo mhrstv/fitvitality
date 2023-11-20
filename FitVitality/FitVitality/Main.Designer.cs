@@ -34,19 +34,29 @@
             buttonDashboard = new Krypton.Toolkit.KryptonButton();
             mainPanel = new Panel();
             topbar = new Panel();
-            buttonCalculators = new Krypton.Toolkit.KryptonButton();
             settingsButton = new PictureBox();
+            buttonMin = new PictureBox();
+            buttonClose = new PictureBox();
+            buttonCalculators = new Krypton.Toolkit.KryptonButton();
             buttonHome = new Krypton.Toolkit.KryptonButton();
             logo2 = new PictureBox();
             logo1 = new PictureBox();
-            buttonMin = new PictureBox();
-            buttonClose = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox1 = new PictureBox();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)settingsButton).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -68,7 +78,7 @@
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Rounding = 15F;
-            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Width = 5;
+            kryptonPalette1.FormStyles.FormMain.StateCommon.Border.Width = 1;
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
@@ -79,7 +89,7 @@
             // buttonDashboard
             // 
             buttonDashboard.CornerRoundingRadius = 15F;
-            buttonDashboard.Location = new Point(169, 2);
+            buttonDashboard.Location = new Point(169, 3);
             buttonDashboard.Name = "buttonDashboard";
             buttonDashboard.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             buttonDashboard.Size = new Size(42, 28);
@@ -155,14 +165,19 @@
             // 
             // topbar
             // 
-            topbar.Controls.Add(buttonCalculators);
             topbar.Controls.Add(settingsButton);
+            topbar.Controls.Add(buttonMin);
+            topbar.Controls.Add(buttonClose);
+            topbar.Controls.Add(buttonCalculators);
             topbar.Controls.Add(buttonHome);
             topbar.Controls.Add(buttonDashboard);
             topbar.Controls.Add(logo2);
             topbar.Controls.Add(logo1);
-            topbar.Controls.Add(buttonMin);
-            topbar.Controls.Add(buttonClose);
+            topbar.Controls.Add(pictureBox5);
+            topbar.Controls.Add(pictureBox3);
+            topbar.Controls.Add(pictureBox2);
+            topbar.Controls.Add(pictureBox4);
+            topbar.Controls.Add(pictureBox1);
             topbar.Dock = DockStyle.Top;
             topbar.Location = new Point(0, 0);
             topbar.Name = "topbar";
@@ -173,10 +188,50 @@
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
             // 
+            // settingsButton
+            // 
+            settingsButton.Image = (Image)resources.GetObject("settingsButton.Image");
+            settingsButton.Location = new Point(613, 8);
+            settingsButton.Name = "settingsButton";
+            settingsButton.Size = new Size(19, 19);
+            settingsButton.TabIndex = 5;
+            settingsButton.TabStop = false;
+            settingsButton.Click += settingsButton_Click;
+            settingsButton.MouseEnter += pictureBox1_MouseEnter_1;
+            settingsButton.MouseLeave += pictureBox1_MouseLeave_1;
+            // 
+            // buttonMin
+            // 
+            buttonMin.BackColor = Color.White;
+            buttonMin.Image = (Image)resources.GetObject("buttonMin.Image");
+            buttonMin.Location = new Point(638, 8);
+            buttonMin.Name = "buttonMin";
+            buttonMin.Size = new Size(19, 19);
+            buttonMin.SizeMode = PictureBoxSizeMode.CenterImage;
+            buttonMin.TabIndex = 2;
+            buttonMin.TabStop = false;
+            buttonMin.Click += pictureBox2_Click;
+            buttonMin.MouseEnter += pictureBox2_MouseEnter;
+            buttonMin.MouseLeave += pictureBox2_MouseLeave;
+            // 
+            // buttonClose
+            // 
+            buttonClose.BackColor = Color.White;
+            buttonClose.Image = Properties.Resources.closebutton;
+            buttonClose.Location = new Point(663, 8);
+            buttonClose.Name = "buttonClose";
+            buttonClose.Size = new Size(19, 19);
+            buttonClose.SizeMode = PictureBoxSizeMode.Zoom;
+            buttonClose.TabIndex = 1;
+            buttonClose.TabStop = false;
+            buttonClose.Click += pictureBox1_Click;
+            buttonClose.MouseEnter += pictureBox1_MouseEnter;
+            buttonClose.MouseLeave += pictureBox1_MouseLeave;
+            // 
             // buttonCalculators
             // 
             buttonCalculators.CornerRoundingRadius = 15F;
-            buttonCalculators.Location = new Point(217, 2);
+            buttonCalculators.Location = new Point(217, 3);
             buttonCalculators.Name = "buttonCalculators";
             buttonCalculators.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             buttonCalculators.Size = new Size(42, 28);
@@ -238,22 +293,10 @@
             buttonCalculators.Values.Text = "";
             buttonCalculators.Click += buttonCalculators_Click;
             // 
-            // settingsButton
-            // 
-            settingsButton.Image = (Image)resources.GetObject("settingsButton.Image");
-            settingsButton.Location = new Point(611, 7);
-            settingsButton.Name = "settingsButton";
-            settingsButton.Size = new Size(19, 19);
-            settingsButton.TabIndex = 5;
-            settingsButton.TabStop = false;
-            settingsButton.Click += settingsButton_Click;
-            settingsButton.MouseEnter += pictureBox1_MouseEnter_1;
-            settingsButton.MouseLeave += pictureBox1_MouseLeave_1;
-            // 
             // buttonHome
             // 
             buttonHome.CornerRoundingRadius = 15F;
-            buttonHome.Location = new Point(120, 2);
+            buttonHome.Location = new Point(120, 3);
             buttonHome.Name = "buttonHome";
             buttonHome.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             buttonHome.Size = new Size(42, 28);
@@ -337,43 +380,61 @@
             logo1.TabStop = false;
             logo1.Click += pictureBox3_Click;
             // 
-            // buttonMin
+            // pictureBox5
             // 
-            buttonMin.BackColor = Color.White;
-            buttonMin.Image = (Image)resources.GetObject("buttonMin.Image");
-            buttonMin.Location = new Point(636, 7);
-            buttonMin.Name = "buttonMin";
-            buttonMin.Size = new Size(19, 19);
-            buttonMin.SizeMode = PictureBoxSizeMode.CenterImage;
-            buttonMin.TabIndex = 2;
-            buttonMin.TabStop = false;
-            buttonMin.Click += pictureBox2_Click;
-            buttonMin.MouseEnter += pictureBox2_MouseEnter;
-            buttonMin.MouseLeave += pictureBox2_MouseLeave;
+            pictureBox5.Image = Properties.Resources.hLine;
+            pictureBox5.Location = new Point(12, 0);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(667, 1);
+            pictureBox5.TabIndex = 11;
+            pictureBox5.TabStop = false;
             // 
-            // buttonClose
+            // pictureBox3
             // 
-            buttonClose.BackColor = Color.White;
-            buttonClose.Image = Properties.Resources.closebutton;
-            buttonClose.Location = new Point(661, 7);
-            buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(19, 19);
-            buttonClose.SizeMode = PictureBoxSizeMode.Zoom;
-            buttonClose.TabIndex = 1;
-            buttonClose.TabStop = false;
-            buttonClose.Click += pictureBox1_Click;
-            buttonClose.MouseEnter += pictureBox1_MouseEnter;
-            buttonClose.MouseLeave += pictureBox1_MouseLeave;
+            pictureBox3.Image = Properties.Resources.vline;
+            pictureBox3.Location = new Point(0, 15);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(1, 17);
+            pictureBox3.TabIndex = 10;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.leftCUp;
+            pictureBox2.Location = new Point(1, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(16, 15);
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.vline;
+            pictureBox4.Location = new Point(689, 14);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(1, 17);
+            pictureBox4.TabIndex = 9;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.rightCUp;
+            pictureBox1.Location = new Point(674, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(16, 15);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            BackColor = Color.FromArgb(250, 252, 252);
+            BackColor = Color.White;
             ClientSize = new Size(690, 400);
             Controls.Add(topbar);
             Controls.Add(mainPanel);
             CornerRoundingRadius = 15F;
+            ForeColor = SystemColors.ControlText;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(1000, 600);
@@ -383,9 +444,12 @@
             Palette = kryptonPalette1;
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             StartPosition = FormStartPosition.CenterScreen;
+            StateCommon.Border.Color1 = Color.DarkGray;
+            StateCommon.Border.Color2 = Color.DarkGray;
             StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             StateCommon.Border.Rounding = 15F;
+            StateCommon.Border.Width = 1;
             Text = "FitVitality";
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
@@ -395,10 +459,15 @@
             MouseUp += Form1_MouseUp;
             topbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)settingsButton).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -415,5 +484,10 @@
         private Krypton.Toolkit.KryptonButton buttonHome;
         private PictureBox settingsButton;
         private Krypton.Toolkit.KryptonButton buttonCalculators;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox5;
     }
 }

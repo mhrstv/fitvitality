@@ -40,10 +40,16 @@
             emailLabel = new Label();
             textBoxEmail = new Krypton.Toolkit.KryptonTextBox();
             topbar = new Panel();
-            logo2 = new PictureBox();
-            logo1 = new PictureBox();
+            pictureBox12 = new PictureBox();
+            pictureBox4 = new PictureBox();
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            logo2 = new PictureBox();
+            logo1 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             repassLabel = new Label();
             textBoxRepass = new Krypton.Toolkit.KryptonTextBox();
@@ -66,11 +72,23 @@
             labelcreated = new Label();
             accCreated = new System.Windows.Forms.Timer(components);
             panelAccCreated = new Panel();
+            pictureBox8 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox9 = new PictureBox();
+            pictureBox10 = new PictureBox();
+            pictureBox11 = new PictureBox();
             topbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             userError.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errPanel1).BeginInit();
             emailPanel.SuspendLayout();
@@ -84,6 +102,12 @@
             ((System.ComponentModel.ISupportInitialize)passmark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repassmark).BeginInit();
             panelAccCreated.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
             // buttonRegister
@@ -254,10 +278,16 @@
             // 
             // topbar
             // 
-            topbar.Controls.Add(logo2);
-            topbar.Controls.Add(logo1);
+            topbar.Controls.Add(pictureBox12);
+            topbar.Controls.Add(pictureBox4);
             topbar.Controls.Add(buttonMin);
             topbar.Controls.Add(buttonClose);
+            topbar.Controls.Add(pictureBox5);
+            topbar.Controls.Add(pictureBox1);
+            topbar.Controls.Add(logo2);
+            topbar.Controls.Add(logo1);
+            topbar.Controls.Add(pictureBox3);
+            topbar.Controls.Add(pictureBox2);
             topbar.Location = new Point(0, 0);
             topbar.Name = "topbar";
             topbar.Size = new Size(287, 32);
@@ -267,25 +297,23 @@
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
             // 
-            // logo2
+            // pictureBox12
             // 
-            logo2.Image = (Image)resources.GetObject("logo2.Image");
-            logo2.Location = new Point(44, 9);
-            logo2.Name = "logo2";
-            logo2.Size = new Size(66, 20);
-            logo2.SizeMode = PictureBoxSizeMode.Zoom;
-            logo2.TabIndex = 1;
-            logo2.TabStop = false;
+            pictureBox12.Image = Properties.Resources.vline;
+            pictureBox12.Location = new Point(286, 12);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(1, 19);
+            pictureBox12.TabIndex = 16;
+            pictureBox12.TabStop = false;
             // 
-            // logo1
+            // pictureBox4
             // 
-            logo1.Image = (Image)resources.GetObject("logo1.Image");
-            logo1.Location = new Point(12, 8);
-            logo1.Name = "logo1";
-            logo1.Size = new Size(26, 24);
-            logo1.SizeMode = PictureBoxSizeMode.Zoom;
-            logo1.TabIndex = 1;
-            logo1.TabStop = false;
+            pictureBox4.Image = Properties.Resources.vline;
+            pictureBox4.Location = new Point(287, 12);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(1, 19);
+            pictureBox4.TabIndex = 14;
+            pictureBox4.TabStop = false;
             // 
             // buttonMin
             // 
@@ -314,6 +342,62 @@
             buttonClose.Click += pictureBox1_Click;
             buttonClose.MouseEnter += pictureBox1_MouseEnter;
             buttonClose.MouseLeave += pictureBox1_MouseLeave;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.hLine;
+            pictureBox5.Location = new Point(14, 0);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(260, 1);
+            pictureBox5.TabIndex = 15;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.rightCUp;
+            pictureBox1.Location = new Point(272, 1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(16, 15);
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
+            // 
+            // logo2
+            // 
+            logo2.Image = (Image)resources.GetObject("logo2.Image");
+            logo2.Location = new Point(44, 9);
+            logo2.Name = "logo2";
+            logo2.Size = new Size(66, 20);
+            logo2.SizeMode = PictureBoxSizeMode.Zoom;
+            logo2.TabIndex = 1;
+            logo2.TabStop = false;
+            // 
+            // logo1
+            // 
+            logo1.Image = (Image)resources.GetObject("logo1.Image");
+            logo1.Location = new Point(12, 8);
+            logo1.Name = "logo1";
+            logo1.Size = new Size(26, 24);
+            logo1.SizeMode = PictureBoxSizeMode.Zoom;
+            logo1.TabIndex = 1;
+            logo1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.vline;
+            pictureBox3.Location = new Point(0, 15);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(1, 17);
+            pictureBox3.TabIndex = 12;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.leftCUp;
+            pictureBox2.Location = new Point(1, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(16, 15);
+            pictureBox2.TabIndex = 11;
+            pictureBox2.TabStop = false;
             // 
             // kryptonPalette1
             // 
@@ -559,12 +643,72 @@
             panelAccCreated.Size = new Size(0, 15);
             panelAccCreated.TabIndex = 24;
             // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.leftC;
+            pictureBox8.Location = new Point(0, 401);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(16, 15);
+            pictureBox8.TabIndex = 27;
+            pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.logregVline;
+            pictureBox7.Location = new Point(0, 31);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(1, 370);
+            pictureBox7.TabIndex = 26;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(-1, 46);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(1, 355);
+            pictureBox6.TabIndex = 25;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = Properties.Resources.logregVline;
+            pictureBox9.Location = new Point(286, 31);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(1, 370);
+            pictureBox9.TabIndex = 29;
+            pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = Properties.Resources.rightC;
+            pictureBox10.Location = new Point(272, 401);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(16, 15);
+            pictureBox10.TabIndex = 30;
+            pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Image = Properties.Resources.hLine;
+            pictureBox11.Location = new Point(16, 414);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(260, 1);
+            pictureBox11.TabIndex = 31;
+            pictureBox11.TabStop = false;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(pictureBox11);
+            Controls.Add(pictureBox10);
+            Controls.Add(pictureBox9);
+            Controls.Add(pictureBox8);
+            Controls.Add(pictureBox7);
+            Controls.Add(pictureBox6);
             Controls.Add(panelAccCreated);
             Controls.Add(repassmark);
             Controls.Add(passmark);
@@ -596,10 +740,16 @@
             Load += Register_Load;
             Shown += Register_Shown;
             topbar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             userError.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)errPanel1).EndInit();
             emailPanel.ResumeLayout(false);
@@ -615,6 +765,12 @@
             ((System.ComponentModel.ISupportInitialize)passmark).EndInit();
             ((System.ComponentModel.ISupportInitialize)repassmark).EndInit();
             panelAccCreated.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -657,5 +813,17 @@
         private Label labelcreated;
         private System.Windows.Forms.Timer accCreated;
         private Panel panelAccCreated;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox9;
+        private PictureBox pictureBox10;
+        private PictureBox pictureBox11;
+        private PictureBox pictureBox12;
     }
 }

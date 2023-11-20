@@ -59,6 +59,13 @@
             languageComboBox = new Krypton.Toolkit.KryptonComboBox();
             genderComboBox = new Krypton.Toolkit.KryptonComboBox();
             goalComboBox = new Krypton.Toolkit.KryptonComboBox();
+            pictureBox8 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
@@ -67,6 +74,13 @@
             ((System.ComponentModel.ISupportInitialize)languageComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)genderComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)goalComboBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -615,12 +629,82 @@
             goalComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             goalComboBox.TabIndex = 34;
             // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.leftC;
+            pictureBox8.Location = new Point(0, 354);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(16, 15);
+            pictureBox8.TabIndex = 41;
+            pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.vline;
+            pictureBox7.Location = new Point(0, 0);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(1, 357);
+            pictureBox7.TabIndex = 40;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.rightC;
+            pictureBox6.Location = new Point(675, 354);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(16, 15);
+            pictureBox6.TabIndex = 39;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(-1, -1);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(1, 355);
+            pictureBox5.TabIndex = 38;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.vline;
+            pictureBox4.Location = new Point(689, 0);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(1, 357);
+            pictureBox4.TabIndex = 37;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.hLine;
+            pictureBox3.Location = new Point(12, 367);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(667, 1);
+            pictureBox3.TabIndex = 36;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.hLine;
+            pictureBox2.Location = new Point(13, 1);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(664, 1);
+            pictureBox2.TabIndex = 35;
+            pictureBox2.TabStop = false;
+            // 
             // Settings
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
+            Controls.Add(pictureBox8);
+            Controls.Add(pictureBox7);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
             Controls.Add(goalComboBox);
             Controls.Add(genderComboBox);
             Controls.Add(languageComboBox);
@@ -654,6 +738,13 @@
             ((System.ComponentModel.ISupportInitialize)languageComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)genderComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)goalComboBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -689,5 +780,12 @@
         private Krypton.Toolkit.KryptonComboBox languageComboBox;
         private Krypton.Toolkit.KryptonComboBox genderComboBox;
         private Krypton.Toolkit.KryptonComboBox goalComboBox;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
     }
 }

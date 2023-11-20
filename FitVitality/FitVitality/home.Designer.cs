@@ -41,10 +41,24 @@
             bmiPicture = new PictureBox();
             pictureBox1 = new PictureBox();
             rotationTimer = new System.Windows.Forms.Timer(components);
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            pictureBox8 = new PictureBox();
             bmi_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)arrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bmiPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // bmicalc_label
@@ -164,12 +178,83 @@
             // 
             rotationTimer.Tick += rotationTimer_Tick_1;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.hLine;
+            pictureBox2.Location = new Point(13, 1);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(664, 1);
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click_1;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.hLine;
+            pictureBox3.Location = new Point(12, 367);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(667, 1);
+            pictureBox3.TabIndex = 7;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.vline;
+            pictureBox4.Location = new Point(689, 0);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(1, 357);
+            pictureBox4.TabIndex = 8;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(-1, -1);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(1, 355);
+            pictureBox5.TabIndex = 9;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.rightC;
+            pictureBox6.Location = new Point(675, 354);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(16, 15);
+            pictureBox6.TabIndex = 10;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.vline;
+            pictureBox7.Location = new Point(0, 0);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(1, 357);
+            pictureBox7.TabIndex = 11;
+            pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.leftC;
+            pictureBox8.Location = new Point(0, 354);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(16, 15);
+            pictureBox8.TabIndex = 12;
+            pictureBox8.TabStop = false;
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            BackColor = Color.FromArgb(250, 252, 252);
+            BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(pictureBox8);
+            Controls.Add(pictureBox7);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
             Controls.Add(bmi_panel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "home";
@@ -181,6 +266,13 @@
             ((System.ComponentModel.ISupportInitialize)arrow).EndInit();
             ((System.ComponentModel.ISupportInitialize)bmiPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
@@ -197,5 +289,12 @@
         private Label per50;
         private System.Windows.Forms.Timer rotationTimer;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
     }
 }

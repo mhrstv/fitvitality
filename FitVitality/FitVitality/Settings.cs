@@ -27,13 +27,14 @@ namespace FitVitality
         private string dbWeight;
         private string dbHeight;
         private string dbGoal;
-        public string userID;
+        public string _userID;
         private PictureBox pb;
-        string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
-        public Settings()
+        public Settings(string userID)
         {
             InitializeComponent();
+            _userID = userID;
 
             pb = new PictureBox();
             panel1.Controls.Add(pb);
@@ -71,7 +72,7 @@ namespace FitVitality
         private void Settings_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
-            userID = cfg.Read("UserID", "SETTINGS");
+
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 languageComboBox.SelectedItem = "Bulgarian";
@@ -86,7 +87,7 @@ namespace FitVitality
                 string query = "SELECT * FROM UserSettings WHERE UserID = @UserID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@UserID", userID);
+                    command.Parameters.AddWithValue("@UserID", _userID);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
@@ -141,7 +142,7 @@ namespace FitVitality
                 connection.Open();
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@ID", userID);
+                    command.Parameters.AddWithValue("@ID", _userID);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         panel1.Visible = false;
@@ -283,7 +284,7 @@ namespace FitVitality
                         double weight = double.Parse(dbWeight);
                         weight = Math.Round(weight, 1);
                         int height = int.Parse(dbHeight);
-                        command.Parameters.AddWithValue("@UserID", userID);
+                        command.Parameters.AddWithValue("@UserID", _userID);
                         command.Parameters.AddWithValue("@Name", dbName);
                         command.Parameters.AddWithValue("@Age", age);
                         command.Parameters.AddWithValue("@Gender", dbGender);

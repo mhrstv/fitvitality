@@ -22,6 +22,8 @@ namespace FitVitality
         private bool mouseDown;
         private Point lastLocation;
         public string userID;
+        private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
         public Login()
         {
             InitializeComponent();
@@ -65,7 +67,6 @@ namespace FitVitality
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             bool login = false;
-            string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             var cfg = new Config("FitVitality.ini");
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;
@@ -109,7 +110,6 @@ namespace FitVitality
                                 }
 
                                 userID = reader["UserID"].ToString();
-                                cfg.Write("UserID", userID, "SETTINGS");
                             }
                             else
                             {
@@ -128,8 +128,6 @@ namespace FitVitality
             }
             if (login)
             {
-
-
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -168,7 +166,7 @@ namespace FitVitality
                             {
                                 this.Opacity = i;
                             }
-                            Welcome welcome = new Welcome();
+                            Welcome welcome = new Welcome(userID);
                             Thread.Sleep(500);
                             welcome.Show();
                             this.Hide();
@@ -196,7 +194,7 @@ namespace FitVitality
                             {
                                 this.Opacity = i;
                             }
-                            Form1 form = new Form1();
+                            Form1 form = new Form1(userID);
                             Thread.Sleep(500);
                             form.Show();
                             this.Hide();

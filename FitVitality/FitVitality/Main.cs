@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using Krypton.Toolkit;
 
@@ -15,6 +16,7 @@ namespace FitVitality
 {
     public partial class Form1 : KryptonForm
     {
+        private string _userID;
         public void loadForm(object Form)
         {
             if (this.mainPanel.Controls.Count > 0)
@@ -30,9 +32,10 @@ namespace FitVitality
         }
         private bool mouseDown;
         private Point lastLocation;
-        public Form1()
+        public Form1(string userID)
         {
             InitializeComponent();
+            _userID = userID;
         }
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -41,7 +44,7 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            loadForm(new home());
+            loadForm(new home(_userID));
         }
 
         private void Form1_Shown(object sender, EventArgs e)
@@ -161,7 +164,7 @@ namespace FitVitality
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            loadForm(new home());
+            loadForm(new home(_userID));
         }
 
         private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
@@ -176,7 +179,7 @@ namespace FitVitality
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            loadForm(new Settings());
+            loadForm(new Settings(_userID));
         }
 
         private void buttonCalculators_Click(object sender, EventArgs e)

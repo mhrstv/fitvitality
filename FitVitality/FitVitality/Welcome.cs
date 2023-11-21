@@ -35,18 +35,20 @@ namespace FitVitality
         private string dbWeight; // Променлива за теглото
         private string dbHeight; // Променлива за височината
         private string dbGoal; // Променлива за целта
-        public string userID; // Променлива за UserID
+        public string _userID; // Променлива за UserID
 
-        public Welcome()
+        private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+
+        public Welcome(string userID)
         {
             InitializeComponent();
+            _userID = userID;
         }
 
         private void Welcome_Load(object sender, EventArgs e) // Анимация при зареждане на формата
         {
             var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
-            userID = config.Read("UserID", "SETTINGS"); // Присвояване на UserID от конфигурационния файл
-
+            
             buttonPrevious.Visible = false; // Скриване на бутона за предишна страница
             buttonNext.Visible = false; // Скриване на бутона за следваща страница
             namePanel.Visible = false; // Скриване на панела за въвеждане на име
@@ -294,7 +296,6 @@ namespace FitVitality
 
         private void done_Click(object sender, EventArgs e) // Метод за приключване на регистрацията
         {
-            string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
             dbName = textBox_Name.Text.ToString(); // Присвояване на въведеното име в променливата dbName
             dbAge = textBox_Age.Text; // Присвояване на въведената възраст в променливата dbAge
@@ -334,7 +335,7 @@ namespace FitVitality
                         double weight = double.Parse(dbWeight); // Преобразуване на въведеното тегло от стринг в дабъл(реално число)
                         weight = Math.Round(weight, 1); // Закръгляне на въведеното тегло до 1 десетична запетая
                         int height = int.Parse(dbHeight); // Преобразуване на въведената височина от стринг в инт
-                        command.Parameters.AddWithValue("@UserID", userID); // Добавяне на параметър за UserID
+                        command.Parameters.AddWithValue("@UserID", _userID); // Добавяне на параметър за UserID
                         command.Parameters.AddWithValue("@Name", dbName); // Добавяне на параметър за Name
                         command.Parameters.AddWithValue("@Age", age); // Добавяне на параметър за Age
                         command.Parameters.AddWithValue("@Gender", dbGender); // Добавяне на параметър за Gender
@@ -345,7 +346,7 @@ namespace FitVitality
                         //
                         // При използването на по-горе въведените параметри се изгражда защита срещу SQL Injection!
                         //
-                        Form1 main = new Form1(); // Създаване на обект от класа Form1 (главната форма [Main])
+                        Form1 main = new Form1(_userID); // Създаване на обект от класа Form1 (главната форма [Main])
                         for (double i = this.Opacity; i >= 0; i = i - 0.00004) // Анимация за затваряне на активната форма
                         {
                             this.Opacity = i;

@@ -25,13 +25,14 @@ namespace FitVitality
         private string height;
         private string goal;
         private string unit_selection;
-        public string userID;
+        private string _userID;
         public double bmi;
         string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
-        public home()
+        public home(string userID)
         {
             InitializeComponent();
+            _userID = userID;
             originalImage = Properties.Resources.arrowFinal;
             currentRotation = 0;
             UpdateRotation();
@@ -72,14 +73,13 @@ namespace FitVitality
         private void home_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
-            userID = cfg.Read("UserID", "SETTINGS");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string query = "SELECT * FROM UserSettings WHERE UserID = @UserID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@UserID", userID);
+                    command.Parameters.AddWithValue("@UserID", _userID);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())
@@ -176,7 +176,7 @@ namespace FitVitality
                 string query = "SELECT * FROM UserSettings WHERE UserID = @UserID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@UserID", userID);
+                    command.Parameters.AddWithValue("@UserID", _userID);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         if (reader.Read())

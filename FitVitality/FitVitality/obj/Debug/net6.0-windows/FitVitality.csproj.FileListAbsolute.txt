@@ -232,3 +232,5 @@ E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitV
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Calculators.resources
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Workouts.resources
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Diet.resources
+E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Diet.resources
+E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Workouts.resources

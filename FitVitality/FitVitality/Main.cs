@@ -16,7 +16,7 @@ namespace FitVitality
 {
     public partial class Form1 : KryptonForm
     {
-        private string _userID;
+        public string _userID;
         public void loadForm(object Form)
         {
             if (this.mainPanel.Controls.Count > 0)

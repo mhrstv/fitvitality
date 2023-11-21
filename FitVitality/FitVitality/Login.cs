@@ -351,5 +351,19 @@ namespace FitVitality
                 kryptonButton1_Click(this, new EventArgs());
             }
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            if (passControl.Image == Properties.Resources.hidePass)
+            {
+                passControl.Image = Properties.Resources.showPass;
+                textBoxPassword.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                passControl.Image = Properties.Resources.hidePass;
+                textBoxPassword.UseSystemPasswordChar = false;
+            }
+        }
     }
 }

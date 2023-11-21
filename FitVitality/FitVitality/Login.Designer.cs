@@ -61,6 +61,7 @@
             pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
+            passControl = new PictureBox();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
@@ -80,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passControl).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -505,12 +507,24 @@
             pictureBox6.TabIndex = 35;
             pictureBox6.TabStop = false;
             // 
+            // passControl
+            // 
+            passControl.Image = Properties.Resources.hidePass;
+            passControl.Location = new Point(244, 253);
+            passControl.Name = "passControl";
+            passControl.Size = new Size(25, 23);
+            passControl.SizeMode = PictureBoxSizeMode.StretchImage;
+            passControl.TabIndex = 37;
+            passControl.TabStop = false;
+            passControl.Click += pictureBox12_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(passControl);
             Controls.Add(pictureBox7);
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox11);
@@ -568,6 +582,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passControl).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -605,5 +620,6 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox9;
         private PictureBox pictureBox4;
+        private PictureBox passControl;
     }
 }

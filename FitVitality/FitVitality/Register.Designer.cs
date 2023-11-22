@@ -40,7 +40,7 @@
             emailLabel = new Label();
             textBoxEmail = new Krypton.Toolkit.KryptonTextBox();
             topbar = new Panel();
-            pictureBox4 = new PictureBox();
+            rightCUp2 = new PictureBox();
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
             hLine1 = new PictureBox();
@@ -77,7 +77,7 @@
             hLine2 = new PictureBox();
             vLine2 = new PictureBox();
             topbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rightCUp2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
@@ -274,7 +274,7 @@
             // 
             // topbar
             // 
-            topbar.Controls.Add(pictureBox4);
+            topbar.Controls.Add(rightCUp2);
             topbar.Controls.Add(buttonMin);
             topbar.Controls.Add(buttonClose);
             topbar.Controls.Add(hLine1);
@@ -292,14 +292,14 @@
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
             // 
-            // pictureBox4
+            // rightCUp2
             // 
-            pictureBox4.Image = Properties.Resources.vline;
-            pictureBox4.Location = new Point(286, 12);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(1, 19);
-            pictureBox4.TabIndex = 14;
-            pictureBox4.TabStop = false;
+            rightCUp2.Image = Properties.Resources.vline;
+            rightCUp2.Location = new Point(286, 12);
+            rightCUp2.Name = "rightCUp2";
+            rightCUp2.Size = new Size(1, 19);
+            rightCUp2.TabIndex = 14;
+            rightCUp2.TabStop = false;
             // 
             // buttonMin
             // 
@@ -716,7 +716,7 @@
             Load += Register_Load;
             Shown += Register_Shown;
             topbar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rightCUp2).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
@@ -789,7 +789,7 @@
         private Panel panelAccCreated;
         private PictureBox vLine1;
         private PictureBox leftCUp;
-        private PictureBox pictureBox4;
+        private PictureBox rightCUp2;
         private PictureBox rightCUp;
         private PictureBox hLine1;
         private PictureBox leftC;

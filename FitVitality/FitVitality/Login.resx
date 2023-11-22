@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -3139,7 +3139,7 @@
         lZWVlZWVlZWVlZWVlZWVlZWVlZWVlZWVlVX06Ec/+n+P/Xzs3ALw8AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="logError.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMcAAAAhCAYAAABtGL9ZAAAABGdBTUEAALGPC/xhBQAAAYBJREFUeF7t
         3D1KQ0EUxfEBFyGoqIWFWgm6GO2tktpGV6Sd0Q2IQiCSHbiD1DZ5mOs7k/fGj5mr/Zv/hR9pJqnuIZnA
@@ -3184,10 +3184,22 @@
         6m83aSctJK02TwXBX66gYvVvkPi/AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="vBorder4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAEAAAFyCAYAAAA01LBSAAAABGdBTUEAALGPC/xhBQAAAB5JREFUSEtj
         WLFixf9RYpQYJUaJUWKUGCWIIlb8BwDwmEk7nWCc9AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="passHidden.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAAABGdBTUEAALGPC/xhBQAAAWpJREFUSEu1
+        lC1uAzEQhff/D1RaFQUlNCwnCGxJDtETVOU9QFFwpZ4hNLSgKGdYGhgpZ+h8q7E0uxoFecGL7TfvjWds
+        Z5PXj8NicEkPfd/nAV7cg0sGdF33VFXVtizLl6Io3gJYwxP3fAEu2bbtMwnyPD+maXrJsuwq4y1A1xfi
+        6NB7eSYLWqYiMX2JedBkJP8R7lPwzsgaXuMDenzzI5skpgoxnsVwl/GPZGLazdvX49oRR6f6M367wSSx
+        VoPwG3MQMjZNs4FjtDwcenz47QYh8V4T32ixrusVQSDztR7FLxpG1vBGs8KHXzfYkzeRnbdiOAl5F8HR
+        Xg5zODUNouPIxrt4oKXzE3kTmXA5I2GrAXpUJBuroULT5UDc6vGHQsmbyGR8XrxfKwRwxBCGKhm1oIce
+        sGzli575oq+FoG4Q/53zYzcQYdx/aIBWEv/bYsHlUIWY4n0V59D2437PPdBygBf34JJxcEj+AVqbX/n3
+        Q/TRAAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

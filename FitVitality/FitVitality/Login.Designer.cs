@@ -40,48 +40,50 @@
             createAccButton = new Label();
             loginButton = new Krypton.Toolkit.KryptonButton();
             topbar = new Panel();
-            pictureBox9 = new PictureBox();
+            vBorder2 = new PictureBox();
             logo1 = new PictureBox();
-            pictureBox4 = new PictureBox();
+            vBorder1 = new PictureBox();
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox1 = new PictureBox();
+            hLine1 = new PictureBox();
+            corner1 = new PictureBox();
+            corner2 = new PictureBox();
             logo2 = new PictureBox();
             rememberMe = new CheckBox();
             loginFail = new Label();
             errorPanel = new Panel();
-            pictureBox5 = new PictureBox();
+            logError = new PictureBox();
             timerError = new System.Windows.Forms.Timer(components);
             usrmark = new PictureBox();
             passmark = new PictureBox();
-            pictureBox11 = new PictureBox();
-            pictureBox10 = new PictureBox();
-            pictureBox8 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            passControl = new PictureBox();
+            hLine2 = new PictureBox();
+            corner4 = new PictureBox();
+            corner3 = new PictureBox();
+            vBorder3 = new PictureBox();
+            vBorder4 = new PictureBox();
+            passHidden = new PictureBox();
+            passShown = new PictureBox();
             topbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vBorder2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vBorder1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)corner1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)corner2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
             errorPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)logError).BeginInit();
             ((System.ComponentModel.ISupportInitialize)usrmark).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passmark).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)passControl).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)corner4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)corner3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vBorder3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vBorder4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passHidden).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passShown).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -278,14 +280,14 @@
             // 
             // topbar
             // 
-            topbar.Controls.Add(pictureBox9);
+            topbar.Controls.Add(vBorder2);
             topbar.Controls.Add(logo1);
-            topbar.Controls.Add(pictureBox4);
+            topbar.Controls.Add(vBorder1);
             topbar.Controls.Add(buttonMin);
             topbar.Controls.Add(buttonClose);
-            topbar.Controls.Add(pictureBox3);
-            topbar.Controls.Add(pictureBox2);
-            topbar.Controls.Add(pictureBox1);
+            topbar.Controls.Add(hLine1);
+            topbar.Controls.Add(corner1);
+            topbar.Controls.Add(corner2);
             topbar.Controls.Add(logo2);
             topbar.Dock = DockStyle.Top;
             topbar.Location = new Point(0, 0);
@@ -297,14 +299,14 @@
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
             // 
-            // pictureBox9
+            // vBorder2
             // 
-            pictureBox9.Image = Properties.Resources.vline;
-            pictureBox9.Location = new Point(286, 12);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(1, 19);
-            pictureBox9.TabIndex = 37;
-            pictureBox9.TabStop = false;
+            vBorder2.Image = Properties.Resources.vline;
+            vBorder2.Location = new Point(286, 12);
+            vBorder2.Name = "vBorder2";
+            vBorder2.Size = new Size(1, 19);
+            vBorder2.TabIndex = 37;
+            vBorder2.TabStop = false;
             // 
             // logo1
             // 
@@ -316,14 +318,14 @@
             logo1.TabIndex = 1;
             logo1.TabStop = false;
             // 
-            // pictureBox4
+            // vBorder1
             // 
-            pictureBox4.Image = Properties.Resources.vline;
-            pictureBox4.Location = new Point(0, 14);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(1, 17);
-            pictureBox4.TabIndex = 38;
-            pictureBox4.TabStop = false;
+            vBorder1.Image = Properties.Resources.vline;
+            vBorder1.Location = new Point(0, 14);
+            vBorder1.Name = "vBorder1";
+            vBorder1.Size = new Size(1, 17);
+            vBorder1.TabIndex = 38;
+            vBorder1.TabStop = false;
             // 
             // buttonMin
             // 
@@ -354,32 +356,32 @@
             buttonClose.MouseLeave += pictureBox1_MouseLeave;
             buttonClose.MouseHover += pictureBox1_MouseHover;
             // 
-            // pictureBox3
+            // hLine1
             // 
-            pictureBox3.Image = Properties.Resources.hLine;
-            pictureBox3.Location = new Point(13, 0);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(260, 1);
-            pictureBox3.TabIndex = 37;
-            pictureBox3.TabStop = false;
+            hLine1.Image = Properties.Resources.hLine;
+            hLine1.Location = new Point(13, 0);
+            hLine1.Name = "hLine1";
+            hLine1.Size = new Size(260, 1);
+            hLine1.TabIndex = 37;
+            hLine1.TabStop = false;
             // 
-            // pictureBox2
+            // corner1
             // 
-            pictureBox2.Image = Properties.Resources.leftCUp;
-            pictureBox2.Location = new Point(1, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(16, 15);
-            pictureBox2.TabIndex = 36;
-            pictureBox2.TabStop = false;
+            corner1.Image = Properties.Resources.leftCUp;
+            corner1.Location = new Point(1, 0);
+            corner1.Name = "corner1";
+            corner1.Size = new Size(16, 15);
+            corner1.TabIndex = 36;
+            corner1.TabStop = false;
             // 
-            // pictureBox1
+            // corner2
             // 
-            pictureBox1.Image = Properties.Resources.rightCUp;
-            pictureBox1.Location = new Point(272, 1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(16, 15);
-            pictureBox1.TabIndex = 35;
-            pictureBox1.TabStop = false;
+            corner2.Image = Properties.Resources.rightCUp;
+            corner2.Location = new Point(272, 1);
+            corner2.Name = "corner2";
+            corner2.Size = new Size(16, 15);
+            corner2.TabIndex = 35;
+            corner2.TabStop = false;
             // 
             // logo2
             // 
@@ -420,20 +422,20 @@
             // errorPanel
             // 
             errorPanel.Controls.Add(loginFail);
-            errorPanel.Controls.Add(pictureBox5);
+            errorPanel.Controls.Add(logError);
             errorPanel.Location = new Point(44, 131);
             errorPanel.Name = "errorPanel";
             errorPanel.Size = new Size(199, 0);
             errorPanel.TabIndex = 11;
             // 
-            // pictureBox5
+            // logError
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(0, 0);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(199, 33);
-            pictureBox5.TabIndex = 12;
-            pictureBox5.TabStop = false;
+            logError.Image = (Image)resources.GetObject("logError.Image");
+            logError.Location = new Point(0, 0);
+            logError.Name = "logError";
+            logError.Size = new Size(199, 33);
+            logError.TabIndex = 12;
+            logError.TabStop = false;
             // 
             // timerError
             // 
@@ -462,61 +464,73 @@
             passmark.TabStop = false;
             passmark.Visible = false;
             // 
-            // pictureBox11
+            // hLine2
             // 
-            pictureBox11.Image = Properties.Resources.hLine;
-            pictureBox11.Location = new Point(15, 414);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(260, 1);
-            pictureBox11.TabIndex = 34;
-            pictureBox11.TabStop = false;
+            hLine2.Image = Properties.Resources.hLine;
+            hLine2.Location = new Point(15, 414);
+            hLine2.Name = "hLine2";
+            hLine2.Size = new Size(260, 1);
+            hLine2.TabIndex = 34;
+            hLine2.TabStop = false;
             // 
-            // pictureBox10
+            // corner4
             // 
-            pictureBox10.Image = Properties.Resources.rightC;
-            pictureBox10.Location = new Point(272, 401);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(16, 15);
-            pictureBox10.TabIndex = 33;
-            pictureBox10.TabStop = false;
+            corner4.Image = Properties.Resources.rightC;
+            corner4.Location = new Point(272, 401);
+            corner4.Name = "corner4";
+            corner4.Size = new Size(16, 15);
+            corner4.TabIndex = 33;
+            corner4.TabStop = false;
             // 
-            // pictureBox8
+            // corner3
             // 
-            pictureBox8.Image = Properties.Resources.leftC;
-            pictureBox8.Location = new Point(0, 401);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(16, 15);
-            pictureBox8.TabIndex = 32;
-            pictureBox8.TabStop = false;
+            corner3.Image = Properties.Resources.leftC;
+            corner3.Location = new Point(0, 401);
+            corner3.Name = "corner3";
+            corner3.Size = new Size(16, 15);
+            corner3.TabIndex = 32;
+            corner3.TabStop = false;
             // 
-            // pictureBox7
+            // vBorder3
             // 
-            pictureBox7.Image = Properties.Resources.logregVline;
-            pictureBox7.Location = new Point(0, 31);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(1, 370);
-            pictureBox7.TabIndex = 36;
-            pictureBox7.TabStop = false;
+            vBorder3.Image = Properties.Resources.logregVline;
+            vBorder3.Location = new Point(0, 31);
+            vBorder3.Name = "vBorder3";
+            vBorder3.Size = new Size(1, 370);
+            vBorder3.TabIndex = 36;
+            vBorder3.TabStop = false;
             // 
-            // pictureBox6
+            // vBorder4
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(286, 31);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(1, 370);
-            pictureBox6.TabIndex = 35;
-            pictureBox6.TabStop = false;
+            vBorder4.Image = (Image)resources.GetObject("vBorder4.Image");
+            vBorder4.Location = new Point(286, 31);
+            vBorder4.Name = "vBorder4";
+            vBorder4.Size = new Size(1, 370);
+            vBorder4.TabIndex = 35;
+            vBorder4.TabStop = false;
             // 
-            // passControl
+            // passHidden
             // 
-            passControl.Image = Properties.Resources.hidePass;
-            passControl.Location = new Point(244, 253);
-            passControl.Name = "passControl";
-            passControl.Size = new Size(25, 23);
-            passControl.SizeMode = PictureBoxSizeMode.StretchImage;
-            passControl.TabIndex = 37;
-            passControl.TabStop = false;
-            passControl.Click += pictureBox12_Click;
+            passHidden.Image = (Image)resources.GetObject("passHidden.Image");
+            passHidden.Location = new Point(245, 255);
+            passHidden.Name = "passHidden";
+            passHidden.Size = new Size(21, 19);
+            passHidden.SizeMode = PictureBoxSizeMode.Zoom;
+            passHidden.TabIndex = 37;
+            passHidden.TabStop = false;
+            passHidden.Visible = false;
+            passHidden.Click += pictureBox12_Click;
+            // 
+            // passShown
+            // 
+            passShown.Image = Properties.Resources.hidePass;
+            passShown.Location = new Point(244, 254);
+            passShown.Name = "passShown";
+            passShown.Size = new Size(23, 21);
+            passShown.SizeMode = PictureBoxSizeMode.Zoom;
+            passShown.TabIndex = 38;
+            passShown.TabStop = false;
+            passShown.Click += passShown_Click;
             // 
             // Login
             // 
@@ -524,12 +538,11 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
-            Controls.Add(passControl);
-            Controls.Add(pictureBox7);
-            Controls.Add(pictureBox6);
-            Controls.Add(pictureBox11);
-            Controls.Add(pictureBox10);
-            Controls.Add(pictureBox8);
+            Controls.Add(vBorder3);
+            Controls.Add(vBorder4);
+            Controls.Add(hLine2);
+            Controls.Add(corner4);
+            Controls.Add(corner3);
             Controls.Add(errorPanel);
             Controls.Add(passmark);
             Controls.Add(usrmark);
@@ -543,6 +556,8 @@
             Controls.Add(textBoxPassword);
             Controls.Add(textBoxUsername);
             Controls.Add(loginLabel);
+            Controls.Add(passShown);
+            Controls.Add(passHidden);
             ForeColor = Color.FromArgb(250, 252, 252);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -563,26 +578,27 @@
             Shown += WelcomeScreen_Shown;
             MouseHover += WelcomeScreen_MouseHover;
             topbar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vBorder2).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vBorder1).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)corner1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)corner2).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
             errorPanel.ResumeLayout(false);
             errorPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)logError).EndInit();
             ((System.ComponentModel.ISupportInitialize)usrmark).EndInit();
             ((System.ComponentModel.ISupportInitialize)passmark).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)passControl).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)corner4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)corner3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vBorder3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vBorder4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passHidden).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passShown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -607,19 +623,20 @@
         private Label loginFail;
         private Panel errorPanel;
         private System.Windows.Forms.Timer timerError;
-        private PictureBox pictureBox5;
+        private PictureBox logError;
         private PictureBox usrmark;
         private PictureBox passmark;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox4;
-        private PictureBox passControl;
+        private PictureBox hLine2;
+        private PictureBox corner4;
+        private PictureBox corner3;
+        private PictureBox corner2;
+        private PictureBox corner1;
+        private PictureBox hLine1;
+        private PictureBox vBorder3;
+        private PictureBox vBorder4;
+        private PictureBox vBorder2;
+        private PictureBox vBorder1;
+        private PictureBox passHidden;
+        private PictureBox passShown;
     }
 }

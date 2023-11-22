@@ -354,16 +354,18 @@ namespace FitVitality
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            if (passControl.Image == Properties.Resources.hidePass)
-            {
-                passControl.Image = Properties.Resources.showPass;
-                textBoxPassword.UseSystemPasswordChar = true;
-            }
-            else
-            {
-                passControl.Image = Properties.Resources.hidePass;
-                textBoxPassword.UseSystemPasswordChar = false;
-            }
+            passHidden.Visible = false;
+            passShown.Visible = true;
+            textBoxPassword.UseSystemPasswordChar = true;
+            textBoxPassword.PasswordChar = '●';
+        }
+
+        private void passShown_Click(object sender, EventArgs e)
+        {
+            passHidden.Visible = true;
+            passShown.Visible = false;
+            textBoxPassword.UseSystemPasswordChar = false;
+            textBoxPassword.PasswordChar = '\0';
         }
     }
 }

@@ -54,6 +54,7 @@
             panel2 = new Panel();
             kryptonButton4 = new Krypton.Toolkit.KryptonButton();
             label3 = new Label();
+            panel5 = new Panel();
             bmi_panel.SuspendLayout();
             bmr_panel.SuspendLayout();
             panel3.SuspendLayout();
@@ -82,7 +83,7 @@
             // 
             bmi_panel.Controls.Add(bmi_openButton);
             bmi_panel.Controls.Add(bmi_label);
-            bmi_panel.Location = new Point(47, 109);
+            bmi_panel.Location = new Point(39, 109);
             bmi_panel.Name = "bmi_panel";
             bmi_panel.Size = new Size(246, 44);
             bmi_panel.TabIndex = 1;
@@ -172,7 +173,7 @@
             // 
             bmr_panel.Controls.Add(bmr_buttonOpen);
             bmr_panel.Controls.Add(bmr_label);
-            bmr_panel.Location = new Point(47, 169);
+            bmr_panel.Location = new Point(39, 169);
             bmr_panel.Name = "bmr_panel";
             bmr_panel.Size = new Size(246, 44);
             bmr_panel.TabIndex = 2;
@@ -261,7 +262,7 @@
             // 
             panel3.Controls.Add(kryptonButton2);
             panel3.Controls.Add(label4);
-            panel3.Location = new Point(47, 229);
+            panel3.Location = new Point(39, 229);
             panel3.Name = "panel3";
             panel3.Size = new Size(246, 44);
             panel3.TabIndex = 3;
@@ -350,7 +351,7 @@
             // 
             panel4.Controls.Add(kryptonButton3);
             panel4.Controls.Add(label5);
-            panel4.Location = new Point(398, 229);
+            panel4.Location = new Point(405, 229);
             panel4.Name = "panel4";
             panel4.Size = new Size(246, 44);
             panel4.TabIndex = 4;
@@ -493,7 +494,7 @@
             // 
             panel1.Controls.Add(kryptonButton1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(398, 109);
+            panel1.Location = new Point(405, 109);
             panel1.Name = "panel1";
             panel1.Size = new Size(246, 44);
             panel1.TabIndex = 5;
@@ -582,7 +583,7 @@
             // 
             panel2.Controls.Add(kryptonButton4);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(398, 169);
+            panel2.Location = new Point(405, 169);
             panel2.Name = "panel2";
             panel2.Size = new Size(246, 44);
             panel2.TabIndex = 6;
@@ -667,12 +668,21 @@
             label3.TabIndex = 0;
             label3.Text = "Macro";
             // 
+            // panel5
+            // 
+            panel5.Location = new Point(129, 55);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(432, 259);
+            panel5.TabIndex = 20;
+            panel5.Visible = false;
+            // 
             // Calculators
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
+            Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(pictureBox8);
@@ -681,11 +691,11 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(bmr_panel);
             Controls.Add(bmi_panel);
             Controls.Add(label1);
+            Controls.Add(panel5);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Calculators";
             Text = "Calculators";
@@ -738,5 +748,6 @@
         private Panel panel2;
         private Krypton.Toolkit.KryptonButton kryptonButton4;
         private Label label3;
+        private Panel panel5;
     }
 }

@@ -115,7 +115,7 @@
             // 
             per75.BackColor = Color.FromArgb(160, 218, 220);
             per75.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point);
-            per75.Location = new Point(169, 75);
+            per75.Location = new Point(170, 75);
             per75.Name = "per75";
             per75.Size = new Size(20, 11);
             per75.TabIndex = 7;
@@ -146,7 +146,7 @@
             // 
             per25.BackColor = Color.FromArgb(160, 218, 220);
             per25.Font = new Font("Segoe UI", 6F, FontStyle.Regular, GraphicsUnit.Point);
-            per25.Location = new Point(70, 75);
+            per25.Location = new Point(69, 75);
             per25.Name = "per25";
             per25.Size = new Size(21, 11);
             per25.TabIndex = 5;

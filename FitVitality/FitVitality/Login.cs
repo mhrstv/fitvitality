@@ -36,7 +36,7 @@ namespace FitVitality
                 this.Location = Register.ActiveForm.Location;
             }
             var cfg = new Config("FitVitality.ini");
-            var username = cfg.Read("Username", "SETTINGS");
+            var username = Properties.Settings.Default.Username;
             if (username != "")
             {
                 textBoxUsername.Text = username.ToString();
@@ -97,11 +97,13 @@ namespace FitVitality
                                 errorPanel.Height = 0;
                                 if (rememberMe.Checked == true)
                                 {
-                                    cfg.Write("Username", username, "SETTINGS");
+                                    Properties.Settings.Default.Username = username;
+                                    Properties.Settings.Default.Save();
                                 }
                                 else
-                                {
-                                    cfg.Write("Username", "", "SETTINGS");
+                                {   
+                                    Properties.Settings.Default.Username = "";
+                                    Properties.Settings.Default.Save();
                                 }
 
                                 for (double i = this.Opacity; i >= 0; i = i - 0.00002)
@@ -155,11 +157,13 @@ namespace FitVitality
                             errorPanel.Height = 0;
                             if (rememberMe.Checked == true)
                             {
-                                cfg.Write("Username", username, "SETTINGS");
+                                Properties.Settings.Default.Username = username;
+                                Properties.Settings.Default.Save();
                             }
                             else
                             {
-                                cfg.Write("Username", "", "SETTINGS");
+                                Properties.Settings.Default.Username = "";
+                                Properties.Settings.Default.Save();
                             }
 
                             for (double i = this.Opacity; i >= 0; i = i - 0.00002)
@@ -183,11 +187,13 @@ namespace FitVitality
                             errorPanel.Height = 0;
                             if (rememberMe.Checked == true)
                             {
-                                cfg.Write("Username", username, "SETTINGS");
+                                Properties.Settings.Default.Username = username;
+                                Properties.Settings.Default.Save();
                             }
                             else
                             {
-                                cfg.Write("Username", "", "SETTINGS");
+                                Properties.Settings.Default.Username = "";
+                                Properties.Settings.Default.Save();
                             }
 
                             for (double i = this.Opacity; i >= 0; i = i - 0.00002)

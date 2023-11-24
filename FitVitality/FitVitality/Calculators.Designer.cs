@@ -81,7 +81,7 @@
             // 
             // bmi_panel
             // 
-            bmi_panel.BackColor = Color.Black;
+            bmi_panel.BackColor = Color.FromArgb(250, 252, 252);
             bmi_panel.Controls.Add(bmi_openButton);
             bmi_panel.Controls.Add(bmi_label);
             bmi_panel.Location = new Point(39, 109);

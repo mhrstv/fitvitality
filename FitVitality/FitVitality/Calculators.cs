@@ -34,6 +34,8 @@ namespace FitVitality
             }
             bmi_panel.Height = 259;
             bmi_panel.Width = 432;
+            bmi_openButton.Visible = false;
+            bmi_label.Visible = false;
         }
     }
 }

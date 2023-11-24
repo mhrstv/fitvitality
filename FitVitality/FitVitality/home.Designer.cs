@@ -47,6 +47,7 @@
             vLine1 = new PictureBox();
             rightC = new PictureBox();
             lefCorner = new PictureBox();
+            label1 = new Label();
             bmi_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)arrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bmiPicture).BeginInit();
@@ -106,7 +107,7 @@
             bmi_panel.Controls.Add(bmicategory_label);
             bmi_panel.Controls.Add(bmicalc_label);
             bmi_panel.Controls.Add(bmiBackground);
-            bmi_panel.Location = new Point(418, 12);
+            bmi_panel.Location = new Point(418, 192);
             bmi_panel.Name = "bmi_panel";
             bmi_panel.Size = new Size(260, 164);
             bmi_panel.TabIndex = 3;
@@ -231,12 +232,23 @@
             lefCorner.TabIndex = 12;
             lefCorner.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(284, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(122, 24);
+            label1.TabIndex = 13;
+            label1.Text = "Dashboard";
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(label1);
             Controls.Add(lefCorner);
             Controls.Add(rightC);
             Controls.Add(vLine1);
@@ -261,6 +273,7 @@
             ((System.ComponentModel.ISupportInitialize)rightC).EndInit();
             ((System.ComponentModel.ISupportInitialize)lefCorner).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -282,5 +295,6 @@
         private PictureBox vLine1;
         private PictureBox rightC;
         private PictureBox lefCorner;
+        private Label label1;
     }
 }

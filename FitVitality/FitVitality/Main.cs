@@ -184,7 +184,7 @@ namespace FitVitality
 
         private void buttonCalculators_Click(object sender, EventArgs e)
         {
-            loadForm(new Calculators());
+            loadForm(new Calculators(_userID));
         }
 
         private void pictureBox1_Click_2(object sender, EventArgs e)

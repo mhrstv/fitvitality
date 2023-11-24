@@ -108,7 +108,7 @@
             // 
             workoutsLabel.AutoSize = true;
             workoutsLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            workoutsLabel.Location = new Point(282, 22);
+            workoutsLabel.Location = new Point(291, 22);
             workoutsLabel.Name = "workoutsLabel";
             workoutsLabel.Size = new Size(108, 24);
             workoutsLabel.TabIndex = 20;

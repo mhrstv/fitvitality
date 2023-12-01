@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace FitVitality
 {
+
     public partial class Workouts : Form
     {
-        public Workouts()
+        public string _userID;
+        public Workouts(string userID)
         {
             InitializeComponent();
+            _userID = userID;
         }
 
         private void Workouts_Load(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace FitVitality
     public partial class home : Form
     {
         double percentages;
+        double percentagesStudents;
         private float currentRotation;
         private readonly Image originalImage;
         List<Panel> active_tabs = new List<Panel>();
@@ -42,13 +43,26 @@ namespace FitVitality
         }
         private void RotationTimer_Tick(object sender, EventArgs e)
         {
-            if (currentRotation <= Math.Round(((percentages / 100) * 180), 0))
+            if (age > 2 && age <= 20)
             {
-                currentRotation += 2;
+                if (currentRotation <= Math.Round(((percentagesStudents / 100) * 180), 0))
+                {
+                    currentRotation += 2;
+                }
+                else if (currentRotation >= percentages)
+                    rotationTimer.Enabled = false;
+                UpdateRotation();
             }
-            else if (currentRotation >= percentages)
-                rotationTimer.Enabled = false;
-            UpdateRotation();
+            else if (age > 20)
+            {
+                if (currentRotation <= Math.Round(((percentages / 100) * 180), 0))
+                {
+                    currentRotation += 2;
+                }
+                else if (currentRotation >= percentages)
+                    rotationTimer.Enabled = false;
+                UpdateRotation();
+            }
         }
 
         private void UpdateRotation()
@@ -112,19 +126,45 @@ namespace FitVitality
                     }
                 }
             }
-            bmi = Math.Round((Convert.ToDouble(weight) / Math.Pow(Convert.ToDouble(height) / 100, 2)), 2);
+            bmi = Math.Round((Convert.ToDouble(weight) / Math.Pow(Convert.ToDouble(height) / 100, 2)), 1);
             bmi_label.Text = $"BMI = {bmi.ToString()} kg/m²";
             percentages = Math.Round((((double)bmi - 16) / 24) * 100, 0);
+            percentagesStudents = Math.Round(((((double)bmi - 17) / 20) * 2) * 100, 0);
             if (percentages < 0)
                 percentages = 0;
-            else if (percentages > 100)
+            if (percentages > 100)
                 percentages = 100;
-            if (age < 20 && age > 2)
+            if (percentagesStudents < 0)
+                percentagesStudents = 0;
+            if (percentagesStudents > 100)
+                percentagesStudents = 100;
+            if (age <= 20 && age > 2)
             {
-
+                bmiPicture.Image = Properties.Resources.bmiMalki;
+                if (percentagesStudents <= 5)
+                {
+                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Underweight)";
+                    bmicategory_label.ForeColor = Color.FromArgb(228, 155, 42);
+                }
+                if (percentagesStudents <= 85 && percentagesStudents > 5)
+                {
+                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Healthy weight)";
+                    bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                }
+                if (percentagesStudents <= 95 && percentagesStudents > 85)
+                {
+                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - At risk of overweight)";
+                    bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                }
+                if (percentagesStudents >= 95)
+                {
+                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Overweight)";
+                    bmicategory_label.ForeColor = Color.FromArgb(185, 6, 6);
+                }
             }
             else
             {
+                bmiPicture.Image = Properties.Resources.bmiFinal1;
                 if (bmi < 16)
                 {
                     bmicategory_label.Text = "(" + percentages.ToString() + "% - Severe Thinness)";
@@ -210,10 +250,41 @@ namespace FitVitality
                 }
             }
             bmi = Math.Round((Convert.ToDouble(weight) / Math.Pow(Convert.ToDouble(height) / 100, 2)), 2);
-            bmi_label.Text = $"BMI = {bmi.ToString()} kg/m²";
-            if (age < 20 && age > 2)
-            {
 
+            bmi_label.Text = $"BMI = {bmi.ToString()} kg/m²";
+            percentages = Math.Round((((double)bmi - 16) / 24) * 100, 0);
+            percentagesStudents = Math.Round(((((double)bmi - 17) / 20) * 2) * 100, 0);
+            if (percentages < 0)
+                percentages = 0;
+            if (percentages > 100)
+                percentages = 100;
+            if (percentagesStudents < 0)
+                percentagesStudents = 0;
+            if (percentagesStudents > 100)
+                percentagesStudents = 100;
+            if (age <= 20 && age > 2)
+            {
+                bmiPicture.Image = Properties.Resources.bmiMalki;
+                if (percentagesStudents <= 5)
+                {
+                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Underweight)";
+                    bmicategory_label.ForeColor = Color.FromArgb(228, 155, 42);
+                }
+                if (percentagesStudents <= 85 && percentagesStudents > 5)
+                {
+                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Healthy weight)";
+                    bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                }
+                if (percentagesStudents <= 95 && percentagesStudents > 85)
+                {
+                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - At risk of overweight)";
+                    bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                }
+                if (percentagesStudents >= 95)
+                {
+                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Overweight)";
+                    bmicategory_label.ForeColor = Color.FromArgb(185, 6, 6);
+                }
             }
             else
             {

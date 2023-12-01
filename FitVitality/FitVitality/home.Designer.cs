@@ -88,9 +88,9 @@
             // 
             bmicategory_label.BackColor = Color.FromArgb(160, 218, 220);
             bmicategory_label.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            bmicategory_label.Location = new Point(28, 32);
+            bmicategory_label.Location = new Point(3, 32);
             bmicategory_label.Name = "bmicategory_label";
-            bmicategory_label.Size = new Size(205, 23);
+            bmicategory_label.Size = new Size(254, 23);
             bmicategory_label.TabIndex = 2;
             bmicategory_label.Text = "{Category}";
             bmicategory_label.TextAlign = ContentAlignment.MiddleCenter;

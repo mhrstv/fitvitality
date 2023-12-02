@@ -59,13 +59,13 @@ namespace FitVitality
         }
         private void bmi_openButton_Click(object sender, EventArgs e)
         {
-            panel1.Size = new Size(547, 270);
-            panel1.Visible = true;
+            bmiCalcPanel.Size = new Size(547, 270);
+            bmiCalcPanel.Visible = true;
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            bmiCalcPanel.Visible = false;
         }
 
         private void rotationTimer_Tick(object sender, EventArgs e)
@@ -337,6 +337,16 @@ namespace FitVitality
                     bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
                 }
             }
+        }
+
+        private void pictureBox14_MouseEnter(object sender, EventArgs e)
+        {
+            buttonCloseBMI.BackColor = Color.IndianRed;
+        }
+
+        private void pictureBox14_MouseLeave(object sender, EventArgs e)
+        {
+            buttonCloseBMI.BackColor = Color.White;
         }
     }
 }

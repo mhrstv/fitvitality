@@ -34,35 +34,35 @@
             bmi_panel = new Panel();
             bmi_openButton = new Krypton.Toolkit.KryptonButton();
             bmi_label = new Label();
-            pictureBox1 = new PictureBox();
+            bmiButtonBorders = new PictureBox();
             bmr_panel = new Panel();
             bmr_buttonOpen = new Krypton.Toolkit.KryptonButton();
             bmr_label = new Label();
-            pictureBox7 = new PictureBox();
+            bmrButtonBorders = new PictureBox();
             bodyfat_panel = new Panel();
             bodyfat_buttonOpen = new Krypton.Toolkit.KryptonButton();
             bodyfat_label = new Label();
-            pictureBox9 = new PictureBox();
+            bodyFatButtonBorders = new PictureBox();
             idealweight_panel = new Panel();
             idealweight_buttonOpen = new Krypton.Toolkit.KryptonButton();
             idealweight_label = new Label();
-            pictureBox12 = new PictureBox();
-            pictureBox8 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
+            idealWeightButtonBorders = new PictureBox();
+            leftCorner = new PictureBox();
+            rightCorner = new PictureBox();
+            vLine1 = new PictureBox();
+            vLine2 = new PictureBox();
+            hLine2 = new PictureBox();
+            hLine1 = new PictureBox();
             calorie_panel = new Panel();
             calorie_buttonOpen = new Krypton.Toolkit.KryptonButton();
             calorie_label = new Label();
-            pictureBox10 = new PictureBox();
+            calorieButtonBorders = new PictureBox();
             macro_panel = new Panel();
             macro_buttonOpen = new Krypton.Toolkit.KryptonButton();
             macro_label = new Label();
-            pictureBox11 = new PictureBox();
-            panel1 = new Panel();
-            panel2 = new Panel();
+            macroButtonBorders = new PictureBox();
+            bmiCalcPanel = new Panel();
+            bmiPanel = new Panel();
             bmiPanelLabel = new Label();
             per75 = new Label();
             arrow = new PictureBox();
@@ -72,35 +72,35 @@
             bmicategory_label = new Label();
             bmicalc_label = new Label();
             bmiBackground = new PictureBox();
-            label1 = new Label();
-            pictureBox14 = new PictureBox();
-            pictureBox13 = new PictureBox();
+            bmiCalcLabel = new Label();
+            buttonCloseBMI = new PictureBox();
+            bmiPanelBorders = new PictureBox();
             rotationTimer = new System.Windows.Forms.Timer(components);
             bmi_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bmiButtonBorders).BeginInit();
             bmr_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bmrButtonBorders).BeginInit();
             bodyfat_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bodyFatButtonBorders).BeginInit();
             idealweight_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)idealWeightButtonBorders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             calorie_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)calorieButtonBorders).BeginInit();
             macro_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)macroButtonBorders).BeginInit();
+            bmiCalcPanel.SuspendLayout();
+            bmiPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)arrow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bmiPicture).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bmiBackground).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)buttonCloseBMI).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bmiPanelBorders).BeginInit();
             SuspendLayout();
             // 
             // calculators_label
@@ -118,7 +118,7 @@
             bmi_panel.BackColor = Color.FromArgb(250, 252, 252);
             bmi_panel.Controls.Add(bmi_openButton);
             bmi_panel.Controls.Add(bmi_label);
-            bmi_panel.Controls.Add(pictureBox1);
+            bmi_panel.Controls.Add(bmiButtonBorders);
             bmi_panel.Location = new Point(39, 109);
             bmi_panel.Name = "bmi_panel";
             bmi_panel.Size = new Size(246, 44);
@@ -205,20 +205,20 @@
             bmi_label.TabIndex = 0;
             bmi_label.Text = "BMI";
             // 
-            // pictureBox1
+            // bmiButtonBorders
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(246, 44);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            bmiButtonBorders.Image = (Image)resources.GetObject("bmiButtonBorders.Image");
+            bmiButtonBorders.Location = new Point(0, 0);
+            bmiButtonBorders.Name = "bmiButtonBorders";
+            bmiButtonBorders.Size = new Size(246, 44);
+            bmiButtonBorders.TabIndex = 2;
+            bmiButtonBorders.TabStop = false;
             // 
             // bmr_panel
             // 
             bmr_panel.Controls.Add(bmr_buttonOpen);
             bmr_panel.Controls.Add(bmr_label);
-            bmr_panel.Controls.Add(pictureBox7);
+            bmr_panel.Controls.Add(bmrButtonBorders);
             bmr_panel.Location = new Point(39, 169);
             bmr_panel.Name = "bmr_panel";
             bmr_panel.Size = new Size(246, 44);
@@ -304,20 +304,20 @@
             bmr_label.TabIndex = 0;
             bmr_label.Text = "BMR";
             // 
-            // pictureBox7
+            // bmrButtonBorders
             // 
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(0, 0);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(246, 44);
-            pictureBox7.TabIndex = 3;
-            pictureBox7.TabStop = false;
+            bmrButtonBorders.Image = (Image)resources.GetObject("bmrButtonBorders.Image");
+            bmrButtonBorders.Location = new Point(0, 0);
+            bmrButtonBorders.Name = "bmrButtonBorders";
+            bmrButtonBorders.Size = new Size(246, 44);
+            bmrButtonBorders.TabIndex = 3;
+            bmrButtonBorders.TabStop = false;
             // 
             // bodyfat_panel
             // 
             bodyfat_panel.Controls.Add(bodyfat_buttonOpen);
             bodyfat_panel.Controls.Add(bodyfat_label);
-            bodyfat_panel.Controls.Add(pictureBox9);
+            bodyfat_panel.Controls.Add(bodyFatButtonBorders);
             bodyfat_panel.Location = new Point(39, 229);
             bodyfat_panel.Name = "bodyfat_panel";
             bodyfat_panel.Size = new Size(246, 44);
@@ -403,20 +403,20 @@
             bodyfat_label.TabIndex = 0;
             bodyfat_label.Text = "Body Fat";
             // 
-            // pictureBox9
+            // bodyFatButtonBorders
             // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(0, 0);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(246, 44);
-            pictureBox9.TabIndex = 4;
-            pictureBox9.TabStop = false;
+            bodyFatButtonBorders.Image = (Image)resources.GetObject("bodyFatButtonBorders.Image");
+            bodyFatButtonBorders.Location = new Point(0, 0);
+            bodyFatButtonBorders.Name = "bodyFatButtonBorders";
+            bodyFatButtonBorders.Size = new Size(246, 44);
+            bodyFatButtonBorders.TabIndex = 4;
+            bodyFatButtonBorders.TabStop = false;
             // 
             // idealweight_panel
             // 
             idealweight_panel.Controls.Add(idealweight_buttonOpen);
             idealweight_panel.Controls.Add(idealweight_label);
-            idealweight_panel.Controls.Add(pictureBox12);
+            idealweight_panel.Controls.Add(idealWeightButtonBorders);
             idealweight_panel.Location = new Point(405, 229);
             idealweight_panel.Name = "idealweight_panel";
             idealweight_panel.Size = new Size(246, 44);
@@ -502,74 +502,74 @@
             idealweight_label.TabIndex = 0;
             idealweight_label.Text = "Ideal Weight";
             // 
-            // pictureBox12
+            // idealWeightButtonBorders
             // 
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(0, 0);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(246, 44);
-            pictureBox12.TabIndex = 7;
-            pictureBox12.TabStop = false;
+            idealWeightButtonBorders.Image = (Image)resources.GetObject("idealWeightButtonBorders.Image");
+            idealWeightButtonBorders.Location = new Point(0, 0);
+            idealWeightButtonBorders.Name = "idealWeightButtonBorders";
+            idealWeightButtonBorders.Size = new Size(246, 44);
+            idealWeightButtonBorders.TabIndex = 7;
+            idealWeightButtonBorders.TabStop = false;
             // 
-            // pictureBox8
+            // leftCorner
             // 
-            pictureBox8.Image = Properties.Resources.leftC;
-            pictureBox8.Location = new Point(0, 354);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(16, 15);
-            pictureBox8.TabIndex = 19;
-            pictureBox8.TabStop = false;
+            leftCorner.Image = Properties.Resources.leftC;
+            leftCorner.Location = new Point(0, 354);
+            leftCorner.Name = "leftCorner";
+            leftCorner.Size = new Size(16, 15);
+            leftCorner.TabIndex = 19;
+            leftCorner.TabStop = false;
             // 
-            // pictureBox6
+            // rightCorner
             // 
-            pictureBox6.Image = Properties.Resources.rightC;
-            pictureBox6.Location = new Point(675, 354);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(16, 15);
-            pictureBox6.TabIndex = 17;
-            pictureBox6.TabStop = false;
+            rightCorner.Image = Properties.Resources.rightC;
+            rightCorner.Location = new Point(675, 354);
+            rightCorner.Name = "rightCorner";
+            rightCorner.Size = new Size(16, 15);
+            rightCorner.TabIndex = 17;
+            rightCorner.TabStop = false;
             // 
-            // pictureBox5
+            // vLine1
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(0, -1);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(1, 355);
-            pictureBox5.TabIndex = 16;
-            pictureBox5.TabStop = false;
+            vLine1.Image = (Image)resources.GetObject("vLine1.Image");
+            vLine1.Location = new Point(0, -1);
+            vLine1.Name = "vLine1";
+            vLine1.Size = new Size(1, 355);
+            vLine1.TabIndex = 16;
+            vLine1.TabStop = false;
             // 
-            // pictureBox4
+            // vLine2
             // 
-            pictureBox4.Image = Properties.Resources.vline;
-            pictureBox4.Location = new Point(689, 0);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(1, 357);
-            pictureBox4.TabIndex = 15;
-            pictureBox4.TabStop = false;
+            vLine2.Image = Properties.Resources.vline;
+            vLine2.Location = new Point(689, 0);
+            vLine2.Name = "vLine2";
+            vLine2.Size = new Size(1, 357);
+            vLine2.TabIndex = 15;
+            vLine2.TabStop = false;
             // 
-            // pictureBox3
+            // hLine2
             // 
-            pictureBox3.Image = Properties.Resources.hLine;
-            pictureBox3.Location = new Point(12, 367);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(667, 1);
-            pictureBox3.TabIndex = 14;
-            pictureBox3.TabStop = false;
+            hLine2.Image = Properties.Resources.hLine;
+            hLine2.Location = new Point(12, 367);
+            hLine2.Name = "hLine2";
+            hLine2.Size = new Size(667, 1);
+            hLine2.TabIndex = 14;
+            hLine2.TabStop = false;
             // 
-            // pictureBox2
+            // hLine1
             // 
-            pictureBox2.Image = Properties.Resources.hLine;
-            pictureBox2.Location = new Point(13, 1);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(664, 1);
-            pictureBox2.TabIndex = 13;
-            pictureBox2.TabStop = false;
+            hLine1.Image = Properties.Resources.hLine;
+            hLine1.Location = new Point(13, 1);
+            hLine1.Name = "hLine1";
+            hLine1.Size = new Size(664, 1);
+            hLine1.TabIndex = 13;
+            hLine1.TabStop = false;
             // 
             // calorie_panel
             // 
             calorie_panel.Controls.Add(calorie_buttonOpen);
             calorie_panel.Controls.Add(calorie_label);
-            calorie_panel.Controls.Add(pictureBox10);
+            calorie_panel.Controls.Add(calorieButtonBorders);
             calorie_panel.Location = new Point(405, 109);
             calorie_panel.Name = "calorie_panel";
             calorie_panel.Size = new Size(246, 44);
@@ -655,20 +655,20 @@
             calorie_label.TabIndex = 0;
             calorie_label.Text = "Calorie";
             // 
-            // pictureBox10
+            // calorieButtonBorders
             // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(0, 0);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(246, 44);
-            pictureBox10.TabIndex = 5;
-            pictureBox10.TabStop = false;
+            calorieButtonBorders.Image = (Image)resources.GetObject("calorieButtonBorders.Image");
+            calorieButtonBorders.Location = new Point(0, 0);
+            calorieButtonBorders.Name = "calorieButtonBorders";
+            calorieButtonBorders.Size = new Size(246, 44);
+            calorieButtonBorders.TabIndex = 5;
+            calorieButtonBorders.TabStop = false;
             // 
             // macro_panel
             // 
             macro_panel.Controls.Add(macro_buttonOpen);
             macro_panel.Controls.Add(macro_label);
-            macro_panel.Controls.Add(pictureBox11);
+            macro_panel.Controls.Add(macroButtonBorders);
             macro_panel.Location = new Point(405, 169);
             macro_panel.Name = "macro_panel";
             macro_panel.Size = new Size(246, 44);
@@ -754,43 +754,43 @@
             macro_label.TabIndex = 0;
             macro_label.Text = "Macro";
             // 
-            // pictureBox11
+            // macroButtonBorders
             // 
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(0, 0);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(246, 44);
-            pictureBox11.TabIndex = 6;
-            pictureBox11.TabStop = false;
+            macroButtonBorders.Image = (Image)resources.GetObject("macroButtonBorders.Image");
+            macroButtonBorders.Location = new Point(0, 0);
+            macroButtonBorders.Name = "macroButtonBorders";
+            macroButtonBorders.Size = new Size(246, 44);
+            macroButtonBorders.TabIndex = 6;
+            macroButtonBorders.TabStop = false;
             // 
-            // panel1
+            // bmiCalcPanel
             // 
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(pictureBox14);
-            panel1.Controls.Add(pictureBox13);
-            panel1.Location = new Point(72, 49);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(547, 270);
-            panel1.TabIndex = 20;
-            panel1.Visible = false;
+            bmiCalcPanel.Controls.Add(bmiPanel);
+            bmiCalcPanel.Controls.Add(bmiCalcLabel);
+            bmiCalcPanel.Controls.Add(buttonCloseBMI);
+            bmiCalcPanel.Controls.Add(bmiPanelBorders);
+            bmiCalcPanel.Location = new Point(72, 49);
+            bmiCalcPanel.Name = "bmiCalcPanel";
+            bmiCalcPanel.Size = new Size(0, 0);
+            bmiCalcPanel.TabIndex = 20;
+            bmiCalcPanel.Visible = false;
             // 
-            // panel2
+            // bmiPanel
             // 
-            panel2.BackColor = Color.FromArgb(160, 218, 220);
-            panel2.Controls.Add(bmiPanelLabel);
-            panel2.Controls.Add(per75);
-            panel2.Controls.Add(arrow);
-            panel2.Controls.Add(per50);
-            panel2.Controls.Add(per25);
-            panel2.Controls.Add(bmiPicture);
-            panel2.Controls.Add(bmicategory_label);
-            panel2.Controls.Add(bmicalc_label);
-            panel2.Controls.Add(bmiBackground);
-            panel2.Location = new Point(143, 73);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(260, 164);
-            panel2.TabIndex = 4;
+            bmiPanel.BackColor = Color.FromArgb(160, 218, 220);
+            bmiPanel.Controls.Add(bmiPanelLabel);
+            bmiPanel.Controls.Add(per75);
+            bmiPanel.Controls.Add(arrow);
+            bmiPanel.Controls.Add(per50);
+            bmiPanel.Controls.Add(per25);
+            bmiPanel.Controls.Add(bmiPicture);
+            bmiPanel.Controls.Add(bmicategory_label);
+            bmiPanel.Controls.Add(bmicalc_label);
+            bmiPanel.Controls.Add(bmiBackground);
+            bmiPanel.Location = new Point(143, 73);
+            bmiPanel.Name = "bmiPanel";
+            bmiPanel.Size = new Size(260, 164);
+            bmiPanel.TabIndex = 4;
             // 
             // bmiPanelLabel
             // 
@@ -886,35 +886,37 @@
             bmiBackground.TabIndex = 9;
             bmiBackground.TabStop = false;
             // 
-            // label1
+            // bmiCalcLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(193, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(160, 24);
-            label1.TabIndex = 2;
-            label1.Text = "BMI Calculator";
+            bmiCalcLabel.AutoSize = true;
+            bmiCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bmiCalcLabel.Location = new Point(193, 24);
+            bmiCalcLabel.Name = "bmiCalcLabel";
+            bmiCalcLabel.Size = new Size(160, 24);
+            bmiCalcLabel.TabIndex = 2;
+            bmiCalcLabel.Text = "BMI Calculator";
             // 
-            // pictureBox14
+            // buttonCloseBMI
             // 
-            pictureBox14.Image = Properties.Resources.closebutton;
-            pictureBox14.Location = new Point(519, 9);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(17, 17);
-            pictureBox14.TabIndex = 1;
-            pictureBox14.TabStop = false;
-            pictureBox14.Click += pictureBox14_Click;
+            buttonCloseBMI.Image = Properties.Resources.closebutton;
+            buttonCloseBMI.Location = new Point(519, 9);
+            buttonCloseBMI.Name = "buttonCloseBMI";
+            buttonCloseBMI.Size = new Size(17, 17);
+            buttonCloseBMI.TabIndex = 1;
+            buttonCloseBMI.TabStop = false;
+            buttonCloseBMI.Click += pictureBox14_Click;
+            buttonCloseBMI.MouseEnter += pictureBox14_MouseEnter;
+            buttonCloseBMI.MouseLeave += pictureBox14_MouseLeave;
             // 
-            // pictureBox13
+            // bmiPanelBorders
             // 
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(0, 0);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(547, 270);
-            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox13.TabIndex = 0;
-            pictureBox13.TabStop = false;
+            bmiPanelBorders.Image = (Image)resources.GetObject("bmiPanelBorders.Image");
+            bmiPanelBorders.Location = new Point(0, 0);
+            bmiPanelBorders.Name = "bmiPanelBorders";
+            bmiPanelBorders.Size = new Size(547, 270);
+            bmiPanelBorders.SizeMode = PictureBoxSizeMode.Zoom;
+            bmiPanelBorders.TabIndex = 0;
+            bmiPanelBorders.TabStop = false;
             // 
             // rotationTimer
             // 
@@ -926,16 +928,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
-            Controls.Add(panel1);
+            Controls.Add(bmiCalcPanel);
             Controls.Add(idealweight_panel);
             Controls.Add(macro_panel);
             Controls.Add(calorie_panel);
-            Controls.Add(pictureBox8);
-            Controls.Add(pictureBox6);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
+            Controls.Add(leftCorner);
+            Controls.Add(rightCorner);
+            Controls.Add(vLine1);
+            Controls.Add(vLine2);
+            Controls.Add(hLine2);
+            Controls.Add(hLine1);
             Controls.Add(bodyfat_panel);
             Controls.Add(bmr_panel);
             Controls.Add(bmi_panel);
@@ -947,37 +949,37 @@
             Load += Calculators_Load;
             bmi_panel.ResumeLayout(false);
             bmi_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bmiButtonBorders).EndInit();
             bmr_panel.ResumeLayout(false);
             bmr_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bmrButtonBorders).EndInit();
             bodyfat_panel.ResumeLayout(false);
             bodyfat_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bodyFatButtonBorders).EndInit();
             idealweight_panel.ResumeLayout(false);
             idealweight_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)idealWeightButtonBorders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)leftCorner).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rightCorner).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
             calorie_panel.ResumeLayout(false);
             calorie_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)calorieButtonBorders).EndInit();
             macro_panel.ResumeLayout(false);
             macro_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)macroButtonBorders).EndInit();
+            bmiCalcPanel.ResumeLayout(false);
+            bmiCalcPanel.PerformLayout();
+            bmiPanel.ResumeLayout(false);
+            bmiPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)arrow).EndInit();
             ((System.ComponentModel.ISupportInitialize)bmiPicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)bmiBackground).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)buttonCloseBMI).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bmiPanelBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -997,29 +999,29 @@
         private Panel idealweight_panel;
         private Krypton.Toolkit.KryptonButton idealweight_buttonOpen;
         private Label idealweight_label;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
+        private PictureBox leftCorner;
+        private PictureBox rightCorner;
+        private PictureBox vLine1;
+        private PictureBox vLine2;
+        private PictureBox hLine2;
+        private PictureBox hLine1;
         private Panel calorie_panel;
         private Krypton.Toolkit.KryptonButton calorie_buttonOpen;
         private Label calorie_label;
         private Panel macro_panel;
         private Krypton.Toolkit.KryptonButton macro_buttonOpen;
         private Label macro_label;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox12;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox11;
-        private Panel panel1;
-        private PictureBox pictureBox13;
-        private PictureBox pictureBox14;
-        private Label label1;
-        private Panel panel2;
+        private PictureBox bmiButtonBorders;
+        private PictureBox bmrButtonBorders;
+        private PictureBox bodyFatButtonBorders;
+        private PictureBox idealWeightButtonBorders;
+        private PictureBox calorieButtonBorders;
+        private PictureBox macroButtonBorders;
+        private Panel bmiCalcPanel;
+        private PictureBox bmiPanelBorders;
+        private PictureBox buttonCloseBMI;
+        private Label bmiCalcLabel;
+        private Panel bmiPanel;
         private Label bmiPanelLabel;
         private Label per75;
         private PictureBox arrow;

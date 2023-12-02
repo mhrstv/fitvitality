@@ -88,6 +88,11 @@
             bmrDescription = new Label();
             bmrCalcLabel = new Label();
             bmrBorders = new PictureBox();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            label7 = new Label();
+            bodyFatLabel = new Label();
+            pictureBox2 = new PictureBox();
             bmi_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bmiButtonBorders).BeginInit();
             bmr_panel.SuspendLayout();
@@ -116,6 +121,9 @@
             bmrCalcPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonCloseBMR).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bmrBorders).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // calculators_label
@@ -964,7 +972,7 @@
             bmrCalcPanel.Controls.Add(bmrBorders);
             bmrCalcPanel.Location = new Point(72, 49);
             bmrCalcPanel.Name = "bmrCalcPanel";
-            bmrCalcPanel.Size = new Size(547, 270);
+            bmrCalcPanel.Size = new Size(0, 0);
             bmrCalcPanel.TabIndex = 21;
             bmrCalcPanel.Visible = false;
             // 
@@ -1080,12 +1088,67 @@
             bmrBorders.TabStop = false;
             bmrBorders.Click += bmrBorders_Click;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(bodyFatLabel);
+            panel1.Controls.Add(pictureBox2);
+            panel1.Location = new Point(72, 49);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(547, 270);
+            panel1.TabIndex = 22;
+            panel1.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.Image = Properties.Resources.closebutton;
+            pictureBox1.Location = new Point(519, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(17, 17);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 12;
+            pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ControlDarkDark;
+            label7.Location = new Point(35, 91);
+            label7.Name = "label7";
+            label7.Size = new Size(217, 133);
+            label7.TabIndex = 5;
+            label7.Text = resources.GetString("label7.Text");
+            // 
+            // bodyFatLabel
+            // 
+            bodyFatLabel.AutoSize = true;
+            bodyFatLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bodyFatLabel.Location = new Point(168, 19);
+            bodyFatLabel.Name = "bodyFatLabel";
+            bodyFatLabel.Size = new Size(210, 24);
+            bodyFatLabel.TabIndex = 2;
+            bodyFatLabel.Text = "Body Fat Calculator";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(547, 270);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
             // Calculators
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
+            Controls.Add(panel1);
             Controls.Add(bmrCalcPanel);
             Controls.Add(bmiCalcPanel);
             Controls.Add(idealweight_panel);
@@ -1143,6 +1206,10 @@
             bmrCalcPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)buttonCloseBMR).EndInit();
             ((System.ComponentModel.ISupportInitialize)bmrBorders).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1210,5 +1277,10 @@
         private Label label10;
         private Label activityDescriptions;
         private PictureBox buttonCloseBMR;
+        private Panel panel1;
+        private PictureBox pictureBox1;
+        private Label label7;
+        private Label bodyFatLabel;
+        private PictureBox pictureBox2;
     }
 }

@@ -220,6 +220,43 @@
         UyiRKLirXIMAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="bmiDescription.Text" xml:space="preserve">
+    <value>The Body Mass Index is a 
+measurement of a
+person's leanness based on
+their height and weight.  
+Specifically, the value obtained 
+from the calculation of BMI is 
+used to categorize whether a 
+person is underweight, normal 
+weight, overweight, or obese 
+depending on what range the 
+value falls between.</value>
+  </data>
+  <data name="bmiBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAACkCAYAAABxY1BQAAAABGdBTUEAALGPC/xhBQAABF1JREFUeF7t
+        3E9PE2schuH5/p/iYOLCoxsS9kaXxiWrI/+bALFagjW2EZI550fSJwVeBDTmyMy1uFYzDWyeO51pZrrv
+        l5f9r5h+W/Tbs1n/9uS03zqc9H/v7ffPd/b6v/7ZAX6T2lhtrTZX26sN1hZbG32MnwrC2XLZv59+6l/t
+        HzT/WeD/UZusbdZGW9u9z6OC8Hmx6N8cn/YbH3ab/wzwZ6iN1lZrs60t3+VBQVhcXFxV55kQwJNSm63t
+        1oZb277p3iBUYTYPjpp/DHgaasMP+bbwwyAczuduEMJA1JYPv8ybW1+5Mwg75+cuEWBgatO17dbmSzMI
+        k/lXMYCBqm3XxlvbvxWEus5wmQDDVhtv3VO4FoS6E7l56AYijEFt/eavD9eCUD9PtD4IDFNtfr0BCUJ9
+        fXDfAMalNr9+6ZAgvD4+aX4AGLba/rUgzBbLfqNxIjB8tf1qQILw7uO0eSIwDtWABOHlnqcWYcyqAVdB
+        qGeoWycA41It6LZnZ82DwLjUS1a6ettK6yAwLtWCbuto0jwIjEu1oHuxu988CIxLvaOx8yATUKoFXesA
+        ME6CAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCE
+        IAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhA
+        CAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIA
+        hCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEI
+        QAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCC
+        AIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEB0z3f2mgeAcakWdC9295sHgXGpFnRbR5PmQWBcqgXd
+        25PT5kFgXKoF3fZs1jwIjEu1oJt+WzQPAuNSLei+X172L/cOmicA41ANqBZcBeHdx2nzJGAcqgEJwmyx
+        7DcaJwHDV9uvBiQI5fXxSfNkYNhq+6sOJAifF4v+2Yfd5geAYarN1/ZvBaG8n35qfggYptr8egOuBWFx
+        cdFvHhw1PwgMS229Nr/egGtBKPX1wQNPMGy18fVLhZVbQSiT+Vf3E2Cgatu18db2m0EoO+fnogADU5uu
+        bbc2X+4MQjn8Mnf5AANRWz74b9Otra/8MAilrjPcaISnrTbcumdw071BKHUnsn6ecAkBT0tttrZ789eE
+        uzwoCCtVmDfHp/2GMMAfrTZaW33It4J1jwrCytlyeVWdV56ShD9KbbK2WRttbfc+PxWEdfUMdb1Yod62
+        snU4uXovmxuR8HvVxmprtbnaXm2wttja6MNd9v8CKMkoTKYY1EIAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="bmiPanelBorders.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAiMAAAEOCAYAAABb8BfEAAAABGdBTUEAALGPC/xhBQAACR5JREFUeF7t
@@ -265,33 +302,63 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="bmiBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAACkCAYAAABxY1BQAAAABGdBTUEAALGPC/xhBQAABF1JREFUeF7t
-        3E9PE2schuH5/p/iYOLCoxsS9kaXxiWrI/+bALFagjW2EZI550fSJwVeBDTmyMy1uFYzDWyeO51pZrrv
-        l5f9r5h+W/Tbs1n/9uS03zqc9H/v7ffPd/b6v/7ZAX6T2lhtrTZX26sN1hZbG32MnwrC2XLZv59+6l/t
-        HzT/WeD/UZusbdZGW9u9z6OC8Hmx6N8cn/YbH3ab/wzwZ6iN1lZrs60t3+VBQVhcXFxV55kQwJNSm63t
-        1oZb277p3iBUYTYPjpp/DHgaasMP+bbwwyAczuduEMJA1JYPv8ybW1+5Mwg75+cuEWBgatO17dbmSzMI
-        k/lXMYCBqm3XxlvbvxWEus5wmQDDVhtv3VO4FoS6E7l56AYijEFt/eavD9eCUD9PtD4IDFNtfr0BCUJ9
-        fXDfAMalNr9+6ZAgvD4+aX4AGLba/rUgzBbLfqNxIjB8tf1qQILw7uO0eSIwDtWABOHlnqcWYcyqAVdB
-        qGeoWycA41It6LZnZ82DwLjUS1a6ettK6yAwLtWCbuto0jwIjEu1oHuxu988CIxLvaOx8yATUKoFXesA
-        ME6CAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCE
-        IAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhA
-        CAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIA
-        hCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEI
-        QAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCC
-        AIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEB0z3f2mgeAcakWdC9295sHgXGpFnRbR5PmQWBcqgXd
-        25PT5kFgXKoF3fZs1jwIjEu1oJt+WzQPAuNSLei+X172L/cOmicA41ANqBZcBeHdx2nzJGAcqgEJwmyx
-        7DcaJwHDV9uvBiQI5fXxSfNkYNhq+6sOJAifF4v+2Yfd5geAYarN1/ZvBaG8n35qfggYptr8egOuBWFx
-        cdFvHhw1PwgMS229Nr/egGtBKPX1wQNPMGy18fVLhZVbQSiT+Vf3E2Cgatu18db2m0EoO+fnogADU5uu
-        bbc2X+4MQjn8Mnf5AANRWz74b9Otra/8MAilrjPcaISnrTbcumdw071BKHUnsn6ecAkBT0tttrZ789eE
-        uzwoCCtVmDfHp/2GMMAfrTZaW33It4J1jwrCytlyeVWdV56ShD9KbbK2WRttbfc+PxWEdfUMdb1Yod62
-        snU4uXovmxuR8HvVxmprtbnaXm2wttja6MNd9v8CKMkoTKYY1EIAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="rotationTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="bmrDescription.Text" xml:space="preserve">
+    <value>Your Basal Metabolic Rate 
+is the number of calories 
+you burn as your body performs 
+basic (basal) life-sustaining 
+function that are based on your 
+activity level (you can change 
+that from the settings).</value>
+  </data>
+  <data name="bmrBorders.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAiMAAAEOCAYAAABb8BfEAAAABGdBTUEAALGPC/xhBQAACR5JREFUeF7t
+        3UFPVGcbx+H5/p9EjFMYwLIRSlJAFqWrunmLRBSIiUVpUCpocso9eCYMHHiRzvQf67W4TJi5B2f3/HKe
+        cx56Z58/N1/jr9PT5vft7WZ5ebmZmZlpHjx4MKbf7zeDwaBZWFgAAP4jam2vNf7qul8t8OS8CaoNqhG6
+        2uH/uXOM1H/w27Nnzezc3OgL1Bd7urnZbD9/3rz54497fwkA4NtQa32t+bX2VwNUC7RdUI1QrfC1PXCn
+        GNl9+bKZn58fFdDa+nqzd3DQnH761DkPAHwfqgWqCaoN2h2TaoZqh675LrfGSJVNVU9bPD+vrTWH7951
+        zgIA37e3541QrdB2QzXEXa6S3Bgjfx4fN0tLS8NfVpdgXu3tdc4BAFxWzdBu31RLVFN0zbU6Y+Tt0dFo
+        W2ZlZaU5/vDh2gwAwE2qHaohqiWqKaotuubKtRipemlrZn1jo/l4djb2PgDAXVRDVEu0uyw3XSEZi5Ha
+        12m3ZurDl98DALiPNkh+PG+MrntIxmJk88vNqnWGiCsiAMAkVFMsf9myqZtar74/ipF6BKeG5ubm3CMC
+        AExUtcXcl9tArj72O4yRumTS3rD6an9/bAAAYBKqMao1qjkub9cMY6ROS6s369ng9g0AgElrzyGp9mhf
+        61WZ1PGtdWrabY/dAAD8U+/OW6Oao9qjvTrSq7Plq1DqGNerHwAAmLRqjmqPapD6udceSHLw+vW1YQCA
+        SavmqPaoBqmfe3WppA4iuToIADAtg/n54XbN+5OTpldlUueLdA0CAExDe7bZi93dixhp92wAAP4N2zs7
+        wxj5ZWvrIkbeHB52DgIATEO1RzXI6urqRYx0nRMPADAt1R7VIIuLi03v0aNHnUMAANPU7/eHep6kAQAS
+        qkHq6kivzofvGgAAmKb27+KJEQAgQowAAFFiBACIEiMAQJQYAQCixAgAECVGAIAoMQIARIkRACBKjAAA
+        UWIEAIgSIwBAlBgBAKLECAAQJUYAgCgxAgBEiREAIEqMAABRYgQAiBIjAECUGAEAosQIABAlRgCAKDEC
+        AESJEQAgSowAAFFiBACIEiMAQJQYAQCixAgAECVGAIAoMQIARIkRACBKjAAAUWIEAIgSIwBAlBgBAKLE
+        CAAQJUYAgCgxAgBEiREAIEqMAABRYgQAiBIjAECUGAEAosQIABAlRgCAKDECAESJEQAgSowAAFFiBACI
+        EiMAQJQYAQCixAgAECVGAIAoMQIARIkRACBKjAAAUWIEAIgSIwBAlBgBAKLECAAQJUYAgCgxAgBEiREA
+        IEqMAABRYgQAiBIjAECUGAEAosQIABAlRgCAKDECAESJEQAgSowAAFFiBACIEiMAQJQYAQCixAgAECVG
+        AIAoMQIARIkRACBKjAAAUWIEAIgSIwBAlBgBAKLECAAQJUYAgCgxAgBEiREAIEqMAABRYgQAiBIjAECU
+        GAEAosQIABAlRgCAKDECAESJEQAgSowAAFFiBACIEiMAQJQYAQCixAgAECVGAIAoMQIARIkRACBKjAAA
+        UWIEAIgSIwBAlBgBAKLECAAQJUYAgCgxAgBEiREAIEqMAABRYgQAiBIjAECUGAEAosQIABAlRgCAKDEC
+        AESJEQAgSowAAFFiBACIEiMAQJQYAQCixAgAECVGAIAoMQIARIkRACBKjAAAUWIEAIgSIwBAlBgBAKLE
+        CAAQJUYAgCgxAgBEiREAIEqMAABRYgQAiBIjAECUGAEAosQIABAlRgCAKDECAESJEQAgSowAAFFiBACI
+        EiMAQJQYAQCixAgAECVGAIAoMQIARIkRACBKjAAAUWIEAIgSIwBAlBgBAKLECAAQJUYAgCgxAgBEiREA
+        IEqMAABRYgQAiBIjAECUGAEAosQIABAlRgCAKDECAESJEQAgSowAAFFiBACIEiMAQJQYAQCixAgAECVG
+        AIAoMQIARIkRACBKjAAAUWIEAIgSIwBAlBgBAKLECAAQJUYAgCgxAgBEiREAIEqMAABRYgQAiBIjAECU
+        GAEAosQIABAlRgCAKDECAESJEQAgSowAAFFiBACIEiMAQJQYAQCixAgAECVGAIAoMQIARIkRACBKjAAA
+        UWIEAIgSIwBAlBgBAKLECAAQJUYAgCgxAgBEiREAIEqMAABRYgQAiBIjAECUGAEAosQIABAlRgCAKDEC
+        AESJEQAgSowAAFFiBACIEiMAQJQYAQCixAgAECVGAIAoMQIARI1iZDAYdA4AAExTNcgwRvr9fucAAMA0
+        VYOUXhXJX6ennUMAANNQ7VENsri4eBEjbw4POwcBAKah2qMaZHV19SJGtp8/7xwEAJiG7Z2dYYz8srV1
+        ESObm5udgwAA01DtUQ3yYne36c3MzAzvZu0aBACYhsH8fFMN8v7kpOmtrKwMy+Tg9evOYQCASarmqPZY
+        Pm+Q+rlX94vUC2vr69eGAQAmrZqj2uP3L/es9urRmtm5ueGlkndHR9c+AAAwKdUa1RzVHu3RIr3657dn
+        zy6ujqytXfsQAMCkVGtUc1R7tK8NY6TKpD0f/tX+/tiHAAAmYe+8Mao1qjkuH7g6jJGy+/LlcGBuMGiO
+        P3wYDQAA/FPVFtUY1RrVHJffG8VIaZ/5rSdsPp6djQ0CANxHNUX79O7TjrPNxmKkLpksLS0Nh9c3NsYG
+        AQDuo5qi2uLH88a4vD3TGouR8ufx8ehP+m48feoKCQBwL9UQ1RLVFNUW1Rhdc9dipLw9Ohrd0FqXVdxD
+        AgB8jWqHdmummqLaomuudMZIqXppt2yqZl7t7XXOAQBcVk/mtrss1RI3XRFp3RgjpfZ16kaT+mXl57W1
+        W8sGAPh+VSNUK7TdUA3RdY/IVbfGSKsewWm3berUtDrGdf/goDn99KlzHgD4PlQLVBNUG1QjVCtUM7y4
+        8vjube4UI+Xk48fhaWmzs7Oj4qlLMPU4cP19mzeHh3eqHwDg21Vrfa352zs7wwZot2NKNUK1QjVD12dv
+        cucYadWX+N/2dvPkyZNRAV3W7/eHX2xhYQEA+I+otb3W+KvrfrVANUG1wX0vSnx1jFz2/uSkebG722z9
+        +mvz0+pq8/jx46b/ww/Nw4cPr31ZAODbVWt7rfG11teaX2t/NUC1QFcj3N3n5m9qdNaKusHDNAAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>30</value>
   </metadata>

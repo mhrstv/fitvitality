@@ -50,7 +50,7 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if(dashboard_Opened == false)
+            if (dashboard_Opened == false)
             {
                 loadForm(new home(_userID));
                 dashboard_Opened = true;
@@ -75,7 +75,7 @@ namespace FitVitality
         }
         private void kryptonButton1_Click_1(object sender, EventArgs e)
         {
-            if(workouts_Opened == false)
+            if (workouts_Opened == false)
             {
                 loadForm(new Workouts(_userID));
                 dashboard_Opened = false;
@@ -186,7 +186,7 @@ namespace FitVitality
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            if(dashboard_Opened == false)
+            if (dashboard_Opened == false)
             {
                 loadForm(new home(_userID));
                 dashboard_Opened = true;
@@ -210,7 +210,7 @@ namespace FitVitality
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            if(settings_Opened == false)
+            if (settings_Opened == false)
             {
                 loadForm(new Settings(_userID));
                 dashboard_Opened = false;
@@ -223,7 +223,7 @@ namespace FitVitality
 
         private void buttonCalculators_Click(object sender, EventArgs e)
         {
-            if(calculators_Opened == false)
+            if (calculators_Opened == false)
             {
                 loadForm(new Calculators(_userID));
                 dashboard_Opened = false;
@@ -241,7 +241,7 @@ namespace FitVitality
 
         private void kryptonButton1_Click_2(object sender, EventArgs e)
         {
-            if(nutrition_Opened == false)
+            if (nutrition_Opened == false)
             {
                 loadForm(new Diet());
                 dashboard_Opened = false;

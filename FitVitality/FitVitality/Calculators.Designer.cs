@@ -62,6 +62,7 @@
             macro_label = new Label();
             macroButtonBorders = new PictureBox();
             bmiCalcPanel = new Panel();
+            bmiDescription = new Label();
             bmiPanel = new Panel();
             bmiPanelLabel = new Label();
             per75 = new Label();
@@ -76,6 +77,17 @@
             buttonCloseBMI = new PictureBox();
             bmiPanelBorders = new PictureBox();
             rotationTimer = new System.Windows.Forms.Timer(components);
+            bmrCalcPanel = new Panel();
+            buttonCloseBMR = new PictureBox();
+            activityDescriptions = new Label();
+            intExrLabel = new Label();
+            exerciseLabel = new Label();
+            sedentaryLabel = new Label();
+            dailyCalsLabel = new Label();
+            currentBMR = new Label();
+            bmrDescription = new Label();
+            bmrCalcLabel = new Label();
+            bmrBorders = new PictureBox();
             bmi_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bmiButtonBorders).BeginInit();
             bmr_panel.SuspendLayout();
@@ -101,6 +113,9 @@
             ((System.ComponentModel.ISupportInitialize)bmiBackground).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonCloseBMI).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bmiPanelBorders).BeginInit();
+            bmrCalcPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)buttonCloseBMR).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bmrBorders).BeginInit();
             SuspendLayout();
             // 
             // calculators_label
@@ -291,6 +306,7 @@
             bmr_buttonOpen.StateTracking.Border.Width = 1;
             bmr_buttonOpen.TabIndex = 1;
             bmr_buttonOpen.Values.Text = "Open";
+            bmr_buttonOpen.Click += bmr_buttonOpen_Click;
             // 
             // bmr_label
             // 
@@ -765,6 +781,7 @@
             // 
             // bmiCalcPanel
             // 
+            bmiCalcPanel.Controls.Add(bmiDescription);
             bmiCalcPanel.Controls.Add(bmiPanel);
             bmiCalcPanel.Controls.Add(bmiCalcLabel);
             bmiCalcPanel.Controls.Add(buttonCloseBMI);
@@ -774,6 +791,17 @@
             bmiCalcPanel.Size = new Size(0, 0);
             bmiCalcPanel.TabIndex = 20;
             bmiCalcPanel.Visible = false;
+            // 
+            // bmiDescription
+            // 
+            bmiDescription.AutoSize = true;
+            bmiDescription.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            bmiDescription.ForeColor = SystemColors.ControlDarkDark;
+            bmiDescription.Location = new Point(27, 49);
+            bmiDescription.Name = "bmiDescription";
+            bmiDescription.Size = new Size(213, 209);
+            bmiDescription.TabIndex = 5;
+            bmiDescription.Text = resources.GetString("bmiDescription.Text");
             // 
             // bmiPanel
             // 
@@ -787,7 +815,7 @@
             bmiPanel.Controls.Add(bmicategory_label);
             bmiPanel.Controls.Add(bmicalc_label);
             bmiPanel.Controls.Add(bmiBackground);
-            bmiPanel.Location = new Point(143, 73);
+            bmiPanel.Location = new Point(258, 73);
             bmiPanel.Name = "bmiPanel";
             bmiPanel.Size = new Size(260, 164);
             bmiPanel.TabIndex = 4;
@@ -890,7 +918,7 @@
             // 
             bmiCalcLabel.AutoSize = true;
             bmiCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            bmiCalcLabel.Location = new Point(193, 24);
+            bmiCalcLabel.Location = new Point(193, 19);
             bmiCalcLabel.Name = "bmiCalcLabel";
             bmiCalcLabel.Size = new Size(160, 24);
             bmiCalcLabel.TabIndex = 2;
@@ -922,12 +950,143 @@
             // 
             rotationTimer.Tick += rotationTimer_Tick;
             // 
+            // bmrCalcPanel
+            // 
+            bmrCalcPanel.Controls.Add(buttonCloseBMR);
+            bmrCalcPanel.Controls.Add(activityDescriptions);
+            bmrCalcPanel.Controls.Add(intExrLabel);
+            bmrCalcPanel.Controls.Add(exerciseLabel);
+            bmrCalcPanel.Controls.Add(sedentaryLabel);
+            bmrCalcPanel.Controls.Add(dailyCalsLabel);
+            bmrCalcPanel.Controls.Add(currentBMR);
+            bmrCalcPanel.Controls.Add(bmrDescription);
+            bmrCalcPanel.Controls.Add(bmrCalcLabel);
+            bmrCalcPanel.Controls.Add(bmrBorders);
+            bmrCalcPanel.Location = new Point(72, 49);
+            bmrCalcPanel.Name = "bmrCalcPanel";
+            bmrCalcPanel.Size = new Size(547, 270);
+            bmrCalcPanel.TabIndex = 21;
+            bmrCalcPanel.Visible = false;
+            // 
+            // buttonCloseBMR
+            // 
+            buttonCloseBMR.BackColor = Color.White;
+            buttonCloseBMR.Image = Properties.Resources.closebutton;
+            buttonCloseBMR.Location = new Point(519, 9);
+            buttonCloseBMR.Name = "buttonCloseBMR";
+            buttonCloseBMR.Size = new Size(17, 17);
+            buttonCloseBMR.SizeMode = PictureBoxSizeMode.Zoom;
+            buttonCloseBMR.TabIndex = 12;
+            buttonCloseBMR.TabStop = false;
+            buttonCloseBMR.Click += buttonCloseBMR_Click;
+            buttonCloseBMR.MouseEnter += buttonCloseBMR_MouseEnter;
+            buttonCloseBMR.MouseLeave += buttonCloseBMR_MouseLeave;
+            // 
+            // activityDescriptions
+            // 
+            activityDescriptions.AutoSize = true;
+            activityDescriptions.ForeColor = SystemColors.ControlDarkDark;
+            activityDescriptions.Location = new Point(297, 207);
+            activityDescriptions.Name = "activityDescriptions";
+            activityDescriptions.Size = new Size(226, 45);
+            activityDescriptions.TabIndex = 11;
+            activityDescriptions.Text = "Sedentary - little or no exercise (<30mins)\r\nExercise - 4, 5 times a week (~40-50mins)\r\nIntense exercise - daily (2+ hours) ";
+            // 
+            // intExrLabel
+            // 
+            intExrLabel.AutoSize = true;
+            intExrLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            intExrLabel.ForeColor = Color.Black;
+            intExrLabel.Location = new Point(297, 176);
+            intExrLabel.Name = "intExrLabel";
+            intExrLabel.Size = new Size(120, 18);
+            intExrLabel.TabIndex = 10;
+            intExrLabel.Text = "{Intense exercise}";
+            intExrLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // exerciseLabel
+            // 
+            exerciseLabel.AutoSize = true;
+            exerciseLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            exerciseLabel.ForeColor = Color.Black;
+            exerciseLabel.Location = new Point(297, 149);
+            exerciseLabel.Name = "exerciseLabel";
+            exerciseLabel.Size = new Size(69, 18);
+            exerciseLabel.TabIndex = 9;
+            exerciseLabel.Text = "{Exercise}";
+            exerciseLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sedentaryLabel
+            // 
+            sedentaryLabel.AutoSize = true;
+            sedentaryLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            sedentaryLabel.ForeColor = Color.Black;
+            sedentaryLabel.Location = new Point(297, 121);
+            sedentaryLabel.Name = "sedentaryLabel";
+            sedentaryLabel.Size = new Size(81, 18);
+            sedentaryLabel.TabIndex = 8;
+            sedentaryLabel.Text = "{Sedentary}";
+            sedentaryLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // dailyCalsLabel
+            // 
+            dailyCalsLabel.AutoSize = true;
+            dailyCalsLabel.ForeColor = SystemColors.ControlDarkDark;
+            dailyCalsLabel.Location = new Point(297, 94);
+            dailyCalsLabel.Name = "dailyCalsLabel";
+            dailyCalsLabel.Size = new Size(198, 15);
+            dailyCalsLabel.TabIndex = 7;
+            dailyCalsLabel.Text = "Daily calories based on activity level:\r\n";
+            // 
+            // currentBMR
+            // 
+            currentBMR.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            currentBMR.ForeColor = Color.Black;
+            currentBMR.Location = new Point(297, 60);
+            currentBMR.Name = "currentBMR";
+            currentBMR.Size = new Size(226, 23);
+            currentBMR.TabIndex = 6;
+            currentBMR.Text = "{BMR}";
+            // 
+            // bmrDescription
+            // 
+            bmrDescription.AutoSize = true;
+            bmrDescription.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            bmrDescription.ForeColor = SystemColors.ControlDarkDark;
+            bmrDescription.Location = new Point(35, 91);
+            bmrDescription.Name = "bmrDescription";
+            bmrDescription.Size = new Size(217, 133);
+            bmrDescription.TabIndex = 5;
+            bmrDescription.Text = resources.GetString("bmrDescription.Text");
+            // 
+            // bmrCalcLabel
+            // 
+            bmrCalcLabel.AutoSize = true;
+            bmrCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            bmrCalcLabel.Location = new Point(193, 19);
+            bmrCalcLabel.Name = "bmrCalcLabel";
+            bmrCalcLabel.Size = new Size(168, 24);
+            bmrCalcLabel.TabIndex = 2;
+            bmrCalcLabel.Text = "BMR Calculator";
+            // 
+            // bmrBorders
+            // 
+            bmrBorders.Image = (Image)resources.GetObject("bmrBorders.Image");
+            bmrBorders.Location = new Point(0, 0);
+            bmrBorders.Name = "bmrBorders";
+            bmrBorders.Size = new Size(547, 270);
+            bmrBorders.SizeMode = PictureBoxSizeMode.Zoom;
+            bmrBorders.TabIndex = 0;
+            bmrBorders.TabStop = false;
+            bmrBorders.Click += bmrBorders_Click;
+            // 
             // Calculators
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
+            Controls.Add(bmrCalcPanel);
             Controls.Add(bmiCalcPanel);
             Controls.Add(idealweight_panel);
             Controls.Add(macro_panel);
@@ -980,6 +1139,10 @@
             ((System.ComponentModel.ISupportInitialize)bmiBackground).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonCloseBMI).EndInit();
             ((System.ComponentModel.ISupportInitialize)bmiPanelBorders).EndInit();
+            bmrCalcPanel.ResumeLayout(false);
+            bmrCalcPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)buttonCloseBMR).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bmrBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1032,5 +1195,20 @@
         private Label bmicalc_label;
         private PictureBox bmiBackground;
         private System.Windows.Forms.Timer rotationTimer;
+        private Label bmiDescription;
+        private Panel bmrCalcPanel;
+        private Label bmrDescription;
+        private Label bmrCalcLabel;
+        private PictureBox pictureBox4;
+        private PictureBox bmrBorders;
+        private Label currentBMR;
+        private Label dailyCalsLabel;
+        private Label intExrLabel;
+        private Label exerciseLabel;
+        private Label sedentaryLabel;
+        private Label label11;
+        private Label label10;
+        private Label activityDescriptions;
+        private PictureBox buttonCloseBMR;
     }
 }

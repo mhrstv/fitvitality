@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,10 @@ namespace FitVitality
 {
     public partial class Calculators : Form
     {
+        double bmr;
+        double sedentaryBMR;
+        double exerciseBMR;
+        double intenseBMR;
         double percentages;
         double percentagesStudents;
         private float currentRotation;
@@ -70,28 +75,30 @@ namespace FitVitality
 
         private void rotationTimer_Tick(object sender, EventArgs e)
         {
-            if (age > 2 && age <= 20)
+            if (bmiCalcPanel.Visible == true)
             {
-                if (currentRotation <= Math.Round(((percentagesStudents / 100) * 180), 0))
+                if (age > 2 && age <= 20)
                 {
-                    currentRotation += 2;
+                    if (currentRotation <= Math.Round(((percentagesStudents / 100) * 180), 0))
+                    {
+                        currentRotation += 2;
+                    }
+                    else if (currentRotation >= percentages)
+                        rotationTimer.Enabled = false;
+                    UpdateRotation();
                 }
-                else if (currentRotation >= percentages)
-                    rotationTimer.Enabled = false;
-                UpdateRotation();
-            }
-            else if (age > 20)
-            {
-                if (currentRotation <= Math.Round(((percentages / 100) * 180), 0))
+                else if (age > 20)
                 {
-                    currentRotation += 2;
+                    if (currentRotation <= Math.Round(((percentages / 100) * 180), 0))
+                    {
+                        currentRotation += 2;
+                    }
+                    else if (currentRotation >= percentages)
+                        rotationTimer.Enabled = false;
+                    UpdateRotation();
                 }
-                else if (currentRotation >= percentages)
-                    rotationTimer.Enabled = false;
-                UpdateRotation();
             }
         }
-
         private void Calculators_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -214,6 +221,21 @@ namespace FitVitality
                     bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
                 }
             }
+            if (gender == "Male")
+            {
+                bmr = Math.Round(10 * Convert.ToDouble(weight) + 6.25 * Convert.ToDouble(height) - 5 * age + 5, 0);
+            }
+            if (gender == "Female")
+            {
+                bmr = Math.Round(10 * Convert.ToDouble(weight) + 6.25 * Convert.ToDouble(height) - 5 * age + 161, 0);
+            }
+            sedentaryBMR = bmr + 350;
+            exerciseBMR = bmr + 810;
+            intenseBMR = bmr + 1600;
+            currentBMR.Text = $"BMR = {bmr.ToString()} calories/day";
+            sedentaryLabel.Text = $"Sedentary =  ≈{sedentaryBMR.ToString()} calories/day";
+            exerciseLabel.Text = $"Exercise =  ≈{exerciseBMR.ToString()} calories/day";
+            intExrLabel.Text = $"Intense exercise =  ≈{intenseBMR.ToString()} calories/day";
         }
 
         private void Calculators_Activated(object sender, EventArgs e)
@@ -347,6 +369,32 @@ namespace FitVitality
         private void pictureBox14_MouseLeave(object sender, EventArgs e)
         {
             buttonCloseBMI.BackColor = Color.White;
+        }
+
+        private void bmrBorders_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bmr_buttonOpen_Click(object sender, EventArgs e)
+        {
+            bmrCalcPanel.Size = new Size(547, 270);
+            bmrCalcPanel.Visible = true;
+        }
+
+        private void buttonCloseBMR_Click(object sender, EventArgs e)
+        {
+            bmrCalcPanel.Visible = false;
+        }
+
+        private void buttonCloseBMR_MouseEnter(object sender, EventArgs e)
+        {
+            buttonCloseBMR.BackColor = Color.IndianRed;
+        }
+
+        private void buttonCloseBMR_MouseLeave(object sender, EventArgs e)
+        {
+            buttonCloseBMR.BackColor = Color.White;
         }
     }
 }

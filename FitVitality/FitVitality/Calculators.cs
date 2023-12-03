@@ -14,6 +14,7 @@ namespace FitVitality
 {
     public partial class Calculators : Form
     {
+        string activity;
         double neck;
         double waist;
         double hips;
@@ -277,6 +278,14 @@ namespace FitVitality
             neckTb.TextChanged += checkBodyFatInputs;
             waistTb.TextChanged += checkBodyFatInputs;
             hipsTb.TextChanged += checkBodyFatInputs;
+
+            //Calorie Calculator
+            if (activityComboBox.SelectedItem == "Sedentary")
+                activity = "Sedentary";
+            if (activityComboBox.SelectedItem == "Exercise")
+                activity = "Exercise";
+            if (activityComboBox.SelectedItem == "Intense exercise")
+                activity = "Intense exercise";
         }
         private void checkBodyFatInputs(object sender, EventArgs e)
         {
@@ -494,9 +503,9 @@ namespace FitVitality
             {
                 bodyFat = Math.Round((495 / (1.29579 - 0.35004 * Math.Log10(waist + hips - neck) + 0.22100 * Math.Log10(Convert.ToDouble(height)))) - 450, 0);
             }
-            if(bodyFat < 0)
+            if (bodyFat < 0)
                 bodyFat = 0;
-            if(bodyFat > 100)
+            if (bodyFat > 100)
                 bodyFat = 100;
             bodyFatPercentage.Location = new Point(Convert.ToInt16(Math.Round((bodyFat / 40 * 254) - 4, 0)), 0);
             bodyFatArrow.Location = new Point(Convert.ToInt16(Math.Round(bodyFat / 40 * 254, 0)), 15);
@@ -516,6 +525,33 @@ namespace FitVitality
         private void neckTb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            calorieCalcPanel.Visible = false;
+            calorie_buttonOpen.Enabled = true;
+            macro_buttonOpen.Enabled = true;
+            idealweight_buttonOpen.Enabled = true;
+        }
+
+        private void calorieButtonClose_MouseEnter(object sender, EventArgs e)
+        {
+            calorieButtonClose.BackColor = Color.IndianRed;
+        }
+
+        private void calorieButtonClose_MouseLeave(object sender, EventArgs e)
+        {
+            calorieButtonClose.BackColor = Color.White;
+        }
+
+        private void calorie_buttonOpen_Click(object sender, EventArgs e)
+        {
+            calorieCalcPanel.Size = new Size(547, 270);
+            calorieCalcPanel.Visible = true;
+            calorie_buttonOpen.Enabled = false;
+            macro_buttonOpen.Enabled = false;
+            idealweight_buttonOpen.Enabled = false;
         }
     }
 }

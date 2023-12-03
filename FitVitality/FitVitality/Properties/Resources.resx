@@ -127,6 +127,9 @@
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bodyFatMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bodyFatMan1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="email21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,8 +163,14 @@
   <data name="loseTracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loseTracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bmiMalki" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmiMalki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="femalepressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\femalepressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bodyFatWoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bodyFatWoman1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrowFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -180,6 +189,9 @@
   </data>
   <data name="rightC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rightC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="repassError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\repassError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="leftC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\leftC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -201,6 +213,9 @@
   </data>
   <data name="maletracked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maletracked1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loseNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loseNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gainNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gainNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +250,8 @@
   <data name="femaletracked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\femaletracked1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dietButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dietButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonCalcBorder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonCalcBorder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FitVitalityLogo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FitVitalityLogo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,14 +277,14 @@
   <data name="femalepressed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\femalepressed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loseNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loseNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dietButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dietButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hLine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hLine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="repassError" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\repassError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonCalcBorder1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buttonCalcBorder1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="female" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,7 +304,7 @@
   <data name="secondPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\secondPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bmiMalki" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bmiMalki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bodyFatArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bodyFatArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

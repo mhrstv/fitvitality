@@ -32,10 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             deleteAccButton = new Krypton.Toolkit.KryptonButton();
-            panel1 = new Panel();
-            panel3 = new Panel();
+            deleteAccPanel = new Panel();
+            closeDAPanel = new Panel();
             buttonClose = new PictureBox();
-            panel2 = new Panel();
+            confirmPanel = new Panel();
             confirmButton = new Krypton.Toolkit.KryptonButton();
             textBoxConfirm = new Krypton.Toolkit.KryptonTextBox();
             confirmLabel1 = new Label();
@@ -59,28 +59,26 @@
             languageComboBox = new Krypton.Toolkit.KryptonComboBox();
             genderComboBox = new Krypton.Toolkit.KryptonComboBox();
             goalComboBox = new Krypton.Toolkit.KryptonComboBox();
-            pictureBox8 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
+            vLine2 = new PictureBox();
+            hLine2 = new PictureBox();
+            hLine1 = new PictureBox();
+            vLine = new PictureBox();
+            leftCorner = new PictureBox();
+            rightCorner = new PictureBox();
+            deleteAccPanel.SuspendLayout();
+            closeDAPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
-            panel2.SuspendLayout();
+            confirmPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)deletePanel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)languageComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)genderComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)goalComboBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -180,28 +178,28 @@
             deleteAccButton.Values.Text = "Delete Account";
             deleteAccButton.Click += kryptonButton1_Click;
             // 
-            // panel1
+            // deleteAccPanel
             // 
-            panel1.Controls.Add(panel3);
-            panel1.Controls.Add(panel2);
-            panel1.Controls.Add(textBoxConfirm);
-            panel1.Controls.Add(confirmLabel1);
-            panel1.Controls.Add(confirmLabel2);
-            panel1.Controls.Add(deletePanel);
-            panel1.Location = new Point(188, 97);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(0, 0);
-            panel1.TabIndex = 11;
-            panel1.Visible = false;
+            deleteAccPanel.Controls.Add(closeDAPanel);
+            deleteAccPanel.Controls.Add(confirmPanel);
+            deleteAccPanel.Controls.Add(textBoxConfirm);
+            deleteAccPanel.Controls.Add(confirmLabel1);
+            deleteAccPanel.Controls.Add(confirmLabel2);
+            deleteAccPanel.Controls.Add(deletePanel);
+            deleteAccPanel.Location = new Point(188, 97);
+            deleteAccPanel.Name = "deleteAccPanel";
+            deleteAccPanel.Size = new Size(0, 0);
+            deleteAccPanel.TabIndex = 11;
+            deleteAccPanel.Visible = false;
             // 
-            // panel3
+            // closeDAPanel
             // 
-            panel3.BackColor = Color.FromArgb(74, 74, 74);
-            panel3.Controls.Add(buttonClose);
-            panel3.Location = new Point(314, 8);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(17, 17);
-            panel3.TabIndex = 16;
+            closeDAPanel.BackColor = Color.FromArgb(74, 74, 74);
+            closeDAPanel.Controls.Add(buttonClose);
+            closeDAPanel.Location = new Point(314, 8);
+            closeDAPanel.Name = "closeDAPanel";
+            closeDAPanel.Size = new Size(17, 17);
+            closeDAPanel.TabIndex = 16;
             // 
             // buttonClose
             // 
@@ -216,14 +214,14 @@
             buttonClose.MouseEnter += buttonClose_MouseEnter;
             buttonClose.MouseLeave += buttonClose_MouseLeave;
             // 
-            // panel2
+            // confirmPanel
             // 
-            panel2.BackColor = Color.FromArgb(74, 74, 74);
-            panel2.Controls.Add(confirmButton);
-            panel2.Location = new Point(101, 133);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(138, 25);
-            panel2.TabIndex = 15;
+            confirmPanel.BackColor = Color.FromArgb(74, 74, 74);
+            confirmPanel.Controls.Add(confirmButton);
+            confirmPanel.Location = new Point(101, 133);
+            confirmPanel.Name = "confirmPanel";
+            confirmPanel.Size = new Size(138, 25);
+            confirmPanel.TabIndex = 15;
             // 
             // confirmButton
             // 
@@ -466,6 +464,7 @@
             weightTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             weightTextBox.Size = new Size(100, 23);
             weightTextBox.TabIndex = 26;
+            weightTextBox.TextChanged += weightTextBox_TextChanged;
             // 
             // heightTextBox
             // 
@@ -629,68 +628,59 @@
             goalComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             goalComboBox.TabIndex = 34;
             // 
-            // pictureBox8
+            // vLine2
             // 
-            pictureBox8.Image = Properties.Resources.leftC;
-            pictureBox8.Location = new Point(0, 354);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(16, 15);
-            pictureBox8.TabIndex = 41;
-            pictureBox8.TabStop = false;
+            vLine2.Image = Properties.Resources.vline;
+            vLine2.Location = new Point(689, 0);
+            vLine2.Name = "vLine2";
+            vLine2.Size = new Size(1, 357);
+            vLine2.TabIndex = 37;
+            vLine2.TabStop = false;
             // 
-            // pictureBox7
+            // hLine2
             // 
-            pictureBox7.Image = Properties.Resources.vline;
-            pictureBox7.Location = new Point(0, 0);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(1, 357);
-            pictureBox7.TabIndex = 40;
-            pictureBox7.TabStop = false;
+            hLine2.Image = Properties.Resources.hLine;
+            hLine2.Location = new Point(12, 367);
+            hLine2.Name = "hLine2";
+            hLine2.Size = new Size(667, 1);
+            hLine2.TabIndex = 36;
+            hLine2.TabStop = false;
             // 
-            // pictureBox6
+            // hLine1
             // 
-            pictureBox6.Image = Properties.Resources.rightC;
-            pictureBox6.Location = new Point(675, 354);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(16, 15);
-            pictureBox6.TabIndex = 39;
-            pictureBox6.TabStop = false;
+            hLine1.Image = Properties.Resources.hLine;
+            hLine1.Location = new Point(13, 1);
+            hLine1.Name = "hLine1";
+            hLine1.Size = new Size(664, 1);
+            hLine1.TabIndex = 35;
+            hLine1.TabStop = false;
             // 
-            // pictureBox5
+            // vLine
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(-1, -1);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(1, 355);
-            pictureBox5.TabIndex = 38;
-            pictureBox5.TabStop = false;
+            vLine.Image = Properties.Resources.vline;
+            vLine.Location = new Point(0, 0);
+            vLine.Name = "vLine";
+            vLine.Size = new Size(1, 357);
+            vLine.TabIndex = 38;
+            vLine.TabStop = false;
             // 
-            // pictureBox4
+            // leftCorner
             // 
-            pictureBox4.Image = Properties.Resources.vline;
-            pictureBox4.Location = new Point(689, 0);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(1, 357);
-            pictureBox4.TabIndex = 37;
-            pictureBox4.TabStop = false;
+            leftCorner.Image = Properties.Resources.leftC;
+            leftCorner.Location = new Point(0, 354);
+            leftCorner.Name = "leftCorner";
+            leftCorner.Size = new Size(16, 15);
+            leftCorner.TabIndex = 39;
+            leftCorner.TabStop = false;
             // 
-            // pictureBox3
+            // rightCorner
             // 
-            pictureBox3.Image = Properties.Resources.hLine;
-            pictureBox3.Location = new Point(12, 367);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(667, 1);
-            pictureBox3.TabIndex = 36;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.hLine;
-            pictureBox2.Location = new Point(13, 1);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(664, 1);
-            pictureBox2.TabIndex = 35;
-            pictureBox2.TabStop = false;
+            rightCorner.Image = Properties.Resources.rightC;
+            rightCorner.Location = new Point(675, 354);
+            rightCorner.Name = "rightCorner";
+            rightCorner.Size = new Size(16, 15);
+            rightCorner.TabIndex = 40;
+            rightCorner.TabStop = false;
             // 
             // Settings
             // 
@@ -698,13 +688,12 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
-            Controls.Add(pictureBox8);
-            Controls.Add(pictureBox7);
-            Controls.Add(pictureBox6);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
+            Controls.Add(rightCorner);
+            Controls.Add(leftCorner);
+            Controls.Add(vLine);
+            Controls.Add(vLine2);
+            Controls.Add(hLine2);
+            Controls.Add(hLine1);
             Controls.Add(goalComboBox);
             Controls.Add(genderComboBox);
             Controls.Add(languageComboBox);
@@ -723,28 +712,27 @@
             Controls.Add(langLabel);
             Controls.Add(accSettings_label);
             Controls.Add(appSettings_label);
-            Controls.Add(panel1);
+            Controls.Add(deleteAccPanel);
             Controls.Add(deleteAccButton);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Settings";
             Text = "Settings";
             Load += Settings_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel3.ResumeLayout(false);
+            deleteAccPanel.ResumeLayout(false);
+            deleteAccPanel.PerformLayout();
+            closeDAPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
-            panel2.ResumeLayout(false);
+            confirmPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)deletePanel).EndInit();
             ((System.ComponentModel.ISupportInitialize)languageComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)genderComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)goalComboBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine).EndInit();
+            ((System.ComponentModel.ISupportInitialize)leftCorner).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rightCorner).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -753,15 +741,15 @@
 
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private Krypton.Toolkit.KryptonButton deleteAccButton;
-        private Panel panel1;
+        private Panel deleteAccPanel;
         private Krypton.Toolkit.KryptonTextBox textBoxConfirm;
         private Label confirmLabel1;
         private Krypton.Toolkit.KryptonButton confirmButton;
         private Label confirmLabel2;
         private PictureBox buttonClose;
         private PictureBox deletePanel;
-        private Panel panel2;
-        private Panel panel3;
+        private Panel confirmPanel;
+        private Panel closeDAPanel;
         private Label appSettings_label;
         private Label accSettings_label;
         private Label langLabel;
@@ -784,8 +772,11 @@
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
         private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
+        private PictureBox vLine2;
+        private PictureBox hLine2;
+        private PictureBox hLine1;
+        private PictureBox vLine;
+        private PictureBox leftCorner;
+        private PictureBox rightCorner;
     }
 }

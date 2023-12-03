@@ -37,17 +37,17 @@ namespace FitVitality
             _userID = userID;
 
             pb = new PictureBox();
-            panel1.Controls.Add(pb);
+            deleteAccPanel.Controls.Add(pb);
             pb.Dock = DockStyle.Fill;
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            panel2.Visible = true;
-            panel3.Visible = true;
-            panel1.Height = 174;
-            panel1.Width = 341;
+            deleteAccPanel.Visible = true;
+            confirmPanel.Visible = true;
+            closeDAPanel.Visible = true;
+            deleteAccPanel.Height = 174;
+            deleteAccPanel.Width = 341;
             deleteAccButton.Visible = false;
             appSettings_label.Visible = false;
             accSettings_label.Visible = false;
@@ -145,7 +145,7 @@ namespace FitVitality
                     command.Parameters.AddWithValue("@ID", _userID);
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        panel1.Visible = false;
+                        deleteAccPanel.Visible = false;
                         Login login = new Login();
                         login.Show();
                         this.Hide();
@@ -156,7 +156,7 @@ namespace FitVitality
         }
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            deleteAccPanel.Visible = false;
             deleteAccButton.Visible = true;
             appSettings_label.Visible = true;
             accSettings_label.Visible = true;
@@ -312,6 +312,11 @@ namespace FitVitality
             {
                 cfg.Write("Language", "en", "SETTINGS");
             }
+        }
+
+        private void weightTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

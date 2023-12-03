@@ -14,6 +14,11 @@ namespace FitVitality
 {
     public partial class Calculators : Form
     {
+        double neck;
+        double waist;
+        double hips;
+        double bodyFat;
+        double bfp;
         double bmr;
         double sedentaryBMR;
         double exerciseBMR;
@@ -66,11 +71,17 @@ namespace FitVitality
         {
             bmiCalcPanel.Size = new Size(547, 270);
             bmiCalcPanel.Visible = true;
+            calorie_buttonOpen.Enabled = false;
+            macro_buttonOpen.Enabled = false;
+            idealweight_buttonOpen.Enabled = false;
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             bmiCalcPanel.Visible = false;
+            calorie_buttonOpen.Enabled = true;
+            macro_buttonOpen.Enabled = true;
+            idealweight_buttonOpen.Enabled = true;
         }
 
         private void rotationTimer_Tick(object sender, EventArgs e)
@@ -141,6 +152,8 @@ namespace FitVitality
                     }
                 }
             }
+
+            //BMI
             bmi = Math.Round((Convert.ToDouble(weight) / Math.Pow(Convert.ToDouble(height) / 100, 2)), 1);
             bmiPanelLabel.Text = $"BMI = {bmi.ToString()} kg/m²";
             percentages = Math.Round((((double)bmi - 16) / 24) * 100, 0);
@@ -221,6 +234,8 @@ namespace FitVitality
                     bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
                 }
             }
+
+            //BMR
             if (gender == "Male")
             {
                 bmr = Math.Round(10 * Convert.ToDouble(weight) + 6.25 * Convert.ToDouble(height) - 5 * age + 5, 0);
@@ -236,6 +251,43 @@ namespace FitVitality
             sedentaryLabel.Text = $"Sedentary =  ≈{sedentaryBMR.ToString()} calories/day";
             exerciseLabel.Text = $"Exercise =  ≈{exerciseBMR.ToString()} calories/day";
             intExrLabel.Text = $"Intense exercise =  ≈{intenseBMR.ToString()} calories/day";
+
+
+            //Body Fat Percentage
+            if (gender == "Male")
+            {
+                hipsTb.Enabled = false;
+                bodyFatScale.Image = Properties.Resources.bodyFatMan;
+                essentialLabel.Location = new Point(255, 118);
+                athletesLabel.Location = new Point(303, 118);
+                fitnessLabel.Location = new Point(347, 118);
+                averageLabel.Location = new Point(380, 118);
+                obeseLabel.Location = new Point(447, 118);
+            }
+            if (gender == "Female")
+            {
+                hipsTb.Enabled = true;
+                bodyFatScale.Image = Properties.Resources.bodyFatWoman;
+                essentialLabel.Location = new Point(302, 118);
+                athletesLabel.Location = new Point(350, 118);
+                fitnessLabel.Location = new Point(394, 118);
+                averageLabel.Location = new Point(432, 118);
+                obeseLabel.Location = new Point(477, 118);
+            }
+            neckTb.TextChanged += checkBodyFatInputs;
+            waistTb.TextChanged += checkBodyFatInputs;
+            hipsTb.TextChanged += checkBodyFatInputs;
+        }
+        private void checkBodyFatInputs(object sender, EventArgs e)
+        {
+            if (gender == "Male")
+            {
+                bodyFatCalculateButton.Enabled = !string.IsNullOrEmpty(neckTb.Text) && !string.IsNullOrEmpty(waistTb.Text);
+            }
+            if (gender == "Female")
+            {
+                bodyFatCalculateButton.Enabled = !string.IsNullOrEmpty(neckTb.Text) && !string.IsNullOrEmpty(waistTb.Text) && !string.IsNullOrEmpty(hipsTb.Text);
+            }
         }
 
         private void Calculators_Activated(object sender, EventArgs e)
@@ -380,11 +432,17 @@ namespace FitVitality
         {
             bmrCalcPanel.Size = new Size(547, 270);
             bmrCalcPanel.Visible = true;
+            calorie_buttonOpen.Enabled = false;
+            macro_buttonOpen.Enabled = false;
+            idealweight_buttonOpen.Enabled = false;
         }
 
         private void buttonCloseBMR_Click(object sender, EventArgs e)
         {
             bmrCalcPanel.Visible = false;
+            calorie_buttonOpen.Enabled = true;
+            macro_buttonOpen.Enabled = true;
+            idealweight_buttonOpen.Enabled = true;
         }
 
         private void buttonCloseBMR_MouseEnter(object sender, EventArgs e)
@@ -395,6 +453,69 @@ namespace FitVitality
         private void buttonCloseBMR_MouseLeave(object sender, EventArgs e)
         {
             buttonCloseBMR.BackColor = Color.White;
+        }
+
+        private void bodyFatButtonClose_Click(object sender, EventArgs e)
+        {
+            bodyFatCalcPanel.Visible = false;
+            calorie_buttonOpen.Enabled = true;
+            macro_buttonOpen.Enabled = true;
+            idealweight_buttonOpen.Enabled = true;
+        }
+
+        private void bodyFatButtonClose_MouseEnter(object sender, EventArgs e)
+        {
+            bodyFatButtonClose.BackColor = Color.IndianRed;
+        }
+
+        private void bodyFatButtonClose_MouseLeave(object sender, EventArgs e)
+        {
+            bodyFatButtonClose.BackColor = Color.White;
+        }
+
+        private void bodyFatCalculateButton_Click(object sender, EventArgs e)
+        {
+            if (gender == "Male")
+            {
+                neck = double.Parse(neckTb.Text);
+                waist = double.Parse(waistTb.Text);
+            }
+            if (gender == "Female")
+            {
+                neck = double.Parse(neckTb.Text);
+                waist = double.Parse(waistTb.Text);
+                hips = double.Parse(hipsTb.Text);
+            }
+            if (gender == "Male")
+            {
+                bodyFat = Math.Round((495 / (1.0324 - 0.19077 * Math.Log10(waist - neck) + 0.15456 * Math.Log10(Convert.ToDouble(height)))) - 450, 0);
+            }
+            if (gender == "Female")
+            {
+                bodyFat = Math.Round((495 / (1.29579 - 0.35004 * Math.Log10(waist + hips - neck) + 0.22100 * Math.Log10(Convert.ToDouble(height)))) - 450, 0);
+            }
+            if(bodyFat < 0)
+                bodyFat = 0;
+            if(bodyFat > 100)
+                bodyFat = 100;
+            bodyFatPercentage.Location = new Point(Convert.ToInt16(Math.Round((bodyFat / 40 * 254) - 4, 0)), 0);
+            bodyFatArrow.Location = new Point(Convert.ToInt16(Math.Round(bodyFat / 40 * 254, 0)), 15);
+            currentBFP.Text = $"Body Fat Percentage = {bodyFat.ToString()}%";
+            bodyFatPercentage.Text = bodyFat.ToString() + "%";
+        }
+
+        private void bodyfat_buttonOpen_Click(object sender, EventArgs e)
+        {
+            bodyFatCalcPanel.Size = new Size(547, 270);
+            bodyFatCalcPanel.Visible = true;
+            calorie_buttonOpen.Enabled = false;
+            macro_buttonOpen.Enabled = false;
+            idealweight_buttonOpen.Enabled = false;
+        }
+
+        private void neckTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

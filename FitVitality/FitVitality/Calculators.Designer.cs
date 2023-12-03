@@ -88,11 +88,29 @@
             bmrDescription = new Label();
             bmrCalcLabel = new Label();
             bmrBorders = new PictureBox();
-            panel1 = new Panel();
-            pictureBox1 = new PictureBox();
-            label7 = new Label();
+            bodyFatCalcPanel = new Panel();
+            bodyFatCalculateButton = new Krypton.Toolkit.KryptonButton();
+            currentBFP = new Label();
+            bodyFatScalePanel = new Panel();
+            bodyFatPercentage = new Label();
+            bodyFatArrow = new PictureBox();
+            obeseLabel = new Label();
+            averageLabel = new Label();
+            fitnessLabel = new Label();
+            athletesLabel = new Label();
+            essentialLabel = new Label();
+            bodyFatScale = new PictureBox();
+            hipsTb = new TextBox();
+            waistTb = new TextBox();
+            neckTb = new TextBox();
+            neckLabel = new Label();
+            hipsLabel = new Label();
+            waistLabel = new Label();
+            extraMeasurementsLabel = new Label();
+            bodyFatButtonClose = new PictureBox();
+            bodyFatDescription = new Label();
             bodyFatLabel = new Label();
-            pictureBox2 = new PictureBox();
+            bodyFatBorders = new PictureBox();
             bmi_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bmiButtonBorders).BeginInit();
             bmr_panel.SuspendLayout();
@@ -121,9 +139,12 @@
             bmrCalcPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonCloseBMR).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bmrBorders).BeginInit();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            bodyFatCalcPanel.SuspendLayout();
+            bodyFatScalePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bodyFatArrow).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bodyFatScale).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bodyFatButtonClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bodyFatBorders).BeginInit();
             SuspendLayout();
             // 
             // calculators_label
@@ -230,7 +251,7 @@
             // 
             // bmiButtonBorders
             // 
-            bmiButtonBorders.Image = (Image)resources.GetObject("bmiButtonBorders.Image");
+            bmiButtonBorders.Image = Properties.Resources.buttonCalcBorder;
             bmiButtonBorders.Location = new Point(0, 0);
             bmiButtonBorders.Name = "bmiButtonBorders";
             bmiButtonBorders.Size = new Size(246, 44);
@@ -330,7 +351,7 @@
             // 
             // bmrButtonBorders
             // 
-            bmrButtonBorders.Image = (Image)resources.GetObject("bmrButtonBorders.Image");
+            bmrButtonBorders.Image = Properties.Resources.buttonCalcBorder;
             bmrButtonBorders.Location = new Point(0, 0);
             bmrButtonBorders.Name = "bmrButtonBorders";
             bmrButtonBorders.Size = new Size(246, 44);
@@ -414,6 +435,7 @@
             bodyfat_buttonOpen.StateTracking.Border.Width = 1;
             bodyfat_buttonOpen.TabIndex = 1;
             bodyfat_buttonOpen.Values.Text = "Open";
+            bodyfat_buttonOpen.Click += bodyfat_buttonOpen_Click;
             // 
             // bodyfat_label
             // 
@@ -429,7 +451,7 @@
             // 
             // bodyFatButtonBorders
             // 
-            bodyFatButtonBorders.Image = (Image)resources.GetObject("bodyFatButtonBorders.Image");
+            bodyFatButtonBorders.Image = Properties.Resources.buttonCalcBorder;
             bodyFatButtonBorders.Location = new Point(0, 0);
             bodyFatButtonBorders.Name = "bodyFatButtonBorders";
             bodyFatButtonBorders.Size = new Size(246, 44);
@@ -528,7 +550,7 @@
             // 
             // idealWeightButtonBorders
             // 
-            idealWeightButtonBorders.Image = (Image)resources.GetObject("idealWeightButtonBorders.Image");
+            idealWeightButtonBorders.Image = Properties.Resources.buttonCalcBorder;
             idealWeightButtonBorders.Location = new Point(0, 0);
             idealWeightButtonBorders.Name = "idealWeightButtonBorders";
             idealWeightButtonBorders.Size = new Size(246, 44);
@@ -681,7 +703,7 @@
             // 
             // calorieButtonBorders
             // 
-            calorieButtonBorders.Image = (Image)resources.GetObject("calorieButtonBorders.Image");
+            calorieButtonBorders.Image = Properties.Resources.buttonCalcBorder;
             calorieButtonBorders.Location = new Point(0, 0);
             calorieButtonBorders.Name = "calorieButtonBorders";
             calorieButtonBorders.Size = new Size(246, 44);
@@ -780,7 +802,7 @@
             // 
             // macroButtonBorders
             // 
-            macroButtonBorders.Image = (Image)resources.GetObject("macroButtonBorders.Image");
+            macroButtonBorders.Image = Properties.Resources.buttonCalcBorder;
             macroButtonBorders.Location = new Point(0, 0);
             macroButtonBorders.Name = "macroButtonBorders";
             macroButtonBorders.Size = new Size(246, 44);
@@ -946,7 +968,7 @@
             // 
             // bmiPanelBorders
             // 
-            bmiPanelBorders.Image = (Image)resources.GetObject("bmiPanelBorders.Image");
+            bmiPanelBorders.Image = Properties.Resources.buttonCalcBorder1;
             bmiPanelBorders.Location = new Point(0, 0);
             bmiPanelBorders.Name = "bmiPanelBorders";
             bmiPanelBorders.Size = new Size(547, 270);
@@ -1079,7 +1101,7 @@
             // 
             // bmrBorders
             // 
-            bmrBorders.Image = (Image)resources.GetObject("bmrBorders.Image");
+            bmrBorders.Image = Properties.Resources.buttonCalcBorder1;
             bmrBorders.Location = new Point(0, 0);
             bmrBorders.Name = "bmrBorders";
             bmrBorders.Size = new Size(547, 270);
@@ -1088,39 +1110,288 @@
             bmrBorders.TabStop = false;
             bmrBorders.Click += bmrBorders_Click;
             // 
-            // panel1
+            // bodyFatCalcPanel
             // 
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(bodyFatLabel);
-            panel1.Controls.Add(pictureBox2);
-            panel1.Location = new Point(72, 49);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(547, 270);
-            panel1.TabIndex = 22;
-            panel1.Visible = false;
+            bodyFatCalcPanel.Controls.Add(bodyFatCalculateButton);
+            bodyFatCalcPanel.Controls.Add(currentBFP);
+            bodyFatCalcPanel.Controls.Add(bodyFatScalePanel);
+            bodyFatCalcPanel.Controls.Add(obeseLabel);
+            bodyFatCalcPanel.Controls.Add(averageLabel);
+            bodyFatCalcPanel.Controls.Add(fitnessLabel);
+            bodyFatCalcPanel.Controls.Add(athletesLabel);
+            bodyFatCalcPanel.Controls.Add(essentialLabel);
+            bodyFatCalcPanel.Controls.Add(bodyFatScale);
+            bodyFatCalcPanel.Controls.Add(hipsTb);
+            bodyFatCalcPanel.Controls.Add(waistTb);
+            bodyFatCalcPanel.Controls.Add(neckTb);
+            bodyFatCalcPanel.Controls.Add(neckLabel);
+            bodyFatCalcPanel.Controls.Add(hipsLabel);
+            bodyFatCalcPanel.Controls.Add(waistLabel);
+            bodyFatCalcPanel.Controls.Add(extraMeasurementsLabel);
+            bodyFatCalcPanel.Controls.Add(bodyFatButtonClose);
+            bodyFatCalcPanel.Controls.Add(bodyFatDescription);
+            bodyFatCalcPanel.Controls.Add(bodyFatLabel);
+            bodyFatCalcPanel.Controls.Add(bodyFatBorders);
+            bodyFatCalcPanel.Location = new Point(72, 49);
+            bodyFatCalcPanel.Name = "bodyFatCalcPanel";
+            bodyFatCalcPanel.Size = new Size(547, 270);
+            bodyFatCalcPanel.TabIndex = 22;
+            bodyFatCalcPanel.Visible = false;
             // 
-            // pictureBox1
+            // bodyFatCalculateButton
             // 
-            pictureBox1.BackColor = Color.White;
-            pictureBox1.Image = Properties.Resources.closebutton;
-            pictureBox1.Location = new Point(519, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(17, 17);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 12;
-            pictureBox1.TabStop = false;
+            bodyFatCalculateButton.CornerRoundingRadius = 15F;
+            bodyFatCalculateButton.Enabled = false;
+            bodyFatCalculateButton.Location = new Point(337, 196);
+            bodyFatCalculateButton.Name = "bodyFatCalculateButton";
+            bodyFatCalculateButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            bodyFatCalculateButton.Size = new Size(112, 25);
+            bodyFatCalculateButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
+            bodyFatCalculateButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
+            bodyFatCalculateButton.StateCommon.Back.ColorAngle = 0F;
+            bodyFatCalculateButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
+            bodyFatCalculateButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
+            bodyFatCalculateButton.StateCommon.Border.ColorAngle = 0F;
+            bodyFatCalculateButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            bodyFatCalculateButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            bodyFatCalculateButton.StateCommon.Border.Rounding = 15F;
+            bodyFatCalculateButton.StateCommon.Border.Width = 1;
+            bodyFatCalculateButton.StateCommon.Content.ShortText.Color1 = Color.Black;
+            bodyFatCalculateButton.StateCommon.Content.ShortText.Color2 = Color.Black;
+            bodyFatCalculateButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            bodyFatCalculateButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            bodyFatCalculateButton.StateDisabled.Back.ColorAngle = 45F;
+            bodyFatCalculateButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            bodyFatCalculateButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            bodyFatCalculateButton.StateDisabled.Border.ColorAngle = 45F;
+            bodyFatCalculateButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            bodyFatCalculateButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            bodyFatCalculateButton.StateDisabled.Border.Rounding = 15F;
+            bodyFatCalculateButton.StateDisabled.Border.Width = 1;
+            bodyFatCalculateButton.StateDisabled.Content.ShortText.Color1 = Color.White;
+            bodyFatCalculateButton.StateDisabled.Content.ShortText.Color2 = Color.White;
+            bodyFatCalculateButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            bodyFatCalculateButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            bodyFatCalculateButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            bodyFatCalculateButton.StateNormal.Back.ColorAngle = 0F;
+            bodyFatCalculateButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            bodyFatCalculateButton.StateNormal.Border.Color1 = Color.Black;
+            bodyFatCalculateButton.StateNormal.Border.Color2 = Color.Black;
+            bodyFatCalculateButton.StateNormal.Border.ColorAngle = 0F;
+            bodyFatCalculateButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            bodyFatCalculateButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            bodyFatCalculateButton.StateNormal.Border.Rounding = 15F;
+            bodyFatCalculateButton.StateNormal.Border.Width = 1;
+            bodyFatCalculateButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            bodyFatCalculateButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            bodyFatCalculateButton.StatePressed.Back.ColorAngle = 45F;
+            bodyFatCalculateButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            bodyFatCalculateButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            bodyFatCalculateButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            bodyFatCalculateButton.StatePressed.Border.ColorAngle = 45F;
+            bodyFatCalculateButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            bodyFatCalculateButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            bodyFatCalculateButton.StatePressed.Border.Rounding = 15F;
+            bodyFatCalculateButton.StatePressed.Border.Width = 1;
+            bodyFatCalculateButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            bodyFatCalculateButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            bodyFatCalculateButton.StateTracking.Back.ColorAngle = 45F;
+            bodyFatCalculateButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            bodyFatCalculateButton.StateTracking.Border.Color1 = Color.Black;
+            bodyFatCalculateButton.StateTracking.Border.Color2 = Color.Black;
+            bodyFatCalculateButton.StateTracking.Border.ColorAngle = 45F;
+            bodyFatCalculateButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            bodyFatCalculateButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            bodyFatCalculateButton.StateTracking.Border.Rounding = 15F;
+            bodyFatCalculateButton.StateTracking.Border.Width = 1;
+            bodyFatCalculateButton.TabIndex = 28;
+            bodyFatCalculateButton.Values.Text = "Calculate";
+            bodyFatCalculateButton.Click += bodyFatCalculateButton_Click;
             // 
-            // label7
+            // currentBFP
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.ControlDarkDark;
-            label7.Location = new Point(35, 91);
-            label7.Name = "label7";
-            label7.Size = new Size(217, 133);
-            label7.TabIndex = 5;
-            label7.Text = resources.GetString("label7.Text");
+            currentBFP.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            currentBFP.Location = new Point(267, 148);
+            currentBFP.Name = "currentBFP";
+            currentBFP.Size = new Size(256, 23);
+            currentBFP.TabIndex = 27;
+            currentBFP.Text = "{BFP}";
+            currentBFP.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // bodyFatScalePanel
+            // 
+            bodyFatScalePanel.Controls.Add(bodyFatPercentage);
+            bodyFatScalePanel.Controls.Add(bodyFatArrow);
+            bodyFatScalePanel.Location = new Point(261, 61);
+            bodyFatScalePanel.Name = "bodyFatScalePanel";
+            bodyFatScalePanel.Size = new Size(267, 30);
+            bodyFatScalePanel.TabIndex = 26;
+            // 
+            // bodyFatPercentage
+            // 
+            bodyFatPercentage.AutoSize = true;
+            bodyFatPercentage.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            bodyFatPercentage.Location = new Point(0, 0);
+            bodyFatPercentage.Name = "bodyFatPercentage";
+            bodyFatPercentage.Size = new Size(0, 13);
+            bodyFatPercentage.TabIndex = 29;
+            // 
+            // bodyFatArrow
+            // 
+            bodyFatArrow.Image = Properties.Resources.bodyFatArrow;
+            bodyFatArrow.Location = new Point(0, 15);
+            bodyFatArrow.Name = "bodyFatArrow";
+            bodyFatArrow.Size = new Size(13, 15);
+            bodyFatArrow.SizeMode = PictureBoxSizeMode.Zoom;
+            bodyFatArrow.TabIndex = 0;
+            bodyFatArrow.TabStop = false;
+            // 
+            // obeseLabel
+            // 
+            obeseLabel.AutoSize = true;
+            obeseLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            obeseLabel.Location = new Point(477, 118);
+            obeseLabel.Name = "obeseLabel";
+            obeseLabel.Size = new Size(38, 14);
+            obeseLabel.TabIndex = 25;
+            obeseLabel.Text = "Obese";
+            // 
+            // averageLabel
+            // 
+            averageLabel.AutoSize = true;
+            averageLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            averageLabel.Location = new Point(432, 118);
+            averageLabel.Name = "averageLabel";
+            averageLabel.Size = new Size(47, 14);
+            averageLabel.TabIndex = 24;
+            averageLabel.Text = "Average";
+            // 
+            // fitnessLabel
+            // 
+            fitnessLabel.AutoSize = true;
+            fitnessLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            fitnessLabel.Location = new Point(394, 118);
+            fitnessLabel.Name = "fitnessLabel";
+            fitnessLabel.Size = new Size(42, 14);
+            fitnessLabel.TabIndex = 23;
+            fitnessLabel.Text = "Fitness";
+            // 
+            // athletesLabel
+            // 
+            athletesLabel.AutoSize = true;
+            athletesLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            athletesLabel.Location = new Point(350, 118);
+            athletesLabel.Name = "athletesLabel";
+            athletesLabel.Size = new Size(48, 14);
+            athletesLabel.TabIndex = 22;
+            athletesLabel.Text = "Athletes";
+            // 
+            // essentialLabel
+            // 
+            essentialLabel.AutoSize = true;
+            essentialLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            essentialLabel.Location = new Point(302, 118);
+            essentialLabel.Name = "essentialLabel";
+            essentialLabel.Size = new Size(51, 14);
+            essentialLabel.TabIndex = 21;
+            essentialLabel.Text = "Essential";
+            // 
+            // bodyFatScale
+            // 
+            bodyFatScale.Image = Properties.Resources.bodyFatWoman;
+            bodyFatScale.Location = new Point(267, 92);
+            bodyFatScale.Name = "bodyFatScale";
+            bodyFatScale.Size = new Size(256, 26);
+            bodyFatScale.SizeMode = PictureBoxSizeMode.Zoom;
+            bodyFatScale.TabIndex = 20;
+            bodyFatScale.TabStop = false;
+            // 
+            // hipsTb
+            // 
+            hipsTb.Location = new Point(201, 232);
+            hipsTb.Name = "hipsTb";
+            hipsTb.Size = new Size(56, 23);
+            hipsTb.TabIndex = 19;
+            // 
+            // waistTb
+            // 
+            waistTb.Location = new Point(105, 232);
+            waistTb.Name = "waistTb";
+            waistTb.Size = new Size(56, 23);
+            waistTb.TabIndex = 18;
+            // 
+            // neckTb
+            // 
+            neckTb.Location = new Point(27, 232);
+            neckTb.Name = "neckTb";
+            neckTb.Size = new Size(56, 23);
+            neckTb.TabIndex = 17;
+            neckTb.TextChanged += neckTb_TextChanged;
+            // 
+            // neckLabel
+            // 
+            neckLabel.AutoSize = true;
+            neckLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            neckLabel.Location = new Point(27, 213);
+            neckLabel.Name = "neckLabel";
+            neckLabel.Size = new Size(56, 14);
+            neckLabel.TabIndex = 16;
+            neckLabel.Text = "Neck (cm)";
+            // 
+            // hipsLabel
+            // 
+            hipsLabel.AutoSize = true;
+            hipsLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            hipsLabel.Location = new Point(181, 213);
+            hipsLabel.Name = "hipsLabel";
+            hipsLabel.Size = new Size(97, 14);
+            hipsLabel.TabIndex = 15;
+            hipsLabel.Text = "Hips (women only)";
+            // 
+            // waistLabel
+            // 
+            waistLabel.AutoSize = true;
+            waistLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            waistLabel.Location = new Point(103, 213);
+            waistLabel.Name = "waistLabel";
+            waistLabel.Size = new Size(61, 14);
+            waistLabel.TabIndex = 14;
+            waistLabel.Text = "Waist (cm)";
+            // 
+            // extraMeasurementsLabel
+            // 
+            extraMeasurementsLabel.AutoSize = true;
+            extraMeasurementsLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            extraMeasurementsLabel.Location = new Point(27, 195);
+            extraMeasurementsLabel.Name = "extraMeasurementsLabel";
+            extraMeasurementsLabel.Size = new Size(251, 14);
+            extraMeasurementsLabel.TabIndex = 13;
+            extraMeasurementsLabel.Text = "We need extra measurements for this calculation.";
+            // 
+            // bodyFatButtonClose
+            // 
+            bodyFatButtonClose.BackColor = Color.White;
+            bodyFatButtonClose.Image = Properties.Resources.closebutton;
+            bodyFatButtonClose.Location = new Point(519, 9);
+            bodyFatButtonClose.Name = "bodyFatButtonClose";
+            bodyFatButtonClose.Size = new Size(17, 17);
+            bodyFatButtonClose.SizeMode = PictureBoxSizeMode.Zoom;
+            bodyFatButtonClose.TabIndex = 12;
+            bodyFatButtonClose.TabStop = false;
+            bodyFatButtonClose.Click += bodyFatButtonClose_Click;
+            bodyFatButtonClose.MouseEnter += bodyFatButtonClose_MouseEnter;
+            bodyFatButtonClose.MouseLeave += bodyFatButtonClose_MouseLeave;
+            // 
+            // bodyFatDescription
+            // 
+            bodyFatDescription.AutoSize = true;
+            bodyFatDescription.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            bodyFatDescription.ForeColor = SystemColors.ControlDarkDark;
+            bodyFatDescription.Location = new Point(42, 53);
+            bodyFatDescription.Name = "bodyFatDescription";
+            bodyFatDescription.Size = new Size(198, 133);
+            bodyFatDescription.TabIndex = 5;
+            bodyFatDescription.Text = "Body fat percentage is \r\ndefined as the percentage \r\nof your body that consists \r\nof fat. Measuring body fat \r\nis key to assessing whether \r\na person is overweight, \r\nobese or at a healthy weight.";
             // 
             // bodyFatLabel
             // 
@@ -1132,15 +1403,15 @@
             bodyFatLabel.TabIndex = 2;
             bodyFatLabel.Text = "Body Fat Calculator";
             // 
-            // pictureBox2
+            // bodyFatBorders
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(0, 0);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(547, 270);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
+            bodyFatBorders.Image = Properties.Resources.buttonCalcBorder1;
+            bodyFatBorders.Location = new Point(0, 0);
+            bodyFatBorders.Name = "bodyFatBorders";
+            bodyFatBorders.Size = new Size(547, 270);
+            bodyFatBorders.SizeMode = PictureBoxSizeMode.Zoom;
+            bodyFatBorders.TabIndex = 0;
+            bodyFatBorders.TabStop = false;
             // 
             // Calculators
             // 
@@ -1148,7 +1419,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
-            Controls.Add(panel1);
+            Controls.Add(bodyFatCalcPanel);
             Controls.Add(bmrCalcPanel);
             Controls.Add(bmiCalcPanel);
             Controls.Add(idealweight_panel);
@@ -1206,10 +1477,14 @@
             bmrCalcPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)buttonCloseBMR).EndInit();
             ((System.ComponentModel.ISupportInitialize)bmrBorders).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            bodyFatCalcPanel.ResumeLayout(false);
+            bodyFatCalcPanel.PerformLayout();
+            bodyFatScalePanel.ResumeLayout(false);
+            bodyFatScalePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)bodyFatArrow).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bodyFatScale).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bodyFatButtonClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bodyFatBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1266,21 +1541,36 @@
         private Panel bmrCalcPanel;
         private Label bmrDescription;
         private Label bmrCalcLabel;
-        private PictureBox pictureBox4;
+        private PictureBox bodyFatArrow;
         private PictureBox bmrBorders;
         private Label currentBMR;
         private Label dailyCalsLabel;
         private Label intExrLabel;
         private Label exerciseLabel;
         private Label sedentaryLabel;
-        private Label label11;
-        private Label label10;
+        private Label bodyFatPercentage;
         private Label activityDescriptions;
         private PictureBox buttonCloseBMR;
-        private Panel panel1;
-        private PictureBox pictureBox1;
-        private Label label7;
+        private Panel bodyFatCalcPanel;
+        private PictureBox bodyFatButtonClose;
+        private Label bodyFatDescription;
         private Label bodyFatLabel;
-        private PictureBox pictureBox2;
+        private PictureBox bodyFatBorders;
+        private Label neckLabel;
+        private Label hipsLabel;
+        private Label waistLabel;
+        private Label extraMeasurementsLabel;
+        private PictureBox bodyFatScale;
+        private TextBox hipsTb;
+        private TextBox waistTb;
+        private TextBox neckTb;
+        private Label obeseLabel;
+        private Label averageLabel;
+        private Label fitnessLabel;
+        private Label athletesLabel;
+        private Label essentialLabel;
+        private Panel bodyFatScalePanel;
+        private Krypton.Toolkit.KryptonButton bodyFatCalculateButton;
+        private Label currentBFP;
     }
 }

@@ -367,14 +367,14 @@ namespace FitVitality
             }
             if (gender == "Female")
             {
-                bmr = Math.Round(10 * Convert.ToDouble(weight) + 6.25 * Convert.ToDouble(height) - 5 * age + 161, 0);
+                bmr = Math.Round(10 * Convert.ToDouble(weight) + 6.25 * Convert.ToDouble(height) - 5 * age - 161, 0);
             }
-            sedentaryBMR = Math.Ceiling(bmr * 1.2);
-            exerciseBMR13 = Math.Ceiling(bmr * 1.38);
-            exerciseBMR45 = Math.Ceiling(bmr * 1.45);
-            DailyBMR34 = Math.Ceiling(bmr * 1.55);
-            intenseBMR67 = Math.Ceiling(bmr * 1.72);
-            veryIntenseBMR = Math.Ceiling(bmr * 1.9);
+            sedentaryBMR = Math.Round(bmr * 1.2,0);
+            exerciseBMR13 = Math.Round(bmr * 1.38,0);
+            exerciseBMR45 = Math.Round(bmr * 1.45,0);
+            DailyBMR34 = Math.Round(bmr * 1.55,0);
+            intenseBMR67 = Math.Round(bmr * 1.72,0);
+            veryIntenseBMR = Math.Round(bmr * 1.9,0);
 
             currentBMR.Text = $"BMR = {bmr.ToString()} calories/day";
 

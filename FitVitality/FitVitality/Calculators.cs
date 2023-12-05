@@ -19,11 +19,18 @@ namespace FitVitality
         double waist;
         double hips;
         double bodyFat;
-        double bfp;
         double bmr;
+        double weightLoss;
+        double mildWeightLoss;
+        double maintainWeight;
+        double weightGain;
+        double mildWeightGain;
         double sedentaryBMR;
-        double exerciseBMR;
-        double intenseBMR;
+        double exerciseBMR13;
+        double exerciseBMR45;
+        double DailyBMR34;
+        double intenseBMR67;
+        double veryIntenseBMR;
         double percentages;
         double percentagesStudents;
         private float currentRotation;
@@ -38,6 +45,123 @@ namespace FitVitality
         public double bmi;
         string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         public string _userID;
+
+        public void CalorieCalculation(double activity)
+        {
+            lossLabel.Text = $"Weight loss - {Math.Round(activity * 0.75, 0)} calories/day";
+            mildLossLabel.Text = $"Mild weight loss - {Math.Round(activity * 0.88, 0)} calories/day";
+            maintainLabel.Text = $"Maintain weight - {Math.Round(activity, 0)} calories/day";
+            mildGainLabel.Text = $"Mild weight gain - {Math.Round(activity * 1.12, 0)} calories/day";
+            gainLabel.Text = $"Gain weight - {Math.Round(activity * 1.25, 0)} calories/day";
+        }
+        public void MacroBalanced(double activity)
+        {
+            if (goal == "Cut")
+            {
+                activity *= Math.Round(0.75, 0);
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.25 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
+            }
+            if (goal == "Maintain")
+            {
+                activity = activity;
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.25 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
+            }
+            if (goal == "Bulk")
+            {
+                activity *= Math.Round(1.25, 0);
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.25 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
+            }
+        }
+        public void MacroLowFat(double activity)
+        {
+            if (goal == "Cut")
+            {
+                activity *= Math.Round(0.75, 0);
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
+            }
+            if (goal == "Maintain")
+            {
+                activity = activity;
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
+            }
+            if (goal == "Bulk")
+            {
+                activity *= Math.Round(1.25, 0);
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
+            }
+        }
+        public void MacroLowCarb(double activity)
+        {
+            if (goal == "Cut")
+            {
+                activity *= Math.Round(0.75, 0);
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.3 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.3 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
+            }
+            if (goal == "Maintain")
+            {
+                activity = activity;
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.3 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.3 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
+            }
+            if (goal == "Bulk")
+            {
+                activity *= Math.Round(1.25, 0);
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.3 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.3 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
+            }
+        }
+        public void MacroHighProtein(double activity)
+        {
+            if (goal == "Cut")
+            {
+                activity *= Math.Round(0.75, 0);
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.35 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
+            }
+            if (goal == "Maintain")
+            {
+                activity = activity;
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.35 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
+            }
+            if (goal == "Bulk")
+            {
+                activity *= Math.Round(1.25, 0);
+                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                protein.Text = $"{activity * 0.35 / 4:f1}g/day";
+                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
+            }
+        }
         public Calculators(string userID)
         {
             InitializeComponent();
@@ -245,13 +369,21 @@ namespace FitVitality
             {
                 bmr = Math.Round(10 * Convert.ToDouble(weight) + 6.25 * Convert.ToDouble(height) - 5 * age + 161, 0);
             }
-            sedentaryBMR = bmr + 350;
-            exerciseBMR = bmr + 810;
-            intenseBMR = bmr + 1600;
+            sedentaryBMR = Math.Ceiling(bmr * 1.2);
+            exerciseBMR13 = Math.Ceiling(bmr * 1.38);
+            exerciseBMR45 = Math.Ceiling(bmr * 1.45);
+            DailyBMR34 = Math.Ceiling(bmr * 1.55);
+            intenseBMR67 = Math.Ceiling(bmr * 1.72);
+            veryIntenseBMR = Math.Ceiling(bmr * 1.9);
+
             currentBMR.Text = $"BMR = {bmr.ToString()} calories/day";
+
             sedentaryLabel.Text = $"Sedentary =  ≈{sedentaryBMR.ToString()} calories/day";
-            exerciseLabel.Text = $"Exercise =  ≈{exerciseBMR.ToString()} calories/day";
-            intExrLabel.Text = $"Intense exercise =  ≈{intenseBMR.ToString()} calories/day";
+            exerciseLabel1.Text = $"Exercise 1 - 3 days =  ≈{exerciseBMR13.ToString()} calories/day";
+            exerciseLabel2.Text = $"Exercise 4 - 5 days =  ≈{exerciseBMR45.ToString()} calories/day";
+            dailyLabel.Text = $"Daily exercise =  ≈{DailyBMR34.ToString()} calories/day";
+            intenseLabel.Text = $"Intense exercise =  ≈{intenseBMR67.ToString()} calories/day";
+            veryIntenseLabel.Text = $"Very intense exercise =  ≈{veryIntenseBMR.ToString()} calories/day";
 
 
             //Body Fat Percentage
@@ -279,13 +411,19 @@ namespace FitVitality
             waistTb.TextChanged += checkBodyFatInputs;
             hipsTb.TextChanged += checkBodyFatInputs;
 
-            //Calorie Calculator
-            if (activityComboBox.SelectedItem == "Sedentary")
-                activity = "Sedentary";
-            if (activityComboBox.SelectedItem == "Exercise")
-                activity = "Exercise";
-            if (activityComboBox.SelectedItem == "Intense exercise")
-                activity = "Intense exercise";
+
+            //Ideal Weight Calculator
+            if (gender == "Male")
+            {
+                idealWeight.Text = Math.Round(52 + ((double.Parse(height) - 152.4) / 2.54 * 1.9), 0).ToString() + "kg";
+            }
+            if (gender == "Female")
+            {
+                idealWeight.Text = Math.Round(49 + ((double.Parse(height) - 152.4) / 2.54 * 1.7), 0).ToString() + "kg";
+            }
+
+            //Macro Calculator
+
         }
         private void checkBodyFatInputs(object sender, EventArgs e)
         {
@@ -341,7 +479,6 @@ namespace FitVitality
                 }
             }
             bmi = Math.Round((Convert.ToDouble(weight) / Math.Pow(Convert.ToDouble(height) / 100, 2)), 2);
-
             bmiPanelLabel.Text = $"BMI = {bmi.ToString()} kg/m²";
             percentages = Math.Round((((double)bmi - 16) / 24) * 100, 0);
             percentagesStudents = Math.Round(((((double)bmi - 17) / 20) * 2) * 100, 0);
@@ -552,6 +689,248 @@ namespace FitVitality
             calorie_buttonOpen.Enabled = false;
             macro_buttonOpen.Enabled = false;
             idealweight_buttonOpen.Enabled = false;
+        }
+
+        private void calorieCalcButton_Click(object sender, EventArgs e)
+        {
+            if (activityComboBox.SelectedItem == "Sedentary")
+            {
+                CalorieCalculation(sedentaryBMR);
+            }
+            if (activityComboBox.SelectedItem == "Light")
+            {
+                CalorieCalculation(exerciseBMR13);
+            }
+            if (activityComboBox.SelectedItem == "Moderate")
+            {
+                CalorieCalculation(exerciseBMR45);
+            }
+            if (activityComboBox.SelectedItem == "Active")
+            {
+                CalorieCalculation(DailyBMR34);
+            }
+            if (activityComboBox.SelectedItem == "Very active")
+            {
+                CalorieCalculation(intenseBMR67);
+            }
+            if (activityComboBox.SelectedItem == "Extra active")
+            {
+                CalorieCalculation(veryIntenseBMR);
+            }
+        }
+
+        private void activityComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (activityComboBox.SelectedItem == "Sedentary" || activityComboBox.SelectedItem == "Light" || activityComboBox.SelectedItem == "Moderate" || activityComboBox.SelectedItem == "Active" || activityComboBox.SelectedItem == "Very active" || activityComboBox.SelectedItem == "Extra active")
+            {
+                calorieCalcButton.Enabled = true;
+            }
+        }
+
+        private void buttonCloseIdealWeight_Click(object sender, EventArgs e)
+        {
+            idealWeightCalcPanel.Visible = false;
+            calorie_buttonOpen.Enabled = true;
+            macro_buttonOpen.Enabled = true;
+            idealweight_buttonOpen.Enabled = true;
+        }
+
+        private void buttonCloseIdealWeight_MouseEnter(object sender, EventArgs e)
+        {
+            buttonCloseIdealWeight.BackColor = Color.IndianRed;
+        }
+
+        private void buttonCloseIdealWeight_MouseLeave(object sender, EventArgs e)
+        {
+            buttonCloseIdealWeight.BackColor = Color.White;
+        }
+
+        private void idealweight_buttonOpen_Click(object sender, EventArgs e)
+        {
+            idealWeightCalcPanel.Size = new Size(547, 270);
+            idealWeightCalcPanel.Visible = true;
+            calorie_buttonOpen.Enabled = false;
+            macro_buttonOpen.Enabled = false;
+            idealweight_buttonOpen.Enabled = false;
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            macroCalcPanel.Visible = false;
+            calorie_buttonOpen.Enabled = true;
+            macro_buttonOpen.Enabled = true;
+            idealweight_buttonOpen.Enabled = true;
+        }
+
+        private void buttonCloseMacroCalc_MouseEnter(object sender, EventArgs e)
+        {
+            buttonCloseMacroCalc.BackColor = Color.IndianRed;
+        }
+
+        private void buttonCloseMacroCalc_MouseLeave(object sender, EventArgs e)
+        {
+            buttonCloseMacroCalc.BackColor = Color.White;
+        }
+
+        private void macro_buttonOpen_Click(object sender, EventArgs e)
+        {
+            macroCalcPanel.Size = new Size(547, 270);
+            macroCalcPanel.Visible = true;
+            calorie_buttonOpen.Enabled = false;
+            macro_buttonOpen.Enabled = false;
+            idealweight_buttonOpen.Enabled = false;
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            balancedButton.Visible = true;
+            lowCarbsButton.Visible = true;
+            lowFatButton.Visible = true;
+            highProteinButton.Visible = true;
+            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            {
+                MacroBalanced(sedentaryBMR);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Light")
+            {
+                MacroBalanced(exerciseBMR13);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            {
+                MacroBalanced(exerciseBMR45);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Active")
+            {
+                MacroBalanced(DailyBMR34);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Very active")
+            {
+                MacroBalanced(intenseBMR67);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            {
+                MacroBalanced(veryIntenseBMR);
+            }
+        }
+
+        private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (activityComboBoxMacro.SelectedItem == "Sedentary" || activityComboBoxMacro.SelectedItem == "Light" || activityComboBoxMacro.SelectedItem == "Moderate" || activityComboBoxMacro.SelectedItem == "Active" || activityComboBoxMacro.SelectedItem == "Very active" || activityComboBoxMacro.SelectedItem == "Extra active")
+            {
+                macroCalcButton.Enabled = true;
+            }
+        }
+
+        private void balancedButton_Click(object sender, EventArgs e)
+        {
+            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            {
+                MacroBalanced(sedentaryBMR);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Light")
+            {
+                MacroBalanced(exerciseBMR13);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            {
+                MacroBalanced(exerciseBMR45);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Active")
+            {
+                MacroBalanced(DailyBMR34);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Very active")
+            {
+                MacroBalanced(intenseBMR67);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            {
+                MacroBalanced(veryIntenseBMR);
+            }
+        }
+
+        private void lowFatButton_Click(object sender, EventArgs e)
+        {
+            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            {
+                MacroLowFat(sedentaryBMR);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Light")
+            {
+                MacroLowFat(exerciseBMR13);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            {
+                MacroLowFat(exerciseBMR45);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Active")
+            {
+                MacroLowFat(DailyBMR34);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Very active")
+            {
+                MacroLowFat(intenseBMR67);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            {
+                MacroLowFat(veryIntenseBMR);
+            }
+        }
+
+        private void lowCarbsButton_Click(object sender, EventArgs e)
+        {
+            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            {
+                MacroLowCarb(sedentaryBMR);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Light")
+            {
+                MacroLowCarb(exerciseBMR13);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            {
+                MacroLowCarb(exerciseBMR45);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Active")
+            {
+                MacroLowCarb(DailyBMR34);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Very active")
+            {
+                MacroLowCarb(intenseBMR67);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            {
+                MacroLowCarb(veryIntenseBMR);
+            }
+        }
+
+        private void highProteinButton_Click(object sender, EventArgs e)
+        {
+            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            {
+                MacroHighProtein(sedentaryBMR);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Light")
+            {
+                MacroHighProtein(exerciseBMR13);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            {
+                MacroHighProtein(exerciseBMR45);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Active")
+            {
+                MacroHighProtein(DailyBMR34);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Very active")
+            {
+                MacroHighProtein(intenseBMR67);
+            }
+            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            {
+                MacroHighProtein(veryIntenseBMR);
+            }
         }
     }
 }

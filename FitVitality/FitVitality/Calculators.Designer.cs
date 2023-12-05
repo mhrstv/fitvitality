@@ -78,10 +78,13 @@
             bmiPanelBorders = new PictureBox();
             rotationTimer = new System.Windows.Forms.Timer(components);
             bmrCalcPanel = new Panel();
+            veryIntenseLabel = new Label();
+            intenseLabel = new Label();
+            dailyLabel = new Label();
             buttonCloseBMR = new PictureBox();
             activityDescriptions = new Label();
-            intExrLabel = new Label();
-            exerciseLabel = new Label();
+            exerciseLabel2 = new Label();
+            exerciseLabel1 = new Label();
             sedentaryLabel = new Label();
             dailyCalsLabel = new Label();
             currentBMR = new Label();
@@ -112,18 +115,47 @@
             bodyFatLabel = new Label();
             bodyFatBorders = new PictureBox();
             calorieCalcPanel = new Panel();
-            gainLabel2 = new Label();
             gainLabel = new Label();
+            mildGainLabel = new Label();
             maintainLabel = new Label();
+            mildLossLabel = new Label();
             activityLabel = new Label();
             activityComboBox = new Krypton.Toolkit.KryptonComboBox();
             calorieCalcButton = new Krypton.Toolkit.KryptonButton();
-            loseLabel = new Label();
+            lossLabel = new Label();
             extraMeasurementsL = new Label();
             calorieButtonClose = new PictureBox();
             calorieDescription = new Label();
             calorieCalcLabel = new Label();
             calorieCalcBorders = new PictureBox();
+            idealWeightCalcPanel = new Panel();
+            idealWeight = new Label();
+            idealWeightLabel1 = new Label();
+            buttonCloseIdealWeight = new PictureBox();
+            idealWeightDescription = new Label();
+            idealWeightCalcLabel = new Label();
+            idealWeightBorders = new PictureBox();
+            macroCalcPanel = new Panel();
+            fat = new Label();
+            carbohydrates = new Label();
+            protein = new Label();
+            highProteinButton = new Krypton.Toolkit.KryptonButton();
+            lowCarbsButton = new Krypton.Toolkit.KryptonButton();
+            lowFatButton = new Krypton.Toolkit.KryptonButton();
+            balancedButton = new Krypton.Toolkit.KryptonButton();
+            proteinLabel = new Label();
+            carbsLabel = new Label();
+            fatLabel = new Label();
+            changeGoalLabel = new Label();
+            label2 = new Label();
+            macroCalcButton = new Krypton.Toolkit.KryptonButton();
+            label1 = new Label();
+            activityComboBoxMacro = new Krypton.Toolkit.KryptonComboBox();
+            calorieIntake = new Label();
+            buttonCloseMacroCalc = new PictureBox();
+            macroCalcDescription = new Label();
+            macroCalcLabel = new Label();
+            macroCalcBorders = new PictureBox();
             bmi_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bmiButtonBorders).BeginInit();
             bmr_panel.SuspendLayout();
@@ -162,6 +194,13 @@
             ((System.ComponentModel.ISupportInitialize)activityComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)calorieButtonClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)calorieCalcBorders).BeginInit();
+            idealWeightCalcPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)buttonCloseIdealWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)idealWeightBorders).BeginInit();
+            macroCalcPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)activityComboBoxMacro).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)buttonCloseMacroCalc).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)macroCalcBorders).BeginInit();
             SuspendLayout();
             // 
             // calculators_label
@@ -552,6 +591,7 @@
             idealweight_buttonOpen.StateTracking.Border.Width = 1;
             idealweight_buttonOpen.TabIndex = 1;
             idealweight_buttonOpen.Values.Text = "Open";
+            idealweight_buttonOpen.Click += idealweight_buttonOpen_Click;
             // 
             // idealweight_label
             // 
@@ -805,6 +845,7 @@
             macro_buttonOpen.StateTracking.Border.Width = 1;
             macro_buttonOpen.TabIndex = 1;
             macro_buttonOpen.Values.Text = "Open";
+            macro_buttonOpen.Click += macro_buttonOpen_Click;
             // 
             // macro_label
             // 
@@ -1000,10 +1041,13 @@
             // 
             // bmrCalcPanel
             // 
+            bmrCalcPanel.Controls.Add(veryIntenseLabel);
+            bmrCalcPanel.Controls.Add(intenseLabel);
+            bmrCalcPanel.Controls.Add(dailyLabel);
             bmrCalcPanel.Controls.Add(buttonCloseBMR);
             bmrCalcPanel.Controls.Add(activityDescriptions);
-            bmrCalcPanel.Controls.Add(intExrLabel);
-            bmrCalcPanel.Controls.Add(exerciseLabel);
+            bmrCalcPanel.Controls.Add(exerciseLabel2);
+            bmrCalcPanel.Controls.Add(exerciseLabel1);
             bmrCalcPanel.Controls.Add(sedentaryLabel);
             bmrCalcPanel.Controls.Add(dailyCalsLabel);
             bmrCalcPanel.Controls.Add(currentBMR);
@@ -1015,6 +1059,42 @@
             bmrCalcPanel.Size = new Size(0, 0);
             bmrCalcPanel.TabIndex = 21;
             bmrCalcPanel.Visible = false;
+            // 
+            // veryIntenseLabel
+            // 
+            veryIntenseLabel.AutoSize = true;
+            veryIntenseLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            veryIntenseLabel.ForeColor = Color.Black;
+            veryIntenseLabel.Location = new Point(270, 186);
+            veryIntenseLabel.Name = "veryIntenseLabel";
+            veryIntenseLabel.Size = new Size(96, 18);
+            veryIntenseLabel.TabIndex = 15;
+            veryIntenseLabel.Text = "{Very intense}";
+            veryIntenseLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // intenseLabel
+            // 
+            intenseLabel.AutoSize = true;
+            intenseLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            intenseLabel.ForeColor = Color.Black;
+            intenseLabel.Location = new Point(270, 163);
+            intenseLabel.Name = "intenseLabel";
+            intenseLabel.Size = new Size(85, 18);
+            intenseLabel.TabIndex = 14;
+            intenseLabel.Text = "{Intense 6 7}";
+            intenseLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // dailyLabel
+            // 
+            dailyLabel.AutoSize = true;
+            dailyLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dailyLabel.ForeColor = Color.Black;
+            dailyLabel.Location = new Point(270, 140);
+            dailyLabel.Name = "dailyLabel";
+            dailyLabel.Size = new Size(69, 18);
+            dailyLabel.TabIndex = 13;
+            dailyLabel.Text = "{Daily 3 4}";
+            dailyLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // buttonCloseBMR
             // 
@@ -1034,42 +1114,42 @@
             // 
             activityDescriptions.AutoSize = true;
             activityDescriptions.ForeColor = SystemColors.ControlDarkDark;
-            activityDescriptions.Location = new Point(297, 207);
+            activityDescriptions.Location = new Point(270, 212);
             activityDescriptions.Name = "activityDescriptions";
             activityDescriptions.Size = new Size(226, 45);
             activityDescriptions.TabIndex = 11;
             activityDescriptions.Text = "Sedentary - little or no exercise (<30mins)\r\nExercise - 4, 5 times a week (~40-50mins)\r\nIntense exercise - daily (2+ hours) ";
             // 
-            // intExrLabel
+            // exerciseLabel2
             // 
-            intExrLabel.AutoSize = true;
-            intExrLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            intExrLabel.ForeColor = Color.Black;
-            intExrLabel.Location = new Point(297, 176);
-            intExrLabel.Name = "intExrLabel";
-            intExrLabel.Size = new Size(120, 18);
-            intExrLabel.TabIndex = 10;
-            intExrLabel.Text = "{Intense exercise}";
-            intExrLabel.TextAlign = ContentAlignment.MiddleCenter;
+            exerciseLabel2.AutoSize = true;
+            exerciseLabel2.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            exerciseLabel2.ForeColor = Color.Black;
+            exerciseLabel2.Location = new Point(270, 118);
+            exerciseLabel2.Name = "exerciseLabel2";
+            exerciseLabel2.Size = new Size(89, 18);
+            exerciseLabel2.TabIndex = 10;
+            exerciseLabel2.Text = "{Exercise 4 5}";
+            exerciseLabel2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // exerciseLabel
+            // exerciseLabel1
             // 
-            exerciseLabel.AutoSize = true;
-            exerciseLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            exerciseLabel.ForeColor = Color.Black;
-            exerciseLabel.Location = new Point(297, 149);
-            exerciseLabel.Name = "exerciseLabel";
-            exerciseLabel.Size = new Size(69, 18);
-            exerciseLabel.TabIndex = 9;
-            exerciseLabel.Text = "{Exercise}";
-            exerciseLabel.TextAlign = ContentAlignment.MiddleCenter;
+            exerciseLabel1.AutoSize = true;
+            exerciseLabel1.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            exerciseLabel1.ForeColor = Color.Black;
+            exerciseLabel1.Location = new Point(270, 95);
+            exerciseLabel1.Name = "exerciseLabel1";
+            exerciseLabel1.Size = new Size(89, 18);
+            exerciseLabel1.TabIndex = 9;
+            exerciseLabel1.Text = "{Exercise 1 3}";
+            exerciseLabel1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // sedentaryLabel
             // 
             sedentaryLabel.AutoSize = true;
             sedentaryLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             sedentaryLabel.ForeColor = Color.Black;
-            sedentaryLabel.Location = new Point(297, 121);
+            sedentaryLabel.Location = new Point(270, 74);
             sedentaryLabel.Name = "sedentaryLabel";
             sedentaryLabel.Size = new Size(81, 18);
             sedentaryLabel.TabIndex = 8;
@@ -1080,7 +1160,7 @@
             // 
             dailyCalsLabel.AutoSize = true;
             dailyCalsLabel.ForeColor = SystemColors.ControlDarkDark;
-            dailyCalsLabel.Location = new Point(297, 94);
+            dailyCalsLabel.Location = new Point(270, 55);
             dailyCalsLabel.Name = "dailyCalsLabel";
             dailyCalsLabel.Size = new Size(198, 15);
             dailyCalsLabel.TabIndex = 7;
@@ -1090,7 +1170,7 @@
             // 
             currentBMR.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             currentBMR.ForeColor = Color.Black;
-            currentBMR.Location = new Point(297, 60);
+            currentBMR.Location = new Point(27, 210);
             currentBMR.Name = "currentBMR";
             currentBMR.Size = new Size(226, 23);
             currentBMR.TabIndex = 6;
@@ -1101,7 +1181,7 @@
             bmrDescription.AutoSize = true;
             bmrDescription.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             bmrDescription.ForeColor = SystemColors.ControlDarkDark;
-            bmrDescription.Location = new Point(35, 91);
+            bmrDescription.Location = new Point(27, 52);
             bmrDescription.Name = "bmrDescription";
             bmrDescription.Size = new Size(217, 133);
             bmrDescription.TabIndex = 5;
@@ -1233,7 +1313,6 @@
             currentBFP.Name = "currentBFP";
             currentBFP.Size = new Size(256, 23);
             currentBFP.TabIndex = 27;
-            currentBFP.Text = "{BFP}";
             currentBFP.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // bodyFatScalePanel
@@ -1433,13 +1512,14 @@
             // 
             // calorieCalcPanel
             // 
-            calorieCalcPanel.Controls.Add(gainLabel2);
             calorieCalcPanel.Controls.Add(gainLabel);
+            calorieCalcPanel.Controls.Add(mildGainLabel);
             calorieCalcPanel.Controls.Add(maintainLabel);
+            calorieCalcPanel.Controls.Add(mildLossLabel);
             calorieCalcPanel.Controls.Add(activityLabel);
             calorieCalcPanel.Controls.Add(activityComboBox);
             calorieCalcPanel.Controls.Add(calorieCalcButton);
-            calorieCalcPanel.Controls.Add(loseLabel);
+            calorieCalcPanel.Controls.Add(lossLabel);
             calorieCalcPanel.Controls.Add(extraMeasurementsL);
             calorieCalcPanel.Controls.Add(calorieButtonClose);
             calorieCalcPanel.Controls.Add(calorieDescription);
@@ -1447,39 +1527,45 @@
             calorieCalcPanel.Controls.Add(calorieCalcBorders);
             calorieCalcPanel.Location = new Point(72, 49);
             calorieCalcPanel.Name = "calorieCalcPanel";
-            calorieCalcPanel.Size = new Size(547, 270);
+            calorieCalcPanel.Size = new Size(0, 0);
             calorieCalcPanel.TabIndex = 23;
             calorieCalcPanel.Visible = false;
-            // 
-            // gainLabel2
-            // 
-            gainLabel2.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            gainLabel2.Location = new Point(267, 176);
-            gainLabel2.Name = "gainLabel2";
-            gainLabel2.Size = new Size(256, 23);
-            gainLabel2.TabIndex = 39;
-            gainLabel2.Text = "{Gain weight}";
-            gainLabel2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // gainLabel
             // 
             gainLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            gainLabel.Location = new Point(267, 142);
+            gainLabel.Location = new Point(267, 186);
             gainLabel.Name = "gainLabel";
             gainLabel.Size = new Size(256, 23);
-            gainLabel.TabIndex = 38;
-            gainLabel.Text = "{Gain weight(recommended)}";
+            gainLabel.TabIndex = 41;
             gainLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // mildGainLabel
+            // 
+            mildGainLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            mildGainLabel.Location = new Point(267, 154);
+            mildGainLabel.Name = "mildGainLabel";
+            mildGainLabel.Size = new Size(256, 23);
+            mildGainLabel.TabIndex = 40;
+            mildGainLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // maintainLabel
             // 
             maintainLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            maintainLabel.Location = new Point(267, 109);
+            maintainLabel.Location = new Point(267, 122);
             maintainLabel.Name = "maintainLabel";
             maintainLabel.Size = new Size(256, 23);
-            maintainLabel.TabIndex = 37;
-            maintainLabel.Text = "{Maintain weight}";
+            maintainLabel.TabIndex = 38;
             maintainLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // mildLossLabel
+            // 
+            mildLossLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            mildLossLabel.Location = new Point(267, 90);
+            mildLossLabel.Name = "mildLossLabel";
+            mildLossLabel.Size = new Size(256, 23);
+            mildLossLabel.TabIndex = 37;
+            mildLossLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // activityLabel
             // 
@@ -1496,7 +1582,7 @@
             activityComboBox.CornerRoundingRadius = -1F;
             activityComboBox.DropDownWidth = 121;
             activityComboBox.IntegralHeight = false;
-            activityComboBox.Items.AddRange(new object[] { "Sedentary", "Exercise", "Intense exercise" });
+            activityComboBox.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
             activityComboBox.Location = new Point(85, 230);
             activityComboBox.Name = "activityComboBox";
             activityComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
@@ -1520,6 +1606,7 @@
             activityComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
             activityComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             activityComboBox.TabIndex = 35;
+            activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
             // 
             // calorieCalcButton
             // 
@@ -1589,16 +1676,16 @@
             calorieCalcButton.StateTracking.Border.Width = 1;
             calorieCalcButton.TabIndex = 28;
             calorieCalcButton.Values.Text = "Calculate";
+            calorieCalcButton.Click += calorieCalcButton_Click;
             // 
-            // loseLabel
+            // lossLabel
             // 
-            loseLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            loseLabel.Location = new Point(267, 76);
-            loseLabel.Name = "loseLabel";
-            loseLabel.Size = new Size(256, 23);
-            loseLabel.TabIndex = 27;
-            loseLabel.Text = "{Lose weight}";
-            loseLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lossLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lossLabel.Location = new Point(267, 58);
+            lossLabel.Name = "lossLabel";
+            lossLabel.Size = new Size(256, 23);
+            lossLabel.TabIndex = 27;
+            lossLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // extraMeasurementsL
             // 
@@ -1629,11 +1716,11 @@
             calorieDescription.AutoSize = true;
             calorieDescription.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             calorieDescription.ForeColor = SystemColors.ControlDarkDark;
-            calorieDescription.Location = new Point(32, 63);
+            calorieDescription.Location = new Point(28, 55);
             calorieDescription.Name = "calorieDescription";
-            calorieDescription.Size = new Size(212, 114);
+            calorieDescription.Size = new Size(212, 133);
             calorieDescription.TabIndex = 5;
-            calorieDescription.Text = "The Calorie Calculator is very \r\nsimilar to the Basal Metabolic \r\nRate calculator. This calculator \r\ncan provide some simple \r\nguidelines for gaining, losing \r\nor maintaining weight.";
+            calorieDescription.Text = resources.GetString("calorieDescription.Text");
             // 
             // calorieCalcLabel
             // 
@@ -1655,12 +1742,669 @@
             calorieCalcBorders.TabIndex = 0;
             calorieCalcBorders.TabStop = false;
             // 
+            // idealWeightCalcPanel
+            // 
+            idealWeightCalcPanel.Controls.Add(idealWeight);
+            idealWeightCalcPanel.Controls.Add(idealWeightLabel1);
+            idealWeightCalcPanel.Controls.Add(buttonCloseIdealWeight);
+            idealWeightCalcPanel.Controls.Add(idealWeightDescription);
+            idealWeightCalcPanel.Controls.Add(idealWeightCalcLabel);
+            idealWeightCalcPanel.Controls.Add(idealWeightBorders);
+            idealWeightCalcPanel.Location = new Point(72, 49);
+            idealWeightCalcPanel.Name = "idealWeightCalcPanel";
+            idealWeightCalcPanel.Size = new Size(0, 0);
+            idealWeightCalcPanel.TabIndex = 24;
+            idealWeightCalcPanel.Visible = false;
+            // 
+            // idealWeight
+            // 
+            idealWeight.AutoSize = true;
+            idealWeight.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            idealWeight.Location = new Point(361, 180);
+            idealWeight.Name = "idealWeight";
+            idealWeight.Size = new Size(0, 23);
+            idealWeight.TabIndex = 28;
+            idealWeight.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // idealWeightLabel1
+            // 
+            idealWeightLabel1.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            idealWeightLabel1.Location = new Point(258, 97);
+            idealWeightLabel1.Name = "idealWeightLabel1";
+            idealWeightLabel1.Size = new Size(256, 76);
+            idealWeightLabel1.TabIndex = 27;
+            idealWeightLabel1.Text = "Your ideal weight, based on \r\nthe popular Robinson's \r\nformula is";
+            idealWeightLabel1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // buttonCloseIdealWeight
+            // 
+            buttonCloseIdealWeight.BackColor = Color.White;
+            buttonCloseIdealWeight.Image = Properties.Resources.closebutton;
+            buttonCloseIdealWeight.Location = new Point(519, 9);
+            buttonCloseIdealWeight.Name = "buttonCloseIdealWeight";
+            buttonCloseIdealWeight.Size = new Size(17, 17);
+            buttonCloseIdealWeight.SizeMode = PictureBoxSizeMode.Zoom;
+            buttonCloseIdealWeight.TabIndex = 12;
+            buttonCloseIdealWeight.TabStop = false;
+            buttonCloseIdealWeight.Click += buttonCloseIdealWeight_Click;
+            buttonCloseIdealWeight.MouseEnter += buttonCloseIdealWeight_MouseEnter;
+            buttonCloseIdealWeight.MouseLeave += buttonCloseIdealWeight_MouseLeave;
+            // 
+            // idealWeightDescription
+            // 
+            idealWeightDescription.AutoSize = true;
+            idealWeightDescription.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            idealWeightDescription.ForeColor = SystemColors.ControlDarkDark;
+            idealWeightDescription.Location = new Point(36, 97);
+            idealWeightDescription.Name = "idealWeightDescription";
+            idealWeightDescription.Size = new Size(204, 95);
+            idealWeightDescription.TabIndex = 5;
+            idealWeightDescription.Text = "The ideal weight calculator is \r\na tool designed to estimate \r\na healthy weight range for \r\nindividuals based on factors \r\nsuch as height and gender.";
+            // 
+            // idealWeightCalcLabel
+            // 
+            idealWeightCalcLabel.AutoSize = true;
+            idealWeightCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            idealWeightCalcLabel.Location = new Point(150, 19);
+            idealWeightCalcLabel.Name = "idealWeightCalcLabel";
+            idealWeightCalcLabel.Size = new Size(247, 24);
+            idealWeightCalcLabel.TabIndex = 2;
+            idealWeightCalcLabel.Text = "Ideal Weight Calculator";
+            // 
+            // idealWeightBorders
+            // 
+            idealWeightBorders.Image = Properties.Resources.buttonCalcBorder1;
+            idealWeightBorders.Location = new Point(0, 0);
+            idealWeightBorders.Name = "idealWeightBorders";
+            idealWeightBorders.Size = new Size(547, 270);
+            idealWeightBorders.SizeMode = PictureBoxSizeMode.Zoom;
+            idealWeightBorders.TabIndex = 0;
+            idealWeightBorders.TabStop = false;
+            // 
+            // macroCalcPanel
+            // 
+            macroCalcPanel.Controls.Add(fat);
+            macroCalcPanel.Controls.Add(carbohydrates);
+            macroCalcPanel.Controls.Add(protein);
+            macroCalcPanel.Controls.Add(highProteinButton);
+            macroCalcPanel.Controls.Add(lowCarbsButton);
+            macroCalcPanel.Controls.Add(lowFatButton);
+            macroCalcPanel.Controls.Add(balancedButton);
+            macroCalcPanel.Controls.Add(proteinLabel);
+            macroCalcPanel.Controls.Add(carbsLabel);
+            macroCalcPanel.Controls.Add(fatLabel);
+            macroCalcPanel.Controls.Add(changeGoalLabel);
+            macroCalcPanel.Controls.Add(label2);
+            macroCalcPanel.Controls.Add(macroCalcButton);
+            macroCalcPanel.Controls.Add(label1);
+            macroCalcPanel.Controls.Add(activityComboBoxMacro);
+            macroCalcPanel.Controls.Add(calorieIntake);
+            macroCalcPanel.Controls.Add(buttonCloseMacroCalc);
+            macroCalcPanel.Controls.Add(macroCalcDescription);
+            macroCalcPanel.Controls.Add(macroCalcLabel);
+            macroCalcPanel.Controls.Add(macroCalcBorders);
+            macroCalcPanel.Location = new Point(72, 49);
+            macroCalcPanel.Name = "macroCalcPanel";
+            macroCalcPanel.Size = new Size(0, 0);
+            macroCalcPanel.TabIndex = 25;
+            macroCalcPanel.Visible = false;
+            // 
+            // fat
+            // 
+            fat.AutoSize = true;
+            fat.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            fat.Location = new Point(336, 168);
+            fat.Name = "fat";
+            fat.Size = new Size(0, 23);
+            fat.TabIndex = 53;
+            fat.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // carbohydrates
+            // 
+            carbohydrates.AutoSize = true;
+            carbohydrates.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            carbohydrates.Location = new Point(356, 130);
+            carbohydrates.Name = "carbohydrates";
+            carbohydrates.Size = new Size(0, 23);
+            carbohydrates.TabIndex = 52;
+            carbohydrates.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // protein
+            // 
+            protein.AutoSize = true;
+            protein.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            protein.Location = new Point(368, 93);
+            protein.Name = "protein";
+            protein.Size = new Size(0, 23);
+            protein.TabIndex = 51;
+            protein.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // highProteinButton
+            // 
+            highProteinButton.CornerRoundingRadius = 15F;
+            highProteinButton.Location = new Point(451, 57);
+            highProteinButton.Name = "highProteinButton";
+            highProteinButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            highProteinButton.Size = new Size(77, 25);
+            highProteinButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
+            highProteinButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
+            highProteinButton.StateCommon.Back.ColorAngle = 0F;
+            highProteinButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
+            highProteinButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
+            highProteinButton.StateCommon.Border.ColorAngle = 0F;
+            highProteinButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            highProteinButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            highProteinButton.StateCommon.Border.Rounding = 15F;
+            highProteinButton.StateCommon.Border.Width = 1;
+            highProteinButton.StateCommon.Content.ShortText.Color1 = Color.Black;
+            highProteinButton.StateCommon.Content.ShortText.Color2 = Color.Black;
+            highProteinButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            highProteinButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            highProteinButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            highProteinButton.StateDisabled.Back.ColorAngle = 45F;
+            highProteinButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            highProteinButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            highProteinButton.StateDisabled.Border.ColorAngle = 45F;
+            highProteinButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            highProteinButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            highProteinButton.StateDisabled.Border.Rounding = 15F;
+            highProteinButton.StateDisabled.Border.Width = 1;
+            highProteinButton.StateDisabled.Content.ShortText.Color1 = Color.White;
+            highProteinButton.StateDisabled.Content.ShortText.Color2 = Color.White;
+            highProteinButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
+            highProteinButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            highProteinButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            highProteinButton.StateNormal.Back.ColorAngle = 0F;
+            highProteinButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            highProteinButton.StateNormal.Border.Color1 = Color.Black;
+            highProteinButton.StateNormal.Border.Color2 = Color.Black;
+            highProteinButton.StateNormal.Border.ColorAngle = 0F;
+            highProteinButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            highProteinButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            highProteinButton.StateNormal.Border.Rounding = 15F;
+            highProteinButton.StateNormal.Border.Width = 1;
+            highProteinButton.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            highProteinButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            highProteinButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            highProteinButton.StatePressed.Back.ColorAngle = 45F;
+            highProteinButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            highProteinButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            highProteinButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            highProteinButton.StatePressed.Border.ColorAngle = 45F;
+            highProteinButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            highProteinButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            highProteinButton.StatePressed.Border.Rounding = 15F;
+            highProteinButton.StatePressed.Border.Width = 1;
+            highProteinButton.StatePressed.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            highProteinButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            highProteinButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            highProteinButton.StateTracking.Back.ColorAngle = 45F;
+            highProteinButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            highProteinButton.StateTracking.Border.Color1 = Color.Black;
+            highProteinButton.StateTracking.Border.Color2 = Color.Black;
+            highProteinButton.StateTracking.Border.ColorAngle = 45F;
+            highProteinButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            highProteinButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            highProteinButton.StateTracking.Border.Rounding = 15F;
+            highProteinButton.StateTracking.Border.Width = 1;
+            highProteinButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            highProteinButton.TabIndex = 50;
+            highProteinButton.Values.Text = "High protein";
+            highProteinButton.Visible = false;
+            highProteinButton.Click += highProteinButton_Click;
+            // 
+            // lowCarbsButton
+            // 
+            lowCarbsButton.CornerRoundingRadius = 15F;
+            lowCarbsButton.Location = new Point(380, 57);
+            lowCarbsButton.Name = "lowCarbsButton";
+            lowCarbsButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            lowCarbsButton.Size = new Size(68, 25);
+            lowCarbsButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
+            lowCarbsButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
+            lowCarbsButton.StateCommon.Back.ColorAngle = 0F;
+            lowCarbsButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
+            lowCarbsButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
+            lowCarbsButton.StateCommon.Border.ColorAngle = 0F;
+            lowCarbsButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowCarbsButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowCarbsButton.StateCommon.Border.Rounding = 15F;
+            lowCarbsButton.StateCommon.Border.Width = 1;
+            lowCarbsButton.StateCommon.Content.ShortText.Color1 = Color.Black;
+            lowCarbsButton.StateCommon.Content.ShortText.Color2 = Color.Black;
+            lowCarbsButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lowCarbsButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            lowCarbsButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            lowCarbsButton.StateDisabled.Back.ColorAngle = 45F;
+            lowCarbsButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            lowCarbsButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            lowCarbsButton.StateDisabled.Border.ColorAngle = 45F;
+            lowCarbsButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowCarbsButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowCarbsButton.StateDisabled.Border.Rounding = 15F;
+            lowCarbsButton.StateDisabled.Border.Width = 1;
+            lowCarbsButton.StateDisabled.Content.ShortText.Color1 = Color.White;
+            lowCarbsButton.StateDisabled.Content.ShortText.Color2 = Color.White;
+            lowCarbsButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lowCarbsButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            lowCarbsButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            lowCarbsButton.StateNormal.Back.ColorAngle = 0F;
+            lowCarbsButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowCarbsButton.StateNormal.Border.Color1 = Color.Black;
+            lowCarbsButton.StateNormal.Border.Color2 = Color.Black;
+            lowCarbsButton.StateNormal.Border.ColorAngle = 0F;
+            lowCarbsButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowCarbsButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowCarbsButton.StateNormal.Border.Rounding = 15F;
+            lowCarbsButton.StateNormal.Border.Width = 1;
+            lowCarbsButton.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lowCarbsButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            lowCarbsButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            lowCarbsButton.StatePressed.Back.ColorAngle = 45F;
+            lowCarbsButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowCarbsButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            lowCarbsButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            lowCarbsButton.StatePressed.Border.ColorAngle = 45F;
+            lowCarbsButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowCarbsButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowCarbsButton.StatePressed.Border.Rounding = 15F;
+            lowCarbsButton.StatePressed.Border.Width = 1;
+            lowCarbsButton.StatePressed.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lowCarbsButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            lowCarbsButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            lowCarbsButton.StateTracking.Back.ColorAngle = 45F;
+            lowCarbsButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowCarbsButton.StateTracking.Border.Color1 = Color.Black;
+            lowCarbsButton.StateTracking.Border.Color2 = Color.Black;
+            lowCarbsButton.StateTracking.Border.ColorAngle = 45F;
+            lowCarbsButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowCarbsButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowCarbsButton.StateTracking.Border.Rounding = 15F;
+            lowCarbsButton.StateTracking.Border.Width = 1;
+            lowCarbsButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lowCarbsButton.TabIndex = 49;
+            lowCarbsButton.Values.Text = "Low carbs";
+            lowCarbsButton.Visible = false;
+            lowCarbsButton.Click += lowCarbsButton_Click;
+            // 
+            // lowFatButton
+            // 
+            lowFatButton.CornerRoundingRadius = 15F;
+            lowFatButton.Location = new Point(315, 57);
+            lowFatButton.Name = "lowFatButton";
+            lowFatButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            lowFatButton.Size = new Size(62, 25);
+            lowFatButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
+            lowFatButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
+            lowFatButton.StateCommon.Back.ColorAngle = 0F;
+            lowFatButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
+            lowFatButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
+            lowFatButton.StateCommon.Border.ColorAngle = 0F;
+            lowFatButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowFatButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowFatButton.StateCommon.Border.Rounding = 15F;
+            lowFatButton.StateCommon.Border.Width = 1;
+            lowFatButton.StateCommon.Content.ShortText.Color1 = Color.Black;
+            lowFatButton.StateCommon.Content.ShortText.Color2 = Color.Black;
+            lowFatButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lowFatButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            lowFatButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            lowFatButton.StateDisabled.Back.ColorAngle = 45F;
+            lowFatButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            lowFatButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            lowFatButton.StateDisabled.Border.ColorAngle = 45F;
+            lowFatButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowFatButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowFatButton.StateDisabled.Border.Rounding = 15F;
+            lowFatButton.StateDisabled.Border.Width = 1;
+            lowFatButton.StateDisabled.Content.ShortText.Color1 = Color.White;
+            lowFatButton.StateDisabled.Content.ShortText.Color2 = Color.White;
+            lowFatButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lowFatButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            lowFatButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            lowFatButton.StateNormal.Back.ColorAngle = 0F;
+            lowFatButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowFatButton.StateNormal.Border.Color1 = Color.Black;
+            lowFatButton.StateNormal.Border.Color2 = Color.Black;
+            lowFatButton.StateNormal.Border.ColorAngle = 0F;
+            lowFatButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowFatButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowFatButton.StateNormal.Border.Rounding = 15F;
+            lowFatButton.StateNormal.Border.Width = 1;
+            lowFatButton.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lowFatButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            lowFatButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            lowFatButton.StatePressed.Back.ColorAngle = 45F;
+            lowFatButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowFatButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            lowFatButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            lowFatButton.StatePressed.Border.ColorAngle = 45F;
+            lowFatButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowFatButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowFatButton.StatePressed.Border.Rounding = 15F;
+            lowFatButton.StatePressed.Border.Width = 1;
+            lowFatButton.StatePressed.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lowFatButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            lowFatButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            lowFatButton.StateTracking.Back.ColorAngle = 45F;
+            lowFatButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowFatButton.StateTracking.Border.Color1 = Color.Black;
+            lowFatButton.StateTracking.Border.Color2 = Color.Black;
+            lowFatButton.StateTracking.Border.ColorAngle = 45F;
+            lowFatButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            lowFatButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            lowFatButton.StateTracking.Border.Rounding = 15F;
+            lowFatButton.StateTracking.Border.Width = 1;
+            lowFatButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lowFatButton.TabIndex = 48;
+            lowFatButton.Values.Text = "Low fat";
+            lowFatButton.Visible = false;
+            lowFatButton.Click += lowFatButton_Click;
+            // 
+            // balancedButton
+            // 
+            balancedButton.CornerRoundingRadius = 15F;
+            balancedButton.Location = new Point(250, 57);
+            balancedButton.Name = "balancedButton";
+            balancedButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            balancedButton.Size = new Size(62, 25);
+            balancedButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
+            balancedButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
+            balancedButton.StateCommon.Back.ColorAngle = 0F;
+            balancedButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
+            balancedButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
+            balancedButton.StateCommon.Border.ColorAngle = 0F;
+            balancedButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            balancedButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            balancedButton.StateCommon.Border.Rounding = 15F;
+            balancedButton.StateCommon.Border.Width = 1;
+            balancedButton.StateCommon.Content.ShortText.Color1 = Color.Black;
+            balancedButton.StateCommon.Content.ShortText.Color2 = Color.Black;
+            balancedButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            balancedButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            balancedButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            balancedButton.StateDisabled.Back.ColorAngle = 45F;
+            balancedButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            balancedButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            balancedButton.StateDisabled.Border.ColorAngle = 45F;
+            balancedButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            balancedButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            balancedButton.StateDisabled.Border.Rounding = 15F;
+            balancedButton.StateDisabled.Border.Width = 1;
+            balancedButton.StateDisabled.Content.ShortText.Color1 = Color.White;
+            balancedButton.StateDisabled.Content.ShortText.Color2 = Color.White;
+            balancedButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Bold, GraphicsUnit.Point);
+            balancedButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            balancedButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            balancedButton.StateNormal.Back.ColorAngle = 0F;
+            balancedButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            balancedButton.StateNormal.Border.Color1 = Color.Black;
+            balancedButton.StateNormal.Border.Color2 = Color.Black;
+            balancedButton.StateNormal.Border.ColorAngle = 0F;
+            balancedButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            balancedButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            balancedButton.StateNormal.Border.Rounding = 15F;
+            balancedButton.StateNormal.Border.Width = 1;
+            balancedButton.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            balancedButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            balancedButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            balancedButton.StatePressed.Back.ColorAngle = 45F;
+            balancedButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            balancedButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            balancedButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            balancedButton.StatePressed.Border.ColorAngle = 45F;
+            balancedButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            balancedButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            balancedButton.StatePressed.Border.Rounding = 15F;
+            balancedButton.StatePressed.Border.Width = 1;
+            balancedButton.StatePressed.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            balancedButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            balancedButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            balancedButton.StateTracking.Back.ColorAngle = 45F;
+            balancedButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            balancedButton.StateTracking.Border.Color1 = Color.Black;
+            balancedButton.StateTracking.Border.Color2 = Color.Black;
+            balancedButton.StateTracking.Border.ColorAngle = 45F;
+            balancedButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            balancedButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            balancedButton.StateTracking.Border.Rounding = 15F;
+            balancedButton.StateTracking.Border.Width = 1;
+            balancedButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            balancedButton.TabIndex = 44;
+            balancedButton.Values.Text = "Balanced";
+            balancedButton.Visible = false;
+            balancedButton.Click += balancedButton_Click;
+            // 
+            // proteinLabel
+            // 
+            proteinLabel.AutoSize = true;
+            proteinLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            proteinLabel.Location = new Point(293, 93);
+            proteinLabel.Name = "proteinLabel";
+            proteinLabel.Size = new Size(80, 23);
+            proteinLabel.TabIndex = 43;
+            proteinLabel.Text = "Protein - ";
+            proteinLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // carbsLabel
+            // 
+            carbsLabel.AutoSize = true;
+            carbsLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            carbsLabel.Location = new Point(293, 130);
+            carbsLabel.Name = "carbsLabel";
+            carbsLabel.Size = new Size(68, 23);
+            carbsLabel.TabIndex = 42;
+            carbsLabel.Text = "Carbs - ";
+            carbsLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // fatLabel
+            // 
+            fatLabel.AutoSize = true;
+            fatLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            fatLabel.Location = new Point(293, 168);
+            fatLabel.Name = "fatLabel";
+            fatLabel.Size = new Size(47, 23);
+            fatLabel.TabIndex = 41;
+            fatLabel.Text = "Fat - ";
+            fatLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // changeGoalLabel
+            // 
+            changeGoalLabel.AutoSize = true;
+            changeGoalLabel.Font = new Font("Calibri", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            changeGoalLabel.ForeColor = SystemColors.ControlDarkDark;
+            changeGoalLabel.Location = new Point(327, 248);
+            changeGoalLabel.Name = "changeGoalLabel";
+            changeGoalLabel.Size = new Size(178, 14);
+            changeGoalLabel.TabIndex = 40;
+            changeGoalLabel.Text = "You can change goal from settings!";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Calibri", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ControlDarkDark;
+            label2.Location = new Point(17, 223);
+            label2.Name = "label2";
+            label2.Size = new Size(257, 14);
+            label2.TabIndex = 39;
+            label2.Text = "We will need your activity level for this calculation:";
+            // 
+            // macroCalcButton
+            // 
+            macroCalcButton.CornerRoundingRadius = 15F;
+            macroCalcButton.Enabled = false;
+            macroCalcButton.Location = new Point(210, 238);
+            macroCalcButton.Name = "macroCalcButton";
+            macroCalcButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            macroCalcButton.Size = new Size(92, 25);
+            macroCalcButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
+            macroCalcButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
+            macroCalcButton.StateCommon.Back.ColorAngle = 0F;
+            macroCalcButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
+            macroCalcButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
+            macroCalcButton.StateCommon.Border.ColorAngle = 0F;
+            macroCalcButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            macroCalcButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            macroCalcButton.StateCommon.Border.Rounding = 15F;
+            macroCalcButton.StateCommon.Border.Width = 1;
+            macroCalcButton.StateCommon.Content.ShortText.Color1 = Color.Black;
+            macroCalcButton.StateCommon.Content.ShortText.Color2 = Color.Black;
+            macroCalcButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            macroCalcButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            macroCalcButton.StateDisabled.Back.ColorAngle = 45F;
+            macroCalcButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            macroCalcButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            macroCalcButton.StateDisabled.Border.ColorAngle = 45F;
+            macroCalcButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            macroCalcButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            macroCalcButton.StateDisabled.Border.Rounding = 15F;
+            macroCalcButton.StateDisabled.Border.Width = 1;
+            macroCalcButton.StateDisabled.Content.ShortText.Color1 = Color.White;
+            macroCalcButton.StateDisabled.Content.ShortText.Color2 = Color.White;
+            macroCalcButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            macroCalcButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            macroCalcButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            macroCalcButton.StateNormal.Back.ColorAngle = 0F;
+            macroCalcButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            macroCalcButton.StateNormal.Border.Color1 = Color.Black;
+            macroCalcButton.StateNormal.Border.Color2 = Color.Black;
+            macroCalcButton.StateNormal.Border.ColorAngle = 0F;
+            macroCalcButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            macroCalcButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            macroCalcButton.StateNormal.Border.Rounding = 15F;
+            macroCalcButton.StateNormal.Border.Width = 1;
+            macroCalcButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            macroCalcButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            macroCalcButton.StatePressed.Back.ColorAngle = 45F;
+            macroCalcButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            macroCalcButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            macroCalcButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            macroCalcButton.StatePressed.Border.ColorAngle = 45F;
+            macroCalcButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            macroCalcButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            macroCalcButton.StatePressed.Border.Rounding = 15F;
+            macroCalcButton.StatePressed.Border.Width = 1;
+            macroCalcButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            macroCalcButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            macroCalcButton.StateTracking.Back.ColorAngle = 45F;
+            macroCalcButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            macroCalcButton.StateTracking.Border.Color1 = Color.Black;
+            macroCalcButton.StateTracking.Border.Color2 = Color.Black;
+            macroCalcButton.StateTracking.Border.ColorAngle = 45F;
+            macroCalcButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            macroCalcButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            macroCalcButton.StateTracking.Border.Rounding = 15F;
+            macroCalcButton.StateTracking.Border.Width = 1;
+            macroCalcButton.TabIndex = 38;
+            macroCalcButton.Values.Text = "Calculate";
+            macroCalcButton.Click += kryptonButton1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlDarkDark;
+            label1.Location = new Point(23, 243);
+            label1.Name = "label1";
+            label1.Size = new Size(76, 15);
+            label1.TabIndex = 37;
+            label1.Text = "Activity level:";
+            // 
+            // activityComboBoxMacro
+            // 
+            activityComboBoxMacro.CornerRoundingRadius = -1F;
+            activityComboBoxMacro.DropDownWidth = 121;
+            activityComboBoxMacro.IntegralHeight = false;
+            activityComboBoxMacro.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
+            activityComboBoxMacro.Location = new Point(105, 240);
+            activityComboBoxMacro.Name = "activityComboBoxMacro";
+            activityComboBoxMacro.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
+            activityComboBoxMacro.Size = new Size(90, 21);
+            activityComboBoxMacro.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            activityComboBoxMacro.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
+            activityComboBoxMacro.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
+            activityComboBoxMacro.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            activityComboBoxMacro.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            activityComboBoxMacro.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            activityComboBoxMacro.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            activityComboBoxMacro.TabIndex = 36;
+            activityComboBoxMacro.SelectedIndexChanged += kryptonComboBox1_SelectedIndexChanged;
+            // 
+            // calorieIntake
+            // 
+            calorieIntake.AutoSize = true;
+            calorieIntake.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            calorieIntake.Location = new Point(291, 204);
+            calorieIntake.Name = "calorieIntake";
+            calorieIntake.Size = new Size(0, 18);
+            calorieIntake.TabIndex = 27;
+            calorieIntake.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // buttonCloseMacroCalc
+            // 
+            buttonCloseMacroCalc.BackColor = Color.White;
+            buttonCloseMacroCalc.Image = Properties.Resources.closebutton;
+            buttonCloseMacroCalc.Location = new Point(519, 9);
+            buttonCloseMacroCalc.Name = "buttonCloseMacroCalc";
+            buttonCloseMacroCalc.Size = new Size(17, 17);
+            buttonCloseMacroCalc.SizeMode = PictureBoxSizeMode.Zoom;
+            buttonCloseMacroCalc.TabIndex = 12;
+            buttonCloseMacroCalc.TabStop = false;
+            buttonCloseMacroCalc.Click += pictureBox3_Click_1;
+            buttonCloseMacroCalc.MouseEnter += buttonCloseMacroCalc_MouseEnter;
+            buttonCloseMacroCalc.MouseLeave += buttonCloseMacroCalc_MouseLeave;
+            // 
+            // macroCalcDescription
+            // 
+            macroCalcDescription.AutoSize = true;
+            macroCalcDescription.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            macroCalcDescription.ForeColor = SystemColors.ControlDarkDark;
+            macroCalcDescription.Location = new Point(23, 49);
+            macroCalcDescription.Name = "macroCalcDescription";
+            macroCalcDescription.Size = new Size(227, 171);
+            macroCalcDescription.TabIndex = 5;
+            macroCalcDescription.Text = resources.GetString("macroCalcDescription.Text");
+            // 
+            // macroCalcLabel
+            // 
+            macroCalcLabel.AutoSize = true;
+            macroCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            macroCalcLabel.Location = new Point(181, 19);
+            macroCalcLabel.Name = "macroCalcLabel";
+            macroCalcLabel.Size = new Size(184, 24);
+            macroCalcLabel.TabIndex = 2;
+            macroCalcLabel.Text = "Macro Calculator";
+            // 
+            // macroCalcBorders
+            // 
+            macroCalcBorders.Image = Properties.Resources.buttonCalcBorder1;
+            macroCalcBorders.Location = new Point(0, 0);
+            macroCalcBorders.Name = "macroCalcBorders";
+            macroCalcBorders.Size = new Size(547, 270);
+            macroCalcBorders.SizeMode = PictureBoxSizeMode.Zoom;
+            macroCalcBorders.TabIndex = 0;
+            macroCalcBorders.TabStop = false;
+            // 
             // Calculators
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
+            Controls.Add(macroCalcPanel);
+            Controls.Add(idealWeightCalcPanel);
             Controls.Add(calorieCalcPanel);
             Controls.Add(bodyFatCalcPanel);
             Controls.Add(bmrCalcPanel);
@@ -1733,6 +2477,15 @@
             ((System.ComponentModel.ISupportInitialize)activityComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)calorieButtonClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)calorieCalcBorders).EndInit();
+            idealWeightCalcPanel.ResumeLayout(false);
+            idealWeightCalcPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)buttonCloseIdealWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)idealWeightBorders).EndInit();
+            macroCalcPanel.ResumeLayout(false);
+            macroCalcPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)activityComboBoxMacro).EndInit();
+            ((System.ComponentModel.ISupportInitialize)buttonCloseMacroCalc).EndInit();
+            ((System.ComponentModel.ISupportInitialize)macroCalcBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1793,8 +2546,8 @@
         private PictureBox bmrBorders;
         private Label currentBMR;
         private Label dailyCalsLabel;
-        private Label intExrLabel;
-        private Label exerciseLabel;
+        private Label exerciseLabel2;
+        private Label exerciseLabel1;
         private Label sedentaryLabel;
         private Label bodyFatPercentage;
         private Label activityDescriptions;
@@ -1822,15 +2575,15 @@
         private Label currentBFP;
         private Panel calorieCalcPanel;
         private Krypton.Toolkit.KryptonButton calorieCalcButton;
-        private Label loseLabel;
+        private Label lossLabel;
         private Panel panel2;
         private Label activityLabel;
         private PictureBox pictureBox1;
+        private Label mildLossLabel;
         private Label maintainLabel;
         private Label gainLabel;
-        private Label gainLabel2;
-        private Label label6;
-        private Label label7;
+        private Label carbohydrates;
+        private Label fat;
         private PictureBox pictureBox2;
         private TextBox textBox1;
         private TextBox textBox2;
@@ -1843,5 +2596,35 @@
         private Label calorieCalcLabel;
         private PictureBox calorieCalcBorders;
         private Krypton.Toolkit.KryptonComboBox activityComboBox;
+        private Label veryIntenseLabel;
+        private Label intenseLabel;
+        private Label dailyLabel;
+        private Label label2;
+        private Label mildGainLabel;
+        private Panel idealWeightCalcPanel;
+        private Label changeGoalLabel;
+        private Label protein;
+        private Label idealWeightLabel1;
+        private PictureBox buttonCloseIdealWeight;
+        private Label idealWeightDescription;
+        private Label idealWeightCalcLabel;
+        private PictureBox idealWeightBorders;
+        private Label idealWeight;
+        private Panel macroCalcPanel;
+        private Label calorieIntake;
+        private PictureBox buttonCloseMacroCalc;
+        private Label macroCalcDescription;
+        private Label macroCalcLabel;
+        private PictureBox macroCalcBorders;
+        private Krypton.Toolkit.KryptonButton macroCalcButton;
+        private Label label1;
+        private Krypton.Toolkit.KryptonComboBox activityComboBoxMacro;
+        private Krypton.Toolkit.KryptonButton balancedButton;
+        private Label proteinLabel;
+        private Label carbsLabel;
+        private Label fatLabel;
+        private Krypton.Toolkit.KryptonButton highProteinButton;
+        private Krypton.Toolkit.KryptonButton lowCarbsButton;
+        private Krypton.Toolkit.KryptonButton lowFatButton;
     }
 }

@@ -173,6 +173,26 @@ function that are based on your
 activity level (you can change 
 that from the settings).</value>
   </data>
+  <data name="calorieDescription.Text" xml:space="preserve">
+    <value>The Calorie Calculator is very 
+similar to the Basal Metabolic 
+Rate calculator. This calculator 
+can provide some simple 
+guidelines for gaining, losing 
+or maintaining weight based
+on your activity level.</value>
+  </data>
+  <data name="macroCalcDescription.Text" xml:space="preserve">
+    <value>A macro calculator is a tool
+that helps individuals 
+determine their 
+macronutrient intake based 
+on theri weight, height, 
+activity, and goals. It 
+calculates the amounts of 
+proteins, fats, and carbohydrates 
+that they should consume.</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>30</value>
   </metadata>

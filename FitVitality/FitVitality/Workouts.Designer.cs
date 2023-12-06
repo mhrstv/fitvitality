@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Workouts));
             pictureBox8 = new PictureBox();
             pictureBox6 = new PictureBox();
@@ -36,6 +37,8 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             workoutsLabel = new Label();
+            button1 = new Button();
+            colorTimer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -114,12 +117,27 @@
             workoutsLabel.TabIndex = 20;
             workoutsLabel.Text = "Workouts";
             // 
+            // button1
+            // 
+            button1.Location = new Point(256, 262);
+            button1.Name = "button1";
+            button1.Size = new Size(178, 44);
+            button1.TabIndex = 21;
+            button1.Text = "STOP";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // colorTimer
+            // 
+            colorTimer.Tick += colorTimer_Tick;
+            // 
             // Workouts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(button1);
             Controls.Add(workoutsLabel);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox6);
@@ -150,5 +168,7 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Label workoutsLabel;
+        private Button button1;
+        private System.Windows.Forms.Timer colorTimer;
     }
 }

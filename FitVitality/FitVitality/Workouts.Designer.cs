@@ -36,6 +36,9 @@
             hLine2 = new PictureBox();
             hLine1 = new PictureBox();
             workoutsLabel = new Label();
+            kryptonRadioButton1 = new Krypton.Toolkit.KryptonRadioButton();
+            kryptonRadioButton2 = new Krypton.Toolkit.KryptonRadioButton();
+            kryptonRadioButton3 = new Krypton.Toolkit.KryptonRadioButton();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -114,12 +117,39 @@
             workoutsLabel.TabIndex = 20;
             workoutsLabel.Text = "Workouts";
             // 
+            // kryptonRadioButton1
+            // 
+            kryptonRadioButton1.Location = new Point(57, 129);
+            kryptonRadioButton1.Name = "kryptonRadioButton1";
+            kryptonRadioButton1.Size = new Size(139, 20);
+            kryptonRadioButton1.TabIndex = 21;
+            kryptonRadioButton1.Values.Text = "kryptonRadioButton1";
+            // 
+            // kryptonRadioButton2
+            // 
+            kryptonRadioButton2.Location = new Point(57, 164);
+            kryptonRadioButton2.Name = "kryptonRadioButton2";
+            kryptonRadioButton2.Size = new Size(139, 20);
+            kryptonRadioButton2.TabIndex = 22;
+            kryptonRadioButton2.Values.Text = "kryptonRadioButton2";
+            // 
+            // kryptonRadioButton3
+            // 
+            kryptonRadioButton3.Location = new Point(57, 203);
+            kryptonRadioButton3.Name = "kryptonRadioButton3";
+            kryptonRadioButton3.Size = new Size(139, 20);
+            kryptonRadioButton3.TabIndex = 23;
+            kryptonRadioButton3.Values.Text = "kryptonRadioButton3";
+            // 
             // Workouts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(kryptonRadioButton3);
+            Controls.Add(kryptonRadioButton2);
+            Controls.Add(kryptonRadioButton1);
             Controls.Add(workoutsLabel);
             Controls.Add(leftCorner);
             Controls.Add(rightCorner);
@@ -150,5 +180,8 @@
         private PictureBox hLine2;
         private PictureBox hLine1;
         private Label workoutsLabel;
+        private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton1;
+        private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton2;
+        private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton3;
     }
 }

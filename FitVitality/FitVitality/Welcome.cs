@@ -37,7 +37,7 @@ namespace FitVitality
         private string dbGoal; // Променлива за целта
         public string _userID; // Променлива за UserID
 
-        private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         public Welcome(string userID)
         {
@@ -48,7 +48,7 @@ namespace FitVitality
         private void Welcome_Load(object sender, EventArgs e) // Анимация при зареждане на формата
         {
             var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
-            
+
             buttonPrevious.Visible = false; // Скриване на бутона за предишна страница
             buttonNext.Visible = false; // Скриване на бутона за следваща страница
             namePanel.Visible = false; // Скриване на панела за въвеждане на име

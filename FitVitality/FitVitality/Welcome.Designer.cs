@@ -1013,8 +1013,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
-            Controls.Add(ageGender_Panel);
             Controls.Add(goalPanel);
+            Controls.Add(ageGender_Panel);
             Controls.Add(weightHeight_Panel);
             Controls.Add(currentPage);
             Controls.Add(namePanel);

@@ -36,15 +36,23 @@
             hLine2 = new PictureBox();
             hLine1 = new PictureBox();
             workoutsLabel = new Label();
-            kryptonRadioButton1 = new Krypton.Toolkit.KryptonRadioButton();
-            kryptonRadioButton2 = new Krypton.Toolkit.KryptonRadioButton();
-            kryptonRadioButton3 = new Krypton.Toolkit.KryptonRadioButton();
+            welcomeWorkoutPanel = new Panel();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
+            welcomeWorkoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -117,29 +125,63 @@
             workoutsLabel.TabIndex = 20;
             workoutsLabel.Text = "Workouts";
             // 
-            // kryptonRadioButton1
+            // welcomeWorkoutPanel
             // 
-            kryptonRadioButton1.Location = new Point(57, 129);
-            kryptonRadioButton1.Name = "kryptonRadioButton1";
-            kryptonRadioButton1.Size = new Size(139, 20);
-            kryptonRadioButton1.TabIndex = 21;
-            kryptonRadioButton1.Values.Text = "kryptonRadioButton1";
+            welcomeWorkoutPanel.Controls.Add(pictureBox4);
+            welcomeWorkoutPanel.Controls.Add(pictureBox3);
+            welcomeWorkoutPanel.Controls.Add(pictureBox2);
+            welcomeWorkoutPanel.Controls.Add(label1);
+            welcomeWorkoutPanel.Controls.Add(pictureBox1);
+            welcomeWorkoutPanel.Location = new Point(86, 70);
+            welcomeWorkoutPanel.Name = "welcomeWorkoutPanel";
+            welcomeWorkoutPanel.Size = new Size(518, 262);
+            welcomeWorkoutPanel.TabIndex = 24;
             // 
-            // kryptonRadioButton2
+            // pictureBox1
             // 
-            kryptonRadioButton2.Location = new Point(57, 164);
-            kryptonRadioButton2.Name = "kryptonRadioButton2";
-            kryptonRadioButton2.Size = new Size(139, 20);
-            kryptonRadioButton2.TabIndex = 22;
-            kryptonRadioButton2.Values.Text = "kryptonRadioButton2";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(518, 262);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
-            // kryptonRadioButton3
+            // label1
             // 
-            kryptonRadioButton3.Location = new Point(57, 203);
-            kryptonRadioButton3.Name = "kryptonRadioButton3";
-            kryptonRadioButton3.Size = new Size(139, 20);
-            kryptonRadioButton3.TabIndex = 23;
-            kryptonRadioButton3.Values.Text = "kryptonRadioButton3";
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(242, 242, 242);
+            label1.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlText;
+            label1.Location = new Point(64, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(399, 46);
+            label1.TabIndex = 1;
+            label1.Text = "Zdraveite zobadjii tuk shte pravite svoite trenirovki\r\nKude shte trenirate";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(125, 164);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(83, 37);
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Location = new Point(214, 167);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(97, 34);
+            pictureBox3.TabIndex = 3;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Location = new Point(308, 167);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(97, 34);
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
             // 
             // Workouts
             // 
@@ -147,9 +189,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
-            Controls.Add(kryptonRadioButton3);
-            Controls.Add(kryptonRadioButton2);
-            Controls.Add(kryptonRadioButton1);
+            Controls.Add(welcomeWorkoutPanel);
             Controls.Add(workoutsLabel);
             Controls.Add(leftCorner);
             Controls.Add(rightCorner);
@@ -159,7 +199,7 @@
             Controls.Add(hLine1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Workouts";
-            Text = "Workouts";
+            Text = " ";
             Load += Workouts_Load;
             ((System.ComponentModel.ISupportInitialize)leftCorner).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).EndInit();
@@ -167,6 +207,12 @@
             ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
+            welcomeWorkoutPanel.ResumeLayout(false);
+            welcomeWorkoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,8 +226,11 @@
         private PictureBox hLine2;
         private PictureBox hLine1;
         private Label workoutsLabel;
-        private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton1;
-        private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton2;
-        private Krypton.Toolkit.KryptonRadioButton kryptonRadioButton3;
+        private Panel welcomeWorkoutPanel;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
     }
 }

@@ -14,25 +14,26 @@ namespace FitVitality
     public partial class Workouts : Form
     {
         public string _userID;
-        
+
         // Булеви променливи, които отбелязват къде ще се изпълнява тренировката
         bool gymClicked = false;
         bool homeClicked = false;
         bool outdoorsClicked = false;
-        
+
         // Булеви променливи, които отбелязват кои части от тялото ще се тренират
         bool upperBodyClicked = false;
+        bool coreClicked = false;
         bool lowerBodyClicked = false;
 
         // Допълнителни булеви променливи, които отбелязват какъв тип тренировка ще се изпълнява
-        bool coreClicked = false;
         bool cardioClicked = false;
-        bool neckClicked = false;
 
         public Workouts(string userID)
         {
             InitializeComponent();
             _userID = userID;
+
+
         }
         private void Workouts_Load(object sender, EventArgs e)
         {
@@ -65,6 +66,11 @@ namespace FitVitality
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

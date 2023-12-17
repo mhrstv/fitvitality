@@ -72,5 +72,92 @@ namespace FitVitality
         {
 
         }
+
+        private void gymButton_Click(object sender, EventArgs e)
+        {
+            gymButton.Image = Properties.Resources.gymPressed;
+            homeButton.Image = Properties.Resources.home1;
+            outdoorsButton.Image = Properties.Resources.outdoors;
+            gymClicked = true;
+            homeClicked = false;
+            outdoorsClicked = false;
+            nextButton1.Visible = true;
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            gymButton.Image = Properties.Resources.gym;
+            homeButton.Image = Properties.Resources.homePressed;
+            outdoorsButton.Image = Properties.Resources.outdoors;
+            gymClicked = false;
+            homeClicked = true;
+            outdoorsClicked = false;
+            nextButton1.Visible = true;
+        }
+
+        private void outdoorsButton_Click(object sender, EventArgs e)
+        {
+            gymButton.Image = Properties.Resources.gym;
+            homeButton.Image = Properties.Resources.home1;
+            outdoorsButton.Image = Properties.Resources.outdoorsPressed;
+            gymClicked = false;
+            homeClicked = false;
+            outdoorsClicked = true;
+            nextButton1.Visible = true;
+        }
+
+        private void gymButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (!gymClicked)
+            {
+                gymButton.Image = Properties.Resources.gymHover;
+            }
+        }
+
+        private void gymButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (!gymClicked)
+            {
+                gymButton.Image = Properties.Resources.gym;
+            }
+        }
+
+        private void homeButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (!homeClicked)
+            {
+                homeButton.Image = Properties.Resources.homeHover;
+            }
+        }
+
+        private void homeButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (!homeClicked)
+            {
+                homeButton.Image = Properties.Resources.home1;
+            }
+        }
+
+        private void outdoorsButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (!outdoorsClicked)
+            {
+                outdoorsButton.Image = Properties.Resources.outdoorsHovered;
+            }
+        }
+
+        private void outdoorsButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (!outdoorsClicked)
+            {
+                outdoorsButton.Image = Properties.Resources.outdoors;
+            }
+        }
+
+        private void nextButton1_Click(object sender, EventArgs e)
+        {
+            trainPlacePanel.Visible = false;
+            muscleGroupsPanel.Visible = true;
+        }
     }
 }

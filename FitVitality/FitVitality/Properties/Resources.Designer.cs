@@ -363,6 +363,36 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gym {
+            get {
+                object obj = ResourceManager.GetObject("gym", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gymHover {
+            get {
+                object obj = ResourceManager.GetObject("gymHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gymPressed {
+            get {
+                object obj = ResourceManager.GetObject("gymPressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hidePass {
             get {
                 object obj = ResourceManager.GetObject("hidePass", resourceCulture);
@@ -386,6 +416,36 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home1 {
+            get {
+                object obj = ResourceManager.GetObject("home1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap homeHover {
+            get {
+                object obj = ResourceManager.GetObject("homeHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap homePressed {
+            get {
+                object obj = ResourceManager.GetObject("homePressed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -566,6 +626,36 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap nexttracked {
             get {
                 object obj = ResourceManager.GetObject("nexttracked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outdoors {
+            get {
+                object obj = ResourceManager.GetObject("outdoors", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outdoorsHovered {
+            get {
+                object obj = ResourceManager.GetObject("outdoorsHovered", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outdoorsPressed {
+            get {
+                object obj = ResourceManager.GetObject("outdoorsPressed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

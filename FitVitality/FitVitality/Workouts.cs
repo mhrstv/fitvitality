@@ -159,5 +159,10 @@ namespace FitVitality
             trainPlacePanel.Visible = false;
             muscleGroupsPanel.Visible = true;
         }
+
+        private void muscleGroupsBorders_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

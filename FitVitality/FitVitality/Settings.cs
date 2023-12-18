@@ -136,7 +136,7 @@ namespace FitVitality
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            string query = "DELETE FROM UserData WHERE UserID = @ID";
+            string query = "DELETE FROM UserData WHERE UserID = @ID; DELETE FROM UserSettings WHERE UserID = @ID; DELETE FROM Workouts WHERE UserID = @ID";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -148,7 +148,8 @@ namespace FitVitality
                         deleteAccPanel.Visible = false;
                         Login login = new Login();
                         login.Show();
-                        this.Hide();
+                        this.ParentForm.Hide();
+                        
                     }
                 }
                 connection.Close();

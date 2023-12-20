@@ -28,6 +28,7 @@ namespace FitVitality
 
         // Допълнителни булеви променливи, които отбелязват какъв тип тренировка ще се изпълнява
         bool cardioClicked = false;
+        string name = "";
 
         string workoutPlace = "";
         int activity;
@@ -44,7 +45,23 @@ namespace FitVitality
         }
         private void Workouts_Load(object sender, EventArgs e)
         {
-
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Name FROM UserSettings WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            name = reader["Name"].ToString();
+                        }
+                    }
+                }
+            }
+            trainPlaceLabel.Text = $"Hello, {name}. This is the workout section and we will \r\nask you a few questions in order to create the \r\nperfect workout for you.\r\nTo begin with, what place do you desire to workout at?\r\n";
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)

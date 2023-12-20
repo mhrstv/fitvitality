@@ -167,7 +167,7 @@ namespace FitVitality
         private void nextButton1_Click(object sender, EventArgs e)
         {
             trainPlacePanel.Visible = false;
-            muscleGroupsPanel.Visible = true;
+            activityGroupPanel.Visible = true;
         }
 
         private void muscleGroupsBorders_Click(object sender, EventArgs e)
@@ -186,7 +186,8 @@ namespace FitVitality
                 command.Parameters.AddWithValue("@UserID", _userID);
                 command.ExecuteNonQuery();
             }
-
+            muscleGroupPanel.Visible = true;
+            activityGroupPanel.Visible = false;
         }
 
         private void activityLevelComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -224,6 +225,119 @@ namespace FitVitality
                 default:
                     nextButton2.Visible = false;
                     break;
+            }
+        }
+
+        private void upperButton_Click(object sender, EventArgs e)
+        {
+            
+            upperButton.Image = Properties.Resources.upperPressed;
+            upperBodyClicked = true;
+            nextButton3.Visible = true;
+            
+            if (upperButton.Image == Properties.Resources.upperPressed && (lowerBodyClicked == false && coreClicked == false))
+            {
+                upperButton.Image = Properties.Resources.upperHover;
+                upperBodyClicked = false;
+                nextButton3.Visible = false;
+            }
+            if (upperButton.Image == Properties.Resources.upperPressed && (lowerBodyClicked || coreClicked))
+            {
+                upperButton.Image = Properties.Resources.upperHover;
+                upperBodyClicked = false;
+                nextButton3.Visible = true;
+            }
+        }
+
+        private void lowerButton_Click(object sender, EventArgs e)
+        {
+            if (lowerButton.Image == Properties.Resources.lowerHover)
+            {
+                lowerButton.Image = Properties.Resources.lowerPressed;
+                lowerBodyClicked = true;
+                nextButton3.Visible = true;
+            }
+            if (lowerButton.Image == Properties.Resources.lowerPressed && (upperBodyClicked == false && coreClicked == false))
+            {
+                lowerButton.Image = Properties.Resources.lowerHover;
+                lowerBodyClicked = false;
+                nextButton3.Visible = false;
+            }
+            if (lowerButton.Image == Properties.Resources.lowerHover && (upperBodyClicked || coreClicked))
+            {
+                lowerButton.Image = Properties.Resources.lowerHover;
+                lowerBodyClicked = false;
+                nextButton3.Visible = true;
+            }
+        }
+
+        private void coreButton_Click(object sender, EventArgs e)
+        {
+            if (coreButton.Image == Properties.Resources.coreHovered)
+            {
+                coreButton.Image = Properties.Resources.corePressed;
+                coreClicked = true;
+                nextButton3.Visible = true;
+            }
+            if (coreButton.Image == Properties.Resources.corePressed && (upperBodyClicked == false && lowerBodyClicked == false))
+            {
+                coreButton.Image = Properties.Resources.coreHovered;
+                coreClicked = false;
+                nextButton3.Visible = false;
+            }
+            if (coreButton.Image == Properties.Resources.corePressed && (upperBodyClicked || lowerBodyClicked))
+            {
+                coreButton.Image = Properties.Resources.coreHovered;
+                coreClicked = false;
+                nextButton3.Visible = true;
+            }
+        }
+
+        private void upperButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (!upperBodyClicked)
+            {
+                upperButton.Image = Properties.Resources.upperHover;
+            }
+        }
+
+        private void upperButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (!upperBodyClicked)
+            {
+                upperButton.Image = Properties.Resources.upper;
+            }
+        }
+
+        private void lowerButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (!lowerBodyClicked)
+            {
+                lowerButton.Image = Properties.Resources.lowerHover;
+            }
+        }
+
+        private void lowerButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (!lowerBodyClicked)
+            {
+                lowerButton.Image = Properties.Resources.lower;
+            }
+        }
+
+        private void coreButton_MouseEnter(object sender, EventArgs e)
+        {
+            if (!coreClicked)
+            {
+                coreButton.Image = Properties.Resources.coreHovered;
+            }
+        }
+
+        private void coreButton_MouseLeave(object sender, EventArgs e)
+        {
+            if (!coreClicked)
+            {
+                coreButton.Image = Properties.Resources.core;
             }
         }
     }

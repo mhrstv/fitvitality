@@ -44,12 +44,20 @@
             gymButton = new PictureBox();
             trainPlaceLabel = new Label();
             trainPlaceBorders = new PictureBox();
-            muscleGroupsPanel = new Panel();
+            activityGroupPanel = new Panel();
             activityLevelComboBox = new ComboBox();
             nextButtonPanel2 = new Panel();
             nextButton2 = new Krypton.Toolkit.KryptonButton();
-            muscleGroupsLabel = new Label();
-            muscleGroupsBorders = new PictureBox();
+            acticityGroupLabel = new Label();
+            activityGroupBorders = new PictureBox();
+            muscleGroupPanel = new Panel();
+            nextButtonPanel3 = new Panel();
+            nextButton3 = new Krypton.Toolkit.KryptonButton();
+            muscleGroupLabel = new Label();
+            muscleGroupPanelBorders = new PictureBox();
+            upperButton = new PictureBox();
+            lowerButton = new PictureBox();
+            coreButton = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -62,9 +70,15 @@
             ((System.ComponentModel.ISupportInitialize)homeButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gymButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trainPlaceBorders).BeginInit();
-            muscleGroupsPanel.SuspendLayout();
+            activityGroupPanel.SuspendLayout();
             nextButtonPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)muscleGroupsBorders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)activityGroupBorders).BeginInit();
+            muscleGroupPanel.SuspendLayout();
+            nextButtonPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)muscleGroupPanelBorders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)upperButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lowerButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)coreButton).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -280,17 +294,17 @@
             trainPlaceBorders.TabIndex = 0;
             trainPlaceBorders.TabStop = false;
             // 
-            // muscleGroupsPanel
+            // activityGroupPanel
             // 
-            muscleGroupsPanel.Controls.Add(activityLevelComboBox);
-            muscleGroupsPanel.Controls.Add(nextButtonPanel2);
-            muscleGroupsPanel.Controls.Add(muscleGroupsLabel);
-            muscleGroupsPanel.Controls.Add(muscleGroupsBorders);
-            muscleGroupsPanel.Location = new Point(86, 70);
-            muscleGroupsPanel.Name = "muscleGroupsPanel";
-            muscleGroupsPanel.Size = new Size(518, 262);
-            muscleGroupsPanel.TabIndex = 33;
-            muscleGroupsPanel.Visible = false;
+            activityGroupPanel.Controls.Add(activityLevelComboBox);
+            activityGroupPanel.Controls.Add(nextButtonPanel2);
+            activityGroupPanel.Controls.Add(acticityGroupLabel);
+            activityGroupPanel.Controls.Add(activityGroupBorders);
+            activityGroupPanel.Location = new Point(86, 70);
+            activityGroupPanel.Name = "activityGroupPanel";
+            activityGroupPanel.Size = new Size(518, 262);
+            activityGroupPanel.TabIndex = 33;
+            activityGroupPanel.Visible = false;
             // 
             // activityLevelComboBox
             // 
@@ -376,27 +390,170 @@
             nextButton2.Visible = false;
             nextButton2.Click += kryptonButton1_Click;
             // 
-            // muscleGroupsLabel
+            // acticityGroupLabel
             // 
-            muscleGroupsLabel.AutoSize = true;
-            muscleGroupsLabel.BackColor = Color.FromArgb(242, 242, 242);
-            muscleGroupsLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            muscleGroupsLabel.ForeColor = SystemColors.ControlText;
-            muscleGroupsLabel.Location = new Point(63, 38);
-            muscleGroupsLabel.Name = "muscleGroupsLabel";
-            muscleGroupsLabel.Size = new Size(392, 19);
-            muscleGroupsLabel.TabIndex = 1;
-            muscleGroupsLabel.Text = "What concerns us next is how often you would like to train.";
+            acticityGroupLabel.AutoSize = true;
+            acticityGroupLabel.BackColor = Color.FromArgb(242, 242, 242);
+            acticityGroupLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            acticityGroupLabel.ForeColor = SystemColors.ControlText;
+            acticityGroupLabel.Location = new Point(63, 38);
+            acticityGroupLabel.Name = "acticityGroupLabel";
+            acticityGroupLabel.Size = new Size(392, 19);
+            acticityGroupLabel.TabIndex = 1;
+            acticityGroupLabel.Text = "What concerns us next is how often you would like to train.";
             // 
-            // muscleGroupsBorders
+            // activityGroupBorders
             // 
-            muscleGroupsBorders.Image = (Image)resources.GetObject("muscleGroupsBorders.Image");
-            muscleGroupsBorders.Location = new Point(0, 0);
-            muscleGroupsBorders.Name = "muscleGroupsBorders";
-            muscleGroupsBorders.Size = new Size(518, 262);
-            muscleGroupsBorders.TabIndex = 0;
-            muscleGroupsBorders.TabStop = false;
-            muscleGroupsBorders.Click += muscleGroupsBorders_Click;
+            activityGroupBorders.Image = (Image)resources.GetObject("activityGroupBorders.Image");
+            activityGroupBorders.Location = new Point(0, 0);
+            activityGroupBorders.Name = "activityGroupBorders";
+            activityGroupBorders.Size = new Size(518, 262);
+            activityGroupBorders.TabIndex = 0;
+            activityGroupBorders.TabStop = false;
+            activityGroupBorders.Click += muscleGroupsBorders_Click;
+            // 
+            // muscleGroupPanel
+            // 
+            muscleGroupPanel.Controls.Add(coreButton);
+            muscleGroupPanel.Controls.Add(lowerButton);
+            muscleGroupPanel.Controls.Add(upperButton);
+            muscleGroupPanel.Controls.Add(nextButtonPanel3);
+            muscleGroupPanel.Controls.Add(muscleGroupLabel);
+            muscleGroupPanel.Controls.Add(muscleGroupPanelBorders);
+            muscleGroupPanel.Location = new Point(86, 70);
+            muscleGroupPanel.Name = "muscleGroupPanel";
+            muscleGroupPanel.Size = new Size(518, 262);
+            muscleGroupPanel.TabIndex = 34;
+            muscleGroupPanel.Visible = false;
+            // 
+            // nextButtonPanel3
+            // 
+            nextButtonPanel3.BackColor = Color.WhiteSmoke;
+            nextButtonPanel3.Controls.Add(nextButton3);
+            nextButtonPanel3.Location = new Point(214, 221);
+            nextButtonPanel3.Name = "nextButtonPanel3";
+            nextButtonPanel3.Size = new Size(90, 25);
+            nextButtonPanel3.TabIndex = 32;
+            // 
+            // nextButton3
+            // 
+            nextButton3.CornerRoundingRadius = 15F;
+            nextButton3.Location = new Point(0, 0);
+            nextButton3.Name = "nextButton3";
+            nextButton3.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            nextButton3.Size = new Size(90, 25);
+            nextButton3.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateCommon.Back.ColorAngle = 45F;
+            nextButton3.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateCommon.Border.ColorAngle = 45F;
+            nextButton3.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton3.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton3.StateCommon.Border.Rounding = 15F;
+            nextButton3.StateCommon.Border.Width = 1;
+            nextButton3.StateCommon.Content.ShortText.Color1 = Color.White;
+            nextButton3.StateCommon.Content.ShortText.Color2 = Color.White;
+            nextButton3.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            nextButton3.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton3.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateNormal.Back.ColorAngle = 45F;
+            nextButton3.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton3.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton3.StateNormal.Border.ColorAngle = 45F;
+            nextButton3.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton3.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton3.StateNormal.Border.Rounding = 15F;
+            nextButton3.StateNormal.Border.Width = 1;
+            nextButton3.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            nextButton3.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            nextButton3.StatePressed.Back.ColorAngle = 45F;
+            nextButton3.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton3.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            nextButton3.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            nextButton3.StatePressed.Border.ColorAngle = 45F;
+            nextButton3.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton3.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton3.StatePressed.Border.Rounding = 15F;
+            nextButton3.StatePressed.Border.Width = 1;
+            nextButton3.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            nextButton3.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            nextButton3.StateTracking.Back.ColorAngle = 45F;
+            nextButton3.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton3.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            nextButton3.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            nextButton3.StateTracking.Border.ColorAngle = 45F;
+            nextButton3.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton3.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton3.StateTracking.Border.Rounding = 15F;
+            nextButton3.StateTracking.Border.Width = 1;
+            nextButton3.TabIndex = 31;
+            nextButton3.Values.Text = "Next";
+            nextButton3.Visible = false;
+            // 
+            // muscleGroupLabel
+            // 
+            muscleGroupLabel.AutoSize = true;
+            muscleGroupLabel.BackColor = Color.FromArgb(242, 242, 242);
+            muscleGroupLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            muscleGroupLabel.ForeColor = SystemColors.ControlText;
+            muscleGroupLabel.Location = new Point(67, 28);
+            muscleGroupLabel.Name = "muscleGroupLabel";
+            muscleGroupLabel.Size = new Size(388, 38);
+            muscleGroupLabel.TabIndex = 1;
+            muscleGroupLabel.Text = "We would like to know which muscle groups from the ones\r\nbelow, you would like to train?";
+            muscleGroupLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // muscleGroupPanelBorders
+            // 
+            muscleGroupPanelBorders.Image = (Image)resources.GetObject("muscleGroupPanelBorders.Image");
+            muscleGroupPanelBorders.Location = new Point(0, 0);
+            muscleGroupPanelBorders.Name = "muscleGroupPanelBorders";
+            muscleGroupPanelBorders.Size = new Size(518, 262);
+            muscleGroupPanelBorders.TabIndex = 0;
+            muscleGroupPanelBorders.TabStop = false;
+            // 
+            // upperButton
+            // 
+            upperButton.Image = Properties.Resources.upper;
+            upperButton.Location = new Point(136, 142);
+            upperButton.Name = "upperButton";
+            upperButton.Size = new Size(83, 37);
+            upperButton.TabIndex = 33;
+            upperButton.TabStop = false;
+            upperButton.Click += upperButton_Click;
+            upperButton.MouseEnter += upperButton_MouseEnter;
+            upperButton.MouseLeave += upperButton_MouseLeave;
+            // 
+            // lowerButton
+            // 
+            lowerButton.Image = Properties.Resources.lower;
+            lowerButton.Location = new Point(218, 142);
+            lowerButton.Name = "lowerButton";
+            lowerButton.Size = new Size(83, 37);
+            lowerButton.TabIndex = 34;
+            lowerButton.TabStop = false;
+            lowerButton.Click += lowerButton_Click;
+            lowerButton.MouseEnter += lowerButton_MouseEnter;
+            lowerButton.MouseLeave += lowerButton_MouseLeave;
+            // 
+            // coreButton
+            // 
+            coreButton.Image = Properties.Resources.core;
+            coreButton.Location = new Point(300, 142);
+            coreButton.Name = "coreButton";
+            coreButton.Size = new Size(83, 37);
+            coreButton.TabIndex = 35;
+            coreButton.TabStop = false;
+            coreButton.Click += coreButton_Click;
+            coreButton.MouseEnter += coreButton_MouseEnter;
+            coreButton.MouseLeave += coreButton_MouseLeave;
             // 
             // Workouts
             // 
@@ -404,7 +561,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
-            Controls.Add(muscleGroupsPanel);
+            Controls.Add(muscleGroupPanel);
+            Controls.Add(activityGroupPanel);
             Controls.Add(trainPlacePanel);
             Controls.Add(workoutsLabel);
             Controls.Add(leftCorner);
@@ -430,10 +588,17 @@
             ((System.ComponentModel.ISupportInitialize)homeButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)gymButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)trainPlaceBorders).EndInit();
-            muscleGroupsPanel.ResumeLayout(false);
-            muscleGroupsPanel.PerformLayout();
+            activityGroupPanel.ResumeLayout(false);
+            activityGroupPanel.PerformLayout();
             nextButtonPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)muscleGroupsBorders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)activityGroupBorders).EndInit();
+            muscleGroupPanel.ResumeLayout(false);
+            muscleGroupPanel.PerformLayout();
+            nextButtonPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)muscleGroupPanelBorders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)upperButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lowerButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)coreButton).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -455,11 +620,20 @@
         private PictureBox gymButton;
         private Krypton.Toolkit.KryptonButton nextButton1;
         private Panel nextButtonPanel1;
-        private Panel muscleGroupsPanel;
+        private Panel activityGroupPanel;
         private Panel nextButtonPanel2;
         private Krypton.Toolkit.KryptonButton nextButton2;
-        private Label muscleGroupsLabel;
-        private PictureBox muscleGroupsBorders;
+        private Label acticityGroupLabel;
+        private PictureBox activityGroupBorders;
         private ComboBox activityLevelComboBox;
+        private Panel muscleGroupPanel;
+        private ComboBox comboBox1;
+        private Panel nextButtonPanel3;
+        private Krypton.Toolkit.KryptonButton nextButton3;
+        private Label muscleGroupLabel;
+        private PictureBox muscleGroupPanelBorders;
+        private PictureBox coreButton;
+        private PictureBox lowerButton;
+        private PictureBox upperButton;
     }
 }

@@ -230,75 +230,76 @@ namespace FitVitality
 
         private void upperButton_Click(object sender, EventArgs e)
         {
-            
-            upperButton.Image = Properties.Resources.upperPressed;
-            upperBodyClicked = true;
-            nextButton3.Visible = true;
-            
-            if (upperButton.Image == Properties.Resources.upperPressed && (lowerBodyClicked == false && coreClicked == false))
+            if (upperBodyClicked)
             {
-                upperButton.Image = Properties.Resources.upperHover;
                 upperBodyClicked = false;
-                nextButton3.Visible = false;
+                upperButton.Image = Properties.Resources.upper;
             }
-            if (upperButton.Image == Properties.Resources.upperPressed && (lowerBodyClicked || coreClicked))
+            else
             {
-                upperButton.Image = Properties.Resources.upperHover;
-                upperBodyClicked = false;
+                upperBodyClicked = true;
+                upperButton.Image = Properties.Resources.upperPressed;
+            }
+
+            if(upperBodyClicked || lowerBodyClicked || coreClicked)
+            {
                 nextButton3.Visible = true;
+            }
+            else
+            {
+                nextButton3.Visible = false;
             }
         }
 
         private void lowerButton_Click(object sender, EventArgs e)
         {
-            if (lowerButton.Image == Properties.Resources.lowerHover)
+            if(lowerBodyClicked)
             {
-                lowerButton.Image = Properties.Resources.lowerPressed;
+                lowerBodyClicked = false;
+                lowerButton.Image = Properties.Resources.lower;
+            }
+            else
+            {
                 lowerBodyClicked = true;
+                lowerButton.Image = Properties.Resources.lowerPressed;
+            }
+
+            if(upperBodyClicked || lowerBodyClicked || coreClicked)
+            {
                 nextButton3.Visible = true;
             }
-            if (lowerButton.Image == Properties.Resources.lowerPressed && (upperBodyClicked == false && coreClicked == false))
+            else
             {
-                lowerButton.Image = Properties.Resources.lowerHover;
-                lowerBodyClicked = false;
                 nextButton3.Visible = false;
-            }
-            if (lowerButton.Image == Properties.Resources.lowerHover && (upperBodyClicked || coreClicked))
-            {
-                lowerButton.Image = Properties.Resources.lowerHover;
-                lowerBodyClicked = false;
-                nextButton3.Visible = true;
             }
         }
 
         private void coreButton_Click(object sender, EventArgs e)
         {
-            if (coreButton.Image == Properties.Resources.coreHovered)
+            if(coreClicked)
             {
-                coreButton.Image = Properties.Resources.corePressed;
+                coreClicked = false;
+                coreButton.Image = Properties.Resources.core;
+            }
+            else
+            {
                 coreClicked = true;
+                coreButton.Image = Properties.Resources.corePressed;
+            }
+
+            if(upperBodyClicked || lowerBodyClicked || coreClicked)
+            {
                 nextButton3.Visible = true;
             }
-            if (coreButton.Image == Properties.Resources.corePressed && (upperBodyClicked == false && lowerBodyClicked == false))
+            else
             {
-                coreButton.Image = Properties.Resources.coreHovered;
-                coreClicked = false;
                 nextButton3.Visible = false;
-            }
-            if (coreButton.Image == Properties.Resources.corePressed && (upperBodyClicked || lowerBodyClicked))
-            {
-                coreButton.Image = Properties.Resources.coreHovered;
-                coreClicked = false;
-                nextButton3.Visible = true;
             }
         }
 
         private void upperButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!upperBodyClicked)
-            {
                 upperButton.Image = Properties.Resources.upperHover;
-            }
         }
 
         private void upperButton_MouseLeave(object sender, EventArgs e)
@@ -307,14 +308,15 @@ namespace FitVitality
             {
                 upperButton.Image = Properties.Resources.upper;
             }
+            else
+            {
+                upperButton.Image = Properties.Resources.upperPressed;
+            }
         }
 
         private void lowerButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!lowerBodyClicked)
-            {
                 lowerButton.Image = Properties.Resources.lowerHover;
-            }
         }
 
         private void lowerButton_MouseLeave(object sender, EventArgs e)
@@ -323,14 +325,15 @@ namespace FitVitality
             {
                 lowerButton.Image = Properties.Resources.lower;
             }
+            else
+            {
+                lowerButton.Image = Properties.Resources.lowerPressed;
+            }
         }
 
         private void coreButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!coreClicked)
-            {
                 coreButton.Image = Properties.Resources.coreHovered;
-            }
         }
 
         private void coreButton_MouseLeave(object sender, EventArgs e)
@@ -338,6 +341,10 @@ namespace FitVitality
             if (!coreClicked)
             {
                 coreButton.Image = Properties.Resources.core;
+            }
+            else
+            {
+                coreButton.Image = Properties.Resources.corePressed;
             }
         }
     }

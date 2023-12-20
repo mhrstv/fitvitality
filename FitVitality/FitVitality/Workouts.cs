@@ -258,7 +258,7 @@ namespace FitVitality
                 upperButton.Image = Properties.Resources.upperPressed;
             }
 
-            if(upperBodyClicked || lowerBodyClicked || coreClicked)
+            if (upperBodyClicked || lowerBodyClicked || coreClicked)
             {
                 nextButton3.Visible = true;
             }
@@ -270,7 +270,7 @@ namespace FitVitality
 
         private void lowerButton_Click(object sender, EventArgs e)
         {
-            if(lowerBodyClicked)
+            if (lowerBodyClicked)
             {
                 lowerBodyClicked = false;
                 lowerButton.Image = Properties.Resources.lower;
@@ -281,7 +281,7 @@ namespace FitVitality
                 lowerButton.Image = Properties.Resources.lowerPressed;
             }
 
-            if(upperBodyClicked || lowerBodyClicked || coreClicked)
+            if (upperBodyClicked || lowerBodyClicked || coreClicked)
             {
                 nextButton3.Visible = true;
             }
@@ -293,7 +293,7 @@ namespace FitVitality
 
         private void coreButton_Click(object sender, EventArgs e)
         {
-            if(coreClicked)
+            if (coreClicked)
             {
                 coreClicked = false;
                 coreButton.Image = Properties.Resources.core;
@@ -304,7 +304,7 @@ namespace FitVitality
                 coreButton.Image = Properties.Resources.corePressed;
             }
 
-            if(upperBodyClicked || lowerBodyClicked || coreClicked)
+            if (upperBodyClicked || lowerBodyClicked || coreClicked)
             {
                 nextButton3.Visible = true;
             }
@@ -316,7 +316,7 @@ namespace FitVitality
 
         private void upperButton_MouseEnter(object sender, EventArgs e)
         {
-                upperButton.Image = Properties.Resources.upperHover;
+            upperButton.Image = Properties.Resources.upperHover;
         }
 
         private void upperButton_MouseLeave(object sender, EventArgs e)
@@ -333,7 +333,7 @@ namespace FitVitality
 
         private void lowerButton_MouseEnter(object sender, EventArgs e)
         {
-                lowerButton.Image = Properties.Resources.lowerHover;
+            lowerButton.Image = Properties.Resources.lowerHover;
         }
 
         private void lowerButton_MouseLeave(object sender, EventArgs e)
@@ -350,7 +350,7 @@ namespace FitVitality
 
         private void coreButton_MouseEnter(object sender, EventArgs e)
         {
-                coreButton.Image = Properties.Resources.coreHovered;
+            coreButton.Image = Properties.Resources.coreHovered;
         }
 
         private void coreButton_MouseLeave(object sender, EventArgs e)
@@ -362,6 +362,65 @@ namespace FitVitality
             else
             {
                 coreButton.Image = Properties.Resources.corePressed;
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nextButton3_Click(object sender, EventArgs e)
+        {
+            muscleGroupPanel.Visible = false;
+            upperBodyPanel.Visible = true;
+        }
+
+        private void shouldersCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (shouldersCheckBox.Checked)
+            {
+                shouldersPicture.Image = Properties.Resources.shouldersSelected;
+            }
+            else
+            {
+                shouldersPicture.Image = Properties.Resources.shoulders;
+            }
+        }
+
+        private void chestCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chestCheckBox.Checked)
+            {
+                chestPicture.Image = Properties.Resources.chestSelected;
+            }
+            else
+            {
+                chestPicture.Image = Properties.Resources.chest;
+            }
+        }
+
+        private void armsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (armsCheckBox.Checked)
+            {
+                armsPicture.Image = Properties.Resources.armsSelected;
+            }
+            else
+            {
+                armsPicture.Image = Properties.Resources.arms;
+            }
+        }
+
+        private void backCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (backCheckBox.Checked)
+            {
+                backPicture.Image = Properties.Resources.backSelected;
+            }
+            else
+            {
+                backPicture.Image = Properties.Resources.back;
             }
         }
     }

@@ -26,9 +26,17 @@ namespace FitVitality
         bool coreClicked = false;
         bool lowerBodyClicked = false;
 
+        // Булеви променливи, които отбелязват дали е натиснато да или не
+        bool yesClicked = false;
+        bool noClicked = false;
+
         // Допълнителни булеви променливи, които отбелязват какъв тип тренировка ще се изпълнява
         bool cardioClicked = false;
         string name = "";
+
+        // Булеви променливи, които отбелязват дали е натиснато готова тренировка или създаване на собствена
+        bool preClicked = false;
+        bool createClicked = false;
 
         string workoutPlace = "";
         int activity;
@@ -373,7 +381,12 @@ namespace FitVitality
         private void nextButton3_Click(object sender, EventArgs e)
         {
             muscleGroupPanel.Visible = false;
-            upperBodyPanel.Visible = true;
+            if (upperBodyClicked)
+                upperBodyPanel.Visible = true;
+            if (!upperBodyClicked && lowerBodyClicked)
+                lowerBodyPanel.Visible = true;
+            if (!upperBodyClicked && !lowerBodyClicked)
+                cardioPanel.Visible = true;
         }
 
         private void shouldersCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -381,10 +394,15 @@ namespace FitVitality
             if (shouldersCheckBox.Checked)
             {
                 shouldersPicture.Image = Properties.Resources.shouldersSelected;
+                nextButton4.Visible = true;
             }
             else
             {
                 shouldersPicture.Image = Properties.Resources.shoulders;
+                if (!armsCheckBox.Checked && !backCheckBox.Checked && !chestCheckBox.Checked)
+                {
+                    nextButton4.Visible = false;
+                }
             }
         }
 
@@ -393,10 +411,15 @@ namespace FitVitality
             if (chestCheckBox.Checked)
             {
                 chestPicture.Image = Properties.Resources.chestSelected;
+                nextButton4.Visible = true;
             }
             else
             {
                 chestPicture.Image = Properties.Resources.chest;
+                if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !backCheckBox.Checked)
+                {
+                    nextButton4.Visible = false;
+                }
             }
         }
 
@@ -405,10 +428,15 @@ namespace FitVitality
             if (armsCheckBox.Checked)
             {
                 armsPicture.Image = Properties.Resources.armsSelected;
+                nextButton4.Visible = true;
             }
             else
             {
                 armsPicture.Image = Properties.Resources.arms;
+                if (!backCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked)
+                {
+                    nextButton4.Visible = false;
+                }
             }
         }
 
@@ -417,10 +445,244 @@ namespace FitVitality
             if (backCheckBox.Checked)
             {
                 backPicture.Image = Properties.Resources.backSelected;
+                nextButton4.Visible = true;
             }
             else
             {
                 backPicture.Image = Properties.Resources.back;
+                if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked)
+                {
+                    nextButton4.Visible = false;
+                }
+            }
+        }
+
+        private void nextButton4_Click(object sender, EventArgs e)
+        {
+            if (lowerBodyClicked)
+            {
+                lowerBodyPanel.Visible = true;
+                upperBodyPanel.Visible = false;
+            }
+            else
+            {
+                upperBodyPanel.Visible = false;
+                cardioPanel.Visible = true;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (quadricepsCheckBox.Checked)
+            {
+                quadricepsPicture.Image = Properties.Resources.quadricepsSelected;
+                nextButton5.Visible = true;
+            }
+            else
+            {
+                quadricepsPicture.Image = Properties.Resources.quadriceps;
+                if (!hamstringsCheckBox.Checked && !calvesCheckBox.Checked && !glutesCheckBox.Checked)
+                {
+                    nextButton5.Visible = false;
+                }
+            }
+        }
+
+        private void pictureBox5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (hamstringsCheckBox.Checked)
+            {
+                hamstringsPicture.Image = Properties.Resources.hamstringsSelected;
+                nextButton5.Visible = true;
+            }
+            else
+            {
+                hamstringsPicture.Image = Properties.Resources.hamstrings;
+                if (!quadricepsCheckBox.Checked && !calvesCheckBox.Checked && !glutesCheckBox.Checked)
+                {
+                    nextButton5.Visible = false;
+                }
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (calvesCheckBox.Checked)
+            {
+                calvesPicture.Image = Properties.Resources.calvesSelected;
+                nextButton5.Visible = true;
+            }
+            else
+            {
+                calvesPicture.Image = Properties.Resources.calves;
+                if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked)
+                {
+                    nextButton5.Visible = false;
+                }
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (glutesCheckBox.Checked)
+            {
+                glutesPicture.Image = Properties.Resources.glutesSelected;
+                nextButton5.Visible = true;
+            }
+            else
+            {
+                glutesPicture.Image = Properties.Resources.glutes;
+                if (!hamstringsCheckBox.Checked && !calvesCheckBox.Checked && !quadricepsCheckBox.Checked)
+                {
+                    nextButton5.Visible = false;
+                }
+            }
+        }
+
+        private void nextButton5_Click(object sender, EventArgs e)
+        {
+            lowerBodyPanel.Visible = false;
+            upperBodyPanel.Visible = false;
+            cardioPanel.Visible = true;
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            yesPictureBox.Image = Properties.Resources.yesSelected;
+            noPictureBox.Image = Properties.Resources.no;
+            yesClicked = true;
+            noClicked = false;
+            nextButton6.Visible = true;
+        }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+            noPictureBox.Image = Properties.Resources.noSelected;
+            yesPictureBox.Image = Properties.Resources.yes;
+            noClicked = true;
+            yesClicked = false;
+            nextButton6.Visible = true;
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            if (!yesClicked)
+            {
+                yesPictureBox.Image = Properties.Resources.yesHovered;
+            }
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            if (!yesClicked)
+            {
+                yesPictureBox.Image = Properties.Resources.yes;
+            }
+        }
+
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            if (!noClicked)
+            {
+                noPictureBox.Image = Properties.Resources.noHovered;
+            }
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            if (!noClicked)
+            {
+                noPictureBox.Image = Properties.Resources.no;
+            }
+
+        }
+
+        private void nextButton6_Click(object sender, EventArgs e)
+        {
+            lowerBodyPanel.Visible = false;
+            upperBodyPanel.Visible = false;
+            cardioPanel.Visible = false;
+            workoutTypePanel.Visible = true;
+        }
+
+        private void prePicture_Click(object sender, EventArgs e)
+        {
+            prePicture.Image = Properties.Resources.prePressed;
+            createPicture.Image = Properties.Resources.create;
+            preClicked = true;
+            createClicked = false;
+            nextButt7.Visible = true;
+        }
+
+        private void createPicture_Click(object sender, EventArgs e)
+        {
+            prePicture.Image = Properties.Resources.pre;
+            createPicture.Image = Properties.Resources.createSelected;
+            preClicked = false;
+            createClicked = true;
+            nextButt7.Visible = true;
+        }
+
+        private void prePicture_MouseEnter(object sender, EventArgs e)
+        {
+            if (!preClicked)
+            {
+                prePicture.Image = Properties.Resources.preHovered;
+            }
+        }
+
+        private void prePicture_MouseLeave(object sender, EventArgs e)
+        {
+            if (!preClicked)
+            {
+                prePicture.Image = Properties.Resources.pre;
+            }
+        }
+
+        private void createPicture_MouseEnter(object sender, EventArgs e)
+        {
+            if (!createClicked)
+            {
+                createPicture.Image = Properties.Resources.createHovered;
+            }
+        }
+
+        private void createPicture_MouseLeave(object sender, EventArgs e)
+        {
+            if (!createClicked)
+            {
+                createPicture.Image = Properties.Resources.create;
+            }
+        }
+
+        private void nextButton7_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void nextButt7_Click(object sender, EventArgs e)
+        {
+            if (preClicked)
+            {
+                preGenPanel.Visible = true;
+            }
+            if (createClicked)
+            {
+                createPanel.Visible = true;
             }
         }
     }

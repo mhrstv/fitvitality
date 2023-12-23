@@ -73,6 +73,49 @@
             nextButton4 = new Krypton.Toolkit.KryptonButton();
             upperBodyLabel = new Label();
             upperBodyPanelBorders = new PictureBox();
+            lowerBodyPanel = new Panel();
+            glutesPicture = new PictureBox();
+            calvesPicture = new PictureBox();
+            hamstringsPicture = new PictureBox();
+            quadricepsPicture = new PictureBox();
+            glutesCheckBox = new CheckBox();
+            calvesCheckBox = new CheckBox();
+            hamstringsCheckBox = new CheckBox();
+            lowerBodyLabel2 = new Label();
+            quadricepsCheckBox = new CheckBox();
+            nextButton5B = new Panel();
+            nextButton5 = new Krypton.Toolkit.KryptonButton();
+            lowerBodyLabel = new Label();
+            lowerBodyPanelBorders = new PictureBox();
+            cardioPanel = new Panel();
+            noPictureBox = new PictureBox();
+            yesPictureBox = new PictureBox();
+            nextButton6B = new Panel();
+            nextButton6 = new Krypton.Toolkit.KryptonButton();
+            cardioPanelLabel = new Label();
+            cardioPanelBorders = new PictureBox();
+            workoutTypePanel = new Panel();
+            nextButtPanel = new Panel();
+            nextButt7 = new Krypton.Toolkit.KryptonButton();
+            createPicture = new PictureBox();
+            prePicture = new PictureBox();
+            workoutTypeLabel = new Label();
+            workoutTypeBorders = new PictureBox();
+            nextButton7 = new Krypton.Toolkit.KryptonButton();
+            preNextButtonPanel = new Panel();
+            preNextButton = new Krypton.Toolkit.KryptonButton();
+            preBorders = new PictureBox();
+            prePanelLabel = new Label();
+            createPanel = new Panel();
+            createLabel = new Label();
+            createNextButtonPanel = new Panel();
+            createNextButton = new Krypton.Toolkit.KryptonButton();
+            createBorders = new PictureBox();
+            preGenPanel = new Panel();
+            preGenLabel = new Label();
+            preGenButtonBorders = new Panel();
+            preGenButton = new Krypton.Toolkit.KryptonButton();
+            preGenBorders = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -101,6 +144,31 @@
             ((System.ComponentModel.ISupportInitialize)chestPicture).BeginInit();
             nextButtonPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)upperBodyPanelBorders).BeginInit();
+            lowerBodyPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)glutesPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)calvesPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hamstringsPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)quadricepsPicture).BeginInit();
+            nextButton5B.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)lowerBodyPanelBorders).BeginInit();
+            cardioPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)noPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)yesPictureBox).BeginInit();
+            nextButton6B.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)cardioPanelBorders).BeginInit();
+            workoutTypePanel.SuspendLayout();
+            nextButtPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)createPicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)prePicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)workoutTypeBorders).BeginInit();
+            preNextButtonPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)preBorders).BeginInit();
+            createPanel.SuspendLayout();
+            createNextButtonPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)createBorders).BeginInit();
+            preGenPanel.SuspendLayout();
+            preGenButtonBorders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)preGenBorders).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -615,7 +683,7 @@
             shouldersPicture.Image = Properties.Resources.shoulders;
             shouldersPicture.Location = new Point(382, 99);
             shouldersPicture.Name = "shouldersPicture";
-            shouldersPicture.Size = new Size(64, 109);
+            shouldersPicture.Size = new Size(63, 109);
             shouldersPicture.SizeMode = PictureBoxSizeMode.Zoom;
             shouldersPicture.TabIndex = 42;
             shouldersPicture.TabStop = false;
@@ -625,7 +693,7 @@
             armsPicture.Image = Properties.Resources.arms;
             armsPicture.Location = new Point(267, 99);
             armsPicture.Name = "armsPicture";
-            armsPicture.Size = new Size(64, 109);
+            armsPicture.Size = new Size(63, 109);
             armsPicture.SizeMode = PictureBoxSizeMode.Zoom;
             armsPicture.TabIndex = 41;
             armsPicture.TabStop = false;
@@ -635,7 +703,7 @@
             backPicture.Image = Properties.Resources.back;
             backPicture.Location = new Point(156, 99);
             backPicture.Name = "backPicture";
-            backPicture.Size = new Size(64, 109);
+            backPicture.Size = new Size(62, 109);
             backPicture.SizeMode = PictureBoxSizeMode.Zoom;
             backPicture.TabIndex = 40;
             backPicture.TabStop = false;
@@ -645,7 +713,7 @@
             chestPicture.Image = Properties.Resources.chest;
             chestPicture.Location = new Point(43, 99);
             chestPicture.Name = "chestPicture";
-            chestPicture.Size = new Size(64, 109);
+            chestPicture.Size = new Size(63, 109);
             chestPicture.SizeMode = PictureBoxSizeMode.Zoom;
             chestPicture.TabIndex = 39;
             chestPicture.TabStop = false;
@@ -781,6 +849,7 @@
             nextButton4.TabIndex = 31;
             nextButton4.Values.Text = "Next";
             nextButton4.Visible = false;
+            nextButton4.Click += nextButton4_Click;
             // 
             // upperBodyLabel
             // 
@@ -804,12 +873,859 @@
             upperBodyPanelBorders.TabIndex = 0;
             upperBodyPanelBorders.TabStop = false;
             // 
+            // lowerBodyPanel
+            // 
+            lowerBodyPanel.Controls.Add(glutesPicture);
+            lowerBodyPanel.Controls.Add(calvesPicture);
+            lowerBodyPanel.Controls.Add(hamstringsPicture);
+            lowerBodyPanel.Controls.Add(quadricepsPicture);
+            lowerBodyPanel.Controls.Add(glutesCheckBox);
+            lowerBodyPanel.Controls.Add(calvesCheckBox);
+            lowerBodyPanel.Controls.Add(hamstringsCheckBox);
+            lowerBodyPanel.Controls.Add(lowerBodyLabel2);
+            lowerBodyPanel.Controls.Add(quadricepsCheckBox);
+            lowerBodyPanel.Controls.Add(nextButton5B);
+            lowerBodyPanel.Controls.Add(lowerBodyLabel);
+            lowerBodyPanel.Controls.Add(lowerBodyPanelBorders);
+            lowerBodyPanel.Location = new Point(86, 70);
+            lowerBodyPanel.Name = "lowerBodyPanel";
+            lowerBodyPanel.Size = new Size(518, 262);
+            lowerBodyPanel.TabIndex = 36;
+            lowerBodyPanel.Visible = false;
+            // 
+            // glutesPicture
+            // 
+            glutesPicture.Image = Properties.Resources.glutes;
+            glutesPicture.Location = new Point(382, 99);
+            glutesPicture.Name = "glutesPicture";
+            glutesPicture.Size = new Size(62, 108);
+            glutesPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            glutesPicture.TabIndex = 42;
+            glutesPicture.TabStop = false;
+            // 
+            // calvesPicture
+            // 
+            calvesPicture.Image = Properties.Resources.calves;
+            calvesPicture.Location = new Point(267, 99);
+            calvesPicture.Name = "calvesPicture";
+            calvesPicture.Size = new Size(61, 108);
+            calvesPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            calvesPicture.TabIndex = 41;
+            calvesPicture.TabStop = false;
+            // 
+            // hamstringsPicture
+            // 
+            hamstringsPicture.Image = Properties.Resources.hamstrings;
+            hamstringsPicture.Location = new Point(156, 99);
+            hamstringsPicture.Name = "hamstringsPicture";
+            hamstringsPicture.Size = new Size(61, 109);
+            hamstringsPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            hamstringsPicture.TabIndex = 40;
+            hamstringsPicture.TabStop = false;
+            // 
+            // quadricepsPicture
+            // 
+            quadricepsPicture.Image = Properties.Resources.quadriceps;
+            quadricepsPicture.Location = new Point(43, 99);
+            quadricepsPicture.Name = "quadricepsPicture";
+            quadricepsPicture.Size = new Size(62, 107);
+            quadricepsPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            quadricepsPicture.TabIndex = 39;
+            quadricepsPicture.TabStop = false;
+            // 
+            // glutesCheckBox
+            // 
+            glutesCheckBox.AutoSize = true;
+            glutesCheckBox.BackColor = Color.WhiteSmoke;
+            glutesCheckBox.Location = new Point(382, 79);
+            glutesCheckBox.Name = "glutesCheckBox";
+            glutesCheckBox.Size = new Size(59, 19);
+            glutesCheckBox.TabIndex = 38;
+            glutesCheckBox.Text = "Glutes";
+            glutesCheckBox.UseVisualStyleBackColor = false;
+            glutesCheckBox.CheckedChanged += checkBox1_CheckedChanged;
+            // 
+            // calvesCheckBox
+            // 
+            calvesCheckBox.AutoSize = true;
+            calvesCheckBox.BackColor = Color.WhiteSmoke;
+            calvesCheckBox.Location = new Point(267, 79);
+            calvesCheckBox.Name = "calvesCheckBox";
+            calvesCheckBox.Size = new Size(60, 19);
+            calvesCheckBox.TabIndex = 37;
+            calvesCheckBox.Text = "Calves";
+            calvesCheckBox.UseVisualStyleBackColor = false;
+            calvesCheckBox.CheckedChanged += checkBox2_CheckedChanged;
+            // 
+            // hamstringsCheckBox
+            // 
+            hamstringsCheckBox.AutoSize = true;
+            hamstringsCheckBox.BackColor = Color.WhiteSmoke;
+            hamstringsCheckBox.Location = new Point(156, 79);
+            hamstringsCheckBox.Name = "hamstringsCheckBox";
+            hamstringsCheckBox.Size = new Size(87, 19);
+            hamstringsCheckBox.TabIndex = 36;
+            hamstringsCheckBox.Text = "Hamstrings";
+            hamstringsCheckBox.UseVisualStyleBackColor = false;
+            hamstringsCheckBox.CheckedChanged += checkBox3_CheckedChanged;
+            // 
+            // lowerBodyLabel2
+            // 
+            lowerBodyLabel2.AutoSize = true;
+            lowerBodyLabel2.BackColor = Color.FromArgb(242, 242, 242);
+            lowerBodyLabel2.Font = new Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lowerBodyLabel2.ForeColor = SystemColors.ControlText;
+            lowerBodyLabel2.Location = new Point(135, 29);
+            lowerBodyLabel2.Name = "lowerBodyLabel2";
+            lowerBodyLabel2.Size = new Size(44, 18);
+            lowerBodyLabel2.TabIndex = 34;
+            lowerBodyLabel2.Text = "lower";
+            lowerBodyLabel2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // quadricepsCheckBox
+            // 
+            quadricepsCheckBox.AutoSize = true;
+            quadricepsCheckBox.BackColor = Color.WhiteSmoke;
+            quadricepsCheckBox.Location = new Point(43, 79);
+            quadricepsCheckBox.Name = "quadricepsCheckBox";
+            quadricepsCheckBox.Size = new Size(86, 19);
+            quadricepsCheckBox.TabIndex = 33;
+            quadricepsCheckBox.Text = "Quadriceps";
+            quadricepsCheckBox.UseVisualStyleBackColor = false;
+            quadricepsCheckBox.CheckedChanged += checkBox4_CheckedChanged;
+            // 
+            // nextButton5B
+            // 
+            nextButton5B.BackColor = Color.WhiteSmoke;
+            nextButton5B.Controls.Add(nextButton5);
+            nextButton5B.Location = new Point(214, 221);
+            nextButton5B.Name = "nextButton5B";
+            nextButton5B.Size = new Size(90, 25);
+            nextButton5B.TabIndex = 32;
+            // 
+            // nextButton5
+            // 
+            nextButton5.CornerRoundingRadius = 15F;
+            nextButton5.Location = new Point(0, 0);
+            nextButton5.Name = "nextButton5";
+            nextButton5.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            nextButton5.Size = new Size(90, 25);
+            nextButton5.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateCommon.Back.ColorAngle = 45F;
+            nextButton5.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateCommon.Border.ColorAngle = 45F;
+            nextButton5.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton5.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton5.StateCommon.Border.Rounding = 15F;
+            nextButton5.StateCommon.Border.Width = 1;
+            nextButton5.StateCommon.Content.ShortText.Color1 = Color.White;
+            nextButton5.StateCommon.Content.ShortText.Color2 = Color.White;
+            nextButton5.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            nextButton5.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton5.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateNormal.Back.ColorAngle = 45F;
+            nextButton5.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton5.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton5.StateNormal.Border.ColorAngle = 45F;
+            nextButton5.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton5.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton5.StateNormal.Border.Rounding = 15F;
+            nextButton5.StateNormal.Border.Width = 1;
+            nextButton5.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            nextButton5.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            nextButton5.StatePressed.Back.ColorAngle = 45F;
+            nextButton5.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton5.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            nextButton5.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            nextButton5.StatePressed.Border.ColorAngle = 45F;
+            nextButton5.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton5.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton5.StatePressed.Border.Rounding = 15F;
+            nextButton5.StatePressed.Border.Width = 1;
+            nextButton5.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            nextButton5.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            nextButton5.StateTracking.Back.ColorAngle = 45F;
+            nextButton5.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton5.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            nextButton5.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            nextButton5.StateTracking.Border.ColorAngle = 45F;
+            nextButton5.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton5.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton5.StateTracking.Border.Rounding = 15F;
+            nextButton5.StateTracking.Border.Width = 1;
+            nextButton5.TabIndex = 31;
+            nextButton5.Values.Text = "Next";
+            nextButton5.Visible = false;
+            nextButton5.Click += nextButton5_Click;
+            // 
+            // lowerBodyLabel
+            // 
+            lowerBodyLabel.AutoSize = true;
+            lowerBodyLabel.BackColor = Color.FromArgb(242, 242, 242);
+            lowerBodyLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lowerBodyLabel.ForeColor = SystemColors.ControlText;
+            lowerBodyLabel.Location = new Point(89, 28);
+            lowerBodyLabel.Name = "lowerBodyLabel";
+            lowerBodyLabel.Size = new Size(341, 19);
+            lowerBodyLabel.TabIndex = 1;
+            lowerBodyLabel.Text = "Which upper body muscles would you like to train? ";
+            lowerBodyLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lowerBodyPanelBorders
+            // 
+            lowerBodyPanelBorders.Image = (Image)resources.GetObject("lowerBodyPanelBorders.Image");
+            lowerBodyPanelBorders.Location = new Point(0, 0);
+            lowerBodyPanelBorders.Name = "lowerBodyPanelBorders";
+            lowerBodyPanelBorders.Size = new Size(518, 262);
+            lowerBodyPanelBorders.TabIndex = 0;
+            lowerBodyPanelBorders.TabStop = false;
+            lowerBodyPanelBorders.Click += pictureBox5_Click_1;
+            // 
+            // cardioPanel
+            // 
+            cardioPanel.Controls.Add(noPictureBox);
+            cardioPanel.Controls.Add(yesPictureBox);
+            cardioPanel.Controls.Add(nextButton6B);
+            cardioPanel.Controls.Add(cardioPanelLabel);
+            cardioPanel.Controls.Add(cardioPanelBorders);
+            cardioPanel.Location = new Point(86, 70);
+            cardioPanel.Name = "cardioPanel";
+            cardioPanel.Size = new Size(518, 262);
+            cardioPanel.TabIndex = 37;
+            cardioPanel.Visible = false;
+            // 
+            // noPictureBox
+            // 
+            noPictureBox.Image = Properties.Resources.no;
+            noPictureBox.Location = new Point(259, 145);
+            noPictureBox.Name = "noPictureBox";
+            noPictureBox.Size = new Size(83, 37);
+            noPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            noPictureBox.TabIndex = 35;
+            noPictureBox.TabStop = false;
+            noPictureBox.Click += pictureBox3_Click_1;
+            noPictureBox.MouseEnter += pictureBox3_MouseEnter;
+            noPictureBox.MouseLeave += pictureBox3_MouseLeave;
+            // 
+            // yesPictureBox
+            // 
+            yesPictureBox.Image = Properties.Resources.yes;
+            yesPictureBox.Location = new Point(177, 145);
+            yesPictureBox.Name = "yesPictureBox";
+            yesPictureBox.Size = new Size(83, 37);
+            yesPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            yesPictureBox.TabIndex = 33;
+            yesPictureBox.TabStop = false;
+            yesPictureBox.Click += pictureBox1_Click_1;
+            yesPictureBox.MouseEnter += pictureBox1_MouseEnter;
+            yesPictureBox.MouseLeave += pictureBox1_MouseLeave;
+            yesPictureBox.MouseHover += pictureBox1_MouseHover;
+            yesPictureBox.MouseMove += pictureBox1_MouseMove;
+            // 
+            // nextButton6B
+            // 
+            nextButton6B.BackColor = Color.WhiteSmoke;
+            nextButton6B.Controls.Add(nextButton6);
+            nextButton6B.Location = new Point(214, 221);
+            nextButton6B.Name = "nextButton6B";
+            nextButton6B.Size = new Size(90, 25);
+            nextButton6B.TabIndex = 32;
+            // 
+            // nextButton6
+            // 
+            nextButton6.CornerRoundingRadius = 15F;
+            nextButton6.Location = new Point(0, 0);
+            nextButton6.Name = "nextButton6";
+            nextButton6.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            nextButton6.Size = new Size(90, 25);
+            nextButton6.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateCommon.Back.ColorAngle = 45F;
+            nextButton6.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateCommon.Border.ColorAngle = 45F;
+            nextButton6.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton6.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton6.StateCommon.Border.Rounding = 15F;
+            nextButton6.StateCommon.Border.Width = 1;
+            nextButton6.StateCommon.Content.ShortText.Color1 = Color.White;
+            nextButton6.StateCommon.Content.ShortText.Color2 = Color.White;
+            nextButton6.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            nextButton6.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton6.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateNormal.Back.ColorAngle = 45F;
+            nextButton6.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton6.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton6.StateNormal.Border.ColorAngle = 45F;
+            nextButton6.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton6.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton6.StateNormal.Border.Rounding = 15F;
+            nextButton6.StateNormal.Border.Width = 1;
+            nextButton6.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            nextButton6.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            nextButton6.StatePressed.Back.ColorAngle = 45F;
+            nextButton6.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton6.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            nextButton6.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            nextButton6.StatePressed.Border.ColorAngle = 45F;
+            nextButton6.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton6.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton6.StatePressed.Border.Rounding = 15F;
+            nextButton6.StatePressed.Border.Width = 1;
+            nextButton6.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            nextButton6.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            nextButton6.StateTracking.Back.ColorAngle = 45F;
+            nextButton6.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton6.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            nextButton6.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            nextButton6.StateTracking.Border.ColorAngle = 45F;
+            nextButton6.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton6.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton6.StateTracking.Border.Rounding = 15F;
+            nextButton6.StateTracking.Border.Width = 1;
+            nextButton6.TabIndex = 31;
+            nextButton6.Values.Text = "Next";
+            nextButton6.Visible = false;
+            nextButton6.Click += nextButton6_Click;
+            // 
+            // cardioPanelLabel
+            // 
+            cardioPanelLabel.AutoSize = true;
+            cardioPanelLabel.BackColor = Color.FromArgb(242, 242, 242);
+            cardioPanelLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cardioPanelLabel.ForeColor = SystemColors.ControlText;
+            cardioPanelLabel.Location = new Point(93, 38);
+            cardioPanelLabel.Name = "cardioPanelLabel";
+            cardioPanelLabel.Size = new Size(332, 19);
+            cardioPanelLabel.TabIndex = 1;
+            cardioPanelLabel.Text = "Would you like to include cardio in your workouts?";
+            cardioPanelLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // cardioPanelBorders
+            // 
+            cardioPanelBorders.Image = (Image)resources.GetObject("cardioPanelBorders.Image");
+            cardioPanelBorders.Location = new Point(0, 0);
+            cardioPanelBorders.Name = "cardioPanelBorders";
+            cardioPanelBorders.Size = new Size(518, 262);
+            cardioPanelBorders.TabIndex = 0;
+            cardioPanelBorders.TabStop = false;
+            // 
+            // workoutTypePanel
+            // 
+            workoutTypePanel.Controls.Add(nextButtPanel);
+            workoutTypePanel.Controls.Add(createPicture);
+            workoutTypePanel.Controls.Add(prePicture);
+            workoutTypePanel.Controls.Add(workoutTypeLabel);
+            workoutTypePanel.Controls.Add(workoutTypeBorders);
+            workoutTypePanel.Location = new Point(86, 70);
+            workoutTypePanel.Name = "workoutTypePanel";
+            workoutTypePanel.Size = new Size(518, 262);
+            workoutTypePanel.TabIndex = 38;
+            workoutTypePanel.Visible = false;
+            // 
+            // nextButtPanel
+            // 
+            nextButtPanel.BackColor = Color.WhiteSmoke;
+            nextButtPanel.Controls.Add(nextButt7);
+            nextButtPanel.Location = new Point(214, 214);
+            nextButtPanel.Name = "nextButtPanel";
+            nextButtPanel.Size = new Size(90, 25);
+            nextButtPanel.TabIndex = 44;
+            // 
+            // nextButt7
+            // 
+            nextButt7.CornerRoundingRadius = 15F;
+            nextButt7.Location = new Point(0, 0);
+            nextButt7.Name = "nextButt7";
+            nextButt7.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            nextButt7.Size = new Size(90, 25);
+            nextButt7.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateCommon.Back.ColorAngle = 45F;
+            nextButt7.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateCommon.Border.ColorAngle = 45F;
+            nextButt7.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButt7.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButt7.StateCommon.Border.Rounding = 15F;
+            nextButt7.StateCommon.Border.Width = 1;
+            nextButt7.StateCommon.Content.ShortText.Color1 = Color.White;
+            nextButt7.StateCommon.Content.ShortText.Color2 = Color.White;
+            nextButt7.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            nextButt7.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButt7.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateNormal.Back.ColorAngle = 45F;
+            nextButt7.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButt7.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButt7.StateNormal.Border.ColorAngle = 45F;
+            nextButt7.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButt7.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButt7.StateNormal.Border.Rounding = 15F;
+            nextButt7.StateNormal.Border.Width = 1;
+            nextButt7.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            nextButt7.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            nextButt7.StatePressed.Back.ColorAngle = 45F;
+            nextButt7.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButt7.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            nextButt7.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            nextButt7.StatePressed.Border.ColorAngle = 45F;
+            nextButt7.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButt7.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButt7.StatePressed.Border.Rounding = 15F;
+            nextButt7.StatePressed.Border.Width = 1;
+            nextButt7.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            nextButt7.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            nextButt7.StateTracking.Back.ColorAngle = 45F;
+            nextButt7.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButt7.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            nextButt7.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            nextButt7.StateTracking.Border.ColorAngle = 45F;
+            nextButt7.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButt7.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButt7.StateTracking.Border.Rounding = 15F;
+            nextButt7.StateTracking.Border.Width = 1;
+            nextButt7.TabIndex = 43;
+            nextButt7.Values.Text = "Next";
+            nextButt7.Visible = false;
+            nextButt7.Click += nextButt7_Click;
+            // 
+            // createPicture
+            // 
+            createPicture.Image = Properties.Resources.create;
+            createPicture.Location = new Point(259, 145);
+            createPicture.Name = "createPicture";
+            createPicture.Size = new Size(83, 37);
+            createPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            createPicture.TabIndex = 35;
+            createPicture.TabStop = false;
+            createPicture.Click += createPicture_Click;
+            createPicture.MouseEnter += createPicture_MouseEnter;
+            createPicture.MouseLeave += createPicture_MouseLeave;
+            // 
+            // prePicture
+            // 
+            prePicture.Image = Properties.Resources.pre;
+            prePicture.Location = new Point(177, 145);
+            prePicture.Name = "prePicture";
+            prePicture.Size = new Size(83, 37);
+            prePicture.SizeMode = PictureBoxSizeMode.Zoom;
+            prePicture.TabIndex = 33;
+            prePicture.TabStop = false;
+            prePicture.Click += prePicture_Click;
+            prePicture.MouseEnter += prePicture_MouseEnter;
+            prePicture.MouseLeave += prePicture_MouseLeave;
+            // 
+            // workoutTypeLabel
+            // 
+            workoutTypeLabel.AutoSize = true;
+            workoutTypeLabel.BackColor = Color.FromArgb(242, 242, 242);
+            workoutTypeLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            workoutTypeLabel.ForeColor = SystemColors.ControlText;
+            workoutTypeLabel.Location = new Point(21, 28);
+            workoutTypeLabel.Name = "workoutTypeLabel";
+            workoutTypeLabel.Size = new Size(477, 38);
+            workoutTypeLabel.TabIndex = 1;
+            workoutTypeLabel.Text = "Do you prefer one of our pre-generated workouts based on your choices \r\nor do you want to create your own workout?";
+            workoutTypeLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // workoutTypeBorders
+            // 
+            workoutTypeBorders.Image = (Image)resources.GetObject("workoutTypeBorders.Image");
+            workoutTypeBorders.Location = new Point(0, 0);
+            workoutTypeBorders.Name = "workoutTypeBorders";
+            workoutTypeBorders.Size = new Size(518, 262);
+            workoutTypeBorders.TabIndex = 0;
+            workoutTypeBorders.TabStop = false;
+            // 
+            // nextButton7
+            // 
+            nextButton7.CornerRoundingRadius = 15F;
+            nextButton7.Location = new Point(0, 0);
+            nextButton7.Name = "nextButton7";
+            nextButton7.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            nextButton7.Size = new Size(90, 25);
+            nextButton7.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateCommon.Back.ColorAngle = 45F;
+            nextButton7.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateCommon.Border.ColorAngle = 45F;
+            nextButton7.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton7.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton7.StateCommon.Border.Rounding = 15F;
+            nextButton7.StateCommon.Border.Width = 1;
+            nextButton7.StateCommon.Content.ShortText.Color1 = Color.White;
+            nextButton7.StateCommon.Content.ShortText.Color2 = Color.White;
+            nextButton7.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            nextButton7.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton7.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateNormal.Back.ColorAngle = 45F;
+            nextButton7.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton7.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            nextButton7.StateNormal.Border.ColorAngle = 45F;
+            nextButton7.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton7.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton7.StateNormal.Border.Rounding = 15F;
+            nextButton7.StateNormal.Border.Width = 1;
+            nextButton7.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            nextButton7.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            nextButton7.StatePressed.Back.ColorAngle = 45F;
+            nextButton7.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton7.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            nextButton7.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            nextButton7.StatePressed.Border.ColorAngle = 45F;
+            nextButton7.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton7.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton7.StatePressed.Border.Rounding = 15F;
+            nextButton7.StatePressed.Border.Width = 1;
+            nextButton7.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            nextButton7.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            nextButton7.StateTracking.Back.ColorAngle = 45F;
+            nextButton7.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton7.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            nextButton7.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            nextButton7.StateTracking.Border.ColorAngle = 45F;
+            nextButton7.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            nextButton7.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            nextButton7.StateTracking.Border.Rounding = 15F;
+            nextButton7.StateTracking.Border.Width = 1;
+            nextButton7.TabIndex = 31;
+            nextButton7.Values.Text = "Next";
+            nextButton7.Visible = false;
+            nextButton7.Click += nextButton7_Click;
+            // 
+            // preNextButtonPanel
+            // 
+            preNextButtonPanel.BackColor = Color.WhiteSmoke;
+            preNextButtonPanel.Controls.Add(preNextButton);
+            preNextButtonPanel.Location = new Point(214, 221);
+            preNextButtonPanel.Name = "preNextButtonPanel";
+            preNextButtonPanel.Size = new Size(90, 25);
+            preNextButtonPanel.TabIndex = 32;
+            // 
+            // preNextButton
+            // 
+            preNextButton.CornerRoundingRadius = 15F;
+            preNextButton.Location = new Point(0, 0);
+            preNextButton.Name = "preNextButton";
+            preNextButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            preNextButton.Size = new Size(90, 25);
+            preNextButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateCommon.Back.ColorAngle = 45F;
+            preNextButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateCommon.Border.ColorAngle = 45F;
+            preNextButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton.StateCommon.Border.Rounding = 15F;
+            preNextButton.StateCommon.Border.Width = 1;
+            preNextButton.StateCommon.Content.ShortText.Color1 = Color.White;
+            preNextButton.StateCommon.Content.ShortText.Color2 = Color.White;
+            preNextButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            preNextButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateNormal.Back.ColorAngle = 45F;
+            preNextButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton.StateNormal.Border.ColorAngle = 45F;
+            preNextButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton.StateNormal.Border.Rounding = 15F;
+            preNextButton.StateNormal.Border.Width = 1;
+            preNextButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            preNextButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            preNextButton.StatePressed.Back.ColorAngle = 45F;
+            preNextButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            preNextButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            preNextButton.StatePressed.Border.ColorAngle = 45F;
+            preNextButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton.StatePressed.Border.Rounding = 15F;
+            preNextButton.StatePressed.Border.Width = 1;
+            preNextButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            preNextButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            preNextButton.StateTracking.Back.ColorAngle = 45F;
+            preNextButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            preNextButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            preNextButton.StateTracking.Border.ColorAngle = 45F;
+            preNextButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton.StateTracking.Border.Rounding = 15F;
+            preNextButton.StateTracking.Border.Width = 1;
+            preNextButton.TabIndex = 31;
+            preNextButton.Values.Text = "Next";
+            preNextButton.Visible = false;
+            // 
+            // preBorders
+            // 
+            preBorders.Image = (Image)resources.GetObject("preBorders.Image");
+            preBorders.Location = new Point(0, 0);
+            preBorders.Name = "preBorders";
+            preBorders.Size = new Size(518, 262);
+            preBorders.TabIndex = 0;
+            preBorders.TabStop = false;
+            // 
+            // prePanelLabel
+            // 
+            prePanelLabel.AutoSize = true;
+            prePanelLabel.BackColor = Color.WhiteSmoke;
+            prePanelLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            prePanelLabel.Location = new Point(136, 17);
+            prePanelLabel.Name = "prePanelLabel";
+            prePanelLabel.Size = new Size(231, 22);
+            prePanelLabel.TabIndex = 40;
+            prePanelLabel.Text = "Pre-generated workouts";
+            // 
+            // createPanel
+            // 
+            createPanel.Controls.Add(createLabel);
+            createPanel.Controls.Add(createNextButtonPanel);
+            createPanel.Controls.Add(createBorders);
+            createPanel.Location = new Point(86, 70);
+            createPanel.Name = "createPanel";
+            createPanel.Size = new Size(518, 262);
+            createPanel.TabIndex = 41;
+            createPanel.Visible = false;
+            // 
+            // createLabel
+            // 
+            createLabel.AutoSize = true;
+            createLabel.BackColor = Color.WhiteSmoke;
+            createLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            createLabel.Location = new Point(140, 17);
+            createLabel.Name = "createLabel";
+            createLabel.Size = new Size(238, 22);
+            createLabel.TabIndex = 40;
+            createLabel.Text = "Create your own workout";
+            // 
+            // createNextButtonPanel
+            // 
+            createNextButtonPanel.BackColor = Color.WhiteSmoke;
+            createNextButtonPanel.Controls.Add(createNextButton);
+            createNextButtonPanel.Location = new Point(214, 221);
+            createNextButtonPanel.Name = "createNextButtonPanel";
+            createNextButtonPanel.Size = new Size(90, 25);
+            createNextButtonPanel.TabIndex = 32;
+            // 
+            // createNextButton
+            // 
+            createNextButton.CornerRoundingRadius = 15F;
+            createNextButton.Location = new Point(0, 0);
+            createNextButton.Name = "createNextButton";
+            createNextButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            createNextButton.Size = new Size(90, 25);
+            createNextButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateCommon.Back.ColorAngle = 45F;
+            createNextButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateCommon.Border.ColorAngle = 45F;
+            createNextButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            createNextButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            createNextButton.StateCommon.Border.Rounding = 15F;
+            createNextButton.StateCommon.Border.Width = 1;
+            createNextButton.StateCommon.Content.ShortText.Color1 = Color.White;
+            createNextButton.StateCommon.Content.ShortText.Color2 = Color.White;
+            createNextButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            createNextButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            createNextButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateNormal.Back.ColorAngle = 45F;
+            createNextButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            createNextButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            createNextButton.StateNormal.Border.ColorAngle = 45F;
+            createNextButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            createNextButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            createNextButton.StateNormal.Border.Rounding = 15F;
+            createNextButton.StateNormal.Border.Width = 1;
+            createNextButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            createNextButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            createNextButton.StatePressed.Back.ColorAngle = 45F;
+            createNextButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            createNextButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            createNextButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            createNextButton.StatePressed.Border.ColorAngle = 45F;
+            createNextButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            createNextButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            createNextButton.StatePressed.Border.Rounding = 15F;
+            createNextButton.StatePressed.Border.Width = 1;
+            createNextButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            createNextButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            createNextButton.StateTracking.Back.ColorAngle = 45F;
+            createNextButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            createNextButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            createNextButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            createNextButton.StateTracking.Border.ColorAngle = 45F;
+            createNextButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            createNextButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            createNextButton.StateTracking.Border.Rounding = 15F;
+            createNextButton.StateTracking.Border.Width = 1;
+            createNextButton.TabIndex = 31;
+            createNextButton.Values.Text = "Next";
+            createNextButton.Visible = false;
+            // 
+            // createBorders
+            // 
+            createBorders.Image = (Image)resources.GetObject("createBorders.Image");
+            createBorders.Location = new Point(0, 0);
+            createBorders.Name = "createBorders";
+            createBorders.Size = new Size(518, 262);
+            createBorders.TabIndex = 0;
+            createBorders.TabStop = false;
+            // 
+            // preGenPanel
+            // 
+            preGenPanel.Controls.Add(preGenLabel);
+            preGenPanel.Controls.Add(preGenButtonBorders);
+            preGenPanel.Controls.Add(preGenBorders);
+            preGenPanel.Location = new Point(86, 70);
+            preGenPanel.Name = "preGenPanel";
+            preGenPanel.Size = new Size(518, 262);
+            preGenPanel.TabIndex = 42;
+            preGenPanel.Visible = false;
+            // 
+            // preGenLabel
+            // 
+            preGenLabel.AutoSize = true;
+            preGenLabel.BackColor = Color.WhiteSmoke;
+            preGenLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            preGenLabel.Location = new Point(140, 17);
+            preGenLabel.Name = "preGenLabel";
+            preGenLabel.Size = new Size(231, 22);
+            preGenLabel.TabIndex = 40;
+            preGenLabel.Text = "Pre-generated workouts";
+            // 
+            // preGenButtonBorders
+            // 
+            preGenButtonBorders.BackColor = Color.WhiteSmoke;
+            preGenButtonBorders.Controls.Add(preGenButton);
+            preGenButtonBorders.Location = new Point(214, 221);
+            preGenButtonBorders.Name = "preGenButtonBorders";
+            preGenButtonBorders.Size = new Size(90, 25);
+            preGenButtonBorders.TabIndex = 32;
+            // 
+            // preGenButton
+            // 
+            preGenButton.CornerRoundingRadius = 15F;
+            preGenButton.Location = new Point(0, 0);
+            preGenButton.Name = "preGenButton";
+            preGenButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            preGenButton.Size = new Size(90, 25);
+            preGenButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateCommon.Back.ColorAngle = 45F;
+            preGenButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateCommon.Border.ColorAngle = 45F;
+            preGenButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGenButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGenButton.StateCommon.Border.Rounding = 15F;
+            preGenButton.StateCommon.Border.Width = 1;
+            preGenButton.StateCommon.Content.ShortText.Color1 = Color.White;
+            preGenButton.StateCommon.Content.ShortText.Color2 = Color.White;
+            preGenButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            preGenButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGenButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateNormal.Back.ColorAngle = 45F;
+            preGenButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGenButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preGenButton.StateNormal.Border.ColorAngle = 45F;
+            preGenButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGenButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGenButton.StateNormal.Border.Rounding = 15F;
+            preGenButton.StateNormal.Border.Width = 1;
+            preGenButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            preGenButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            preGenButton.StatePressed.Back.ColorAngle = 45F;
+            preGenButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGenButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            preGenButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            preGenButton.StatePressed.Border.ColorAngle = 45F;
+            preGenButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGenButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGenButton.StatePressed.Border.Rounding = 15F;
+            preGenButton.StatePressed.Border.Width = 1;
+            preGenButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            preGenButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            preGenButton.StateTracking.Back.ColorAngle = 45F;
+            preGenButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGenButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            preGenButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            preGenButton.StateTracking.Border.ColorAngle = 45F;
+            preGenButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGenButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGenButton.StateTracking.Border.Rounding = 15F;
+            preGenButton.StateTracking.Border.Width = 1;
+            preGenButton.TabIndex = 31;
+            preGenButton.Values.Text = "Next";
+            preGenButton.Visible = false;
+            // 
+            // preGenBorders
+            // 
+            preGenBorders.Image = (Image)resources.GetObject("preGenBorders.Image");
+            preGenBorders.Location = new Point(0, 0);
+            preGenBorders.Name = "preGenBorders";
+            preGenBorders.Size = new Size(518, 262);
+            preGenBorders.TabIndex = 0;
+            preGenBorders.TabStop = false;
+            // 
             // Workouts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(preGenPanel);
+            Controls.Add(createPanel);
+            Controls.Add(workoutTypePanel);
+            Controls.Add(cardioPanel);
+            Controls.Add(lowerBodyPanel);
             Controls.Add(upperBodyPanel);
             Controls.Add(muscleGroupPanel);
             Controls.Add(activityGroupPanel);
@@ -857,6 +1773,36 @@
             ((System.ComponentModel.ISupportInitialize)chestPicture).EndInit();
             nextButtonPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)upperBodyPanelBorders).EndInit();
+            lowerBodyPanel.ResumeLayout(false);
+            lowerBodyPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)glutesPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)calvesPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hamstringsPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)quadricepsPicture).EndInit();
+            nextButton5B.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)lowerBodyPanelBorders).EndInit();
+            cardioPanel.ResumeLayout(false);
+            cardioPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)noPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)yesPictureBox).EndInit();
+            nextButton6B.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)cardioPanelBorders).EndInit();
+            workoutTypePanel.ResumeLayout(false);
+            workoutTypePanel.PerformLayout();
+            nextButtPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)createPicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)prePicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)workoutTypeBorders).EndInit();
+            preNextButtonPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)preBorders).EndInit();
+            createPanel.ResumeLayout(false);
+            createPanel.PerformLayout();
+            createNextButtonPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)createBorders).EndInit();
+            preGenPanel.ResumeLayout(false);
+            preGenPanel.PerformLayout();
+            preGenButtonBorders.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)preGenBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -908,5 +1854,52 @@
         private PictureBox shouldersPicture;
         private PictureBox armsPicture;
         private PictureBox backPicture;
+        private Panel lowerBodyPanel;
+        private PictureBox glutesPicture;
+        private PictureBox calvesPicture;
+        private PictureBox hamstringsPicture;
+        private PictureBox quadricepsPicture;
+        private CheckBox glutesCheckBox;
+        private CheckBox calvesCheckBox;
+        private CheckBox hamstringsCheckBox;
+        private Label lowerBodyLabel2;
+        private CheckBox quadricepsCheckBox;
+        private Panel nextButton5B;
+        private Krypton.Toolkit.KryptonButton nextButton5;
+        private Label lowerBodyLabel;
+        private PictureBox lowerBodyPanelBorders;
+        private Panel cardioPanel;
+        private Panel nextButton6B;
+        private Krypton.Toolkit.KryptonButton nextButton6;
+        private Label cardioPanelLabel;
+        private PictureBox cardioPanelBorders;
+        private PictureBox noPictureBox;
+        private PictureBox yesPictureBox;
+        private Panel workoutTypePanel;
+        private PictureBox createPicture;
+        private PictureBox prePicture;
+        private Panel panel2;
+        private Krypton.Toolkit.KryptonButton nextButton7;
+        private Label workoutTypeLabel;
+        private PictureBox workoutTypeBorders;
+        private Panel panel1;
+        private Label prePanelLabel;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private Panel preNextButtonPanel;
+        private Krypton.Toolkit.KryptonButton preNextButton;
+        private PictureBox preBorders;
+        private Panel createPanel;
+        private Label createLabel;
+        private Panel createNextButtonPanel;
+        private Krypton.Toolkit.KryptonButton createNextButton;
+        private PictureBox createBorders;
+        private Panel preGenPanel;
+        private Label preGenLabel;
+        private Panel preGenButtonBorders;
+        private Krypton.Toolkit.KryptonButton preGenButton;
+        private PictureBox preGenBorders;
+        private Panel nextButtPanel;
+        private Krypton.Toolkit.KryptonButton nextButt7;
     }
 }

@@ -1341,11 +1341,11 @@
             workoutTypeLabel.BackColor = Color.FromArgb(242, 242, 242);
             workoutTypeLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             workoutTypeLabel.ForeColor = SystemColors.ControlText;
-            workoutTypeLabel.Location = new Point(21, 28);
+            workoutTypeLabel.Location = new Point(91, 28);
             workoutTypeLabel.Name = "workoutTypeLabel";
-            workoutTypeLabel.Size = new Size(477, 38);
+            workoutTypeLabel.Size = new Size(337, 38);
             workoutTypeLabel.TabIndex = 1;
-            workoutTypeLabel.Text = "Do you prefer one of our pre-generated workouts based on your choices \r\nor do you want to create your own workout?";
+            workoutTypeLabel.Text = "Do you want to choose a pre-generated workout or\r\nwould you rather create your own?";
             workoutTypeLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // workoutTypeBorders
@@ -1629,11 +1629,11 @@
             preGenLabel.AutoSize = true;
             preGenLabel.BackColor = Color.WhiteSmoke;
             preGenLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            preGenLabel.Location = new Point(140, 17);
+            preGenLabel.Location = new Point(195, 17);
             preGenLabel.Name = "preGenLabel";
-            preGenLabel.Size = new Size(231, 22);
+            preGenLabel.Size = new Size(129, 22);
             preGenLabel.TabIndex = 40;
-            preGenLabel.Text = "Pre-generated workouts";
+            preGenLabel.Text = "Workouts list";
             // 
             // preGenButtonBorders
             // 
@@ -1721,9 +1721,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(workoutTypePanel);
             Controls.Add(preGenPanel);
             Controls.Add(createPanel);
-            Controls.Add(workoutTypePanel);
             Controls.Add(cardioPanel);
             Controls.Add(lowerBodyPanel);
             Controls.Add(upperBodyPanel);

@@ -558,6 +558,7 @@ namespace FitVitality
             yesClicked = true;
             noClicked = false;
             nextButton6.Visible = true;
+            cardioClicked = true;
         }
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
@@ -567,6 +568,7 @@ namespace FitVitality
             noClicked = true;
             yesClicked = false;
             nextButton6.Visible = true;
+            cardioClicked = false;
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)

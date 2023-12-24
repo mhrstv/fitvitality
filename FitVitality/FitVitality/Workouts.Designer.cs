@@ -1721,10 +1721,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
-            Controls.Add(workoutTypePanel);
-            Controls.Add(preGenPanel);
             Controls.Add(createPanel);
+            Controls.Add(preGenPanel);
             Controls.Add(cardioPanel);
+            Controls.Add(workoutTypePanel);
             Controls.Add(lowerBodyPanel);
             Controls.Add(upperBodyPanel);
             Controls.Add(muscleGroupPanel);

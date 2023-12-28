@@ -111,11 +111,7 @@
             createNextButtonPanel = new Panel();
             createNextButton = new Krypton.Toolkit.KryptonButton();
             createBorders = new PictureBox();
-            preGenPanel = new Panel();
-            preGenLabel = new Label();
-            preGenButtonBorders = new Panel();
-            preGenButton = new Krypton.Toolkit.KryptonButton();
-            preGenBorders = new PictureBox();
+            workoutsList = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -166,9 +162,6 @@
             createPanel.SuspendLayout();
             createNextButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)createBorders).BeginInit();
-            preGenPanel.SuspendLayout();
-            preGenButtonBorders.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)preGenBorders).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -1613,107 +1606,13 @@
             createBorders.TabIndex = 0;
             createBorders.TabStop = false;
             // 
-            // preGenPanel
+            // workoutsList
             // 
-            preGenPanel.Controls.Add(preGenLabel);
-            preGenPanel.Controls.Add(preGenButtonBorders);
-            preGenPanel.Controls.Add(preGenBorders);
-            preGenPanel.Location = new Point(86, 70);
-            preGenPanel.Name = "preGenPanel";
-            preGenPanel.Size = new Size(518, 262);
-            preGenPanel.TabIndex = 42;
-            preGenPanel.Visible = false;
-            // 
-            // preGenLabel
-            // 
-            preGenLabel.AutoSize = true;
-            preGenLabel.BackColor = Color.WhiteSmoke;
-            preGenLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            preGenLabel.Location = new Point(195, 17);
-            preGenLabel.Name = "preGenLabel";
-            preGenLabel.Size = new Size(129, 22);
-            preGenLabel.TabIndex = 40;
-            preGenLabel.Text = "Workouts list";
-            // 
-            // preGenButtonBorders
-            // 
-            preGenButtonBorders.BackColor = Color.WhiteSmoke;
-            preGenButtonBorders.Controls.Add(preGenButton);
-            preGenButtonBorders.Location = new Point(214, 221);
-            preGenButtonBorders.Name = "preGenButtonBorders";
-            preGenButtonBorders.Size = new Size(90, 25);
-            preGenButtonBorders.TabIndex = 32;
-            // 
-            // preGenButton
-            // 
-            preGenButton.CornerRoundingRadius = 15F;
-            preGenButton.Location = new Point(0, 0);
-            preGenButton.Name = "preGenButton";
-            preGenButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            preGenButton.Size = new Size(90, 25);
-            preGenButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateCommon.Back.ColorAngle = 45F;
-            preGenButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateCommon.Border.ColorAngle = 45F;
-            preGenButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGenButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGenButton.StateCommon.Border.Rounding = 15F;
-            preGenButton.StateCommon.Border.Width = 1;
-            preGenButton.StateCommon.Content.ShortText.Color1 = Color.White;
-            preGenButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            preGenButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            preGenButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGenButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateNormal.Back.ColorAngle = 45F;
-            preGenButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGenButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            preGenButton.StateNormal.Border.ColorAngle = 45F;
-            preGenButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGenButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGenButton.StateNormal.Border.Rounding = 15F;
-            preGenButton.StateNormal.Border.Width = 1;
-            preGenButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            preGenButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            preGenButton.StatePressed.Back.ColorAngle = 45F;
-            preGenButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGenButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            preGenButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            preGenButton.StatePressed.Border.ColorAngle = 45F;
-            preGenButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGenButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGenButton.StatePressed.Border.Rounding = 15F;
-            preGenButton.StatePressed.Border.Width = 1;
-            preGenButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            preGenButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            preGenButton.StateTracking.Back.ColorAngle = 45F;
-            preGenButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGenButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
-            preGenButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
-            preGenButton.StateTracking.Border.ColorAngle = 45F;
-            preGenButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGenButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGenButton.StateTracking.Border.Rounding = 15F;
-            preGenButton.StateTracking.Border.Width = 1;
-            preGenButton.TabIndex = 31;
-            preGenButton.Values.Text = "Next";
-            preGenButton.Visible = false;
-            // 
-            // preGenBorders
-            // 
-            preGenBorders.Image = (Image)resources.GetObject("preGenBorders.Image");
-            preGenBorders.Location = new Point(0, 0);
-            preGenBorders.Name = "preGenBorders";
-            preGenBorders.Size = new Size(518, 262);
-            preGenBorders.TabIndex = 0;
-            preGenBorders.TabStop = false;
+            workoutsList.BackColor = Color.White;
+            workoutsList.Location = new Point(13, 63);
+            workoutsList.Name = "workoutsList";
+            workoutsList.Size = new Size(664, 293);
+            workoutsList.TabIndex = 43;
             // 
             // Workouts
             // 
@@ -1721,8 +1620,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(workoutsList);
             Controls.Add(createPanel);
-            Controls.Add(preGenPanel);
             Controls.Add(cardioPanel);
             Controls.Add(workoutTypePanel);
             Controls.Add(lowerBodyPanel);
@@ -1799,10 +1698,6 @@
             createPanel.PerformLayout();
             createNextButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)createBorders).EndInit();
-            preGenPanel.ResumeLayout(false);
-            preGenPanel.PerformLayout();
-            preGenButtonBorders.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)preGenBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1894,12 +1789,8 @@
         private Panel createNextButtonPanel;
         private Krypton.Toolkit.KryptonButton createNextButton;
         private PictureBox createBorders;
-        private Panel preGenPanel;
-        private Label preGenLabel;
-        private Panel preGenButtonBorders;
-        private Krypton.Toolkit.KryptonButton preGenButton;
-        private PictureBox preGenBorders;
         private Panel nextButtPanel;
         private Krypton.Toolkit.KryptonButton nextButt7;
+        private FlowLayoutPanel workoutsList;
     }
 }

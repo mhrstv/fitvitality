@@ -1,8 +1,10 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Aspose.Imaging;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -41,9 +43,8 @@ namespace FitVitality
         string workoutPlace = "";
         int activity;
 
-        private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-
-
+        //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public Workouts(string userID)
         {
             InitializeComponent();
@@ -681,11 +682,18 @@ namespace FitVitality
             if (preClicked)
             {
                 preGenPanel.Visible = true;
+                preGenPanel.BringToFront();
             }
-            if (createClicked)
+            else if (createClicked)
             {
                 createPanel.Visible = true;
+                createPanel.BringToFront();
             }
+        }
+
+        private void preGenPanel_VisibleChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

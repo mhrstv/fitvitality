@@ -1608,11 +1608,14 @@
             // 
             // workoutsList
             // 
+            workoutsList.AutoScroll = true;
             workoutsList.BackColor = Color.White;
-            workoutsList.Location = new Point(13, 63);
+            workoutsList.Location = new Point(30, 46);
             workoutsList.Name = "workoutsList";
-            workoutsList.Size = new Size(664, 293);
+            workoutsList.Size = new Size(630, 307);
             workoutsList.TabIndex = 43;
+            workoutsList.Visible = false;
+            workoutsList.VisibleChanged += workoutsList_VisibleChanged;
             // 
             // Workouts
             // 

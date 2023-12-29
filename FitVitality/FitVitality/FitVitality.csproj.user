@@ -28,6 +28,9 @@
     <Compile Update="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="WorkoutListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Workouts.cs">
       <SubType>Form</SubType>
     </Compile>

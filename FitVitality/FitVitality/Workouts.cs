@@ -1,5 +1,6 @@
 ﻿using Aspose.Imaging;
 using Microsoft.Data.SqlClient;
+using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,6 +44,32 @@ namespace FitVitality
 
         string workoutPlace = "";
         int activity;
+
+        //Exercises list
+
+        //Gym
+        List<string> gymBack = new List<string> { "Deadlift", "Pull-ups", "Bent-over row", "Lat pulldown", "Seated cable row", "T-bar row", "One-arm dumbbell row", "Inverted row", "Single arm lat pulldown" };
+        List<string> gymBiceps = new List<string> { "Barbell curl", "Dumbbell curl", "Hammer curl", "Preacher curl", "Cable curl", "EZ bar curl", "Incline dumbbell curl" };
+        List<string> gymChest = new List<string> { "Bench press", "Dumbbell bench press", "Incline bench press", "Incline dumbbell bench press", "Decline bench press", "Decline dumbbell bench press", "Chest fly", "Incline chest fly", "Decline chest fly", "Cable fly", "Incline cable fly", "Decline cable fly", "Dips", "Incline dumbbell fly", "Decline dumbbell fly" };
+        List<string> gymTriceps = new List<string> { "Triceps pushdown", "Overhead triceps extension", "Skullcrusher", "Triceps kickback", "Cable overhead triceps extension", "Triceps rope pushdown" };
+        List<string> gymShoulders = new List<string> { "Overhead press", "Dumbbell overhead press", "Dumbbell lateral raise", "Front raise", "Rear delt fly", "Face pull" };
+        List<string> gymQuadriceps = new List<string> { "Squat", "Leg press", "Leg extension", "Hack squat", "Front squat", "Bulgarian split squat", "Lunge" };
+        List<string> gymHamstrings = new List<string> { "Romanian deadlift", "Leg curl", "Lying leg curl", "Good morning" };
+        List<string> gymCalves = new List<string> { "Standing calf raise", "Seated calf raise" };
+        List<string> gymGlutes = new List<string> { "Hip thrust", "Glute bridge", "Barbell glute bridge" };
+        List<string> gymCore = new List<string> { "Hanging leg raises", "Hanging side-to-side raises", "Cable oblique crunches", "Weighted oblique crunches" };
+
+        //Home
+        List<string> homeBackBiceps = new List<string> { "Towel pull-ups", "Iron man flyes", "Boat lifts", "Butterflyes", "Rocking leafs", "Bodyweight lat pulldowns", "Bodyweight rows", "Straight arm pulldown", "Bed sheet face pulls", "Prone arm circles" };
+        List<string> homeChestTricepsShoulders = new List<string> { "Diamond push-ups", "Pike push-ups", "Decline push-ups", "Handstand push-ups", "Dips", "Triceps dips", "Triceps push-ups", "Triceps bench dips", "Triceps floor dips" };
+        List<string> homeLegs = new List<string> { "Squats", "Pistol squats", "Lunges", "Bulgarian split squats", "Jumping lunges", "Jumping squats", "Calf raises", "Glute bridges", "Single leg glute bridges", "Wall sit" };
+        List<string> homeCore = new List<string> { "Plank", "Side plank", "Reverse plank", "Crunches", "Bicycle crunches", "Flutter kicks", "Russian twists", "V-ups", "Sit-ups", "Mountain climbers", "Burpees", "Jumping jacks", "High knees", "Plank jacks", "Scissor kicks" };
+
+        //Outdoors
+        List<string> outdoorsBackBiceps = new List<string> { "Pull-ups", "Chin-ups", "Inverted rows", "Australian pull-ups", "Bicep bar curls" };
+        List<string> outdoorsChestTricepsShoulders = new List<string> { "Push-ups", "Decline push-ups", "Diamond push-ups", "Pike push-ups", "Handstand push-ups", "Dips", "Triceps dips", "Triceps push-ups" };
+        List<string> outdoorsLegs = new List<string> { "Squats", "Lunges", "Bulgarian split squats", "Jumping lunges", "Jumping squats", "Calf raises", "Glute bridges", "Single leg glute bridges", "Wall sit" };
+        List<string> outdoorsCore = new List<string> { "Plank", "Side plank", "Reverse plank", "Crunches", "Bicycle crunches", "Flutter kicks", "Russian twists", "V-ups", "Sit-ups", "Mountain climbers", "Burpees", "Jumping jacks", "High knees", "Plank jacks", "Scissor kicks", "Toes to bar", "Hanging knee raises", "V-raises" };
 
         //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
@@ -679,10 +707,17 @@ namespace FitVitality
 
         private void nextButt7_Click(object sender, EventArgs e)
         {
+            workoutTypePanel.Visible = false;
+            lowerBodyPanel.Visible = false;
+            upperBodyPanel.Visible = false;
+            cardioPanel.Visible = false;
+            muscleGroupPanel.Visible = false;
+            trainPlacePanel.Visible = false;
+            activityGroupPanel.Visible = false;
             if (preClicked)
             {
-                preGenPanel.Visible = true;
-                preGenPanel.BringToFront();
+                workoutsList.Visible = true;
+                workoutsList.BringToFront();
             }
             else if (createClicked)
             {
@@ -692,6 +727,57 @@ namespace FitVitality
         }
 
         private void preGenPanel_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addGymWorkouts()
+        {
+            WorkoutListItem[] workouts = new WorkoutListItem[5];
+            for (int i = 0; i < workouts.Length; i++)
+            {
+                workouts[i] = new WorkoutListItem();
+                workouts[i].WorkoutNumber = $"Workout {i + 1}";
+                workoutsList.Controls.Add(workouts[i]);
+            }
+        }
+        private void addHomeWorkouts()
+        {
+            WorkoutListItem[] workouts = new WorkoutListItem[5];
+            for (int i = 0; i < workouts.Length; i++)
+            {
+                workouts[i] = new WorkoutListItem();
+                workouts[i].WorkoutNumber = $"Workout {i + 1}";
+                workoutsList.Controls.Add(workouts[i]);
+            }
+        }
+        private void addOutdoorsWorkouts()
+        {
+            WorkoutListItem[] workouts = new WorkoutListItem[5];
+            for (int i = 0; i < workouts.Length; i++)
+            {
+                workouts[i] = new WorkoutListItem();
+                workouts[i].WorkoutNumber = $"Workout {i + 1}";
+                workoutsList.Controls.Add(workouts[i]);
+            }
+        }
+        private void workoutsList_VisibleChanged(object sender, EventArgs e)
+        {
+            if (gymClicked)
+            {
+                addGymWorkouts();
+            }
+            else if (homeClicked)
+            {
+                addHomeWorkouts();
+            }
+            else if (outdoorsClicked)
+            {
+                addOutdoorsWorkouts();
+            }
+        }
+
+        private void workoutListPanel_VisibleChanged(object sender, EventArgs e)
         {
 
         }

@@ -228,7 +228,7 @@
             // 
             workoutsLabel.AutoSize = true;
             workoutsLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            workoutsLabel.Location = new Point(291, 22);
+            workoutsLabel.Location = new Point(291, 13);
             workoutsLabel.Name = "workoutsLabel";
             workoutsLabel.Size = new Size(108, 24);
             workoutsLabel.TabIndex = 20;
@@ -679,6 +679,7 @@
             shouldersPicture.Size = new Size(62, 107);
             shouldersPicture.TabIndex = 42;
             shouldersPicture.TabStop = false;
+            shouldersPicture.Click += shouldersPicture_Click;
             // 
             // armsPicture
             // 
@@ -688,6 +689,7 @@
             armsPicture.Size = new Size(62, 107);
             armsPicture.TabIndex = 41;
             armsPicture.TabStop = false;
+            armsPicture.Click += armsPicture_Click;
             // 
             // backPicture
             // 
@@ -697,6 +699,7 @@
             backPicture.Size = new Size(62, 108);
             backPicture.TabIndex = 40;
             backPicture.TabStop = false;
+            backPicture.Click += backPicture_Click;
             // 
             // chestPicture
             // 
@@ -706,6 +709,7 @@
             chestPicture.Size = new Size(62, 107);
             chestPicture.TabIndex = 39;
             chestPicture.TabStop = false;
+            chestPicture.Click += chestPicture_Click;
             // 
             // shouldersCheckBox
             // 
@@ -890,6 +894,7 @@
             glutesPicture.Size = new Size(62, 108);
             glutesPicture.TabIndex = 42;
             glutesPicture.TabStop = false;
+            glutesPicture.Click += glutesPicture_Click;
             // 
             // calvesPicture
             // 
@@ -899,6 +904,7 @@
             calvesPicture.Size = new Size(62, 108);
             calvesPicture.TabIndex = 41;
             calvesPicture.TabStop = false;
+            calvesPicture.Click += calvesPicture_Click;
             // 
             // hamstringsPicture
             // 
@@ -908,6 +914,7 @@
             hamstringsPicture.Size = new Size(62, 108);
             hamstringsPicture.TabIndex = 40;
             hamstringsPicture.TabStop = false;
+            hamstringsPicture.Click += hamstringsPicture_Click;
             // 
             // quadricepsPicture
             // 
@@ -917,6 +924,7 @@
             quadricepsPicture.Size = new Size(62, 107);
             quadricepsPicture.TabIndex = 39;
             quadricepsPicture.TabStop = false;
+            quadricepsPicture.Click += quadricepsPicture_Click;
             // 
             // glutesCheckBox
             // 

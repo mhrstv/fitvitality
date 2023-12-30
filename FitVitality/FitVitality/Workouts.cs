@@ -423,16 +423,16 @@ namespace FitVitality
             if (shouldersCheckBox.Checked)
             {
                 shouldersPicture.Image = Properties.Resources.shouldersSelected;
-                nextButton4.Visible = true;
             }
             else
             {
                 shouldersPicture.Image = Properties.Resources.shoulders;
-                if (!armsCheckBox.Checked && !backCheckBox.Checked && !chestCheckBox.Checked)
-                {
-                    nextButton4.Visible = false;
-                }
             }
+            if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
+            {
+                nextButton4.Visible = false;
+            }
+            else nextButton4.Visible = true;
         }
 
         private void chestCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -440,16 +440,16 @@ namespace FitVitality
             if (chestCheckBox.Checked)
             {
                 chestPicture.Image = Properties.Resources.chestSelected;
-                nextButton4.Visible = true;
             }
             else
             {
                 chestPicture.Image = Properties.Resources.chest;
-                if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !backCheckBox.Checked)
-                {
-                    nextButton4.Visible = false;
-                }
             }
+            if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
+            {
+                nextButton4.Visible = false;
+            }
+            else nextButton4.Visible = true;
         }
 
         private void armsCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -457,16 +457,16 @@ namespace FitVitality
             if (armsCheckBox.Checked)
             {
                 armsPicture.Image = Properties.Resources.armsSelected;
-                nextButton4.Visible = true;
             }
             else
             {
                 armsPicture.Image = Properties.Resources.arms;
-                if (!backCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked)
-                {
-                    nextButton4.Visible = false;
-                }
             }
+            if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
+            {
+                nextButton4.Visible = false;
+            }
+            else nextButton4.Visible = true;
         }
 
         private void backCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -474,16 +474,16 @@ namespace FitVitality
             if (backCheckBox.Checked)
             {
                 backPicture.Image = Properties.Resources.backSelected;
-                nextButton4.Visible = true;
             }
             else
             {
                 backPicture.Image = Properties.Resources.back;
-                if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked)
-                {
-                    nextButton4.Visible = false;
-                }
             }
+            if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
+            {
+                nextButton4.Visible = false;
+            }
+            else nextButton4.Visible = true;
         }
 
         private void nextButton4_Click(object sender, EventArgs e)
@@ -505,16 +505,16 @@ namespace FitVitality
             if (quadricepsCheckBox.Checked)
             {
                 quadricepsPicture.Image = Properties.Resources.quadricepsSelected;
-                nextButton5.Visible = true;
             }
             else
             {
                 quadricepsPicture.Image = Properties.Resources.quadriceps;
-                if (!hamstringsCheckBox.Checked && !calvesCheckBox.Checked && !glutesCheckBox.Checked)
-                {
-                    nextButton5.Visible = false;
-                }
             }
+            if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked && !calvesCheckBox.Checked)
+            {
+                nextButton5.Visible = false;
+            }
+            else nextButton5.Visible = true;
         }
 
         private void pictureBox5_Click_1(object sender, EventArgs e)
@@ -527,16 +527,16 @@ namespace FitVitality
             if (hamstringsCheckBox.Checked)
             {
                 hamstringsPicture.Image = Properties.Resources.hamstringsSelected;
-                nextButton5.Visible = true;
             }
             else
             {
                 hamstringsPicture.Image = Properties.Resources.hamstrings;
-                if (!quadricepsCheckBox.Checked && !calvesCheckBox.Checked && !glutesCheckBox.Checked)
-                {
-                    nextButton5.Visible = false;
-                }
             }
+            if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked && !calvesCheckBox.Checked)
+            {
+                nextButton5.Visible = false;
+            }
+            else nextButton5.Visible = true;
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -544,16 +544,16 @@ namespace FitVitality
             if (calvesCheckBox.Checked)
             {
                 calvesPicture.Image = Properties.Resources.calvesSelected;
-                nextButton5.Visible = true;
             }
             else
             {
                 calvesPicture.Image = Properties.Resources.calves;
-                if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked)
-                {
-                    nextButton5.Visible = false;
-                }
             }
+            if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked && !calvesCheckBox.Checked)
+            {
+                nextButton5.Visible = false;
+            }
+            else nextButton5.Visible = true;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -561,16 +561,16 @@ namespace FitVitality
             if (glutesCheckBox.Checked)
             {
                 glutesPicture.Image = Properties.Resources.glutesSelected;
-                nextButton5.Visible = true;
             }
             else
             {
                 glutesPicture.Image = Properties.Resources.glutes;
-                if (!hamstringsCheckBox.Checked && !calvesCheckBox.Checked && !quadricepsCheckBox.Checked)
-                {
-                    nextButton5.Visible = false;
-                }
             }
+            if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked && !calvesCheckBox.Checked)
+            {
+                nextButton5.Visible = false;
+            }
+            else nextButton5.Visible = true;
         }
 
         private void nextButton5_Click(object sender, EventArgs e)
@@ -780,6 +780,158 @@ namespace FitVitality
         private void workoutListPanel_VisibleChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void calvesPicture_Click(object sender, EventArgs e)
+        {
+            if (calvesCheckBox.Checked)
+            {
+                calvesPicture.Image = Properties.Resources.calves;
+                calvesCheckBox.Checked = false;
+            }
+            else
+            {
+                calvesCheckBox.Checked = true;
+                calvesPicture.Image = Properties.Resources.calvesSelected;
+            }
+            if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked && !calvesCheckBox.Checked)
+            {
+                nextButton5.Visible = false;
+            }
+            else nextButton5.Visible = true;
+        }
+
+        private void glutesPicture_Click(object sender, EventArgs e)
+        {
+            if (glutesCheckBox.Checked)
+            {
+                glutesPicture.Image = Properties.Resources.glutes;
+                glutesCheckBox.Checked = false;
+            }
+            else
+            {
+                glutesCheckBox.Checked = true;
+                glutesPicture.Image = Properties.Resources.glutesSelected;
+            }
+            if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked && !calvesCheckBox.Checked)
+            {
+                nextButton5.Visible = false;
+            }
+            else nextButton5.Visible = true;
+        }
+
+        private void hamstringsPicture_Click(object sender, EventArgs e)
+        {
+            if (hamstringsCheckBox.Checked)
+            {
+                hamstringsPicture.Image = Properties.Resources.hamstrings;
+                hamstringsCheckBox.Checked = false;
+            }
+            else
+            {
+                hamstringsCheckBox.Checked = true;
+                hamstringsPicture.Image = Properties.Resources.hamstringsSelected;
+            }
+            if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked && !calvesCheckBox.Checked)
+            {
+                nextButton5.Visible = false;
+            }
+            else nextButton5.Visible = true;
+        }
+
+        private void quadricepsPicture_Click(object sender, EventArgs e)
+        {
+            if (quadricepsCheckBox.Checked)
+            {
+                quadricepsPicture.Image = Properties.Resources.quadriceps;
+                quadricepsCheckBox.Checked = false;
+            }
+            else
+            {
+                quadricepsCheckBox.Checked = true;
+                quadricepsPicture.Image = Properties.Resources.quadricepsSelected;
+            }
+            if (!hamstringsCheckBox.Checked && !quadricepsCheckBox.Checked && !glutesCheckBox.Checked && !calvesCheckBox.Checked)
+            {
+                nextButton5.Visible = false;
+            }
+            else nextButton5.Visible = true;
+        }
+
+        private void backPicture_Click(object sender, EventArgs e)
+        {
+            if (backCheckBox.Checked)
+            {
+                backPicture.Image = Properties.Resources.backSelected;
+                backCheckBox.Checked = false;
+            }
+            else
+            {
+                backPicture.Image = Properties.Resources.back;
+                backCheckBox.Checked = true;
+            }
+            if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
+            {
+                nextButton4.Visible = false;
+            }
+            else nextButton4.Visible = true;
+        }
+
+        private void armsPicture_Click(object sender, EventArgs e)
+        {
+            if (armsCheckBox.Checked)
+            {
+                armsPicture.Image = Properties.Resources.armsSelected;
+                armsCheckBox.Checked = false;
+            }
+            else
+            {
+                armsPicture.Image = Properties.Resources.arms;
+                armsCheckBox.Checked = true;
+            }
+            if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
+            {
+                nextButton4.Visible = false;
+            }
+            else nextButton4.Visible = true;
+        }
+
+        private void shouldersPicture_Click(object sender, EventArgs e)
+        {
+            if (chestCheckBox.Checked)
+            {
+                chestPicture.Image = Properties.Resources.chestSelected;
+                chestCheckBox.Checked = false;
+            }
+            else
+            {
+                chestPicture.Image = Properties.Resources.chest;
+                chestCheckBox.Checked = true;
+            }
+            if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
+            {
+                nextButton4.Visible = false;
+            }
+            else nextButton4.Visible = true;
+        }
+
+        private void chestPicture_Click(object sender, EventArgs e)
+        {
+            if (chestCheckBox.Checked)
+            {
+                chestPicture.Image = Properties.Resources.chestSelected;
+                chestCheckBox.Checked = false;
+            }
+            else
+            {
+                chestPicture.Image = Properties.Resources.chest;
+                chestCheckBox.Checked = true;
+            }
+            if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
+            {
+                nextButton4.Visible = false;
+            }
+            else nextButton4.Visible = true;
         }
     }
 }

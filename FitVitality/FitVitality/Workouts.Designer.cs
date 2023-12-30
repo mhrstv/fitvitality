@@ -394,7 +394,7 @@
             activityLevelComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             activityLevelComboBox.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             activityLevelComboBox.FormattingEnabled = true;
-            activityLevelComboBox.Items.AddRange(new object[] { "1 days/week", "2 days/week", "3 days/week", "4 days/week", "5 days/week", "6 days/week", "7 days/week" });
+            activityLevelComboBox.Items.AddRange(new object[] { "1 day/week", "2 days/week", "3 days/week", "4 days/week", "5 days/week", "6 days/week", "7 days/week" });
             activityLevelComboBox.Location = new Point(199, 133);
             activityLevelComboBox.Name = "activityLevelComboBox";
             activityLevelComboBox.Size = new Size(121, 24);
@@ -676,8 +676,7 @@
             shouldersPicture.Image = Properties.Resources.shoulders;
             shouldersPicture.Location = new Point(382, 99);
             shouldersPicture.Name = "shouldersPicture";
-            shouldersPicture.Size = new Size(63, 109);
-            shouldersPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            shouldersPicture.Size = new Size(62, 107);
             shouldersPicture.TabIndex = 42;
             shouldersPicture.TabStop = false;
             // 
@@ -686,8 +685,7 @@
             armsPicture.Image = Properties.Resources.arms;
             armsPicture.Location = new Point(267, 99);
             armsPicture.Name = "armsPicture";
-            armsPicture.Size = new Size(63, 109);
-            armsPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            armsPicture.Size = new Size(62, 107);
             armsPicture.TabIndex = 41;
             armsPicture.TabStop = false;
             // 
@@ -696,8 +694,7 @@
             backPicture.Image = Properties.Resources.back;
             backPicture.Location = new Point(156, 99);
             backPicture.Name = "backPicture";
-            backPicture.Size = new Size(62, 109);
-            backPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            backPicture.Size = new Size(62, 108);
             backPicture.TabIndex = 40;
             backPicture.TabStop = false;
             // 
@@ -706,8 +703,7 @@
             chestPicture.Image = Properties.Resources.chest;
             chestPicture.Location = new Point(43, 99);
             chestPicture.Name = "chestPicture";
-            chestPicture.Size = new Size(63, 109);
-            chestPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            chestPicture.Size = new Size(62, 107);
             chestPicture.TabIndex = 39;
             chestPicture.TabStop = false;
             // 
@@ -892,7 +888,6 @@
             glutesPicture.Location = new Point(382, 99);
             glutesPicture.Name = "glutesPicture";
             glutesPicture.Size = new Size(62, 108);
-            glutesPicture.SizeMode = PictureBoxSizeMode.Zoom;
             glutesPicture.TabIndex = 42;
             glutesPicture.TabStop = false;
             // 
@@ -901,8 +896,7 @@
             calvesPicture.Image = Properties.Resources.calves;
             calvesPicture.Location = new Point(267, 99);
             calvesPicture.Name = "calvesPicture";
-            calvesPicture.Size = new Size(61, 108);
-            calvesPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            calvesPicture.Size = new Size(62, 108);
             calvesPicture.TabIndex = 41;
             calvesPicture.TabStop = false;
             // 
@@ -911,8 +905,7 @@
             hamstringsPicture.Image = Properties.Resources.hamstrings;
             hamstringsPicture.Location = new Point(156, 99);
             hamstringsPicture.Name = "hamstringsPicture";
-            hamstringsPicture.Size = new Size(61, 109);
-            hamstringsPicture.SizeMode = PictureBoxSizeMode.Zoom;
+            hamstringsPicture.Size = new Size(62, 108);
             hamstringsPicture.TabIndex = 40;
             hamstringsPicture.TabStop = false;
             // 
@@ -922,7 +915,6 @@
             quadricepsPicture.Location = new Point(43, 99);
             quadricepsPicture.Name = "quadricepsPicture";
             quadricepsPicture.Size = new Size(62, 107);
-            quadricepsPicture.SizeMode = PictureBoxSizeMode.Zoom;
             quadricepsPicture.TabIndex = 39;
             quadricepsPicture.TabStop = false;
             // 
@@ -1627,7 +1619,6 @@
             Controls.Add(createPanel);
             Controls.Add(cardioPanel);
             Controls.Add(workoutTypePanel);
-            Controls.Add(lowerBodyPanel);
             Controls.Add(upperBodyPanel);
             Controls.Add(muscleGroupPanel);
             Controls.Add(activityGroupPanel);
@@ -1639,6 +1630,7 @@
             Controls.Add(vLine2);
             Controls.Add(hLine2);
             Controls.Add(hLine1);
+            Controls.Add(lowerBodyPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Workouts";
             Text = " ";

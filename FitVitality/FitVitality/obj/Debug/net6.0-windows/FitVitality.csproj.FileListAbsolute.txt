@@ -235,3 +235,4 @@ C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Deb
 E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Diet.resources
 E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Workouts.resources
 E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.WorkoutListItem.resources
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.WorkoutListItem.resources

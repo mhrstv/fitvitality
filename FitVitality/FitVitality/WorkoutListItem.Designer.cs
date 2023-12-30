@@ -34,6 +34,22 @@
             labelExercises = new Label();
             workoutNumLabel = new Label();
             selectButton = new Krypton.Toolkit.KryptonButton();
+            leftTopC = new PictureBox();
+            rightTopC = new PictureBox();
+            leftBottomCorner = new PictureBox();
+            rightBottomCorner = new PictureBox();
+            vLine2 = new PictureBox();
+            vLine1 = new PictureBox();
+            hLine2 = new PictureBox();
+            hLine1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)leftTopC).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rightTopC).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)leftBottomCorner).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)rightBottomCorner).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -151,15 +167,103 @@
             selectButton.TabIndex = 13;
             selectButton.Values.Text = "Select";
             // 
+            // leftTopC
+            // 
+            leftTopC.Image = Properties.Resources.leftCUp;
+            leftTopC.Location = new Point(0, 0);
+            leftTopC.Name = "leftTopC";
+            leftTopC.Size = new Size(16, 15);
+            leftTopC.TabIndex = 17;
+            leftTopC.TabStop = false;
+            // 
+            // rightTopC
+            // 
+            rightTopC.Image = Properties.Resources.rightCUp;
+            rightTopC.Location = new Point(284, 0);
+            rightTopC.Name = "rightTopC";
+            rightTopC.Size = new Size(16, 15);
+            rightTopC.TabIndex = 16;
+            rightTopC.TabStop = false;
+            // 
+            // leftBottomCorner
+            // 
+            leftBottomCorner.Image = Properties.Resources.leftC;
+            leftBottomCorner.Location = new Point(0, 217);
+            leftBottomCorner.Name = "leftBottomCorner";
+            leftBottomCorner.Size = new Size(16, 15);
+            leftBottomCorner.TabIndex = 20;
+            leftBottomCorner.TabStop = false;
+            // 
+            // rightBottomCorner
+            // 
+            rightBottomCorner.Image = Properties.Resources.rightC;
+            rightBottomCorner.Location = new Point(284, 217);
+            rightBottomCorner.Name = "rightBottomCorner";
+            rightBottomCorner.Size = new Size(16, 15);
+            rightBottomCorner.TabIndex = 21;
+            rightBottomCorner.TabStop = false;
+            // 
+            // vLine2
+            // 
+            vLine2.Image = Properties.Resources.vline;
+            vLine2.Location = new Point(299, 12);
+            vLine2.Name = "vLine2";
+            vLine2.Size = new Size(1, 210);
+            vLine2.TabIndex = 22;
+            vLine2.TabStop = false;
+            // 
+            // vLine1
+            // 
+            vLine1.Image = Properties.Resources.vline;
+            vLine1.Location = new Point(0, 12);
+            vLine1.Name = "vLine1";
+            vLine1.Size = new Size(1, 210);
+            vLine1.TabIndex = 23;
+            vLine1.TabStop = false;
+            // 
+            // hLine2
+            // 
+            hLine2.Image = Properties.Resources.hLine;
+            hLine2.Location = new Point(12, 231);
+            hLine2.Name = "hLine2";
+            hLine2.Size = new Size(275, 1);
+            hLine2.TabIndex = 24;
+            hLine2.TabStop = false;
+            // 
+            // hLine1
+            // 
+            hLine1.Image = Properties.Resources.hLine;
+            hLine1.Location = new Point(13, 0);
+            hLine1.Name = "hLine1";
+            hLine1.Size = new Size(275, 1);
+            hLine1.TabIndex = 25;
+            hLine1.TabStop = false;
+            // 
             // WorkoutListItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(hLine1);
+            Controls.Add(hLine2);
+            Controls.Add(vLine1);
+            Controls.Add(vLine2);
+            Controls.Add(rightBottomCorner);
+            Controls.Add(leftBottomCorner);
+            Controls.Add(leftTopC);
+            Controls.Add(rightTopC);
             Controls.Add(labelExercises);
             Controls.Add(workoutNumLabel);
             Controls.Add(selectButton);
             Name = "WorkoutListItem";
             Size = new Size(300, 232);
+            ((System.ComponentModel.ISupportInitialize)leftTopC).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rightTopC).EndInit();
+            ((System.ComponentModel.ISupportInitialize)leftBottomCorner).EndInit();
+            ((System.ComponentModel.ISupportInitialize)rightBottomCorner).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
             ResumeLayout(false);
         }
 
@@ -169,5 +273,13 @@
         private Label labelExercises;
         private Label workoutNumLabel;
         private Krypton.Toolkit.KryptonButton selectButton;
+        private PictureBox leftTopC;
+        private PictureBox rightTopC;
+        private PictureBox leftBottomCorner;
+        private PictureBox rightBottomCorner;
+        private PictureBox vLine2;
+        private PictureBox vLine1;
+        private PictureBox hLine2;
+        private PictureBox hLine1;
     }
 }

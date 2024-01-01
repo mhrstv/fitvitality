@@ -84,7 +84,7 @@
             labelExercises.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             labelExercises.Location = new Point(12, 48);
             labelExercises.Name = "labelExercises";
-            labelExercises.Size = new Size(276, 134);
+            labelExercises.Size = new Size(276, 138);
             labelExercises.TabIndex = 15;
             labelExercises.Text = "[MUSCLE GROUP] - [EXERCISES]";
             // 
@@ -101,7 +101,7 @@
             // selectButton
             // 
             selectButton.CornerRoundingRadius = 15F;
-            selectButton.Location = new Point(218, 195);
+            selectButton.Location = new Point(213, 189);
             selectButton.Name = "selectButton";
             selectButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             selectButton.Size = new Size(70, 25);
@@ -188,7 +188,7 @@
             // leftBottomCorner
             // 
             leftBottomCorner.Image = Properties.Resources.leftC;
-            leftBottomCorner.Location = new Point(0, 217);
+            leftBottomCorner.Location = new Point(0, 201);
             leftBottomCorner.Name = "leftBottomCorner";
             leftBottomCorner.Size = new Size(16, 15);
             leftBottomCorner.TabIndex = 20;
@@ -197,7 +197,7 @@
             // rightBottomCorner
             // 
             rightBottomCorner.Image = Properties.Resources.rightC;
-            rightBottomCorner.Location = new Point(284, 217);
+            rightBottomCorner.Location = new Point(284, 202);
             rightBottomCorner.Name = "rightBottomCorner";
             rightBottomCorner.Size = new Size(16, 15);
             rightBottomCorner.TabIndex = 21;
@@ -208,7 +208,7 @@
             vLine2.Image = Properties.Resources.vline;
             vLine2.Location = new Point(299, 12);
             vLine2.Name = "vLine2";
-            vLine2.Size = new Size(1, 210);
+            vLine2.Size = new Size(1, 190);
             vLine2.TabIndex = 22;
             vLine2.TabStop = false;
             // 
@@ -217,14 +217,14 @@
             vLine1.Image = Properties.Resources.vline;
             vLine1.Location = new Point(0, 12);
             vLine1.Name = "vLine1";
-            vLine1.Size = new Size(1, 210);
+            vLine1.Size = new Size(1, 191);
             vLine1.TabIndex = 23;
             vLine1.TabStop = false;
             // 
             // hLine2
             // 
             hLine2.Image = Properties.Resources.hLine;
-            hLine2.Location = new Point(12, 231);
+            hLine2.Location = new Point(12, 216);
             hLine2.Name = "hLine2";
             hLine2.Size = new Size(275, 1);
             hLine2.TabIndex = 24;
@@ -255,7 +255,8 @@
             Controls.Add(workoutNumLabel);
             Controls.Add(selectButton);
             Name = "WorkoutListItem";
-            Size = new Size(300, 232);
+            Size = new Size(300, 218);
+            Load += WorkoutListItem_Load;
             ((System.ComponentModel.ISupportInitialize)leftTopC).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightTopC).EndInit();
             ((System.ComponentModel.ISupportInitialize)leftBottomCorner).EndInit();

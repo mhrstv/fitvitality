@@ -733,12 +733,200 @@ namespace FitVitality
 
         private void addGymWorkouts()
         {
-            WorkoutListItem[] workouts = new WorkoutListItem[5];
+            string query = "";
+            List<string> back = new List<string>();
+            List<string> biceps = new List<string>();
+            List<string> chest = new List<string>();
+            List<string> triceps = new List<string>();
+            List<string> shoulders = new List<string>();
+            List<string> quadriceps = new List<string>();
+            List<string> hamstrings = new List<string>();
+            List<string> glutes = new List<string>();
+            List<string> calves = new List<string>();
+            List<string> core = new List<string>();
+            int rowCount = 0;
+
+            using SqlConnection connection = new SqlConnection(connectionString);
+            {
+                connection.Open();
+                if (upperBodyClicked && lowerBodyClicked && coreClicked)
+                {
+                    query = "SELECT Upper, Lower, Core, Chest, Triceps, Shoulders, Back, Biceps, Quadriceps, Hamstrings, Glutes, Calves, _Core FROM WorkoutsListGym WHERE Upper = 'Yes' AND Lower = 'Yes' AND Core = 'Yes'";
+                    using (SqlCommand comm = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = comm.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                chest.Add(reader["Chest"].ToString());
+                                triceps.Add(reader["Triceps"].ToString());
+                                shoulders.Add(reader["Shoulders"].ToString());
+                                back.Add(reader["Back"].ToString());
+                                biceps.Add(reader["Biceps"].ToString());
+                                quadriceps.Add(reader["Quadriceps"].ToString());
+                                hamstrings.Add(reader["Hamstrings"].ToString());
+                                glutes.Add(reader["Glutes"].ToString());
+                                calves.Add(reader["Calves"].ToString());
+                                core.Add(reader["_Core"].ToString());
+                                rowCount++;
+                            }
+                        }
+                    }
+                }
+                else if (upperBodyClicked && lowerBodyClicked)
+                {
+                    query = "SELECT Upper, Lower, Core, Chest, Triceps, Shoulders, Back, Biceps, Quadriceps, Hamstrings, Glutes, Calves FROM WorkoutsListGym WHERE Upper = 'Yes' AND Lower = 'Yes' AND Core = 'No'";
+                    using (SqlCommand comm = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = comm.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                chest.Add(reader["Chest"].ToString());
+                                triceps.Add(reader["Triceps"].ToString());
+                                shoulders.Add(reader["Shoulders"].ToString());
+                                back.Add(reader["Back"].ToString());
+                                biceps.Add(reader["Biceps"].ToString());
+                                quadriceps.Add(reader["Quadriceps"].ToString());
+                                hamstrings.Add(reader["Hamstrings"].ToString());
+                                glutes.Add(reader["Glutes"].ToString());
+                                calves.Add(reader["Calves"].ToString());
+                                rowCount++;
+                            }
+                        }
+                    }
+                }
+                else if (upperBodyClicked)
+                {
+                    query = "SELECT Upper, Lower, Core, Chest, Triceps, Shoulders, Back, Biceps FROM WorkoutsListGym WHERE Upper = 'Yes' AND Lower = 'No' AND Core = 'No'";
+                    using (SqlCommand comm = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = comm.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                chest.Add(reader["Chest"].ToString());
+                                triceps.Add(reader["Triceps"].ToString());
+                                shoulders.Add(reader["Shoulders"].ToString());
+                                back.Add(reader["Back"].ToString());
+                                biceps.Add(reader["Biceps"].ToString());
+                                rowCount++;
+                            }
+                        }
+                    }
+                }
+                else if (upperBodyClicked && coreClicked)
+                {
+                    query = "SELECT Upper, Lower, Core, Chest, Triceps, Shoulders, Back, Biceps, _Core FROM WorkoutsListGym WHERE Upper = 'Yes' AND Lower = 'No' AND Core = 'Yes'";
+                    using (SqlCommand comm = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = comm.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                chest.Add(reader["Chest"].ToString());
+                                triceps.Add(reader["Triceps"].ToString());
+                                shoulders.Add(reader["Shoulders"].ToString());
+                                back.Add(reader["Back"].ToString());
+                                biceps.Add(reader["Biceps"].ToString());
+                                core.Add(reader["_Core"].ToString());
+                                rowCount++;
+                            }
+                        }
+                    }
+                }
+                else if (lowerBodyClicked && coreClicked)
+                {
+                    query = "SELECT Upper, Lower, Core, Quadriceps, Hamstrings, Glutes, Calves, _Core FROM WorkoutsListGym WHERE Upper = 'No' AND Lower = 'Yes' AND Core = 'Yes'";
+                    using (SqlCommand comm = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = comm.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                quadriceps.Add(reader["Quadriceps"].ToString());
+                                hamstrings.Add(reader["Hamstrings"].ToString());
+                                glutes.Add(reader["Glutes"].ToString());
+                                calves.Add(reader["Calves"].ToString());
+                                core.Add(reader["_Core"].ToString());
+                                rowCount++;
+                            }
+                        }
+                    }
+                }
+                else if (lowerBodyClicked)
+                {
+                    query = "SELECT Upper, Lower, Core, Quadriceps, Hamstrings, Glutes, Calves FROM WorkoutsListGym WHERE Upper = 'No' AND Lower = 'Yes' AND Core = 'No'";
+                    using (SqlCommand comm = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = comm.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                quadriceps.Add(reader["Quadriceps"].ToString());
+                                hamstrings.Add(reader["Hamstrings"].ToString());
+                                glutes.Add(reader["Glutes"].ToString());
+                                calves.Add(reader["Calves"].ToString());
+                                rowCount++;
+                            }
+                        }
+                    }
+                }
+                else if (coreClicked)
+                {
+                    query = "SELECT Upper, Lower, Core, _Core FROM WorkoutsListGym WHERE Upper = 'No' AND Lower = 'No' AND Core = 'Yes'";
+                    using (SqlCommand comm = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = comm.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                core.Add(reader["_Core"].ToString());
+                                rowCount++;
+                            }
+                        }
+                    }
+                }
+            }
+            WorkoutListItem[] workouts = new WorkoutListItem[rowCount];
             for (int i = 0; i < workouts.Length; i++)
             {
                 workouts[i] = new WorkoutListItem();
                 workouts[i].WorkoutNumber = $"Workout {i + 1}";
                 workoutsList.Controls.Add(workouts[i]);
+                if (upperBodyClicked && lowerBodyClicked && coreClicked)
+                {
+                    workouts[i].WorkoutExercises = $"[Back]: {back[i]}\n[Biceps]: {biceps[i]}\n[Triceps]: {triceps[i]}\n[Shoulders]: {shoulders[i]}\n\n" +
+                    $"[Quadriceps]: {quadriceps[i]}\n[Hamstrings]: {hamstrings[i]}\n[Glutes]: {glutes[i]}\n[Calves]: {calves[i]}\n\n" +
+                    $"[Core]: {core[i]}";
+                }
+                else if (upperBodyClicked && lowerBodyClicked)
+                {
+                    workouts[i].WorkoutExercises = $"[Back]: {back[i]}\n[Biceps]: {biceps[i]}\n[Triceps]: {triceps[i]}\n[Shoulders]: {shoulders[i]}\n\n" +
+                    $"[Quadriceps]: {quadriceps[i]}\n[Hamstrings]: {hamstrings[i]}\n[Glutes]: {glutes[i]}\n[Calves]: {calves[i]}\n\n";
+                }
+                else if (lowerBodyClicked && coreClicked)
+                {
+                    workouts[i].WorkoutExercises = $"[Quadriceps]: {quadriceps[i]}\n[Hamstrings]: {hamstrings[i]}\n[Glutes]: {glutes[i]}\n[Calves]: {calves[i]}\n\n" +
+                    $"[Core]: {core[i]}";
+                }
+                else if (upperBodyClicked && coreClicked)
+                {
+                    workouts[i].WorkoutExercises = $"[Back]: {back[i]}\n[Biceps]: {biceps[i]}\n[Triceps]: {triceps[i]}\n[Shoulders]: {shoulders[i]}\n\n" +
+                    $"[Core]: {core[i]}";
+                }
+                else if (upperBodyClicked)
+                {
+                    workouts[i].WorkoutExercises = $"[Back]: {back[i]}\n[Biceps]: {biceps[i]}\n[Triceps]: {triceps[i]}\n[Shoulders]: {shoulders[i]}\n\n";
+                }
+                else if (lowerBodyClicked)
+                {
+                    workouts[i].WorkoutExercises = $"[Quadriceps]: {quadriceps[i]}\n[Hamstrings]: {hamstrings[i]}\n[Glutes]: {glutes[i]}\n[Calves]: {calves[i]}\n\n";
+                }
+                else if (coreClicked)
+                {
+                    workouts[i].WorkoutExercises = $"[Core]: {core[i]}";
+                }
             }
         }
         private void addHomeWorkouts()
@@ -898,15 +1086,15 @@ namespace FitVitality
 
         private void shouldersPicture_Click(object sender, EventArgs e)
         {
-            if (chestCheckBox.Checked)
+            if (shouldersCheckBox.Checked)
             {
-                chestPicture.Image = Properties.Resources.chestSelected;
-                chestCheckBox.Checked = false;
+                shouldersPicture.Image = Properties.Resources.shouldersSelected;
+                shouldersCheckBox.Checked = false;
             }
             else
             {
-                chestPicture.Image = Properties.Resources.chest;
-                chestCheckBox.Checked = true;
+                shouldersPicture.Image = Properties.Resources.shoulders;
+                shouldersCheckBox.Checked = true;
             }
             if (!armsCheckBox.Checked && !shouldersCheckBox.Checked && !chestCheckBox.Checked && !backCheckBox.Checked)
             {

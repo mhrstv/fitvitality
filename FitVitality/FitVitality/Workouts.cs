@@ -790,6 +790,7 @@ namespace FitVitality
                     }
                 }
             }
+            workoutsList.Controls.Clear();
             workouts = new WorkoutListItem[rowCount];
             for (int i = 0; i < workouts.Length; i++)
             {
@@ -874,6 +875,7 @@ namespace FitVitality
                     }
                 }
             }
+            workoutsList.Controls.Clear();
             workouts = new WorkoutListItem[rowCount];
             for (int i = 0; i < workouts.Length; i++)
             {
@@ -916,13 +918,13 @@ namespace FitVitality
                     }
                 }
             }
-            workouts = new WorkoutListItem[rowCount];
             workoutsList.Controls.Clear();
+            workouts = new WorkoutListItem[rowCount];
             for (int i = 0; i < workouts.Length; i++)
             {
                 workouts[i] = new WorkoutListItem();
-                workouts[i].WorkoutNumber = $"Workout {i + 1}";
                 workoutsList.Controls.Add(workouts[i]);
+                workouts[i].WorkoutNumber = $"Workout {i + 1}";
                 workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
                 $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
                 $"[Core]: Abs, Obliques...";

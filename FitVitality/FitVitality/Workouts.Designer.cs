@@ -113,12 +113,12 @@
             createBorders = new PictureBox();
             workoutsList = new FlowLayoutPanel();
             workoutPreviewPanel = new Panel();
+            labelExercises = new Label();
             workoutPreviewClose = new PictureBox();
             workoutPreviewLabel = new Label();
             workoutPreviewButtonBorders = new Panel();
             kryptonButton1 = new Krypton.Toolkit.KryptonButton();
             workoutPreviewPanelBorders = new PictureBox();
-            labelExercises = new Label();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -1635,17 +1635,27 @@
             workoutPreviewPanel.Controls.Add(workoutPreviewLabel);
             workoutPreviewPanel.Controls.Add(workoutPreviewButtonBorders);
             workoutPreviewPanel.Controls.Add(workoutPreviewPanelBorders);
-            workoutPreviewPanel.Location = new Point(86, 70);
+            workoutPreviewPanel.Location = new Point(69, 31);
             workoutPreviewPanel.Name = "workoutPreviewPanel";
-            workoutPreviewPanel.Size = new Size(518, 262);
+            workoutPreviewPanel.Size = new Size(553, 307);
             workoutPreviewPanel.TabIndex = 44;
             workoutPreviewPanel.Visible = false;
+            // 
+            // labelExercises
+            // 
+            labelExercises.BackColor = Color.WhiteSmoke;
+            labelExercises.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelExercises.Location = new Point(19, 45);
+            labelExercises.Name = "labelExercises";
+            labelExercises.Size = new Size(515, 221);
+            labelExercises.TabIndex = 45;
+            labelExercises.Text = "[MUSCLE GROUP] - [EXERCISES]";
             // 
             // workoutPreviewClose
             // 
             workoutPreviewClose.BackColor = Color.WhiteSmoke;
             workoutPreviewClose.Image = Properties.Resources.closebutton;
-            workoutPreviewClose.Location = new Point(487, 11);
+            workoutPreviewClose.Location = new Point(513, 13);
             workoutPreviewClose.Name = "workoutPreviewClose";
             workoutPreviewClose.Size = new Size(17, 17);
             workoutPreviewClose.SizeMode = PictureBoxSizeMode.Zoom;
@@ -1660,7 +1670,7 @@
             workoutPreviewLabel.AutoSize = true;
             workoutPreviewLabel.BackColor = Color.WhiteSmoke;
             workoutPreviewLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            workoutPreviewLabel.Location = new Point(208, 11);
+            workoutPreviewLabel.Location = new Point(225, 13);
             workoutPreviewLabel.Name = "workoutPreviewLabel";
             workoutPreviewLabel.Size = new Size(102, 22);
             workoutPreviewLabel.TabIndex = 40;
@@ -1670,7 +1680,7 @@
             // 
             workoutPreviewButtonBorders.BackColor = Color.WhiteSmoke;
             workoutPreviewButtonBorders.Controls.Add(kryptonButton1);
-            workoutPreviewButtonBorders.Location = new Point(214, 221);
+            workoutPreviewButtonBorders.Location = new Point(231, 270);
             workoutPreviewButtonBorders.Name = "workoutPreviewButtonBorders";
             workoutPreviewButtonBorders.Size = new Size(90, 25);
             workoutPreviewButtonBorders.TabIndex = 32;
@@ -1735,26 +1745,15 @@
             kryptonButton1.StateTracking.Border.Width = 1;
             kryptonButton1.TabIndex = 31;
             kryptonButton1.Values.Text = "Select";
-            kryptonButton1.Visible = false;
             // 
             // workoutPreviewPanelBorders
             // 
-            workoutPreviewPanelBorders.Image = (Image)resources.GetObject("workoutPreviewPanelBorders.Image");
+            workoutPreviewPanelBorders.Image = Properties.Resources.previewWorkout;
             workoutPreviewPanelBorders.Location = new Point(0, 0);
             workoutPreviewPanelBorders.Name = "workoutPreviewPanelBorders";
-            workoutPreviewPanelBorders.Size = new Size(518, 262);
+            workoutPreviewPanelBorders.Size = new Size(553, 307);
             workoutPreviewPanelBorders.TabIndex = 0;
             workoutPreviewPanelBorders.TabStop = false;
-            // 
-            // labelExercises
-            // 
-            labelExercises.BackColor = Color.WhiteSmoke;
-            labelExercises.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelExercises.Location = new Point(63, 50);
-            labelExercises.Name = "labelExercises";
-            labelExercises.Size = new Size(392, 161);
-            labelExercises.TabIndex = 45;
-            labelExercises.Text = "[MUSCLE GROUP] - [EXERCISES]";
             // 
             // Workouts
             // 

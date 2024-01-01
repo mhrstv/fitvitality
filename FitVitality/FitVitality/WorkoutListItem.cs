@@ -13,6 +13,7 @@ namespace FitVitality
 {
     public partial class WorkoutListItem : UserControl
     {
+        public event EventHandler ButtonClicked;
         public WorkoutListItem()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace FitVitality
 
         private void selectButton_Click(object sender, EventArgs e)
         {
-
+            ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         [Category("Custom Props")]

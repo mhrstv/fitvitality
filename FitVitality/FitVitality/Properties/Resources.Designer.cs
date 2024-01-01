@@ -933,6 +933,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap previewWorkout {
+            get {
+                object obj = ResourceManager.GetObject("previewWorkout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap previoustracked {
             get {
                 object obj = ResourceManager.GetObject("previoustracked", resourceCulture);

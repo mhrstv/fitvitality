@@ -1623,8 +1623,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
-            Controls.Add(workoutsList);
             Controls.Add(createPanel);
+            Controls.Add(workoutsList);
             Controls.Add(cardioPanel);
             Controls.Add(workoutTypePanel);
             Controls.Add(upperBodyPanel);

@@ -240,7 +240,7 @@ namespace FitVitality
                 command.Parameters.AddWithValue("@UserID", _userID);
                 command.ExecuteNonQuery();
             }
-            muscleGroupPanel.Visible = true;
+            workoutTypePanel.Visible = true;
             activityGroupPanel.Visible = false;
         }
 
@@ -409,13 +409,21 @@ namespace FitVitality
 
         private void nextButton3_Click(object sender, EventArgs e)
         {
-            muscleGroupPanel.Visible = false;
-            if (upperBodyClicked)
-                upperBodyPanel.Visible = true;
-            if (!upperBodyClicked && lowerBodyClicked)
-                lowerBodyPanel.Visible = true;
-            if (!upperBodyClicked && !lowerBodyClicked)
-                cardioPanel.Visible = true;
+            if (preClicked)
+            {
+                workoutsList.Visible = true;
+                workoutsList.BringToFront();
+            }
+            else if (createClicked)
+            {
+                muscleGroupPanel.Visible = false;
+                if (upperBodyClicked)
+                    upperBodyPanel.Visible = true;
+                if (!upperBodyClicked && lowerBodyClicked)
+                    lowerBodyPanel.Visible = true;
+                if (!upperBodyClicked && !lowerBodyClicked)
+                    cardioPanel.Visible = true;
+            }
         }
 
         private void shouldersCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -640,7 +648,6 @@ namespace FitVitality
             {
                 noPictureBox.Image = Properties.Resources.no;
             }
-
         }
 
         private void nextButton6_Click(object sender, EventArgs e)
@@ -648,7 +655,7 @@ namespace FitVitality
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
             cardioPanel.Visible = false;
-            workoutTypePanel.Visible = true;
+            createPanel.Visible = true;
         }
 
         private void prePicture_Click(object sender, EventArgs e)
@@ -711,19 +718,10 @@ namespace FitVitality
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
             cardioPanel.Visible = false;
-            muscleGroupPanel.Visible = false;
+            muscleGroupPanel.Visible = true;
             trainPlacePanel.Visible = false;
             activityGroupPanel.Visible = false;
-            if (preClicked)
-            {
-                workoutsList.Visible = true;
-                workoutsList.BringToFront();
-            }
-            else if (createClicked)
-            {
-                createPanel.Visible = true;
-                createPanel.BringToFront();
-            }
+
         }
 
         private void preGenPanel_VisibleChanged(object sender, EventArgs e)

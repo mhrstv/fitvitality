@@ -1,5 +1,4 @@
-﻿using Aspose.Imaging;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
@@ -1118,6 +1117,21 @@ namespace FitVitality
                 nextButton4.Visible = false;
             }
             else nextButton4.Visible = true;
+        }
+
+        private void calorieButtonClose_Click(object sender, EventArgs e)
+        {
+            workoutPreviewPanel.Visible = false;
+        }
+
+        private void calorieButtonClose_MouseEnter(object sender, EventArgs e)
+        {
+            workoutPreviewClose.BackColor = Color.IndianRed;
+        }
+
+        private void calorieButtonClose_MouseLeave(object sender, EventArgs e)
+        {
+            workoutPreviewClose.BackColor = Color.WhiteSmoke;
         }
     }
 }

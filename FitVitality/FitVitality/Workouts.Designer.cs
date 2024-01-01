@@ -112,6 +112,13 @@
             createNextButton = new Krypton.Toolkit.KryptonButton();
             createBorders = new PictureBox();
             workoutsList = new FlowLayoutPanel();
+            workoutPreviewPanel = new Panel();
+            workoutPreviewClose = new PictureBox();
+            workoutPreviewLabel = new Label();
+            workoutPreviewButtonBorders = new Panel();
+            kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            workoutPreviewPanelBorders = new PictureBox();
+            labelExercises = new Label();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -162,6 +169,10 @@
             createPanel.SuspendLayout();
             createNextButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)createBorders).BeginInit();
+            workoutPreviewPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)workoutPreviewClose).BeginInit();
+            workoutPreviewButtonBorders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)workoutPreviewPanelBorders).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -1617,12 +1628,141 @@
             workoutsList.Visible = false;
             workoutsList.VisibleChanged += workoutsList_VisibleChanged;
             // 
+            // workoutPreviewPanel
+            // 
+            workoutPreviewPanel.Controls.Add(labelExercises);
+            workoutPreviewPanel.Controls.Add(workoutPreviewClose);
+            workoutPreviewPanel.Controls.Add(workoutPreviewLabel);
+            workoutPreviewPanel.Controls.Add(workoutPreviewButtonBorders);
+            workoutPreviewPanel.Controls.Add(workoutPreviewPanelBorders);
+            workoutPreviewPanel.Location = new Point(86, 70);
+            workoutPreviewPanel.Name = "workoutPreviewPanel";
+            workoutPreviewPanel.Size = new Size(518, 262);
+            workoutPreviewPanel.TabIndex = 44;
+            workoutPreviewPanel.Visible = false;
+            // 
+            // workoutPreviewClose
+            // 
+            workoutPreviewClose.BackColor = Color.WhiteSmoke;
+            workoutPreviewClose.Image = Properties.Resources.closebutton;
+            workoutPreviewClose.Location = new Point(487, 11);
+            workoutPreviewClose.Name = "workoutPreviewClose";
+            workoutPreviewClose.Size = new Size(17, 17);
+            workoutPreviewClose.SizeMode = PictureBoxSizeMode.Zoom;
+            workoutPreviewClose.TabIndex = 45;
+            workoutPreviewClose.TabStop = false;
+            workoutPreviewClose.Click += calorieButtonClose_Click;
+            workoutPreviewClose.MouseEnter += calorieButtonClose_MouseEnter;
+            workoutPreviewClose.MouseLeave += calorieButtonClose_MouseLeave;
+            // 
+            // workoutPreviewLabel
+            // 
+            workoutPreviewLabel.AutoSize = true;
+            workoutPreviewLabel.BackColor = Color.WhiteSmoke;
+            workoutPreviewLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            workoutPreviewLabel.Location = new Point(208, 11);
+            workoutPreviewLabel.Name = "workoutPreviewLabel";
+            workoutPreviewLabel.Size = new Size(102, 22);
+            workoutPreviewLabel.TabIndex = 40;
+            workoutPreviewLabel.Text = "Workout #";
+            // 
+            // workoutPreviewButtonBorders
+            // 
+            workoutPreviewButtonBorders.BackColor = Color.WhiteSmoke;
+            workoutPreviewButtonBorders.Controls.Add(kryptonButton1);
+            workoutPreviewButtonBorders.Location = new Point(214, 221);
+            workoutPreviewButtonBorders.Name = "workoutPreviewButtonBorders";
+            workoutPreviewButtonBorders.Size = new Size(90, 25);
+            workoutPreviewButtonBorders.TabIndex = 32;
+            // 
+            // kryptonButton1
+            // 
+            kryptonButton1.CornerRoundingRadius = 15F;
+            kryptonButton1.Location = new Point(0, 0);
+            kryptonButton1.Name = "kryptonButton1";
+            kryptonButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            kryptonButton1.Size = new Size(90, 25);
+            kryptonButton1.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateCommon.Back.ColorAngle = 45F;
+            kryptonButton1.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateCommon.Border.ColorAngle = 45F;
+            kryptonButton1.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.StateCommon.Border.Rounding = 15F;
+            kryptonButton1.StateCommon.Border.Width = 1;
+            kryptonButton1.StateCommon.Content.ShortText.Color1 = Color.White;
+            kryptonButton1.StateCommon.Content.ShortText.Color2 = Color.White;
+            kryptonButton1.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            kryptonButton1.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateNormal.Back.ColorAngle = 45F;
+            kryptonButton1.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            kryptonButton1.StateNormal.Border.ColorAngle = 45F;
+            kryptonButton1.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.StateNormal.Border.Rounding = 15F;
+            kryptonButton1.StateNormal.Border.Width = 1;
+            kryptonButton1.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            kryptonButton1.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            kryptonButton1.StatePressed.Back.ColorAngle = 45F;
+            kryptonButton1.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            kryptonButton1.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            kryptonButton1.StatePressed.Border.ColorAngle = 45F;
+            kryptonButton1.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.StatePressed.Border.Rounding = 15F;
+            kryptonButton1.StatePressed.Border.Width = 1;
+            kryptonButton1.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            kryptonButton1.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            kryptonButton1.StateTracking.Back.ColorAngle = 45F;
+            kryptonButton1.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            kryptonButton1.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            kryptonButton1.StateTracking.Border.ColorAngle = 45F;
+            kryptonButton1.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            kryptonButton1.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            kryptonButton1.StateTracking.Border.Rounding = 15F;
+            kryptonButton1.StateTracking.Border.Width = 1;
+            kryptonButton1.TabIndex = 31;
+            kryptonButton1.Values.Text = "Select";
+            kryptonButton1.Visible = false;
+            // 
+            // workoutPreviewPanelBorders
+            // 
+            workoutPreviewPanelBorders.Image = (Image)resources.GetObject("workoutPreviewPanelBorders.Image");
+            workoutPreviewPanelBorders.Location = new Point(0, 0);
+            workoutPreviewPanelBorders.Name = "workoutPreviewPanelBorders";
+            workoutPreviewPanelBorders.Size = new Size(518, 262);
+            workoutPreviewPanelBorders.TabIndex = 0;
+            workoutPreviewPanelBorders.TabStop = false;
+            // 
+            // labelExercises
+            // 
+            labelExercises.BackColor = Color.WhiteSmoke;
+            labelExercises.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelExercises.Location = new Point(63, 50);
+            labelExercises.Name = "labelExercises";
+            labelExercises.Size = new Size(392, 161);
+            labelExercises.TabIndex = 45;
+            labelExercises.Text = "[MUSCLE GROUP] - [EXERCISES]";
+            // 
             // Workouts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(workoutPreviewPanel);
             Controls.Add(createPanel);
             Controls.Add(workoutsList);
             Controls.Add(cardioPanel);
@@ -1701,6 +1841,11 @@
             createPanel.PerformLayout();
             createNextButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)createBorders).EndInit();
+            workoutPreviewPanel.ResumeLayout(false);
+            workoutPreviewPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)workoutPreviewClose).EndInit();
+            workoutPreviewButtonBorders.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)workoutPreviewPanelBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1776,13 +1921,13 @@
         private Panel workoutTypePanel;
         private PictureBox createPicture;
         private PictureBox prePicture;
-        private Panel panel2;
+        private Panel workoutPreviewButtonBorders;
         private Krypton.Toolkit.KryptonButton nextButton7;
         private Label workoutTypeLabel;
         private PictureBox workoutTypeBorders;
-        private Panel panel1;
+        private Panel workoutPreviewPanel;
         private Label prePanelLabel;
-        private PictureBox pictureBox1;
+        private PictureBox workoutPreviewPanelBorders;
         private PictureBox pictureBox2;
         private Panel preNextButtonPanel;
         private Krypton.Toolkit.KryptonButton preNextButton;
@@ -1795,5 +1940,9 @@
         private Panel nextButtPanel;
         private Krypton.Toolkit.KryptonButton nextButt7;
         private FlowLayoutPanel workoutsList;
+        private Label workoutPreviewLabel;
+        private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private PictureBox workoutPreviewClose;
+        private Label labelExercises;
     }
 }

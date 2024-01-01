@@ -42,7 +42,7 @@ namespace FitVitality
         private string height;
         private string goal;
         private string unit_selection;
-        public double bmi; 
+        public double bmi;
         //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public string _userID;
@@ -370,12 +370,12 @@ namespace FitVitality
             {
                 bmr = Math.Round(10 * Convert.ToDouble(weight) + 6.25 * Convert.ToDouble(height) - 5 * age - 161, 0);
             }
-            sedentaryBMR = Math.Round(bmr * 1.2,0);
-            exerciseBMR13 = Math.Round(bmr * 1.38,0);
-            exerciseBMR45 = Math.Round(bmr * 1.45,0);
-            DailyBMR34 = Math.Round(bmr * 1.55,0);
-            intenseBMR67 = Math.Round(bmr * 1.72,0);
-            veryIntenseBMR = Math.Round(bmr * 1.9,0);
+            sedentaryBMR = Math.Round(bmr * 1.2, 0);
+            exerciseBMR13 = Math.Round(bmr * 1.38, 0);
+            exerciseBMR45 = Math.Round(bmr * 1.45, 0);
+            DailyBMR34 = Math.Round(bmr * 1.55, 0);
+            intenseBMR67 = Math.Round(bmr * 1.72, 0);
+            veryIntenseBMR = Math.Round(bmr * 1.9, 0);
 
             currentBMR.Text = $"BMR = {bmr.ToString()} calories/day";
 

@@ -84,7 +84,7 @@
             labelExercises.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             labelExercises.Location = new Point(12, 48);
             labelExercises.Name = "labelExercises";
-            labelExercises.Size = new Size(276, 138);
+            labelExercises.Size = new Size(276, 125);
             labelExercises.TabIndex = 15;
             labelExercises.Text = "[MUSCLE GROUP] - [EXERCISES]";
             // 
@@ -165,7 +165,8 @@
             selectButton.StateTracking.Border.Rounding = 15F;
             selectButton.StateTracking.Border.Width = 1;
             selectButton.TabIndex = 13;
-            selectButton.Values.Text = "Select";
+            selectButton.Values.Text = "Preview";
+            selectButton.Click += selectButton_Click;
             // 
             // leftTopC
             // 

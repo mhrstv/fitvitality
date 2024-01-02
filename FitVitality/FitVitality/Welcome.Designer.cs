@@ -114,6 +114,11 @@
             timerAge7 = new System.Windows.Forms.Timer(components);
             timerName3 = new System.Windows.Forms.Timer(components);
             currentPage = new PictureBox();
+            errorPanel = new Panel();
+            errorClose = new PictureBox();
+            welcomeErrorLabel = new Label();
+            errorLabel = new Label();
+            welcomeError = new PictureBox();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
@@ -151,6 +156,9 @@
             ((System.ComponentModel.ISupportInitialize)buttonPrevious).BeginInit();
             panelWelcome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)currentPage).BeginInit();
+            errorPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)welcomeError).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -1007,12 +1015,71 @@
             currentPage.TabIndex = 31;
             currentPage.TabStop = false;
             // 
+            // errorPanel
+            // 
+            errorPanel.Controls.Add(errorClose);
+            errorPanel.Controls.Add(welcomeErrorLabel);
+            errorPanel.Controls.Add(errorLabel);
+            errorPanel.Controls.Add(welcomeError);
+            errorPanel.Location = new Point(230, 140);
+            errorPanel.Name = "errorPanel";
+            errorPanel.Size = new Size(230, 120);
+            errorPanel.TabIndex = 31;
+            errorPanel.Visible = false;
+            // 
+            // errorClose
+            // 
+            errorClose.BackColor = Color.WhiteSmoke;
+            errorClose.Image = Properties.Resources.closebutton;
+            errorClose.Location = new Point(202, 5);
+            errorClose.Name = "errorClose";
+            errorClose.Size = new Size(19, 19);
+            errorClose.SizeMode = PictureBoxSizeMode.Zoom;
+            errorClose.TabIndex = 34;
+            errorClose.TabStop = false;
+            errorClose.Click += pictureBox1_Click_1;
+            errorClose.MouseEnter += errorClose_MouseEnter;
+            errorClose.MouseLeave += errorClose_MouseLeave;
+            // 
+            // welcomeErrorLabel
+            // 
+            welcomeErrorLabel.AutoSize = true;
+            welcomeErrorLabel.BackColor = Color.WhiteSmoke;
+            welcomeErrorLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            welcomeErrorLabel.Location = new Point(42, 41);
+            welcomeErrorLabel.Name = "welcomeErrorLabel";
+            welcomeErrorLabel.Size = new Size(157, 36);
+            welcomeErrorLabel.TabIndex = 2;
+            welcomeErrorLabel.Text = "You have input incorrect\r\ndata!";
+            welcomeErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // errorLabel
+            // 
+            errorLabel.AutoSize = true;
+            errorLabel.BackColor = Color.WhiteSmoke;
+            errorLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            errorLabel.Location = new Point(96, 7);
+            errorLabel.Name = "errorLabel";
+            errorLabel.Size = new Size(44, 19);
+            errorLabel.TabIndex = 1;
+            errorLabel.Text = "Error";
+            // 
+            // welcomeError
+            // 
+            welcomeError.Image = Properties.Resources.welcomeError;
+            welcomeError.Location = new Point(0, 0);
+            welcomeError.Name = "welcomeError";
+            welcomeError.Size = new Size(230, 120);
+            welcomeError.TabIndex = 0;
+            welcomeError.TabStop = false;
+            // 
             // Welcome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
+            Controls.Add(errorPanel);
             Controls.Add(goalPanel);
             Controls.Add(ageGender_Panel);
             Controls.Add(weightHeight_Panel);
@@ -1078,6 +1145,10 @@
             ((System.ComponentModel.ISupportInitialize)buttonPrevious).EndInit();
             panelWelcome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)currentPage).EndInit();
+            errorPanel.ResumeLayout(false);
+            errorPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)welcomeError).EndInit();
             ResumeLayout(false);
         }
 
@@ -1169,5 +1240,10 @@
         private Label name_UsageLabel;
         private System.Windows.Forms.Timer timerName3;
         private PictureBox currentPage;
+        private Panel errorPanel;
+        private PictureBox welcomeError;
+        private Label welcomeErrorLabel;
+        private Label errorLabel;
+        private PictureBox errorClose;
     }
 }

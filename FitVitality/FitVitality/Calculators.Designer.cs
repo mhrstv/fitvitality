@@ -147,9 +147,9 @@
             carbsLabel = new Label();
             fatLabel = new Label();
             changeGoalLabel = new Label();
-            label2 = new Label();
+            activityLevelNeedLabel = new Label();
             macroCalcButton = new Krypton.Toolkit.KryptonButton();
-            label1 = new Label();
+            actLevelLabel = new Label();
             activityComboBoxMacro = new Krypton.Toolkit.KryptonComboBox();
             calorieIntake = new Label();
             buttonCloseMacroCalc = new PictureBox();
@@ -1834,9 +1834,9 @@
             macroCalcPanel.Controls.Add(carbsLabel);
             macroCalcPanel.Controls.Add(fatLabel);
             macroCalcPanel.Controls.Add(changeGoalLabel);
-            macroCalcPanel.Controls.Add(label2);
+            macroCalcPanel.Controls.Add(activityLevelNeedLabel);
             macroCalcPanel.Controls.Add(macroCalcButton);
-            macroCalcPanel.Controls.Add(label1);
+            macroCalcPanel.Controls.Add(actLevelLabel);
             macroCalcPanel.Controls.Add(activityComboBoxMacro);
             macroCalcPanel.Controls.Add(calorieIntake);
             macroCalcPanel.Controls.Add(buttonCloseMacroCalc);
@@ -2219,16 +2219,16 @@
             changeGoalLabel.TabIndex = 40;
             changeGoalLabel.Text = "You can change goal from settings!";
             // 
-            // label2
+            // activityLevelNeedLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Calibri", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlDarkDark;
-            label2.Location = new Point(17, 223);
-            label2.Name = "label2";
-            label2.Size = new Size(257, 14);
-            label2.TabIndex = 39;
-            label2.Text = "We will need your activity level for this calculation:";
+            activityLevelNeedLabel.AutoSize = true;
+            activityLevelNeedLabel.Font = new Font("Calibri", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            activityLevelNeedLabel.ForeColor = SystemColors.ControlDarkDark;
+            activityLevelNeedLabel.Location = new Point(17, 223);
+            activityLevelNeedLabel.Name = "activityLevelNeedLabel";
+            activityLevelNeedLabel.Size = new Size(257, 14);
+            activityLevelNeedLabel.TabIndex = 39;
+            activityLevelNeedLabel.Text = "We will need your activity level for this calculation:";
             // 
             // macroCalcButton
             // 
@@ -2300,16 +2300,16 @@
             macroCalcButton.Values.Text = "Calculate";
             macroCalcButton.Click += kryptonButton1_Click;
             // 
-            // label1
+            // actLevelLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlDarkDark;
-            label1.Location = new Point(23, 243);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 15);
-            label1.TabIndex = 37;
-            label1.Text = "Activity level:";
+            actLevelLabel.AutoSize = true;
+            actLevelLabel.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            actLevelLabel.ForeColor = SystemColors.ControlDarkDark;
+            actLevelLabel.Location = new Point(23, 243);
+            actLevelLabel.Name = "actLevelLabel";
+            actLevelLabel.Size = new Size(76, 15);
+            actLevelLabel.TabIndex = 37;
+            actLevelLabel.Text = "Activity level:";
             // 
             // activityComboBoxMacro
             // 
@@ -2599,7 +2599,7 @@
         private Label veryIntenseLabel;
         private Label intenseLabel;
         private Label dailyLabel;
-        private Label label2;
+        private Label activityLevelNeedLabel;
         private Label mildGainLabel;
         private Panel idealWeightCalcPanel;
         private Label changeGoalLabel;
@@ -2617,7 +2617,7 @@
         private Label macroCalcLabel;
         private PictureBox macroCalcBorders;
         private Krypton.Toolkit.KryptonButton macroCalcButton;
-        private Label label1;
+        private Label actLevelLabel;
         private Krypton.Toolkit.KryptonComboBox activityComboBoxMacro;
         private Krypton.Toolkit.KryptonButton balancedButton;
         private Label proteinLabel;

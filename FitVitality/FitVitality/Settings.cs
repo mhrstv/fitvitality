@@ -148,8 +148,8 @@ namespace FitVitality
                         deleteAccPanel.Visible = false;
                         Login login = new Login();
                         login.Show();
-                        this.ParentForm.Hide();
-                        
+                        this.Hide();
+
                     }
                 }
                 connection.Close();
@@ -298,7 +298,7 @@ namespace FitVitality
             }
             else
             {
-                MessageBox.Show("gg");
+                errorPanel.Visible = true;
             }
         }
 
@@ -318,6 +318,26 @@ namespace FitVitality
         private void weightTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void errorClose_Click(object sender, EventArgs e)
+        {
+            errorPanel.Visible = false;
+        }
+
+        private void errorClose_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void errorClose_MouseEnter(object sender, EventArgs e)
+        {
+            errorClose.BackColor = Color.IndianRed;
+        }
+
+        private void errorClose_MouseLeave(object sender, EventArgs e)
+        {
+            errorClose.BackColor = Color.WhiteSmoke;
         }
     }
 }

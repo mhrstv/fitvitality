@@ -14,17 +14,11 @@ namespace FitVitality
 {
     public partial class Calculators : Form
     {
-        string activity;
         double neck;
         double waist;
         double hips;
         double bodyFat;
         double bmr;
-        double weightLoss;
-        double mildWeightLoss;
-        double maintainWeight;
-        double weightGain;
-        double mildWeightGain;
         double sedentaryBMR;
         double exerciseBMR13;
         double exerciseBMR45;
@@ -35,7 +29,6 @@ namespace FitVitality
         double percentagesStudents;
         private float currentRotation;
         private readonly Image originalImage;
-        private string name;
         private int age;
         private string gender;
         private string weight;
@@ -43,6 +36,7 @@ namespace FitVitality
         private string goal;
         private string unit_selection;
         public double bmi;
+
         //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public string _userID;
@@ -60,7 +54,7 @@ namespace FitVitality
             if (goal == "Cut")
             {
                 activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
                 protein.Text = $"{activity * 0.25 / 4:f1}g/day";
                 fat.Text = $"{activity * 0.25 / 9:f1}g/day";
                 carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
@@ -76,7 +70,7 @@ namespace FitVitality
             if (goal == "Bulk")
             {
                 activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
                 protein.Text = $"{activity * 0.25 / 4:f1}g/day";
                 fat.Text = $"{activity * 0.25 / 9:f1}g/day";
                 carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
@@ -87,7 +81,7 @@ namespace FitVitality
             if (goal == "Cut")
             {
                 activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
                 protein.Text = $"{activity * 0.25 / 4:f1}g/day";
                 fat.Text = $"{activity * 0.2 / 9:f1}g/day";
                 carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
@@ -103,7 +97,7 @@ namespace FitVitality
             if (goal == "Bulk")
             {
                 activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
                 protein.Text = $"{activity * 0.25 / 4:f1}g/day";
                 fat.Text = $"{activity * 0.2 / 9:f1}g/day";
                 carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
@@ -114,7 +108,7 @@ namespace FitVitality
             if (goal == "Cut")
             {
                 activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
                 protein.Text = $"{activity * 0.3 / 4:f1}g/day";
                 fat.Text = $"{activity * 0.3 / 9:f1}g/day";
                 carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
@@ -130,7 +124,7 @@ namespace FitVitality
             if (goal == "Bulk")
             {
                 activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
                 protein.Text = $"{activity * 0.3 / 4:f1}g/day";
                 fat.Text = $"{activity * 0.3 / 9:f1}g/day";
                 carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
@@ -141,7 +135,7 @@ namespace FitVitality
             if (goal == "Cut")
             {
                 activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
                 protein.Text = $"{activity * 0.35 / 4:f1}g/day";
                 fat.Text = $"{activity * 0.2 / 9:f1}g/day";
                 carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
@@ -157,7 +151,7 @@ namespace FitVitality
             if (goal == "Bulk")
             {
                 activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
                 protein.Text = $"{activity * 0.35 / 4:f1}g/day";
                 fat.Text = $"{activity * 0.2 / 9:f1}g/day";
                 carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
@@ -250,7 +244,6 @@ namespace FitVitality
                     {
                         if (reader.Read())
                         {
-                            name = reader["Name"].ToString();
                             age = int.Parse(reader["Age"].ToString());
                             if (reader["Gender"].ToString() == "Male")
                             {
@@ -422,9 +415,6 @@ namespace FitVitality
             {
                 idealWeight.Text = Math.Round(49 + ((double.Parse(height) - 152.4) / 2.54 * 1.7), 0).ToString() + "kg";
             }
-
-            //Macro Calculator
-
         }
         private void checkBodyFatInputs(object sender, EventArgs e)
         {
@@ -451,7 +441,6 @@ namespace FitVitality
                     {
                         if (reader.Read())
                         {
-                            name = reader["Name"].ToString();
                             age = int.Parse(reader["Age"].ToString());
                             if (reader["Gender"].ToString() == "Male")
                             {

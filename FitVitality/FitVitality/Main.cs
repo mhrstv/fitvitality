@@ -243,7 +243,7 @@ namespace FitVitality
         {
             if (nutrition_Opened == false)
             {
-                loadForm(new Diet());
+                loadForm(new Diet(_userID));
                 dashboard_Opened = false;
                 calculators_Opened = false;
                 workouts_Opened = false;

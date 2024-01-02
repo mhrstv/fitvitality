@@ -359,7 +359,7 @@ namespace FitVitality
             }
             else
             {
-                MessageBox.Show("gg");
+                errorPanel.Visible = true;
             }
         }
 
@@ -790,6 +790,21 @@ namespace FitVitality
             {
                 timerName3.Enabled = false; // Изключване на таймера
             }
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            errorPanel.Visible = false;
+        }
+
+        private void errorClose_MouseEnter(object sender, EventArgs e)
+        {
+            errorClose.BackColor = Color.IndianRed;
+        }
+
+        private void errorClose_MouseLeave(object sender, EventArgs e)
+        {
+            errorClose.BackColor = Color.WhiteSmoke;
         }
     }
 }

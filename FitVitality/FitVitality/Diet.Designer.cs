@@ -56,6 +56,7 @@
             cLabel = new Label();
             pLabel = new Label();
             fLabel = new Label();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -410,12 +411,22 @@
             fLabel.TextAlign = ContentAlignment.MiddleCenter;
             fLabel.Visible = false;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(247, 142);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(197, 192);
+            flowLayoutPanel1.TabIndex = 51;
+            // 
             // Diet
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(fLabel);
             Controls.Add(pLabel);
             Controls.Add(cLabel);
@@ -495,5 +506,6 @@
         private Label cLabel;
         private Label pLabel;
         private Label fLabel;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }

@@ -16,11 +16,11 @@ namespace FitVitality
 {
     public partial class Welcome : KryptonForm
     {
-        List<Panel> listPanels = new List<Panel>(); // Създаване на лист от панели (съответно страниците във формата)
-        int page = 0; // Променлива за сегашната страница
+        List<Panel> listPanels = new List<Panel>();
+        int page = 0;
 
-        private bool mouseDown; // Променлива за проверка дали е натиснат бутон на мишката
-        private Point lastLocation; // Променлива за последната позиция на мишката
+        private bool mouseDown;
+        private Point lastLocation;
 
 
         private bool female_Clicked = false; // Променлива за проверка дали е натиснат бутона за женски пол
@@ -246,7 +246,11 @@ namespace FitVitality
                     return false; // Връща false ако името съдържа символи различни от букви
                 }
             }
-            return true; // Връща true ако името съдържа само букви
+            if (name.Length < 3 || name.Length > 20)
+            {
+                return false;
+            }
+            return true;
         }
         private bool validAge(string age) // Метод за проверка на въведената възраст
         {

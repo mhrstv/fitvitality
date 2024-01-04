@@ -148,7 +148,7 @@ namespace FitVitality
                         deleteAccPanel.Visible = false;
                         Login login = new Login();
                         login.Show();
-                        this.Hide();
+                        this.ParentForm.Hide();
 
                     }
                 }

@@ -303,6 +303,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap closeFoodItem {
+            get {
+                object obj = ResourceManager.GetObject("closeFoodItem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap core {
             get {
                 object obj = ResourceManager.GetObject("core", resourceCulture);
@@ -356,6 +366,16 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap createSelected {
             get {
                 object obj = ResourceManager.GetObject("createSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cross_close_icon_free_png {
+            get {
+                object obj = ResourceManager.GetObject("cross-close-icon-free-png", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

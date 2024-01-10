@@ -34,9 +34,11 @@
             fLabel = new Label();
             foodNameLabel = new Label();
             label_g = new Label();
-            kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            textBoxGrams = new Krypton.Toolkit.KryptonTextBox();
             caloriesLabel = new Label();
+            removeFoodItem = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)foodImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)removeFoodItem).BeginInit();
             SuspendLayout();
             // 
             // foodImage
@@ -76,9 +78,9 @@
             // 
             // foodNameLabel
             // 
-            foodNameLabel.Location = new Point(94, 8);
+            foodNameLabel.Location = new Point(101, 23);
             foodNameLabel.Name = "foodNameLabel";
-            foodNameLabel.Size = new Size(100, 15);
+            foodNameLabel.Size = new Size(93, 15);
             foodNameLabel.TabIndex = 4;
             foodNameLabel.Text = "Name";
             foodNameLabel.TextAlign = ContentAlignment.TopRight;
@@ -92,15 +94,15 @@
             label_g.TabIndex = 6;
             label_g.Text = "g";
             // 
-            // kryptonTextBox1
+            // textBoxGrams
             // 
-            kryptonTextBox1.CueHint.CueHintText = "100";
-            kryptonTextBox1.CueHint.Padding = new Padding(0);
-            kryptonTextBox1.Location = new Point(150, 48);
-            kryptonTextBox1.MaxLength = 4;
-            kryptonTextBox1.Name = "kryptonTextBox1";
-            kryptonTextBox1.Size = new Size(31, 23);
-            kryptonTextBox1.TabIndex = 7;
+            textBoxGrams.CueHint.CueHintText = "100";
+            textBoxGrams.CueHint.Padding = new Padding(0);
+            textBoxGrams.Location = new Point(150, 48);
+            textBoxGrams.MaxLength = 4;
+            textBoxGrams.Name = "textBoxGrams";
+            textBoxGrams.Size = new Size(31, 23);
+            textBoxGrams.TabIndex = 7;
             // 
             // caloriesLabel
             // 
@@ -111,12 +113,26 @@
             caloriesLabel.TabIndex = 8;
             caloriesLabel.Text = "kCal:";
             // 
+            // removeFoodItem
+            // 
+            removeFoodItem.Image = Properties.Resources.closeFoodItem;
+            removeFoodItem.Location = new Point(179, 4);
+            removeFoodItem.Name = "removeFoodItem";
+            removeFoodItem.Size = new Size(12, 12);
+            removeFoodItem.SizeMode = PictureBoxSizeMode.Zoom;
+            removeFoodItem.TabIndex = 9;
+            removeFoodItem.TabStop = false;
+            removeFoodItem.Click += pictureBox1_Click;
+            removeFoodItem.MouseEnter += removeFoodItem_MouseEnter;
+            removeFoodItem.MouseLeave += removeFoodItem_MouseLeave;
+            // 
             // FoodItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(removeFoodItem);
             Controls.Add(caloriesLabel);
-            Controls.Add(kryptonTextBox1);
+            Controls.Add(textBoxGrams);
             Controls.Add(label_g);
             Controls.Add(foodNameLabel);
             Controls.Add(fLabel);
@@ -126,6 +142,7 @@
             Name = "FoodItem";
             Size = new Size(197, 74);
             ((System.ComponentModel.ISupportInitialize)foodImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)removeFoodItem).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -138,7 +155,8 @@
         private Label fLabel;
         private Label foodNameLabel;
         private Label label_g;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonTextBox textBoxGrams;
         private Label caloriesLabel;
+        private PictureBox removeFoodItem;
     }
 }

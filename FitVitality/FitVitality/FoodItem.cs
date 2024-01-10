@@ -24,6 +24,22 @@ namespace FitVitality
         private int _foodCarbs;
         private int _foodFat;
         private Image _foodImage;
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removeFoodItem_MouseEnter(object sender, EventArgs e)
+        {
+            removeFoodItem.BackColor = Color.FromArgb(182, 105, 105);
+        }
+
+        private void removeFoodItem_MouseLeave(object sender, EventArgs e)
+        {
+            removeFoodItem.BackColor = Color.Transparent;
+        }
+
         [Category("Custom Props")]
         public string FoodName
         {

@@ -50,31 +50,31 @@ namespace FitVitality
         public int FoodCalories
         {
             get { return _foodCalories; }
-            set { _foodCalories = value; caloriesLabel.Text = "kCal" + value.ToString(); }
+            set { _foodCalories = value; caloriesLabel.Text = "kCal:" + value.ToString(); }
         }
         [Category("Custom Props")]
         public int FoodProtein
         {
             get { return _foodProtein; }
-            set { _foodProtein = value; pLabel.Text = "P:" + value.ToString(); }
+            set { _foodProtein = value; pLabel.Text = "P:" + value.ToString() + "g"; }
         }
         [Category("Custom Props")]
         public int FoodCarbs
         {
             get { return _foodCarbs; }
-            set { _foodCarbs = value; cLabel.Text = "C:" + value.ToString(); }
+            set { _foodCarbs = value; cLabel.Text = "C:" + value.ToString() + "g"; }
         }
         [Category("Custom Props")]
         public int FoodFat
         {
             get { return _foodFat; }
-            set { _foodFat = value; fLabel.Text = "F:" + value.ToString(); }
+            set { _foodFat = value; fLabel.Text = "F:" + value.ToString() + "g"; }
         }
         [Category("Custom Props")]
-        public Image FoodImage
+        public string FoodImage
         {
-            get { return foodImage.Image; }
-            set { foodImage.Image = value; }
+            get { return foodImage.ImageLocation; }
+            set { foodImage.ImageLocation = value; }
         }
         #endregion
     }

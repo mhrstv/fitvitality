@@ -6,10 +6,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+using System.IO;
+using System.Drawing.Imaging;
+using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace FitVitality
 {
@@ -164,6 +171,7 @@ namespace FitVitality
                 item.FoodProtein = 100;
                 item.FoodFat = 23;
                 item.FoodCarbs = 86;
+                item.FoodImage = "http://imgur.com/vfop1Ct";
                 items.Add(item);
                 foodPanel.Controls.Add(item);
             }

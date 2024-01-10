@@ -37,8 +37,16 @@
             textBoxGrams = new Krypton.Toolkit.KryptonTextBox();
             caloriesLabel = new Label();
             removeFoodItem = new PictureBox();
+            borderLeft = new PictureBox();
+            borderRight = new PictureBox();
+            hLine1 = new PictureBox();
+            hLine2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)foodImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)removeFoodItem).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)borderLeft).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)borderRight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             SuspendLayout();
             // 
             // foodImage
@@ -46,6 +54,7 @@
             foodImage.Location = new Point(9, 12);
             foodImage.Name = "foodImage";
             foodImage.Size = new Size(50, 50);
+            foodImage.SizeMode = PictureBoxSizeMode.Zoom;
             foodImage.TabIndex = 0;
             foodImage.TabStop = false;
             // 
@@ -78,9 +87,9 @@
             // 
             // foodNameLabel
             // 
-            foodNameLabel.Location = new Point(101, 23);
+            foodNameLabel.Location = new Point(104, 23);
             foodNameLabel.Name = "foodNameLabel";
-            foodNameLabel.Size = new Size(93, 15);
+            foodNameLabel.Size = new Size(90, 15);
             foodNameLabel.TabIndex = 4;
             foodNameLabel.Text = "Name";
             foodNameLabel.TextAlign = ContentAlignment.TopRight;
@@ -116,7 +125,7 @@
             // removeFoodItem
             // 
             removeFoodItem.Image = Properties.Resources.closeFoodItem;
-            removeFoodItem.Location = new Point(179, 4);
+            removeFoodItem.Location = new Point(176, 4);
             removeFoodItem.Name = "removeFoodItem";
             removeFoodItem.Size = new Size(12, 12);
             removeFoodItem.SizeMode = PictureBoxSizeMode.Zoom;
@@ -126,10 +135,50 @@
             removeFoodItem.MouseEnter += removeFoodItem_MouseEnter;
             removeFoodItem.MouseLeave += removeFoodItem_MouseLeave;
             // 
+            // borderLeft
+            // 
+            borderLeft.Image = Properties.Resources.vline;
+            borderLeft.Location = new Point(0, -2);
+            borderLeft.Name = "borderLeft";
+            borderLeft.Size = new Size(1, 76);
+            borderLeft.TabIndex = 23;
+            borderLeft.TabStop = false;
+            // 
+            // borderRight
+            // 
+            borderRight.Image = Properties.Resources.vline;
+            borderRight.Location = new Point(192, -1);
+            borderRight.Name = "borderRight";
+            borderRight.Size = new Size(1, 76);
+            borderRight.TabIndex = 24;
+            borderRight.TabStop = false;
+            // 
+            // hLine1
+            // 
+            hLine1.Image = Properties.Resources.hLine;
+            hLine1.Location = new Point(0, 0);
+            hLine1.Name = "hLine1";
+            hLine1.Size = new Size(193, 1);
+            hLine1.TabIndex = 25;
+            hLine1.TabStop = false;
+            // 
+            // hLine2
+            // 
+            hLine2.Image = Properties.Resources.hLine;
+            hLine2.Location = new Point(0, 73);
+            hLine2.Name = "hLine2";
+            hLine2.Size = new Size(193, 1);
+            hLine2.TabIndex = 26;
+            hLine2.TabStop = false;
+            // 
             // FoodItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(hLine2);
+            Controls.Add(hLine1);
+            Controls.Add(borderRight);
+            Controls.Add(borderLeft);
             Controls.Add(removeFoodItem);
             Controls.Add(caloriesLabel);
             Controls.Add(textBoxGrams);
@@ -140,9 +189,13 @@
             Controls.Add(cLabel);
             Controls.Add(foodImage);
             Name = "FoodItem";
-            Size = new Size(197, 74);
+            Size = new Size(193, 74);
             ((System.ComponentModel.ISupportInitialize)foodImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)removeFoodItem).EndInit();
+            ((System.ComponentModel.ISupportInitialize)borderLeft).EndInit();
+            ((System.ComponentModel.ISupportInitialize)borderRight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -158,5 +211,9 @@
         private Krypton.Toolkit.KryptonTextBox textBoxGrams;
         private Label caloriesLabel;
         private PictureBox removeFoodItem;
+        private PictureBox borderLeft;
+        private PictureBox borderRight;
+        private PictureBox hLine1;
+        private PictureBox hLine2;
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
+            foodImage = new PictureBox();
             cLabel = new Label();
             pLabel = new Label();
             fLabel = new Label();
@@ -36,16 +36,16 @@
             label_g = new Label();
             kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             caloriesLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)foodImage).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // foodImage
             // 
-            pictureBox1.Location = new Point(9, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(50, 50);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            foodImage.Location = new Point(9, 12);
+            foodImage.Name = "foodImage";
+            foodImage.Size = new Size(50, 50);
+            foodImage.TabIndex = 0;
+            foodImage.TabStop = false;
             // 
             // cLabel
             // 
@@ -122,17 +122,17 @@
             Controls.Add(fLabel);
             Controls.Add(pLabel);
             Controls.Add(cLabel);
-            Controls.Add(pictureBox1);
+            Controls.Add(foodImage);
             Name = "FoodItem";
             Size = new Size(197, 74);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)foodImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox foodImage;
         private Label cLabel;
         private Label pLabel;
         private Label fLabel;

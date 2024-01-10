@@ -738,12 +738,12 @@ namespace FitVitality
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
             cardioPanel.Visible = false;
-            if(preClicked)
+            if (preClicked)
             {
                 workoutsList.Visible = true;
                 addGymWorkouts();
             }
-            else if(createClicked)
+            else if (createClicked)
             {
                 muscleGroupPanel.Visible = true;
             }
@@ -1164,7 +1164,7 @@ namespace FitVitality
         {
             workoutPreviewPanel.Visible = true;
             workoutPreviewPanel.BringToFront();
-            workoutPreviewLabel.Text = $"Workout {i+1}";
+            workoutPreviewLabel.Text = $"Workout {i + 1}";
             if (homeClicked)
             {
                 labelExercises.Text = $"[Back and Biceps]: {backbicepsHome[i]}\n[Chest, Triceps and Shoulders]: {chesttricepsshouldersHome[i]}\n\n" +
@@ -1177,6 +1177,11 @@ namespace FitVitality
                 $"[Legs]: {legsOutdoors[i]}\n\n" +
                 $"[Core]: {coreOutdoors[i]}";
             }
+        }
+
+        private void kryptonButton1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

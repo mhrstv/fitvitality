@@ -155,6 +155,18 @@ namespace FitVitality
         }
         private void Diet_Load(object sender, EventArgs e)
         {
+            List<FoodItem> items = new List<FoodItem>();
+            for (int i = 0; i < 3; i++)
+            {
+                FoodItem item = new FoodItem();
+                item.FoodName = "Egg";
+                item.FoodCalories = 133;
+                item.FoodProtein = 100;
+                item.FoodFat = 23;
+                item.FoodCarbs = 86;
+                items.Add(item);
+                foodPanel.Controls.Add(item);
+            }
             var cfg = new Config("FitVitality.ini");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

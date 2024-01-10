@@ -23,6 +23,7 @@ namespace FitVitality
         private int _foodProtein;
         private int _foodCarbs;
         private int _foodFat;
+        private Image _foodImage;
         [Category("Custom Props")]
         public string FoodName
         {
@@ -52,6 +53,12 @@ namespace FitVitality
         {
             get { return _foodFat; }
             set { _foodFat = value; fLabel.Text = "F:" + value.ToString(); }
+        }
+        [Category("Custom Props")]
+        public Image FoodImage
+        {
+            get { return foodImage.Image; }
+            set { foodImage.Image = value; }
         }
         #endregion
     }

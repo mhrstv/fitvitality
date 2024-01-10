@@ -1745,6 +1745,7 @@
             kryptonButton1.StateTracking.Border.Width = 1;
             kryptonButton1.TabIndex = 31;
             kryptonButton1.Values.Text = "Select";
+            kryptonButton1.Click += kryptonButton1_Click_1;
             // 
             // workoutPreviewPanelBorders
             // 

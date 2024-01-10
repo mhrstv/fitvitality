@@ -56,7 +56,7 @@
             cLabel = new Label();
             pLabel = new Label();
             fLabel = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            foodPanel = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -130,7 +130,7 @@
             // 
             dietLabel.AutoSize = true;
             dietLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dietLabel.Location = new Point(320, 22);
+            dietLabel.Location = new Point(320, 12);
             dietLabel.Name = "dietLabel";
             dietLabel.Size = new Size(51, 24);
             dietLabel.TabIndex = 21;
@@ -171,11 +171,11 @@
             addFoodLabel.AutoSize = true;
             addFoodLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             addFoodLabel.ForeColor = Color.FromArgb(92, 225, 230);
-            addFoodLabel.Location = new Point(309, 57);
+            addFoodLabel.Location = new Point(297, 48);
             addFoodLabel.Name = "addFoodLabel";
-            addFoodLabel.Size = new Size(73, 19);
+            addFoodLabel.Size = new Size(96, 19);
             addFoodLabel.TabIndex = 26;
-            addFoodLabel.Text = "Add food";
+            addFoodLabel.Text = "Today's food";
             addFoodLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // calorieIntake
@@ -411,14 +411,13 @@
             fLabel.TextAlign = ContentAlignment.MiddleCenter;
             fLabel.Visible = false;
             // 
-            // flowLayoutPanel1
+            // foodPanel
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(247, 142);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(197, 192);
-            flowLayoutPanel1.TabIndex = 51;
+            foodPanel.AutoScroll = true;
+            foodPanel.Location = new Point(226, 133);
+            foodPanel.Name = "foodPanel";
+            foodPanel.Size = new Size(241, 201);
+            foodPanel.TabIndex = 51;
             // 
             // Diet
             // 
@@ -426,7 +425,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(foodPanel);
             Controls.Add(fLabel);
             Controls.Add(pLabel);
             Controls.Add(cLabel);
@@ -506,6 +505,6 @@
         private Label cLabel;
         private Label pLabel;
         private Label fLabel;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel foodPanel;
     }
 }

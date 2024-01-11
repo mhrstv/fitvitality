@@ -17,6 +17,7 @@ using System.IO;
 using System.Drawing.Imaging;
 using System.Text.RegularExpressions;
 using System.Drawing;
+using System.Diagnostics.Eventing.Reader;
 
 namespace FitVitality
 {
@@ -46,6 +47,9 @@ namespace FitVitality
         //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public string _userID;
+
+        List<SearchFoodItem> searchFoodItems = new List<SearchFoodItem>();
+        List<FoodItem> foodItems = new List<FoodItem>();
         public Diet(string UserID)
         {
             InitializeComponent();
@@ -162,19 +166,6 @@ namespace FitVitality
         }
         private void Diet_Load(object sender, EventArgs e)
         {
-            List<FoodItem> items = new List<FoodItem>();
-            for (int i = 0; i < 3; i++)
-            {
-                FoodItem item = new FoodItem();
-                item.FoodName = "Egg";
-                item.FoodCalories = 133;
-                item.FoodProtein = 100;
-                item.FoodFat = 23;
-                item.FoodCarbs = 86;
-                item.FoodImage = "http://imgur.com/vfop1Ct";
-                items.Add(item);
-                foodPanel.Controls.Add(item);
-            }
             var cfg = new Config("FitVitality.ini");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -289,6 +280,7 @@ namespace FitVitality
 
         private void balancedButton_Click(object sender, EventArgs e)
         {
+            ifSearchNotClicked(sender, e);
             balancedButton.Image = Properties.Resources.balancedSelected;
             highProteinButton.Image = Properties.Resources.highProtein;
             lowFatButton.Image = Properties.Resources.lowFat;
@@ -325,6 +317,7 @@ namespace FitVitality
 
         private void highProteinButton_Click(object sender, EventArgs e)
         {
+            ifSearchNotClicked(sender, e);
             balancedButton.Image = Properties.Resources.balanced;
             highProteinButton.Image = Properties.Resources.highProteinSelected;
             lowFatButton.Image = Properties.Resources.lowFat;
@@ -361,6 +354,7 @@ namespace FitVitality
 
         private void lowFatButton_Click(object sender, EventArgs e)
         {
+            ifSearchNotClicked(sender, e);
             balancedButton.Image = Properties.Resources.balanced;
             highProteinButton.Image = Properties.Resources.highProtein;
             lowFatButton.Image = Properties.Resources.lowFatSelected;
@@ -397,6 +391,7 @@ namespace FitVitality
 
         private void lowCarbsButton_Click(object sender, EventArgs e)
         {
+            ifSearchNotClicked(sender, e);
             balancedButton.Image = Properties.Resources.balanced;
             highProteinButton.Image = Properties.Resources.highProtein;
             lowFatButton.Image = Properties.Resources.lowFat;
@@ -492,6 +487,244 @@ namespace FitVitality
             if (!lowCarbsClicked)
             {
                 lowCarbsButton.Image = Properties.Resources.lowCarbs;
+            }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void searchIcon_Click(object sender, EventArgs e)
+        {
+            if (searchPanel.Visible != true && searchTextBox.Text != "")
+            {
+                searchPanel.Controls.Clear();
+                searchFoodItems.Clear();
+                string keyword = searchTextBox.Text;
+                using(SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT * FROM FoodItems WHERE Name LIKE @keyword";
+                    using(SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                        connection.Open();
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                searchPanel.Visible = true;
+                                SearchFoodItem searchFoodItem = new SearchFoodItem();
+                                searchFoodItem.FoodName = reader["Name"].ToString();
+                                searchFoodItem.FoodCalories = double.Parse(reader["Calories"].ToString());
+                                searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
+                                searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
+                                searchFoodItem.FoodFat = double.Parse(reader["Fat"].ToString());
+                                //searchFoodItem.FoodImage = reader["Image"].ToString();
+                                searchFoodItems.Add(searchFoodItem);
+                            }
+                        }
+                    }
+                }
+                searchPanel.Height = 0;
+                for (int i = 0; i < searchFoodItems.Count; i++)
+                {
+                    string foodName = searchFoodItems[i].FoodName;
+                    double foodCalories = searchFoodItems[i].FoodCalories;
+                    double foodProtein = searchFoodItems[i].FoodProtein;
+                    double foodCarbs = searchFoodItems[i].FoodCarbs;
+                    double foodFat = searchFoodItems[i].FoodFat;
+                    //string foodImage = searchFoodItems[i].FoodImage;
+                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodCalories, foodProtein, foodCarbs, foodFat/*, foodImage*/);
+                    if (searchPanel.Height < 120)
+                    {
+                        searchPanel.Height += 40;
+                    }
+                    searchPanel.Controls.Add(searchFoodItems[i]);
+                }
+            }
+            else if(searchPanel.Visible == true && searchTextBox.Text != "")
+            {
+                searchPanel.Controls.Clear();
+                searchFoodItems.Clear();
+                string keyword = searchTextBox.Text;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "SELECT * FROM FoodItems WHERE Name LIKE @keyword";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+    
+                                SearchFoodItem searchFoodItem = new SearchFoodItem();
+                                searchFoodItem.FoodName = reader["Name"].ToString();
+                                searchFoodItem.FoodCalories = double.Parse(reader["Calories"].ToString());
+                                searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
+                                searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
+                                searchFoodItem.FoodFat = double.Parse(reader["Fat"].ToString());
+                                //searchFoodItem.FoodImage = reader["Image"].ToString();
+                                searchFoodItems.Add(searchFoodItem);
+                            }
+                        }
+                    }
+                }
+                searchPanel.Height = 0;
+                for (int i = 0; i < searchFoodItems.Count; i++)
+                {
+                    string foodName = searchFoodItems[i].FoodName;
+                    double foodCalories = searchFoodItems[i].FoodCalories;
+                    double foodProtein = searchFoodItems[i].FoodProtein;
+                    double foodCarbs = searchFoodItems[i].FoodCarbs;
+                    double foodFat = searchFoodItems[i].FoodFat;
+                    //string foodImage = searchFoodItems[i].FoodImage;
+                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodCalories, foodProtein, foodCarbs, foodFat/*, foodImage*/);
+                    if (searchPanel.Height < 120)
+                    {
+                        searchPanel.Height += 40;
+                    }
+                    searchPanel.Controls.Add(searchFoodItems[i]);
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private void searchPanel_Leave(object sender, EventArgs e)
+        {
+
+        }
+        private void ifSearchNotClicked(object sender, EventArgs e)
+        {
+            searchPanel.Visible = false;
+            searchFoodItems.Clear();
+            searchPanel.Controls.Clear();
+        }
+
+        private void foodPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void foodPanel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void Diet_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void macroАbbreviation_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void manageGoalDescription_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void activityLevelLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void activityComboBoxMacro_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void manageGoalLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void addFoodLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void dailyGoalLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void dietLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void kCalLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void calorieIntake_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void cLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void carbohydrates_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void pLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void protein_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void fLabel_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+
+        private void fat_Click(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
+        }
+        private void searchFoodItem_Click(object sender, EventArgs e, string name, double calories, double protein, double carbs, double fat/*,string image*/)
+        {
+            searchPanel.Visible = false;
+            searchFoodItems.Clear();
+            searchPanel.Controls.Clear();
+            FoodItem foodItem = new FoodItem();
+            foodItem.FoodName = name;
+            foodItem.FoodCalories = calories;
+            foodItem.FoodProtein = protein;
+            foodItem.FoodCarbs = carbs;
+            foodItem.FoodFat = fat;
+            //foodItem.FoodImage = image;
+            foodItem.ButtonClicked += (sender, e) => foodItem_Click(sender, e);
+            foodPanel.Controls.Add(foodItem);
+            foodItems.Add(foodItem);
+        }
+        private void foodItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < foodItems.Count; i++)
+            {
+                if (foodItems[i].Equals(sender))
+                {
+                    foodItems.RemoveAt(i);
+                    foodPanel.Controls.RemoveAt(i);
+                }
             }
         }
     }

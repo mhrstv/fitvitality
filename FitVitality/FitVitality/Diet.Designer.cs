@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diet));
             leftC = new PictureBox();
             rightC = new PictureBox();
             vLine1 = new PictureBox();
@@ -57,6 +58,9 @@
             pLabel = new Label();
             fLabel = new Label();
             foodPanel = new FlowLayoutPanel();
+            searchTextBox = new Krypton.Toolkit.KryptonTextBox();
+            searchIcon = new PictureBox();
+            searchPanel = new FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -70,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)highProteinButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lowCarbsButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lowFatButton).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)searchIcon).BeginInit();
             SuspendLayout();
             // 
             // leftC
@@ -135,6 +140,7 @@
             dietLabel.Size = new Size(51, 24);
             dietLabel.TabIndex = 21;
             dietLabel.Text = "Diet";
+            dietLabel.Click += dietLabel_Click;
             // 
             // dietBorder2
             // 
@@ -165,6 +171,7 @@
             dailyGoalLabel.TabIndex = 24;
             dailyGoalLabel.Text = "Daily \r\nGoal";
             dailyGoalLabel.TextAlign = ContentAlignment.MiddleCenter;
+            dailyGoalLabel.Click += dailyGoalLabel_Click;
             // 
             // addFoodLabel
             // 
@@ -177,6 +184,7 @@
             addFoodLabel.TabIndex = 26;
             addFoodLabel.Text = "Today's food";
             addFoodLabel.TextAlign = ContentAlignment.MiddleCenter;
+            addFoodLabel.Click += addFoodLabel_Click;
             // 
             // calorieIntake
             // 
@@ -190,6 +198,7 @@
             calorieIntake.Text = "#/#";
             calorieIntake.TextAlign = ContentAlignment.MiddleCenter;
             calorieIntake.Visible = false;
+            calorieIntake.Click += calorieIntake_Click;
             // 
             // carbohydrates
             // 
@@ -203,6 +212,7 @@
             carbohydrates.Text = "#/#";
             carbohydrates.TextAlign = ContentAlignment.MiddleCenter;
             carbohydrates.Visible = false;
+            carbohydrates.Click += carbohydrates_Click;
             // 
             // fat
             // 
@@ -216,6 +226,7 @@
             fat.Text = "#/#";
             fat.TextAlign = ContentAlignment.MiddleCenter;
             fat.Visible = false;
+            fat.Click += fat_Click;
             // 
             // protein
             // 
@@ -229,6 +240,7 @@
             protein.Text = "#/#";
             protein.TextAlign = ContentAlignment.MiddleCenter;
             protein.Visible = false;
+            protein.Click += protein_Click;
             // 
             // macroАbbreviation
             // 
@@ -241,6 +253,7 @@
             macroАbbreviation.TabIndex = 31;
             macroАbbreviation.Text = "C -  Carbohydrates, P - Protein, F - Fats";
             macroАbbreviation.TextAlign = ContentAlignment.MiddleCenter;
+            macroАbbreviation.Click += macroАbbreviation_Click;
             // 
             // manageGoalDescription
             // 
@@ -251,6 +264,7 @@
             manageGoalDescription.Size = new Size(159, 60);
             manageGoalDescription.TabIndex = 38;
             manageGoalDescription.Text = "In this section you enter your \r\ngoal and activity depending \r\non your busyness and dream\r\nphysique.";
+            manageGoalDescription.Click += manageGoalDescription_Click;
             // 
             // manageGoalLabel
             // 
@@ -263,6 +277,7 @@
             manageGoalLabel.TabIndex = 39;
             manageGoalLabel.Text = "Manage \r\nGoal";
             manageGoalLabel.TextAlign = ContentAlignment.MiddleCenter;
+            manageGoalLabel.Click += manageGoalLabel_Click;
             // 
             // activityComboBoxMacro
             // 
@@ -294,6 +309,7 @@
             activityComboBoxMacro.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             activityComboBoxMacro.TabIndex = 40;
             activityComboBoxMacro.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
+            activityComboBoxMacro.Click += activityComboBoxMacro_Click;
             // 
             // activityLevelLabel
             // 
@@ -306,6 +322,7 @@
             activityLevelLabel.TabIndex = 42;
             activityLevelLabel.Text = "Activity level:";
             activityLevelLabel.TextAlign = ContentAlignment.MiddleCenter;
+            activityLevelLabel.Click += activityLevelLabel_Click;
             // 
             // balancedButton
             // 
@@ -371,6 +388,7 @@
             kCalLabel.Text = "kCal = ";
             kCalLabel.TextAlign = ContentAlignment.MiddleCenter;
             kCalLabel.Visible = false;
+            kCalLabel.Click += kCalLabel_Click;
             // 
             // cLabel
             // 
@@ -384,6 +402,7 @@
             cLabel.Text = "C = ";
             cLabel.TextAlign = ContentAlignment.MiddleCenter;
             cLabel.Visible = false;
+            cLabel.Click += cLabel_Click;
             // 
             // pLabel
             // 
@@ -397,6 +416,7 @@
             pLabel.Text = "P = ";
             pLabel.TextAlign = ContentAlignment.MiddleCenter;
             pLabel.Visible = false;
+            pLabel.Click += pLabel_Click;
             // 
             // fLabel
             // 
@@ -410,6 +430,7 @@
             fLabel.Text = "F = ";
             fLabel.TextAlign = ContentAlignment.MiddleCenter;
             fLabel.Visible = false;
+            fLabel.Click += fLabel_Click;
             // 
             // foodPanel
             // 
@@ -419,6 +440,42 @@
             foodPanel.Name = "foodPanel";
             foodPanel.Size = new Size(225, 201);
             foodPanel.TabIndex = 51;
+            foodPanel.Click += foodPanel_Click;
+            foodPanel.Paint += foodPanel_Paint;
+            // 
+            // searchTextBox
+            // 
+            searchTextBox.Location = new Point(232, 77);
+            searchTextBox.MaxLength = 28;
+            searchTextBox.Name = "searchTextBox";
+            searchTextBox.Size = new Size(225, 33);
+            searchTextBox.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            searchTextBox.StateCommon.Border.Rounding = 15F;
+            searchTextBox.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            searchTextBox.StateNormal.Border.Rounding = 15F;
+            searchTextBox.TabIndex = 52;
+            // 
+            // searchIcon
+            // 
+            searchIcon.Image = (Image)resources.GetObject("searchIcon.Image");
+            searchIcon.Location = new Point(425, 81);
+            searchIcon.Name = "searchIcon";
+            searchIcon.Size = new Size(24, 25);
+            searchIcon.SizeMode = PictureBoxSizeMode.Zoom;
+            searchIcon.TabIndex = 53;
+            searchIcon.TabStop = false;
+            searchIcon.Click += searchIcon_Click;
+            // 
+            // searchPanel
+            // 
+            searchPanel.AutoScroll = true;
+            searchPanel.Location = new Point(237, 110);
+            searchPanel.Name = "searchPanel";
+            searchPanel.Size = new Size(216, 125);
+            searchPanel.TabIndex = 54;
+            searchPanel.Visible = false;
+            searchPanel.Paint += flowLayoutPanel1_Paint;
+            searchPanel.Leave += searchPanel_Leave;
             // 
             // Diet
             // 
@@ -426,6 +483,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(searchPanel);
+            Controls.Add(searchIcon);
+            Controls.Add(searchTextBox);
             Controls.Add(foodPanel);
             Controls.Add(fLabel);
             Controls.Add(pLabel);
@@ -459,6 +519,7 @@
             Name = "Diet";
             Text = "Diet";
             Load += Diet_Load;
+            Click += Diet_Click;
             ((System.ComponentModel.ISupportInitialize)leftC).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightC).EndInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).EndInit();
@@ -472,6 +533,7 @@
             ((System.ComponentModel.ISupportInitialize)highProteinButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)lowCarbsButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)lowFatButton).EndInit();
+            ((System.ComponentModel.ISupportInitialize)searchIcon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -507,5 +569,8 @@
         private Label pLabel;
         private Label fLabel;
         private FlowLayoutPanel foodPanel;
+        private Krypton.Toolkit.KryptonTextBox searchTextBox;
+        private PictureBox searchIcon;
+        private FlowLayoutPanel searchPanel;
     }
 }

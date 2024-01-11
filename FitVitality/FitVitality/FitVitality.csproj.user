@@ -25,6 +25,9 @@
     <Compile Update="Register.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SearchFoodItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Settings.cs">
       <SubType>Form</SubType>
     </Compile>

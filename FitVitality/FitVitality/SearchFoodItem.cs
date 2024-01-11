@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace FitVitality
 {
-    public partial class FoodItem : UserControl
+    public partial class SearchFoodItem : UserControl
     {
-        public FoodItem()
+        public SearchFoodItem()
         {
             InitializeComponent();
         }
         public event EventHandler ButtonClicked;
-        #region Properties
+        #region
         private string _foodName;
         private double _foodCalories;
         private double _foodProtein;
@@ -25,57 +25,58 @@ namespace FitVitality
         private double _foodFat;
         private string _foodImage;
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void SearchFoodItem_Click(object sender, EventArgs e)
         {
             ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
-        private void removeFoodItem_MouseEnter(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            removeFoodItem.BackColor = Color.FromArgb(182, 105, 105);
+            ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
-        private void removeFoodItem_MouseLeave(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            removeFoodItem.BackColor = Color.Transparent;
+            ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
         [Category("Custom Props")]
         public string FoodName
         {
             get { return _foodName; }
-            set { _foodName = value; foodNameLabel.Text = value; }
+            set { _foodName = value; foodName.Text = value; }
         }
         [Category("Custom Props")]
         public double FoodCalories
         {
             get { return _foodCalories; }
-            set { _foodCalories = value; caloriesLabel.Text = "kCal:" + value.ToString(); }
+            set { _foodCalories = value; }
         }
         [Category("Custom Props")]
         public double FoodProtein
         {
             get { return _foodProtein; }
-            set { _foodProtein = value; pLabel.Text = "P:" + value.ToString() + "g"; }
+            set { _foodProtein = value; }
         }
         [Category("Custom Props")]
         public double FoodCarbs
         {
             get { return _foodCarbs; }
-            set { _foodCarbs = value; cLabel.Text = "C:" + value.ToString() + "g"; }
+            set { _foodCarbs = value; }
         }
         [Category("Custom Props")]
         public double FoodFat
         {
             get { return _foodFat; }
-            set { _foodFat = value; fLabel.Text = "F:" + value.ToString() + "g"; }
+            set { _foodFat = value; }
         }
         [Category("Custom Props")]
         public string FoodImage
         {
-            get { return foodImage.ImageLocation; }
-            set { foodImage.ImageLocation = value; _foodImage = value; }
+            get { return _foodImage; }
+            set { _foodImage = value; foodImage.ImageLocation = value; }
         }
+
         #endregion
     }
 }

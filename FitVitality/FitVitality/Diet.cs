@@ -18,6 +18,7 @@ using System.Drawing.Imaging;
 using System.Text.RegularExpressions;
 using System.Drawing;
 using System.Diagnostics.Eventing.Reader;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FitVitality
 {
@@ -502,14 +503,14 @@ namespace FitVitality
                 searchPanel.Controls.Clear();
                 searchFoodItems.Clear();
                 string keyword = searchTextBox.Text;
-                using(SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "SELECT * FROM FoodItems WHERE Name LIKE @keyword";
-                    using(SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
                         connection.Open();
-                        using(SqlDataReader reader = command.ExecuteReader())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
@@ -543,7 +544,7 @@ namespace FitVitality
                     searchPanel.Controls.Add(searchFoodItems[i]);
                 }
             }
-            else if(searchPanel.Visible == true && searchTextBox.Text != "")
+            else if (searchPanel.Visible == true && searchTextBox.Text != "")
             {
                 searchPanel.Controls.Clear();
                 searchFoodItems.Clear();
@@ -559,7 +560,7 @@ namespace FitVitality
                         {
                             while (reader.Read())
                             {
-    
+
                                 SearchFoodItem searchFoodItem = new SearchFoodItem();
                                 searchFoodItem.FoodName = reader["Name"].ToString();
                                 searchFoodItem.FoodCalories = double.Parse(reader["Calories"].ToString());
@@ -591,7 +592,10 @@ namespace FitVitality
             }
             else
             {
-
+                searchTextBox.StateCommon.Border.Color1 = Color.Red;
+                searchTextBox.StateNormal.Border.Color1 = Color.Red;
+                searchTextBox.CueHint.CueHintText = "Search must not be empty.";
+                searchTextBox.CueHint.Color1 = Color.Red;
             }
         }
 
@@ -604,6 +608,12 @@ namespace FitVitality
             searchPanel.Visible = false;
             searchFoodItems.Clear();
             searchPanel.Controls.Clear();
+            searchTextBox.Enabled = false;
+            searchTextBox.Enabled = true;
+            searchTextBox.CueHint.CueHintText = "Search";
+            searchTextBox.CueHint.Color1 = Color.FromArgb(63, 63, 63);
+            searchTextBox.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+            searchTextBox.StateNormal.Border.Color1 = Color.FromArgb(177, 192, 214);
         }
 
         private void foodPanel_Paint(object sender, PaintEventArgs e)
@@ -726,6 +736,14 @@ namespace FitVitality
                     foodPanel.Controls.RemoveAt(i);
                 }
             }
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            searchTextBox.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+            searchTextBox.StateNormal.Border.Color1 = Color.FromArgb(177, 192, 214);
+            searchTextBox.CueHint.CueHintText = "";
+            searchTextBox.CueHint.Color1 = Color.FromArgb(177, 192, 214);
         }
     }
 }

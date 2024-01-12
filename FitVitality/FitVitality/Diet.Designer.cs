@@ -61,6 +61,7 @@
             searchTextBox = new Krypton.Toolkit.KryptonTextBox();
             searchIcon = new PictureBox();
             searchPanel = new FlowLayoutPanel();
+            hintLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -435,6 +436,7 @@
             // foodPanel
             // 
             foodPanel.AutoScroll = true;
+            foodPanel.BorderStyle = BorderStyle.FixedSingle;
             foodPanel.FlowDirection = FlowDirection.RightToLeft;
             foodPanel.Location = new Point(232, 133);
             foodPanel.Name = "foodPanel";
@@ -445,6 +447,8 @@
             // 
             // searchTextBox
             // 
+            searchTextBox.CueHint.CueHintText = "Search";
+            searchTextBox.CueHint.Padding = new Padding(0);
             searchTextBox.Location = new Point(232, 77);
             searchTextBox.MaxLength = 28;
             searchTextBox.Name = "searchTextBox";
@@ -454,6 +458,7 @@
             searchTextBox.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             searchTextBox.StateNormal.Border.Rounding = 15F;
             searchTextBox.TabIndex = 52;
+            searchTextBox.TextChanged += searchTextBox_TextChanged;
             // 
             // searchIcon
             // 
@@ -476,6 +481,16 @@
             searchPanel.Visible = false;
             searchPanel.Paint += flowLayoutPanel1_Paint;
             searchPanel.Leave += searchPanel_Leave;
+            // 
+            // hintLabel
+            // 
+            hintLabel.AutoSize = true;
+            hintLabel.Font = new Font("Calibri", 8.25F, FontStyle.Italic, GraphicsUnit.Point);
+            hintLabel.Location = new Point(252, 119);
+            hintLabel.Name = "hintLabel";
+            hintLabel.Size = new Size(189, 13);
+            hintLabel.TabIndex = 55;
+            hintLabel.Text = "Add food to the box from the search bar.";
             // 
             // Diet
             // 
@@ -515,6 +530,7 @@
             Controls.Add(vLine2);
             Controls.Add(hLine2);
             Controls.Add(hLine1);
+            Controls.Add(hintLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Diet";
             Text = "Diet";
@@ -572,5 +588,6 @@
         private Krypton.Toolkit.KryptonTextBox searchTextBox;
         private PictureBox searchIcon;
         private FlowLayoutPanel searchPanel;
+        private Label hintLabel;
     }
 }

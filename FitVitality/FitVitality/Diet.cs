@@ -72,7 +72,7 @@ namespace FitVitality
             {
                 activity = activity;
                 calorieIntake.Text = $"{currentCalories} / {activity.ToString()}";
-                protein.Text = $"{currentProtein} / {activity * 0.25 / 4}:f0";
+                protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
                 fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
                 carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
             }
@@ -299,6 +299,44 @@ namespace FitVitality
                             {
                                 hiddenPanel1.Visible = true;
                                 hiddenPanel2.Visible = true;
+                            }
+                        }
+                    }
+                }
+            }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM UserSettings WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            age = int.Parse(reader["Age"].ToString());
+                            if (reader["Gender"].ToString() == "Male")
+                            {
+                                gender = "Male";
+                            }
+                            else
+                            {
+                                gender = "Female";
+                            }
+                            weight = reader["Weight"].ToString();
+                            height = reader["Height"].ToString();
+                            if (reader["Goal"].ToString() == "Cut")
+                            {
+                                goal = "Cut";
+                            }
+                            else if (reader["Goal"].ToString() == "Maintain")
+                            {
+                                goal = "Maintain";
+                            }
+                            else
+                            {
+                                goal = "Bulk";
                             }
                         }
                     }

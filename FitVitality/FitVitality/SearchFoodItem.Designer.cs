@@ -46,6 +46,7 @@
             foodImage.Location = new Point(3, 3);
             foodImage.Name = "foodImage";
             foodImage.Size = new Size(30, 29);
+            foodImage.SizeMode = PictureBoxSizeMode.Zoom;
             foodImage.TabIndex = 0;
             foodImage.TabStop = false;
             foodImage.Click += pictureBox1_Click;

@@ -468,6 +468,7 @@
             // 
             // searchIcon
             // 
+            searchIcon.Cursor = Cursors.Hand;
             searchIcon.Image = (Image)resources.GetObject("searchIcon.Image");
             searchIcon.Location = new Point(425, 81);
             searchIcon.Name = "searchIcon";
@@ -476,6 +477,7 @@
             searchIcon.TabIndex = 53;
             searchIcon.TabStop = false;
             searchIcon.Click += searchIcon_Click;
+            searchIcon.MouseHover += searchIcon_MouseHover;
             // 
             // searchPanel
             // 

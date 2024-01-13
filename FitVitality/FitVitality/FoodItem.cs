@@ -21,12 +21,14 @@ namespace FitVitality
             InitializeComponent();
         }
         public event EventHandler ButtonClicked;
+        public event EventHandler TextBoxChanged;
         #region Properties
         private string _foodName;
         private double _foodCalories;
         private double _foodProtein;
         private double _foodCarbs;
         private double _foodFat;
+        private double _foodGrams;
         private string _foodImage;
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -44,9 +46,29 @@ namespace FitVitality
             removeFoodItem.BackColor = Color.Transparent;
         }
 
-        private void textBoxGrams_TextChanged(object sender, EventArgs e)
+        private void textBoxGrams_TextChanged()
         {
+            if (textBoxGrams.Text != "")
+            {
+                TextBoxChanged?.Invoke(this, EventArgs.Empty);
+                FoodCalories = Math.Round((FoodCalories / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
+                caloriesLabel.Text = "kCal:" + FoodCalories.ToString();
+                FoodProtein = Math.Round((FoodProtein / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
+                pLabel.Text = "P:" + FoodProtein.ToString() + "g";
+                FoodCarbs = Math.Round((FoodCarbs / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
+                cLabel.Text = "C:" + FoodCarbs.ToString() + "g";
+                FoodFat = Math.Round((FoodFat / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
+                fLabel.Text = "F:" + FoodFat.ToString() + "g";
+            }
+        }
 
+        private void textBoxGrams_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                textBoxGrams_TextChanged();
+            }
         }
 
         [Category("Custom Props")]
@@ -79,11 +101,18 @@ namespace FitVitality
             get { return _foodFat; }
             set { _foodFat = value; fLabel.Text = "F:" + value.ToString() + "g"; }
         }
+
+        [Category("Custom Props")]
+        public double FoodGrams
+        {
+            get { return _foodGrams; }
+            set { _foodGrams = value; }
+        }
         [Category("Custom Props")]
         public string FoodImage
         {
-            get { return foodImage.ImageLocation; }
-            set { foodImage.ImageLocation = value; _foodImage = value; }
+            get { return _foodImage; }
+            set { _foodImage = value; foodImage.ImageLocation = value;  }
         }
         #endregion
     }

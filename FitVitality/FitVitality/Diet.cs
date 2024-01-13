@@ -152,7 +152,7 @@ namespace FitVitality
             if (goal == "Maintain")
             {
                 activity = activity;
-                calorieIntake.Text = $" / {activity.ToString()}";
+                calorieIntake.Text = $"{currentCalories} / {activity.ToString()}";
                 protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
                 fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
                 carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
@@ -222,15 +222,6 @@ namespace FitVitality
             intenseBMR67 = Math.Round(bmr * 1.72, 0);
             veryIntenseBMR = Math.Round(bmr * 1.9, 0);
 
-            balancedButton.Image = Properties.Resources.balancedSelected;
-            highProteinButton.Image = Properties.Resources.highProtein;
-            lowFatButton.Image = Properties.Resources.lowFat;
-            lowCarbsButton.Image = Properties.Resources.lowCarbs;
-            balancedClicked = true;
-            highProteinClicked = false;
-            lowCarbsClicked = false;
-            lowFatClicked = false;
-
             hiddenPanel1.Width = 241;
             hiddenPanel1.Height = 308;
             hiddenPanel2.Width = 197;
@@ -276,13 +267,13 @@ namespace FitVitality
                                         case "Balanced":
                                             balancedButton_Click(sender, e);
                                             break;
-                                        case "High Protein":
+                                        case "HighProtein":
                                             highProteinButton_Click(sender, e);
                                             break;
-                                        case "Low Fat":
+                                        case "LowFat":
                                             lowFatButton_Click(sender, e);
                                             break;
-                                        case "Low Carbs":
+                                        case "LowCarbs":
                                             lowCarbsButton_Click(sender, e);
                                             break;
                                     }
@@ -397,6 +388,7 @@ namespace FitVitality
                     command.Parameters.AddWithValue("@ActivitySelection", activityComboBoxMacro.SelectedItem.ToString());
                     connection.Open();
                     command.ExecuteNonQuery();
+                    hiddenPanel2.Visible = false;
                 }
             }
         }
@@ -412,6 +404,19 @@ namespace FitVitality
             highProteinClicked = false;
             lowFatClicked = false;
             lowCarbsClicked = false;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE UserNutrition " +
+                               "SET MacroSelection = @MacroSelection " +
+                               "WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    command.Parameters.AddWithValue("@MacroSelection", "Balanced");
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
             if (activityComboBoxMacro.SelectedItem == "Sedentary")
             {
                 MacroBalanced(sedentaryBMR);
@@ -436,6 +441,7 @@ namespace FitVitality
             {
                 MacroBalanced(veryIntenseBMR);
             }
+            hiddenPanel1.Visible = false;
         }
 
         private void highProteinButton_Click(object sender, EventArgs e)
@@ -449,6 +455,19 @@ namespace FitVitality
             highProteinClicked = true;
             lowFatClicked = false;
             lowCarbsClicked = false;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE UserNutrition " +
+                               "SET MacroSelection = @MacroSelection " +
+                               "WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    command.Parameters.AddWithValue("@MacroSelection", "HighProtein");
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
             if (activityComboBoxMacro.SelectedItem == "Sedentary")
             {
                 MacroHighProtein(sedentaryBMR);
@@ -473,6 +492,7 @@ namespace FitVitality
             {
                 MacroHighProtein(veryIntenseBMR);
             }
+            hiddenPanel1.Visible = false;
         }
 
         private void lowFatButton_Click(object sender, EventArgs e)
@@ -486,6 +506,19 @@ namespace FitVitality
             highProteinClicked = false;
             lowFatClicked = true;
             lowCarbsClicked = false;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE UserNutrition " +
+                               "SET MacroSelection = @MacroSelection " +
+                               "WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    command.Parameters.AddWithValue("@MacroSelection", "LowFat");
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
             if (activityComboBoxMacro.SelectedItem == "Sedentary")
             {
                 MacroLowFat(sedentaryBMR);
@@ -510,6 +543,7 @@ namespace FitVitality
             {
                 MacroLowFat(veryIntenseBMR);
             }
+            hiddenPanel1.Visible = false;
         }
 
         private void lowCarbsButton_Click(object sender, EventArgs e)
@@ -523,6 +557,19 @@ namespace FitVitality
             highProteinClicked = false;
             lowFatClicked = false;
             lowCarbsClicked = true;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE UserNutrition " +
+                               "SET MacroSelection = @MacroSelection " +
+                               "WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    command.Parameters.AddWithValue("@MacroSelection", "LowCarbs");
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
             if (activityComboBoxMacro.SelectedItem == "Sedentary")
             {
                 MacroLowCarb(sedentaryBMR);
@@ -547,6 +594,7 @@ namespace FitVitality
             {
                 MacroLowCarb(veryIntenseBMR);
             }
+            hiddenPanel1.Visible = false;
         }
 
         private void balancedButton_MouseEnter(object sender, EventArgs e)
@@ -643,7 +691,8 @@ namespace FitVitality
                                 searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
                                 searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
                                 searchFoodItem.FoodFat = double.Parse(reader["Fat"].ToString());
-                                //searchFoodItem.FoodImage = reader["Image"].ToString();
+                                searchFoodItem.FoodGrams = 100;
+                                searchFoodItem.FoodImage = reader["Image"].ToString();
                                 searchFoodItems.Add(searchFoodItem);
                             }
                         }
@@ -657,8 +706,9 @@ namespace FitVitality
                     double foodProtein = searchFoodItems[i].FoodProtein;
                     double foodCarbs = searchFoodItems[i].FoodCarbs;
                     double foodFat = searchFoodItems[i].FoodFat;
-                    //string foodImage = searchFoodItems[i].FoodImage;
-                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodCalories, foodProtein, foodCarbs, foodFat/*, foodImage*/);
+                    double foodGrams = searchFoodItems[i].FoodGrams;
+                    string foodImage = searchFoodItems[i].FoodImage;
+                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodCalories, foodProtein, foodCarbs, foodFat, foodGrams, foodImage);
                     if (searchPanel.Height < 120)
                     {
                         searchPanel.Height += 40;
@@ -689,7 +739,8 @@ namespace FitVitality
                                 searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
                                 searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
                                 searchFoodItem.FoodFat = double.Parse(reader["Fat"].ToString());
-                                //searchFoodItem.FoodImage = reader["Image"].ToString();
+                                searchFoodItem.FoodGrams = 100;
+                                searchFoodItem.FoodImage = reader["Image"].ToString();
                                 searchFoodItems.Add(searchFoodItem);
                             }
                         }
@@ -703,8 +754,9 @@ namespace FitVitality
                     double foodProtein = searchFoodItems[i].FoodProtein;
                     double foodCarbs = searchFoodItems[i].FoodCarbs;
                     double foodFat = searchFoodItems[i].FoodFat;
-                    //string foodImage = searchFoodItems[i].FoodImage;
-                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodCalories, foodProtein, foodCarbs, foodFat/*, foodImage*/);
+                    double foodGrams = searchFoodItems[i].FoodGrams;
+                    string foodImage = searchFoodItems[i].FoodImage;
+                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodCalories, foodProtein, foodCarbs, foodFat, foodGrams, foodImage);
                     if (searchPanel.Height < 120)
                     {
                         searchPanel.Height += 40;
@@ -727,15 +779,18 @@ namespace FitVitality
         }
         private void ifSearchNotClicked(object sender, EventArgs e)
         {
-            searchPanel.Visible = false;
-            searchFoodItems.Clear();
-            searchPanel.Controls.Clear();
-            searchTextBox.Enabled = false;
-            searchTextBox.Enabled = true;
-            searchTextBox.CueHint.CueHintText = "Search";
-            searchTextBox.CueHint.Color1 = Color.FromArgb(63, 63, 63);
-            searchTextBox.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
-            searchTextBox.StateNormal.Border.Color1 = Color.FromArgb(177, 192, 214);
+            if (searchPanel.Visible == true)
+            {
+                searchPanel.Visible = false;
+                searchFoodItems.Clear();
+                searchPanel.Controls.Clear();
+                searchTextBox.Enabled = false;
+                searchTextBox.Enabled = true;
+                searchTextBox.CueHint.CueHintText = "Search";
+                searchTextBox.CueHint.Color1 = Color.FromArgb(63, 63, 63);
+                searchTextBox.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                searchTextBox.StateNormal.Border.Color1 = Color.FromArgb(177, 192, 214);
+            }
         }
 
         private void foodPanel_Paint(object sender, PaintEventArgs e)
@@ -832,7 +887,7 @@ namespace FitVitality
         {
             ifSearchNotClicked(sender, e);
         }
-        private void searchFoodItem_Click(object sender, EventArgs e, string name, double calories, double protein, double carbs, double fat/*,string image*/)
+        private void searchFoodItem_Click(object sender, EventArgs e, string name, double calories, double protein, double carbs, double fat, double grams, string image)
         {
             searchPanel.Visible = false;
             searchFoodItems.Clear();
@@ -843,10 +898,118 @@ namespace FitVitality
             foodItem.FoodProtein = protein;
             foodItem.FoodCarbs = carbs;
             foodItem.FoodFat = fat;
-            //foodItem.FoodImage = image;
+            foodItem.FoodGrams = grams;
+            foodItem.FoodImage = image;
             foodItem.ButtonClicked += (sender, e) => foodItem_Click(sender, e);
+            foodItem.TextBoxChanged += (sender, e) => foodItem_TextBoxChanged(sender, e, calories, protein, carbs, fat);
             foodPanel.Controls.Add(foodItem);
             foodItems.Add(foodItem);
+            currentCalories += (int)Math.Round(calories,0);
+            currentCarbs += (int)Math.Round(carbs,0);
+            currentProtein += (int)Math.Round(protein,0);
+            currentFats += (int)Math.Round(fat,0);
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM UserNutrition WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (reader["MacroSelection"].ToString() != String.Empty)
+                            {
+                                switch (reader["MacroSelection"].ToString())
+                                {
+                                    case "Balanced":
+                                        balancedButton_Click(sender, e);
+                                        break;
+                                    case "HighProtein":
+                                        highProteinButton_Click(sender, e);
+                                        break;
+                                    case "LowFat":
+                                        lowFatButton_Click(sender, e);
+                                        break;
+                                    case "LowCarbs":
+                                        lowCarbsButton_Click(sender, e);
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        private void foodItem_TextBoxChanged(object sender, EventArgs e, double calories, double protein, double carbs, double fat)
+        {
+            int grams_Base = 100;
+            currentCalories -= (int)Math.Round(calories,0);
+            currentCarbs -= (int)Math.Round(carbs,0);
+            currentProtein -= (int)Math.Round(protein,0);
+            currentFats -= (int)Math.Round(fat,0);
+            for (int i = 0; i < foodItems.Count; i++)
+            {
+                if (foodItems[i].Equals(sender))
+                {
+
+                    //tuk zapochvat smetki
+                    double currentGrams = foodItems[i].FoodGrams;
+                    Math.Round(currentGrams, 1);
+                    double multiplier = currentGrams / grams_Base;
+                    Math.Round(multiplier, 1);
+                    foodItems[i].FoodCalories *= multiplier;
+                    Math.Round(foodItems[i].FoodCalories, 1);
+                    foodItems[i].FoodCarbs *= multiplier;
+                    Math.Round(foodItems[i].FoodCarbs, 1);
+                    foodItems[i].FoodProtein *= multiplier;
+                    Math.Round(foodItems[i].FoodProtein, 1);
+                    foodItems[i].FoodFat *= multiplier;
+                    Math.Round(foodItems[i].FoodFat, 1);
+                    currentCalories += (int)Math.Round(foodItems[i].FoodCalories,0);
+                    currentCarbs += (int)Math.Round(foodItems[i].FoodCarbs,0);
+                    currentProtein += (int)Math.Round(foodItems[i].FoodProtein,0);
+                    currentFats += (int)Math.Round(foodItems[i].FoodFat,0);
+
+                    //tuk zavurshi smetki
+                    activityComboBox_SelectedIndexChanged(sender, e);
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        string query = "SELECT * FROM UserNutrition WHERE UserID = @UserID";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@UserID", _userID);
+                            connection.Open();
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    if (reader["MacroSelection"].ToString() != String.Empty)
+                                    {
+                                        switch (reader["MacroSelection"].ToString())
+                                        {
+                                            case "Balanced":
+                                                balancedButton_Click(sender, e);
+                                                break;
+                                            case "HighProtein":
+                                                highProteinButton_Click(sender, e);
+                                                break;
+                                            case "LowFat":
+                                                lowFatButton_Click(sender, e);
+                                                break;
+                                            case "LowCarbs":
+                                                lowCarbsButton_Click(sender, e);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         private void foodItem_Click(object sender, EventArgs e)
         {
@@ -854,8 +1017,47 @@ namespace FitVitality
             {
                 if (foodItems[i].Equals(sender))
                 {
+                    currentCalories -= (int)Math.Round(foodItems[i].FoodCalories, 0);
+                    currentCarbs -= (int)Math.Round(foodItems[i].FoodCarbs,0);
+                    currentProtein -= (int)Math.Round(foodItems[i].FoodProtein,0);
+                    currentFats -= (int)Math.Round(foodItems[i].FoodFat,0);
                     foodItems.RemoveAt(i);
                     foodPanel.Controls.RemoveAt(i);
+                    
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        string query = "SELECT * FROM UserNutrition WHERE UserID = @UserID";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@UserID", _userID);
+                            connection.Open();
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    if (reader["MacroSelection"].ToString() != String.Empty)
+                                    {
+                                        switch (reader["MacroSelection"].ToString())
+                                        {
+                                            case "Balanced":
+                                                balancedButton_Click(sender, e);
+                                                break;
+                                            case "HighProtein":
+                                                highProteinButton_Click(sender, e);
+                                                break;
+                                            case "LowFat":
+                                                lowFatButton_Click(sender, e);
+                                                break;
+                                            case "LowCarbs":
+                                                lowCarbsButton_Click(sender, e);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -880,6 +1082,11 @@ namespace FitVitality
                 e.Handled = e.SuppressKeyPress = true;
                 searchIcon_Click(this, new EventArgs());
             }
+        }
+
+        private void searchIcon_MouseHover(object sender, EventArgs e)
+        {
+
         }
     }
 }

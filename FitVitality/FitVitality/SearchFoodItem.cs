@@ -23,6 +23,7 @@ namespace FitVitality
         private double _foodProtein;
         private double _foodCarbs;
         private double _foodFat;
+        private double _foodGrams;
         private string _foodImage;
 
         private void SearchFoodItem_Click(object sender, EventArgs e)
@@ -70,6 +71,13 @@ namespace FitVitality
             get { return _foodFat; }
             set { _foodFat = value; }
         }
+        [Category("Custom Props")]
+        public double FoodGrams
+        {
+            get { return _foodGrams; }
+            set { _foodGrams = 100; }
+        }
+
         [Category("Custom Props")]
         public string FoodImage
         {

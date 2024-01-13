@@ -44,6 +44,7 @@ namespace FitVitality
         private int currentCarbs = 0;
         private int currentProtein = 0;
         private int currentFats = 0;
+        string currentGoal;
 
         //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
@@ -229,6 +230,80 @@ namespace FitVitality
             highProteinClicked = false;
             lowCarbsClicked = false;
             lowFatClicked = false;
+
+            hiddenPanel1.Width = 241;
+            hiddenPanel1.Height = 308;
+            hiddenPanel2.Width = 197;
+            hiddenPanel2.Height = 308;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM UserNutrition WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (reader["ActivitySelection"].ToString() != String.Empty)
+                            {
+                                switch (reader["ActivitySelection"].ToString())
+                                {
+                                    case "Sedentary":
+                                        activityComboBoxMacro.SelectedItem = "Sedentary";
+                                        break;
+                                    case "Light":
+                                        activityComboBoxMacro.SelectedItem = "Light";
+                                        break;
+                                    case "Moderate":
+                                        activityComboBoxMacro.SelectedItem = "Moderate";
+                                        break;
+                                    case "Active":
+                                        activityComboBoxMacro.SelectedItem = "Active";
+                                        break;
+                                    case "Very active":
+                                        activityComboBoxMacro.SelectedItem = "Very active";
+                                        break;
+                                    case "Extra active":
+                                        activityComboBoxMacro.SelectedItem = "Extra active";
+                                        break;
+                                }
+                                if (reader["MacroSelection"].ToString() != String.Empty)
+                                {
+                                    switch (reader["MacroSelection"].ToString())
+                                    {
+                                        case "Balanced":
+                                            balancedButton_Click(sender, e);
+                                            break;
+                                        case "High Protein":
+                                            highProteinButton_Click(sender, e);
+                                            break;
+                                        case "Low Fat":
+                                            lowFatButton_Click(sender, e);
+                                            break;
+                                        case "Low Carbs":
+                                            lowCarbsButton_Click(sender, e);
+                                            break;
+                                    }
+                                    hiddenPanel1.Visible = false;
+                                    hiddenPanel2.Visible = false;
+                                }
+                                else
+                                {
+                                    hiddenPanel1.Visible = false;
+                                    hiddenPanel2.Visible = true;
+                                }
+                            }
+                            else
+                            {
+                                hiddenPanel1.Visible = true;
+                                hiddenPanel2.Visible = true;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void activityComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -242,40 +317,49 @@ namespace FitVitality
             fat.Visible = true;
             protein.Visible = true;
             balancedButton.Visible = true;
-            balancedButton.Image = Properties.Resources.balancedSelected;
+            balancedButton.Image = Properties.Resources.balanced;
             highProteinButton.Image = Properties.Resources.highProtein;
             lowFatButton.Image = Properties.Resources.lowFat;
             lowCarbsButton.Image = Properties.Resources.lowCarbs;
-            balancedClicked = true;
-            highProteinClicked = false;
-            lowCarbsClicked = false;
-            lowFatClicked = false;
             lowCarbsButton.Visible = true;
             lowFatButton.Visible = true;
             highProteinButton.Visible = true;
-            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                MacroBalanced(sedentaryBMR);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Light")
-            {
-                MacroBalanced(exerciseBMR13);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Moderate")
-            {
-                MacroBalanced(exerciseBMR45);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Active")
-            {
-                MacroBalanced(DailyBMR34);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Very active")
-            {
-                MacroBalanced(intenseBMR67);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Extra active")
-            {
-                MacroBalanced(veryIntenseBMR);
+                string query = "UPDATE UserNutrition " +
+                               "SET ActivitySelection = @ActivitySelection " +
+                               "WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    if (activityComboBoxMacro.SelectedItem == "Sedentary")
+                    {
+                        MacroBalanced(sedentaryBMR);
+                    }
+                    if (activityComboBoxMacro.SelectedItem == "Light")
+                    {
+                        MacroBalanced(exerciseBMR13);
+                    }
+                    if (activityComboBoxMacro.SelectedItem == "Moderate")
+                    {
+                        MacroBalanced(exerciseBMR45);
+                    }
+                    if (activityComboBoxMacro.SelectedItem == "Active")
+                    {
+                        MacroBalanced(DailyBMR34);
+                    }
+                    if (activityComboBoxMacro.SelectedItem == "Very active")
+                    {
+                        MacroBalanced(intenseBMR67);
+                    }
+                    if (activityComboBoxMacro.SelectedItem == "Extra active")
+                    {
+                        MacroBalanced(veryIntenseBMR);
+                    }
+                    command.Parameters.AddWithValue("@ActivitySelection", activityComboBoxMacro.SelectedItem.ToString());
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
             }
         }
 
@@ -744,6 +828,20 @@ namespace FitVitality
             searchTextBox.StateNormal.Border.Color1 = Color.FromArgb(177, 192, 214);
             searchTextBox.CueHint.CueHintText = "";
             searchTextBox.CueHint.Color1 = Color.FromArgb(177, 192, 214);
+        }
+
+        private void searchTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                searchIcon_Click(this, new EventArgs());
+            }
         }
     }
 }

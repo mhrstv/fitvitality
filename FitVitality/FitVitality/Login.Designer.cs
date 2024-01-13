@@ -159,6 +159,7 @@
             textBoxPassword.Size = new Size(199, 23);
             textBoxPassword.TabIndex = 8;
             textBoxPassword.UseSystemPasswordChar = true;
+            textBoxPassword.TextChanged += textBoxPassword_TextChanged;
             textBoxPassword.KeyDown += kryptonTextBox2_KeyDown;
             // 
             // usernameLabel

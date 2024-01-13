@@ -62,6 +62,9 @@
             searchIcon = new PictureBox();
             searchPanel = new FlowLayoutPanel();
             hintLabel = new Label();
+            hiddenPanel1 = new Panel();
+            label1 = new Label();
+            hiddenPanel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -76,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)lowCarbsButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lowFatButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)searchIcon).BeginInit();
+            hiddenPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // leftC
@@ -459,6 +463,8 @@
             searchTextBox.StateNormal.Border.Rounding = 15F;
             searchTextBox.TabIndex = 52;
             searchTextBox.TextChanged += searchTextBox_TextChanged;
+            searchTextBox.KeyDown += searchTextBox_KeyDown;
+            searchTextBox.KeyPress += searchTextBox_KeyPress;
             // 
             // searchIcon
             // 
@@ -492,12 +498,40 @@
             hintLabel.TabIndex = 55;
             hintLabel.Text = "Add food to the box from the search bar.";
             // 
+            // hiddenPanel1
+            // 
+            hiddenPanel1.Controls.Add(label1);
+            hiddenPanel1.Location = new Point(226, 51);
+            hiddenPanel1.Name = "hiddenPanel1";
+            hiddenPanel1.Size = new Size(0, 0);
+            hiddenPanel1.TabIndex = 56;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(13, 130);
+            label1.Name = "label1";
+            label1.Size = new Size(215, 48);
+            label1.TabIndex = 0;
+            label1.Text = "Please select the desired\r\n activity level and nutrition goal \r\nin order to make all the tabs visible!";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // hiddenPanel2
+            // 
+            hiddenPanel2.Location = new Point(480, 51);
+            hiddenPanel2.Name = "hiddenPanel2";
+            hiddenPanel2.Size = new Size(0, 0);
+            hiddenPanel2.TabIndex = 57;
+            // 
             // Diet
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(hiddenPanel2);
+            Controls.Add(hiddenPanel1);
             Controls.Add(searchPanel);
             Controls.Add(searchIcon);
             Controls.Add(searchTextBox);
@@ -550,6 +584,8 @@
             ((System.ComponentModel.ISupportInitialize)lowCarbsButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)lowFatButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)searchIcon).EndInit();
+            hiddenPanel1.ResumeLayout(false);
+            hiddenPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -589,5 +625,8 @@
         private PictureBox searchIcon;
         private FlowLayoutPanel searchPanel;
         private Label hintLabel;
+        private Panel hiddenPanel1;
+        private Label label1;
+        private Panel hiddenPanel2;
     }
 }

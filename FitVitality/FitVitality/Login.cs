@@ -101,7 +101,7 @@ namespace FitVitality
                                     Properties.Settings.Default.Save();
                                 }
                                 else
-                                {   
+                                {
                                     Properties.Settings.Default.Username = "";
                                     Properties.Settings.Default.Save();
                                 }
@@ -372,6 +372,11 @@ namespace FitVitality
             passShown.Visible = false;
             textBoxPassword.UseSystemPasswordChar = false;
             textBoxPassword.PasswordChar = '\0';
+        }
+
+        private void textBoxPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

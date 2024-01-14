@@ -41,6 +41,21 @@ namespace FitVitality
             ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
+        private void SearchFoodItem_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SearchFoodItem_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(160, 160, 160);
+        }
+
+        private void SearchFoodItem_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(240, 240, 240);
+        }
+
         [Category("Custom Props")]
         public string FoodName
         {

@@ -50,6 +50,8 @@
             foodImage.TabIndex = 0;
             foodImage.TabStop = false;
             foodImage.Click += pictureBox1_Click;
+            foodImage.MouseEnter += SearchFoodItem_MouseEnter;
+            foodImage.MouseLeave += SearchFoodItem_MouseLeave;
             // 
             // foodName
             // 
@@ -60,6 +62,8 @@
             foodName.TabIndex = 1;
             foodName.Text = "{Name}";
             foodName.Click += label1_Click;
+            foodName.MouseEnter += SearchFoodItem_MouseEnter;
+            foodName.MouseLeave += SearchFoodItem_MouseLeave;
             // 
             // hLine1
             // 
@@ -107,9 +111,13 @@
             Controls.Add(hLine1);
             Controls.Add(foodName);
             Controls.Add(foodImage);
+            Cursor = Cursors.Hand;
             Name = "SearchFoodItem";
             Size = new Size(190, 35);
             Click += SearchFoodItem_Click;
+            MouseEnter += SearchFoodItem_MouseEnter;
+            MouseLeave += SearchFoodItem_MouseLeave;
+            MouseHover += SearchFoodItem_MouseHover;
             ((System.ComponentModel.ISupportInitialize)foodImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

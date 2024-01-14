@@ -112,7 +112,7 @@ namespace FitVitality
         public string FoodImage
         {
             get { return _foodImage; }
-            set { _foodImage = value; foodImage.ImageLocation = value;  }
+            set { _foodImage = value; foodImage.ImageLocation = value; }
         }
         #endregion
     }

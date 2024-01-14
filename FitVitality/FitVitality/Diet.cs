@@ -946,10 +946,6 @@ namespace FitVitality
         private void foodItem_TextBoxChanged(object sender, EventArgs e, double calories, double protein, double carbs, double fat)
         {
             int grams_Base = 100;
-            currentCalories -= (int)Math.Round(calories,0);
-            currentCarbs -= (int)Math.Round(carbs,0);
-            currentProtein -= (int)Math.Round(protein,0);
-            currentFats -= (int)Math.Round(fat,0);
             for (int i = 0; i < foodItems.Count; i++)
             {
                 if (foodItems[i].Equals(sender))
@@ -958,15 +954,13 @@ namespace FitVitality
                     //tuk zapochvat smetki
                     double currentGrams = foodItems[i].FoodGrams;
                     Math.Round(currentGrams, 1);
-                    double multiplier = currentGrams / grams_Base;
-                    Math.Round(multiplier, 1);
-                    foodItems[i].FoodCalories *= multiplier;
+                    foodItems[i].FoodCalories = (calories / grams_Base) * currentGrams;
                     Math.Round(foodItems[i].FoodCalories, 1);
-                    foodItems[i].FoodCarbs *= multiplier;
+                    foodItems[i].FoodCarbs = (carbs / grams_Base) * currentGrams;
                     Math.Round(foodItems[i].FoodCarbs, 1);
-                    foodItems[i].FoodProtein *= multiplier;
+                    foodItems[i].FoodProtein = (protein / grams_Base) * currentGrams;
                     Math.Round(foodItems[i].FoodProtein, 1);
-                    foodItems[i].FoodFat *= multiplier;
+                    foodItems[i].FoodFat = (fat / grams_Base) * currentGrams;
                     Math.Round(foodItems[i].FoodFat, 1);
                     currentCalories += (int)Math.Round(foodItems[i].FoodCalories,0);
                     currentCarbs += (int)Math.Round(foodItems[i].FoodCarbs,0);
@@ -1023,7 +1017,13 @@ namespace FitVitality
                     currentFats -= (int)Math.Round(foodItems[i].FoodFat,0);
                     foodItems.RemoveAt(i);
                     foodPanel.Controls.RemoveAt(i);
-                    
+                    if (currentCalories < 0 || currentCarbs < 0 || currentFats < 0 || currentProtein < 0)
+                    {
+                        currentCalories = 0;
+                        currentCarbs = 0;
+                        currentProtein = 0;
+                        currentFats = 0;
+                    }
 
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {

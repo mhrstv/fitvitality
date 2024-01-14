@@ -57,32 +57,143 @@ namespace FitVitality
             InitializeComponent();
             _userID = UserID;
         }
-
+        static void calorieColor(Label calorie)
+        {
+            
+        }
         public void MacroBalanced(double activity)
         {
             if (goal == "Cut")
             {
                 activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
-                protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                if (currentCalories < activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
+                }
+                if (currentCalories > activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
+                }
+                if (currentProtein < activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentFats < activity * 0.25 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
+                }
+                if (currentFats > activity * 0.25 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.5 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.5 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                }   
             }
             if (goal == "Maintain")
             {
                 activity = activity;
-                calorieIntake.Text = $"{currentCalories} / {activity.ToString()}";
-                protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                if (currentCalories < activity)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity, 0)}";
+                }
+                if (currentCalories > activity)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity, 0)}";
+                }
+                if (currentProtein < activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentFats < activity * 0.25 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
+                }
+                if (currentFats > activity * 0.25 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.5 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.5 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                }
             }
             if (goal == "Bulk")
             {
                 activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
-                protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                if (currentCalories < activity * 1.12)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
+                }
+                if (currentCalories > activity * 1.12)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
+                }
+                if (currentProtein < activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentFats < activity * 0.25 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
+                }
+                if (currentFats > activity * 0.25 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.25 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.5 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.5 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
+                }
             }
         }
         public void MacroLowFat(double activity)
@@ -90,26 +201,134 @@ namespace FitVitality
             if (goal == "Cut")
             {
                 activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
-                protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                if (currentCalories < activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
+                }
+                if (currentCalories > activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
+                }
+                if (currentProtein < activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentFats < activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentFats > activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.55 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.55 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                }
             }
             if (goal == "Maintain")
             {
                 activity = activity;
-                calorieIntake.Text = $"{currentCalories} / {activity.ToString()}";
-                protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                if (currentCalories < activity)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity, 0)}";
+                }
+                if (currentCalories > activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity, 0)}";
+                }
+                if (currentProtein < activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentFats < activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentFats > activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.55 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.55 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                }
             }
             if (goal == "Bulk")
             {
                 activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
-                protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                if (currentCalories < activity * 1.12)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
+                }
+                if (currentCalories > activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
+                }
+                if (currentProtein < activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.25 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.25 / 4:f0}";
+                }
+                if (currentFats < activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentFats > activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.55 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.55 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.55 / 4:f0}";
+                }
             }
         }
         public void MacroLowCarb(double activity)
@@ -117,26 +336,134 @@ namespace FitVitality
             if (goal == "Cut")
             {
                 activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
-                protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                if (currentCalories < activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
+                }
+                if (currentCalories > activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
+                }
+                if (currentProtein < activity * 0.3 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.3 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
+                }
+                if (currentFats < activity * 0.3 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
+                }
+                if (currentFats > activity * 0.3 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.4 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.4 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                }
             }
             if (goal == "Maintain")
             {
                 activity = activity;
-                calorieIntake.Text = $"{currentCalories} / {activity.ToString()}";
-                protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                if (currentCalories < activity)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity, 0)}";
+                }
+                if (currentCalories > activity)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity, 0)}";
+                }
+                if (currentProtein < activity * 0.3 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.3 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
+                }
+                if (currentFats < activity * 0.3 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
+                }
+                if (currentFats > activity * 0.3 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.4 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.4 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                }
             }
             if (goal == "Bulk")
             {
                 activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
-                protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                if (currentCalories < activity * 1.12)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
+                }
+                if (currentCalories > activity * 1.12)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
+                }
+                if (currentProtein < activity * 0.3 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.3 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.3 / 4:f0}";
+                }
+                if (currentFats < activity * 0.3 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
+                }
+                if (currentFats > activity * 0.3 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.3 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.4 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.4 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.4 / 4:f0}";
+                }
             }
         }
         public void MacroHighProtein(double activity)
@@ -144,26 +471,134 @@ namespace FitVitality
             if (goal == "Cut")
             {
                 activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
-                protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                if (currentCalories < activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
+                }
+                if (currentCalories > activity * 0.88)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 0.88, 0)}";
+                }
+                if (currentProtein < activity * 0.35 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.35 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
+                }
+                if (currentFats < activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentFats > activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.45 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.45 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                }
             }
             if (goal == "Maintain")
             {
                 activity = activity;
-                calorieIntake.Text = $"{currentCalories} / {activity.ToString()}";
-                protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                if (currentCalories < activity)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity, 0)}";
+                }
+                if (currentCalories > activity)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity, 0)}";
+                }
+                if (currentProtein < activity * 0.35 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.35 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
+                }
+                if (currentFats < activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentFats > activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.45 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.45 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                }
             }
             if (goal == "Bulk")
             {
                 activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
-                protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
-                fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
-                carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                if (currentCalories < activity * 1.12)
+                {
+                    calorieIntake.ForeColor = Color.Black;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
+                }
+                if (currentCalories > activity * 1.12)
+                {
+                    calorieIntake.ForeColor = Color.Red;
+                    calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
+                }
+                if (currentProtein < activity * 0.35 / 4)
+                {
+                    protein.ForeColor = Color.Black;
+                    protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
+                }
+                if (currentProtein > activity * 0.35 / 4)
+                {
+                    protein.ForeColor = Color.Red;
+                    protein.Text = $"{currentProtein} / {activity * 0.35 / 4:f0}";
+                }
+                if (currentFats < activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Black;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentFats > activity * 0.2 / 9)
+                {
+                    fat.ForeColor = Color.Red;
+                    fat.Text = $"{currentFats} / {activity * 0.2 / 9:f0}";
+                }
+                if (currentCarbs < activity * 0.45 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Black;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                }
+                if (currentCarbs > activity * 0.45 / 4)
+                {
+                    carbohydrates.ForeColor = Color.Red;
+                    carbohydrates.Text = $"{currentCarbs} / {activity * 0.45 / 4:f0}";
+                }
             }
         }
         private void Diet_Load(object sender, EventArgs e)

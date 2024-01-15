@@ -112,6 +112,7 @@
             textBoxGrams.Name = "textBoxGrams";
             textBoxGrams.Size = new Size(31, 23);
             textBoxGrams.TabIndex = 7;
+            textBoxGrams.TextChanged += textBoxGrams_TextChanged;
             textBoxGrams.KeyDown += textBoxGrams_KeyDown;
             // 
             // caloriesLabel

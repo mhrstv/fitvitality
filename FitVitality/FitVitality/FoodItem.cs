@@ -50,15 +50,20 @@ namespace FitVitality
         {
             if (textBoxGrams.Text != "")
             {
-                TextBoxChanged?.Invoke(this, EventArgs.Empty);
                 FoodCalories = Math.Round((FoodCalories / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
+                FoodCalories = Math.Round(FoodCalories, 2);
                 caloriesLabel.Text = "kCal:" + FoodCalories.ToString();
                 FoodProtein = Math.Round((FoodProtein / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
+                FoodProtein = Math.Round(FoodProtein, 2);
                 pLabel.Text = "P:" + FoodProtein.ToString() + "g";
                 FoodCarbs = Math.Round((FoodCarbs / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
+                FoodCarbs = Math.Round(FoodCarbs, 2);
                 cLabel.Text = "C:" + FoodCarbs.ToString() + "g";
                 FoodFat = Math.Round((FoodFat / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
+                FoodFat = Math.Round(FoodFat, 2);
                 fLabel.Text = "F:" + FoodFat.ToString() + "g";
+                FoodGrams = Convert.ToDouble(textBoxGrams.Text);
+                TextBoxChanged?.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -69,6 +74,11 @@ namespace FitVitality
                 e.Handled = e.SuppressKeyPress = true;
                 textBoxGrams_TextChanged();
             }
+        }
+
+        private void textBoxGrams_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         [Category("Custom Props")]

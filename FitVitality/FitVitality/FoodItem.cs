@@ -51,17 +51,17 @@ namespace FitVitality
             if (textBoxGrams.Text != "")
             {
                 FoodCalories = Math.Round((FoodCalories / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
-                FoodCalories = Math.Round(FoodCalories, 2);
-                caloriesLabel.Text = "kCal:" + FoodCalories.ToString();
+                FoodCalories = Math.Round(FoodCalories, 0);
+                caloriesLabel.Text = $"kCal:{FoodCalories.ToString():f0}";
                 FoodProtein = Math.Round((FoodProtein / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
                 FoodProtein = Math.Round(FoodProtein, 2);
-                pLabel.Text = "P:" + FoodProtein.ToString() + "g";
+                pLabel.Text = $"P:{FoodProtein.ToString():f2}g";
                 FoodCarbs = Math.Round((FoodCarbs / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
                 FoodCarbs = Math.Round(FoodCarbs, 2);
-                cLabel.Text = "C:" + FoodCarbs.ToString() + "g";
+                cLabel.Text = $"C:{FoodCarbs.ToString():f2}g";
                 FoodFat = Math.Round((FoodFat / FoodGrams) * Convert.ToDouble(textBoxGrams.Text), 2);
                 FoodFat = Math.Round(FoodFat, 2);
-                fLabel.Text = "F:" + FoodFat.ToString() + "g";
+                fLabel.Text = $"F:{FoodFat.ToString():f2}g";
                 FoodGrams = Convert.ToDouble(textBoxGrams.Text);
                 TextBoxChanged?.Invoke(this, EventArgs.Empty);
             }
@@ -81,6 +81,11 @@ namespace FitVitality
 
         }
 
+        private void foodNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
         [Category("Custom Props")]
         public string FoodName
         {
@@ -91,25 +96,25 @@ namespace FitVitality
         public double FoodCalories
         {
             get { return _foodCalories; }
-            set { _foodCalories = value; caloriesLabel.Text = "kCal:" + value.ToString(); }
+            set { _foodCalories = value; caloriesLabel.Text = $"kCal:{Math.Round(value, 0):f0}"; }
         }
         [Category("Custom Props")]
         public double FoodProtein
         {
             get { return _foodProtein; }
-            set { _foodProtein = value; pLabel.Text = "P:" + value.ToString() + "g"; }
+            set { _foodProtein = value; pLabel.Text = $"P:{Math.Round(value, 2):f2}g"; }
         }
         [Category("Custom Props")]
         public double FoodCarbs
         {
             get { return _foodCarbs; }
-            set { _foodCarbs = value; cLabel.Text = "C:" + value.ToString() + "g"; }
+            set { _foodCarbs = value; cLabel.Text = $"C:{Math.Round(value, 2):f2}g"; }
         }
         [Category("Custom Props")]
         public double FoodFat
         {
             get { return _foodFat; }
-            set { _foodFat = value; fLabel.Text = "F:" + value.ToString() + "g"; }
+            set { _foodFat = value; fLabel.Text = $"F:{Math.Round(value, 2):f2}g"; }
         }
 
         [Category("Custom Props")]

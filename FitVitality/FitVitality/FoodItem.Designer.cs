@@ -51,7 +51,7 @@
             // 
             // foodImage
             // 
-            foodImage.Location = new Point(9, 12);
+            foodImage.Location = new Point(7, 12);
             foodImage.Name = "foodImage";
             foodImage.Size = new Size(50, 50);
             foodImage.SizeMode = PictureBoxSizeMode.Zoom;
@@ -61,7 +61,7 @@
             // cLabel
             // 
             cLabel.AutoSize = true;
-            cLabel.Location = new Point(65, 4);
+            cLabel.Location = new Point(63, 4);
             cLabel.Name = "cLabel";
             cLabel.Size = new Size(18, 15);
             cLabel.TabIndex = 1;
@@ -70,7 +70,7 @@
             // pLabel
             // 
             pLabel.AutoSize = true;
-            pLabel.Location = new Point(66, 22);
+            pLabel.Location = new Point(64, 22);
             pLabel.Name = "pLabel";
             pLabel.Size = new Size(17, 15);
             pLabel.TabIndex = 2;
@@ -79,7 +79,7 @@
             // fLabel
             // 
             fLabel.AutoSize = true;
-            fLabel.Location = new Point(67, 40);
+            fLabel.Location = new Point(65, 40);
             fLabel.Name = "fLabel";
             fLabel.Size = new Size(16, 15);
             fLabel.TabIndex = 3;
@@ -87,12 +87,13 @@
             // 
             // foodNameLabel
             // 
-            foodNameLabel.Location = new Point(104, 23);
+            foodNameLabel.Location = new Point(110, 23);
             foodNameLabel.Name = "foodNameLabel";
-            foodNameLabel.Size = new Size(90, 15);
+            foodNameLabel.Size = new Size(84, 15);
             foodNameLabel.TabIndex = 4;
             foodNameLabel.Text = "Name";
             foodNameLabel.TextAlign = ContentAlignment.TopRight;
+            foodNameLabel.Click += foodNameLabel_Click;
             // 
             // label_g
             // 
@@ -118,7 +119,7 @@
             // caloriesLabel
             // 
             caloriesLabel.AutoSize = true;
-            caloriesLabel.Location = new Point(67, 55);
+            caloriesLabel.Location = new Point(65, 55);
             caloriesLabel.Name = "caloriesLabel";
             caloriesLabel.Size = new Size(33, 15);
             caloriesLabel.TabIndex = 8;

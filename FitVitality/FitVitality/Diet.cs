@@ -292,7 +292,7 @@ namespace FitVitality
                     calorieIntake.ForeColor = Color.Black;
                     calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
                 }
-                if (currentCalories > activity * 0.88)
+                if (currentCalories > activity * 1.12)
                 {
                     calorieIntake.ForeColor = Color.Red;
                     calorieIntake.Text = $"{currentCalories} / {Math.Round(activity * 1.12, 0)}";
@@ -813,10 +813,10 @@ namespace FitVitality
                                 foodItem.FoodImage = reader["Image"].ToString();
                                 foodItem.ButtonClicked += (sender, e) => foodItem_Click(sender, e);
                                 foodItem.TextBoxChanged += (sender, e) => foodItem_TextBoxChanged(sender, e, foodItem.FoodCalories, foodItem.FoodProtein, foodItem.FoodCarbs, foodItem.FoodFat);
-                                currentCalories += (int)Math.Round(foodItem.FoodCalories, 0);
-                                currentCarbs += (int)Math.Round(foodItem.FoodProtein, 0);
-                                currentProtein += (int)Math.Round(foodItem.FoodCarbs, 0);
-                                currentFats += (int)Math.Round(foodItem.FoodFat, 0);
+                                currentCalories += 0;
+                                currentCarbs += 0;
+                                currentProtein += 0;
+                                currentFats += 0;
                             }
                         }
                     }
@@ -1181,7 +1181,7 @@ namespace FitVitality
                                 searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
                                 searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
                                 searchFoodItem.FoodFat = double.Parse(reader["Fat"].ToString());
-                                searchFoodItem.FoodGrams = 100;
+                                searchFoodItem.FoodGrams = 0;
                                 searchFoodItem.FoodImage = reader["Image"].ToString();
                                 searchFoodItems.Add(searchFoodItem);
                             }
@@ -1229,7 +1229,7 @@ namespace FitVitality
                                 searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
                                 searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
                                 searchFoodItem.FoodFat = double.Parse(reader["Fat"].ToString());
-                                searchFoodItem.FoodGrams = 100;
+                                searchFoodItem.FoodGrams = 0;
                                 searchFoodItem.FoodImage = reader["Image"].ToString();
                                 searchFoodItems.Add(searchFoodItem);
                             }
@@ -1394,10 +1394,11 @@ namespace FitVitality
             foodItem.TextBoxChanged += (sender, e) => foodItem_TextBoxChanged(sender, e, calories, protein, carbs, fat);
             foodPanel.Controls.Add(foodItem);
             foodItems.Add(foodItem);
-            currentCalories += (int)Math.Round(calories, 0);
-            currentCarbs += (int)Math.Round(carbs,0);
-            currentProtein += (int)Math.Round(protein,0);
-            currentFats += (int)Math.Round(fat,0);
+            currentCalories += 0;
+            currentCarbs += 0;
+            currentProtein += 0;
+            currentFats += 0;
+
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1456,15 +1457,19 @@ namespace FitVitality
         }
         private void foodItem_TextBoxChanged(object sender, EventArgs e, double calories, double protein, double carbs, double fat)
         {
+            int oldCalories = 0;
+            int oldCarbs = 0;
+            int oldProtein = 0;
+            int oldFats = 0;
             int grams_Base = 100;
             for (int i = 0; i < foodItems.Count; i++)
             {
                 if (foodItems[i].Equals(sender))
                 {
-                    int oldCalories = currentCalories;
-                    int oldCarbs = currentCarbs;
-                    int oldProtein = currentProtein;
-                    int oldFats = currentFats;
+                    oldCalories = currentCalories;
+                    oldCarbs = currentCarbs;
+                    oldProtein = currentProtein;
+                    oldFats = currentFats;
 
                     Math.Round(foodItems[i].FoodGrams, 1);
                     foodItems[i].FoodCalories = (calories / grams_Base) * foodItems[i].FoodGrams;
@@ -1480,10 +1485,6 @@ namespace FitVitality
                     currentCarbs += (int)Math.Round(foodItems[i].FoodCarbs,0);
                     currentProtein += (int)Math.Round(foodItems[i].FoodProtein,0);
                     currentFats += (int)Math.Round(foodItems[i].FoodFat,0);
-                    currentCalories -= oldCalories;
-                    currentCarbs -= oldCarbs;
-                    currentProtein -= oldProtein;
-                    currentFats -= oldFats;
 
                     activityComboBox_SelectedIndexChanged(sender, e);
                     using (SqlConnection connection = new SqlConnection(connectionString))

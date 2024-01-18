@@ -825,15 +825,15 @@ namespace FitVitality
                                 foodItem.ProteinStatic = Convert.ToDouble(reader["Protein"].ToString());
                                 foodItem.CarbsStatic = Convert.ToDouble(reader["Carbohydrates"].ToString());
                                 foodItem.FatStatic = Convert.ToDouble(reader["Fat"].ToString());
-                                foodItem.FoodGrams = Convert.ToDouble(dbFoodItemsAmountList[i]);
+                                foodItem.FoodGrams = Convert.ToInt32(dbFoodItemsAmountList[i]);
                                 foodItem.FoodImage = reader["Image"].ToString();
                                 foodItem.ButtonClicked += (sender, e) => foodItem_Click(sender, e);
                                 foodItem.Add += (sender, e) => foodItem_Add(sender, e, foodItem.FoodCalories, foodItem.FoodProtein, foodItem.FoodCarbs, foodItem.FoodFat);
                                 foodItem.Remove += (sender, e) => foodItem_Remove(sender, e, foodItem.FoodCalories, foodItem.FoodProtein, foodItem.FoodCarbs, foodItem.FoodFat);
                                 currentCalories += (int)Math.Round(foodItem.FoodCalories, 0);
-                                currentCarbs += (int)Math.Round(foodItem.FoodCarbs, 0);
-                                currentProtein += (int)Math.Round(foodItem.FoodProtein, 0);
-                                currentFats += (int)Math.Round(foodItem.FoodFat, 0);
+                                currentCarbs += (int)Math.Round(foodItem.FoodCarbs, 1);
+                                currentProtein += (int)Math.Round(foodItem.FoodProtein, 1);
+                                currentFats += (int)Math.Round(foodItem.FoodFat, 1);
                                 foodItems.Add(foodItem);
                                 foodPanel.Controls.Add(foodItem);
                             }
@@ -1233,7 +1233,7 @@ namespace FitVitality
                                 searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
                                 searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
                                 searchFoodItem.FoodFat = double.Parse(reader["Fat"].ToString());
-                                searchFoodItem.FoodGrams = 0;
+                                searchFoodItem.FoodGrams = 100;
                                 searchFoodItem.FoodImage = reader["Image"].ToString();
                                 searchFoodItems.Add(searchFoodItem);
                             }
@@ -1281,7 +1281,7 @@ namespace FitVitality
                                 searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
                                 searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
                                 searchFoodItem.FoodFat = double.Parse(reader["Fat"].ToString());
-                                searchFoodItem.FoodGrams = 0;
+                                searchFoodItem.FoodGrams = 100;
                                 searchFoodItem.FoodImage = reader["Image"].ToString();
                                 searchFoodItems.Add(searchFoodItem);
                             }
@@ -1530,9 +1530,8 @@ namespace FitVitality
             {
                 if (foodItems[i].Equals(sender))
                 {
-                    Math.Round(foodItems[i].FoodGrams, 0);
 
-                    currentCalories += (int)Math.Round(foodItems[i].CaloriesDynamic, 0);
+                    currentCalories += (int)Math.Round(foodItems[i].CaloriesDynamic,0);
                     currentCarbs += (int)Math.Round(foodItems[i].CarbsDynamic, 0);
                     currentProtein += (int)Math.Round(foodItems[i].ProteinDynamic, 0);
                     currentFats += (int)Math.Round(foodItems[i].FatDynamic, 0);
@@ -1616,9 +1615,7 @@ namespace FitVitality
             {
                 if (foodItems[i].Equals(sender))
                 {
-                    Math.Round(foodItems[i].FoodGrams, 0);
-
-                    currentCalories -= (int)Math.Round(foodItems[i].CaloriesDynamic, 0);
+                    currentCalories -= (int)Math.Round(foodItems[i].CaloriesDynamic,0);
                     currentCarbs -= (int)Math.Round(foodItems[i].CarbsDynamic, 0);
                     currentProtein -= (int)Math.Round(foodItems[i].ProteinDynamic, 0);
                     currentFats -= (int)Math.Round(foodItems[i].FatDynamic, 0);
@@ -1701,13 +1698,20 @@ namespace FitVitality
             {
                 if (foodItems[i].Equals(sender))
                 {
-                    currentCalories -= (int)Math.Round(foodItems[i].FoodCalories, 0);
+                    currentCalories -= (int)Math.Round(foodItems[i].FoodCalories,0);
                     currentCarbs -= (int)Math.Round(foodItems[i].FoodCarbs, 0);
                     currentProtein -= (int)Math.Round(foodItems[i].FoodProtein, 0);
                     currentFats -= (int)Math.Round(foodItems[i].FoodFat, 0);
                     foodItems.RemoveAt(i);
                     foodPanel.Controls.RemoveAt(i);
                     if (currentCalories < 0 || currentCarbs < 0 || currentFats < 0 || currentProtein < 0)
+                    {
+                        currentCalories = 0;
+                        currentCarbs = 0;
+                        currentProtein = 0;
+                        currentFats = 0;
+                    }
+                    if(foodItems.Count < 1)
                     {
                         currentCalories = 0;
                         currentCarbs = 0;

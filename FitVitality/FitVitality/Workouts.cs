@@ -58,7 +58,7 @@ namespace FitVitality
         List<string> gymGlutes = new List<string> { "Hip thrust", "Glute bridge", "Barbell glute bridge" };
         List<string> gymCore = new List<string> { "Hanging leg raises", "Hanging side-to-side raises", "Cable oblique crunches", "Weighted oblique crunches" };
 
-        //Home
+        //
         List<string> homeBackBiceps = new List<string> { "Towel pull-ups", "Iron man flyes", "Boat lifts", "Butterflyes", "Rocking leafs", "Bodyweight lat pulldowns", "Bodyweight rows", "Straight arm pulldown", "Bed sheet face pulls", "Prone arm circles" };
         List<string> homeChestTricepsShoulders = new List<string> { "Diamond push-ups", "Pike push-ups", "Decline push-ups", "Handstand push-ups", "Dips", "Triceps dips", "Triceps push-ups", "Triceps bench dips", "Triceps floor dips" };
         List<string> homeLegs = new List<string> { "Squats", "Pistol squats", "Lunges", "Bulgarian split squats", "Jumping lunges", "Jumping squats", "Calf raises", "Glute bridges", "Single leg glute bridges", "Wall sit" };
@@ -70,19 +70,12 @@ namespace FitVitality
         List<string> outdoorsLegs = new List<string> { "Squats", "Lunges", "Bulgarian split squats", "Jumping lunges", "Jumping squats", "Calf raises", "Glute bridges", "Single leg glute bridges", "Wall sit" };
         List<string> outdoorsCore = new List<string> { "Plank", "Side plank", "Reverse plank", "Crunches", "Bicycle crunches", "Flutter kicks", "Russian twists", "V-ups", "Sit-ups", "Mountain climbers", "Burpees", "Jumping jacks", "High knees", "Plank jacks", "Scissor kicks", "Toes to bar", "Hanging knee raises", "V-raises" };
 
-        List<WorkoutListItem> workouts_Gym = new List<WorkoutListItem>();
-        List<WorkoutListItem> workouts_Home = new List<WorkoutListItem>();
-        List<WorkoutListItem> workouts_Outdoors = new List<WorkoutListItem>();
+        List<WorkoutListItem> workouts = new List<WorkoutListItem>();
 
-        List<string> backbicepsHome = new List<string>();
-        List<string> chesttricepsshouldersHome = new List<string>();
-        List<string> legsHome = new List<string>();
-        List<string> coreHome = new List<string>();
-
-        List<string> backbicepsOutdoors = new List<string>();
-        List<string> chesttricepsshouldersOutdoors = new List<string>();
-        List<string> legsOutdoors = new List<string>();
-        List<string> coreOutdoors = new List<string>();
+        List<string> backbiceps = new List<string>();
+        List<string> chesttricepsshoulders = new List<string>();
+        List<string> legs = new List<string>();
+        List<string> _core = new List<string>();
 
         List<string> back = new List<string>();
         List<string> biceps = new List<string>();
@@ -436,6 +429,7 @@ namespace FitVitality
             {
                 workoutsList.Visible = true;
                 workoutsList.BringToFront();
+
             }
             else if (createClicked)
             {
@@ -744,7 +738,6 @@ namespace FitVitality
             if (preClicked)
             {
                 workoutsList.Visible = true;
-                addGymWorkouts();
             }
             else if (createClicked)
             {
@@ -762,6 +755,8 @@ namespace FitVitality
 
         private void addGymWorkouts()
         {
+            workouts.Clear();
+            workoutsList.Controls.Clear();
             back.Clear();
             biceps.Clear();
             triceps.Clear();
@@ -799,169 +794,197 @@ namespace FitVitality
                     }
                 }
             }
-            workouts_Gym.Clear();
-            workoutsList.Controls.Clear();
             for (int i = 0; i < rowCount; i++)
             {
                 WorkoutListItem workout = new WorkoutListItem();
                 workout.WorkoutNumber = $"Workout {i + 1}";
+                workout.ButtonClicked += (sender, e) => WorkoutListItemGym_ButtonClicked(sender, e);
                 workoutsList.Controls.Add(workout);
-                workouts_Gym.Add(workout);
-                /*if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
+                workouts.Add(workout);
+                if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
                     && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] != "None")
                 {
-                    workouts_Gym[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
                 $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
                 $"[Core]: Abs, Obliques...";
                 }
                 else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
                     && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] != "None")
                 {
-                    workouts_Gym[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
                 $"[Core]: Abs, Obliques...";
                 }
                 else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
                     && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] != "None")
                 {
-                    workouts_Gym[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
+                    workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
                 }
                 else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
                     && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] == "None")
                 {
-                    workouts_Gym[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
                 $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n";
                 }
                 else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
                    && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] == "None")
                 {
-                    workouts_Gym[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
                 }
                 else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
                   && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] != "None")
                 {
-                    workouts_Gym[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
                 $"[Core]: Abs, Obliques...";
                 }
                 else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
                   && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] == "None")
                 {
-                    workouts_Gym[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n";
-                }*/
-                workout.ButtonClicked += (sender, e) => WorkoutListItemGym_ButtonClicked(sender, e);
+                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n";
+                }
             }
         }
         private void addHomeWorkouts()
         {
-            backbicepsHome.Clear();
-            chesttricepsshouldersHome.Clear();
-            legsHome.Clear();
-            coreHome.Clear();
+            workouts.Clear();
+            workoutsList.Controls.Clear();
+
+            backbiceps.Clear();
+            chesttricepsshoulders.Clear();
+            legs.Clear();
+            _core.Clear();
             int rowCount = 0;
 
             using SqlConnection connection = new SqlConnection(connectionString);
             {
                 connection.Open();
-                string query = "SELECT * FROM WorkoutsListHomeOutdoors WHERE Type = 'Home'";
+                string query = "SELECT * FROM WorkoutsListHome";
                 using (SqlCommand comm = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = comm.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            chesttricepsshouldersHome.Add(reader["ChestTricepsShoulders"].ToString());
-                            backbicepsHome.Add(reader["BackBiceps"].ToString());
-                            legsHome.Add(reader["Legs"].ToString());
-                            coreHome.Add(reader["Core"].ToString());
+                            chesttricepsshoulders.Add(reader["ChestTricepsShoulders"].ToString());
+                            backbiceps.Add(reader["BackBiceps"].ToString());
+                            legs.Add(reader["Legs"].ToString());
+                            _core.Add(reader["Core"].ToString());
                             rowCount++;
                         }
                     }
                 }
             }
-            workouts_Home.Clear();
-            workoutsList.Controls.Clear();
             for (int i = 0; i < rowCount; i++)
             {
                 WorkoutListItem workout = new WorkoutListItem();
                 workout.WorkoutNumber = $"Workout {i + 1}";
+                workout.ButtonClicked += (sender, e) => HomeOutdoors_ButtonClicked(sender, e);
                 workoutsList.Controls.Add(workout);
-                workouts_Home.Add(workout);
-                /*if (backbicepsHome[i] != "None" && chesttricepsshouldersHome[i] != "None" && legsHome[i] != "None" && coreHome[i] != "None")
+                workouts.Add(workout);
+                if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] != "None")
                 {
-                    workouts_Home[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
                 $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
                 $"[Core]: Abs, Obliques...";
                 }
-                else if (backbicepsHome[i] == "None" && chesttricepsshouldersHome[i] == "None" && legsHome[i] != "None" && coreHome[i] != "None")
+                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] != "None")
                 {
-                    workouts_Home[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
                         $"[Core]: Abs, Obliques...";
                 }
-                else if (backbicepsHome[i] == "None" && chesttricepsshouldersHome[i] == "None" && legsHome[i] == "None" && coreHome[i] != "None")
+                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] == "None" && _core[i] != "None")
                 {
-                    workouts_Home[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
+                    workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
                 }
-                else if (backbicepsHome[i] != "None" && chesttricepsshouldersHome[i] != "None" && legsHome[i] == "None" && coreHome[i] == "None")
+                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] == "None")
                 {
-                    workouts_Home[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
                 }
-                else if (backbicepsHome[i] != "None" && chesttricepsshouldersHome[i] != "None" && legsHome[i] != "None" && coreHome[i] == "None")
+                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] == "None")
                 {
-                    workouts_Home[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
                         $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
                 }
-                else if (backbicepsHome[i] != "None" && chesttricepsshouldersHome[i] != "None" && legsHome[i] == "None" && coreHome[i] != "None")
+                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] != "None")
                 {
-                    workouts_Home[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
                         $"[Core]: Abs, Obliques...";
                 }
-                else if (backbicepsHome[i] == "None" && chesttricepsshouldersHome[i] == "None" && legsHome[i] != "None" && coreHome[i] == "None")
+                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] == "None")
                 {
-                    workouts_Home[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
-                }*/
-
-                workouts_Home[i].ButtonClicked += (sender, e) => HomeOutdoors_ButtonClicked(sender, e);
+                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                }
             }
         }
         private void addOutdoorsWorkouts()
         {
-            backbicepsOutdoors.Clear();
-            chesttricepsshouldersOutdoors.Clear();
-            legsOutdoors.Clear();
-            coreOutdoors.Clear();
+            workouts.Clear();
+            workoutsList.Controls.Clear();
+            backbiceps.Clear();
+            chesttricepsshoulders.Clear();
+            legs.Clear();
+            _core.Clear();
             int rowCount = 0;
 
             using SqlConnection connection = new SqlConnection(connectionString);
             {
                 connection.Open();
-                string query = "SELECT * FROM WorkoutsListHomeOutdoors WHERE Type = 'Outdoors'";
+                string query = "SELECT * FROM WorkoutsListOutdoors";
                 using (SqlCommand comm = new SqlCommand(query, connection))
                 {
                     using (SqlDataReader reader = comm.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            chesttricepsshouldersOutdoors.Add(reader["ChestTricepsShoulders"].ToString());
-                            backbicepsOutdoors.Add(reader["BackBiceps"].ToString());
-                            legsOutdoors.Add(reader["Legs"].ToString());
-                            coreOutdoors.Add(reader["Core"].ToString());
+                            chesttricepsshoulders.Add(reader["ChestTricepsShoulders"].ToString());
+                            backbiceps.Add(reader["BackBiceps"].ToString());
+                            legs.Add(reader["Legs"].ToString());
+                            _core.Add(reader["Core"].ToString());
                             rowCount++;
                         }
                     }
                 }
             }
-            workouts_Outdoors.Clear();
-            workoutsList.Controls.Clear();
+
             for (int i = 0; i < rowCount; i++)
             {
                 WorkoutListItem workout = new WorkoutListItem();
                 workout.WorkoutNumber = $"Workout {i + 1}";
+                workout.ButtonClicked += (sender, e) => HomeOutdoors_ButtonClicked(sender, e);
                 workoutsList.Controls.Add(workout);
-                workouts_Outdoors.Add(workout);
-                workouts_Outdoors[i].WorkoutNumber = $"Workout {i + 1}";
-                workouts_Outdoors[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                workouts.Add(workout);
+                if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] != "None")
+                {
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
                 $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
                 $"[Core]: Abs, Obliques...";
-                workouts_Outdoors[i].ButtonClicked += (sender, e) => HomeOutdoors_ButtonClicked(sender, e);
+                }
+                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] != "None")
+                {
+                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                        $"[Core]: Abs, Obliques...";
+                }
+                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] == "None" && _core[i] != "None")
+                {
+                    workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
+                }
+                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] == "None")
+                {
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
+                }
+                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] == "None")
+                {
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                        $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                }
+                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] != "None")
+                {
+                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                        $"[Core]: Abs, Obliques...";
+                }
+                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] == "None")
+                {
+                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                }
             }
         }
         private void workoutsList_VisibleChanged(object sender, EventArgs e)
@@ -969,23 +992,14 @@ namespace FitVitality
             if (gymClicked)
             {
                 addGymWorkouts();
-                workouts_Gym.Clear();
-                workouts_Home.Clear();
-                workouts_Outdoors.Clear();
             }
             else if (homeClicked)
             {
                 addHomeWorkouts();
-                workouts_Gym.Clear();
-                workouts_Home.Clear();
-                workouts_Outdoors.Clear();
             }
             else if (outdoorsClicked)
             {
                 addOutdoorsWorkouts();
-                workouts_Gym.Clear();
-                workouts_Home.Clear();
-                workouts_Outdoors.Clear();
             }
         }
 
@@ -1162,9 +1176,9 @@ namespace FitVitality
         }
         private void WorkoutListItemGym_ButtonClicked(object sender, EventArgs e)
         {
-            for (int i = 0; i < workouts_Gym.Count; i++)
+            for (int i = 0; i < workouts.Count; i++)
             {
-                if (workouts_Gym[i].Equals(sender))
+                if (workouts[i].Equals(sender))
                 {
                     workoutPreviewPanel.Visible = true;
                     workoutPreviewPanel.BringToFront();
@@ -1177,28 +1191,18 @@ namespace FitVitality
         }
         private void HomeOutdoors_ButtonClicked(object sender, EventArgs e)
         {
-            for (int i = 0; i < workouts_Outdoors.Count; i++)
+            for (int i = 0; i < workouts.Count; i++)
             {
-                if (workouts_Outdoors[i].Equals(sender))
+                if (workouts[i].Equals(sender))
                 {
                     workoutPreviewPanel.Visible = true;
                     workoutPreviewPanel.BringToFront();
                     workoutPreviewLabel.Text = $"Workout {i + 1}";
-                    if (homeClicked)
-                    {
-                        labelExercises.Text = $"[Back and Biceps]: {backbicepsHome[i]}\n[Chest, Triceps and Shoulders]: {chesttricepsshouldersHome[i]}\n\n" +
-                        $"[Legs]: {legsHome[i]}\n\n" +
-                        $"[Core]: {coreHome[i]}";
-                    }
-                    else if (outdoorsClicked)
-                    {
-                        labelExercises.Text = $"[Back and Biceps]: {backbicepsOutdoors[i]}\n[Chest, Triceps and Shoulders]: {chesttricepsshouldersOutdoors[i]}\n\n" +
-                        $"[Legs]: {legsOutdoors[i]}\n\n" +
-                        $"[Core]: {coreOutdoors[i]}";
-                    }
+                    labelExercises.Text = $"[Back and Biceps]: {backbiceps[i]}\n[Chest, Triceps and Shoulders]: {chesttricepsshoulders[i]}\n\n" +
+                    $"[Legs]: {legs[i]}\n\n" +
+                    $"[Core]: {_core[i]}";
                 }
             }
-
         }
 
         private void kryptonButton1_Click_1(object sender, EventArgs e)

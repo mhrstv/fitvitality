@@ -88,8 +88,8 @@ namespace FitVitality
                 ProteinDynamic = Math.Round((Convert.ToDouble(textBoxGrams.Text) / 100) * _proteinStatic, 1);
                 CarbsDynamic = Math.Round((Convert.ToDouble(textBoxGrams.Text) / 100) * _carbsStatic, 1);
                 FatDynamic = Math.Round((Convert.ToDouble(textBoxGrams.Text) / 100) * _fatStatic, 1);
-                GramsDynamic = Convert.ToDouble(textBoxGrams.Text);
-                FoodGrams += Convert.ToDouble(textBoxGrams.Text);
+                GramsDynamic = Convert.ToInt32(textBoxGrams.Text);
+                FoodGrams += Convert.ToInt32(textBoxGrams.Text);
                 FoodCalories += CaloriesDynamic;
                 FoodProtein += ProteinDynamic;
                 FoodCarbs += CarbsDynamic;
@@ -102,17 +102,16 @@ namespace FitVitality
                 Add?.Invoke(this, EventArgs.Empty);
             }
         }
-
         private void removeButton_Click(object sender, EventArgs e)
         {
-            if (textBoxGrams.Text != "" && checkIfNumeric(textBoxGrams.Text))
+            if (textBoxGrams.Text != "" && checkIfNumeric(textBoxGrams.Text) && FoodGrams - int.Parse(textBoxGrams.Text) > 0)
             {
                 CaloriesDynamic = Math.Round((Convert.ToDouble(textBoxGrams.Text) / 100) * _caloriesStatic, 0);
                 ProteinDynamic = Math.Round((Convert.ToDouble(textBoxGrams.Text) / 100) * _proteinStatic, 1);
                 CarbsDynamic = Math.Round((Convert.ToDouble(textBoxGrams.Text) / 100) * _carbsStatic, 1);
                 FatDynamic = Math.Round((Convert.ToDouble(textBoxGrams.Text) / 100) * _fatStatic, 1);
-                GramsDynamic = Convert.ToDouble(textBoxGrams.Text);
-                FoodGrams -= Convert.ToDouble(textBoxGrams.Text);
+                GramsDynamic = Convert.ToInt32(textBoxGrams.Text);
+                FoodGrams -= Convert.ToInt32(textBoxGrams.Text);
                 FoodCalories -= CaloriesDynamic;
                 FoodProtein -= ProteinDynamic;
                 FoodCarbs -= CarbsDynamic;
@@ -141,32 +140,32 @@ namespace FitVitality
         public double FoodCalories
         {
             get { return _foodCalories; }
-            set { _foodCalories = value; caloriesLabel.Text = $"kCal:{Math.Round(value, 0):f0}"; }
+            set { _foodCalories = value; caloriesLabel.Text = $"kCal:{value}"; }
         }
         [Category("Custom Props")]
         public double FoodProtein
         {
             get { return _foodProtein; }
-            set { _foodProtein = value; pLabel.Text = $"P:{Math.Round(value, 2):f1}g"; }
+            set { _foodProtein = value; pLabel.Text = $"P:{Math.Round(value, 1):f1}g"; }
         }
         [Category("Custom Props")]
         public double FoodCarbs
         {
             get { return _foodCarbs; }
-            set { _foodCarbs = value; cLabel.Text = $"C:{Math.Round(value, 2):f1}g"; }
+            set { _foodCarbs = value; cLabel.Text = $"C:{Math.Round(value, 1):f1}g"; }
         }
         [Category("Custom Props")]
         public double FoodFat
         {
             get { return _foodFat; }
-            set { _foodFat = value; fLabel.Text = $"F:{Math.Round(value, 2):f1}g"; }
+            set { _foodFat = value; fLabel.Text = $"F:{Math.Round(value, 1):f1}g"; }
         }
 
         [Category("Custom Props")]
         public double FoodGrams
         {
             get { return _foodGrams; }
-            set { _foodGrams = value; gramsLabel.Text = $"{FoodGrams.ToString():f0}g"; }
+            set { _foodGrams = value; gramsLabel.Text = $"{FoodGrams}g"; }
         }
         [Category("Custom Props")]
         public string FoodImage

@@ -204,9 +204,9 @@
             // 
             // gramsLabel
             // 
-            gramsLabel.Location = new Point(168, 26);
+            gramsLabel.Location = new Point(147, 26);
             gramsLabel.Name = "gramsLabel";
-            gramsLabel.Size = new Size(39, 24);
+            gramsLabel.Size = new Size(60, 24);
             gramsLabel.TabIndex = 29;
             gramsLabel.Text = "g";
             gramsLabel.TextAlign = ContentAlignment.MiddleRight;

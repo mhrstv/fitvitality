@@ -57,7 +57,7 @@
             // 
             // foodImage
             // 
-            foodImage.Location = new Point(7, 9);
+            foodImage.Location = new Point(7, 6);
             foodImage.Name = "foodImage";
             foodImage.Size = new Size(50, 50);
             foodImage.SizeMode = PictureBoxSizeMode.Zoom;
@@ -93,7 +93,7 @@
             // 
             // foodNameLabel
             // 
-            foodNameLabel.Location = new Point(7, 61);
+            foodNameLabel.Location = new Point(9, 59);
             foodNameLabel.Name = "foodNameLabel";
             foodNameLabel.Size = new Size(84, 15);
             foodNameLabel.TabIndex = 4;

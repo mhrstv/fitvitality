@@ -1781,11 +1781,11 @@
             // 
             trainingDaysDescription.BackColor = Color.WhiteSmoke;
             trainingDaysDescription.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            trainingDaysDescription.Location = new Point(138, 45);
+            trainingDaysDescription.Location = new Point(130, 41);
             trainingDaysDescription.Name = "trainingDaysDescription";
-            trainingDaysDescription.Size = new Size(277, 41);
+            trainingDaysDescription.Size = new Size(293, 29);
             trainingDaysDescription.TabIndex = 45;
-            trainingDaysDescription.Text = "Here you can choose in which days of \r\nthe week you are going ot workout.";
+            trainingDaysDescription.Text = "Please select which days you want to train in.";
             trainingDaysDescription.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // trainingDaysLabel

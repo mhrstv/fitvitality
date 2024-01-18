@@ -1207,7 +1207,9 @@ namespace FitVitality
 
         private void kryptonButton1_Click_1(object sender, EventArgs e)
         {
-
+            trainingDaysPanel.Visible = true; trainingDaysPanel.BringToFront();
+            workoutPreviewPanel.Visible = false;
+            workoutsList.Visible = false;
         }
     }
 }

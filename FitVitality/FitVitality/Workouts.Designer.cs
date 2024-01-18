@@ -119,6 +119,12 @@
             workoutPreviewButtonBorders = new Panel();
             selectWorkoutButton = new Krypton.Toolkit.KryptonButton();
             workoutPreviewPanelBorders = new PictureBox();
+            trainingDaysPanel = new Panel();
+            trainingDaysDescription = new Label();
+            trainingDaysLabel = new Label();
+            panel2 = new Panel();
+            preGeneratedDoneButton = new Krypton.Toolkit.KryptonButton();
+            trainingDaysBorders = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -173,6 +179,9 @@
             ((System.ComponentModel.ISupportInitialize)workoutPreviewClose).BeginInit();
             workoutPreviewButtonBorders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)workoutPreviewPanelBorders).BeginInit();
+            trainingDaysPanel.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)trainingDaysBorders).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -1756,12 +1765,126 @@
             workoutPreviewPanelBorders.TabIndex = 0;
             workoutPreviewPanelBorders.TabStop = false;
             // 
+            // trainingDaysPanel
+            // 
+            trainingDaysPanel.Controls.Add(trainingDaysDescription);
+            trainingDaysPanel.Controls.Add(trainingDaysLabel);
+            trainingDaysPanel.Controls.Add(panel2);
+            trainingDaysPanel.Controls.Add(trainingDaysBorders);
+            trainingDaysPanel.Location = new Point(69, 31);
+            trainingDaysPanel.Name = "trainingDaysPanel";
+            trainingDaysPanel.Size = new Size(553, 307);
+            trainingDaysPanel.TabIndex = 45;
+            trainingDaysPanel.Visible = false;
+            // 
+            // trainingDaysDescription
+            // 
+            trainingDaysDescription.BackColor = Color.WhiteSmoke;
+            trainingDaysDescription.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            trainingDaysDescription.Location = new Point(138, 45);
+            trainingDaysDescription.Name = "trainingDaysDescription";
+            trainingDaysDescription.Size = new Size(277, 41);
+            trainingDaysDescription.TabIndex = 45;
+            trainingDaysDescription.Text = "Here you can choose in which days of \r\nthe week you are going ot workout.";
+            trainingDaysDescription.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // trainingDaysLabel
+            // 
+            trainingDaysLabel.AutoSize = true;
+            trainingDaysLabel.BackColor = Color.WhiteSmoke;
+            trainingDaysLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            trainingDaysLabel.Location = new Point(210, 13);
+            trainingDaysLabel.Name = "trainingDaysLabel";
+            trainingDaysLabel.Size = new Size(133, 22);
+            trainingDaysLabel.TabIndex = 40;
+            trainingDaysLabel.Text = "Training days";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.WhiteSmoke;
+            panel2.Controls.Add(preGeneratedDoneButton);
+            panel2.Location = new Point(231, 270);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(90, 25);
+            panel2.TabIndex = 32;
+            // 
+            // preGeneratedDoneButton
+            // 
+            preGeneratedDoneButton.CornerRoundingRadius = 15F;
+            preGeneratedDoneButton.Location = new Point(0, 0);
+            preGeneratedDoneButton.Name = "preGeneratedDoneButton";
+            preGeneratedDoneButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            preGeneratedDoneButton.Size = new Size(90, 25);
+            preGeneratedDoneButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateCommon.Back.ColorAngle = 45F;
+            preGeneratedDoneButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateCommon.Border.ColorAngle = 45F;
+            preGeneratedDoneButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGeneratedDoneButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGeneratedDoneButton.StateCommon.Border.Rounding = 15F;
+            preGeneratedDoneButton.StateCommon.Border.Width = 1;
+            preGeneratedDoneButton.StateCommon.Content.ShortText.Color1 = Color.White;
+            preGeneratedDoneButton.StateCommon.Content.ShortText.Color2 = Color.White;
+            preGeneratedDoneButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            preGeneratedDoneButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGeneratedDoneButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateNormal.Back.ColorAngle = 45F;
+            preGeneratedDoneButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGeneratedDoneButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preGeneratedDoneButton.StateNormal.Border.ColorAngle = 45F;
+            preGeneratedDoneButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGeneratedDoneButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGeneratedDoneButton.StateNormal.Border.Rounding = 15F;
+            preGeneratedDoneButton.StateNormal.Border.Width = 1;
+            preGeneratedDoneButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            preGeneratedDoneButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            preGeneratedDoneButton.StatePressed.Back.ColorAngle = 45F;
+            preGeneratedDoneButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGeneratedDoneButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            preGeneratedDoneButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            preGeneratedDoneButton.StatePressed.Border.ColorAngle = 45F;
+            preGeneratedDoneButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGeneratedDoneButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGeneratedDoneButton.StatePressed.Border.Rounding = 15F;
+            preGeneratedDoneButton.StatePressed.Border.Width = 1;
+            preGeneratedDoneButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            preGeneratedDoneButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            preGeneratedDoneButton.StateTracking.Back.ColorAngle = 45F;
+            preGeneratedDoneButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGeneratedDoneButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            preGeneratedDoneButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            preGeneratedDoneButton.StateTracking.Border.ColorAngle = 45F;
+            preGeneratedDoneButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preGeneratedDoneButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preGeneratedDoneButton.StateTracking.Border.Rounding = 15F;
+            preGeneratedDoneButton.StateTracking.Border.Width = 1;
+            preGeneratedDoneButton.TabIndex = 31;
+            preGeneratedDoneButton.Values.Text = "Done";
+            // 
+            // trainingDaysBorders
+            // 
+            trainingDaysBorders.Image = Properties.Resources.previewWorkout;
+            trainingDaysBorders.Location = new Point(0, 0);
+            trainingDaysBorders.Name = "trainingDaysBorders";
+            trainingDaysBorders.Size = new Size(553, 307);
+            trainingDaysBorders.TabIndex = 0;
+            trainingDaysBorders.TabStop = false;
+            // 
             // Workouts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(trainingDaysPanel);
             Controls.Add(workoutPreviewPanel);
             Controls.Add(createPanel);
             Controls.Add(workoutsList);
@@ -1846,6 +1969,10 @@
             ((System.ComponentModel.ISupportInitialize)workoutPreviewClose).EndInit();
             workoutPreviewButtonBorders.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)workoutPreviewPanelBorders).EndInit();
+            trainingDaysPanel.ResumeLayout(false);
+            trainingDaysPanel.PerformLayout();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)trainingDaysBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1944,5 +2071,11 @@
         private Krypton.Toolkit.KryptonButton selectWorkoutButton;
         private PictureBox workoutPreviewClose;
         private Label labelExercises;
+        private Panel trainingDaysPanel;
+        private Label trainingDaysDescription;
+        private Label trainingDaysLabel;
+        private Panel panel2;
+        private Krypton.Toolkit.KryptonButton preGeneratedDoneButton;
+        private PictureBox trainingDaysBorders;
     }
 }

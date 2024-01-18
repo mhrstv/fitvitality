@@ -442,9 +442,9 @@
             foodPanel.AutoScroll = true;
             foodPanel.BorderStyle = BorderStyle.FixedSingle;
             foodPanel.FlowDirection = FlowDirection.RightToLeft;
-            foodPanel.Location = new Point(232, 133);
+            foodPanel.Location = new Point(226, 133);
             foodPanel.Name = "foodPanel";
-            foodPanel.Size = new Size(225, 201);
+            foodPanel.Size = new Size(241, 201);
             foodPanel.TabIndex = 51;
             foodPanel.Click += foodPanel_Click;
             foodPanel.Paint += foodPanel_Paint;

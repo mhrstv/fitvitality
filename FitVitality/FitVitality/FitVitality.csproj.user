@@ -10,7 +10,7 @@
     <Compile Update="FoodItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="home.cs">
+    <Compile Update="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LoadingScreen.cs">

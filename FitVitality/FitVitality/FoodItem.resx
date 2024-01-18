@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -117,4 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="addButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAY1JREFUaEPt
+        mVFqwlAURLMSu7GutP1wLf3pHlqE9AYe4XY4yEz9MA3vwAGRe8eRqDzJMplMJpPDsK7rn339+LyUb+VX
+        uQ63x9tzF9pxjaEQ1yr7PsqTV9pxjaEQ1yrbr4R6ox3XGApxhfK/1PnEGApxpfJdnU+MoRBXKt/V+cQY
+        CnGl8l2dT4yhEFcq39X5xBgKcaXyXZ1PjKEQVyrf1fnEGApxpfJdnU+MqRd8RHwDTdqxjKGQQCrfpR3L
+        mFqig9+z3A+co55PLd07+D3L66jnU0tHuBLqbdTzgZBDOOr5UMgRHPV8auk0H63TfNm3n9/tzRzhynyX
+        W5eXUc+nlh6RynRpxzKGzjmu9YJUflfnE2MoxJXKd3U+MYZCXKl8V+cTYyjElcp3dT4xhkJcqXxX5xNj
+        KMSVynd1PjGGQlypfFfnE2MoxJXKd3U+MYZCXKl8V+cTYyjElcp3dT4xhkJcqXxX5xNjKMSVynd1PjGG
+        Qlyr7L0T87+6P3KaO1b0X2b/T0E7rpPJZHIWluUHu6Zfv3Xil3IAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="removeButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAHxJREFUaEPt
+        1DEKgDAMheGepF7Mk+rgWVy8gyJoAm+SDtkM7f/BGxNeqbYAAAAAADCAeT+qZbGclufneAfvUlUvzoZW
+        LcmUTfXibCjDTXxzq15cY0mKqF5ca0mGqF6cDXXzaXXzs/vz64fJcDOXxbtMqgcAAAAAAIDRlfIClPay
+        yLtgwqYAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

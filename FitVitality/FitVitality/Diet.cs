@@ -103,7 +103,7 @@ namespace FitVitality
                 {
                     carbohydrates.ForeColor = Color.Red;
                     carbohydrates.Text = $"{currentCarbs} / {activity * 0.5 / 4:f0}";
-                }   
+                }
             }
             if (goal == "Maintain")
             {
@@ -771,6 +771,10 @@ namespace FitVitality
             foodPanel.Controls.Clear();
             string dbFoodItems = "";
             string dbFoodItemsAmount = "";
+            string dbFoodItemsCalories = "";
+            string dbFoodItemsProtein = "";
+            string dbFoodItemsCarbs = "";
+            string dbFoodItemsFat = "";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -784,12 +788,20 @@ namespace FitVitality
                         {
                             dbFoodItems = reader["Items"].ToString();
                             dbFoodItemsAmount = reader["ItemsAmount"].ToString();
+                            dbFoodItemsCalories = reader["ItemsCalories"].ToString();
+                            dbFoodItemsProtein = reader["ItemsProtein"].ToString();
+                            dbFoodItemsCarbs = reader["ItemsCarbs"].ToString();
+                            dbFoodItemsFat = reader["ItemsFats"].ToString();
                         }
                     }
                 }
             }
             List<string> dbFoodItemsList = dbFoodItems.Split(",").ToList();
             List<string> dbFoodItemsAmountList = dbFoodItemsAmount.Split(",").ToList();
+            List<string> dbFoodItemsCaloriesList = dbFoodItemsCalories.Split(",").ToList();
+            List<string> dbFoodItemsProteinList = dbFoodItemsProtein.Split(",").ToList();
+            List<string> dbFoodItemsCarbsList = dbFoodItemsCarbs.Split(",").ToList();
+            List<string> dbFoodItemsFatList = dbFoodItemsFat.Split(",").ToList();
             for (int i = 0; i < dbFoodItemsList.Count; i++)
             {
                 FoodItem foodItem = new FoodItem();
@@ -805,23 +817,63 @@ namespace FitVitality
                             if (reader.Read())
                             {
                                 foodItem.FoodName = reader["Name"].ToString();
-                                foodItem.FoodCalories = Convert.ToDouble(reader["Calories"].ToString());
-                                foodItem.FoodProtein = Convert.ToDouble(reader["Protein"].ToString());
-                                foodItem.FoodCarbs = Convert.ToDouble(reader["Carbohydrates"].ToString());
-                                foodItem.FoodFat = Convert.ToDouble(reader["Fat"].ToString());
+                                foodItem.FoodCalories = Convert.ToDouble(dbFoodItemsCaloriesList[i]);
+                                foodItem.FoodProtein = Convert.ToDouble(dbFoodItemsProteinList[i]);
+                                foodItem.FoodCarbs = Convert.ToDouble(dbFoodItemsCarbsList[i]);
+                                foodItem.FoodFat = Convert.ToDouble(dbFoodItemsFatList[i]);
+                                foodItem.CaloriesStatic = Convert.ToDouble(reader["Calories"].ToString());
+                                foodItem.ProteinStatic = Convert.ToDouble(reader["Protein"].ToString());
+                                foodItem.CarbsStatic = Convert.ToDouble(reader["Carbohydrates"].ToString());
+                                foodItem.FatStatic = Convert.ToDouble(reader["Fat"].ToString());
                                 foodItem.FoodGrams = Convert.ToDouble(dbFoodItemsAmountList[i]);
                                 foodItem.FoodImage = reader["Image"].ToString();
                                 foodItem.ButtonClicked += (sender, e) => foodItem_Click(sender, e);
-                                foodItem.TextBoxChanged += (sender, e) => foodItem_TextBoxChanged(sender, e, foodItem.FoodCalories, foodItem.FoodProtein, foodItem.FoodCarbs, foodItem.FoodFat);
-                                currentCalories += 0;
-                                currentCarbs += 0;
-                                currentProtein += 0;
-                                currentFats += 0;
+                                foodItem.Add += (sender, e) => foodItem_Add(sender, e, foodItem.FoodCalories, foodItem.FoodProtein, foodItem.FoodCarbs, foodItem.FoodFat);
+                                foodItem.Remove += (sender, e) => foodItem_Remove(sender, e, foodItem.FoodCalories, foodItem.FoodProtein, foodItem.FoodCarbs, foodItem.FoodFat);
+                                currentCalories += (int)Math.Round(foodItem.FoodCalories, 0);
+                                currentCarbs += (int)Math.Round(foodItem.FoodCarbs, 0);
+                                currentProtein += (int)Math.Round(foodItem.FoodProtein, 0);
+                                currentFats += (int)Math.Round(foodItem.FoodFat, 0);
+                                foodItems.Add(foodItem);
+                                foodPanel.Controls.Add(foodItem);
                             }
                         }
                     }
                 }
-                
+            }
+            activityComboBox_SelectedIndexChanged(sender, e);
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM UserNutrition WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (reader["MacroSelection"].ToString() != String.Empty)
+                            {
+                                switch (reader["MacroSelection"].ToString())
+                                {
+                                    case "Balanced":
+                                        balancedButton_Click(sender, e);
+                                        break;
+                                    case "HighProtein":
+                                        highProteinButton_Click(sender, e);
+                                        break;
+                                    case "LowFat":
+                                        lowFatButton_Click(sender, e);
+                                        break;
+                                    case "LowCarbs":
+                                        lowCarbsButton_Click(sender, e);
+                                        break;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -1389,15 +1441,20 @@ namespace FitVitality
             foodItem.FoodCarbs = carbs;
             foodItem.FoodFat = fat;
             foodItem.FoodGrams = grams;
+            foodItem.CaloriesStatic = calories;
+            foodItem.ProteinStatic = protein;
+            foodItem.CarbsStatic = carbs;
+            foodItem.FatStatic = fat;
             foodItem.FoodImage = image;
             foodItem.ButtonClicked += (sender, e) => foodItem_Click(sender, e);
-            foodItem.TextBoxChanged += (sender, e) => foodItem_TextBoxChanged(sender, e, calories, protein, carbs, fat);
+            foodItem.Add += (sender, e) => foodItem_Add(sender, e, calories, protein, carbs, fat);
+            foodItem.Remove += (sender, e) => foodItem_Remove(sender, e, calories, protein, carbs, fat);
             foodPanel.Controls.Add(foodItem);
             foodItems.Add(foodItem);
-            currentCalories += 0;
-            currentCarbs += 0;
-            currentProtein += 0;
-            currentFats += 0;
+            currentCalories += (int)Math.Round(foodItem.FoodCalories, 0);
+            currentCarbs += (int)Math.Round(foodItem.FoodCarbs, 0);
+            currentProtein += (int)Math.Round(foodItem.FoodProtein, 0);
+            currentFats += (int)Math.Round(foodItem.FoodFat, 0);
 
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -1435,56 +1492,50 @@ namespace FitVitality
             }
             string items = "";
             string itemsamount = "";
-            for(int i = 0; i < foodItems.Count; i++)
+            string itemsCalories = "";
+            string itemsProtein = "";
+            string itemsCarbs = "";
+            string itemsFat = "";
+            for (int i = 0; i < foodItems.Count; i++)
             {
                 items += foodItems[i].FoodName + ",";
                 itemsamount += foodItems[i].FoodGrams + ",";
+                itemsCalories += foodItems[i].FoodCalories + ",";
+                itemsProtein += foodItems[i].FoodProtein + ",";
+                itemsCarbs += foodItems[i].FoodCarbs + ",";
+                itemsFat += foodItems[i].FoodFat + ",";
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE UserNutrition " +
-                               "SET Items = @FoodItems, ItemsAmount = @FoodAmount " +
+                               "SET Items = @FoodItems, ItemsAmount = @FoodAmount, ItemsCalories = @FoodCalories, ItemsProtein = @FoodProtein, ItemsCarbs = @FoodCarbs, ItemsFats = @FoodFat " +
                                "WHERE UserID = @UserID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@UserID", _userID);
                     command.Parameters.AddWithValue("@FoodItems", items);
                     command.Parameters.AddWithValue("@FoodAmount", itemsamount);
+                    command.Parameters.AddWithValue("@FoodCalories", itemsCalories);
+                    command.Parameters.AddWithValue("@FoodProtein", itemsProtein);
+                    command.Parameters.AddWithValue("@FoodCarbs", itemsCarbs);
+                    command.Parameters.AddWithValue("@FoodFat", itemsFat);
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
-            }   
+            }
         }
-        private void foodItem_TextBoxChanged(object sender, EventArgs e, double calories, double protein, double carbs, double fat)
+        private void foodItem_Add(object sender, EventArgs e, double calories, double protein, double carbs, double fat)
         {
-            int oldCalories = 0;
-            int oldCarbs = 0;
-            int oldProtein = 0;
-            int oldFats = 0;
-            int grams_Base = 100;
             for (int i = 0; i < foodItems.Count; i++)
             {
                 if (foodItems[i].Equals(sender))
                 {
-                    oldCalories = currentCalories;
-                    oldCarbs = currentCarbs;
-                    oldProtein = currentProtein;
-                    oldFats = currentFats;
+                    Math.Round(foodItems[i].FoodGrams, 0);
 
-                    Math.Round(foodItems[i].FoodGrams, 1);
-                    foodItems[i].FoodCalories = (calories / grams_Base) * foodItems[i].FoodGrams;
-                    Math.Round(foodItems[i].FoodCalories, 1);
-                    foodItems[i].FoodCarbs = (carbs / grams_Base) * foodItems[i].FoodGrams;
-                    Math.Round(foodItems[i].FoodCarbs, 1);
-                    foodItems[i].FoodProtein = (protein / grams_Base) * foodItems[i].FoodGrams;
-                    Math.Round(foodItems[i].FoodProtein, 1);
-                    foodItems[i].FoodFat = (fat / grams_Base) * foodItems[i].FoodGrams;
-                    Math.Round(foodItems[i].FoodFat, 1);
-
-                    currentCalories += (int)Math.Round(foodItems[i].FoodCalories,0);
-                    currentCarbs += (int)Math.Round(foodItems[i].FoodCarbs,0);
-                    currentProtein += (int)Math.Round(foodItems[i].FoodProtein,0);
-                    currentFats += (int)Math.Round(foodItems[i].FoodFat,0);
+                    currentCalories += (int)Math.Round(foodItems[i].CaloriesDynamic, 0);
+                    currentCarbs += (int)Math.Round(foodItems[i].CarbsDynamic, 0);
+                    currentProtein += (int)Math.Round(foodItems[i].ProteinDynamic, 0);
+                    currentFats += (int)Math.Round(foodItems[i].FatDynamic, 0);
 
                     activityComboBox_SelectedIndexChanged(sender, e);
                     using (SqlConnection connection = new SqlConnection(connectionString))
@@ -1523,23 +1574,122 @@ namespace FitVitality
                 }
             }
 
+
             string items = "";
             string itemsamount = "";
+            string itemsCalories = "";
+            string itemsProtein = "";
+            string itemsCarbs = "";
+            string itemsFat = "";
             for (int i = 0; i < foodItems.Count; i++)
             {
                 items += foodItems[i].FoodName + ",";
                 itemsamount += foodItems[i].FoodGrams + ",";
+                itemsCalories += foodItems[i].FoodCalories + ",";
+                itemsProtein += foodItems[i].FoodProtein + ",";
+                itemsCarbs += foodItems[i].FoodCarbs + ",";
+                itemsFat += foodItems[i].FoodFat + ",";
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE UserNutrition " +
-                               "SET Items = @FoodItems, ItemsAmount = @FoodAmount " +
+                               "SET Items = @FoodItems, ItemsAmount = @FoodAmount, ItemsCalories = @FoodCalories, ItemsProtein = @FoodProtein, ItemsCarbs = @FoodCarbs, ItemsFats = @FoodFat " +
                                "WHERE UserID = @UserID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@UserID", _userID);
                     command.Parameters.AddWithValue("@FoodItems", items);
                     command.Parameters.AddWithValue("@FoodAmount", itemsamount);
+                    command.Parameters.AddWithValue("@FoodCalories", itemsCalories);
+                    command.Parameters.AddWithValue("@FoodProtein", itemsProtein);
+                    command.Parameters.AddWithValue("@FoodCarbs", itemsCarbs);
+                    command.Parameters.AddWithValue("@FoodFat", itemsFat);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void foodItem_Remove(object sender, EventArgs e, double calories, double protein, double carbs, double fat)
+        {
+            for (int i = 0; i < foodItems.Count; i++)
+            {
+                if (foodItems[i].Equals(sender))
+                {
+                    Math.Round(foodItems[i].FoodGrams, 0);
+
+                    currentCalories -= (int)Math.Round(foodItems[i].CaloriesDynamic, 0);
+                    currentCarbs -= (int)Math.Round(foodItems[i].CarbsDynamic, 0);
+                    currentProtein -= (int)Math.Round(foodItems[i].ProteinDynamic, 0);
+                    currentFats -= (int)Math.Round(foodItems[i].FatDynamic, 0);
+
+                    activityComboBox_SelectedIndexChanged(sender, e);
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        string query = "SELECT * FROM UserNutrition WHERE UserID = @UserID";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@UserID", _userID);
+                            connection.Open();
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    if (reader["MacroSelection"].ToString() != String.Empty)
+                                    {
+                                        switch (reader["MacroSelection"].ToString())
+                                        {
+                                            case "Balanced":
+                                                balancedButton_Click(sender, e);
+                                                break;
+                                            case "HighProtein":
+                                                highProteinButton_Click(sender, e);
+                                                break;
+                                            case "LowFat":
+                                                lowFatButton_Click(sender, e);
+                                                break;
+                                            case "LowCarbs":
+                                                lowCarbsButton_Click(sender, e);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            string items = "";
+            string itemsamount = "";
+            string itemsCalories = "";
+            string itemsProtein = "";
+            string itemsCarbs = "";
+            string itemsFat = "";
+            for (int i = 0; i < foodItems.Count; i++)
+            {
+                items += foodItems[i].FoodName + ",";
+                itemsamount += foodItems[i].FoodGrams + ",";
+                itemsCalories += foodItems[i].FoodCalories + ",";
+                itemsProtein += foodItems[i].FoodProtein + ",";
+                itemsCarbs += foodItems[i].FoodCarbs + ",";
+                itemsFat += foodItems[i].FoodFat + ",";
+            }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE UserNutrition " +
+                               "SET Items = @FoodItems, ItemsAmount = @FoodAmount, ItemsCalories = @FoodCalories, ItemsProtein = @FoodProtein, ItemsCarbs = @FoodCarbs, ItemsFats = @FoodFat " +
+                               "WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    command.Parameters.AddWithValue("@FoodItems", items);
+                    command.Parameters.AddWithValue("@FoodAmount", itemsamount);
+                    command.Parameters.AddWithValue("@FoodCalories", itemsCalories);
+                    command.Parameters.AddWithValue("@FoodProtein", itemsProtein);
+                    command.Parameters.AddWithValue("@FoodCarbs", itemsCarbs);
+                    command.Parameters.AddWithValue("@FoodFat", itemsFat);
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
@@ -1552,9 +1702,9 @@ namespace FitVitality
                 if (foodItems[i].Equals(sender))
                 {
                     currentCalories -= (int)Math.Round(foodItems[i].FoodCalories, 0);
-                    currentCarbs -= (int)Math.Round(foodItems[i].FoodCarbs,0);
-                    currentProtein -= (int)Math.Round(foodItems[i].FoodProtein,0);
-                    currentFats -= (int)Math.Round(foodItems[i].FoodFat,0);
+                    currentCarbs -= (int)Math.Round(foodItems[i].FoodCarbs, 0);
+                    currentProtein -= (int)Math.Round(foodItems[i].FoodProtein, 0);
+                    currentFats -= (int)Math.Round(foodItems[i].FoodFat, 0);
                     foodItems.RemoveAt(i);
                     foodPanel.Controls.RemoveAt(i);
                     if (currentCalories < 0 || currentCarbs < 0 || currentFats < 0 || currentProtein < 0)
@@ -1603,21 +1753,33 @@ namespace FitVitality
 
             string items = "";
             string itemsamount = "";
+            string itemsCalories = "";
+            string itemsProtein = "";
+            string itemsCarbs = "";
+            string itemsFat = "";
             for (int i = 0; i < foodItems.Count; i++)
             {
                 items += foodItems[i].FoodName + ",";
                 itemsamount += foodItems[i].FoodGrams + ",";
+                itemsCalories += foodItems[i].FoodCalories + ",";
+                itemsProtein += foodItems[i].FoodProtein + ",";
+                itemsCarbs += foodItems[i].FoodCarbs + ",";
+                itemsFat += foodItems[i].FoodFat + ",";
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE UserNutrition " +
-                               "SET Items = @FoodItems, ItemsAmount = @FoodAmount " +
+                               "SET Items = @FoodItems, ItemsAmount = @FoodAmount, ItemsCalories = @FoodCalories, ItemsProtein = @FoodProtein, ItemsCarbs = @FoodCarbs, ItemsFats = @FoodFat  " +
                                "WHERE UserID = @UserID";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@UserID", _userID);
                     command.Parameters.AddWithValue("@FoodItems", items);
                     command.Parameters.AddWithValue("@FoodAmount", itemsamount);
+                    command.Parameters.AddWithValue("@FoodCalories", itemsCalories);
+                    command.Parameters.AddWithValue("@FoodProtein", itemsProtein);
+                    command.Parameters.AddWithValue("@FoodCarbs", itemsCarbs);
+                    command.Parameters.AddWithValue("@FoodFat", itemsFat);
                     connection.Open();
                     command.ExecuteNonQuery();
                 }

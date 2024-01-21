@@ -133,8 +133,14 @@
   <data name="vline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="homeHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homeHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lowFatSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowFatSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homePressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homePressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chest2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +157,8 @@
   <data name="bmiFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bmiFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chestSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chestSelected1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="highProteinHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\highProteinHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="firstPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\firstPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,6 +205,9 @@
   <data name="male1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\male1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sett__1___1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sett__1___1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="malepressed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\malepressed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -220,6 +229,9 @@
   <data name="createSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\createSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="closeFoodItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closeFoodItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="maletracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maletracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,9 +244,6 @@
   <data name="preHovered" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\preHovered.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="welcomeError" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\welcomeError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="rightCUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rightCUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -243,6 +252,9 @@
   </data>
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="weekBorders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weekBorders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lowCarbs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowCarbs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -267,6 +279,9 @@
   </data>
   <data name="shoulders" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shoulders2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lowFat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lowFat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gymHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gymHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -307,11 +322,8 @@
   <data name="bmiMalki" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bmiMalki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settingsError" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settingsError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lowFat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lowFat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maximizebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximizebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonCalcBorder1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonCalcBorder1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,9 +364,6 @@
   <data name="losePressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\losePressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="female1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\female1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="outdoors" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outdoors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -376,8 +385,8 @@
   <data name="minimizebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glutes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\glutes2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cross-close-icon-free-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross-close-icon-free-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="leftCUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\leftCUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -409,14 +418,14 @@
   <data name="female" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="homeHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homeHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settingsError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingsError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maximizebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maximizebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chestSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chestSelected1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="homePressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homePressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="glutes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\glutes2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lowerPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowerPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -433,8 +442,8 @@
   <data name="gym" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gym.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="highProteinHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\highProteinHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="female1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\female1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="male" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -466,8 +475,8 @@
   <data name="femaletracked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\femaletracked1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sett__1___1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sett__1___1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="welcomeError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\welcomeError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -490,10 +499,7 @@
   <data name="noSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\noSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cross-close-icon-free-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cross-close-icon-free-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="closeFoodItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closeFoodItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="weekBordersChecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weekBordersChecked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

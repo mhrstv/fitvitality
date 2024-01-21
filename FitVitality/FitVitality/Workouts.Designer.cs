@@ -120,10 +120,39 @@
             selectWorkoutButton = new Krypton.Toolkit.KryptonButton();
             workoutPreviewPanelBorders = new PictureBox();
             trainingDaysPanel = new Panel();
+            upToDaysLabel = new Label();
+            sundayPanel = new Panel();
+            sundayCheckBox = new CheckBox();
+            sundayLabel = new Label();
+            sundayPictureBox = new PictureBox();
+            saturdayPanel = new Panel();
+            saturdayCheckBox = new CheckBox();
+            saturdayLabel = new Label();
+            saturdayPictureBox = new PictureBox();
+            fridayPanel = new Panel();
+            fridayCheckBox = new CheckBox();
+            fridayLabel = new Label();
+            fridayPictureBox = new PictureBox();
+            thursdayPanel = new Panel();
+            thursdayCheckBox = new CheckBox();
+            thursdayLabel = new Label();
+            thursdayPictureBox = new PictureBox();
+            wednesdayPanel = new Panel();
+            wednesdayCheckBox = new CheckBox();
+            wednesdayLabel = new Label();
+            wednesdayPictureBox = new PictureBox();
+            tuesdayPanel = new Panel();
+            tuesdayCheckBox = new CheckBox();
+            tuesdayLabel = new Label();
+            tuesdayPictureBox = new PictureBox();
+            mondayPanel = new Panel();
+            mondayCheckBox = new CheckBox();
+            mondayLabel = new Label();
+            mondayPictureBox = new PictureBox();
             trainingDaysDescription = new Label();
             trainingDaysLabel = new Label();
             panel2 = new Panel();
-            preGeneratedDoneButton = new Krypton.Toolkit.KryptonButton();
+            preNextButton2 = new Krypton.Toolkit.KryptonButton();
             trainingDaysBorders = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
@@ -180,6 +209,20 @@
             workoutPreviewButtonBorders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)workoutPreviewPanelBorders).BeginInit();
             trainingDaysPanel.SuspendLayout();
+            sundayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)sundayPictureBox).BeginInit();
+            saturdayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)saturdayPictureBox).BeginInit();
+            fridayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)fridayPictureBox).BeginInit();
+            thursdayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)thursdayPictureBox).BeginInit();
+            wednesdayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)wednesdayPictureBox).BeginInit();
+            tuesdayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)tuesdayPictureBox).BeginInit();
+            mondayPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)mondayPictureBox).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)trainingDaysBorders).BeginInit();
             SuspendLayout();
@@ -1503,6 +1546,7 @@
             preNextButton.TabIndex = 31;
             preNextButton.Values.Text = "Next";
             preNextButton.Visible = false;
+            preNextButton.Click += preNextButton_Click;
             // 
             // preBorders
             // 
@@ -1767,6 +1811,14 @@
             // 
             // trainingDaysPanel
             // 
+            trainingDaysPanel.Controls.Add(upToDaysLabel);
+            trainingDaysPanel.Controls.Add(sundayPanel);
+            trainingDaysPanel.Controls.Add(saturdayPanel);
+            trainingDaysPanel.Controls.Add(fridayPanel);
+            trainingDaysPanel.Controls.Add(thursdayPanel);
+            trainingDaysPanel.Controls.Add(wednesdayPanel);
+            trainingDaysPanel.Controls.Add(tuesdayPanel);
+            trainingDaysPanel.Controls.Add(mondayPanel);
             trainingDaysPanel.Controls.Add(trainingDaysDescription);
             trainingDaysPanel.Controls.Add(trainingDaysLabel);
             trainingDaysPanel.Controls.Add(panel2);
@@ -1776,6 +1828,291 @@
             trainingDaysPanel.Size = new Size(553, 307);
             trainingDaysPanel.TabIndex = 45;
             trainingDaysPanel.Visible = false;
+            // 
+            // upToDaysLabel
+            // 
+            upToDaysLabel.BackColor = Color.WhiteSmoke;
+            upToDaysLabel.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            upToDaysLabel.Location = new Point(189, 242);
+            upToDaysLabel.Name = "upToDaysLabel";
+            upToDaysLabel.Size = new Size(174, 16);
+            upToDaysLabel.TabIndex = 50;
+            upToDaysLabel.Text = "You must select [] days.";
+            upToDaysLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sundayPanel
+            // 
+            sundayPanel.Controls.Add(sundayCheckBox);
+            sundayPanel.Controls.Add(sundayLabel);
+            sundayPanel.Controls.Add(sundayPictureBox);
+            sundayPanel.Location = new Point(469, 99);
+            sundayPanel.Name = "sundayPanel";
+            sundayPanel.Size = new Size(61, 122);
+            sundayPanel.TabIndex = 47;
+            // 
+            // sundayCheckBox
+            // 
+            sundayCheckBox.Location = new Point(23, 104);
+            sundayCheckBox.Name = "sundayCheckBox";
+            sundayCheckBox.Size = new Size(15, 15);
+            sundayCheckBox.TabIndex = 52;
+            sundayCheckBox.UseVisualStyleBackColor = true;
+            sundayCheckBox.CheckedChanged += sundayCheckBox_CheckedChanged;
+            // 
+            // sundayLabel
+            // 
+            sundayLabel.BackColor = Color.WhiteSmoke;
+            sundayLabel.Location = new Point(5, 3);
+            sundayLabel.Name = "sundayLabel";
+            sundayLabel.Size = new Size(50, 16);
+            sundayLabel.TabIndex = 51;
+            sundayLabel.Text = "Sun";
+            sundayLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // sundayPictureBox
+            // 
+            sundayPictureBox.Image = Properties.Resources.weekBorders;
+            sundayPictureBox.Location = new Point(0, 0);
+            sundayPictureBox.Name = "sundayPictureBox";
+            sundayPictureBox.Size = new Size(61, 122);
+            sundayPictureBox.TabIndex = 53;
+            sundayPictureBox.TabStop = false;
+            sundayPictureBox.Click += sundayPictureBox_Click;
+            // 
+            // saturdayPanel
+            // 
+            saturdayPanel.Controls.Add(saturdayCheckBox);
+            saturdayPanel.Controls.Add(saturdayLabel);
+            saturdayPanel.Controls.Add(saturdayPictureBox);
+            saturdayPanel.Location = new Point(395, 99);
+            saturdayPanel.Name = "saturdayPanel";
+            saturdayPanel.Size = new Size(61, 122);
+            saturdayPanel.TabIndex = 47;
+            // 
+            // saturdayCheckBox
+            // 
+            saturdayCheckBox.Location = new Point(23, 104);
+            saturdayCheckBox.Name = "saturdayCheckBox";
+            saturdayCheckBox.Size = new Size(15, 15);
+            saturdayCheckBox.TabIndex = 51;
+            saturdayCheckBox.UseVisualStyleBackColor = true;
+            saturdayCheckBox.CheckedChanged += saturdayCheckBox_CheckedChanged;
+            // 
+            // saturdayLabel
+            // 
+            saturdayLabel.BackColor = Color.WhiteSmoke;
+            saturdayLabel.Location = new Point(11, 3);
+            saturdayLabel.Name = "saturdayLabel";
+            saturdayLabel.Size = new Size(38, 16);
+            saturdayLabel.TabIndex = 50;
+            saturdayLabel.Text = "Sat";
+            saturdayLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // saturdayPictureBox
+            // 
+            saturdayPictureBox.Image = Properties.Resources.weekBorders;
+            saturdayPictureBox.Location = new Point(0, 0);
+            saturdayPictureBox.Name = "saturdayPictureBox";
+            saturdayPictureBox.Size = new Size(61, 122);
+            saturdayPictureBox.TabIndex = 52;
+            saturdayPictureBox.TabStop = false;
+            saturdayPictureBox.Click += saturdayPictureBox_Click;
+            // 
+            // fridayPanel
+            // 
+            fridayPanel.Controls.Add(fridayCheckBox);
+            fridayPanel.Controls.Add(fridayLabel);
+            fridayPanel.Controls.Add(fridayPictureBox);
+            fridayPanel.Location = new Point(319, 99);
+            fridayPanel.Name = "fridayPanel";
+            fridayPanel.Size = new Size(61, 122);
+            fridayPanel.TabIndex = 47;
+            // 
+            // fridayCheckBox
+            // 
+            fridayCheckBox.Location = new Point(23, 104);
+            fridayCheckBox.Name = "fridayCheckBox";
+            fridayCheckBox.Size = new Size(15, 15);
+            fridayCheckBox.TabIndex = 50;
+            fridayCheckBox.UseVisualStyleBackColor = true;
+            fridayCheckBox.CheckedChanged += fridayCheckBox_CheckedChanged;
+            // 
+            // fridayLabel
+            // 
+            fridayLabel.BackColor = Color.WhiteSmoke;
+            fridayLabel.Location = new Point(13, 3);
+            fridayLabel.Name = "fridayLabel";
+            fridayLabel.Size = new Size(35, 16);
+            fridayLabel.TabIndex = 49;
+            fridayLabel.Text = "Fri";
+            fridayLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // fridayPictureBox
+            // 
+            fridayPictureBox.Image = Properties.Resources.weekBorders;
+            fridayPictureBox.Location = new Point(0, 0);
+            fridayPictureBox.Name = "fridayPictureBox";
+            fridayPictureBox.Size = new Size(61, 122);
+            fridayPictureBox.TabIndex = 51;
+            fridayPictureBox.TabStop = false;
+            fridayPictureBox.Click += fridayPictureBox_Click;
+            // 
+            // thursdayPanel
+            // 
+            thursdayPanel.Controls.Add(thursdayCheckBox);
+            thursdayPanel.Controls.Add(thursdayLabel);
+            thursdayPanel.Controls.Add(thursdayPictureBox);
+            thursdayPanel.Location = new Point(244, 99);
+            thursdayPanel.Name = "thursdayPanel";
+            thursdayPanel.Size = new Size(61, 122);
+            thursdayPanel.TabIndex = 47;
+            // 
+            // thursdayCheckBox
+            // 
+            thursdayCheckBox.Location = new Point(23, 104);
+            thursdayCheckBox.Name = "thursdayCheckBox";
+            thursdayCheckBox.Size = new Size(15, 15);
+            thursdayCheckBox.TabIndex = 49;
+            thursdayCheckBox.UseVisualStyleBackColor = true;
+            thursdayCheckBox.CheckedChanged += thursdayCheckBox_CheckedChanged;
+            // 
+            // thursdayLabel
+            // 
+            thursdayLabel.BackColor = Color.WhiteSmoke;
+            thursdayLabel.Location = new Point(12, 3);
+            thursdayLabel.Name = "thursdayLabel";
+            thursdayLabel.Size = new Size(36, 16);
+            thursdayLabel.TabIndex = 48;
+            thursdayLabel.Text = "Thu";
+            thursdayLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // thursdayPictureBox
+            // 
+            thursdayPictureBox.Image = Properties.Resources.weekBorders;
+            thursdayPictureBox.Location = new Point(0, 0);
+            thursdayPictureBox.Name = "thursdayPictureBox";
+            thursdayPictureBox.Size = new Size(61, 122);
+            thursdayPictureBox.TabIndex = 50;
+            thursdayPictureBox.TabStop = false;
+            thursdayPictureBox.Click += thursdayPictureBox_Click;
+            // 
+            // wednesdayPanel
+            // 
+            wednesdayPanel.Controls.Add(wednesdayCheckBox);
+            wednesdayPanel.Controls.Add(wednesdayLabel);
+            wednesdayPanel.Controls.Add(wednesdayPictureBox);
+            wednesdayPanel.Location = new Point(171, 99);
+            wednesdayPanel.Name = "wednesdayPanel";
+            wednesdayPanel.Size = new Size(61, 122);
+            wednesdayPanel.TabIndex = 47;
+            // 
+            // wednesdayCheckBox
+            // 
+            wednesdayCheckBox.Location = new Point(23, 104);
+            wednesdayCheckBox.Name = "wednesdayCheckBox";
+            wednesdayCheckBox.Size = new Size(15, 15);
+            wednesdayCheckBox.TabIndex = 48;
+            wednesdayCheckBox.UseVisualStyleBackColor = true;
+            wednesdayCheckBox.CheckedChanged += wednesdayCheckBox_CheckedChanged;
+            // 
+            // wednesdayLabel
+            // 
+            wednesdayLabel.BackColor = Color.WhiteSmoke;
+            wednesdayLabel.Location = new Point(8, 3);
+            wednesdayLabel.Name = "wednesdayLabel";
+            wednesdayLabel.Size = new Size(44, 16);
+            wednesdayLabel.TabIndex = 47;
+            wednesdayLabel.Text = "Wed";
+            wednesdayLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // wednesdayPictureBox
+            // 
+            wednesdayPictureBox.Image = Properties.Resources.weekBorders;
+            wednesdayPictureBox.Location = new Point(0, 0);
+            wednesdayPictureBox.Name = "wednesdayPictureBox";
+            wednesdayPictureBox.Size = new Size(61, 122);
+            wednesdayPictureBox.TabIndex = 49;
+            wednesdayPictureBox.TabStop = false;
+            wednesdayPictureBox.Click += wednesdayPictureBox_Click;
+            // 
+            // tuesdayPanel
+            // 
+            tuesdayPanel.Controls.Add(tuesdayCheckBox);
+            tuesdayPanel.Controls.Add(tuesdayLabel);
+            tuesdayPanel.Controls.Add(tuesdayPictureBox);
+            tuesdayPanel.Location = new Point(97, 99);
+            tuesdayPanel.Name = "tuesdayPanel";
+            tuesdayPanel.Size = new Size(61, 122);
+            tuesdayPanel.TabIndex = 47;
+            // 
+            // tuesdayCheckBox
+            // 
+            tuesdayCheckBox.Location = new Point(23, 104);
+            tuesdayCheckBox.Name = "tuesdayCheckBox";
+            tuesdayCheckBox.Size = new Size(15, 15);
+            tuesdayCheckBox.TabIndex = 47;
+            tuesdayCheckBox.UseVisualStyleBackColor = true;
+            tuesdayCheckBox.CheckedChanged += tuesdayCheckBox_CheckedChanged;
+            // 
+            // tuesdayLabel
+            // 
+            tuesdayLabel.BackColor = Color.WhiteSmoke;
+            tuesdayLabel.Location = new Point(8, 3);
+            tuesdayLabel.Name = "tuesdayLabel";
+            tuesdayLabel.Size = new Size(45, 16);
+            tuesdayLabel.TabIndex = 46;
+            tuesdayLabel.Text = "Tue";
+            tuesdayLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // tuesdayPictureBox
+            // 
+            tuesdayPictureBox.Image = Properties.Resources.weekBorders;
+            tuesdayPictureBox.Location = new Point(0, 0);
+            tuesdayPictureBox.Name = "tuesdayPictureBox";
+            tuesdayPictureBox.Size = new Size(61, 122);
+            tuesdayPictureBox.TabIndex = 48;
+            tuesdayPictureBox.TabStop = false;
+            tuesdayPictureBox.Click += tuesdayPictureBox_Click;
+            // 
+            // mondayPanel
+            // 
+            mondayPanel.Controls.Add(mondayCheckBox);
+            mondayPanel.Controls.Add(mondayLabel);
+            mondayPanel.Controls.Add(mondayPictureBox);
+            mondayPanel.Location = new Point(22, 99);
+            mondayPanel.Name = "mondayPanel";
+            mondayPanel.Size = new Size(61, 122);
+            mondayPanel.TabIndex = 46;
+            // 
+            // mondayCheckBox
+            // 
+            mondayCheckBox.Location = new Point(23, 104);
+            mondayCheckBox.Name = "mondayCheckBox";
+            mondayCheckBox.Size = new Size(15, 15);
+            mondayCheckBox.TabIndex = 1;
+            mondayCheckBox.UseVisualStyleBackColor = true;
+            mondayCheckBox.CheckedChanged += mondayCheckBox_CheckedChanged;
+            // 
+            // mondayLabel
+            // 
+            mondayLabel.BackColor = Color.WhiteSmoke;
+            mondayLabel.Location = new Point(13, 3);
+            mondayLabel.Name = "mondayLabel";
+            mondayLabel.Size = new Size(35, 16);
+            mondayLabel.TabIndex = 0;
+            mondayLabel.Text = "Mon";
+            mondayLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // mondayPictureBox
+            // 
+            mondayPictureBox.BackColor = Color.Transparent;
+            mondayPictureBox.Image = Properties.Resources.weekBorders;
+            mondayPictureBox.Location = new Point(0, 0);
+            mondayPictureBox.Name = "mondayPictureBox";
+            mondayPictureBox.Size = new Size(61, 122);
+            mondayPictureBox.TabIndex = 2;
+            mondayPictureBox.TabStop = false;
+            mondayPictureBox.Click += mondayPictureBox_Click;
             // 
             // trainingDaysDescription
             // 
@@ -1802,72 +2139,73 @@
             // panel2
             // 
             panel2.BackColor = Color.WhiteSmoke;
-            panel2.Controls.Add(preGeneratedDoneButton);
+            panel2.Controls.Add(preNextButton2);
             panel2.Location = new Point(231, 270);
             panel2.Name = "panel2";
             panel2.Size = new Size(90, 25);
             panel2.TabIndex = 32;
             // 
-            // preGeneratedDoneButton
+            // preNextButton2
             // 
-            preGeneratedDoneButton.CornerRoundingRadius = 15F;
-            preGeneratedDoneButton.Location = new Point(0, 0);
-            preGeneratedDoneButton.Name = "preGeneratedDoneButton";
-            preGeneratedDoneButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            preGeneratedDoneButton.Size = new Size(90, 25);
-            preGeneratedDoneButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateCommon.Back.ColorAngle = 45F;
-            preGeneratedDoneButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateCommon.Border.ColorAngle = 45F;
-            preGeneratedDoneButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGeneratedDoneButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGeneratedDoneButton.StateCommon.Border.Rounding = 15F;
-            preGeneratedDoneButton.StateCommon.Border.Width = 1;
-            preGeneratedDoneButton.StateCommon.Content.ShortText.Color1 = Color.White;
-            preGeneratedDoneButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            preGeneratedDoneButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            preGeneratedDoneButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGeneratedDoneButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateNormal.Back.ColorAngle = 45F;
-            preGeneratedDoneButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGeneratedDoneButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            preGeneratedDoneButton.StateNormal.Border.ColorAngle = 45F;
-            preGeneratedDoneButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGeneratedDoneButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGeneratedDoneButton.StateNormal.Border.Rounding = 15F;
-            preGeneratedDoneButton.StateNormal.Border.Width = 1;
-            preGeneratedDoneButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            preGeneratedDoneButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            preGeneratedDoneButton.StatePressed.Back.ColorAngle = 45F;
-            preGeneratedDoneButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGeneratedDoneButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            preGeneratedDoneButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            preGeneratedDoneButton.StatePressed.Border.ColorAngle = 45F;
-            preGeneratedDoneButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGeneratedDoneButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGeneratedDoneButton.StatePressed.Border.Rounding = 15F;
-            preGeneratedDoneButton.StatePressed.Border.Width = 1;
-            preGeneratedDoneButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            preGeneratedDoneButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            preGeneratedDoneButton.StateTracking.Back.ColorAngle = 45F;
-            preGeneratedDoneButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGeneratedDoneButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
-            preGeneratedDoneButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
-            preGeneratedDoneButton.StateTracking.Border.ColorAngle = 45F;
-            preGeneratedDoneButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            preGeneratedDoneButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            preGeneratedDoneButton.StateTracking.Border.Rounding = 15F;
-            preGeneratedDoneButton.StateTracking.Border.Width = 1;
-            preGeneratedDoneButton.TabIndex = 31;
-            preGeneratedDoneButton.Values.Text = "Done";
+            preNextButton2.CornerRoundingRadius = 15F;
+            preNextButton2.Location = new Point(0, 0);
+            preNextButton2.Name = "preNextButton2";
+            preNextButton2.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            preNextButton2.Size = new Size(90, 25);
+            preNextButton2.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateCommon.Back.ColorAngle = 45F;
+            preNextButton2.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateCommon.Border.ColorAngle = 45F;
+            preNextButton2.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton2.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton2.StateCommon.Border.Rounding = 15F;
+            preNextButton2.StateCommon.Border.Width = 1;
+            preNextButton2.StateCommon.Content.ShortText.Color1 = Color.White;
+            preNextButton2.StateCommon.Content.ShortText.Color2 = Color.White;
+            preNextButton2.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            preNextButton2.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton2.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateNormal.Back.ColorAngle = 45F;
+            preNextButton2.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton2.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            preNextButton2.StateNormal.Border.ColorAngle = 45F;
+            preNextButton2.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton2.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton2.StateNormal.Border.Rounding = 15F;
+            preNextButton2.StateNormal.Border.Width = 1;
+            preNextButton2.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            preNextButton2.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            preNextButton2.StatePressed.Back.ColorAngle = 45F;
+            preNextButton2.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton2.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            preNextButton2.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            preNextButton2.StatePressed.Border.ColorAngle = 45F;
+            preNextButton2.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton2.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton2.StatePressed.Border.Rounding = 15F;
+            preNextButton2.StatePressed.Border.Width = 1;
+            preNextButton2.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            preNextButton2.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            preNextButton2.StateTracking.Back.ColorAngle = 45F;
+            preNextButton2.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton2.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            preNextButton2.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            preNextButton2.StateTracking.Border.ColorAngle = 45F;
+            preNextButton2.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            preNextButton2.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            preNextButton2.StateTracking.Border.Rounding = 15F;
+            preNextButton2.StateTracking.Border.Width = 1;
+            preNextButton2.TabIndex = 31;
+            preNextButton2.Values.Text = "Next";
+            preNextButton2.Visible = false;
             // 
             // trainingDaysBorders
             // 
@@ -1971,6 +2309,20 @@
             ((System.ComponentModel.ISupportInitialize)workoutPreviewPanelBorders).EndInit();
             trainingDaysPanel.ResumeLayout(false);
             trainingDaysPanel.PerformLayout();
+            sundayPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)sundayPictureBox).EndInit();
+            saturdayPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)saturdayPictureBox).EndInit();
+            fridayPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)fridayPictureBox).EndInit();
+            thursdayPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)thursdayPictureBox).EndInit();
+            wednesdayPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)wednesdayPictureBox).EndInit();
+            tuesdayPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)tuesdayPictureBox).EndInit();
+            mondayPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)mondayPictureBox).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)trainingDaysBorders).EndInit();
             ResumeLayout(false);
@@ -2055,7 +2407,7 @@
         private Panel workoutPreviewPanel;
         private Label prePanelLabel;
         private PictureBox workoutPreviewPanelBorders;
-        private PictureBox pictureBox2;
+        private PictureBox tuesdayPictureBox;
         private Panel preNextButtonPanel;
         private Krypton.Toolkit.KryptonButton preNextButton;
         private PictureBox preBorders;
@@ -2075,7 +2427,35 @@
         private Label trainingDaysDescription;
         private Label trainingDaysLabel;
         private Panel panel2;
-        private Krypton.Toolkit.KryptonButton preGeneratedDoneButton;
+        private Krypton.Toolkit.KryptonButton preNextButton2;
         private PictureBox trainingDaysBorders;
+        private Panel sundayPanel;
+        private Panel saturdayPanel;
+        private Panel fridayPanel;
+        private Panel thursdayPanel;
+        private Panel wednesdayPanel;
+        private Panel tuesdayPanel;
+        private Panel mondayPanel;
+        private Label sundayLabel;
+        private Label saturdayLabel;
+        private Label fridayLabel;
+        private Label thursdayLabel;
+        private Label wednesdayLabel;
+        private Label tuesdayLabel;
+        private Label mondayLabel;
+        private CheckBox sundayCheckBox;
+        private CheckBox saturdayCheckBox;
+        private CheckBox fridayCheckBox;
+        private CheckBox thursdayCheckBox;
+        private CheckBox wednesdayCheckBox;
+        private CheckBox tuesdayCheckBox;
+        private CheckBox mondayCheckBox;
+        private PictureBox sundayPictureBox;
+        private PictureBox saturdayPictureBox;
+        private PictureBox fridayPictureBox;
+        private PictureBox thursdayPictureBox;
+        private PictureBox wednesdayPictureBox;
+        private PictureBox mondayPictureBox;
+        private Label upToDaysLabel;
     }
 }

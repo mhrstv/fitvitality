@@ -44,6 +44,17 @@ namespace FitVitality
         string workoutPlace = "";
         int activity;
 
+        // Булеви променливи, които отбелязват кой ден от седмицата е натиснат
+        bool mondayClicked = false;
+        bool tuesdayClicked = false;
+        bool wednesdayClicked = false;
+        bool thursdayClicked = false;
+        bool fridayClicked = false;
+        bool saturdayClicked = false;
+        bool sundayClicked = false;
+
+        int selectedDays = 0;
+
         //Exercises list
 
         //Gym
@@ -296,6 +307,7 @@ namespace FitVitality
                     nextButton2.Visible = false;
                     break;
             }
+            upToDaysLabel.Text = $"You must select {activity} days.";
         }
 
         private void upperButton_Click(object sender, EventArgs e)
@@ -1210,6 +1222,102 @@ namespace FitVitality
             trainingDaysPanel.Visible = true; trainingDaysPanel.BringToFront();
             workoutPreviewPanel.Visible = false;
             workoutsList.Visible = false;
+        }
+
+        private void preNextButton_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void weekDayClick(CheckBox a, PictureBox b, Label c)
+        {
+            if (a.Checked && selectedDays <= activity)
+            {
+                selectedDays++;
+                b.Image = Properties.Resources.weekBordersChecked;
+                c.BackColor = Color.FromArgb(102, 249, 108);
+                a.BackColor = Color.FromArgb(102, 249, 108);
+            }
+            else if (!a.Checked)
+            {
+                selectedDays--;
+                b.Image = Properties.Resources.weekBorders;
+                c.BackColor = Color.WhiteSmoke;
+                a.BackColor = Color.WhiteSmoke;
+            }
+            if (selectedDays == activity + 1)
+            {
+                a.Checked = false;
+            }
+            if (selectedDays == activity)
+            {
+                preNextButton2.Visible = true;
+            }
+            else
+            {
+                preNextButton2.Visible = false;
+            }
+        }
+        private void mondayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            weekDayClick(mondayCheckBox, mondayPictureBox, mondayLabel);
+        }
+
+        private void mondayPictureBox_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tuesdayPictureBox_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void wednesdayPictureBox_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void thursdayPictureBox_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void fridayPictureBox_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void saturdayPictureBox_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void sundayPictureBox_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void tuesdayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            weekDayClick(tuesdayCheckBox, tuesdayPictureBox, tuesdayLabel);
+        }
+
+        private void wednesdayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            weekDayClick(wednesdayCheckBox, wednesdayPictureBox, wednesdayLabel);
+        }
+
+        private void thursdayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            weekDayClick(thursdayCheckBox, thursdayPictureBox, thursdayLabel);
+        }
+
+        private void fridayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            weekDayClick(fridayCheckBox, fridayPictureBox, fridayLabel);
+        }
+
+        private void saturdayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            weekDayClick(saturdayCheckBox, saturdayPictureBox, saturdayLabel);
+        }
+
+        private void sundayCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            weekDayClick(sundayCheckBox, sundayPictureBox, sundayLabel);
         }
     }
 }

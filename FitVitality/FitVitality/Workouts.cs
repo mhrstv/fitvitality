@@ -441,7 +441,6 @@ namespace FitVitality
             {
                 workoutsList.Visible = true;
                 workoutsList.BringToFront();
-
             }
             else if (createClicked)
             {
@@ -1222,6 +1221,7 @@ namespace FitVitality
             trainingDaysPanel.Visible = true; trainingDaysPanel.BringToFront();
             workoutPreviewPanel.Visible = false;
             workoutsList.Visible = false;
+            workoutsLabel.Visible = false;
         }
 
         private void preNextButton_Click(object sender, EventArgs e)
@@ -1359,67 +1359,41 @@ namespace FitVitality
         {
             trainingDaysPanel.Visible = false;
             selectWorkoutsPanel.Visible = true;
-            if (activity == 1)
+            if (mondayClicked)
             {
-                daysPanel4.Visible = true;
+                monComboBox.Visible = true;
             }
-            if (activity == 2)
+            else { restDay1.Visible = true; }
+            if (tuesdayClicked)
             {
-                daysPanel4.Visible = true;
-                daysPanel4.Location = new Point(205, 99);
-                daysPanel5.Visible = true;
-                daysPanel5.Location = new Point(280, 99);
+                tueComboBox.Visible = true;
             }
-            if (activity == 3)
+            else { restDay2.Visible = true; }
+            if (wednesdayClicked)
             {
-                daysPanel3.Visible = true;
-                daysPanel4.Visible = true;
-                daysPanel5.Visible = true;
+                wedComboBox.Visible = true;
             }
-            if (activity == 4)
+            else { restDay3.Visible = true; }
+            if (thursdayClicked)
             {
-                daysPanel3.Visible = true;
-                daysPanel3.Location = new Point(132, 99);
-                daysPanel4.Visible = true;
-                daysPanel4.Location = new Point(205, 99);
-                daysPanel5.Visible = true;
-                daysPanel5.Location = new Point(280, 99);
-                daysPanel6.Visible = true;
-                daysPanel6.Location = new Point(356, 99);
+                thuComboBox.Visible = true;
             }
-            if (activity == 5)
+            else { restDay4.Visible = true; }
+            if (fridayClicked)
             {
-                daysPanel2.Visible = true;
-                daysPanel3.Visible = true;
-                daysPanel4.Visible = true;
-                daysPanel5.Visible = true;
-                daysPanel6.Visible = true;
+                friComboBox.Visible = true;
             }
-            if (activity == 6)
+            else { restDay5.Visible = true; }
+            if (saturdayClicked)
             {
-                daysPanel2.Visible = true;
-                daysPanel2.Location = new Point(58, 99);
-                daysPanel3.Visible = true;
-                daysPanel3.Location = new Point(132, 99);
-                daysPanel4.Visible = true;
-                daysPanel4.Location = new Point(205, 99);
-                daysPanel5.Visible = true;
-                daysPanel5.Location = new Point(280, 99);
-                daysPanel6.Visible = true;
-                daysPanel6.Location = new Point(356, 99);
-                daysPanel7.Visible = true;
-                daysPanel7.Location = new Point(430, 99);
+                satComboBox.Visible = true;
             }
-            if (activity == 7)
+            else { restDay6.Visible = true; }
+            if (sundayClicked)
             {
-                daysPanel1.Visible = true;
-                daysPanel2.Visible = true;
-                daysPanel3.Visible = true;
-                daysPanel4.Visible = true;
-                daysPanel5.Visible = true;
-                daysPanel6.Visible = true;
-                daysPanel7.Visible = true;
+                sunComboBox.Visible = true;
             }
+            else { restDay7.Visible = true; }
         }
     }
 }

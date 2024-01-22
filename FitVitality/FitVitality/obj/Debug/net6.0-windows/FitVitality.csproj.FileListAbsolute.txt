@@ -240,3 +240,17 @@ E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitV
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.FoodItem.resources
 E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.SearchFoodItem.resources
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.SearchFoodItem.resources
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Core.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x64\native\msalruntime.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\Guna.UI2.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\System.Management.dll
+E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll

@@ -157,31 +157,38 @@
             selectWorkoutsPanel = new Panel();
             workoutDaysHint = new Label();
             daysPanel7 = new Panel();
-            kryptonComboBox7 = new Krypton.Toolkit.KryptonComboBox();
+            restDay7 = new Label();
+            sunComboBox = new Krypton.Toolkit.KryptonComboBox();
             labelPanel7 = new Label();
             pbPanel7 = new PictureBox();
             daysPanel6 = new Panel();
-            kryptonComboBox6 = new Krypton.Toolkit.KryptonComboBox();
+            restDay6 = new Label();
+            satComboBox = new Krypton.Toolkit.KryptonComboBox();
             labelPanel6 = new Label();
             pbPanel6 = new PictureBox();
             daysPanel5 = new Panel();
-            kryptonComboBox5 = new Krypton.Toolkit.KryptonComboBox();
+            restDay5 = new Label();
+            friComboBox = new Krypton.Toolkit.KryptonComboBox();
             labelPanel5 = new Label();
             pbPanel5 = new PictureBox();
             daysPanel4 = new Panel();
-            kryptonComboBox4 = new Krypton.Toolkit.KryptonComboBox();
+            restDay4 = new Label();
+            thuComboBox = new Krypton.Toolkit.KryptonComboBox();
             labelPanel4 = new Label();
             pbPanel4 = new PictureBox();
             daysPanel3 = new Panel();
-            kryptonComboBox3 = new Krypton.Toolkit.KryptonComboBox();
+            restDay3 = new Label();
+            wedComboBox = new Krypton.Toolkit.KryptonComboBox();
             labelPanel3 = new Label();
             pbPanel3 = new PictureBox();
             daysPanel2 = new Panel();
-            kryptonComboBox2 = new Krypton.Toolkit.KryptonComboBox();
+            restDay2 = new Label();
+            tueComboBox = new Krypton.Toolkit.KryptonComboBox();
             labelPanel2 = new Label();
             pbPanel2 = new PictureBox();
             daysPanel1 = new Panel();
-            kryptonComboBox1 = new Krypton.Toolkit.KryptonComboBox();
+            restDay1 = new Label();
+            monComboBox = new Krypton.Toolkit.KryptonComboBox();
             labelPanel1 = new Label();
             pbPanel1 = new PictureBox();
             selectWorkoutsDescription = new Label();
@@ -262,25 +269,25 @@
             ((System.ComponentModel.ISupportInitialize)trainingDaysBorders).BeginInit();
             selectWorkoutsPanel.SuspendLayout();
             daysPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)sunComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel7).BeginInit();
             daysPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)satComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel6).BeginInit();
             daysPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)friComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel5).BeginInit();
             daysPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thuComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel4).BeginInit();
             daysPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)wedComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel3).BeginInit();
             daysPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tueComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel2).BeginInit();
             daysPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)monComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel1).BeginInit();
             preNextButton3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)selectWorkoutsBorders).BeginInit();
@@ -2311,32 +2318,45 @@
             workoutDaysHint.Name = "workoutDaysHint";
             workoutDaysHint.Size = new Size(234, 16);
             workoutDaysHint.TabIndex = 50;
-            workoutDaysHint.Text = "You must choose workouts for each day.";
+            workoutDaysHint.Text = "You must choose a workout for each day.";
             workoutDaysHint.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // daysPanel7
             // 
             daysPanel7.BackColor = Color.WhiteSmoke;
-            daysPanel7.Controls.Add(kryptonComboBox7);
+            daysPanel7.Controls.Add(restDay7);
+            daysPanel7.Controls.Add(sunComboBox);
             daysPanel7.Controls.Add(labelPanel7);
             daysPanel7.Controls.Add(pbPanel7);
             daysPanel7.Location = new Point(469, 99);
             daysPanel7.Name = "daysPanel7";
             daysPanel7.Size = new Size(61, 122);
             daysPanel7.TabIndex = 47;
-            daysPanel7.Visible = false;
             // 
-            // kryptonComboBox7
+            // restDay7
             // 
-            kryptonComboBox7.CornerRoundingRadius = -1F;
-            kryptonComboBox7.DropDownWidth = 52;
-            kryptonComboBox7.IntegralHeight = false;
-            kryptonComboBox7.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
-            kryptonComboBox7.Location = new Point(4, 51);
-            kryptonComboBox7.Name = "kryptonComboBox7";
-            kryptonComboBox7.Size = new Size(52, 21);
-            kryptonComboBox7.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            kryptonComboBox7.TabIndex = 54;
+            restDay7.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            restDay7.ForeColor = Color.FromArgb(92, 225, 230);
+            restDay7.Location = new Point(13, 41);
+            restDay7.Name = "restDay7";
+            restDay7.Size = new Size(35, 41);
+            restDay7.TabIndex = 58;
+            restDay7.Text = "Rest Day";
+            restDay7.TextAlign = ContentAlignment.MiddleCenter;
+            restDay7.Visible = false;
+            // 
+            // sunComboBox
+            // 
+            sunComboBox.CornerRoundingRadius = -1F;
+            sunComboBox.DropDownWidth = 52;
+            sunComboBox.IntegralHeight = false;
+            sunComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
+            sunComboBox.Location = new Point(4, 51);
+            sunComboBox.Name = "sunComboBox";
+            sunComboBox.Size = new Size(52, 21);
+            sunComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            sunComboBox.TabIndex = 54;
+            sunComboBox.Visible = false;
             // 
             // labelPanel7
             // 
@@ -2345,7 +2365,7 @@
             labelPanel7.Name = "labelPanel7";
             labelPanel7.Size = new Size(50, 16);
             labelPanel7.TabIndex = 51;
-            labelPanel7.Text = "7";
+            labelPanel7.Text = "Sun";
             labelPanel7.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbPanel7
@@ -2360,26 +2380,39 @@
             // daysPanel6
             // 
             daysPanel6.BackColor = Color.WhiteSmoke;
-            daysPanel6.Controls.Add(kryptonComboBox6);
+            daysPanel6.Controls.Add(restDay6);
+            daysPanel6.Controls.Add(satComboBox);
             daysPanel6.Controls.Add(labelPanel6);
             daysPanel6.Controls.Add(pbPanel6);
             daysPanel6.Location = new Point(395, 99);
             daysPanel6.Name = "daysPanel6";
             daysPanel6.Size = new Size(61, 122);
             daysPanel6.TabIndex = 47;
-            daysPanel6.Visible = false;
             // 
-            // kryptonComboBox6
+            // restDay6
             // 
-            kryptonComboBox6.CornerRoundingRadius = -1F;
-            kryptonComboBox6.DropDownWidth = 52;
-            kryptonComboBox6.IntegralHeight = false;
-            kryptonComboBox6.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
-            kryptonComboBox6.Location = new Point(4, 51);
-            kryptonComboBox6.Name = "kryptonComboBox6";
-            kryptonComboBox6.Size = new Size(52, 21);
-            kryptonComboBox6.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            kryptonComboBox6.TabIndex = 53;
+            restDay6.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            restDay6.ForeColor = Color.FromArgb(92, 225, 230);
+            restDay6.Location = new Point(13, 41);
+            restDay6.Name = "restDay6";
+            restDay6.Size = new Size(35, 41);
+            restDay6.TabIndex = 57;
+            restDay6.Text = "Rest Day";
+            restDay6.TextAlign = ContentAlignment.MiddleCenter;
+            restDay6.Visible = false;
+            // 
+            // satComboBox
+            // 
+            satComboBox.CornerRoundingRadius = -1F;
+            satComboBox.DropDownWidth = 52;
+            satComboBox.IntegralHeight = false;
+            satComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
+            satComboBox.Location = new Point(4, 51);
+            satComboBox.Name = "satComboBox";
+            satComboBox.Size = new Size(52, 21);
+            satComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            satComboBox.TabIndex = 53;
+            satComboBox.Visible = false;
             // 
             // labelPanel6
             // 
@@ -2388,7 +2421,7 @@
             labelPanel6.Name = "labelPanel6";
             labelPanel6.Size = new Size(38, 16);
             labelPanel6.TabIndex = 50;
-            labelPanel6.Text = "6";
+            labelPanel6.Text = "Sat";
             labelPanel6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbPanel6
@@ -2403,26 +2436,39 @@
             // daysPanel5
             // 
             daysPanel5.BackColor = Color.WhiteSmoke;
-            daysPanel5.Controls.Add(kryptonComboBox5);
+            daysPanel5.Controls.Add(restDay5);
+            daysPanel5.Controls.Add(friComboBox);
             daysPanel5.Controls.Add(labelPanel5);
             daysPanel5.Controls.Add(pbPanel5);
             daysPanel5.Location = new Point(319, 99);
             daysPanel5.Name = "daysPanel5";
             daysPanel5.Size = new Size(61, 122);
             daysPanel5.TabIndex = 47;
-            daysPanel5.Visible = false;
             // 
-            // kryptonComboBox5
+            // restDay5
             // 
-            kryptonComboBox5.CornerRoundingRadius = -1F;
-            kryptonComboBox5.DropDownWidth = 52;
-            kryptonComboBox5.IntegralHeight = false;
-            kryptonComboBox5.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
-            kryptonComboBox5.Location = new Point(4, 51);
-            kryptonComboBox5.Name = "kryptonComboBox5";
-            kryptonComboBox5.Size = new Size(52, 21);
-            kryptonComboBox5.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            kryptonComboBox5.TabIndex = 52;
+            restDay5.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            restDay5.ForeColor = Color.FromArgb(92, 225, 230);
+            restDay5.Location = new Point(13, 41);
+            restDay5.Name = "restDay5";
+            restDay5.Size = new Size(35, 41);
+            restDay5.TabIndex = 56;
+            restDay5.Text = "Rest Day";
+            restDay5.TextAlign = ContentAlignment.MiddleCenter;
+            restDay5.Visible = false;
+            // 
+            // friComboBox
+            // 
+            friComboBox.CornerRoundingRadius = -1F;
+            friComboBox.DropDownWidth = 52;
+            friComboBox.IntegralHeight = false;
+            friComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
+            friComboBox.Location = new Point(4, 51);
+            friComboBox.Name = "friComboBox";
+            friComboBox.Size = new Size(52, 21);
+            friComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            friComboBox.TabIndex = 52;
+            friComboBox.Visible = false;
             // 
             // labelPanel5
             // 
@@ -2431,7 +2477,7 @@
             labelPanel5.Name = "labelPanel5";
             labelPanel5.Size = new Size(35, 16);
             labelPanel5.TabIndex = 49;
-            labelPanel5.Text = "5";
+            labelPanel5.Text = "Fri";
             labelPanel5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbPanel5
@@ -2446,26 +2492,39 @@
             // daysPanel4
             // 
             daysPanel4.BackColor = Color.WhiteSmoke;
-            daysPanel4.Controls.Add(kryptonComboBox4);
+            daysPanel4.Controls.Add(restDay4);
+            daysPanel4.Controls.Add(thuComboBox);
             daysPanel4.Controls.Add(labelPanel4);
             daysPanel4.Controls.Add(pbPanel4);
             daysPanel4.Location = new Point(244, 99);
             daysPanel4.Name = "daysPanel4";
             daysPanel4.Size = new Size(61, 122);
             daysPanel4.TabIndex = 47;
-            daysPanel4.Visible = false;
             // 
-            // kryptonComboBox4
+            // restDay4
             // 
-            kryptonComboBox4.CornerRoundingRadius = -1F;
-            kryptonComboBox4.DropDownWidth = 52;
-            kryptonComboBox4.IntegralHeight = false;
-            kryptonComboBox4.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
-            kryptonComboBox4.Location = new Point(4, 51);
-            kryptonComboBox4.Name = "kryptonComboBox4";
-            kryptonComboBox4.Size = new Size(52, 21);
-            kryptonComboBox4.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            kryptonComboBox4.TabIndex = 52;
+            restDay4.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            restDay4.ForeColor = Color.FromArgb(92, 225, 230);
+            restDay4.Location = new Point(13, 41);
+            restDay4.Name = "restDay4";
+            restDay4.Size = new Size(35, 41);
+            restDay4.TabIndex = 55;
+            restDay4.Text = "Rest Day";
+            restDay4.TextAlign = ContentAlignment.MiddleCenter;
+            restDay4.Visible = false;
+            // 
+            // thuComboBox
+            // 
+            thuComboBox.CornerRoundingRadius = -1F;
+            thuComboBox.DropDownWidth = 52;
+            thuComboBox.IntegralHeight = false;
+            thuComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
+            thuComboBox.Location = new Point(4, 51);
+            thuComboBox.Name = "thuComboBox";
+            thuComboBox.Size = new Size(52, 21);
+            thuComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            thuComboBox.TabIndex = 52;
+            thuComboBox.Visible = false;
             // 
             // labelPanel4
             // 
@@ -2474,7 +2533,7 @@
             labelPanel4.Name = "labelPanel4";
             labelPanel4.Size = new Size(36, 16);
             labelPanel4.TabIndex = 48;
-            labelPanel4.Text = "4";
+            labelPanel4.Text = "Thu";
             labelPanel4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbPanel4
@@ -2489,26 +2548,39 @@
             // daysPanel3
             // 
             daysPanel3.BackColor = Color.WhiteSmoke;
-            daysPanel3.Controls.Add(kryptonComboBox3);
+            daysPanel3.Controls.Add(restDay3);
+            daysPanel3.Controls.Add(wedComboBox);
             daysPanel3.Controls.Add(labelPanel3);
             daysPanel3.Controls.Add(pbPanel3);
             daysPanel3.Location = new Point(171, 99);
             daysPanel3.Name = "daysPanel3";
             daysPanel3.Size = new Size(61, 122);
             daysPanel3.TabIndex = 47;
-            daysPanel3.Visible = false;
             // 
-            // kryptonComboBox3
+            // restDay3
             // 
-            kryptonComboBox3.CornerRoundingRadius = -1F;
-            kryptonComboBox3.DropDownWidth = 52;
-            kryptonComboBox3.IntegralHeight = false;
-            kryptonComboBox3.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
-            kryptonComboBox3.Location = new Point(4, 51);
-            kryptonComboBox3.Name = "kryptonComboBox3";
-            kryptonComboBox3.Size = new Size(52, 21);
-            kryptonComboBox3.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            kryptonComboBox3.TabIndex = 52;
+            restDay3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            restDay3.ForeColor = Color.FromArgb(92, 225, 230);
+            restDay3.Location = new Point(13, 41);
+            restDay3.Name = "restDay3";
+            restDay3.Size = new Size(35, 41);
+            restDay3.TabIndex = 54;
+            restDay3.Text = "Rest Day";
+            restDay3.TextAlign = ContentAlignment.MiddleCenter;
+            restDay3.Visible = false;
+            // 
+            // wedComboBox
+            // 
+            wedComboBox.CornerRoundingRadius = -1F;
+            wedComboBox.DropDownWidth = 52;
+            wedComboBox.IntegralHeight = false;
+            wedComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
+            wedComboBox.Location = new Point(4, 51);
+            wedComboBox.Name = "wedComboBox";
+            wedComboBox.Size = new Size(52, 21);
+            wedComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            wedComboBox.TabIndex = 52;
+            wedComboBox.Visible = false;
             // 
             // labelPanel3
             // 
@@ -2517,7 +2589,7 @@
             labelPanel3.Name = "labelPanel3";
             labelPanel3.Size = new Size(44, 16);
             labelPanel3.TabIndex = 47;
-            labelPanel3.Text = "3";
+            labelPanel3.Text = "Wed";
             labelPanel3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbPanel3
@@ -2532,26 +2604,39 @@
             // daysPanel2
             // 
             daysPanel2.BackColor = Color.WhiteSmoke;
-            daysPanel2.Controls.Add(kryptonComboBox2);
+            daysPanel2.Controls.Add(restDay2);
+            daysPanel2.Controls.Add(tueComboBox);
             daysPanel2.Controls.Add(labelPanel2);
             daysPanel2.Controls.Add(pbPanel2);
             daysPanel2.Location = new Point(97, 99);
             daysPanel2.Name = "daysPanel2";
             daysPanel2.Size = new Size(61, 122);
             daysPanel2.TabIndex = 47;
-            daysPanel2.Visible = false;
             // 
-            // kryptonComboBox2
+            // restDay2
             // 
-            kryptonComboBox2.CornerRoundingRadius = -1F;
-            kryptonComboBox2.DropDownWidth = 52;
-            kryptonComboBox2.IntegralHeight = false;
-            kryptonComboBox2.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
-            kryptonComboBox2.Location = new Point(4, 51);
-            kryptonComboBox2.Name = "kryptonComboBox2";
-            kryptonComboBox2.Size = new Size(52, 21);
-            kryptonComboBox2.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            kryptonComboBox2.TabIndex = 52;
+            restDay2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            restDay2.ForeColor = Color.FromArgb(92, 225, 230);
+            restDay2.Location = new Point(13, 41);
+            restDay2.Name = "restDay2";
+            restDay2.Size = new Size(35, 41);
+            restDay2.TabIndex = 53;
+            restDay2.Text = "Rest Day";
+            restDay2.TextAlign = ContentAlignment.MiddleCenter;
+            restDay2.Visible = false;
+            // 
+            // tueComboBox
+            // 
+            tueComboBox.CornerRoundingRadius = -1F;
+            tueComboBox.DropDownWidth = 52;
+            tueComboBox.IntegralHeight = false;
+            tueComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
+            tueComboBox.Location = new Point(4, 51);
+            tueComboBox.Name = "tueComboBox";
+            tueComboBox.Size = new Size(52, 21);
+            tueComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            tueComboBox.TabIndex = 52;
+            tueComboBox.Visible = false;
             // 
             // labelPanel2
             // 
@@ -2560,7 +2645,7 @@
             labelPanel2.Name = "labelPanel2";
             labelPanel2.Size = new Size(45, 16);
             labelPanel2.TabIndex = 46;
-            labelPanel2.Text = "2";
+            labelPanel2.Text = "Tue";
             labelPanel2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbPanel2
@@ -2575,26 +2660,39 @@
             // daysPanel1
             // 
             daysPanel1.BackColor = Color.WhiteSmoke;
-            daysPanel1.Controls.Add(kryptonComboBox1);
+            daysPanel1.Controls.Add(restDay1);
+            daysPanel1.Controls.Add(monComboBox);
             daysPanel1.Controls.Add(labelPanel1);
             daysPanel1.Controls.Add(pbPanel1);
             daysPanel1.Location = new Point(22, 99);
             daysPanel1.Name = "daysPanel1";
             daysPanel1.Size = new Size(61, 122);
             daysPanel1.TabIndex = 46;
-            daysPanel1.Visible = false;
             // 
-            // kryptonComboBox1
+            // restDay1
             // 
-            kryptonComboBox1.CornerRoundingRadius = -1F;
-            kryptonComboBox1.DropDownWidth = 52;
-            kryptonComboBox1.IntegralHeight = false;
-            kryptonComboBox1.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
-            kryptonComboBox1.Location = new Point(4, 52);
-            kryptonComboBox1.Name = "kryptonComboBox1";
-            kryptonComboBox1.Size = new Size(52, 21);
-            kryptonComboBox1.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            kryptonComboBox1.TabIndex = 51;
+            restDay1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            restDay1.ForeColor = Color.FromArgb(92, 225, 230);
+            restDay1.Location = new Point(13, 41);
+            restDay1.Name = "restDay1";
+            restDay1.Size = new Size(35, 41);
+            restDay1.TabIndex = 52;
+            restDay1.Text = "Rest Day";
+            restDay1.TextAlign = ContentAlignment.MiddleCenter;
+            restDay1.Visible = false;
+            // 
+            // monComboBox
+            // 
+            monComboBox.CornerRoundingRadius = -1F;
+            monComboBox.DropDownWidth = 52;
+            monComboBox.IntegralHeight = false;
+            monComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
+            monComboBox.Location = new Point(4, 52);
+            monComboBox.Name = "monComboBox";
+            monComboBox.Size = new Size(52, 21);
+            monComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            monComboBox.TabIndex = 51;
+            monComboBox.Visible = false;
             // 
             // labelPanel1
             // 
@@ -2603,7 +2701,7 @@
             labelPanel1.Name = "labelPanel1";
             labelPanel1.Size = new Size(35, 16);
             labelPanel1.TabIndex = 0;
-            labelPanel1.Text = "1";
+            labelPanel1.Text = "Mon";
             labelPanel1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pbPanel1
@@ -2632,11 +2730,11 @@
             selectWorkoutsLabel.AutoSize = true;
             selectWorkoutsLabel.BackColor = Color.WhiteSmoke;
             selectWorkoutsLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            selectWorkoutsLabel.Location = new Point(152, 13);
+            selectWorkoutsLabel.Location = new Point(196, 13);
             selectWorkoutsLabel.Name = "selectWorkoutsLabel";
-            selectWorkoutsLabel.Size = new Size(249, 22);
+            selectWorkoutsLabel.Size = new Size(160, 22);
             selectWorkoutsLabel.TabIndex = 40;
-            selectWorkoutsLabel.Text = "Select Workouts into Days";
+            selectWorkoutsLabel.Text = "Select Workouts";
             // 
             // preNextButton3Panel
             // 
@@ -2831,25 +2929,25 @@
             selectWorkoutsPanel.ResumeLayout(false);
             selectWorkoutsPanel.PerformLayout();
             daysPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)sunComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel7).EndInit();
             daysPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)satComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel6).EndInit();
             daysPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)friComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel5).EndInit();
             daysPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thuComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel4).EndInit();
             daysPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)wedComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel3).EndInit();
             daysPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tueComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel2).EndInit();
             daysPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)kryptonComboBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)monComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPanel1).EndInit();
             preNextButton3Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)selectWorkoutsBorders).EndInit();
@@ -3013,12 +3111,19 @@
         private Panel preNextButton3Panel;
         private Krypton.Toolkit.KryptonButton preNextButton3;
         private PictureBox selectWorkoutsBorders;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox7;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox6;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox5;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox4;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox3;
-        private Krypton.Toolkit.KryptonComboBox kryptonComboBox2;
+        private Krypton.Toolkit.KryptonComboBox monComboBox;
+        private Krypton.Toolkit.KryptonComboBox sunComboBox;
+        private Krypton.Toolkit.KryptonComboBox satComboBox;
+        private Krypton.Toolkit.KryptonComboBox friComboBox;
+        private Krypton.Toolkit.KryptonComboBox thuComboBox;
+        private Krypton.Toolkit.KryptonComboBox wedComboBox;
+        private Krypton.Toolkit.KryptonComboBox tueComboBox;
+        private Label restDay7;
+        private Label restDay6;
+        private Label restDay5;
+        private Label restDay4;
+        private Label restDay3;
+        private Label restDay2;
+        private Label restDay1;
     }
 }

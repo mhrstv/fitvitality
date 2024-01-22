@@ -70,6 +70,7 @@
             welcomeErrorLabel = new Label();
             errorLabel = new Label();
             welcomeError = new PictureBox();
+            themeComboBox = new Krypton.Toolkit.KryptonComboBox();
             deleteAccPanel.SuspendLayout();
             closeDAPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
@@ -87,6 +88,7 @@
             errorPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)welcomeError).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)themeComboBox).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -548,7 +550,6 @@
             // 
             languageComboBox.CornerRoundingRadius = -1F;
             languageComboBox.DropDownWidth = 121;
-            languageComboBox.IntegralHeight = false;
             languageComboBox.Items.AddRange(new object[] { "Bulgarian", "English" });
             languageComboBox.Location = new Point(127, 78);
             languageComboBox.Name = "languageComboBox";
@@ -580,7 +581,6 @@
             // 
             genderComboBox.CornerRoundingRadius = -1F;
             genderComboBox.DropDownWidth = 121;
-            genderComboBox.IntegralHeight = false;
             genderComboBox.Items.AddRange(new object[] { "Male", "Female" });
             genderComboBox.Location = new Point(494, 136);
             genderComboBox.Name = "genderComboBox";
@@ -610,7 +610,6 @@
             // 
             goalComboBox.CornerRoundingRadius = -1F;
             goalComboBox.DropDownWidth = 121;
-            goalComboBox.IntegralHeight = false;
             goalComboBox.Items.AddRange(new object[] { "Cut", "Maintain", "Bulk" });
             goalComboBox.Location = new Point(494, 225);
             goalComboBox.Name = "goalComboBox";
@@ -749,12 +748,42 @@
             welcomeError.TabIndex = 0;
             welcomeError.TabStop = false;
             // 
+            // themeComboBox
+            // 
+            themeComboBox.CornerRoundingRadius = -1F;
+            themeComboBox.DropDownWidth = 121;
+            themeComboBox.Items.AddRange(new object[] { "Light", "Dark" });
+            themeComboBox.Location = new Point(127, 121);
+            themeComboBox.Name = "themeComboBox";
+            themeComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
+            themeComboBox.Size = new Size(85, 21);
+            themeComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            themeComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
+            themeComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
+            themeComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            themeComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            themeComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
+            themeComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            themeComboBox.TabIndex = 42;
+            // 
             // Settings
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
+            Controls.Add(themeComboBox);
             Controls.Add(errorPanel);
             Controls.Add(rightCorner);
             Controls.Add(leftCorner);
@@ -805,6 +834,7 @@
             errorPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)welcomeError).EndInit();
+            ((System.ComponentModel.ISupportInitialize)themeComboBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -855,5 +885,6 @@
         private Label welcomeErrorLabel;
         private Label errorLabel;
         private PictureBox welcomeError;
+        private Krypton.Toolkit.KryptonComboBox themeComboBox;
     }
 }

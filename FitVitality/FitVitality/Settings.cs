@@ -197,7 +197,7 @@ namespace FitVitality
                     return false;
                 }
             }
-            if(name.Length < 3 || name.Length > 20)
+            if (name.Length < 3 || name.Length > 20)
             {
                 return false;
             }

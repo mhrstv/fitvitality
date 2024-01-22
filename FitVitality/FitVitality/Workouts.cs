@@ -1260,6 +1260,11 @@ namespace FitVitality
         private void mondayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             weekDayClick(mondayCheckBox, mondayPictureBox, mondayLabel);
+            if (mondayCheckBox.Checked)
+            {
+                mondayClicked = true;
+            }
+            else { mondayClicked = false; }
         }
 
         private void mondayPictureBox_Click(object sender, EventArgs e)
@@ -1293,31 +1298,128 @@ namespace FitVitality
         private void tuesdayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             weekDayClick(tuesdayCheckBox, tuesdayPictureBox, tuesdayLabel);
+            if (tuesdayCheckBox.Checked)
+            {
+                tuesdayClicked = true;
+            }
+            else { tuesdayClicked = false; }
         }
 
         private void wednesdayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             weekDayClick(wednesdayCheckBox, wednesdayPictureBox, wednesdayLabel);
+            if (wednesdayCheckBox.Checked)
+            {
+                wednesdayClicked = true;
+            }
+            else { wednesdayClicked = false; }
         }
 
         private void thursdayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             weekDayClick(thursdayCheckBox, thursdayPictureBox, thursdayLabel);
+            if (thursdayCheckBox.Checked)
+            {
+                thursdayClicked = true;
+            }
+            else { thursdayClicked = false; }
         }
 
         private void fridayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             weekDayClick(fridayCheckBox, fridayPictureBox, fridayLabel);
+            if (fridayCheckBox.Checked)
+            {
+                fridayClicked = true;
+            }
+            else { fridayClicked = false; }
         }
 
         private void saturdayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             weekDayClick(saturdayCheckBox, saturdayPictureBox, saturdayLabel);
+            if (saturdayCheckBox.Checked)
+            {
+                saturdayClicked = true;
+            }
+            else { saturdayClicked = false; }
         }
 
         private void sundayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             weekDayClick(sundayCheckBox, sundayPictureBox, sundayLabel);
+            if (sundayCheckBox.Checked)
+            {
+                sundayClicked = true;
+            }
+            else { sundayClicked = false; }
+        }
+
+        private void preNextButton2_Click(object sender, EventArgs e)
+        {
+            trainingDaysPanel.Visible = false;
+            selectWorkoutsPanel.Visible = true;
+            if (activity == 1)
+            {
+                daysPanel4.Visible = true;
+            }
+            if (activity == 2)
+            {
+                daysPanel4.Visible = true;
+                daysPanel4.Location = new Point(205, 99);
+                daysPanel5.Visible = true;
+                daysPanel5.Location = new Point(280, 99);
+            }
+            if (activity == 3)
+            {
+                daysPanel3.Visible = true;
+                daysPanel4.Visible = true;
+                daysPanel5.Visible = true;
+            }
+            if (activity == 4)
+            {
+                daysPanel3.Visible = true;
+                daysPanel3.Location = new Point(132, 99);
+                daysPanel4.Visible = true;
+                daysPanel4.Location = new Point(205, 99);
+                daysPanel5.Visible = true;
+                daysPanel5.Location = new Point(280, 99);
+                daysPanel6.Visible = true;
+                daysPanel6.Location = new Point(356, 99);
+            }
+            if (activity == 5)
+            {
+                daysPanel2.Visible = true;
+                daysPanel3.Visible = true;
+                daysPanel4.Visible = true;
+                daysPanel5.Visible = true;
+                daysPanel6.Visible = true;
+            }
+            if (activity == 6)
+            {
+                daysPanel2.Visible = true;
+                daysPanel2.Location = new Point(58, 99);
+                daysPanel3.Visible = true;
+                daysPanel3.Location = new Point(132, 99);
+                daysPanel4.Visible = true;
+                daysPanel4.Location = new Point(205, 99);
+                daysPanel5.Visible = true;
+                daysPanel5.Location = new Point(280, 99);
+                daysPanel6.Visible = true;
+                daysPanel6.Location = new Point(356, 99);
+                daysPanel7.Visible = true;
+                daysPanel7.Location = new Point(430, 99);
+            }
+            if (activity == 7)
+            {
+                daysPanel1.Visible = true;
+                daysPanel2.Visible = true;
+                daysPanel3.Visible = true;
+                daysPanel4.Visible = true;
+                daysPanel5.Visible = true;
+                daysPanel6.Visible = true;
+                daysPanel7.Visible = true;
+            }
         }
     }
 }

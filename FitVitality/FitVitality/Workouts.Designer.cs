@@ -2348,15 +2348,16 @@
             // sunComboBox
             // 
             sunComboBox.CornerRoundingRadius = -1F;
+            sunComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             sunComboBox.DropDownWidth = 52;
             sunComboBox.IntegralHeight = false;
-            sunComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
             sunComboBox.Location = new Point(4, 51);
             sunComboBox.Name = "sunComboBox";
             sunComboBox.Size = new Size(52, 21);
             sunComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             sunComboBox.TabIndex = 54;
             sunComboBox.Visible = false;
+            sunComboBox.SelectedIndexChanged += WorkoutDaysComboBox_Click;
             // 
             // labelPanel7
             // 
@@ -2404,15 +2405,16 @@
             // satComboBox
             // 
             satComboBox.CornerRoundingRadius = -1F;
+            satComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             satComboBox.DropDownWidth = 52;
             satComboBox.IntegralHeight = false;
-            satComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
             satComboBox.Location = new Point(4, 51);
             satComboBox.Name = "satComboBox";
             satComboBox.Size = new Size(52, 21);
             satComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             satComboBox.TabIndex = 53;
             satComboBox.Visible = false;
+            satComboBox.SelectedIndexChanged += WorkoutDaysComboBox_Click;
             // 
             // labelPanel6
             // 
@@ -2460,15 +2462,16 @@
             // friComboBox
             // 
             friComboBox.CornerRoundingRadius = -1F;
+            friComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             friComboBox.DropDownWidth = 52;
             friComboBox.IntegralHeight = false;
-            friComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
             friComboBox.Location = new Point(4, 51);
             friComboBox.Name = "friComboBox";
             friComboBox.Size = new Size(52, 21);
             friComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             friComboBox.TabIndex = 52;
             friComboBox.Visible = false;
+            friComboBox.SelectedIndexChanged += WorkoutDaysComboBox_Click;
             // 
             // labelPanel5
             // 
@@ -2516,15 +2519,16 @@
             // thuComboBox
             // 
             thuComboBox.CornerRoundingRadius = -1F;
+            thuComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             thuComboBox.DropDownWidth = 52;
             thuComboBox.IntegralHeight = false;
-            thuComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
             thuComboBox.Location = new Point(4, 51);
             thuComboBox.Name = "thuComboBox";
             thuComboBox.Size = new Size(52, 21);
             thuComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             thuComboBox.TabIndex = 52;
             thuComboBox.Visible = false;
+            thuComboBox.SelectedIndexChanged += WorkoutDaysComboBox_Click;
             // 
             // labelPanel4
             // 
@@ -2572,15 +2576,16 @@
             // wedComboBox
             // 
             wedComboBox.CornerRoundingRadius = -1F;
+            wedComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             wedComboBox.DropDownWidth = 52;
             wedComboBox.IntegralHeight = false;
-            wedComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
             wedComboBox.Location = new Point(4, 51);
             wedComboBox.Name = "wedComboBox";
             wedComboBox.Size = new Size(52, 21);
             wedComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             wedComboBox.TabIndex = 52;
             wedComboBox.Visible = false;
+            wedComboBox.SelectedIndexChanged += WorkoutDaysComboBox_Click;
             // 
             // labelPanel3
             // 
@@ -2628,15 +2633,16 @@
             // tueComboBox
             // 
             tueComboBox.CornerRoundingRadius = -1F;
+            tueComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             tueComboBox.DropDownWidth = 52;
             tueComboBox.IntegralHeight = false;
-            tueComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
             tueComboBox.Location = new Point(4, 51);
             tueComboBox.Name = "tueComboBox";
             tueComboBox.Size = new Size(52, 21);
             tueComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             tueComboBox.TabIndex = 52;
             tueComboBox.Visible = false;
+            tueComboBox.SelectedIndexChanged += WorkoutDaysComboBox_Click;
             // 
             // labelPanel2
             // 
@@ -2684,15 +2690,16 @@
             // monComboBox
             // 
             monComboBox.CornerRoundingRadius = -1F;
+            monComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             monComboBox.DropDownWidth = 52;
             monComboBox.IntegralHeight = false;
-            monComboBox.Items.AddRange(new object[] { "Back and Biceps", "Chest and Triceps" });
             monComboBox.Location = new Point(4, 52);
             monComboBox.Name = "monComboBox";
             monComboBox.Size = new Size(52, 21);
             monComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             monComboBox.TabIndex = 51;
             monComboBox.Visible = false;
+            monComboBox.SelectedIndexChanged += WorkoutDaysComboBox_Click;
             // 
             // labelPanel1
             // 
@@ -2804,8 +2811,9 @@
             preNextButton3.StateTracking.Border.Rounding = 15F;
             preNextButton3.StateTracking.Border.Width = 1;
             preNextButton3.TabIndex = 31;
-            preNextButton3.Values.Text = "Next";
+            preNextButton3.Values.Text = "Done";
             preNextButton3.Visible = false;
+            preNextButton3.Click += preNextButton3_Click;
             // 
             // selectWorkoutsBorders
             // 

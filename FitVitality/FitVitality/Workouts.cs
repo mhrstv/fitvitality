@@ -1187,6 +1187,17 @@ namespace FitVitality
         }
         private void WorkoutListItemGym_ButtonClicked(object sender, EventArgs e)
         {
+            WorkoutDays.Clear();
+            BackWorkout = "";
+            BicepsWorkout = "";
+            ChestWorkout = "";
+            TricepsWorkout = "";
+            ShouldersWorkout = "";
+            QuadricepsWorkout = "";
+            HamstringsWorkout = "";
+            GlutesWorkout = "";
+            CalvesWorkout = "";
+            CoreWorkout = "";
             for (int i = 0; i < workouts.Count; i++)
             {
                 if (workouts[i].Equals(sender))
@@ -1197,11 +1208,170 @@ namespace FitVitality
                     labelExercises.Text = $"[Back]: {back[i]}\n[Biceps]: {biceps[i]}\n[Chest]: {chest[i]}\n[Triceps]: {triceps[i]}\n[Shoulders]: {shoulders[i]}\n\n" +
                     $"[Quadriceps]: {quadriceps[i]}\n[Hamstrings]: {hamstrings[i]}\n[Glutes]: {glutes[i]}\n[Calves]: {calves[i]}\n\n" +
                     $"[Core]: {core[i]}";
+
+                    if (back[i] != "None" && biceps[i] != "None")
+                    {
+                        WorkoutDays.Add("Back and Biceps");
+                        BackWorkout = back[i];
+                        BicepsWorkout = biceps[i];
+                    }
+                    else if (back[i] != "None" && biceps[i] == "None")
+                    {
+                        WorkoutDays.Add("Back");
+                        BackWorkout = back[i];
+                    }
+                    else if (back[i] == "None" && biceps[i] != "None")
+                    {
+                        WorkoutDays.Add("Biceps");
+                        BicepsWorkout = biceps[i];
+                    }
+                    if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None")
+                    {
+                        WorkoutDays.Add("Chest, Triceps & Shoulders");
+                        ChestWorkout = chest[i];
+                        TricepsWorkout = triceps[i];
+                        ShouldersWorkout = shoulders[i];
+                    }
+                    else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] == "None")
+                    {
+                        WorkoutDays.Add("Chest");
+                        ChestWorkout = chest[i];
+                    }
+                    else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] == "None")
+                    {
+                        WorkoutDays.Add("Triceps");
+                        TricepsWorkout = triceps[i];
+                    }
+                    else if (chest[i] == "None" && triceps[i] == "None" && shoulders[i] != "None")
+                    {
+                        WorkoutDays.Add("Shoulders");
+                        ShouldersWorkout = shoulders[i];
+                    }
+                    else if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] == "None")
+                    {
+                        WorkoutDays.Add("Chest & Triceps");
+                        ChestWorkout = chest[i];
+                        TricepsWorkout = triceps[i];
+                    }
+                    else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] != "None")
+                    {
+                        WorkoutDays.Add("Chest & Shoulders");
+                        ChestWorkout = chest[i];
+                        ShouldersWorkout = shoulders[i];
+                    }
+                    else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] != "None")
+                    {
+                        WorkoutDays.Add("Triceps & Shoulders");
+                        TricepsWorkout = triceps[i];
+                        ShouldersWorkout = shoulders[i];
+                    }
+                    if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
+                    {
+                        WorkoutDays.Add("Legs");
+                        QuadricepsWorkout = quadriceps[i];
+                        HamstringsWorkout = hamstrings[i];
+                        GlutesWorkout = glutes[i];
+                        CalvesWorkout = calves[i];
+                    }
+                    else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None")
+                    {
+                        WorkoutDays.Add("Quadriceps");
+                        QuadricepsWorkout = quadriceps[i];
+                    }
+                    else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
+                    {
+                        WorkoutDays.Add("Hamstrings");
+                        HamstringsWorkout = hamstrings[i];
+                    }
+                    else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
+                    {
+                        WorkoutDays.Add("Glutes");
+                        GlutesWorkout = glutes[i];
+                    }
+                    else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
+                    {
+                        WorkoutDays.Add("Calves");
+                        CalvesWorkout = calves[i];
+                    }
+                    else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
+                    {
+                        WorkoutDays.Add("Quadriceps & Hamstrings");
+                        QuadricepsWorkout = quadriceps[i];
+                        HamstringsWorkout = hamstrings[i];
+                    }
+                    else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
+                    {
+                        WorkoutDays.Add("Quadriceps & Glutes");
+                        QuadricepsWorkout = quadriceps[i];
+                        GlutesWorkout = glutes[i];
+                    }
+                    else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
+                    {
+                        WorkoutDays.Add("Quadriceps & Calves");
+                        QuadricepsWorkout = quadriceps[i];
+                        CalvesWorkout = calves[i];
+                    }
+                    else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
+                    {
+                        WorkoutDays.Add("Hamstrings & Glutes");
+                        HamstringsWorkout = hamstrings[i];
+                        GlutesWorkout = glutes[i];
+                    }
+                    else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
+                    {
+                        WorkoutDays.Add("Hamstrings & Calves");
+                        HamstringsWorkout = hamstrings[i];
+                        CalvesWorkout = calves[i];
+                    }
+                    else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
+                    {
+                        WorkoutDays.Add("Glutes & Calves");
+                        GlutesWorkout = glutes[i];
+                        CalvesWorkout = calves[i];
+                    }
+                    else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
+                    {
+                        WorkoutDays.Add("Quadriceps, Hamstrings & Glutes");
+                        QuadricepsWorkout = quadriceps[i];
+                        HamstringsWorkout = hamstrings[i];
+                        GlutesWorkout = glutes[i];
+                    }
+                    else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
+                    {
+                        WorkoutDays.Add("Quadriceps, Hamstrings & Calves");
+                        QuadricepsWorkout = quadriceps[i];
+                        HamstringsWorkout = hamstrings[i];
+                        CalvesWorkout = calves[i];
+                    }
+                    else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
+                    {
+                        WorkoutDays.Add("Quadriceps, Glutes & Calves");
+                        QuadricepsWorkout = quadriceps[i];
+                        GlutesWorkout = glutes[i];
+                        CalvesWorkout = calves[i];
+                    }
+                    else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
+                    {
+                        WorkoutDays.Add("Hamstrings, Glutes & Calves");
+                        HamstringsWorkout = hamstrings[i];
+                        GlutesWorkout = glutes[i];
+                        CalvesWorkout = calves[i];
+                    }
+                    if (core[i] != "None")
+                    {
+                        WorkoutDays.Add("Core");
+                        CoreWorkout = core[i];
+                    }
                 }
             }
         }
         private void HomeOutdoors_ButtonClicked(object sender, EventArgs e)
         {
+            WorkoutDays.Clear();
+            BackBicepsWorkout = "";
+            ChestTricepsShouldersWorkout = "";
+            LegsWorkout = "";
+            CoreWorkout = "";
             for (int i = 0; i < workouts.Count; i++)
             {
                 if (workouts[i].Equals(sender))
@@ -1212,10 +1382,54 @@ namespace FitVitality
                     labelExercises.Text = $"[Back and Biceps]: {backbiceps[i]}\n[Chest, Triceps and Shoulders]: {chesttricepsshoulders[i]}\n\n" +
                     $"[Legs]: {legs[i]}\n\n" +
                     $"[Core]: {_core[i]}";
+
+                    if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None")
+                    {
+                        WorkoutDays.Add("Back & Biceps");
+                        WorkoutDays.Add("Chest, Triceps & Shoulders");
+                        BackBicepsWorkout = backbiceps[i];
+                        ChestTricepsShouldersWorkout = chesttricepsshoulders[i];
+                    }
+                    else if (backbiceps[i] != "None" && chesttricepsshoulders[i] == "None")
+                    {
+                        WorkoutDays.Add("Back & Biceps");
+                        BackBicepsWorkout = backbiceps[i];
+                    }
+                    else if (backbiceps[i] == "None" && chesttricepsshoulders[i] != "None")
+                    {
+                        WorkoutDays.Add("Chest, Triceps & Shoulders");
+                        ChestTricepsShouldersWorkout = chesttricepsshoulders[i];
+                    }
+                    if (legs[i] != "None")
+                    {
+                        WorkoutDays.Add("Legs");
+                        LegsWorkout = legs[i];
+                    }
+                    if (_core[i] != "None")
+                    {
+                        WorkoutDays.Add("Core");
+                        CoreWorkout = _core[i];
+                    }
                 }
             }
         }
+        List<string> WorkoutDays = new List<string>();
 
+        string BackWorkout = "";
+        string BicepsWorkout = "";
+        string ChestWorkout = "";
+        string TricepsWorkout = "";
+        string ShouldersWorkout = "";
+        string QuadricepsWorkout = "";
+        string HamstringsWorkout = "";
+        string GlutesWorkout = "";
+        string CalvesWorkout = "";
+
+        string BackBicepsWorkout = "";
+        string ChestTricepsShouldersWorkout = "";
+        string LegsWorkout = "";
+
+        string CoreWorkout = "";
         private void kryptonButton1_Click_1(object sender, EventArgs e)
         {
             trainingDaysPanel.Visible = true; trainingDaysPanel.BringToFront();
@@ -1362,38 +1576,986 @@ namespace FitVitality
             if (mondayClicked)
             {
                 monComboBox.Visible = true;
+                for (int i = 0; i < WorkoutDays.Count; i++)
+                {
+                    monComboBox.Items.Add(WorkoutDays[i]);
+                }
             }
             else { restDay1.Visible = true; }
             if (tuesdayClicked)
             {
                 tueComboBox.Visible = true;
+                for (int i = 0; i < WorkoutDays.Count; i++)
+                {
+                    tueComboBox.Items.Add(WorkoutDays[i]);
+                }
             }
             else { restDay2.Visible = true; }
             if (wednesdayClicked)
             {
                 wedComboBox.Visible = true;
+                for (int i = 0; i < WorkoutDays.Count; i++)
+                {
+                    wedComboBox.Items.Add(WorkoutDays[i]);
+                }
             }
             else { restDay3.Visible = true; }
             if (thursdayClicked)
             {
                 thuComboBox.Visible = true;
+                for (int i = 0; i < WorkoutDays.Count; i++)
+                {
+                    thuComboBox.Items.Add(WorkoutDays[i]);
+                }
             }
             else { restDay4.Visible = true; }
             if (fridayClicked)
             {
                 friComboBox.Visible = true;
+                for (int i = 0; i < WorkoutDays.Count; i++)
+                {
+                    friComboBox.Items.Add(WorkoutDays[i]);
+                }
             }
             else { restDay5.Visible = true; }
             if (saturdayClicked)
             {
                 satComboBox.Visible = true;
+                for (int i = 0; i < WorkoutDays.Count; i++)
+                {
+                    satComboBox.Items.Add(WorkoutDays[i]);
+                }
             }
             else { restDay6.Visible = true; }
             if (sundayClicked)
             {
                 sunComboBox.Visible = true;
+                for (int i = 0; i < WorkoutDays.Count; i++)
+                {
+                    sunComboBox.Items.Add(WorkoutDays[i]);
+                }
             }
             else { restDay7.Visible = true; }
+        }
+        private void WorkoutDaysComboBox_Click(object sender, EventArgs e)
+        {
+            bool done = false;
+            if (monComboBox.Visible == true)
+            {
+                if (monComboBox.Text != "")
+                {
+                    done = true;
+                }
+                else done = false;
+            }
+            if (tueComboBox.Visible == true)
+            {
+                if (tueComboBox.Text != "")
+                {
+                    done = true;
+                }
+                else done = false;
+            }
+            if (wedComboBox.Visible == true)
+            {
+                if (wedComboBox.Text != "")
+                {
+                    done = true;
+                }
+                else done = false;
+            }
+            if (thuComboBox.Visible == true)
+            {
+                if (thuComboBox.Text != "")
+                {
+                    done = true;
+                }
+                else done = false;
+            }
+            if (friComboBox.Visible == true)
+            {
+                if (friComboBox.Text != "")
+                {
+                    done = true;
+                }
+                else done = false;
+            }
+            if (satComboBox.Visible == true)
+            {
+                if (satComboBox.Text != "")
+                {
+                    done = true;
+                }
+                else done = false;
+            }
+            if (sunComboBox.Visible == true)
+            {
+                if (sunComboBox.Text != "")
+                {
+                    done = true;
+                }
+                else done = false;
+            }
+            if (done)
+            {
+                preNextButton3.Visible = true;
+            }
+            else preNextButton3.Visible = false;
+        }
+
+        private void preNextButton3_Click(object sender, EventArgs e)
+        {
+            selectWorkoutsPanel.Visible = false;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "";
+                query = "UPDATE Workouts " +
+                        "SET Monday = @Monday, Tuesday = @Tuesday, Wednesday = @Wednesday, Thursday = @Thursday, Friday = @Friday, Saturday = @Saturday, Sunday = @Sunday " +
+                        "WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    if (mondayClicked)
+                    {
+                        if (gymClicked)
+                        {
+                            if (monComboBox.Text == "Back and Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Monday", BackWorkout + BicepsWorkout);
+                            }
+                            else if (monComboBox.Text == "Chest")
+                            {
+                                command.Parameters.AddWithValue("@Monday", ChestWorkout);
+                            }
+                            else if (monComboBox.Text == "Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Monday", TricepsWorkout);
+                            }
+                            else if (monComboBox.Text == "Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Monday", ShouldersWorkout);
+                            }
+                            else if (monComboBox.Text == "Chest and Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Monday", ChestWorkout + TricepsWorkout);
+                            }
+                            else if (monComboBox.Text == "Chest and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Monday", ChestWorkout + ShouldersWorkout);
+                            }
+                            else if (monComboBox.Text == "Triceps and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Monday", TricepsWorkout + ShouldersWorkout);
+                            }
+                            else if (monComboBox.Text == "Quadriceps")
+                            {
+                                command.Parameters.AddWithValue("@Monday", QuadricepsWorkout);
+                            }
+                            else if (monComboBox.Text == "Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Monday", HamstringsWorkout);
+                            }
+                            else if (monComboBox.Text == "Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Monday", GlutesWorkout);
+                            }
+                            else if (monComboBox.Text == "Calves")
+                            {
+                                command.Parameters.AddWithValue("@Monday", CalvesWorkout);
+                            }
+                            else if (monComboBox.Text == "Quadriceps and Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Monday", QuadricepsWorkout + HamstringsWorkout);
+                            }
+                            else if (monComboBox.Text == "Quadriceps and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Monday", QuadricepsWorkout + GlutesWorkout);
+                            }
+                            else if (monComboBox.Text == "Quadriceps and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Monday", QuadricepsWorkout + CalvesWorkout);
+                            }
+                            else if (monComboBox.Text == "Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Monday", HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (monComboBox.Text == "Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Monday", GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (monComboBox.Text == "Quadriceps, Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Monday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (monComboBox.Text == "Quadriceps, Hamstrings and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Monday", QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                            }
+                            else if (monComboBox.Text == "Quadriceps, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Monday", QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (monComboBox.Text == "Hamstrings, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Monday", HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (monComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Monday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (monComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Monday", CoreWorkout);
+                            }
+                            else if (monComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Monday", ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                            }
+                        }
+                        else
+                        {
+                            if (monComboBox.Text == "Back & Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Monday", BackWorkout);
+                            }
+                            else if (monComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Monday", ChestTricepsShouldersWorkout);
+                            }
+                            else if (monComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Monday", LegsWorkout);
+                            }
+                            else if (monComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Monday", CoreWorkout);
+                            }
+                        }
+                    } else command.Parameters.AddWithValue("@Monday", "Rest Day");
+                    if (tuesdayClicked)
+                    {
+                        if(gymClicked)
+                        {
+                            if (tueComboBox.Text == "Back and Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", BackWorkout + BicepsWorkout);
+                            }
+                            else if (tueComboBox.Text == "Chest")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", ChestWorkout);
+                            }
+                            else if (tueComboBox.Text == "Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", TricepsWorkout);
+                            }
+                            else if (tueComboBox.Text == "Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", ShouldersWorkout);
+                            }
+                            else if (tueComboBox.Text == "Chest and Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", ChestWorkout + TricepsWorkout);
+                            }
+                            else if (tueComboBox.Text == "Chest and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", ChestWorkout + ShouldersWorkout);
+                            }
+                            else if (tueComboBox.Text == "Triceps and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", TricepsWorkout + ShouldersWorkout);
+                            }
+                            else if (tueComboBox.Text == "Quadriceps")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", QuadricepsWorkout);
+                            }
+                            else if (tueComboBox.Text == "Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", HamstringsWorkout);
+                            }
+                            else if (tueComboBox.Text == "Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", GlutesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Calves")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", CalvesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Quadriceps and Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", QuadricepsWorkout + HamstringsWorkout);
+                            }
+                            else if (tueComboBox.Text == "Quadriceps and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", QuadricepsWorkout + GlutesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Quadriceps and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", QuadricepsWorkout + CalvesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Quadriceps, Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Quadriceps, Hamstrings and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Quadriceps, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Hamstrings, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (tueComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", CoreWorkout);
+                            }
+                            else if (tueComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                            }
+                        }
+                        else
+                        {
+                            if (tueComboBox.Text == "Back & Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", BackWorkout);
+                            }
+                            else if (tueComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", ChestTricepsShouldersWorkout);
+                            }
+                            else if (tueComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", LegsWorkout);
+                            }
+                            else if (tueComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Tuesday", CoreWorkout);
+                            }
+                        }
+                    } else command.Parameters.AddWithValue("@Tuesday", "Rest Day");
+                    if (wednesdayClicked)
+                    {
+                        if(gymClicked)
+                        {
+                            if(wedComboBox.Text == "Back and Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", BackWorkout + BicepsWorkout);
+                            }
+                            else if (wedComboBox.Text == "Chest")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", ChestWorkout);
+                            }
+                            else if (wedComboBox.Text == "Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", TricepsWorkout);
+                            }
+                            else if (wedComboBox.Text == "Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", ShouldersWorkout);
+                            }
+                            else if (wedComboBox.Text == "Chest and Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", ChestWorkout + TricepsWorkout);
+                            }
+                            else if (wedComboBox.Text == "Chest and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", ChestWorkout + ShouldersWorkout);
+                            }
+                            else if (wedComboBox.Text == "Triceps and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", TricepsWorkout + ShouldersWorkout);
+                            }
+                            else if (wedComboBox.Text == "Quadriceps")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", QuadricepsWorkout);
+                            }
+                            else if (wedComboBox.Text == "Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", HamstringsWorkout);
+                            }
+                            else if (wedComboBox.Text == "Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", GlutesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Calves")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", CalvesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Quadriceps and Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", QuadricepsWorkout + HamstringsWorkout);
+                            }
+                            else if (wedComboBox.Text == "Quadriceps and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", QuadricepsWorkout + GlutesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Quadriceps and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", QuadricepsWorkout + CalvesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if(wedComboBox.Text == "Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Quadriceps, Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Quadriceps, Hamstrings and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Quadriceps, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Hamstrings, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (wedComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", CoreWorkout);
+                            }
+                            else if (wedComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                            }
+                        }
+                        else
+                        {
+                            if (wedComboBox.Text == "Back & Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", BackWorkout);
+                            }
+                            else if (wedComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", ChestTricepsShouldersWorkout);
+                            }
+                            else if (wedComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", LegsWorkout);
+                            }
+                            else if (wedComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Wednesday", CoreWorkout);
+                            }
+                        }
+                    } else command.Parameters.AddWithValue("@Wednesday", "Rest Day");
+                    if (thursdayClicked)
+                    {
+                        if (gymClicked)
+                        {
+                            if(thuComboBox.Text == "Back and Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", BackWorkout + BicepsWorkout);
+                            }
+                            else if (thuComboBox.Text == "Chest")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", ChestWorkout);
+                            }
+                            else if (thuComboBox.Text == "Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", TricepsWorkout);
+                            }
+                            else if (thuComboBox.Text == "Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", ShouldersWorkout);
+                            }
+                            else if (thuComboBox.Text == "Chest and Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", ChestWorkout + TricepsWorkout);
+                            }
+                            else if (thuComboBox.Text == "Chest and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", ChestWorkout + ShouldersWorkout);
+                            }
+                            else if (thuComboBox.Text == "Triceps and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", TricepsWorkout + ShouldersWorkout);
+                            }
+                            else if (thuComboBox.Text == "Quadriceps")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", QuadricepsWorkout);
+                            }
+                            else if (thuComboBox.Text == "Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", HamstringsWorkout);
+                            }
+                            else if (thuComboBox.Text == "Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", GlutesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Calves")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", CalvesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Quadriceps and Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", QuadricepsWorkout + HamstringsWorkout);
+                            }
+                            else if (thuComboBox.Text == "Quadriceps and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", QuadricepsWorkout + GlutesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Quadriceps and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", QuadricepsWorkout + CalvesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if(thuComboBox.Text == "Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Quadriceps, Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Quadriceps, Hamstrings and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Quadriceps, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Hamstrings, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (thuComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", CoreWorkout);
+                            }
+                            else if (thuComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                            }
+                        }
+                        else
+                        {
+                            if(thuComboBox.Text == "Back & Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", BackWorkout);
+                            }
+                            else if (thuComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", ChestTricepsShouldersWorkout);
+                            }
+                            else if (thuComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", LegsWorkout);
+                            }
+                            else if (thuComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Thursday", CoreWorkout);
+                            }
+                        }
+                    } else command.Parameters.AddWithValue("@Thursday", "Rest Day");
+                    if (fridayClicked)
+                    {
+                        if (gymClicked)
+                        {
+                            if(friComboBox.Text == "Back and Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Friday", BackWorkout + BicepsWorkout);
+                            }
+                            else if (friComboBox.Text == "Chest")
+                            {
+                                command.Parameters.AddWithValue("@Friday", ChestWorkout);
+                            }
+                            else if (friComboBox.Text == "Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Friday", TricepsWorkout);
+                            }
+                            else if (friComboBox.Text == "Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Friday", ShouldersWorkout);
+                            }
+                            else if (friComboBox.Text == "Chest and Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Friday", ChestWorkout + TricepsWorkout);
+                            }
+                            else if (friComboBox.Text == "Chest and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Friday", ChestWorkout + ShouldersWorkout);
+                            }
+                            else if (friComboBox.Text == "Triceps and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Friday", TricepsWorkout + ShouldersWorkout);
+                            }
+                            else if (friComboBox.Text == "Quadriceps")
+                            {
+                                command.Parameters.AddWithValue("@Friday", QuadricepsWorkout);
+                            }
+                            else if (friComboBox.Text == "Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Friday", HamstringsWorkout);
+                            }
+                            else if (friComboBox.Text == "Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Friday", GlutesWorkout);
+                            }
+                            else if (friComboBox.Text == "Calves")
+                            {
+                                command.Parameters.AddWithValue("@Friday", CalvesWorkout);
+                            }
+                            else if (friComboBox.Text == "Quadriceps and Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Friday", QuadricepsWorkout + HamstringsWorkout);
+                            }
+                            else if (friComboBox.Text == "Quadriceps and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Friday", QuadricepsWorkout + GlutesWorkout);
+                            }
+                            else if (friComboBox.Text == "Quadriceps and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Friday", QuadricepsWorkout + CalvesWorkout);
+                            }
+                            else if (friComboBox.Text == "Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Friday", HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if(friComboBox.Text == "Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Friday", GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (friComboBox.Text == "Quadriceps, Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Friday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (friComboBox.Text == "Quadriceps, Hamstrings and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Friday", QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                            }
+                            else if (friComboBox.Text == "Quadriceps, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Friday", QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (friComboBox.Text == "Hamstrings, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Friday", HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (friComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Friday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (friComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Friday", CoreWorkout);
+                            }
+                            else if (friComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Friday", ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                            }
+                        }
+                        else
+                        {
+                            if(friComboBox.Text == "Back & Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Friday", BackWorkout);
+                            }
+                            else if (friComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Friday", ChestTricepsShouldersWorkout);
+                            }
+                            else if (friComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Friday", LegsWorkout);
+                            }
+                            else if (friComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Friday", CoreWorkout);
+                            }
+                        }
+                    } else command.Parameters.AddWithValue("@Friday", "Rest Day");
+                    if (saturdayClicked)
+                    {
+                        if (gymClicked)
+                        {
+                            if(satComboBox.Text == "Back and Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", BackWorkout + BicepsWorkout);
+                            }
+                            else if (satComboBox.Text == "Chest")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", ChestWorkout);
+                            }
+                            else if (satComboBox.Text == "Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", TricepsWorkout);
+                            }
+                            else if (satComboBox.Text == "Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", ShouldersWorkout);
+                            }
+                            else if (satComboBox.Text == "Chest and Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", ChestWorkout + TricepsWorkout);
+                            }
+                            else if (satComboBox.Text == "Chest and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", ChestWorkout + ShouldersWorkout);
+                            }
+                            else if (satComboBox.Text == "Triceps and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", TricepsWorkout + ShouldersWorkout);
+                            }
+                            else if (satComboBox.Text == "Quadriceps")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", QuadricepsWorkout);
+                            }
+                            else if (satComboBox.Text == "Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", HamstringsWorkout);
+                            }
+                            else if (satComboBox.Text == "Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", GlutesWorkout);
+                            }
+                            else if (satComboBox.Text == "Calves")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", CalvesWorkout);
+                            }
+                            else if (satComboBox.Text == "Quadriceps and Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", QuadricepsWorkout + HamstringsWorkout);
+                            }
+                            else if (satComboBox.Text == "Quadriceps and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", QuadricepsWorkout + GlutesWorkout);
+                            }
+                            else if (satComboBox.Text == "Quadriceps and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", QuadricepsWorkout + CalvesWorkout);
+                            }
+                            else if (satComboBox.Text == "Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if(satComboBox.Text == "Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (satComboBox.Text == "Quadriceps, Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (satComboBox.Text == "Quadriceps, Hamstrings and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                            }
+                            else if (satComboBox.Text == "Quadriceps, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (satComboBox.Text == "Hamstrings, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (satComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (satComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", CoreWorkout);
+                            }
+                            else if (satComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                            }
+                        }
+                        else
+                        {
+                            if(satComboBox.Text == "Back & Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", BackWorkout);
+                            }
+                            else if (satComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", ChestTricepsShouldersWorkout);
+                            }
+                            else if (satComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", LegsWorkout);
+                            }
+                            else if (satComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Saturday", CoreWorkout);
+                            }
+                        }
+                    } else command.Parameters.AddWithValue("@Saturday", "Rest Day");
+                    if (sundayClicked)
+                    {
+                        if (gymClicked)
+                        {
+                            if(sunComboBox.Text == "Back and Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", BackWorkout + BicepsWorkout);
+                            }
+                            else if (sunComboBox.Text == "Chest")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", ChestWorkout);
+                            }
+                            else if (sunComboBox.Text == "Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", TricepsWorkout);
+                            }
+                            else if (sunComboBox.Text == "Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", ShouldersWorkout);
+                            }
+                            else if (sunComboBox.Text == "Chest and Triceps")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", ChestWorkout + TricepsWorkout);
+                            }
+                            else if (sunComboBox.Text == "Chest and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", ChestWorkout + ShouldersWorkout);
+                            }
+                            else if (sunComboBox.Text == "Triceps and Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", TricepsWorkout + ShouldersWorkout);
+                            }
+                            else if (sunComboBox.Text == "Quadriceps")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", QuadricepsWorkout);
+                            }
+                            else if (sunComboBox.Text == "Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", HamstringsWorkout);
+                            }
+                            else if (sunComboBox.Text == "Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", GlutesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Calves")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", CalvesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Quadriceps and Hamstrings")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", QuadricepsWorkout + HamstringsWorkout);
+                            }
+                            else if (sunComboBox.Text == "Quadriceps and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", QuadricepsWorkout + GlutesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Quadriceps and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", QuadricepsWorkout + CalvesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if(sunComboBox.Text == "Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Quadriceps, Hamstrings and Glutes")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Quadriceps, Hamstrings and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Quadriceps, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Hamstrings, Glutes and Calves")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                            }
+                            else if (sunComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", CoreWorkout);
+                            }
+                            else if (sunComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                            }
+                        }
+                        else
+                        {
+                            if(sunComboBox.Text == "Back & Biceps")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", BackWorkout);
+                            }
+                            else if (sunComboBox.Text == "Chest, Triceps & Shoulders")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", ChestTricepsShouldersWorkout);
+                            }
+                            else if (sunComboBox.Text == "Legs")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", LegsWorkout);
+                            }
+                            else if (sunComboBox.Text == "Core")
+                            {
+                                command.Parameters.AddWithValue("@Sunday", CoreWorkout);
+                            }
+                        }
+                    } else command.Parameters.AddWithValue("@Sunday", "Rest Day");
+                    command.ExecuteNonQuery();
+                }
+            }
+            loadForm(new WorkoutsDashboard(_userID));
+        }
+        private void saveWorkoutParameter(ComboBox cb, string day)
+        {
+
+        }
+        public void loadForm(object Form)
+        {
+            if (this.ParentForm.Controls.Count > 0)
+            {
+                this.ParentForm.Controls.RemoveAt(0);
+            }
+            Form x = Form as Form;
+            x.TopLevel = false;
+            x.Dock = DockStyle.Fill;
+            this.ParentForm.Controls.Add(x);
+            this.ParentForm.Tag = x;
+            x.Show();
         }
     }
 }

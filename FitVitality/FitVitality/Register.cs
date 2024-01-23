@@ -119,6 +119,21 @@ namespace FitVitality
                     }
                 }
             }
+            if (userID != null)
+            {
+                string query = "INSERT INTO Workouts (UserID) VALUES (@UserID)";
+
+                using (SqlConnection connection = new SqlConnection(connectionstring))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", userID);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
         }
         private bool containsDigit(string str)
         {

@@ -287,6 +287,7 @@
             // activityComboBoxMacro
             // 
             activityComboBoxMacro.CornerRoundingRadius = -1F;
+            activityComboBoxMacro.DropDownStyle = ComboBoxStyle.DropDownList;
             activityComboBoxMacro.DropDownWidth = 121;
             activityComboBoxMacro.IntegralHeight = false;
             activityComboBoxMacro.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
 using Krypton.Toolkit;
-
+using Microsoft.Data.SqlClient;
 
 namespace FitVitality
 {
@@ -23,6 +23,10 @@ namespace FitVitality
         bool settings_Opened = false;
 
         public string _userID;
+
+        //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+
         public void loadForm(object Form)
         {
             if (this.mainPanel.Controls.Count > 0)
@@ -77,7 +81,32 @@ namespace FitVitality
         {
             if (workouts_Opened == false)
             {
-                loadForm(new Workouts(_userID));
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT * FROM Workouts WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                if (reader.Read())
+                                {
+                                    if (reader["Monday"].ToString() != "Rest Day" || reader["Tuesday"].ToString() != "Rest Day" ||
+                                        reader["Wednesday"].ToString() != "Rest Day" || reader["Thursday"].ToString() != "Rest Day" ||
+                                        reader["Friday"].ToString() != "Rest Day" || reader["Saturday"].ToString() != "Rest Day" ||
+                                        reader["Sunday"].ToString() != "Rest Day")
+                                    {
+                                        loadForm(new WorkoutsDashboard(_userID));
+                                    }
+                                    else loadForm(new Workouts(_userID));
+                                }
+                            }
+                        }
+                    }
+                }
                 dashboard_Opened = false;
                 calculators_Opened = false;
                 workouts_Opened = true;

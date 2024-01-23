@@ -895,43 +895,51 @@ namespace FitVitality
             lowCarbsButton.Visible = true;
             lowFatButton.Visible = true;
             highProteinButton.Visible = true;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            if(activityComboBoxMacro.Text != "")
             {
-                string query = "UPDATE UserNutrition " +
-                               "SET ActivitySelection = @ActivitySelection " +
-                               "WHERE UserID = @UserID";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UserID", _userID);
-                    if (activityComboBoxMacro.SelectedItem == "Sedentary")
+                    string query = "UPDATE UserNutrition " +
+                                   "SET ActivitySelection = @ActivitySelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        MacroBalanced(sedentaryBMR);
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        if (activityComboBoxMacro.SelectedItem == "Sedentary")
+                        {
+                            MacroBalanced(sedentaryBMR);
+                        }
+                        if (activityComboBoxMacro.SelectedItem == "Light")
+                        {
+                            MacroBalanced(exerciseBMR13);
+                        }
+                        if (activityComboBoxMacro.SelectedItem == "Moderate")
+                        {
+                            MacroBalanced(exerciseBMR45);
+                        }
+                        if (activityComboBoxMacro.SelectedItem == "Active")
+                        {
+                            MacroBalanced(DailyBMR34);
+                        }
+                        if (activityComboBoxMacro.SelectedItem == "Very active")
+                        {
+                            MacroBalanced(intenseBMR67);
+                        }
+                        if (activityComboBoxMacro.SelectedItem == "Extra active")
+                        {
+                            MacroBalanced(veryIntenseBMR);
+                        }
+                        command.Parameters.AddWithValue("@ActivitySelection", activityComboBoxMacro.SelectedItem.ToString());
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        hiddenPanel2.Visible = false;
                     }
-                    if (activityComboBoxMacro.SelectedItem == "Light")
-                    {
-                        MacroBalanced(exerciseBMR13);
-                    }
-                    if (activityComboBoxMacro.SelectedItem == "Moderate")
-                    {
-                        MacroBalanced(exerciseBMR45);
-                    }
-                    if (activityComboBoxMacro.SelectedItem == "Active")
-                    {
-                        MacroBalanced(DailyBMR34);
-                    }
-                    if (activityComboBoxMacro.SelectedItem == "Very active")
-                    {
-                        MacroBalanced(intenseBMR67);
-                    }
-                    if (activityComboBoxMacro.SelectedItem == "Extra active")
-                    {
-                        MacroBalanced(veryIntenseBMR);
-                    }
-                    command.Parameters.AddWithValue("@ActivitySelection", activityComboBoxMacro.SelectedItem.ToString());
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    hiddenPanel2.Visible = false;
                 }
+            }
+            else
+            {
+                hiddenPanel1.Visible = true;
+                hiddenPanel2.Visible = true;
             }
         }
 
@@ -1531,7 +1539,7 @@ namespace FitVitality
                 if (foodItems[i].Equals(sender))
                 {
 
-                    currentCalories += (int)Math.Round(foodItems[i].CaloriesDynamic,0);
+                    currentCalories += (int)Math.Round(foodItems[i].CaloriesDynamic, 0);
                     currentCarbs += (int)Math.Round(foodItems[i].CarbsDynamic, 0);
                     currentProtein += (int)Math.Round(foodItems[i].ProteinDynamic, 0);
                     currentFats += (int)Math.Round(foodItems[i].FatDynamic, 0);
@@ -1615,7 +1623,7 @@ namespace FitVitality
             {
                 if (foodItems[i].Equals(sender))
                 {
-                    currentCalories -= (int)Math.Round(foodItems[i].CaloriesDynamic,0);
+                    currentCalories -= (int)Math.Round(foodItems[i].CaloriesDynamic, 0);
                     currentCarbs -= (int)Math.Round(foodItems[i].CarbsDynamic, 0);
                     currentProtein -= (int)Math.Round(foodItems[i].ProteinDynamic, 0);
                     currentFats -= (int)Math.Round(foodItems[i].FatDynamic, 0);
@@ -1698,7 +1706,7 @@ namespace FitVitality
             {
                 if (foodItems[i].Equals(sender))
                 {
-                    currentCalories -= (int)Math.Round(foodItems[i].FoodCalories,0);
+                    currentCalories -= (int)Math.Round(foodItems[i].FoodCalories, 0);
                     currentCarbs -= (int)Math.Round(foodItems[i].FoodCarbs, 0);
                     currentProtein -= (int)Math.Round(foodItems[i].FoodProtein, 0);
                     currentFats -= (int)Math.Round(foodItems[i].FoodFat, 0);
@@ -1711,7 +1719,7 @@ namespace FitVitality
                         currentProtein = 0;
                         currentFats = 0;
                     }
-                    if(foodItems.Count < 1)
+                    if (foodItems.Count < 1)
                     {
                         currentCalories = 0;
                         currentCarbs = 0;

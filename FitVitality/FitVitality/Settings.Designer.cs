@@ -549,7 +549,9 @@
             // languageComboBox
             // 
             languageComboBox.CornerRoundingRadius = -1F;
+            languageComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             languageComboBox.DropDownWidth = 121;
+            languageComboBox.IntegralHeight = false;
             languageComboBox.Items.AddRange(new object[] { "Bulgarian", "English" });
             languageComboBox.Location = new Point(127, 78);
             languageComboBox.Name = "languageComboBox";
@@ -580,7 +582,9 @@
             // genderComboBox
             // 
             genderComboBox.CornerRoundingRadius = -1F;
+            genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             genderComboBox.DropDownWidth = 121;
+            genderComboBox.IntegralHeight = false;
             genderComboBox.Items.AddRange(new object[] { "Male", "Female" });
             genderComboBox.Location = new Point(494, 136);
             genderComboBox.Name = "genderComboBox";
@@ -609,7 +613,9 @@
             // goalComboBox
             // 
             goalComboBox.CornerRoundingRadius = -1F;
+            goalComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             goalComboBox.DropDownWidth = 121;
+            goalComboBox.IntegralHeight = false;
             goalComboBox.Items.AddRange(new object[] { "Cut", "Maintain", "Bulk" });
             goalComboBox.Location = new Point(494, 225);
             goalComboBox.Name = "goalComboBox";
@@ -751,7 +757,9 @@
             // themeComboBox
             // 
             themeComboBox.CornerRoundingRadius = -1F;
+            themeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             themeComboBox.DropDownWidth = 121;
+            themeComboBox.IntegralHeight = false;
             themeComboBox.Items.AddRange(new object[] { "Light", "Dark" });
             themeComboBox.Location = new Point(127, 121);
             themeComboBox.Name = "themeComboBox";

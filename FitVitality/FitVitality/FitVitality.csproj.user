@@ -40,8 +40,5 @@
     <Compile Update="Workouts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="WorkoutsDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

@@ -196,6 +196,7 @@
             preNextButton3Panel = new Panel();
             preNextButton3 = new Krypton.Toolkit.KryptonButton();
             selectWorkoutsBorders = new PictureBox();
+            workoutsDashboard = new Panel();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -2824,12 +2825,21 @@
             selectWorkoutsBorders.TabIndex = 0;
             selectWorkoutsBorders.TabStop = false;
             // 
+            // workoutsDashboard
+            // 
+            workoutsDashboard.Location = new Point(19, 17);
+            workoutsDashboard.Name = "workoutsDashboard";
+            workoutsDashboard.Size = new Size(659, 339);
+            workoutsDashboard.TabIndex = 47;
+            workoutsDashboard.Visible = false;
+            // 
             // Workouts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(workoutsDashboard);
             Controls.Add(selectWorkoutsPanel);
             Controls.Add(trainingDaysPanel);
             Controls.Add(workoutPreviewPanel);
@@ -3133,5 +3143,6 @@
         private Label restDay3;
         private Label restDay2;
         private Label restDay1;
+        private Panel workoutsDashboard;
     }
 }

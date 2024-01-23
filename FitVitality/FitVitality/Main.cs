@@ -81,32 +81,7 @@ namespace FitVitality
         {
             if (workouts_Opened == false)
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string query = "SELECT * FROM Workouts WHERE UserID = @UserID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@UserID", _userID);
-                        using(SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                            {
-                                if (reader.Read())
-                                {
-                                    if (reader["Monday"].ToString() != "Rest Day" || reader["Tuesday"].ToString() != "Rest Day" ||
-                                        reader["Wednesday"].ToString() != "Rest Day" || reader["Thursday"].ToString() != "Rest Day" ||
-                                        reader["Friday"].ToString() != "Rest Day" || reader["Saturday"].ToString() != "Rest Day" ||
-                                        reader["Sunday"].ToString() != "Rest Day")
-                                    {
-                                        loadForm(new WorkoutsDashboard(_userID));
-                                    }
-                                    else loadForm(new Workouts(_userID));
-                                }
-                            }
-                        }
-                    }
-                }
+                loadForm(new Workouts(_userID));
                 dashboard_Opened = false;
                 calculators_Opened = false;
                 workouts_Opened = true;

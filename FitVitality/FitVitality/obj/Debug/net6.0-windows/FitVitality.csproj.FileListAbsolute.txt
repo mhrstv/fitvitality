@@ -251,4 +251,3 @@ E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runt
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
-E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.WorkoutsDashboard.resources

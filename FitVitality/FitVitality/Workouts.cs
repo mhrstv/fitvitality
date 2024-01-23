@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Krypton.Toolkit;
+using Microsoft.Data.SqlClient;
 using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
@@ -121,6 +122,31 @@ namespace FitVitality
                         if (reader.Read())
                         {
                             name = reader["Name"].ToString();
+                        }
+                    }
+                }
+            }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Workouts WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            if (reader.Read())
+                            {
+                                if (reader["Monday"].ToString() != "Rest Day" || reader["Tuesday"].ToString() != "Rest Day" ||
+                                    reader["Wednesday"].ToString() != "Rest Day" || reader["Thursday"].ToString() != "Rest Day" ||
+                                    reader["Friday"].ToString() != "Rest Day" || reader["Saturday"].ToString() != "Rest Day" ||
+                                    reader["Sunday"].ToString() != "Rest Day")
+                                {
+                                    workoutsDashboard.Visible = true;
+                                }
+                            }
                         }
                     }
                 }
@@ -1832,10 +1858,11 @@ namespace FitVitality
                                 command.Parameters.AddWithValue("@Monday", CoreWorkout);
                             }
                         }
-                    } else command.Parameters.AddWithValue("@Monday", "Rest Day");
+                    }
+                    else command.Parameters.AddWithValue("@Monday", "Rest Day");
                     if (tuesdayClicked)
                     {
-                        if(gymClicked)
+                        if (gymClicked)
                         {
                             if (tueComboBox.Text == "Back and Biceps")
                             {
@@ -1949,12 +1976,13 @@ namespace FitVitality
                                 command.Parameters.AddWithValue("@Tuesday", CoreWorkout);
                             }
                         }
-                    } else command.Parameters.AddWithValue("@Tuesday", "Rest Day");
+                    }
+                    else command.Parameters.AddWithValue("@Tuesday", "Rest Day");
                     if (wednesdayClicked)
                     {
-                        if(gymClicked)
+                        if (gymClicked)
                         {
-                            if(wedComboBox.Text == "Back and Biceps")
+                            if (wedComboBox.Text == "Back and Biceps")
                             {
                                 command.Parameters.AddWithValue("@Wednesday", BackWorkout + BicepsWorkout);
                             }
@@ -2014,7 +2042,7 @@ namespace FitVitality
                             {
                                 command.Parameters.AddWithValue("@Wednesday", HamstringsWorkout + GlutesWorkout);
                             }
-                            else if(wedComboBox.Text == "Glutes and Calves")
+                            else if (wedComboBox.Text == "Glutes and Calves")
                             {
                                 command.Parameters.AddWithValue("@Wednesday", GlutesWorkout + CalvesWorkout);
                             }
@@ -2066,12 +2094,13 @@ namespace FitVitality
                                 command.Parameters.AddWithValue("@Wednesday", CoreWorkout);
                             }
                         }
-                    } else command.Parameters.AddWithValue("@Wednesday", "Rest Day");
+                    }
+                    else command.Parameters.AddWithValue("@Wednesday", "Rest Day");
                     if (thursdayClicked)
                     {
                         if (gymClicked)
                         {
-                            if(thuComboBox.Text == "Back and Biceps")
+                            if (thuComboBox.Text == "Back and Biceps")
                             {
                                 command.Parameters.AddWithValue("@Thursday", BackWorkout + BicepsWorkout);
                             }
@@ -2131,7 +2160,7 @@ namespace FitVitality
                             {
                                 command.Parameters.AddWithValue("@Thursday", HamstringsWorkout + GlutesWorkout);
                             }
-                            else if(thuComboBox.Text == "Glutes and Calves")
+                            else if (thuComboBox.Text == "Glutes and Calves")
                             {
                                 command.Parameters.AddWithValue("@Thursday", GlutesWorkout + CalvesWorkout);
                             }
@@ -2166,7 +2195,7 @@ namespace FitVitality
                         }
                         else
                         {
-                            if(thuComboBox.Text == "Back & Biceps")
+                            if (thuComboBox.Text == "Back & Biceps")
                             {
                                 command.Parameters.AddWithValue("@Thursday", BackWorkout);
                             }
@@ -2183,12 +2212,13 @@ namespace FitVitality
                                 command.Parameters.AddWithValue("@Thursday", CoreWorkout);
                             }
                         }
-                    } else command.Parameters.AddWithValue("@Thursday", "Rest Day");
+                    }
+                    else command.Parameters.AddWithValue("@Thursday", "Rest Day");
                     if (fridayClicked)
                     {
                         if (gymClicked)
                         {
-                            if(friComboBox.Text == "Back and Biceps")
+                            if (friComboBox.Text == "Back and Biceps")
                             {
                                 command.Parameters.AddWithValue("@Friday", BackWorkout + BicepsWorkout);
                             }
@@ -2248,7 +2278,7 @@ namespace FitVitality
                             {
                                 command.Parameters.AddWithValue("@Friday", HamstringsWorkout + GlutesWorkout);
                             }
-                            else if(friComboBox.Text == "Glutes and Calves")
+                            else if (friComboBox.Text == "Glutes and Calves")
                             {
                                 command.Parameters.AddWithValue("@Friday", GlutesWorkout + CalvesWorkout);
                             }
@@ -2283,7 +2313,7 @@ namespace FitVitality
                         }
                         else
                         {
-                            if(friComboBox.Text == "Back & Biceps")
+                            if (friComboBox.Text == "Back & Biceps")
                             {
                                 command.Parameters.AddWithValue("@Friday", BackWorkout);
                             }
@@ -2300,12 +2330,13 @@ namespace FitVitality
                                 command.Parameters.AddWithValue("@Friday", CoreWorkout);
                             }
                         }
-                    } else command.Parameters.AddWithValue("@Friday", "Rest Day");
+                    }
+                    else command.Parameters.AddWithValue("@Friday", "Rest Day");
                     if (saturdayClicked)
                     {
                         if (gymClicked)
                         {
-                            if(satComboBox.Text == "Back and Biceps")
+                            if (satComboBox.Text == "Back and Biceps")
                             {
                                 command.Parameters.AddWithValue("@Saturday", BackWorkout + BicepsWorkout);
                             }
@@ -2365,7 +2396,7 @@ namespace FitVitality
                             {
                                 command.Parameters.AddWithValue("@Saturday", HamstringsWorkout + GlutesWorkout);
                             }
-                            else if(satComboBox.Text == "Glutes and Calves")
+                            else if (satComboBox.Text == "Glutes and Calves")
                             {
                                 command.Parameters.AddWithValue("@Saturday", GlutesWorkout + CalvesWorkout);
                             }
@@ -2400,7 +2431,7 @@ namespace FitVitality
                         }
                         else
                         {
-                            if(satComboBox.Text == "Back & Biceps")
+                            if (satComboBox.Text == "Back & Biceps")
                             {
                                 command.Parameters.AddWithValue("@Saturday", BackWorkout);
                             }
@@ -2417,12 +2448,14 @@ namespace FitVitality
                                 command.Parameters.AddWithValue("@Saturday", CoreWorkout);
                             }
                         }
-                    } else command.Parameters.AddWithValue("@Saturday", "Rest Day");
+                    }
+                    else command.Parameters.AddWithValue("@Saturday", "Rest Day");
                     if (sundayClicked)
                     {
+                        //saveWorkoutParameter(sunComboBox, "@Sunday", command);
                         if (gymClicked)
                         {
-                            if(sunComboBox.Text == "Back and Biceps")
+                            if (sunComboBox.Text == "Back and Biceps")
                             {
                                 command.Parameters.AddWithValue("@Sunday", BackWorkout + BicepsWorkout);
                             }
@@ -2482,7 +2515,7 @@ namespace FitVitality
                             {
                                 command.Parameters.AddWithValue("@Sunday", HamstringsWorkout + GlutesWorkout);
                             }
-                            else if(sunComboBox.Text == "Glutes and Calves")
+                            else if (sunComboBox.Text == "Glutes and Calves")
                             {
                                 command.Parameters.AddWithValue("@Sunday", GlutesWorkout + CalvesWorkout);
                             }
@@ -2517,7 +2550,7 @@ namespace FitVitality
                         }
                         else
                         {
-                            if(sunComboBox.Text == "Back & Biceps")
+                            if (sunComboBox.Text == "Back & Biceps")
                             {
                                 command.Parameters.AddWithValue("@Sunday", BackWorkout);
                             }
@@ -2534,27 +2567,141 @@ namespace FitVitality
                                 command.Parameters.AddWithValue("@Sunday", CoreWorkout);
                             }
                         }
-                    } else command.Parameters.AddWithValue("@Sunday", "Rest Day");
+                    }
+                    else command.Parameters.AddWithValue("@Sunday", "Rest Day");
                     command.ExecuteNonQuery();
                 }
             }
-            loadForm(new WorkoutsDashboard(_userID));
+            workoutsDashboard.Visible = true;
         }
-        private void saveWorkoutParameter(ComboBox cb, string day)
+        private void saveWorkoutParameter(KryptonComboBox cb, string day, SqlCommand command)
         {
-
+            if (gymClicked)
+            {
+                if (cb.Text == "Back and Biceps")
+                {
+                    command.Parameters.AddWithValue(day, BackWorkout + BicepsWorkout);
+                }
+                else if (cb.Text == "Chest")
+                {
+                    command.Parameters.AddWithValue(day, ChestWorkout);
+                }
+                else if (cb.Text == "Triceps")
+                {
+                    command.Parameters.AddWithValue(day, TricepsWorkout);
+                }
+                else if (cb.Text == "Shoulders")
+                {
+                    command.Parameters.AddWithValue(day, ShouldersWorkout);
+                }
+                else if (cb.Text == "Chest and Triceps")
+                {
+                    command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout);
+                }
+                else if (cb.Text == "Chest and Shoulders")
+                {
+                    command.Parameters.AddWithValue(day, ChestWorkout + ShouldersWorkout);
+                }
+                else if (cb.Text == "Triceps and Shoulders")
+                {
+                    command.Parameters.AddWithValue(day, TricepsWorkout + ShouldersWorkout);
+                }
+                else if (cb.Text == "Quadriceps")
+                {
+                    command.Parameters.AddWithValue(day, QuadricepsWorkout);
+                }
+                else if (cb.Text == "Hamstrings")
+                {
+                    command.Parameters.AddWithValue(day, HamstringsWorkout);
+                }
+                else if (cb.Text == "Glutes")
+                {
+                    command.Parameters.AddWithValue(day, GlutesWorkout);
+                }
+                else if (cb.Text == "Calves")
+                {
+                    command.Parameters.AddWithValue(day, CalvesWorkout);
+                }
+                else if (cb.Text == "Quadriceps and Hamstrings")
+                {
+                    command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout);
+                }
+                else if (cb.Text == "Quadriceps and Glutes")
+                {
+                    command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout);
+                }
+                else if (cb.Text == "Quadriceps and Calves")
+                {
+                    command.Parameters.AddWithValue(day, QuadricepsWorkout + CalvesWorkout);
+                }
+                else if (cb.Text == "Hamstrings and Glutes")
+                {
+                    command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout);
+                }
+                else if (cb.Text == "Glutes and Calves")
+                {
+                    command.Parameters.AddWithValue(day, GlutesWorkout + CalvesWorkout);
+                }
+                else if (cb.Text == "Quadriceps, Hamstrings and Glutes")
+                {
+                    command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                }
+                else if (cb.Text == "Quadriceps, Hamstrings and Calves")
+                {
+                    command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                }
+                else if (cb.Text == "Quadriceps, Glutes and Calves")
+                {
+                    command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                }
+                else if (cb.Text == "Hamstrings, Glutes and Calves")
+                {
+                    command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                }
+                else if (cb.Text == "Legs")
+                {
+                    command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                }
+                else if (cb.Text == "Core")
+                {
+                    command.Parameters.AddWithValue(day, CoreWorkout);
+                }
+                else if (cb.Text == "Chest, Triceps & Shoulders")
+                {
+                    command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                }
+            }
+            else
+            {
+                if (cb.Text == "Back & Biceps")
+                {
+                    command.Parameters.AddWithValue(day, BackWorkout);
+                }
+                else if (cb.Text == "Chest, Triceps & Shoulders")
+                {
+                    command.Parameters.AddWithValue(day, ChestTricepsShouldersWorkout);
+                }
+                else if (cb.Text == "Legs")
+                {
+                    command.Parameters.AddWithValue(day, LegsWorkout);
+                }
+                else if (cb.Text == "Core")
+                {
+                    command.Parameters.AddWithValue(day, CoreWorkout);
+                }
+            }
         }
         public void loadForm(object Form)
         {
-            if (this.ParentForm.Controls.Count > 0)
+            if (this.Parent.Controls.Count > 0)
             {
-                this.ParentForm.Controls.RemoveAt(0);
+                this.Parent.Controls.RemoveAt(0);
             }
             Form x = Form as Form;
             x.TopLevel = false;
             x.Dock = DockStyle.Fill;
-            this.ParentForm.Controls.Add(x);
-            this.ParentForm.Tag = x;
+            this.Parent.Controls.Add(x);
+            this.Parent.Tag = x;
             x.Show();
         }
     }

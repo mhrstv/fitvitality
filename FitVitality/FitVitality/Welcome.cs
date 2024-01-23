@@ -254,6 +254,7 @@ namespace FitVitality
         }
         private bool validAge(string age) // Метод за проверка на въведената възраст
         {
+            if (age == "") return false;
             foreach (char c in age) // Преминава през всеки символ от въведената възраст
             {
                 if (!char.IsNumber(c)) // Проверка дали въведената възраст съдържа само цифри
@@ -269,6 +270,7 @@ namespace FitVitality
         }
         private bool validWeight(string weight) // Метод за проверка на въведеното тегло
         {
+            if (weight == "") return false;
             foreach (char c in weight) // Преминава през всеки символ от въведеното тегло
             {
                 if (!char.IsNumber(c)) // Проверка дали въведеното тегло съдържа само цифри
@@ -284,6 +286,7 @@ namespace FitVitality
         }
         private bool validHeight(string height) // Метод за проверка на въведената височина
         {
+            if (height == "") return false;
             foreach (char c in height) // Преминава през всеки символ от въведената височина
             {
                 if (!char.IsNumber(c)) // Проверка дали въведената височина съдържа само цифри
@@ -790,9 +793,9 @@ namespace FitVitality
             {
                 panel_nameUsage.Width += 8; // Увеличаване на ширината на панела с 8
             }
-            if (panel_nameUsage.Width >= 482) // Проверка дали ширината на панела е по-голяма от 482
+            if (panel_nameUsage.Width >= 482)
             {
-                timerName3.Enabled = false; // Изключване на таймера
+                timerName3.Enabled = false; 
             }
         }
 

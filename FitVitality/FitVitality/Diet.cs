@@ -715,14 +715,20 @@ namespace FitVitality
                                 }
                                 else
                                 {
-                                    hiddenPanel1.Visible = false;
-                                    hiddenPanel2.Visible = true;
+                                    if(activityComboBoxMacro.Text != "")
+                                    {
+                                        hiddenPanel1.Visible = false;
+                                        hiddenPanel2.Visible = true;
+                                    }
                                 }
                             }
                             else
                             {
-                                hiddenPanel1.Visible = true;
-                                hiddenPanel2.Visible = true;
+                                if (activityComboBoxMacro.Text != "")
+                                {
+                                    hiddenPanel1.Visible = true;
+                                    hiddenPanel2.Visible = true;
+                                }
                             }
                         }
                     }
@@ -932,7 +938,11 @@ namespace FitVitality
                         command.Parameters.AddWithValue("@ActivitySelection", activityComboBoxMacro.SelectedItem.ToString());
                         connection.Open();
                         command.ExecuteNonQuery();
-                        hiddenPanel2.Visible = false;
+                        if(activityComboBoxMacro.Text != "")
+                        {
+                            hiddenPanel2.Visible = false;
+
+                        }
                     }
                 }
             }
@@ -991,7 +1001,10 @@ namespace FitVitality
             {
                 MacroBalanced(veryIntenseBMR);
             }
-            hiddenPanel1.Visible = false;
+            if(activityComboBoxMacro.Text != "")
+            {
+                hiddenPanel1.Visible = false;
+            }
         }
 
         private void highProteinButton_Click(object sender, EventArgs e)
@@ -1042,7 +1055,10 @@ namespace FitVitality
             {
                 MacroHighProtein(veryIntenseBMR);
             }
-            hiddenPanel1.Visible = false;
+            if(activityComboBoxMacro.Text != "")
+            {
+                hiddenPanel1.Visible = false;
+            }
         }
 
         private void lowFatButton_Click(object sender, EventArgs e)
@@ -1093,7 +1109,10 @@ namespace FitVitality
             {
                 MacroLowFat(veryIntenseBMR);
             }
-            hiddenPanel1.Visible = false;
+            if (activityComboBoxMacro.Text != "")
+            {
+                hiddenPanel1.Visible = false;
+            }
         }
 
         private void lowCarbsButton_Click(object sender, EventArgs e)
@@ -1144,7 +1163,10 @@ namespace FitVitality
             {
                 MacroLowCarb(veryIntenseBMR);
             }
-            hiddenPanel1.Visible = false;
+            if (activityComboBoxMacro.Text != "")
+            {
+                hiddenPanel1.Visible = false;
+            }
         }
 
         private void balancedButton_MouseEnter(object sender, EventArgs e)

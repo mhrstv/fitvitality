@@ -123,6 +123,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap balancedbg {
+            get {
+                object obj = ResourceManager.GetObject("balancedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap balancedHover {
             get {
                 object obj = ResourceManager.GetObject("balancedHover", resourceCulture);
@@ -133,9 +143,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap balancedHoverbg {
+            get {
+                object obj = ResourceManager.GetObject("balancedHoverbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap balancedSelected {
             get {
                 object obj = ResourceManager.GetObject("balancedSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap balancedSelectedbg {
+            get {
+                object obj = ResourceManager.GetObject("balancedSelectedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +353,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap corebg {
+            get {
+                object obj = ResourceManager.GetObject("corebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coreHovered {
             get {
                 object obj = ResourceManager.GetObject("coreHovered", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coreHoveredbg {
+            get {
+                object obj = ResourceManager.GetObject("coreHoveredbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +393,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap corePressedbg {
+            get {
+                object obj = ResourceManager.GetObject("corePressedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap create {
             get {
                 object obj = ResourceManager.GetObject("create", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap createbg {
+            get {
+                object obj = ResourceManager.GetObject("createbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -363,9 +433,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap createHoveredbg {
+            get {
+                object obj = ResourceManager.GetObject("createHoveredbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap createSelected {
             get {
                 object obj = ResourceManager.GetObject("createSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap createSelectedbg {
+            get {
+                object obj = ResourceManager.GetObject("createSelectedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,6 +543,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap femalebg {
+            get {
+                object obj = ResourceManager.GetObject("femalebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap femalepressed {
             get {
                 object obj = ResourceManager.GetObject("femalepressed", resourceCulture);
@@ -473,6 +573,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap femalepressedbg {
+            get {
+                object obj = ResourceManager.GetObject("femalepressedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap femaletracked {
             get {
                 object obj = ResourceManager.GetObject("femaletracked", resourceCulture);
@@ -486,6 +596,16 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap femaletracked1 {
             get {
                 object obj = ResourceManager.GetObject("femaletracked1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap femaletrackedbg {
+            get {
+                object obj = ResourceManager.GetObject("femaletrackedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -533,6 +653,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gainNormalbg {
+            get {
+                object obj = ResourceManager.GetObject("gainNormalbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gainPressed {
             get {
                 object obj = ResourceManager.GetObject("gainPressed", resourceCulture);
@@ -543,9 +673,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gainPressedbg {
+            get {
+                object obj = ResourceManager.GetObject("gainPressedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gainTracked {
             get {
                 object obj = ResourceManager.GetObject("gainTracked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gainTrackedbg {
+            get {
+                object obj = ResourceManager.GetObject("gainTrackedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -583,6 +733,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gymbg {
+            get {
+                object obj = ResourceManager.GetObject("gymbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gymHover {
             get {
                 object obj = ResourceManager.GetObject("gymHover", resourceCulture);
@@ -593,9 +753,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gymHoverbg {
+            get {
+                object obj = ResourceManager.GetObject("gymHoverbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gymPressed {
             get {
                 object obj = ResourceManager.GetObject("gymPressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gymPressedbg {
+            get {
+                object obj = ResourceManager.GetObject("gymPressedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -643,6 +823,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap highProteinbg {
+            get {
+                object obj = ResourceManager.GetObject("highProteinbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap highProteinHover {
             get {
                 object obj = ResourceManager.GetObject("highProteinHover", resourceCulture);
@@ -653,9 +843,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap highProteinHoverbg {
+            get {
+                object obj = ResourceManager.GetObject("highProteinHoverbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap highProteinSelected {
             get {
                 object obj = ResourceManager.GetObject("highProteinSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap highProteinSelectedbg {
+            get {
+                object obj = ResourceManager.GetObject("highProteinSelectedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -693,6 +903,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap homebg {
+            get {
+                object obj = ResourceManager.GetObject("homebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap homeHover {
             get {
                 object obj = ResourceManager.GetObject("homeHover", resourceCulture);
@@ -703,9 +923,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap homeHoverbg {
+            get {
+                object obj = ResourceManager.GetObject("homeHoverbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap homePressed {
             get {
                 object obj = ResourceManager.GetObject("homePressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap homePressedbg {
+            get {
+                object obj = ResourceManager.GetObject("homePressedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -753,9 +993,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loseNormalbg {
+            get {
+                object obj = ResourceManager.GetObject("loseNormalbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap losePressed {
             get {
                 object obj = ResourceManager.GetObject("losePressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap losePressedbg {
+            get {
+                object obj = ResourceManager.GetObject("losePressedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -773,9 +1033,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loseTrackedbg {
+            get {
+                object obj = ResourceManager.GetObject("loseTrackedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lowCarbs {
             get {
                 object obj = ResourceManager.GetObject("lowCarbs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lowCarbsbg {
+            get {
+                object obj = ResourceManager.GetObject("lowCarbsbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -793,9 +1073,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lowCarbsHoverbg {
+            get {
+                object obj = ResourceManager.GetObject("lowCarbsHoverbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lowCarbsSelected {
             get {
                 object obj = ResourceManager.GetObject("lowCarbsSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lowCarbsSelectedbg {
+            get {
+                object obj = ResourceManager.GetObject("lowCarbsSelectedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -813,9 +1113,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lowerbg {
+            get {
+                object obj = ResourceManager.GetObject("lowerbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lowerHover {
             get {
                 object obj = ResourceManager.GetObject("lowerHover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lowerHoverbg {
+            get {
+                object obj = ResourceManager.GetObject("lowerHoverbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -833,9 +1153,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lowerPressedbg {
+            get {
+                object obj = ResourceManager.GetObject("lowerPressedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lowFat {
             get {
                 object obj = ResourceManager.GetObject("lowFat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lowFatbg {
+            get {
+                object obj = ResourceManager.GetObject("lowFatbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -853,9 +1193,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lowFatHoverbg {
+            get {
+                object obj = ResourceManager.GetObject("lowFatHoverbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lowFatSelected {
             get {
                 object obj = ResourceManager.GetObject("lowFatSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lowFatSelectedbg {
+            get {
+                object obj = ResourceManager.GetObject("lowFatSelectedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -873,6 +1233,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maintainNormalbg {
+            get {
+                object obj = ResourceManager.GetObject("maintainNormalbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maintainPressed {
             get {
                 object obj = ResourceManager.GetObject("maintainPressed", resourceCulture);
@@ -883,9 +1253,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maintainPressedbg {
+            get {
+                object obj = ResourceManager.GetObject("maintainPressedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maintainTracked {
             get {
                 object obj = ResourceManager.GetObject("maintainTracked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maintainTrackedbg {
+            get {
+                object obj = ResourceManager.GetObject("maintainTrackedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -913,6 +1303,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap malebg {
+            get {
+                object obj = ResourceManager.GetObject("malebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap malepressed {
             get {
                 object obj = ResourceManager.GetObject("malepressed", resourceCulture);
@@ -933,6 +1333,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap malepressedbg {
+            get {
+                object obj = ResourceManager.GetObject("malepressedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap maletracked {
             get {
                 object obj = ResourceManager.GetObject("maletracked", resourceCulture);
@@ -946,6 +1356,16 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap maletracked1 {
             get {
                 object obj = ResourceManager.GetObject("maletracked1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maletrackedbg {
+            get {
+                object obj = ResourceManager.GetObject("maletrackedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -993,9 +1413,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nobg {
+            get {
+                object obj = ResourceManager.GetObject("nobg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap noHovered {
             get {
                 object obj = ResourceManager.GetObject("noHovered", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap noHoveredbg {
+            get {
+                object obj = ResourceManager.GetObject("noHoveredbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1013,9 +1453,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap noSelectedbg {
+            get {
+                object obj = ResourceManager.GetObject("noSelectedbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap outdoors {
             get {
                 object obj = ResourceManager.GetObject("outdoors", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outdoorsbg {
+            get {
+                object obj = ResourceManager.GetObject("outdoorsbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1033,9 +1493,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap outdoorsHoveredbg {
+            get {
+                object obj = ResourceManager.GetObject("outdoorsHoveredbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap outdoorsPressed {
             get {
                 object obj = ResourceManager.GetObject("outdoorsPressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outdoorsPressedbg {
+            get {
+                object obj = ResourceManager.GetObject("outdoorsPressedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1053,6 +1533,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap prebg {
+            get {
+                object obj = ResourceManager.GetObject("prebg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap preHovered {
             get {
                 object obj = ResourceManager.GetObject("preHovered", resourceCulture);
@@ -1063,9 +1553,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap preHoveredbg {
+            get {
+                object obj = ResourceManager.GetObject("preHoveredbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap prePressed {
             get {
                 object obj = ResourceManager.GetObject("prePressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prePressedbg {
+            get {
+                object obj = ResourceManager.GetObject("prePressedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1243,6 +1753,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap upperbg {
+            get {
+                object obj = ResourceManager.GetObject("upperbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap upperHover {
             get {
                 object obj = ResourceManager.GetObject("upperHover", resourceCulture);
@@ -1253,9 +1773,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap upperHoverbg {
+            get {
+                object obj = ResourceManager.GetObject("upperHoverbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap upperPressed {
             get {
                 object obj = ResourceManager.GetObject("upperPressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upperPressedbg {
+            get {
+                object obj = ResourceManager.GetObject("upperPressedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1323,6 +1863,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap yesbg {
+            get {
+                object obj = ResourceManager.GetObject("yesbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yesHovered {
             get {
                 object obj = ResourceManager.GetObject("yesHovered", resourceCulture);
@@ -1333,9 +1883,29 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap yesHoveredbg {
+            get {
+                object obj = ResourceManager.GetObject("yesHoveredbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap yesSelected {
             get {
                 object obj = ResourceManager.GetObject("yesSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yesSelectedbg {
+            get {
+                object obj = ResourceManager.GetObject("yesSelectedbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

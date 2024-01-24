@@ -251,3 +251,17 @@ E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runt
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x64\native\msalruntime.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\Guna.UI2.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll

@@ -33,6 +33,11 @@ namespace FitVitality
             ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
+        private void workoutNumLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
         [Category("Custom Props")]
         public string WorkoutNumber
         {

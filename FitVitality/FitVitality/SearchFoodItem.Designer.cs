@@ -114,6 +114,7 @@
             Cursor = Cursors.Hand;
             Name = "SearchFoodItem";
             Size = new Size(190, 35);
+            Load += SearchFoodItem_Load;
             Click += SearchFoodItem_Click;
             MouseEnter += SearchFoodItem_MouseEnter;
             MouseLeave += SearchFoodItem_MouseLeave;

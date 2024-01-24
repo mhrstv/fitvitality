@@ -56,6 +56,11 @@ namespace FitVitality
             this.BackColor = Color.FromArgb(240, 240, 240);
         }
 
+        private void SearchFoodItem_Load(object sender, EventArgs e)
+        {
+
+        }
+
         [Category("Custom Props")]
         public string FoodName
         {

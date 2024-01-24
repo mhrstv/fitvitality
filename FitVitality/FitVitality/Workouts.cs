@@ -99,8 +99,8 @@ namespace FitVitality
         List<string> glutes = new List<string>();
         List<string> calves = new List<string>();
         List<string> core = new List<string>();
-        //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        //private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public Workouts(string userID)
         {
             InitializeComponent();
@@ -1911,6 +1911,11 @@ namespace FitVitality
             this.Parent.Controls.Add(x);
             this.Parent.Tag = x;
             x.Show();
+        }
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            workoutsDashboard.Visible = false;
+            trainPlacePanel.Visible = true;
         }
     }
 }

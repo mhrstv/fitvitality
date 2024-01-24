@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Workouts));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftCorner = new PictureBox();
             rightCorner = new PictureBox();
             vLine1 = new PictureBox();
@@ -197,6 +199,9 @@
             preNextButton3 = new Krypton.Toolkit.KryptonButton();
             selectWorkoutsBorders = new PictureBox();
             workoutsDashboard = new Panel();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            editWorkoutLabel = new Label();
+            workoutDashboardLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -292,6 +297,7 @@
             ((System.ComponentModel.ISupportInitialize)pbPanel1).BeginInit();
             preNextButton3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)selectWorkoutsBorders).BeginInit();
+            workoutsDashboard.SuspendLayout();
             SuspendLayout();
             // 
             // leftCorner
@@ -2827,11 +2833,55 @@
             // 
             // workoutsDashboard
             // 
-            workoutsDashboard.Location = new Point(19, 17);
+            workoutsDashboard.Controls.Add(guna2Button1);
+            workoutsDashboard.Controls.Add(editWorkoutLabel);
+            workoutsDashboard.Controls.Add(workoutDashboardLabel);
+            workoutsDashboard.Location = new Point(16, 14);
             workoutsDashboard.Name = "workoutsDashboard";
             workoutsDashboard.Size = new Size(659, 339);
             workoutsDashboard.TabIndex = 47;
             workoutsDashboard.Visible = false;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 8;
+            guna2Button1.CustomizableEdges = customizableEdges3;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.Transparent;
+            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Image = Properties.Resources.edit_svgrepo_com;
+            guna2Button1.ImageSize = new Size(27, 27);
+            guna2Button1.Location = new Point(42, 54);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.PressedColor = Color.LightGray;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button1.Size = new Size(30, 30);
+            guna2Button1.TabIndex = 25;
+            guna2Button1.Click += guna2Button1_Click;
+            // 
+            // editWorkoutLabel
+            // 
+            editWorkoutLabel.AutoSize = true;
+            editWorkoutLabel.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            editWorkoutLabel.Location = new Point(70, 60);
+            editWorkoutLabel.Name = "editWorkoutLabel";
+            editWorkoutLabel.Size = new Size(99, 21);
+            editWorkoutLabel.TabIndex = 24;
+            editWorkoutLabel.Text = "Edit workout";
+            // 
+            // workoutDashboardLabel
+            // 
+            workoutDashboardLabel.AutoSize = true;
+            workoutDashboardLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            workoutDashboardLabel.Location = new Point(222, 14);
+            workoutDashboardLabel.Name = "workoutDashboardLabel";
+            workoutDashboardLabel.Size = new Size(214, 24);
+            workoutDashboardLabel.TabIndex = 22;
+            workoutDashboardLabel.Text = "Workout Dashboard";
             // 
             // Workouts
             // 
@@ -2969,6 +3019,8 @@
             ((System.ComponentModel.ISupportInitialize)pbPanel1).EndInit();
             preNextButton3Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)selectWorkoutsBorders).EndInit();
+            workoutsDashboard.ResumeLayout(false);
+            workoutsDashboard.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -3144,5 +3196,8 @@
         private Label restDay2;
         private Label restDay1;
         private Panel workoutsDashboard;
+        private Label editWorkoutLabel;
+        private Label workoutDashboardLabel;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

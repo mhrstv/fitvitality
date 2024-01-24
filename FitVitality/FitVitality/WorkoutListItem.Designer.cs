@@ -97,6 +97,7 @@
             workoutNumLabel.TabIndex = 14;
             workoutNumLabel.Text = "Workout [Number]";
             workoutNumLabel.TextAlign = ContentAlignment.MiddleCenter;
+            workoutNumLabel.Click += workoutNumLabel_Click;
             // 
             // selectButton
             // 

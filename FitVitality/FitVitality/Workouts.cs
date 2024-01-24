@@ -15,7 +15,6 @@ using System.Windows.Forms;
 
 namespace FitVitality
 {
-
     public partial class Workouts : Form
     {
         public string _userID;
@@ -99,8 +98,8 @@ namespace FitVitality
         List<string> glutes = new List<string>();
         List<string> calves = new List<string>();
         List<string> core = new List<string>();
-        private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        //private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public Workouts(string userID)
         {
             InitializeComponent();
@@ -1916,6 +1915,21 @@ namespace FitVitality
         {
             workoutsDashboard.Visible = false;
             trainPlacePanel.Visible = true;
+        }
+
+        private void editWorkoutLabel_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void editWorkoutLabel_MouseEnter(object sender, EventArgs e)
+        {
+            editWorkoutButton.FillColor = Color.FromArgb(211, 211, 211);
+        }
+
+        private void editWorkoutLabel_MouseLeave(object sender, EventArgs e)
+        {
+            editWorkoutButton.FillColor = Color.Transparent;
+
         }
     }
 }

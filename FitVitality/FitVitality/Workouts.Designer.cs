@@ -29,8 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Workouts));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftCorner = new PictureBox();
             rightCorner = new PictureBox();
             vLine1 = new PictureBox();
@@ -199,9 +213,37 @@
             preNextButton3 = new Krypton.Toolkit.KryptonButton();
             selectWorkoutsBorders = new PictureBox();
             workoutsDashboard = new Panel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            date7 = new Label();
+            date6 = new Label();
+            date5 = new Label();
+            date4 = new Label();
+            date3 = new Label();
+            date2 = new Label();
+            date1 = new Label();
+            workoutBorder1 = new PictureBox();
+            editWorkoutButton = new Guna.UI2.WinForms.Guna2Button();
             editWorkoutLabel = new Label();
             workoutDashboardLabel = new Label();
+            wdSunday = new Label();
+            wdSaturday = new Label();
+            wdFriday = new Label();
+            wdThursday = new Label();
+            wdWednesday = new Label();
+            wdTuesday = new Label();
+            wdMonday = new Label();
+            mondayShowButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            tuesdayShowButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            wednesdayShowButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            thursdayShowButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            fridayShowButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            saturdayShowButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            sundayShowButton = new Guna.UI2.WinForms.Guna2GradientButton();
+            wdSelectedLabel = new Label();
+            wdSelectedDay = new Label();
+            wdWorkoutType = new Label();
+            wdSelectedType = new Label();
+            wdExercises = new Label();
+            wdSelectedExercises = new Label();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -298,6 +340,7 @@
             preNextButton3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)selectWorkoutsBorders).BeginInit();
             workoutsDashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)workoutBorder1).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -2833,7 +2876,35 @@
             // 
             // workoutsDashboard
             // 
-            workoutsDashboard.Controls.Add(guna2Button1);
+            workoutsDashboard.Controls.Add(wdSelectedExercises);
+            workoutsDashboard.Controls.Add(wdExercises);
+            workoutsDashboard.Controls.Add(wdSelectedType);
+            workoutsDashboard.Controls.Add(wdWorkoutType);
+            workoutsDashboard.Controls.Add(wdSelectedDay);
+            workoutsDashboard.Controls.Add(wdSelectedLabel);
+            workoutsDashboard.Controls.Add(sundayShowButton);
+            workoutsDashboard.Controls.Add(saturdayShowButton);
+            workoutsDashboard.Controls.Add(fridayShowButton);
+            workoutsDashboard.Controls.Add(thursdayShowButton);
+            workoutsDashboard.Controls.Add(wednesdayShowButton);
+            workoutsDashboard.Controls.Add(tuesdayShowButton);
+            workoutsDashboard.Controls.Add(mondayShowButton);
+            workoutsDashboard.Controls.Add(wdSunday);
+            workoutsDashboard.Controls.Add(wdSaturday);
+            workoutsDashboard.Controls.Add(wdFriday);
+            workoutsDashboard.Controls.Add(wdThursday);
+            workoutsDashboard.Controls.Add(wdWednesday);
+            workoutsDashboard.Controls.Add(wdTuesday);
+            workoutsDashboard.Controls.Add(wdMonday);
+            workoutsDashboard.Controls.Add(date7);
+            workoutsDashboard.Controls.Add(date6);
+            workoutsDashboard.Controls.Add(date5);
+            workoutsDashboard.Controls.Add(date4);
+            workoutsDashboard.Controls.Add(date3);
+            workoutsDashboard.Controls.Add(date2);
+            workoutsDashboard.Controls.Add(date1);
+            workoutsDashboard.Controls.Add(workoutBorder1);
+            workoutsDashboard.Controls.Add(editWorkoutButton);
             workoutsDashboard.Controls.Add(editWorkoutLabel);
             workoutsDashboard.Controls.Add(workoutDashboardLabel);
             workoutsDashboard.Location = new Point(16, 14);
@@ -2842,36 +2913,119 @@
             workoutsDashboard.TabIndex = 47;
             workoutsDashboard.Visible = false;
             // 
-            // guna2Button1
+            // date7
             // 
-            guna2Button1.BorderRadius = 8;
-            guna2Button1.CustomizableEdges = customizableEdges3;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Transparent;
-            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Image = Properties.Resources.edit_svgrepo_com;
-            guna2Button1.ImageSize = new Size(27, 27);
-            guna2Button1.Location = new Point(42, 54);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.PressedColor = Color.LightGray;
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(30, 30);
-            guna2Button1.TabIndex = 25;
-            guna2Button1.Click += guna2Button1_Click;
+            date7.AutoSize = true;
+            date7.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            date7.Location = new Point(9, 279);
+            date7.Name = "date7";
+            date7.Size = new Size(42, 21);
+            date7.TabIndex = 53;
+            date7.Text = "xx.xx";
+            // 
+            // date6
+            // 
+            date6.AutoSize = true;
+            date6.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            date6.Location = new Point(9, 244);
+            date6.Name = "date6";
+            date6.Size = new Size(42, 21);
+            date6.TabIndex = 52;
+            date6.Text = "xx.xx";
+            // 
+            // date5
+            // 
+            date5.AutoSize = true;
+            date5.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            date5.Location = new Point(9, 209);
+            date5.Name = "date5";
+            date5.Size = new Size(42, 21);
+            date5.TabIndex = 51;
+            date5.Text = "xx.xx";
+            // 
+            // date4
+            // 
+            date4.AutoSize = true;
+            date4.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            date4.Location = new Point(9, 174);
+            date4.Name = "date4";
+            date4.Size = new Size(42, 21);
+            date4.TabIndex = 50;
+            date4.Text = "xx.xx";
+            // 
+            // date3
+            // 
+            date3.AutoSize = true;
+            date3.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            date3.Location = new Point(9, 139);
+            date3.Name = "date3";
+            date3.Size = new Size(42, 21);
+            date3.TabIndex = 49;
+            date3.Text = "xx.xx";
+            // 
+            // date2
+            // 
+            date2.AutoSize = true;
+            date2.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            date2.Location = new Point(9, 104);
+            date2.Name = "date2";
+            date2.Size = new Size(42, 21);
+            date2.TabIndex = 48;
+            date2.Text = "xx.xx";
+            // 
+            // date1
+            // 
+            date1.AutoSize = true;
+            date1.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            date1.Location = new Point(9, 69);
+            date1.Name = "date1";
+            date1.Size = new Size(42, 21);
+            date1.TabIndex = 27;
+            date1.Text = "xx.xx";
+            // 
+            // workoutBorder1
+            // 
+            workoutBorder1.Image = Properties.Resources.vline;
+            workoutBorder1.Location = new Point(275, 58);
+            workoutBorder1.Name = "workoutBorder1";
+            workoutBorder1.Size = new Size(1, 270);
+            workoutBorder1.TabIndex = 26;
+            workoutBorder1.TabStop = false;
+            // 
+            // editWorkoutButton
+            // 
+            editWorkoutButton.BackColor = Color.White;
+            editWorkoutButton.BorderRadius = 8;
+            editWorkoutButton.CustomizableEdges = customizableEdges17;
+            editWorkoutButton.DisabledState.BorderColor = Color.DarkGray;
+            editWorkoutButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            editWorkoutButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            editWorkoutButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            editWorkoutButton.FillColor = Color.Transparent;
+            editWorkoutButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            editWorkoutButton.ForeColor = Color.White;
+            editWorkoutButton.Image = Properties.Resources.edit_svgrepo_com;
+            editWorkoutButton.ImageSize = new Size(27, 27);
+            editWorkoutButton.Location = new Point(517, 11);
+            editWorkoutButton.Name = "editWorkoutButton";
+            editWorkoutButton.PressedColor = Color.LightGray;
+            editWorkoutButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            editWorkoutButton.Size = new Size(30, 30);
+            editWorkoutButton.TabIndex = 25;
+            editWorkoutButton.Click += guna2Button1_Click;
             // 
             // editWorkoutLabel
             // 
             editWorkoutLabel.AutoSize = true;
             editWorkoutLabel.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            editWorkoutLabel.Location = new Point(70, 60);
+            editWorkoutLabel.Location = new Point(545, 17);
             editWorkoutLabel.Name = "editWorkoutLabel";
             editWorkoutLabel.Size = new Size(99, 21);
             editWorkoutLabel.TabIndex = 24;
             editWorkoutLabel.Text = "Edit workout";
+            editWorkoutLabel.Click += guna2Button1_Click;
+            editWorkoutLabel.MouseEnter += editWorkoutLabel_MouseEnter;
+            editWorkoutLabel.MouseLeave += editWorkoutLabel_MouseLeave;
             // 
             // workoutDashboardLabel
             // 
@@ -2882,6 +3036,266 @@
             workoutDashboardLabel.Size = new Size(214, 24);
             workoutDashboardLabel.TabIndex = 22;
             workoutDashboardLabel.Text = "Workout Dashboard";
+            // 
+            // wdSunday
+            // 
+            wdSunday.AutoSize = true;
+            wdSunday.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdSunday.Location = new Point(63, 280);
+            wdSunday.Name = "wdSunday";
+            wdSunday.Size = new Size(82, 21);
+            wdSunday.TabIndex = 60;
+            wdSunday.Text = "-    Sunday";
+            // 
+            // wdSaturday
+            // 
+            wdSaturday.AutoSize = true;
+            wdSaturday.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdSaturday.Location = new Point(63, 244);
+            wdSaturday.Name = "wdSaturday";
+            wdSaturday.Size = new Size(93, 21);
+            wdSaturday.TabIndex = 59;
+            wdSaturday.Text = "-    Saturday";
+            // 
+            // wdFriday
+            // 
+            wdFriday.AutoSize = true;
+            wdFriday.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdFriday.Location = new Point(63, 209);
+            wdFriday.Name = "wdFriday";
+            wdFriday.Size = new Size(74, 21);
+            wdFriday.TabIndex = 58;
+            wdFriday.Text = "-    Friday";
+            // 
+            // wdThursday
+            // 
+            wdThursday.AutoSize = true;
+            wdThursday.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdThursday.Location = new Point(63, 174);
+            wdThursday.Name = "wdThursday";
+            wdThursday.Size = new Size(95, 21);
+            wdThursday.TabIndex = 57;
+            wdThursday.Text = "-    Thursday";
+            // 
+            // wdWednesday
+            // 
+            wdWednesday.AutoSize = true;
+            wdWednesday.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdWednesday.Location = new Point(63, 139);
+            wdWednesday.Name = "wdWednesday";
+            wdWednesday.Size = new Size(111, 21);
+            wdWednesday.TabIndex = 56;
+            wdWednesday.Text = "-    Wednesday";
+            // 
+            // wdTuesday
+            // 
+            wdTuesday.AutoSize = true;
+            wdTuesday.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdTuesday.Location = new Point(63, 106);
+            wdTuesday.Name = "wdTuesday";
+            wdTuesday.Size = new Size(87, 21);
+            wdTuesday.TabIndex = 55;
+            wdTuesday.Text = "-    Tuesday";
+            // 
+            // wdMonday
+            // 
+            wdMonday.AutoSize = true;
+            wdMonday.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdMonday.Location = new Point(63, 69);
+            wdMonday.Name = "wdMonday";
+            wdMonday.Size = new Size(89, 21);
+            wdMonday.TabIndex = 54;
+            wdMonday.Text = "-    Monday";
+            // 
+            // mondayShowButton
+            // 
+            mondayShowButton.BorderRadius = 10;
+            mondayShowButton.CustomizableEdges = customizableEdges19;
+            mondayShowButton.DisabledState.BorderColor = Color.DarkGray;
+            mondayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            mondayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            mondayShowButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            mondayShowButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            mondayShowButton.FillColor2 = Color.FromArgb(92, 225, 230);
+            mondayShowButton.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            mondayShowButton.ForeColor = Color.White;
+            mondayShowButton.Location = new Point(153, 69);
+            mondayShowButton.Name = "mondayShowButton";
+            mondayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            mondayShowButton.Size = new Size(64, 23);
+            mondayShowButton.TabIndex = 62;
+            mondayShowButton.Text = "SHOW";
+            // 
+            // tuesdayShowButton
+            // 
+            tuesdayShowButton.BorderRadius = 10;
+            tuesdayShowButton.CustomizableEdges = customizableEdges21;
+            tuesdayShowButton.DisabledState.BorderColor = Color.DarkGray;
+            tuesdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            tuesdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            tuesdayShowButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            tuesdayShowButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            tuesdayShowButton.FillColor2 = Color.FromArgb(92, 225, 230);
+            tuesdayShowButton.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            tuesdayShowButton.ForeColor = Color.White;
+            tuesdayShowButton.Location = new Point(153, 106);
+            tuesdayShowButton.Name = "tuesdayShowButton";
+            tuesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            tuesdayShowButton.Size = new Size(64, 23);
+            tuesdayShowButton.TabIndex = 63;
+            tuesdayShowButton.Text = "SHOW";
+            // 
+            // wednesdayShowButton
+            // 
+            wednesdayShowButton.BorderRadius = 10;
+            wednesdayShowButton.CustomizableEdges = customizableEdges23;
+            wednesdayShowButton.DisabledState.BorderColor = Color.DarkGray;
+            wednesdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            wednesdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            wednesdayShowButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            wednesdayShowButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            wednesdayShowButton.FillColor2 = Color.FromArgb(92, 225, 230);
+            wednesdayShowButton.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            wednesdayShowButton.ForeColor = Color.White;
+            wednesdayShowButton.Location = new Point(175, 139);
+            wednesdayShowButton.Name = "wednesdayShowButton";
+            wednesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            wednesdayShowButton.Size = new Size(64, 23);
+            wednesdayShowButton.TabIndex = 64;
+            wednesdayShowButton.Text = "SHOW";
+            // 
+            // thursdayShowButton
+            // 
+            thursdayShowButton.BorderRadius = 10;
+            thursdayShowButton.CustomizableEdges = customizableEdges25;
+            thursdayShowButton.DisabledState.BorderColor = Color.DarkGray;
+            thursdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            thursdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            thursdayShowButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            thursdayShowButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            thursdayShowButton.FillColor2 = Color.FromArgb(92, 225, 230);
+            thursdayShowButton.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            thursdayShowButton.ForeColor = Color.White;
+            thursdayShowButton.Location = new Point(158, 174);
+            thursdayShowButton.Name = "thursdayShowButton";
+            thursdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            thursdayShowButton.Size = new Size(64, 23);
+            thursdayShowButton.TabIndex = 65;
+            thursdayShowButton.Text = "SHOW";
+            // 
+            // fridayShowButton
+            // 
+            fridayShowButton.BorderRadius = 10;
+            fridayShowButton.CustomizableEdges = customizableEdges27;
+            fridayShowButton.DisabledState.BorderColor = Color.DarkGray;
+            fridayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            fridayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            fridayShowButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            fridayShowButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            fridayShowButton.FillColor2 = Color.FromArgb(92, 225, 230);
+            fridayShowButton.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            fridayShowButton.ForeColor = Color.White;
+            fridayShowButton.Location = new Point(136, 209);
+            fridayShowButton.Name = "fridayShowButton";
+            fridayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            fridayShowButton.Size = new Size(64, 23);
+            fridayShowButton.TabIndex = 63;
+            fridayShowButton.Text = "SHOW";
+            // 
+            // saturdayShowButton
+            // 
+            saturdayShowButton.BorderRadius = 10;
+            saturdayShowButton.CustomizableEdges = customizableEdges29;
+            saturdayShowButton.DisabledState.BorderColor = Color.DarkGray;
+            saturdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            saturdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            saturdayShowButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            saturdayShowButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            saturdayShowButton.FillColor2 = Color.FromArgb(92, 225, 230);
+            saturdayShowButton.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            saturdayShowButton.ForeColor = Color.White;
+            saturdayShowButton.Location = new Point(155, 243);
+            saturdayShowButton.Name = "saturdayShowButton";
+            saturdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            saturdayShowButton.Size = new Size(64, 23);
+            saturdayShowButton.TabIndex = 63;
+            saturdayShowButton.Text = "SHOW";
+            // 
+            // sundayShowButton
+            // 
+            sundayShowButton.BorderRadius = 10;
+            sundayShowButton.CustomizableEdges = customizableEdges31;
+            sundayShowButton.DisabledState.BorderColor = Color.DarkGray;
+            sundayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            sundayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            sundayShowButton.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            sundayShowButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            sundayShowButton.FillColor2 = Color.FromArgb(92, 225, 230);
+            sundayShowButton.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            sundayShowButton.ForeColor = Color.White;
+            sundayShowButton.Location = new Point(145, 279);
+            sundayShowButton.Name = "sundayShowButton";
+            sundayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            sundayShowButton.Size = new Size(64, 23);
+            sundayShowButton.TabIndex = 66;
+            sundayShowButton.Text = "SHOW";
+            // 
+            // wdSelectedLabel
+            // 
+            wdSelectedLabel.AutoSize = true;
+            wdSelectedLabel.Font = new Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            wdSelectedLabel.Location = new Point(297, 66);
+            wdSelectedLabel.Name = "wdSelectedLabel";
+            wdSelectedLabel.Size = new Size(76, 21);
+            wdSelectedLabel.TabIndex = 67;
+            wdSelectedLabel.Text = "Selected:";
+            // 
+            // wdSelectedDay
+            // 
+            wdSelectedDay.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdSelectedDay.Location = new Point(376, 66);
+            wdSelectedDay.Name = "wdSelectedDay";
+            wdSelectedDay.Size = new Size(100, 21);
+            wdSelectedDay.TabIndex = 68;
+            wdSelectedDay.Text = "/day/";
+            // 
+            // wdWorkoutType
+            // 
+            wdWorkoutType.AutoSize = true;
+            wdWorkoutType.Font = new Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            wdWorkoutType.Location = new Point(297, 98);
+            wdWorkoutType.Name = "wdWorkoutType";
+            wdWorkoutType.Size = new Size(113, 21);
+            wdWorkoutType.TabIndex = 69;
+            wdWorkoutType.Text = "Workout Type:";
+            // 
+            // wdSelectedType
+            // 
+            wdSelectedType.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdSelectedType.Location = new Point(415, 98);
+            wdSelectedType.Name = "wdSelectedType";
+            wdSelectedType.Size = new Size(100, 21);
+            wdSelectedType.TabIndex = 70;
+            wdSelectedType.Text = "/type/";
+            // 
+            // wdExercises
+            // 
+            wdExercises.AutoSize = true;
+            wdExercises.Font = new Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            wdExercises.Location = new Point(297, 146);
+            wdExercises.Name = "wdExercises";
+            wdExercises.Size = new Size(80, 21);
+            wdExercises.TabIndex = 71;
+            wdExercises.Text = "Exercises:";
+            // 
+            // wdSelectedExercises
+            // 
+            wdSelectedExercises.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            wdSelectedExercises.Location = new Point(297, 178);
+            wdSelectedExercises.Name = "wdSelectedExercises";
+            wdSelectedExercises.Size = new Size(347, 150);
+            wdSelectedExercises.TabIndex = 72;
+            wdSelectedExercises.Text = "/exercises/";
             // 
             // Workouts
             // 
@@ -3021,6 +3435,7 @@
             ((System.ComponentModel.ISupportInitialize)selectWorkoutsBorders).EndInit();
             workoutsDashboard.ResumeLayout(false);
             workoutsDashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)workoutBorder1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -3198,6 +3613,34 @@
         private Panel workoutsDashboard;
         private Label editWorkoutLabel;
         private Label workoutDashboardLabel;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button editWorkoutButton;
+        private PictureBox workoutBorder1;
+        private Label date7;
+        private Label date6;
+        private Label date5;
+        private Label date4;
+        private Label date3;
+        private Label date2;
+        private Label date1;
+        private Label wdSunday;
+        private Label wdSaturday;
+        private Label wdFriday;
+        private Label wdThursday;
+        private Label wdWednesday;
+        private Label wdTuesday;
+        private Label wdMonday;
+        private Guna.UI2.WinForms.Guna2GradientButton mondayShowButton;
+        private Guna.UI2.WinForms.Guna2GradientButton sundayShowButton;
+        private Guna.UI2.WinForms.Guna2GradientButton saturdayShowButton;
+        private Guna.UI2.WinForms.Guna2GradientButton fridayShowButton;
+        private Guna.UI2.WinForms.Guna2GradientButton thursdayShowButton;
+        private Guna.UI2.WinForms.Guna2GradientButton wednesdayShowButton;
+        private Guna.UI2.WinForms.Guna2GradientButton tuesdayShowButton;
+        private Label wdSelectedLabel;
+        private Label wdSelectedDay;
+        private Label wdSelectedType;
+        private Label wdWorkoutType;
+        private Label wdSelectedExercises;
+        private Label wdExercises;
     }
 }

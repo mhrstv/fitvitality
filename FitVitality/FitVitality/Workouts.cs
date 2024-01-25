@@ -53,6 +53,8 @@ namespace FitVitality
         bool saturdayClicked = false;
         bool sundayClicked = false;
 
+        bool workoutDaysDone = false;
+
         int selectedDays = 0;
 
         //Exercises list
@@ -779,9 +781,8 @@ namespace FitVitality
             {
                 muscleGroupPanel.Visible = true;
             }
-            trainPlacePanel.Visible = false;
             activityGroupPanel.Visible = false;
-
+            trainPlacePanel.Visible = false;
         }
 
         private void preGenPanel_VisibleChanged(object sender, EventArgs e)
@@ -1487,7 +1488,7 @@ namespace FitVitality
             {
                 a.Checked = false;
             }
-            if (selectedDays == activity)
+            if (selectedDays == activity && selectedDays != 0)
             {
                 preNextButton2.Visible = true;
             }
@@ -1664,64 +1665,63 @@ namespace FitVitality
         }
         private void WorkoutDaysComboBox_Click(object sender, EventArgs e)
         {
-            bool done = false;
             if (monComboBox.Visible == true)
             {
                 if (monComboBox.Text != "")
                 {
-                    done = true;
+                    workoutDaysDone = true;
                 }
-                else done = false;
+                else workoutDaysDone = false;
             }
             if (tueComboBox.Visible == true)
             {
                 if (tueComboBox.Text != "")
                 {
-                    done = true;
+                    workoutDaysDone = true;
                 }
-                else done = false;
+                else workoutDaysDone = false;
             }
             if (wedComboBox.Visible == true)
             {
                 if (wedComboBox.Text != "")
                 {
-                    done = true;
+                    workoutDaysDone = true;
                 }
-                else done = false;
+                else workoutDaysDone = false;
             }
             if (thuComboBox.Visible == true)
             {
                 if (thuComboBox.Text != "")
                 {
-                    done = true;
+                    workoutDaysDone = true;
                 }
-                else done = false;
+                else workoutDaysDone = false;
             }
             if (friComboBox.Visible == true)
             {
                 if (friComboBox.Text != "")
                 {
-                    done = true;
+                    workoutDaysDone = true;
                 }
-                else done = false;
+                else workoutDaysDone = false;
             }
             if (satComboBox.Visible == true)
             {
                 if (satComboBox.Text != "")
                 {
-                    done = true;
+                    workoutDaysDone = true;
                 }
-                else done = false;
+                else workoutDaysDone = false;
             }
             if (sunComboBox.Visible == true)
             {
                 if (sunComboBox.Text != "")
                 {
-                    done = true;
+                    workoutDaysDone = true;
                 }
-                else done = false;
+                else workoutDaysDone = false;
             }
-            if (done)
+            if (workoutDaysDone)
             {
                 preNextButton3.Visible = true;
             }
@@ -1780,6 +1780,7 @@ namespace FitVitality
                 }
             }
             workoutsDashboard.Visible = true;
+            trainPlacePanel.Visible = false;
         }
         private void saveWorkoutParameter(KryptonComboBox cb, string day, SqlCommand command)
         {
@@ -1898,19 +1899,6 @@ namespace FitVitality
                 }
             }
         }
-        public void loadForm(object Form)
-        {
-            if (this.Parent.Controls.Count > 0)
-            {
-                this.Parent.Controls.RemoveAt(0);
-            }
-            Form x = Form as Form;
-            x.TopLevel = false;
-            x.Dock = DockStyle.Fill;
-            this.Parent.Controls.Add(x);
-            this.Parent.Tag = x;
-            x.Show();
-        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             workoutsDashboard.Visible = false;
@@ -1924,12 +1912,171 @@ namespace FitVitality
         private void editWorkoutLabel_MouseEnter(object sender, EventArgs e)
         {
             editWorkoutButton.FillColor = Color.FromArgb(211, 211, 211);
+            editWorkoutLabel.BackColor = Color.FromArgb(211, 211, 211);
         }
 
         private void editWorkoutLabel_MouseLeave(object sender, EventArgs e)
         {
             editWorkoutButton.FillColor = Color.Transparent;
+            editWorkoutLabel.BackColor = Color.Transparent;
+        }
 
+        private void workoutsDashboard_VisibleChanged(object sender, EventArgs e)
+        {
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+            {
+                date1.Text = DateTime.Now.ToString("dd.MM");
+                date1.ForeColor = Color.LightGreen;
+                wdMonday.ForeColor = Color.LightGreen;
+                date2.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
+                date3.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
+                date4.Text = DateTime.Now.AddDays(3).ToString("dd.MM");
+                date5.Text = DateTime.Now.AddDays(4).ToString("dd.MM");
+                date6.Text = DateTime.Now.AddDays(5).ToString("dd.MM");
+                date7.Text = DateTime.Now.AddDays(6).ToString("dd.MM");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                date1.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
+                date2.Text = DateTime.Now.ToString("dd.MM");
+                date2.ForeColor = Color.LightGreen;
+                wdTuesday.ForeColor = Color.LightGreen;
+                date3.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
+                date4.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
+                date5.Text = DateTime.Now.AddDays(3).ToString("dd.MM");
+                date6.Text = DateTime.Now.AddDays(4).ToString("dd.MM");
+                date7.Text = DateTime.Now.AddDays(5).ToString("dd.MM");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Wednesday)
+            {
+                date1.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
+                date2.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
+                date3.Text = DateTime.Now.ToString("dd.MM");
+                date3.ForeColor = Color.LightGreen;
+                wdWednesday.ForeColor = Color.LightGreen;
+                date4.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
+                date5.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
+                date6.Text = DateTime.Now.AddDays(3).ToString("dd.MM");
+                date7.Text = DateTime.Now.AddDays(4).ToString("dd.MM");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Thursday)
+            {
+                date1.Text = DateTime.Now.AddDays(-3).ToString("dd.MM");
+                date2.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
+                date3.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
+                date4.Text = DateTime.Now.ToString("dd.MM");
+                date4.ForeColor = Color.LightGreen;
+                wdThursday.ForeColor = Color.LightGreen;
+                date5.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
+                date6.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
+                date7.Text = DateTime.Now.AddDays(3).ToString("dd.MM");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Friday)
+            {
+                date1.Text = DateTime.Now.AddDays(-4).ToString("dd.MM");
+                date2.Text = DateTime.Now.AddDays(-3).ToString("dd.MM");
+                date3.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
+                date4.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
+                date5.Text = DateTime.Now.ToString("dd.MM");
+                date5.ForeColor = Color.LightGreen;
+                wdFriday.ForeColor = Color.LightGreen;
+                date6.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
+                date7.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
+            {
+                date1.Text = DateTime.Now.AddDays(-5).ToString("dd.MM");
+                date2.Text = DateTime.Now.AddDays(-4).ToString("dd.MM");
+                date3.Text = DateTime.Now.AddDays(-3).ToString("dd.MM");
+                date4.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
+                date5.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
+                date6.Text = DateTime.Now.ToString("dd.MM");
+                date6.ForeColor = Color.LightGreen;
+                wdSaturday.ForeColor = Color.LightGreen;
+                date7.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
+            }
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
+            {
+                date1.Text = DateTime.Now.AddDays(-6).ToString("dd.MM");
+                date2.Text = DateTime.Now.AddDays(-5).ToString("dd.MM");
+                date3.Text = DateTime.Now.AddDays(-4).ToString("dd.MM");
+                date4.Text = DateTime.Now.AddDays(-3).ToString("dd.MM");
+                date5.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
+                date6.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
+                date7.Text = DateTime.Now.ToString("dd.MM");
+                date7.ForeColor = Color.LightGreen;
+                wdSunday.ForeColor = Color.LightGreen;
+            }
+        }
+
+        private void trainPlacePanel_VisibleChanged(object sender, EventArgs e)
+        {
+            if (trainPlacePanel.Visible == true)
+            {
+                gymClicked = false;
+                homeClicked = false;
+                outdoorsClicked = false;
+                gymButton.Image = Properties.Resources.gym;
+                homeButton.Image = Properties.Resources.home1;
+                outdoorsButton.Image = Properties.Resources.outdoors;
+                activityLevelComboBox.Text = "";
+                activityLevelComboBox.SelectedValue = "";
+                activityLevelComboBox.SelectedText = "";
+                activityLevelComboBox.SelectedIndex = -1;
+                activity = 0;
+                nextButton1.Visible = false;
+                nextButton2.Visible = false;
+                nextButton3.Visible = false;
+                nextButton4.Visible = false;
+                nextButton5.Visible = false;
+                nextButton6.Visible = false;
+                nextButton7.Visible = false;
+                nextButt7.Visible = false;
+                preNextButton.Visible = false;
+                preNextButton2.Visible = false;
+                preNextButton3.Visible = false;
+                preClicked = false;
+                createClicked = false;
+                prePicture.Image = Properties.Resources.pre;
+                createPicture.Image = Properties.Resources.create;
+                mondayCheckBox.Checked = false;
+                tuesdayCheckBox.Checked = false;
+                wednesdayCheckBox.Checked = false;
+                thursdayCheckBox.Checked = false;
+                fridayCheckBox.Checked = false;
+                saturdayCheckBox.Checked = false;
+                sundayCheckBox.Checked = false;
+                mondayClicked = false;
+                tuesdayClicked = false;
+                wednesdayClicked = false;
+                thursdayClicked = false;
+                fridayClicked = false;
+                saturdayClicked = false;
+                sundayClicked = false;
+                monComboBox.Items.Clear();
+                tueComboBox.Items.Clear();
+                wedComboBox.Items.Clear();
+                thuComboBox.Items.Clear();
+                friComboBox.Items.Clear();
+                satComboBox.Items.Clear();
+                sunComboBox.Items.Clear();
+                restDay1.Visible = false;
+                restDay2.Visible = false;
+                restDay3.Visible = false;
+                restDay4.Visible = false;
+                restDay5.Visible = false;
+                restDay6.Visible = false;
+                restDay7.Visible = false;
+                monComboBox.Visible = false;
+                tueComboBox.Visible = false;
+                wedComboBox.Visible = false;
+                thuComboBox.Visible = false;
+                friComboBox.Visible = false;
+                satComboBox.Visible = false;
+                sunComboBox.Visible = false;
+                workoutDaysDone = false;
+                selectedDays = 0;
+            }
         }
     }
 }

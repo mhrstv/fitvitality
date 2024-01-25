@@ -389,7 +389,7 @@
             bmr_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             bmr_buttonOpen.StateTracking.Border.Rounding = 15F;
             bmr_buttonOpen.StateTracking.Border.Width = 1;
-            bmr_buttonOpen.TabIndex = 1;
+            bmr_buttonOpen.TabIndex = 2;
             bmr_buttonOpen.Values.Text = "Open";
             bmr_buttonOpen.Click += bmr_buttonOpen_Click;
             // 
@@ -489,7 +489,7 @@
             bodyfat_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             bodyfat_buttonOpen.StateTracking.Border.Rounding = 15F;
             bodyfat_buttonOpen.StateTracking.Border.Width = 1;
-            bodyfat_buttonOpen.TabIndex = 1;
+            bodyfat_buttonOpen.TabIndex = 3;
             bodyfat_buttonOpen.Values.Text = "Open";
             bodyfat_buttonOpen.Click += bodyfat_buttonOpen_Click;
             // 
@@ -589,7 +589,7 @@
             idealweight_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             idealweight_buttonOpen.StateTracking.Border.Rounding = 15F;
             idealweight_buttonOpen.StateTracking.Border.Width = 1;
-            idealweight_buttonOpen.TabIndex = 1;
+            idealweight_buttonOpen.TabIndex = 6;
             idealweight_buttonOpen.Values.Text = "Open";
             idealweight_buttonOpen.Click += idealweight_buttonOpen_Click;
             // 
@@ -743,7 +743,7 @@
             calorie_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             calorie_buttonOpen.StateTracking.Border.Rounding = 15F;
             calorie_buttonOpen.StateTracking.Border.Width = 1;
-            calorie_buttonOpen.TabIndex = 1;
+            calorie_buttonOpen.TabIndex = 4;
             calorie_buttonOpen.Values.Text = "Open";
             calorie_buttonOpen.Click += calorie_buttonOpen_Click;
             // 
@@ -843,7 +843,7 @@
             macro_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             macro_buttonOpen.StateTracking.Border.Rounding = 15F;
             macro_buttonOpen.StateTracking.Border.Width = 1;
-            macro_buttonOpen.TabIndex = 1;
+            macro_buttonOpen.TabIndex = 5;
             macro_buttonOpen.Values.Text = "Open";
             macro_buttonOpen.Click += macro_buttonOpen_Click;
             // 

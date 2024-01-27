@@ -44,6 +44,7 @@ namespace FitVitality
 
         string workoutPlace = "";
         int activity;
+        int workoutNumber;
 
         // Булеви променливи, които отбелязват кой ден от седмицата е натиснат
         bool mondayClicked = false;
@@ -148,6 +149,7 @@ namespace FitVitality
                                     reader["Sunday"].ToString() != "Rest Day")
                                 {
                                     workoutsDashboard.Visible = true;
+                                    workoutsDashboard.BringToFront();
                                 }
                             }
                         }
@@ -712,7 +714,7 @@ namespace FitVitality
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
             cardioPanel.Visible = false;
-            createPanel.Visible = true;
+            chooseWorkoutNumberPanel.Visible = true;
         }
 
         private void prePicture_Click(object sender, EventArgs e)
@@ -1782,6 +1784,7 @@ namespace FitVitality
                 }
             }
             workoutsDashboard.Visible = true;
+            workoutsDashboard.BringToFront();
             trainPlacePanel.Visible = false;
         }
         private void saveWorkoutParameter(KryptonComboBox cb, string day, SqlCommand command)
@@ -2274,6 +2277,21 @@ namespace FitVitality
         private void sundayShowButton_Click(object sender, EventArgs e)
         {
             workoutShow("Sunday");
+        }
+
+        private void chooseWorkoutNumberNextBut_Click(object sender, EventArgs e)
+        {
+            chooseWorkoutNumberPanel.Visible = false;
+            createPanel.Visible = true;
+            workoutNumber = int.Parse(workoutNumberComboBox.Text);
+        }
+
+        private void workoutNumberComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (workoutNumberComboBox.Text != "")
+            {
+                chooseWorkoutNumberNextBut.Visible = true;
+            }
         }
     }
 }

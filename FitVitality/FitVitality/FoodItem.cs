@@ -125,7 +125,6 @@ namespace FitVitality
 
         private void FoodItem_Load(object sender, EventArgs e)
         {
-
         }
 
         [Category("Custom Props")]

@@ -268,3 +268,4 @@ C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\bin\Deb
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\Guna.UI2.dll
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\System.Management.dll
 E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Exercise.resources

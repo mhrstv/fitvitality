@@ -7,6 +7,12 @@
     <Compile Update="Diet.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Exercise.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ExerciseListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="FoodItem.cs">
       <SubType>UserControl</SubType>
     </Compile>

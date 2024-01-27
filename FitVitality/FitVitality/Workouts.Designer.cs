@@ -217,8 +217,6 @@
             editWorkoutButton = new Guna.UI2.WinForms.Guna2Button();
             wdSelectedExercises = new Label();
             wdExercises = new Label();
-            wdSelectedType = new Label();
-            wdWorkoutType = new Label();
             wdSelectedDay = new Label();
             wdSelectedLabel = new Label();
             sundayShowButton = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -2881,8 +2879,6 @@
             workoutsDashboard.Controls.Add(editWorkoutButton);
             workoutsDashboard.Controls.Add(wdSelectedExercises);
             workoutsDashboard.Controls.Add(wdExercises);
-            workoutsDashboard.Controls.Add(wdSelectedType);
-            workoutsDashboard.Controls.Add(wdWorkoutType);
             workoutsDashboard.Controls.Add(wdSelectedDay);
             workoutsDashboard.Controls.Add(wdSelectedLabel);
             workoutsDashboard.Controls.Add(sundayShowButton);
@@ -2955,9 +2951,9 @@
             // wdSelectedExercises
             // 
             wdSelectedExercises.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            wdSelectedExercises.Location = new Point(297, 178);
+            wdSelectedExercises.Location = new Point(297, 116);
             wdSelectedExercises.Name = "wdSelectedExercises";
-            wdSelectedExercises.Size = new Size(347, 150);
+            wdSelectedExercises.Size = new Size(347, 186);
             wdSelectedExercises.TabIndex = 72;
             wdSelectedExercises.Text = "/exercises/";
             // 
@@ -2965,30 +2961,11 @@
             // 
             wdExercises.AutoSize = true;
             wdExercises.Font = new Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            wdExercises.Location = new Point(297, 146);
+            wdExercises.Location = new Point(297, 92);
             wdExercises.Name = "wdExercises";
             wdExercises.Size = new Size(80, 21);
             wdExercises.TabIndex = 71;
             wdExercises.Text = "Exercises:";
-            // 
-            // wdSelectedType
-            // 
-            wdSelectedType.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            wdSelectedType.Location = new Point(415, 98);
-            wdSelectedType.Name = "wdSelectedType";
-            wdSelectedType.Size = new Size(100, 21);
-            wdSelectedType.TabIndex = 70;
-            wdSelectedType.Text = "/type/";
-            // 
-            // wdWorkoutType
-            // 
-            wdWorkoutType.AutoSize = true;
-            wdWorkoutType.Font = new Font("Calibri", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
-            wdWorkoutType.Location = new Point(297, 98);
-            wdWorkoutType.Name = "wdWorkoutType";
-            wdWorkoutType.Size = new Size(113, 21);
-            wdWorkoutType.TabIndex = 69;
-            wdWorkoutType.Text = "Workout Type:";
             // 
             // wdSelectedDay
             // 
@@ -3028,6 +3005,7 @@
             sundayShowButton.Size = new Size(64, 23);
             sundayShowButton.TabIndex = 8;
             sundayShowButton.Text = "SHOW";
+            sundayShowButton.Click += sundayShowButton_Click;
             // 
             // saturdayShowButton
             // 
@@ -3048,6 +3026,7 @@
             saturdayShowButton.Size = new Size(64, 23);
             saturdayShowButton.TabIndex = 7;
             saturdayShowButton.Text = "SHOW";
+            saturdayShowButton.Click += saturdayShowButton_Click;
             // 
             // fridayShowButton
             // 
@@ -3068,6 +3047,7 @@
             fridayShowButton.Size = new Size(64, 23);
             fridayShowButton.TabIndex = 6;
             fridayShowButton.Text = "SHOW";
+            fridayShowButton.Click += fridayShowButton_Click;
             // 
             // thursdayShowButton
             // 
@@ -3088,6 +3068,7 @@
             thursdayShowButton.Size = new Size(64, 23);
             thursdayShowButton.TabIndex = 5;
             thursdayShowButton.Text = "SHOW";
+            thursdayShowButton.Click += thursdayShowButton_Click;
             // 
             // wednesdayShowButton
             // 
@@ -3108,6 +3089,7 @@
             wednesdayShowButton.Size = new Size(64, 23);
             wednesdayShowButton.TabIndex = 4;
             wednesdayShowButton.Text = "SHOW";
+            wednesdayShowButton.Click += wednesdayShowButton_Click;
             // 
             // tuesdayShowButton
             // 
@@ -3128,6 +3110,7 @@
             tuesdayShowButton.Size = new Size(64, 23);
             tuesdayShowButton.TabIndex = 3;
             tuesdayShowButton.Text = "SHOW";
+            tuesdayShowButton.Click += tuesdayShowButton_Click;
             // 
             // mondayShowButton
             // 
@@ -3148,6 +3131,7 @@
             mondayShowButton.Size = new Size(64, 23);
             mondayShowButton.TabIndex = 2;
             mondayShowButton.Text = "SHOW";
+            mondayShowButton.Click += mondayShowButton_Click;
             // 
             // wdSunday
             // 
@@ -3649,8 +3633,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton tuesdayShowButton;
         private Label wdSelectedLabel;
         private Label wdSelectedDay;
-        private Label wdSelectedType;
-        private Label wdWorkoutType;
         private Label wdExercises;
         private Label wdSelectedExercises;
     }

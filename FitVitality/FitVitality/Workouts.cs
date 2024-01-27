@@ -1,4 +1,5 @@
-﻿using Krypton.Toolkit;
+﻿using Guna.UI2.WinForms;
+using Krypton.Toolkit;
 using Microsoft.Data.SqlClient;
 using Microsoft.VisualBasic.Logging;
 using System;
@@ -54,6 +55,7 @@ namespace FitVitality
         bool sundayClicked = false;
 
         bool workoutDaysDone = false;
+        string workoutSelection = "";
 
         int selectedDays = 0;
 
@@ -1253,7 +1255,7 @@ namespace FitVitality
                     }
                     if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None")
                     {
-                        WorkoutDays.Add("Chest, Triceps & Shoulders");
+                        WorkoutDays.Add("Chest, Triceps and Shoulders");
                         ChestWorkout = chest[i];
                         TricepsWorkout = triceps[i];
                         ShouldersWorkout = shoulders[i];
@@ -1275,19 +1277,19 @@ namespace FitVitality
                     }
                     else if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] == "None")
                     {
-                        WorkoutDays.Add("Chest & Triceps");
+                        WorkoutDays.Add("Chest and Triceps");
                         ChestWorkout = chest[i];
                         TricepsWorkout = triceps[i];
                     }
                     else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] != "None")
                     {
-                        WorkoutDays.Add("Chest & Shoulders");
+                        WorkoutDays.Add("Chest and Shoulders");
                         ChestWorkout = chest[i];
                         ShouldersWorkout = shoulders[i];
                     }
                     else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] != "None")
                     {
-                        WorkoutDays.Add("Triceps & Shoulders");
+                        WorkoutDays.Add("Triceps and Shoulders");
                         TricepsWorkout = triceps[i];
                         ShouldersWorkout = shoulders[i];
                     }
@@ -1321,64 +1323,64 @@ namespace FitVitality
                     }
                     else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
                     {
-                        WorkoutDays.Add("Quadriceps & Hamstrings");
+                        WorkoutDays.Add("Quadriceps and Hamstrings");
                         QuadricepsWorkout = quadriceps[i];
                         HamstringsWorkout = hamstrings[i];
                     }
                     else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
                     {
-                        WorkoutDays.Add("Quadriceps & Glutes");
+                        WorkoutDays.Add("Quadriceps and Glutes");
                         QuadricepsWorkout = quadriceps[i];
                         GlutesWorkout = glutes[i];
                     }
                     else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
                     {
-                        WorkoutDays.Add("Quadriceps & Calves");
+                        WorkoutDays.Add("Quadriceps and Calves");
                         QuadricepsWorkout = quadriceps[i];
                         CalvesWorkout = calves[i];
                     }
                     else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
                     {
-                        WorkoutDays.Add("Hamstrings & Glutes");
+                        WorkoutDays.Add("Hamstrings and Glutes");
                         HamstringsWorkout = hamstrings[i];
                         GlutesWorkout = glutes[i];
                     }
                     else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
                     {
-                        WorkoutDays.Add("Hamstrings & Calves");
+                        WorkoutDays.Add("Hamstrings and Calves");
                         HamstringsWorkout = hamstrings[i];
                         CalvesWorkout = calves[i];
                     }
                     else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
                     {
-                        WorkoutDays.Add("Glutes & Calves");
+                        WorkoutDays.Add("Glutes and Calves");
                         GlutesWorkout = glutes[i];
                         CalvesWorkout = calves[i];
                     }
                     else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
                     {
-                        WorkoutDays.Add("Quadriceps, Hamstrings & Glutes");
+                        WorkoutDays.Add("Quadriceps, Hamstrings and Glutes");
                         QuadricepsWorkout = quadriceps[i];
                         HamstringsWorkout = hamstrings[i];
                         GlutesWorkout = glutes[i];
                     }
                     else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
                     {
-                        WorkoutDays.Add("Quadriceps, Hamstrings & Calves");
+                        WorkoutDays.Add("Quadriceps, Hamstrings and Calves");
                         QuadricepsWorkout = quadriceps[i];
                         HamstringsWorkout = hamstrings[i];
                         CalvesWorkout = calves[i];
                     }
                     else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
                     {
-                        WorkoutDays.Add("Quadriceps, Glutes & Calves");
+                        WorkoutDays.Add("Quadriceps, Glutes and Calves");
                         QuadricepsWorkout = quadriceps[i];
                         GlutesWorkout = glutes[i];
                         CalvesWorkout = calves[i];
                     }
                     else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
                     {
-                        WorkoutDays.Add("Hamstrings, Glutes & Calves");
+                        WorkoutDays.Add("Hamstrings, Glutes and Calves");
                         HamstringsWorkout = hamstrings[i];
                         GlutesWorkout = glutes[i];
                         CalvesWorkout = calves[i];
@@ -1411,19 +1413,19 @@ namespace FitVitality
 
                     if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None")
                     {
-                        WorkoutDays.Add("Back & Biceps");
-                        WorkoutDays.Add("Chest, Triceps & Shoulders");
+                        WorkoutDays.Add("Back and Biceps");
+                        WorkoutDays.Add("Chest, Triceps and Shoulders");
                         BackBicepsWorkout = backbiceps[i];
                         ChestTricepsShouldersWorkout = chesttricepsshoulders[i];
                     }
                     else if (backbiceps[i] != "None" && chesttricepsshoulders[i] == "None")
                     {
-                        WorkoutDays.Add("Back & Biceps");
+                        WorkoutDays.Add("Back and Biceps");
                         BackBicepsWorkout = backbiceps[i];
                     }
                     else if (backbiceps[i] == "None" && chesttricepsshoulders[i] != "None")
                     {
-                        WorkoutDays.Add("Chest, Triceps & Shoulders");
+                        WorkoutDays.Add("Chest, Triceps and Shoulders");
                         ChestTricepsShouldersWorkout = chesttricepsshoulders[i];
                     }
                     if (legs[i] != "None")
@@ -1874,18 +1876,18 @@ namespace FitVitality
                 {
                     command.Parameters.AddWithValue(day, CoreWorkout);
                 }
-                else if (cb.Text == "Chest, Triceps & Shoulders")
+                else if (cb.Text == "Chest, Triceps and Shoulders")
                 {
                     command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout + ShouldersWorkout);
                 }
             }
             else
             {
-                if (cb.Text == "Back & Biceps")
+                if (cb.Text == "Back and Biceps")
                 {
-                    command.Parameters.AddWithValue(day, BackWorkout);
+                    command.Parameters.AddWithValue(day, BackBicepsWorkout);
                 }
-                else if (cb.Text == "Chest, Triceps & Shoulders")
+                else if (cb.Text == "Chest, Triceps and Shoulders")
                 {
                     command.Parameters.AddWithValue(day, ChestTricepsShouldersWorkout);
                 }
@@ -2007,6 +2009,12 @@ namespace FitVitality
                 date7.ForeColor = Color.LightGreen;
                 wdSunday.ForeColor = Color.LightGreen;
             }
+
+            if (workoutSelection == "")
+            {
+                wdSelectedDay.Text = "None";
+                wdSelectedExercises.Text = "N/A";
+            }
         }
 
         private void trainPlacePanel_VisibleChanged(object sender, EventArgs e)
@@ -2077,6 +2085,195 @@ namespace FitVitality
                 workoutDaysDone = false;
                 selectedDays = 0;
             }
+        }
+        private void workoutShow(string day)
+        {
+            wdSelectedExercises.Text = "";
+            wdSelectedDay.Text = "";
+            string monday_workout = "Rest Day";
+            string tuesday_workout = "Rest Day";
+            string wednesday_workout = "Rest Day";
+            string thursday_workout = "Rest Day";
+            string friday_workout = "Rest Day";
+            string saturday_workout = "Rest Day";
+            string sunday_workout = "Rest Day";
+            List<string> monday_List = new List<string>();
+            List<string> tuesday_List = new List<string>();
+            List<string> wednesday_List = new List<string>();
+            List<string> thursday_List = new List<string>();
+            List<string> friday_List = new List<string>();
+            List<string> saturday_List = new List<string>();
+            List<string> sunday_List = new List<string>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "";
+                query = "SELECT * FROM Workouts WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (reader["Monday"].ToString() != "Rest Day")
+                            {
+                                monday_List = reader["Monday"].ToString().Split(',').ToList();
+                            }
+                            if (reader["Tuesday"].ToString() != "Rest Day")
+                            {
+                                tuesday_List = reader["Tuesday"].ToString().Split(',').ToList();
+                            }
+                            if (reader["Wednesday"].ToString() != "Rest Day")
+                            {
+                                wednesday_List = reader["Wednesday"].ToString().Split(',').ToList();
+                            }
+                            if (reader["Thursday"].ToString() != "Rest Day")
+                            {
+                                thursday_List = reader["Thursday"].ToString().Split(',').ToList();
+                            }
+                            if (reader["Friday"].ToString() != "Rest Day")
+                            {
+                                friday_List = reader["Friday"].ToString().Split(',').ToList();
+                            }
+                            if (reader["Saturday"].ToString() != "Rest Day")
+                            {
+                                saturday_List = reader["Saturday"].ToString().Split(',').ToList();
+                            }
+                            if (reader["Sunday"].ToString() != "Rest Day")
+                            {
+                                sunday_List = reader["Sunday"].ToString().Split(',').ToList();
+                            }
+                        }
+                    }
+                }
+            }
+            if (day == "Monday")
+            {
+                wdSelectedDay.Text = "Monday";
+                for (int i = 0; i < monday_List.Count; i++)
+                {
+                    if (i < monday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + monday_List[i] + "\n";
+                    else wdSelectedExercises.Text += "3x12 - " + monday_List[i];
+                }
+                if (wdSelectedExercises.Text == "")
+                {
+                    wdSelectedExercises.Text = "None - Rest Day";
+                }
+            }
+            else if (day == "Tuesday")
+            {
+                wdSelectedDay.Text = "Tuesday";
+                for (int i = 0; i < tuesday_List.Count; i++)
+                {
+                    if (i < tuesday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + tuesday_List[i] + "\n";
+                    else wdSelectedExercises.Text += "3x12 - " + tuesday_List[i];
+                }
+                if (wdSelectedExercises.Text == "")
+                {
+                    wdSelectedExercises.Text = "None - Rest Day";
+                }
+            }
+            else if (day == "Wednesday")
+            {
+                wdSelectedDay.Text = "Wednesday";
+                for (int i = 0; i < wednesday_List.Count; i++)
+                {
+                    if (i < wednesday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + wednesday_List[i] + "\n";
+                    else wdSelectedExercises.Text += "3x12 - " + wednesday_List[i];
+                }
+                if (wdSelectedExercises.Text == "")
+                {
+                    wdSelectedExercises.Text = "None - Rest Day";
+                }
+            }
+            else if (day == "Thursday")
+            {
+                wdSelectedDay.Text = "Thursday";
+                for (int i = 0; i < thursday_List.Count; i++)
+                {
+                    if (i < thursday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + thursday_List[i] + "\n";
+                    else wdSelectedExercises.Text += "3x12 - " + thursday_List[i];
+                }
+                if (wdSelectedExercises.Text == "")
+                {
+                    wdSelectedExercises.Text = "None - Rest Day";
+                }
+            }
+            else if (day == "Friday")
+            {
+                wdSelectedDay.Text = "Friday";
+                for (int i = 0; i < friday_List.Count; i++)
+                {
+                    if (i < friday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + friday_List[i] + "\n";
+                    else wdSelectedExercises.Text += "3x12 - " + friday_List[i];
+                }
+                if (wdSelectedExercises.Text == "")
+                {
+                    wdSelectedExercises.Text = "None - Rest Day";
+                }
+            }
+            else if (day == "Saturday")
+            {
+                wdSelectedDay.Text = "Saturday";
+                for (int i = 0; i < saturday_List.Count; i++)
+                {
+                    if (i < saturday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + saturday_List[i] + "\n";
+                    else wdSelectedExercises.Text += "3x12 - " + saturday_List[i];
+                }
+                if (wdSelectedExercises.Text == "")
+                {
+                    wdSelectedExercises.Text = "None - Rest Day";
+                }
+            }
+            else if (day == "Sunday")
+            {
+                wdSelectedDay.Text = "Sunday";
+                for (int i = 0; i < sunday_List.Count; i++)
+                {
+                    if (i < sunday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + sunday_List[i] + "\n";
+                    else wdSelectedExercises.Text += "3x12 - " + sunday_List[i];
+                }
+                if (wdSelectedExercises.Text == "")
+                {
+                    wdSelectedExercises.Text = "None - Rest Day";
+                }
+            }
+        }
+
+        private void mondayShowButton_Click(object sender, EventArgs e)
+        {
+            workoutShow("Monday");
+        }
+
+        private void tuesdayShowButton_Click(object sender, EventArgs e)
+        {
+            workoutShow("Tuesday");
+        }
+
+        private void wednesdayShowButton_Click(object sender, EventArgs e)
+        {
+            workoutShow("Wednesday");
+        }
+
+        private void thursdayShowButton_Click(object sender, EventArgs e)
+        {
+            workoutShow("Thursday");
+        }
+
+        private void fridayShowButton_Click(object sender, EventArgs e)
+        {
+            workoutShow("Friday");
+        }
+
+        private void saturdayShowButton_Click(object sender, EventArgs e)
+        {
+            workoutShow("Saturday");
+        }
+
+        private void sundayShowButton_Click(object sender, EventArgs e)
+        {
+            workoutShow("Sunday");
         }
     }
 }

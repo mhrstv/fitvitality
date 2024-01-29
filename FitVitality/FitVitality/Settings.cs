@@ -16,12 +16,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Drawing.Imaging;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Xml.Linq;
+using System.ComponentModel.DataAnnotations;
 
 namespace FitVitality
 {
     public partial class Settings : Form
     {
         private string dbName;
+        private string dbEmail;
         private string dbAge;
         private string dbGender;
         private string dbWeight;
@@ -48,7 +50,7 @@ namespace FitVitality
             closeDAPanel.Visible = true;
             deleteAccPanel.Height = 174;
             deleteAccPanel.Width = 341;
-            deleteAccButton.Visible = false;
+            deleteAccountButton.Visible = false;
             appSettings_label.Visible = false;
             accSettings_label.Visible = false;
             langLabel.Visible = false;
@@ -72,7 +74,8 @@ namespace FitVitality
         private void Settings_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
-
+            errorPanel.Width = 230;
+            errorPanel.Height = 120;
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 languageComboBox.SelectedItem = "Bulgarian";
@@ -120,6 +123,22 @@ namespace FitVitality
                     }
                 }
             }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Email FROM UserData WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            emailTextBox.Text = reader["Email"].ToString();
+                        }
+                    }
+                }
+            }
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
@@ -158,7 +177,7 @@ namespace FitVitality
         private void buttonClose_Click(object sender, EventArgs e)
         {
             deleteAccPanel.Visible = false;
-            deleteAccButton.Visible = true;
+            deleteAccountButton.Visible = true;
             appSettings_label.Visible = true;
             accSettings_label.Visible = true;
             langLabel.Visible = true;
@@ -248,10 +267,16 @@ namespace FitVitality
             }
             return true;
         }
+        private bool validEmail(string email)
+        {
+            var emailValidation = new EmailAddressAttribute();
+            return emailValidation.IsValid(email);
+        }
         private void buttonSave_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
             dbName = nameTextBox.Text.ToString();
+            dbEmail = emailTextBox.Text.ToString();
             dbAge = ageTextBox.Text;
             dbWeight = weightTextBox.Text;
             dbHeight = heightTextBox.Text;
@@ -275,7 +300,7 @@ namespace FitVitality
             {
                 dbGoal = "Bulk";
             }
-            if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && dbGender != "" && dbGoal != "")
+            if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && validEmail(dbEmail) && dbGender != "" && dbGoal != "")
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -291,6 +316,7 @@ namespace FitVitality
                         int height = int.Parse(dbHeight);
                         command.Parameters.AddWithValue("@UserID", _userID);
                         command.Parameters.AddWithValue("@Name", dbName);
+                        command.Parameters.AddWithValue("@Email", dbEmail);
                         command.Parameters.AddWithValue("@Age", age);
                         command.Parameters.AddWithValue("@Gender", dbGender);
                         command.Parameters.AddWithValue("@Weight", weight);
@@ -299,10 +325,23 @@ namespace FitVitality
                         command.ExecuteNonQuery();
                     }
                 }
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "UPDATE UserData " +
+                               "SET Email = @Email " +
+                               "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Email", dbEmail);
+                        command.ExecuteNonQuery();
+                    }
+                }
             }
             else
             {
                 errorPanel.Visible = true;
+                errorPanel.BringToFront();
             }
         }
 

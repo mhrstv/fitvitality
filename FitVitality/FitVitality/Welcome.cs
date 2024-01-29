@@ -705,7 +705,7 @@ namespace FitVitality
             {
                 timerGoal2.Enabled = false; // Изключване на таймера
                 timerLabel.Visible = true; // Показване на надписа, служещ за индикатор на анимациите
-                doneButton.Visible = true; // Показване на бутона за завършване на регистрацията
+                buttonDone.Visible = true; // Показване на бутона за завършване на регистрацията
             }
         }
 
@@ -795,7 +795,7 @@ namespace FitVitality
             }
             if (panel_nameUsage.Width >= 482)
             {
-                timerName3.Enabled = false; 
+                timerName3.Enabled = false;
             }
         }
 

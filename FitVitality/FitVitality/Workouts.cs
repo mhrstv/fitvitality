@@ -492,10 +492,12 @@ namespace FitVitality
                 else if ((homeClicked || outdoorsClicked) && lowerBodyClicked && !upperBodyClicked)
                 {
                     chooseWorkoutNumberPanel.Visible = true;
+                    workoutsLabel.Visible = false;
                 }
                 if (!upperBodyClicked && !lowerBodyClicked && coreClicked)
                 {
                     chooseWorkoutNumberPanel.Visible = true;
+                    workoutsLabel.Visible = false;
                 }
             }
         }
@@ -579,6 +581,7 @@ namespace FitVitality
             {
                 upperBodyPanel.Visible = false;
                 chooseWorkoutNumberPanel.Visible = true;
+                workoutsLabel.Visible = false;
             }
         }
 
@@ -660,6 +663,7 @@ namespace FitVitality
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
             chooseWorkoutNumberPanel.Visible = true;
+            workoutsLabel.Visible = false;
         }
 
 
@@ -1881,48 +1885,48 @@ namespace FitVitality
             }
             else
             {
-                for(int i = 0; i < workoutNames.Count; i++)
+                for (int i = 0; i < workoutNames.Count; i++)
                 {
                     switch (i)
                     {
                         case 0:
-                            if(cb.Text == workoutNames[i])
+                            if (cb.Text == workoutNames[i])
                             {
                                 command.Parameters.AddWithValue(day, workout1);
                             }
                             break;
                         case 1:
-                            if(cb.Text == workoutNames[i])
+                            if (cb.Text == workoutNames[i])
                             {
                                 command.Parameters.AddWithValue(day, workout2);
                             }
                             break;
                         case 2:
-                            if(cb.Text == workoutNames[i])
+                            if (cb.Text == workoutNames[i])
                             {
                                 command.Parameters.AddWithValue(day, workout3);
                             }
                             break;
                         case 3:
-                            if(cb.Text == workoutNames[i])
+                            if (cb.Text == workoutNames[i])
                             {
                                 command.Parameters.AddWithValue(day, workout4);
                             }
                             break;
                         case 4:
-                            if(cb.Text == workoutNames[i])
+                            if (cb.Text == workoutNames[i])
                             {
                                 command.Parameters.AddWithValue(day, workout5);
                             }
                             break;
                         case 5:
-                            if(cb.Text == workoutNames[i])
+                            if (cb.Text == workoutNames[i])
                             {
                                 command.Parameters.AddWithValue(day, workout6);
                             }
                             break;
                         case 6:
-                            if(cb.Text == workoutNames[i])
+                            if (cb.Text == workoutNames[i])
                             {
                                 command.Parameters.AddWithValue(day, workout7);
                             }
@@ -2510,7 +2514,7 @@ namespace FitVitality
                         exerciseListPanel.Controls.Add(exerciselistitem);
                         exerciseListItems.Add(exerciselistitem);
                     }
-                    if(exerciseList.Count > 0 && workoutNameTextBox.Text != "")
+                    if (exerciseList.Count > 0 && workoutNameTextBox.Text != "")
                     {
                         createNextButton.Visible = true;
                     }
@@ -2715,6 +2719,7 @@ namespace FitVitality
         {
             upperBodyHomeOutdoorsPanel.Visible = false;
             chooseWorkoutNumberPanel.Visible = true;
+            workoutsLabel.Visible = false;
         }
 
         private void workoutNameTextBox_TextChanged(object sender, EventArgs e)
@@ -2724,6 +2729,11 @@ namespace FitVitality
                 createNextButton.Visible = true;
             }
             else createNextButton.Visible = false;
+        }
+
+        private void chooseWorkoutNumberPanel_VisibleChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

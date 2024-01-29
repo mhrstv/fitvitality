@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -117,31 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bmiBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAACkCAYAAABxY1BQAAAABGdBTUEAALGPC/xhBQAABF1JREFUeF7t
-        3E9PE2schuH5/p/iYOLCoxsS9kaXxiWrI/+bALFagjW2EZI550fSJwVeBDTmyMy1uFYzDWyeO51pZrrv
-        l5f9r5h+W/Tbs1n/9uS03zqc9H/v7ffPd/b6v/7ZAX6T2lhtrTZX26sN1hZbG32MnwrC2XLZv59+6l/t
-        HzT/WeD/UZusbdZGW9u9z6OC8Hmx6N8cn/YbH3ab/wzwZ6iN1lZrs60t3+VBQVhcXFxV55kQwJNSm63t
-        1oZb277p3iBUYTYPjpp/DHgaasMP+bbwwyAczuduEMJA1JYPv8ybW1+5Mwg75+cuEWBgatO17dbmSzMI
-        k/lXMYCBqm3XxlvbvxWEus5wmQDDVhtv3VO4FoS6E7l56AYijEFt/eavD9eCUD9PtD4IDFNtfr0BCUJ9
-        fXDfAMalNr9+6ZAgvD4+aX4AGLba/rUgzBbLfqNxIjB8tf1qQILw7uO0eSIwDtWABOHlnqcWYcyqAVdB
-        qGeoWycA41It6LZnZ82DwLjUS1a6ettK6yAwLtWCbuto0jwIjEu1oHuxu988CIxLvaOx8yATUKoFXesA
-        ME6CAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCE
-        IAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhA
-        CAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIA
-        hCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEI
-        QAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCCAIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEAIAhCC
-        AIQgACEIQAgCEIIAhCAAIQhACAIQggCEIAAhCEB0z3f2mgeAcakWdC9295sHgXGpFnRbR5PmQWBcqgXd
-        25PT5kFgXKoF3fZs1jwIjEu1oJt+WzQPAuNSLei+X172L/cOmicA41ANqBZcBeHdx2nzJGAcqgEJwmyx
-        7DcaJwHDV9uvBiQI5fXxSfNkYNhq+6sOJAifF4v+2Yfd5geAYarN1/ZvBaG8n35qfggYptr8egOuBWFx
-        cdFvHhw1PwgMS229Nr/egGtBKPX1wQNPMGy18fVLhZVbQSiT+Vf3E2Cgatu18db2m0EoO+fnogADU5uu
-        bbc2X+4MQjn8Mnf5AANRWz74b9Otra/8MAilrjPcaISnrTbcumdw071BKHUnsn6ecAkBT0tttrZ789eE
-        uzwoCCtVmDfHp/2GMMAfrTZaW33It4J1jwrCytlyeVWdV56ShD9KbbK2WRttbfc+PxWEdfUMdb1Yod62
-        snU4uXovmxuR8HvVxmprtbnaXm2wttja6MNd9v8CKMkoTKYY1EIAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="rotationTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

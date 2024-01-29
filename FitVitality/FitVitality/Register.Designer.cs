@@ -30,7 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            buttonRegister = new Krypton.Toolkit.KryptonButton();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             haveAnAccButton = new Label();
             passLabel = new Label();
             usrLabel = new Label();
@@ -76,6 +77,7 @@
             rightC = new PictureBox();
             hLine2 = new PictureBox();
             vLine2 = new PictureBox();
+            buttonRegister = new Guna.UI2.WinForms.Guna2Button();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)rightCUp2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
@@ -105,68 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
             SuspendLayout();
-            // 
-            // buttonRegister
-            // 
-            buttonRegister.CornerRoundingRadius = 15F;
-            buttonRegister.Location = new Point(96, 328);
-            buttonRegister.Name = "buttonRegister";
-            buttonRegister.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            buttonRegister.Size = new Size(90, 25);
-            buttonRegister.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateCommon.Back.ColorAngle = 45F;
-            buttonRegister.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateCommon.Border.ColorAngle = 45F;
-            buttonRegister.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonRegister.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonRegister.StateCommon.Border.Rounding = 15F;
-            buttonRegister.StateCommon.Border.Width = 1;
-            buttonRegister.StateCommon.Content.ShortText.Color1 = Color.White;
-            buttonRegister.StateCommon.Content.ShortText.Color2 = Color.White;
-            buttonRegister.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonRegister.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonRegister.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateNormal.Back.ColorAngle = 45F;
-            buttonRegister.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonRegister.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            buttonRegister.StateNormal.Border.ColorAngle = 45F;
-            buttonRegister.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonRegister.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonRegister.StateNormal.Border.Rounding = 15F;
-            buttonRegister.StateNormal.Border.Width = 1;
-            buttonRegister.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            buttonRegister.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            buttonRegister.StatePressed.Back.ColorAngle = 45F;
-            buttonRegister.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonRegister.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            buttonRegister.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            buttonRegister.StatePressed.Border.ColorAngle = 45F;
-            buttonRegister.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonRegister.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonRegister.StatePressed.Border.Rounding = 15F;
-            buttonRegister.StatePressed.Border.Width = 1;
-            buttonRegister.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            buttonRegister.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            buttonRegister.StateTracking.Back.ColorAngle = 45F;
-            buttonRegister.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonRegister.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
-            buttonRegister.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
-            buttonRegister.StateTracking.Border.ColorAngle = 45F;
-            buttonRegister.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonRegister.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonRegister.StateTracking.Border.Rounding = 15F;
-            buttonRegister.StateTracking.Border.Width = 1;
-            buttonRegister.TabIndex = 12;
-            buttonRegister.Values.Text = "Register";
-            buttonRegister.Click += kryptonButton1_Click;
             // 
             // haveAnAccButton
             // 
@@ -674,12 +614,32 @@
             vLine2.TabIndex = 32;
             vLine2.TabStop = false;
             // 
+            // buttonRegister
+            // 
+            buttonRegister.BorderRadius = 10;
+            buttonRegister.CustomizableEdges = customizableEdges1;
+            buttonRegister.DisabledState.BorderColor = Color.DarkGray;
+            buttonRegister.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonRegister.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonRegister.FillColor = Color.FromArgb(92, 225, 230);
+            buttonRegister.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonRegister.ForeColor = Color.White;
+            buttonRegister.Location = new Point(96, 332);
+            buttonRegister.Name = "buttonRegister";
+            buttonRegister.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            buttonRegister.Size = new Size(90, 25);
+            buttonRegister.TabIndex = 45;
+            buttonRegister.Text = "Register";
+            buttonRegister.Click += kryptonButton1_Click;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(buttonRegister);
             Controls.Add(vLine2);
             Controls.Add(hLine2);
             Controls.Add(rightC);
@@ -699,7 +659,6 @@
             Controls.Add(topbar);
             Controls.Add(emailLabel);
             Controls.Add(textBoxEmail);
-            Controls.Add(buttonRegister);
             Controls.Add(haveAnAccButton);
             Controls.Add(passLabel);
             Controls.Add(usrLabel);
@@ -750,8 +709,6 @@
         }
 
         #endregion
-
-        private Krypton.Toolkit.KryptonButton buttonRegister;
         private Label haveAnAccButton;
         private Label passLabel;
         private Label usrLabel;
@@ -797,5 +754,6 @@
         private PictureBox rightC;
         private PictureBox hLine2;
         private PictureBox vLine2;
+        private Guna.UI2.WinForms.Guna2Button buttonRegister;
     }
 }

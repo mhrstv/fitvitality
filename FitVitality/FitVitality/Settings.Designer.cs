@@ -30,8 +30,13 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
-            deleteAccButton = new Krypton.Toolkit.KryptonButton();
             deleteAccPanel = new Panel();
             closeDAPanel = new Panel();
             buttonClose = new PictureBox();
@@ -55,7 +60,6 @@
             ageTextBox = new Krypton.Toolkit.KryptonTextBox();
             weightTextBox = new Krypton.Toolkit.KryptonTextBox();
             heightTextBox = new Krypton.Toolkit.KryptonTextBox();
-            buttonSave = new Krypton.Toolkit.KryptonButton();
             languageComboBox = new Krypton.Toolkit.KryptonComboBox();
             genderComboBox = new Krypton.Toolkit.KryptonComboBox();
             goalComboBox = new Krypton.Toolkit.KryptonComboBox();
@@ -71,6 +75,12 @@
             errorLabel = new Label();
             welcomeError = new PictureBox();
             themeComboBox = new Krypton.Toolkit.KryptonComboBox();
+            buttonSave = new Guna.UI2.WinForms.Guna2Button();
+            emailTextBox = new Krypton.Toolkit.KryptonTextBox();
+            label1 = new Label();
+            deleteAccountButton = new Guna.UI2.WinForms.Guna2Button();
+            changePasswordButton = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox1 = new PictureBox();
             deleteAccPanel.SuspendLayout();
             closeDAPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
@@ -89,6 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)errorClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)welcomeError).BeginInit();
             ((System.ComponentModel.ISupportInitialize)themeComboBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -121,72 +132,6 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color1 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color2 = Color.FromArgb(250, 252, 252);
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            // 
-            // deleteAccButton
-            // 
-            deleteAccButton.CornerRoundingRadius = 15F;
-            deleteAccButton.Location = new Point(444, 326);
-            deleteAccButton.Name = "deleteAccButton";
-            deleteAccButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            deleteAccButton.Size = new Size(138, 25);
-            deleteAccButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            deleteAccButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            deleteAccButton.StateCommon.Back.ColorAngle = 0F;
-            deleteAccButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            deleteAccButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            deleteAccButton.StateCommon.Border.ColorAngle = 0F;
-            deleteAccButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            deleteAccButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            deleteAccButton.StateCommon.Border.Rounding = 15F;
-            deleteAccButton.StateCommon.Border.Width = 1;
-            deleteAccButton.StateCommon.Content.ShortText.Color1 = Color.White;
-            deleteAccButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            deleteAccButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            deleteAccButton.StateDisabled.Back.ColorAngle = 45F;
-            deleteAccButton.StateDisabled.Border.ColorAngle = 45F;
-            deleteAccButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            deleteAccButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            deleteAccButton.StateDisabled.Border.Rounding = 15F;
-            deleteAccButton.StateDisabled.Border.Width = 1;
-            deleteAccButton.StateDisabled.Content.ShortText.Color1 = Color.White;
-            deleteAccButton.StateDisabled.Content.ShortText.Color2 = Color.White;
-            deleteAccButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            deleteAccButton.StateNormal.Back.Color1 = Color.FromArgb(188, 41, 41);
-            deleteAccButton.StateNormal.Back.Color2 = Color.FromArgb(188, 41, 41);
-            deleteAccButton.StateNormal.Back.ColorAngle = 0F;
-            deleteAccButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            deleteAccButton.StateNormal.Border.Color1 = Color.FromArgb(188, 41, 41);
-            deleteAccButton.StateNormal.Border.Color2 = Color.FromArgb(188, 41, 41);
-            deleteAccButton.StateNormal.Border.ColorAngle = 0F;
-            deleteAccButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            deleteAccButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            deleteAccButton.StateNormal.Border.Rounding = 15F;
-            deleteAccButton.StateNormal.Border.Width = 1;
-            deleteAccButton.StatePressed.Back.Color1 = Color.FromArgb(252, 57, 43);
-            deleteAccButton.StatePressed.Back.Color2 = Color.FromArgb(252, 57, 43);
-            deleteAccButton.StatePressed.Back.ColorAngle = 45F;
-            deleteAccButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            deleteAccButton.StatePressed.Border.Color1 = Color.FromArgb(252, 57, 43);
-            deleteAccButton.StatePressed.Border.Color2 = Color.FromArgb(252, 57, 43);
-            deleteAccButton.StatePressed.Border.ColorAngle = 45F;
-            deleteAccButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            deleteAccButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            deleteAccButton.StatePressed.Border.Rounding = 15F;
-            deleteAccButton.StatePressed.Border.Width = 1;
-            deleteAccButton.StateTracking.Back.Color1 = Color.FromArgb(252, 57, 43);
-            deleteAccButton.StateTracking.Back.Color2 = Color.FromArgb(252, 57, 43);
-            deleteAccButton.StateTracking.Back.ColorAngle = 45F;
-            deleteAccButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            deleteAccButton.StateTracking.Border.Color1 = Color.FromArgb(252, 57, 43);
-            deleteAccButton.StateTracking.Border.Color2 = Color.FromArgb(252, 57, 43);
-            deleteAccButton.StateTracking.Border.ColorAngle = 45F;
-            deleteAccButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            deleteAccButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            deleteAccButton.StateTracking.Border.Rounding = 15F;
-            deleteAccButton.StateTracking.Border.Width = 1;
-            deleteAccButton.TabIndex = 10;
-            deleteAccButton.Values.Text = "Delete Account";
-            deleteAccButton.Click += kryptonButton1_Click;
             // 
             // deleteAccPanel
             // 
@@ -405,7 +350,7 @@
             // 
             ageLabel.AutoSize = true;
             ageLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            ageLabel.Location = new Point(424, 110);
+            ageLabel.Location = new Point(424, 141);
             ageLabel.Name = "ageLabel";
             ageLabel.Size = new Size(30, 16);
             ageLabel.TabIndex = 18;
@@ -415,7 +360,7 @@
             // 
             genderLabel.AutoSize = true;
             genderLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            genderLabel.Location = new Point(424, 138);
+            genderLabel.Location = new Point(424, 169);
             genderLabel.Name = "genderLabel";
             genderLabel.Size = new Size(49, 16);
             genderLabel.TabIndex = 19;
@@ -425,7 +370,7 @@
             // 
             weightLabel.AutoSize = true;
             weightLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            weightLabel.Location = new Point(424, 168);
+            weightLabel.Location = new Point(424, 199);
             weightLabel.Name = "weightLabel";
             weightLabel.Size = new Size(48, 16);
             weightLabel.TabIndex = 20;
@@ -435,7 +380,7 @@
             // 
             heightLabel.AutoSize = true;
             heightLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            heightLabel.Location = new Point(424, 198);
+            heightLabel.Location = new Point(424, 229);
             heightLabel.Name = "heightLabel";
             heightLabel.Size = new Size(44, 16);
             heightLabel.TabIndex = 21;
@@ -445,7 +390,7 @@
             // 
             goalLabel.AutoSize = true;
             goalLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            goalLabel.Location = new Point(424, 228);
+            goalLabel.Location = new Point(424, 259);
             goalLabel.Name = "goalLabel";
             goalLabel.Size = new Size(34, 16);
             goalLabel.TabIndex = 22;
@@ -461,7 +406,7 @@
             // 
             // ageTextBox
             // 
-            ageTextBox.Location = new Point(494, 106);
+            ageTextBox.Location = new Point(494, 137);
             ageTextBox.Name = "ageTextBox";
             ageTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             ageTextBox.Size = new Size(100, 23);
@@ -469,7 +414,7 @@
             // 
             // weightTextBox
             // 
-            weightTextBox.Location = new Point(494, 165);
+            weightTextBox.Location = new Point(494, 196);
             weightTextBox.Name = "weightTextBox";
             weightTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             weightTextBox.Size = new Size(100, 23);
@@ -478,73 +423,11 @@
             // 
             // heightTextBox
             // 
-            heightTextBox.Location = new Point(494, 195);
+            heightTextBox.Location = new Point(494, 226);
             heightTextBox.Name = "heightTextBox";
             heightTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             heightTextBox.Size = new Size(100, 23);
             heightTextBox.TabIndex = 27;
-            // 
-            // buttonSave
-            // 
-            buttonSave.CornerRoundingRadius = 15F;
-            buttonSave.Location = new Point(468, 257);
-            buttonSave.Name = "buttonSave";
-            buttonSave.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            buttonSave.Size = new Size(90, 25);
-            buttonSave.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateCommon.Back.ColorAngle = 45F;
-            buttonSave.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateCommon.Border.ColorAngle = 45F;
-            buttonSave.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonSave.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonSave.StateCommon.Border.Rounding = 15F;
-            buttonSave.StateCommon.Border.Width = 1;
-            buttonSave.StateCommon.Content.ShortText.Color1 = Color.White;
-            buttonSave.StateCommon.Content.ShortText.Color2 = Color.White;
-            buttonSave.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonSave.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonSave.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateNormal.Back.ColorAngle = 45F;
-            buttonSave.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonSave.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            buttonSave.StateNormal.Border.ColorAngle = 45F;
-            buttonSave.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonSave.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonSave.StateNormal.Border.Rounding = 15F;
-            buttonSave.StateNormal.Border.Width = 1;
-            buttonSave.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            buttonSave.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            buttonSave.StatePressed.Back.ColorAngle = 45F;
-            buttonSave.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonSave.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            buttonSave.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            buttonSave.StatePressed.Border.ColorAngle = 45F;
-            buttonSave.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonSave.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonSave.StatePressed.Border.Rounding = 15F;
-            buttonSave.StatePressed.Border.Width = 1;
-            buttonSave.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            buttonSave.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            buttonSave.StateTracking.Back.ColorAngle = 45F;
-            buttonSave.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonSave.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
-            buttonSave.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
-            buttonSave.StateTracking.Border.ColorAngle = 45F;
-            buttonSave.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            buttonSave.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            buttonSave.StateTracking.Border.Rounding = 15F;
-            buttonSave.StateTracking.Border.Width = 1;
-            buttonSave.TabIndex = 29;
-            buttonSave.Values.Text = "Save";
-            buttonSave.Click += buttonSave_Click;
             // 
             // languageComboBox
             // 
@@ -586,7 +469,7 @@
             genderComboBox.DropDownWidth = 121;
             genderComboBox.IntegralHeight = false;
             genderComboBox.Items.AddRange(new object[] { "Male", "Female" });
-            genderComboBox.Location = new Point(494, 136);
+            genderComboBox.Location = new Point(494, 167);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             genderComboBox.Size = new Size(100, 21);
@@ -617,7 +500,7 @@
             goalComboBox.DropDownWidth = 121;
             goalComboBox.IntegralHeight = false;
             goalComboBox.Items.AddRange(new object[] { "Cut", "Maintain", "Bulk" });
-            goalComboBox.Location = new Point(494, 225);
+            goalComboBox.Location = new Point(494, 256);
             goalComboBox.Name = "goalComboBox";
             goalComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
             goalComboBox.Size = new Size(100, 21);
@@ -703,7 +586,7 @@
             errorPanel.Controls.Add(welcomeError);
             errorPanel.Location = new Point(230, 124);
             errorPanel.Name = "errorPanel";
-            errorPanel.Size = new Size(230, 120);
+            errorPanel.Size = new Size(0, 0);
             errorPanel.TabIndex = 41;
             errorPanel.Visible = false;
             // 
@@ -785,12 +668,101 @@
             themeComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             themeComboBox.TabIndex = 42;
             // 
+            // buttonSave
+            // 
+            buttonSave.BorderRadius = 10;
+            buttonSave.CustomizableEdges = customizableEdges13;
+            buttonSave.DisabledState.BorderColor = Color.DarkGray;
+            buttonSave.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonSave.FillColor = Color.FromArgb(92, 225, 230);
+            buttonSave.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSave.ForeColor = Color.White;
+            buttonSave.Location = new Point(515, 285);
+            buttonSave.Name = "buttonSave";
+            buttonSave.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            buttonSave.Size = new Size(79, 40);
+            buttonSave.TabIndex = 43;
+            buttonSave.Text = "Save Settings";
+            buttonSave.Click += buttonSave_Click;
+            // 
+            // emailTextBox
+            // 
+            emailTextBox.Location = new Point(494, 107);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
+            emailTextBox.Size = new Size(100, 23);
+            emailTextBox.TabIndex = 44;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(424, 111);
+            label1.Name = "label1";
+            label1.Size = new Size(40, 16);
+            label1.TabIndex = 45;
+            label1.Text = "Email";
+            // 
+            // deleteAccountButton
+            // 
+            deleteAccountButton.BorderRadius = 10;
+            deleteAccountButton.CustomizableEdges = customizableEdges15;
+            deleteAccountButton.DisabledState.BorderColor = Color.DarkGray;
+            deleteAccountButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            deleteAccountButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            deleteAccountButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            deleteAccountButton.FillColor = Color.FromArgb(212, 47, 47);
+            deleteAccountButton.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            deleteAccountButton.ForeColor = Color.White;
+            deleteAccountButton.Location = new Point(424, 331);
+            deleteAccountButton.Name = "deleteAccountButton";
+            deleteAccountButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            deleteAccountButton.Size = new Size(170, 25);
+            deleteAccountButton.TabIndex = 46;
+            deleteAccountButton.Text = "Delete Account";
+            deleteAccountButton.Click += kryptonButton1_Click;
+            // 
+            // changePasswordButton
+            // 
+            changePasswordButton.BorderRadius = 10;
+            changePasswordButton.CustomizableEdges = customizableEdges17;
+            changePasswordButton.DisabledState.BorderColor = Color.DarkGray;
+            changePasswordButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            changePasswordButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            changePasswordButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            changePasswordButton.FillColor = Color.FromArgb(92, 225, 230);
+            changePasswordButton.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            changePasswordButton.ForeColor = Color.White;
+            changePasswordButton.Location = new Point(424, 285);
+            changePasswordButton.Name = "changePasswordButton";
+            changePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            changePasswordButton.Size = new Size(88, 40);
+            changePasswordButton.TabIndex = 47;
+            changePasswordButton.Text = "Change Password";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.vline;
+            pictureBox1.Location = new Point(345, 36);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1, 300);
+            pictureBox1.TabIndex = 49;
+            pictureBox1.TabStop = false;
+            // 
             // Settings
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
+            Controls.Add(pictureBox1);
+            Controls.Add(changePasswordButton);
+            Controls.Add(deleteAccountButton);
+            Controls.Add(label1);
+            Controls.Add(emailTextBox);
+            Controls.Add(buttonSave);
             Controls.Add(themeComboBox);
             Controls.Add(errorPanel);
             Controls.Add(rightCorner);
@@ -802,7 +774,6 @@
             Controls.Add(goalComboBox);
             Controls.Add(genderComboBox);
             Controls.Add(languageComboBox);
-            Controls.Add(buttonSave);
             Controls.Add(heightTextBox);
             Controls.Add(weightTextBox);
             Controls.Add(ageTextBox);
@@ -818,7 +789,6 @@
             Controls.Add(accSettings_label);
             Controls.Add(appSettings_label);
             Controls.Add(deleteAccPanel);
-            Controls.Add(deleteAccButton);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Settings";
             Text = "Settings";
@@ -843,6 +813,7 @@
             ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)welcomeError).EndInit();
             ((System.ComponentModel.ISupportInitialize)themeComboBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -850,7 +821,6 @@
         #endregion
 
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
-        private Krypton.Toolkit.KryptonButton deleteAccButton;
         private Panel deleteAccPanel;
         private Krypton.Toolkit.KryptonTextBox textBoxConfirm;
         private Label confirmLabel1;
@@ -874,7 +844,6 @@
         private Krypton.Toolkit.KryptonTextBox ageTextBox;
         private Krypton.Toolkit.KryptonTextBox weightTextBox;
         private Krypton.Toolkit.KryptonTextBox heightTextBox;
-        private Krypton.Toolkit.KryptonButton buttonSave;
         private Krypton.Toolkit.KryptonComboBox languageComboBox;
         private Krypton.Toolkit.KryptonComboBox genderComboBox;
         private Krypton.Toolkit.KryptonComboBox goalComboBox;
@@ -894,5 +863,11 @@
         private Label errorLabel;
         private PictureBox welcomeError;
         private Krypton.Toolkit.KryptonComboBox themeComboBox;
+        private Guna.UI2.WinForms.Guna2Button buttonSave;
+        private Krypton.Toolkit.KryptonTextBox emailTextBox;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2Button deleteAccountButton;
+        private Guna.UI2.WinForms.Guna2Button changePasswordButton;
+        private PictureBox pictureBox1;
     }
 }

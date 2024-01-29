@@ -47,6 +47,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftCorner = new PictureBox();
             rightCorner = new PictureBox();
             vLine1 = new PictureBox();
@@ -118,14 +120,13 @@
             preBorders = new PictureBox();
             prePanelLabel = new Label();
             createPanel = new Panel();
+            createNextButton = new Guna.UI2.WinForms.Guna2Button();
             workoutNameLabel = new Label();
             workoutNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             exerciseListPanel = new FlowLayoutPanel();
             currentExerciseList = new FlowLayoutPanel();
             hLine3 = new PictureBox();
             createLabel = new Label();
-            createNextButtonPanel = new Panel();
-            createNextButton = new Krypton.Toolkit.KryptonButton();
             createBorders = new PictureBox();
             workoutsList = new FlowLayoutPanel();
             workoutPreviewPanel = new Panel();
@@ -305,7 +306,6 @@
             ((System.ComponentModel.ISupportInitialize)preBorders).BeginInit();
             createPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)hLine3).BeginInit();
-            createNextButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)createBorders).BeginInit();
             workoutPreviewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)workoutPreviewClose).BeginInit();
@@ -1577,13 +1577,13 @@
             // 
             // createPanel
             // 
+            createPanel.Controls.Add(createNextButton);
             createPanel.Controls.Add(workoutNameLabel);
             createPanel.Controls.Add(workoutNameTextBox);
             createPanel.Controls.Add(exerciseListPanel);
             createPanel.Controls.Add(currentExerciseList);
             createPanel.Controls.Add(hLine3);
             createPanel.Controls.Add(createLabel);
-            createPanel.Controls.Add(createNextButtonPanel);
             createPanel.Controls.Add(createBorders);
             createPanel.Location = new Point(69, 31);
             createPanel.Name = "createPanel";
@@ -1591,6 +1591,27 @@
             createPanel.TabIndex = 41;
             createPanel.Visible = false;
             createPanel.VisibleChanged += createPanel_VisibleChanged;
+            // 
+            // createNextButton
+            // 
+            createNextButton.BackColor = Color.WhiteSmoke;
+            createNextButton.BorderRadius = 10;
+            createNextButton.CustomizableEdges = customizableEdges1;
+            createNextButton.DisabledState.BorderColor = Color.DarkGray;
+            createNextButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            createNextButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            createNextButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            createNextButton.FillColor = Color.FromArgb(92, 225, 230);
+            createNextButton.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            createNextButton.ForeColor = Color.White;
+            createNextButton.Location = new Point(231, 274);
+            createNextButton.Name = "createNextButton";
+            createNextButton.PressedColor = Color.LightGray;
+            createNextButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            createNextButton.Size = new Size(90, 25);
+            createNextButton.TabIndex = 50;
+            createNextButton.Text = "Next";
+            createNextButton.Click += createNextButton_Click;
             // 
             // workoutNameLabel
             // 
@@ -1607,7 +1628,7 @@
             // 
             workoutNameTextBox.BackColor = Color.WhiteSmoke;
             workoutNameTextBox.BorderRadius = 8;
-            workoutNameTextBox.CustomizableEdges = customizableEdges1;
+            workoutNameTextBox.CustomizableEdges = customizableEdges3;
             workoutNameTextBox.DefaultText = "";
             workoutNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             workoutNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1615,13 +1636,15 @@
             workoutNameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             workoutNameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             workoutNameTextBox.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            workoutNameTextBox.ForeColor = Color.Black;
             workoutNameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             workoutNameTextBox.Location = new Point(206, 55);
             workoutNameTextBox.Name = "workoutNameTextBox";
             workoutNameTextBox.PasswordChar = '\0';
+            workoutNameTextBox.PlaceholderForeColor = Color.Black;
             workoutNameTextBox.PlaceholderText = "";
             workoutNameTextBox.SelectedText = "";
-            workoutNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            workoutNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
             workoutNameTextBox.Size = new Size(140, 22);
             workoutNameTextBox.TabIndex = 51;
             workoutNameTextBox.TextChanged += workoutNameTextBox_TextChanged;
@@ -1663,78 +1686,6 @@
             createLabel.Size = new Size(193, 22);
             createLabel.TabIndex = 40;
             createLabel.Text = "Workout creation - #";
-            // 
-            // createNextButtonPanel
-            // 
-            createNextButtonPanel.BackColor = Color.WhiteSmoke;
-            createNextButtonPanel.Controls.Add(createNextButton);
-            createNextButtonPanel.Location = new Point(231, 274);
-            createNextButtonPanel.Name = "createNextButtonPanel";
-            createNextButtonPanel.Size = new Size(90, 25);
-            createNextButtonPanel.TabIndex = 32;
-            // 
-            // createNextButton
-            // 
-            createNextButton.CornerRoundingRadius = 15F;
-            createNextButton.Location = new Point(0, 0);
-            createNextButton.Name = "createNextButton";
-            createNextButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            createNextButton.Size = new Size(90, 25);
-            createNextButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateCommon.Back.ColorAngle = 45F;
-            createNextButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateCommon.Border.ColorAngle = 45F;
-            createNextButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            createNextButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            createNextButton.StateCommon.Border.Rounding = 15F;
-            createNextButton.StateCommon.Border.Width = 1;
-            createNextButton.StateCommon.Content.ShortText.Color1 = Color.White;
-            createNextButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            createNextButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            createNextButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            createNextButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateNormal.Back.ColorAngle = 45F;
-            createNextButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            createNextButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            createNextButton.StateNormal.Border.ColorAngle = 45F;
-            createNextButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            createNextButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            createNextButton.StateNormal.Border.Rounding = 15F;
-            createNextButton.StateNormal.Border.Width = 1;
-            createNextButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            createNextButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            createNextButton.StatePressed.Back.ColorAngle = 45F;
-            createNextButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            createNextButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            createNextButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            createNextButton.StatePressed.Border.ColorAngle = 45F;
-            createNextButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            createNextButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            createNextButton.StatePressed.Border.Rounding = 15F;
-            createNextButton.StatePressed.Border.Width = 1;
-            createNextButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            createNextButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            createNextButton.StateTracking.Back.ColorAngle = 45F;
-            createNextButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            createNextButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
-            createNextButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
-            createNextButton.StateTracking.Border.ColorAngle = 45F;
-            createNextButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            createNextButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            createNextButton.StateTracking.Border.Rounding = 15F;
-            createNextButton.StateTracking.Border.Width = 1;
-            createNextButton.TabIndex = 31;
-            createNextButton.Values.Text = "Next";
-            createNextButton.Visible = false;
-            createNextButton.Click += createNextButton_Click;
             // 
             // createBorders
             // 
@@ -2888,7 +2839,7 @@
             // 
             editWorkoutButton.BackColor = Color.White;
             editWorkoutButton.BorderRadius = 8;
-            editWorkoutButton.CustomizableEdges = customizableEdges3;
+            editWorkoutButton.CustomizableEdges = customizableEdges5;
             editWorkoutButton.DisabledState.BorderColor = Color.DarkGray;
             editWorkoutButton.DisabledState.CustomBorderColor = Color.DarkGray;
             editWorkoutButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2901,7 +2852,7 @@
             editWorkoutButton.Location = new Point(19, 14);
             editWorkoutButton.Name = "editWorkoutButton";
             editWorkoutButton.PressedColor = Color.LightGray;
-            editWorkoutButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            editWorkoutButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             editWorkoutButton.Size = new Size(30, 30);
             editWorkoutButton.TabIndex = 1;
             editWorkoutButton.Click += guna2Button1_Click;
@@ -2949,7 +2900,7 @@
             // sundayShowButton
             // 
             sundayShowButton.BorderRadius = 10;
-            sundayShowButton.CustomizableEdges = customizableEdges5;
+            sundayShowButton.CustomizableEdges = customizableEdges7;
             sundayShowButton.DisabledState.BorderColor = Color.DarkGray;
             sundayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             sundayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2961,7 +2912,7 @@
             sundayShowButton.ForeColor = Color.White;
             sundayShowButton.Location = new Point(196, 279);
             sundayShowButton.Name = "sundayShowButton";
-            sundayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            sundayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             sundayShowButton.Size = new Size(64, 23);
             sundayShowButton.TabIndex = 8;
             sundayShowButton.Text = "SHOW";
@@ -2970,7 +2921,7 @@
             // saturdayShowButton
             // 
             saturdayShowButton.BorderRadius = 10;
-            saturdayShowButton.CustomizableEdges = customizableEdges7;
+            saturdayShowButton.CustomizableEdges = customizableEdges9;
             saturdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             saturdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             saturdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2982,7 +2933,7 @@
             saturdayShowButton.ForeColor = Color.White;
             saturdayShowButton.Location = new Point(196, 244);
             saturdayShowButton.Name = "saturdayShowButton";
-            saturdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            saturdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             saturdayShowButton.Size = new Size(64, 23);
             saturdayShowButton.TabIndex = 7;
             saturdayShowButton.Text = "SHOW";
@@ -2991,7 +2942,7 @@
             // fridayShowButton
             // 
             fridayShowButton.BorderRadius = 10;
-            fridayShowButton.CustomizableEdges = customizableEdges9;
+            fridayShowButton.CustomizableEdges = customizableEdges11;
             fridayShowButton.DisabledState.BorderColor = Color.DarkGray;
             fridayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             fridayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -3003,7 +2954,7 @@
             fridayShowButton.ForeColor = Color.White;
             fridayShowButton.Location = new Point(196, 209);
             fridayShowButton.Name = "fridayShowButton";
-            fridayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            fridayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
             fridayShowButton.Size = new Size(64, 23);
             fridayShowButton.TabIndex = 6;
             fridayShowButton.Text = "SHOW";
@@ -3012,7 +2963,7 @@
             // thursdayShowButton
             // 
             thursdayShowButton.BorderRadius = 10;
-            thursdayShowButton.CustomizableEdges = customizableEdges11;
+            thursdayShowButton.CustomizableEdges = customizableEdges13;
             thursdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             thursdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             thursdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -3024,7 +2975,7 @@
             thursdayShowButton.ForeColor = Color.White;
             thursdayShowButton.Location = new Point(196, 174);
             thursdayShowButton.Name = "thursdayShowButton";
-            thursdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            thursdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
             thursdayShowButton.Size = new Size(64, 23);
             thursdayShowButton.TabIndex = 5;
             thursdayShowButton.Text = "SHOW";
@@ -3033,7 +2984,7 @@
             // wednesdayShowButton
             // 
             wednesdayShowButton.BorderRadius = 10;
-            wednesdayShowButton.CustomizableEdges = customizableEdges13;
+            wednesdayShowButton.CustomizableEdges = customizableEdges15;
             wednesdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             wednesdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             wednesdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -3045,7 +2996,7 @@
             wednesdayShowButton.ForeColor = Color.White;
             wednesdayShowButton.Location = new Point(196, 139);
             wednesdayShowButton.Name = "wednesdayShowButton";
-            wednesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            wednesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
             wednesdayShowButton.Size = new Size(64, 23);
             wednesdayShowButton.TabIndex = 4;
             wednesdayShowButton.Text = "SHOW";
@@ -3054,7 +3005,7 @@
             // tuesdayShowButton
             // 
             tuesdayShowButton.BorderRadius = 10;
-            tuesdayShowButton.CustomizableEdges = customizableEdges15;
+            tuesdayShowButton.CustomizableEdges = customizableEdges17;
             tuesdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             tuesdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             tuesdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -3066,7 +3017,7 @@
             tuesdayShowButton.ForeColor = Color.White;
             tuesdayShowButton.Location = new Point(196, 106);
             tuesdayShowButton.Name = "tuesdayShowButton";
-            tuesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            tuesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
             tuesdayShowButton.Size = new Size(64, 23);
             tuesdayShowButton.TabIndex = 3;
             tuesdayShowButton.Text = "SHOW";
@@ -3075,7 +3026,7 @@
             // mondayShowButton
             // 
             mondayShowButton.BorderRadius = 10;
-            mondayShowButton.CustomizableEdges = customizableEdges17;
+            mondayShowButton.CustomizableEdges = customizableEdges19;
             mondayShowButton.DisabledState.BorderColor = Color.DarkGray;
             mondayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             mondayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -3087,7 +3038,7 @@
             mondayShowButton.ForeColor = Color.White;
             mondayShowButton.Location = new Point(196, 69);
             mondayShowButton.Name = "mondayShowButton";
-            mondayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            mondayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
             mondayShowButton.Size = new Size(64, 23);
             mondayShowButton.TabIndex = 2;
             mondayShowButton.Text = "SHOW";
@@ -3263,6 +3214,7 @@
             chooseWorkoutNumberPanel.Size = new Size(553, 307);
             chooseWorkoutNumberPanel.TabIndex = 48;
             chooseWorkoutNumberPanel.Visible = false;
+            chooseWorkoutNumberPanel.VisibleChanged += chooseWorkoutNumberPanel_VisibleChanged;
             // 
             // workoutNumberComboBox
             // 
@@ -3671,7 +3623,6 @@
             createPanel.ResumeLayout(false);
             createPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)hLine3).EndInit();
-            createNextButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)createBorders).EndInit();
             workoutPreviewPanel.ResumeLayout(false);
             workoutPreviewPanel.PerformLayout();
@@ -3819,8 +3770,6 @@
         private PictureBox preBorders;
         private Panel createPanel;
         private Label createLabel;
-        private Panel createNextButtonPanel;
-        private Krypton.Toolkit.KryptonButton createNextButton;
         private PictureBox createBorders;
         private Panel nextButtPanel;
         private Krypton.Toolkit.KryptonButton nextButt7;
@@ -3962,5 +3911,6 @@
         private CheckBox backBicepsCheckBox;
         private Label workoutNameLabel;
         private Guna.UI2.WinForms.Guna2TextBox workoutNameTextBox;
+        private Guna.UI2.WinForms.Guna2Button createNextButton;
     }
 }

@@ -30,6 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             topbar = new Panel();
             logo2 = new PictureBox();
@@ -81,6 +83,7 @@
             textBox_Height = new Krypton.Toolkit.KryptonTextBox();
             textBox_Weight = new Krypton.Toolkit.KryptonTextBox();
             goalPanel = new Panel();
+            buttonDone = new Guna.UI2.WinForms.Guna2Button();
             goalsPanel = new Panel();
             buttonCut = new PictureBox();
             buttonMaintain = new PictureBox();
@@ -88,7 +91,6 @@
             timerLabel = new Label();
             goalPanel1 = new Panel();
             goalLabel1 = new Label();
-            doneButton = new Krypton.Toolkit.KryptonButton();
             buttonNext = new PictureBox();
             buttonPrevious = new PictureBox();
             labelWelcome = new Label();
@@ -714,14 +716,34 @@
             // 
             // goalPanel
             // 
+            goalPanel.Controls.Add(buttonDone);
             goalPanel.Controls.Add(goalsPanel);
             goalPanel.Controls.Add(timerLabel);
             goalPanel.Controls.Add(goalPanel1);
-            goalPanel.Controls.Add(doneButton);
             goalPanel.Location = new Point(75, 50);
             goalPanel.Name = "goalPanel";
             goalPanel.Size = new Size(540, 300);
             goalPanel.TabIndex = 23;
+            // 
+            // buttonDone
+            // 
+            buttonDone.BorderRadius = 10;
+            buttonDone.CustomizableEdges = customizableEdges1;
+            buttonDone.DisabledState.BorderColor = Color.DarkGray;
+            buttonDone.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonDone.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonDone.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonDone.FillColor = Color.FromArgb(92, 225, 230);
+            buttonDone.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDone.ForeColor = Color.White;
+            buttonDone.Location = new Point(225, 242);
+            buttonDone.Name = "buttonDone";
+            buttonDone.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            buttonDone.Size = new Size(90, 25);
+            buttonDone.TabIndex = 45;
+            buttonDone.Text = "Done";
+            buttonDone.Visible = false;
+            buttonDone.Click += done_Click;
             // 
             // goalsPanel
             // 
@@ -798,69 +820,6 @@
             goalLabel1.Size = new Size(283, 19);
             goalLabel1.TabIndex = 9;
             goalLabel1.Text = "Lastly, we need to know what your goal is.";
-            // 
-            // doneButton
-            // 
-            doneButton.CornerRoundingRadius = 15F;
-            doneButton.Location = new Point(225, 246);
-            doneButton.Name = "doneButton";
-            doneButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            doneButton.Size = new Size(90, 25);
-            doneButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
-            doneButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
-            doneButton.StateCommon.Back.ColorAngle = 45F;
-            doneButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
-            doneButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
-            doneButton.StateCommon.Border.ColorAngle = 45F;
-            doneButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            doneButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            doneButton.StateCommon.Border.Rounding = 15F;
-            doneButton.StateCommon.Border.Width = 1;
-            doneButton.StateCommon.Content.ShortText.Color1 = Color.White;
-            doneButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            doneButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            doneButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            doneButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            doneButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            doneButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            doneButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            doneButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            doneButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            doneButton.StateNormal.Back.ColorAngle = 45F;
-            doneButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            doneButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            doneButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            doneButton.StateNormal.Border.ColorAngle = 45F;
-            doneButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            doneButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            doneButton.StateNormal.Border.Rounding = 15F;
-            doneButton.StateNormal.Border.Width = 1;
-            doneButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            doneButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            doneButton.StatePressed.Back.ColorAngle = 45F;
-            doneButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            doneButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            doneButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            doneButton.StatePressed.Border.ColorAngle = 45F;
-            doneButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            doneButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            doneButton.StatePressed.Border.Rounding = 15F;
-            doneButton.StatePressed.Border.Width = 1;
-            doneButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            doneButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            doneButton.StateTracking.Back.ColorAngle = 45F;
-            doneButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            doneButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
-            doneButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
-            doneButton.StateTracking.Border.ColorAngle = 45F;
-            doneButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            doneButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            doneButton.StateTracking.Border.Rounding = 15F;
-            doneButton.StateTracking.Border.Width = 1;
-            doneButton.TabIndex = 30;
-            doneButton.Values.Text = "Done";
-            doneButton.Visible = false;
-            doneButton.Click += done_Click;
             // 
             // buttonNext
             // 
@@ -1174,7 +1133,6 @@
         private Panel panelWelcome;
         private Panel namePanel1;
         private Label nameLabelFirst;
-        private Krypton.Toolkit.KryptonButton doneButton;
         private System.Windows.Forms.Timer timerName1;
         private Panel namePanel2;
         private System.Windows.Forms.Timer timerName2;
@@ -1245,5 +1203,6 @@
         private Label welcomeErrorLabel;
         private Label errorLabel;
         private PictureBox errorClose;
+        private Guna.UI2.WinForms.Guna2Button buttonDone;
     }
 }

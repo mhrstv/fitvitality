@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diet));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftC = new PictureBox();
             rightC = new PictureBox();
             vLine1 = new PictureBox();
@@ -65,6 +67,7 @@
             hiddenPanel1 = new Panel();
             label1 = new Label();
             hiddenPanel2 = new Panel();
+            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -320,11 +323,11 @@
             // activityLevelLabel
             // 
             activityLevelLabel.AutoSize = true;
-            activityLevelLabel.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            activityLevelLabel.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             activityLevelLabel.ForeColor = Color.Black;
             activityLevelLabel.Location = new Point(31, 133);
             activityLevelLabel.Name = "activityLevelLabel";
-            activityLevelLabel.Size = new Size(76, 15);
+            activityLevelLabel.Size = new Size(79, 15);
             activityLevelLabel.TabIndex = 42;
             activityLevelLabel.Text = "Activity level:";
             activityLevelLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -527,12 +530,33 @@
             hiddenPanel2.Size = new Size(0, 0);
             hiddenPanel2.TabIndex = 57;
             // 
+            // guna2ComboBox1
+            // 
+            guna2ComboBox1.BackColor = Color.Transparent;
+            guna2ComboBox1.BorderColor = Color.FromArgb(92, 225, 230);
+            guna2ComboBox1.BorderRadius = 8;
+            guna2ComboBox1.CustomizableEdges = customizableEdges1;
+            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
+            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2ComboBox1.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2ComboBox1.ForeColor = Color.Black;
+            guna2ComboBox1.ItemHeight = 30;
+            guna2ComboBox1.Items.AddRange(new object[] { "test", "test1", "test2" });
+            guna2ComboBox1.Location = new Point(113, 157);
+            guna2ComboBox1.Name = "guna2ComboBox1";
+            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2ComboBox1.Size = new Size(90, 36);
+            guna2ComboBox1.TabIndex = 58;
+            // 
             // Diet
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(guna2ComboBox1);
             Controls.Add(hiddenPanel2);
             Controls.Add(hiddenPanel1);
             Controls.Add(searchPanel);
@@ -631,5 +655,6 @@
         private Panel hiddenPanel1;
         private Label label1;
         private Panel hiddenPanel2;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }

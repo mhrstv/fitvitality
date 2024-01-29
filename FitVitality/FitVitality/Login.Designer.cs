@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             loginLabel = new Label();
             textBoxUsername = new Krypton.Toolkit.KryptonTextBox();
@@ -38,13 +41,12 @@
             labelPassword = new Label();
             newUserLabel = new Label();
             createAccButton = new Label();
-            loginButton = new Krypton.Toolkit.KryptonButton();
             topbar = new Panel();
+            buttonClose = new Guna.UI2.WinForms.Guna2CircleButton();
             vBorder2 = new PictureBox();
             logo1 = new PictureBox();
             vBorder1 = new PictureBox();
             buttonMin = new PictureBox();
-            buttonClose = new PictureBox();
             hLine1 = new PictureBox();
             corner1 = new PictureBox();
             corner2 = new PictureBox();
@@ -63,12 +65,12 @@
             vBorder4 = new PictureBox();
             passHidden = new PictureBox();
             passShown = new PictureBox();
+            buttonLogin = new Guna.UI2.WinForms.Guna2Button();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)vBorder2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vBorder1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)corner1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)corner2).BeginInit();
@@ -208,84 +210,13 @@
             createAccButton.Text = "Create an account";
             createAccButton.Click += label5_Click;
             // 
-            // loginButton
-            // 
-            loginButton.CornerRoundingRadius = 15F;
-            loginButton.Location = new Point(99, 306);
-            loginButton.Name = "loginButton";
-            loginButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            loginButton.Size = new Size(90, 25);
-            loginButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            loginButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            loginButton.StateCommon.Back.ColorAngle = 0F;
-            loginButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            loginButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            loginButton.StateCommon.Border.ColorAngle = 0F;
-            loginButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            loginButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            loginButton.StateCommon.Border.Rounding = 15F;
-            loginButton.StateCommon.Border.Width = 1;
-            loginButton.StateCommon.Content.ShortText.Color1 = Color.White;
-            loginButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            loginButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            loginButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            loginButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            loginButton.StateDisabled.Back.ColorAngle = 45F;
-            loginButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            loginButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            loginButton.StateDisabled.Border.ColorAngle = 45F;
-            loginButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            loginButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            loginButton.StateDisabled.Border.Rounding = 15F;
-            loginButton.StateDisabled.Border.Width = 1;
-            loginButton.StateDisabled.Content.ShortText.Color1 = Color.White;
-            loginButton.StateDisabled.Content.ShortText.Color2 = Color.White;
-            loginButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            loginButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            loginButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            loginButton.StateNormal.Back.ColorAngle = 0F;
-            loginButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            loginButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            loginButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            loginButton.StateNormal.Border.ColorAngle = 0F;
-            loginButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            loginButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            loginButton.StateNormal.Border.Rounding = 15F;
-            loginButton.StateNormal.Border.Width = 1;
-            loginButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            loginButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            loginButton.StatePressed.Back.ColorAngle = 45F;
-            loginButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            loginButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            loginButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            loginButton.StatePressed.Border.ColorAngle = 45F;
-            loginButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            loginButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            loginButton.StatePressed.Border.Rounding = 15F;
-            loginButton.StatePressed.Border.Width = 1;
-            loginButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            loginButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            loginButton.StateTracking.Back.ColorAngle = 45F;
-            loginButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            loginButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
-            loginButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
-            loginButton.StateTracking.Border.ColorAngle = 45F;
-            loginButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            loginButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            loginButton.StateTracking.Border.Rounding = 15F;
-            loginButton.StateTracking.Border.Width = 1;
-            loginButton.TabIndex = 9;
-            loginButton.Values.Text = "Login";
-            loginButton.Click += kryptonButton1_Click;
-            loginButton.MouseLeave += kryptonButton1_MouseLeave;
-            // 
             // topbar
             // 
+            topbar.Controls.Add(buttonClose);
             topbar.Controls.Add(vBorder2);
             topbar.Controls.Add(logo1);
             topbar.Controls.Add(vBorder1);
             topbar.Controls.Add(buttonMin);
-            topbar.Controls.Add(buttonClose);
             topbar.Controls.Add(hLine1);
             topbar.Controls.Add(corner1);
             topbar.Controls.Add(corner2);
@@ -299,6 +230,29 @@
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
+            // 
+            // buttonClose
+            // 
+            buttonClose.BackgroundImage = Properties.Resources.closebutton;
+            buttonClose.BackgroundImageLayout = ImageLayout.Stretch;
+            buttonClose.DisabledState.BorderColor = Color.DarkGray;
+            buttonClose.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonClose.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonClose.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonClose.FillColor = Color.Empty;
+            buttonClose.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonClose.ForeColor = Color.White;
+            buttonClose.ImageSize = new Size(19, 19);
+            buttonClose.Location = new Point(256, 7);
+            buttonClose.Name = "buttonClose";
+            buttonClose.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            buttonClose.Size = new Size(19, 19);
+            buttonClose.TabIndex = 39;
+            buttonClose.Click += pictureBox1_Click;
+            buttonClose.MouseEnter += pictureBox1_MouseEnter;
+            buttonClose.MouseLeave += pictureBox1_MouseLeave;
+            buttonClose.MouseHover += pictureBox1_MouseHover;
             // 
             // vBorder2
             // 
@@ -341,21 +295,6 @@
             buttonMin.Click += pictureBox2_Click;
             buttonMin.MouseEnter += pictureBox2_MouseEnter;
             buttonMin.MouseLeave += pictureBox2_MouseLeave;
-            // 
-            // buttonClose
-            // 
-            buttonClose.BackColor = Color.White;
-            buttonClose.Image = Properties.Resources.closebutton;
-            buttonClose.Location = new Point(257, 7);
-            buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(19, 19);
-            buttonClose.SizeMode = PictureBoxSizeMode.Zoom;
-            buttonClose.TabIndex = 1;
-            buttonClose.TabStop = false;
-            buttonClose.Click += pictureBox1_Click;
-            buttonClose.MouseEnter += pictureBox1_MouseEnter;
-            buttonClose.MouseLeave += pictureBox1_MouseLeave;
-            buttonClose.MouseHover += pictureBox1_MouseHover;
             // 
             // hLine1
             // 
@@ -533,12 +472,32 @@
             passShown.TabStop = false;
             passShown.Click += passShown_Click;
             // 
+            // buttonLogin
+            // 
+            buttonLogin.BorderRadius = 10;
+            buttonLogin.CustomizableEdges = customizableEdges5;
+            buttonLogin.DisabledState.BorderColor = Color.DarkGray;
+            buttonLogin.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            buttonLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonLogin.FillColor = Color.FromArgb(92, 225, 230);
+            buttonLogin.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonLogin.ForeColor = Color.White;
+            buttonLogin.Location = new Point(99, 306);
+            buttonLogin.Name = "buttonLogin";
+            buttonLogin.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            buttonLogin.Size = new Size(90, 25);
+            buttonLogin.TabIndex = 44;
+            buttonLogin.Text = "Login";
+            buttonLogin.Click += kryptonButton1_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(buttonLogin);
             Controls.Add(vBorder3);
             Controls.Add(vBorder4);
             Controls.Add(hLine2);
@@ -547,7 +506,6 @@
             Controls.Add(errorPanel);
             Controls.Add(passmark);
             Controls.Add(usrmark);
-            Controls.Add(loginButton);
             Controls.Add(rememberMe);
             Controls.Add(topbar);
             Controls.Add(createAccButton);
@@ -583,7 +541,6 @@
             ((System.ComponentModel.ISupportInitialize)logo1).EndInit();
             ((System.ComponentModel.ISupportInitialize)vBorder1).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
-            ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
             ((System.ComponentModel.ISupportInitialize)corner1).EndInit();
             ((System.ComponentModel.ISupportInitialize)corner2).EndInit();
@@ -614,12 +571,10 @@
         private Label labelPassword;
         private Label newUserLabel;
         private Label createAccButton;
-        private Krypton.Toolkit.KryptonButton loginButton;
         private Panel topbar;
         private PictureBox logo2;
         private PictureBox logo1;
         private PictureBox buttonMin;
-        private PictureBox buttonClose;
         private CheckBox rememberMe;
         private Label loginFail;
         private Panel errorPanel;
@@ -639,5 +594,7 @@
         private PictureBox vBorder1;
         private PictureBox passHidden;
         private PictureBox passShown;
+        private Guna.UI2.WinForms.Guna2CircleButton buttonClose;
+        private Guna.UI2.WinForms.Guna2Button buttonLogin;
     }
 }

@@ -36,7 +36,7 @@
             // 
             exerciseLabel.Location = new Point(3, 3);
             exerciseLabel.Name = "exerciseLabel";
-            exerciseLabel.Size = new Size(155, 17);
+            exerciseLabel.Size = new Size(212, 17);
             exerciseLabel.TabIndex = 0;
             exerciseLabel.Text = "/exercise/";
             // 
@@ -45,7 +45,7 @@
             addLabel.AutoSize = true;
             addLabel.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             addLabel.ForeColor = Color.FromArgb(92, 225, 230);
-            addLabel.Location = new Point(164, 1);
+            addLabel.Location = new Point(221, 1);
             addLabel.Name = "addLabel";
             addLabel.Size = new Size(19, 20);
             addLabel.TabIndex = 2;
@@ -59,7 +59,7 @@
             Controls.Add(addLabel);
             Controls.Add(exerciseLabel);
             Name = "ExerciseListItem";
-            Size = new Size(184, 23);
+            Size = new Size(242, 23);
             Load += ExerciseListItem_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -9,6 +9,7 @@ using System.Data;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
+using System.Management;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -476,12 +477,22 @@ namespace FitVitality
             else if (createClicked)
             {
                 muscleGroupPanel.Visible = false;
-                if (upperBodyClicked)
+                if (gymClicked && upperBodyClicked)
                     upperBodyPanel.Visible = true;
-                if (!upperBodyClicked && lowerBodyClicked)
+                else if(homeClicked || outdoorsClicked && upperBodyClicked)
+                {
+                    //new panel
+                }
+                if (gymClicked && lowerBodyClicked && !upperBodyClicked)
                     lowerBodyPanel.Visible = true;
-                if (!upperBodyClicked && !lowerBodyClicked)
-                    cardioPanel.Visible = true;
+                else if ((homeClicked || outdoorsClicked) && lowerBodyClicked && !upperBodyClicked)
+                {
+                    chooseWorkoutNumberPanel.Visible = true;
+                }
+                if(!upperBodyClicked && !lowerBodyClicked && coreClicked)
+                {
+                    chooseWorkoutNumberPanel.Visible = true;
+                }
             }
         }
 
@@ -563,7 +574,7 @@ namespace FitVitality
             else
             {
                 upperBodyPanel.Visible = false;
-                cardioPanel.Visible = true;
+                chooseWorkoutNumberPanel.Visible = true;
             }
         }
 
@@ -644,28 +655,12 @@ namespace FitVitality
         {
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
-            cardioPanel.Visible = true;
+            chooseWorkoutNumberPanel.Visible = true;
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            yesPictureBox.Image = Properties.Resources.yesSelected;
-            noPictureBox.Image = Properties.Resources.no;
-            yesClicked = true;
-            noClicked = false;
-            nextButton6.Visible = true;
-            cardioClicked = true;
-        }
+        
 
-        private void pictureBox3_Click_1(object sender, EventArgs e)
-        {
-            noPictureBox.Image = Properties.Resources.noSelected;
-            yesPictureBox.Image = Properties.Resources.yes;
-            noClicked = true;
-            yesClicked = false;
-            nextButton6.Visible = true;
-            cardioClicked = false;
-        }
+        
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
@@ -677,44 +672,18 @@ namespace FitVitality
 
         }
 
-        private void pictureBox1_MouseEnter(object sender, EventArgs e)
-        {
-            if (!yesClicked)
-            {
-                yesPictureBox.Image = Properties.Resources.yesHovered;
-            }
-        }
+        
 
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
-        {
-            if (!yesClicked)
-            {
-                yesPictureBox.Image = Properties.Resources.yes;
-            }
-        }
+        
 
-        private void pictureBox3_MouseEnter(object sender, EventArgs e)
-        {
-            if (!noClicked)
-            {
-                noPictureBox.Image = Properties.Resources.noHovered;
-            }
-        }
-
-        private void pictureBox3_MouseLeave(object sender, EventArgs e)
-        {
-            if (!noClicked)
-            {
-                noPictureBox.Image = Properties.Resources.no;
-            }
-        }
+        
 
         private void nextButton6_Click(object sender, EventArgs e)
         {
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
-            cardioPanel.Visible = false;
             chooseWorkoutNumberPanel.Visible = true;
+            workoutsLabel.Visible = false;
         }
 
         private void prePicture_Click(object sender, EventArgs e)
@@ -776,7 +745,7 @@ namespace FitVitality
             workoutTypePanel.Visible = false;
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
-            cardioPanel.Visible = false;
+            chooseWorkoutNumberPanel.Visible = false;
             if (preClicked)
             {
                 workoutsList.Visible = true;
@@ -1789,118 +1758,152 @@ namespace FitVitality
         }
         private void saveWorkoutParameter(KryptonComboBox cb, string day, SqlCommand command)
         {
-            if (gymClicked)
+            if (preClicked)
             {
-                if (cb.Text == "Back and Biceps")
+                if (gymClicked)
                 {
-                    command.Parameters.AddWithValue(day, BackWorkout + BicepsWorkout);
+                    if (cb.Text == "Back and Biceps")
+                    {
+                        command.Parameters.AddWithValue(day, BackWorkout + BicepsWorkout);
+                    }
+                    else if (cb.Text == "Chest")
+                    {
+                        command.Parameters.AddWithValue(day, ChestWorkout);
+                    }
+                    else if (cb.Text == "Triceps")
+                    {
+                        command.Parameters.AddWithValue(day, TricepsWorkout);
+                    }
+                    else if (cb.Text == "Shoulders")
+                    {
+                        command.Parameters.AddWithValue(day, ShouldersWorkout);
+                    }
+                    else if (cb.Text == "Chest and Triceps")
+                    {
+                        command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout);
+                    }
+                    else if (cb.Text == "Chest and Shoulders")
+                    {
+                        command.Parameters.AddWithValue(day, ChestWorkout + ShouldersWorkout);
+                    }
+                    else if (cb.Text == "Triceps and Shoulders")
+                    {
+                        command.Parameters.AddWithValue(day, TricepsWorkout + ShouldersWorkout);
+                    }
+                    else if (cb.Text == "Quadriceps")
+                    {
+                        command.Parameters.AddWithValue(day, QuadricepsWorkout);
+                    }
+                    else if (cb.Text == "Hamstrings")
+                    {
+                        command.Parameters.AddWithValue(day, HamstringsWorkout);
+                    }
+                    else if (cb.Text == "Glutes")
+                    {
+                        command.Parameters.AddWithValue(day, GlutesWorkout);
+                    }
+                    else if (cb.Text == "Calves")
+                    {
+                        command.Parameters.AddWithValue(day, CalvesWorkout);
+                    }
+                    else if (cb.Text == "Quadriceps and Hamstrings")
+                    {
+                        command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout);
+                    }
+                    else if (cb.Text == "Quadriceps and Glutes")
+                    {
+                        command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout);
+                    }
+                    else if (cb.Text == "Quadriceps and Calves")
+                    {
+                        command.Parameters.AddWithValue(day, QuadricepsWorkout + CalvesWorkout);
+                    }
+                    else if (cb.Text == "Hamstrings and Glutes")
+                    {
+                        command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout);
+                    }
+                    else if (cb.Text == "Glutes and Calves")
+                    {
+                        command.Parameters.AddWithValue(day, GlutesWorkout + CalvesWorkout);
+                    }
+                    else if (cb.Text == "Quadriceps, Hamstrings and Glutes")
+                    {
+                        command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                    }
+                    else if (cb.Text == "Quadriceps, Hamstrings and Calves")
+                    {
+                        command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                    }
+                    else if (cb.Text == "Quadriceps, Glutes and Calves")
+                    {
+                        command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                    }
+                    else if (cb.Text == "Hamstrings, Glutes and Calves")
+                    {
+                        command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                    }
+                    else if (cb.Text == "Legs")
+                    {
+                        command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                    }
+                    else if (cb.Text == "Core")
+                    {
+                        command.Parameters.AddWithValue(day, CoreWorkout);
+                    }
+                    else if (cb.Text == "Chest, Triceps and Shoulders")
+                    {
+                        command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                    }
                 }
-                else if (cb.Text == "Chest")
+                else
                 {
-                    command.Parameters.AddWithValue(day, ChestWorkout);
-                }
-                else if (cb.Text == "Triceps")
-                {
-                    command.Parameters.AddWithValue(day, TricepsWorkout);
-                }
-                else if (cb.Text == "Shoulders")
-                {
-                    command.Parameters.AddWithValue(day, ShouldersWorkout);
-                }
-                else if (cb.Text == "Chest and Triceps")
-                {
-                    command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout);
-                }
-                else if (cb.Text == "Chest and Shoulders")
-                {
-                    command.Parameters.AddWithValue(day, ChestWorkout + ShouldersWorkout);
-                }
-                else if (cb.Text == "Triceps and Shoulders")
-                {
-                    command.Parameters.AddWithValue(day, TricepsWorkout + ShouldersWorkout);
-                }
-                else if (cb.Text == "Quadriceps")
-                {
-                    command.Parameters.AddWithValue(day, QuadricepsWorkout);
-                }
-                else if (cb.Text == "Hamstrings")
-                {
-                    command.Parameters.AddWithValue(day, HamstringsWorkout);
-                }
-                else if (cb.Text == "Glutes")
-                {
-                    command.Parameters.AddWithValue(day, GlutesWorkout);
-                }
-                else if (cb.Text == "Calves")
-                {
-                    command.Parameters.AddWithValue(day, CalvesWorkout);
-                }
-                else if (cb.Text == "Quadriceps and Hamstrings")
-                {
-                    command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout);
-                }
-                else if (cb.Text == "Quadriceps and Glutes")
-                {
-                    command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout);
-                }
-                else if (cb.Text == "Quadriceps and Calves")
-                {
-                    command.Parameters.AddWithValue(day, QuadricepsWorkout + CalvesWorkout);
-                }
-                else if (cb.Text == "Hamstrings and Glutes")
-                {
-                    command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout);
-                }
-                else if (cb.Text == "Glutes and Calves")
-                {
-                    command.Parameters.AddWithValue(day, GlutesWorkout + CalvesWorkout);
-                }
-                else if (cb.Text == "Quadriceps, Hamstrings and Glutes")
-                {
-                    command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
-                }
-                else if (cb.Text == "Quadriceps, Hamstrings and Calves")
-                {
-                    command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
-                }
-                else if (cb.Text == "Quadriceps, Glutes and Calves")
-                {
-                    command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
-                }
-                else if (cb.Text == "Hamstrings, Glutes and Calves")
-                {
-                    command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout + CalvesWorkout);
-                }
-                else if (cb.Text == "Legs")
-                {
-                    command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
-                }
-                else if (cb.Text == "Core")
-                {
-                    command.Parameters.AddWithValue(day, CoreWorkout);
-                }
-                else if (cb.Text == "Chest, Triceps and Shoulders")
-                {
-                    command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                    if (cb.Text == "Back and Biceps")
+                    {
+                        command.Parameters.AddWithValue(day, BackBicepsWorkout);
+                    }
+                    else if (cb.Text == "Chest, Triceps and Shoulders")
+                    {
+                        command.Parameters.AddWithValue(day, ChestTricepsShouldersWorkout);
+                    }
+                    else if (cb.Text == "Legs")
+                    {
+                        command.Parameters.AddWithValue(day, LegsWorkout);
+                    }
+                    else if (cb.Text == "Core")
+                    {
+                        command.Parameters.AddWithValue(day, CoreWorkout);
+                    }
                 }
             }
             else
             {
-                if (cb.Text == "Back and Biceps")
+                if (cb.Text == "Workout 1")
                 {
-                    command.Parameters.AddWithValue(day, BackBicepsWorkout);
+                    command.Parameters.AddWithValue(day, workout1);
                 }
-                else if (cb.Text == "Chest, Triceps and Shoulders")
+                else if (cb.Text == "Workout 2")
                 {
-                    command.Parameters.AddWithValue(day, ChestTricepsShouldersWorkout);
+                    command.Parameters.AddWithValue(day, workout2);
                 }
-                else if (cb.Text == "Legs")
+                else if (cb.Text == "Workout 3")
                 {
-                    command.Parameters.AddWithValue(day, LegsWorkout);
+                    command.Parameters.AddWithValue(day, workout3);
                 }
-                else if (cb.Text == "Core")
+                else if (cb.Text == "Workout 4")
                 {
-                    command.Parameters.AddWithValue(day, CoreWorkout);
+                    command.Parameters.AddWithValue(day, workout4);
+                }
+                else if (cb.Text == "Workout 5")
+                {
+                    command.Parameters.AddWithValue(day, workout5);
+                }
+                else if (cb.Text == "Workout 6")
+                {
+                    command.Parameters.AddWithValue(day, workout6);
+                }
+                else if (cb.Text == "Workout 7")
+                {
+                    command.Parameters.AddWithValue(day, workout7);
                 }
             }
         }
@@ -1931,8 +1934,8 @@ namespace FitVitality
             if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
             {
                 date1.Text = DateTime.Now.ToString("dd.MM");
-                date1.ForeColor = Color.LightGreen;
-                wdMonday.ForeColor = Color.LightGreen;
+                date1.ForeColor = Color.Green;
+                wdMonday.ForeColor = Color.Green;
                 date2.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
                 date3.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
                 date4.Text = DateTime.Now.AddDays(3).ToString("dd.MM");
@@ -1944,8 +1947,8 @@ namespace FitVitality
             {
                 date1.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
                 date2.Text = DateTime.Now.ToString("dd.MM");
-                date2.ForeColor = Color.LightGreen;
-                wdTuesday.ForeColor = Color.LightGreen;
+                date2.ForeColor = Color.Green;
+                wdTuesday.ForeColor = Color.Green;
                 date3.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
                 date4.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
                 date5.Text = DateTime.Now.AddDays(3).ToString("dd.MM");
@@ -1957,8 +1960,8 @@ namespace FitVitality
                 date1.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
                 date2.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
                 date3.Text = DateTime.Now.ToString("dd.MM");
-                date3.ForeColor = Color.LightGreen;
-                wdWednesday.ForeColor = Color.LightGreen;
+                date3.ForeColor = Color.Green;
+                wdWednesday.ForeColor = Color.Green;
                 date4.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
                 date5.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
                 date6.Text = DateTime.Now.AddDays(3).ToString("dd.MM");
@@ -1970,8 +1973,8 @@ namespace FitVitality
                 date2.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
                 date3.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
                 date4.Text = DateTime.Now.ToString("dd.MM");
-                date4.ForeColor = Color.LightGreen;
-                wdThursday.ForeColor = Color.LightGreen;
+                date4.ForeColor = Color.Green;
+                wdThursday.ForeColor = Color.Green;
                 date5.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
                 date6.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
                 date7.Text = DateTime.Now.AddDays(3).ToString("dd.MM");
@@ -1983,8 +1986,8 @@ namespace FitVitality
                 date3.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
                 date4.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
                 date5.Text = DateTime.Now.ToString("dd.MM");
-                date5.ForeColor = Color.LightGreen;
-                wdFriday.ForeColor = Color.LightGreen;
+                date5.ForeColor = Color.Green;
+                wdFriday.ForeColor = Color.Green;
                 date6.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
                 date7.Text = DateTime.Now.AddDays(2).ToString("dd.MM");
             }
@@ -1996,8 +1999,8 @@ namespace FitVitality
                 date4.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
                 date5.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
                 date6.Text = DateTime.Now.ToString("dd.MM");
-                date6.ForeColor = Color.LightGreen;
-                wdSaturday.ForeColor = Color.LightGreen;
+                date6.ForeColor = Color.Green;
+                wdSaturday.ForeColor = Color.Green;
                 date7.Text = DateTime.Now.AddDays(1).ToString("dd.MM");
             }
             if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
@@ -2009,8 +2012,8 @@ namespace FitVitality
                 date5.Text = DateTime.Now.AddDays(-2).ToString("dd.MM");
                 date6.Text = DateTime.Now.AddDays(-1).ToString("dd.MM");
                 date7.Text = DateTime.Now.ToString("dd.MM");
-                date7.ForeColor = Color.LightGreen;
-                wdSunday.ForeColor = Color.LightGreen;
+                date7.ForeColor = Color.Green;
+                wdSunday.ForeColor = Color.Green;
             }
 
             if (workoutSelection == "")
@@ -2040,7 +2043,6 @@ namespace FitVitality
                 nextButton3.Visible = false;
                 nextButton4.Visible = false;
                 nextButton5.Visible = false;
-                nextButton6.Visible = false;
                 nextButton7.Visible = false;
                 nextButt7.Visible = false;
                 preNextButton.Visible = false;
@@ -2087,6 +2089,36 @@ namespace FitVitality
                 sunComboBox.Visible = false;
                 workoutDaysDone = false;
                 selectedDays = 0;
+                workoutNumber = 0;
+                upperBodyClicked = false;
+                upperButton.Image = Properties.Resources.upper;
+                lowerBodyClicked = false;
+                lowerButton.Image = Properties.Resources.lower;
+                coreClicked = false;
+                coreButton.Image = Properties.Resources.core;
+                backCheckBox.Checked = false;
+                backPicture.Image = Properties.Resources.back;
+                armsCheckBox.Checked = false;
+                armsPicture.Image = Properties.Resources.arms;
+                chestCheckBox.Checked = false;
+                chestPicture.Image = Properties.Resources.chest;
+                shouldersCheckBox.Checked = false;
+                shouldersPicture.Image = Properties.Resources.shoulders;
+                quadricepsCheckBox.Checked = false;
+                quadricepsPicture.Image = Properties.Resources.quadriceps;
+                hamstringsCheckBox.Checked = false;
+                hamstringsPicture.Image = Properties.Resources.hamstrings;
+                glutesCheckBox.Checked = false;
+                glutesPicture.Image = Properties.Resources.glutes;
+                calvesCheckBox.Checked = false;
+                calvesPicture.Image = Properties.Resources.calves;
+                exerciseListItems.Clear();
+                exerciseList.Clear();
+                exerciseListPanel.Controls.Clear();
+                currentExerciseList.Controls.Clear();
+                workoutNumberComboBox.Text = "";
+                workoutNumberComboBox.SelectedIndex = -1;
+                chooseWorkoutNumberPanel.Visible = false;
             }
         }
         private void workoutShow(string day)
@@ -2283,6 +2315,7 @@ namespace FitVitality
         {
             chooseWorkoutNumberPanel.Visible = false;
             createPanel.Visible = true;
+            workoutsLabel.Visible = false;
             workoutNumber = int.Parse(workoutNumberComboBox.Text);
         }
 
@@ -2291,6 +2324,197 @@ namespace FitVitality
             if (workoutNumberComboBox.Text != "")
             {
                 chooseWorkoutNumberNextBut.Visible = true;
+            }
+        }
+
+        List<ExerciseListItem> exerciseListItems = new List<ExerciseListItem>();
+        List<Exercise> exerciseList = new List<Exercise>();
+        string workout1 = "";
+        string workout2 = "";
+        string workout3 = "";
+        string workout4 = "";
+        string workout5 = "";
+        string workout6 = "";
+        string workout7 = "";
+        private void createPanel_VisibleChanged(object sender, EventArgs e)
+        {
+            exerciseListItems.Clear();
+            exerciseList.Clear();
+            exerciseListPanel.Controls.Clear();
+            currentExerciseList.Controls.Clear();
+            createLabel.Text = "Workout creation - 1";
+            loadItemsList();
+        }
+        private void loadItems(List<string> exercises, string type)
+        {
+            for (int i = 0; i < exercises.Count; i++)
+            {
+                ExerciseListItem exerciselistitem = new ExerciseListItem();
+                exerciselistitem.ExerciseListName = exercises[i] + $" ({type})";
+                exerciselistitem.ExerciseName = exercises[i];
+                exerciselistitem.ButtonClicked += (sender, e) => addWorkoutItem(sender, e);
+                exerciseListPanel.Controls.Add(exerciselistitem);
+                exerciseListItems.Add(exerciselistitem);
+            }
+        }
+        private void loadItemsList()
+        {
+            if (gymClicked)
+            {
+                if (armsCheckBox.Checked)
+                {
+                    loadItems(gymBiceps, "Biceps");
+                    loadItems(gymBack, "Back");
+                }
+                if (chestCheckBox.Checked)
+                {
+                    loadItems(gymChest, "Chest");
+                }
+                if (shouldersCheckBox.Checked)
+                {
+                    loadItems(gymShoulders, "Shoulders");
+                }
+                if (quadricepsCheckBox.Checked)
+                {
+                    loadItems(gymQuadriceps, "Quadriceps");
+                }
+                if (hamstringsCheckBox.Checked)
+                {
+                    loadItems(gymHamstrings, "Hamstrings");
+                }
+                if (glutesCheckBox.Checked)
+                {
+                    loadItems(gymGlutes, "Glutes");
+                }
+                if (calvesCheckBox.Checked)
+                {
+                    loadItems(gymCalves, "Calves");
+                }
+                if (coreClicked)
+                {
+                    loadItems(gymCore, "Core");
+                }
+            }
+            else if (homeClicked)
+            {
+
+            }
+            else if (outdoorsClicked)
+            {
+
+            }
+        }
+
+        private void addWorkoutItem(object sender, EventArgs e)
+        {
+            for (int i = 0; i < exerciseListItems.Count; i++)
+            {
+                if (exerciseListItems[i].Equals(sender))
+                {
+                    exerciseListPanel.Controls.RemoveAt(i);
+                    exerciseListItems.RemoveAt(i);
+                    if (exerciseListItems.Count > 0)
+                    {
+                        Exercise exercise = new Exercise();
+                        exercise.ExerciseName = exerciseListItems[i].ExerciseName;
+                        exercise.ExerciseListName = exerciseListItems[i].ExerciseListName;
+                        exercise.ButtonClicked += (sender, e) => removeWorkoutItem(sender, e);
+                        currentExerciseList.Controls.Add(exercise);
+                        exerciseList.Add(exercise);
+                        createNextButton.Visible = true;
+                    }
+                    else createNextButton.Visible = false;
+                }
+            }
+        }
+        private void removeWorkoutItem(object sender, EventArgs e)
+        {
+            for (int i = 0; i < exerciseList.Count; i++)
+            {
+                if (exerciseList[i].Equals(sender))
+                {
+                    currentExerciseList.Controls.RemoveAt(i);
+                    exerciseList.RemoveAt(i);
+                    ExerciseListItem exerciselistitem = new ExerciseListItem();
+                    if (exerciseList.Count > 0)
+                    {
+                        exerciselistitem.ExerciseListName = exerciseList[i].ExerciseListName;
+                        exerciselistitem.ExerciseName = exerciseList[i].ExerciseName;
+                        exerciselistitem.ButtonClicked += (sender, e) => addWorkoutItem(sender, e);
+                        exerciseListPanel.Controls.Add(exerciselistitem);
+                        exerciseListItems.Add(exerciselistitem);
+                    }
+                    else createNextButton.Visible = false;
+                }
+            }
+        }
+        int currentWorkoutNumber = 1;
+
+        private void createWorkout(ref string workout, int workout_number, int titleLabel_Number)
+        {
+            for (int i = 0; i < exerciseList.Count; i++)
+            {
+                if (i! < exerciseList.Count - 1)
+                {
+                    workout += exerciseList[i].ExerciseName + ",";
+                }
+                else workout += exerciseList[i].ExerciseName;
+            }
+            WorkoutDays.Add($"Workout {workout_number}");
+            createLabel.Text = $"Workout creation - {titleLabel_Number}";
+            exerciseListItems.Clear();
+            exerciseList.Clear();
+            exerciseListPanel.Controls.Clear();
+            currentExerciseList.Controls.Clear();
+            loadItemsList();
+            if (currentWorkoutNumber <= workoutNumber) currentWorkoutNumber++;
+            else if (currentWorkoutNumber == workoutNumber - 1) createNextButton.Text = "Done";
+            else
+            {
+                createPanel.Visible = false;
+                trainingDaysPanel.Visible = true;
+            }
+        }
+        private void createNextButton_Click(object sender, EventArgs e)
+        {
+            switch (currentWorkoutNumber)
+            {
+                case 1:
+                    createWorkout(ref workout1, 1, 2);
+                    break;
+                case 2:
+                    createWorkout(ref workout2, 2, 3);
+                    break;
+                case 3:
+                    createWorkout(ref workout3, 3, 4);
+                    break;
+                case 4:
+                    createWorkout(ref workout4, 4, 5);
+                    break;
+                case 5:
+                    createWorkout(ref workout5, 5, 6);
+                    break;
+                case 6:
+                    createWorkout(ref workout6, 6, 7);
+                    break;
+                case 7:
+                    for (int i = 0; i < exerciseList.Count; i++)
+                    {
+                        if (i! < exerciseList.Count - 1)
+                        {
+                            workout7 += exerciseList[i].ExerciseName + ",";
+                        }
+                        else workout7 += exerciseList[i].ExerciseName;
+                    }
+                    WorkoutDays.Add("Workout 7");
+                    if (currentWorkoutNumber <= workoutNumber) currentWorkoutNumber++;
+                    else if (currentWorkoutNumber == workoutNumber - 1) createNextButton.Text = "Done";
+                    else if (currentWorkoutNumber == workoutNumber)
+                    {
+                        createPanel.Visible = false;
+                        trainingDaysPanel.Visible = true;
+                    }
+                    break;
             }
         }
     }

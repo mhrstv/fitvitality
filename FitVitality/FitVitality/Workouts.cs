@@ -479,9 +479,9 @@ namespace FitVitality
                 muscleGroupPanel.Visible = false;
                 if (gymClicked && upperBodyClicked)
                     upperBodyPanel.Visible = true;
-                else if(homeClicked || outdoorsClicked && upperBodyClicked)
+                else if (homeClicked || outdoorsClicked && upperBodyClicked)
                 {
-                    //new panel
+                    upperBodyHomeOutdoorsPanel.Visible = true;
                 }
                 if (gymClicked && lowerBodyClicked && !upperBodyClicked)
                     lowerBodyPanel.Visible = true;
@@ -489,7 +489,7 @@ namespace FitVitality
                 {
                     chooseWorkoutNumberPanel.Visible = true;
                 }
-                if(!upperBodyClicked && !lowerBodyClicked && coreClicked)
+                if (!upperBodyClicked && !lowerBodyClicked && coreClicked)
                 {
                     chooseWorkoutNumberPanel.Visible = true;
                 }
@@ -658,9 +658,9 @@ namespace FitVitality
             chooseWorkoutNumberPanel.Visible = true;
         }
 
-        
 
-        
+
+
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
@@ -672,11 +672,11 @@ namespace FitVitality
 
         }
 
-        
 
-        
 
-        
+
+
+
 
         private void nextButton6_Click(object sender, EventArgs e)
         {

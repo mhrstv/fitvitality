@@ -271,3 +271,4 @@ E:\Project\fitvitality-win\FitVitality\FitVitality\bin\Debug\net6.0-windows\runt
 C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Exercise.resources
 E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.Exercise.resources
 E:\Project\fitvitality-win\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.ExerciseListItem.resources
+C:\Users\User1\Desktop\Projects\olympiad-project\FitVitality\FitVitality\obj\Debug\net6.0-windows\FitVitality.ExerciseListItem.resources

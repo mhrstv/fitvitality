@@ -244,6 +244,19 @@
             chooseWorkoutNumButPanel = new Panel();
             chooseWorkoutNumberNextBut = new Krypton.Toolkit.KryptonButton();
             chooseWorkoutNumberBorders = new PictureBox();
+            upperBodyHomeOutdoorsPanel = new Panel();
+            backBicepsCheckBox = new CheckBox();
+            pictureBox1 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            frontCTS = new PictureBox();
+            label1 = new Label();
+            chestTricepsShoulderCheckBox = new CheckBox();
+            upperBodyHomeOutdoorsButPanel = new Panel();
+            upperBodyHomeOutdoorsButton = new Krypton.Toolkit.KryptonButton();
+            upperBodyHomeOutdoorsLabel = new Label();
+            upperBodyHomeOutdoorsBorders = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -341,6 +354,14 @@
             ((System.ComponentModel.ISupportInitialize)workoutNumberComboBox).BeginInit();
             chooseWorkoutNumButPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chooseWorkoutNumberBorders).BeginInit();
+            upperBodyHomeOutdoorsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)frontCTS).BeginInit();
+            upperBodyHomeOutdoorsButPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)upperBodyHomeOutdoorsBorders).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -2252,7 +2273,7 @@
             selectWorkoutsPanel.Controls.Add(selectWorkoutsLabel);
             selectWorkoutsPanel.Controls.Add(preNextButton3Panel);
             selectWorkoutsPanel.Controls.Add(selectWorkoutsBorders);
-            selectWorkoutsPanel.Location = new Point(69, 31);
+            selectWorkoutsPanel.Location = new Point(69, 29);
             selectWorkoutsPanel.Name = "selectWorkoutsPanel";
             selectWorkoutsPanel.Size = new Size(553, 307);
             selectWorkoutsPanel.TabIndex = 46;
@@ -3328,12 +3349,202 @@
             chooseWorkoutNumberBorders.TabIndex = 0;
             chooseWorkoutNumberBorders.TabStop = false;
             // 
+            // upperBodyHomeOutdoorsPanel
+            // 
+            upperBodyHomeOutdoorsPanel.Controls.Add(backBicepsCheckBox);
+            upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox1);
+            upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox5);
+            upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox2);
+            upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox3);
+            upperBodyHomeOutdoorsPanel.Controls.Add(frontCTS);
+            upperBodyHomeOutdoorsPanel.Controls.Add(label1);
+            upperBodyHomeOutdoorsPanel.Controls.Add(chestTricepsShoulderCheckBox);
+            upperBodyHomeOutdoorsPanel.Controls.Add(upperBodyHomeOutdoorsButPanel);
+            upperBodyHomeOutdoorsPanel.Controls.Add(upperBodyHomeOutdoorsLabel);
+            upperBodyHomeOutdoorsPanel.Controls.Add(upperBodyHomeOutdoorsBorders);
+            upperBodyHomeOutdoorsPanel.Location = new Point(86, 53);
+            upperBodyHomeOutdoorsPanel.Name = "upperBodyHomeOutdoorsPanel";
+            upperBodyHomeOutdoorsPanel.Size = new Size(518, 262);
+            upperBodyHomeOutdoorsPanel.TabIndex = 49;
+            upperBodyHomeOutdoorsPanel.Visible = false;
+            // 
+            // backBicepsCheckBox
+            // 
+            backBicepsCheckBox.AutoSize = true;
+            backBicepsCheckBox.BackColor = Color.WhiteSmoke;
+            backBicepsCheckBox.Location = new Point(315, 77);
+            backBicepsCheckBox.Name = "backBicepsCheckBox";
+            backBicepsCheckBox.Size = new Size(111, 19);
+            backBicepsCheckBox.TabIndex = 50;
+            backBicepsCheckBox.Text = "Back and Biceps";
+            backBicepsCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(378, 100);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(62, 108);
+            pictureBox1.TabIndex = 50;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.vline;
+            pictureBox5.Location = new Point(260, 65);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(1, 150);
+            pictureBox5.TabIndex = 50;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(300, 100);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(62, 107);
+            pictureBox2.TabIndex = 41;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Location = new Point(157, 99);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(62, 108);
+            pictureBox3.TabIndex = 40;
+            pictureBox3.TabStop = false;
+            // 
+            // frontCTS
+            // 
+            frontCTS.BackColor = Color.White;
+            frontCTS.Location = new Point(77, 99);
+            frontCTS.Name = "frontCTS";
+            frontCTS.Size = new Size(62, 107);
+            frontCTS.TabIndex = 39;
+            frontCTS.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(242, 242, 242);
+            label1.Font = new Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlText;
+            label1.Location = new Point(135, 29);
+            label1.Name = "label1";
+            label1.Size = new Size(45, 18);
+            label1.TabIndex = 34;
+            label1.Text = "upper";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // chestTricepsShoulderCheckBox
+            // 
+            chestTricepsShoulderCheckBox.AutoSize = true;
+            chestTricepsShoulderCheckBox.BackColor = Color.WhiteSmoke;
+            chestTricepsShoulderCheckBox.Location = new Point(61, 76);
+            chestTricepsShoulderCheckBox.Name = "chestTricepsShoulderCheckBox";
+            chestTricepsShoulderCheckBox.Size = new Size(176, 19);
+            chestTricepsShoulderCheckBox.TabIndex = 33;
+            chestTricepsShoulderCheckBox.Text = "Chest, Triceps and Shoulders";
+            chestTricepsShoulderCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // upperBodyHomeOutdoorsButPanel
+            // 
+            upperBodyHomeOutdoorsButPanel.BackColor = Color.WhiteSmoke;
+            upperBodyHomeOutdoorsButPanel.Controls.Add(upperBodyHomeOutdoorsButton);
+            upperBodyHomeOutdoorsButPanel.Location = new Point(214, 221);
+            upperBodyHomeOutdoorsButPanel.Name = "upperBodyHomeOutdoorsButPanel";
+            upperBodyHomeOutdoorsButPanel.Size = new Size(90, 25);
+            upperBodyHomeOutdoorsButPanel.TabIndex = 32;
+            // 
+            // upperBodyHomeOutdoorsButton
+            // 
+            upperBodyHomeOutdoorsButton.CornerRoundingRadius = 15F;
+            upperBodyHomeOutdoorsButton.Location = new Point(0, 0);
+            upperBodyHomeOutdoorsButton.Name = "upperBodyHomeOutdoorsButton";
+            upperBodyHomeOutdoorsButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            upperBodyHomeOutdoorsButton.Size = new Size(90, 25);
+            upperBodyHomeOutdoorsButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateCommon.Back.ColorAngle = 45F;
+            upperBodyHomeOutdoorsButton.StateCommon.Border.Color1 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateCommon.Border.Color2 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateCommon.Border.ColorAngle = 45F;
+            upperBodyHomeOutdoorsButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            upperBodyHomeOutdoorsButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            upperBodyHomeOutdoorsButton.StateCommon.Border.Rounding = 15F;
+            upperBodyHomeOutdoorsButton.StateCommon.Border.Width = 1;
+            upperBodyHomeOutdoorsButton.StateCommon.Content.ShortText.Color1 = Color.White;
+            upperBodyHomeOutdoorsButton.StateCommon.Content.ShortText.Color2 = Color.White;
+            upperBodyHomeOutdoorsButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            upperBodyHomeOutdoorsButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            upperBodyHomeOutdoorsButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateNormal.Back.ColorAngle = 45F;
+            upperBodyHomeOutdoorsButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            upperBodyHomeOutdoorsButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
+            upperBodyHomeOutdoorsButton.StateNormal.Border.ColorAngle = 45F;
+            upperBodyHomeOutdoorsButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            upperBodyHomeOutdoorsButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            upperBodyHomeOutdoorsButton.StateNormal.Border.Rounding = 15F;
+            upperBodyHomeOutdoorsButton.StateNormal.Border.Width = 1;
+            upperBodyHomeOutdoorsButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
+            upperBodyHomeOutdoorsButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
+            upperBodyHomeOutdoorsButton.StatePressed.Back.ColorAngle = 45F;
+            upperBodyHomeOutdoorsButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            upperBodyHomeOutdoorsButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
+            upperBodyHomeOutdoorsButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
+            upperBodyHomeOutdoorsButton.StatePressed.Border.ColorAngle = 45F;
+            upperBodyHomeOutdoorsButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            upperBodyHomeOutdoorsButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            upperBodyHomeOutdoorsButton.StatePressed.Border.Rounding = 15F;
+            upperBodyHomeOutdoorsButton.StatePressed.Border.Width = 1;
+            upperBodyHomeOutdoorsButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
+            upperBodyHomeOutdoorsButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
+            upperBodyHomeOutdoorsButton.StateTracking.Back.ColorAngle = 45F;
+            upperBodyHomeOutdoorsButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            upperBodyHomeOutdoorsButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
+            upperBodyHomeOutdoorsButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
+            upperBodyHomeOutdoorsButton.StateTracking.Border.ColorAngle = 45F;
+            upperBodyHomeOutdoorsButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            upperBodyHomeOutdoorsButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            upperBodyHomeOutdoorsButton.StateTracking.Border.Rounding = 15F;
+            upperBodyHomeOutdoorsButton.StateTracking.Border.Width = 1;
+            upperBodyHomeOutdoorsButton.TabIndex = 31;
+            upperBodyHomeOutdoorsButton.Values.Text = "Next";
+            upperBodyHomeOutdoorsButton.Visible = false;
+            // 
+            // upperBodyHomeOutdoorsLabel
+            // 
+            upperBodyHomeOutdoorsLabel.AutoSize = true;
+            upperBodyHomeOutdoorsLabel.BackColor = Color.FromArgb(242, 242, 242);
+            upperBodyHomeOutdoorsLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            upperBodyHomeOutdoorsLabel.ForeColor = SystemColors.ControlText;
+            upperBodyHomeOutdoorsLabel.Location = new Point(89, 28);
+            upperBodyHomeOutdoorsLabel.Name = "upperBodyHomeOutdoorsLabel";
+            upperBodyHomeOutdoorsLabel.Size = new Size(341, 19);
+            upperBodyHomeOutdoorsLabel.TabIndex = 1;
+            upperBodyHomeOutdoorsLabel.Text = "Which upper body muscles would you like to train? ";
+            upperBodyHomeOutdoorsLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // upperBodyHomeOutdoorsBorders
+            // 
+            upperBodyHomeOutdoorsBorders.Image = (Image)resources.GetObject("upperBodyHomeOutdoorsBorders.Image");
+            upperBodyHomeOutdoorsBorders.Location = new Point(0, 0);
+            upperBodyHomeOutdoorsBorders.Name = "upperBodyHomeOutdoorsBorders";
+            upperBodyHomeOutdoorsBorders.Size = new Size(518, 262);
+            upperBodyHomeOutdoorsBorders.TabIndex = 0;
+            upperBodyHomeOutdoorsBorders.TabStop = false;
+            // 
             // Workouts
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(upperBodyHomeOutdoorsPanel);
             Controls.Add(createPanel);
             Controls.Add(chooseWorkoutNumberPanel);
             Controls.Add(workoutsList);
@@ -3467,6 +3678,15 @@
             ((System.ComponentModel.ISupportInitialize)workoutNumberComboBox).EndInit();
             chooseWorkoutNumButPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chooseWorkoutNumberBorders).EndInit();
+            upperBodyHomeOutdoorsPanel.ResumeLayout(false);
+            upperBodyHomeOutdoorsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)frontCTS).EndInit();
+            upperBodyHomeOutdoorsButPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)upperBodyHomeOutdoorsBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -3673,5 +3893,21 @@
         private PictureBox hLine3;
         private FlowLayoutPanel currentExerciseList;
         private FlowLayoutPanel exerciseListPanel;
+        private Panel upperBodyHomeOutdoorsPanel;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox frontCTS;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
+        private Label label1;
+        private CheckBox chestTricepsShoulderCheckBox;
+        private Panel upperBodyHomeOutdoorsButPanel;
+        private Krypton.Toolkit.KryptonButton upperBodyHomeOutdoorsButton;
+        private Label upperBodyHomeOutdoorsLabel;
+        private PictureBox upperBodyHomeOutdoorsBorders;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox1;
+        private CheckBox backBicepsCheckBox;
     }
 }

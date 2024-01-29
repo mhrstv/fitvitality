@@ -103,6 +103,46 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backBackBiceps {
+            get {
+                object obj = ResourceManager.GetObject("backBackBiceps", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backBackBicepsBordered {
+            get {
+                object obj = ResourceManager.GetObject("backBackBicepsBordered", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backChestShouldersTriceps {
+            get {
+                object obj = ResourceManager.GetObject("backChestShouldersTriceps", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backChestShouldersTricepsBordered {
+            get {
+                object obj = ResourceManager.GetObject("backChestShouldersTricepsBordered", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backSelected {
             get {
                 object obj = ResourceManager.GetObject("backSelected", resourceCulture);
@@ -646,6 +686,46 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap fourthPage {
             get {
                 object obj = ResourceManager.GetObject("fourthPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frontBackBiceps {
+            get {
+                object obj = ResourceManager.GetObject("frontBackBiceps", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frontBackBicepsBordererd {
+            get {
+                object obj = ResourceManager.GetObject("frontBackBicepsBordererd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frontChestShouldersTriceps {
+            get {
+                object obj = ResourceManager.GetObject("frontChestShouldersTriceps", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frontChestShouldersTricepsBordered {
+            get {
+                object obj = ResourceManager.GetObject("frontChestShouldersTricepsBordered", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

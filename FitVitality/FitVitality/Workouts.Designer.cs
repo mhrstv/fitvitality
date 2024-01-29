@@ -246,10 +246,10 @@
             chooseWorkoutNumberBorders = new PictureBox();
             upperBodyHomeOutdoorsPanel = new Panel();
             backBicepsCheckBox = new CheckBox();
-            pictureBox1 = new PictureBox();
+            backBB = new PictureBox();
             pictureBox5 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            frontBB = new PictureBox();
+            backCTS = new PictureBox();
             frontCTS = new PictureBox();
             label1 = new Label();
             chestTricepsShoulderCheckBox = new CheckBox();
@@ -355,10 +355,10 @@
             chooseWorkoutNumButPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chooseWorkoutNumberBorders).BeginInit();
             upperBodyHomeOutdoorsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)backBB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)frontBB).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)backCTS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)frontCTS).BeginInit();
             upperBodyHomeOutdoorsButPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)upperBodyHomeOutdoorsBorders).BeginInit();
@@ -3352,10 +3352,10 @@
             // upperBodyHomeOutdoorsPanel
             // 
             upperBodyHomeOutdoorsPanel.Controls.Add(backBicepsCheckBox);
-            upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox1);
+            upperBodyHomeOutdoorsPanel.Controls.Add(backBB);
             upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox5);
-            upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox2);
-            upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox3);
+            upperBodyHomeOutdoorsPanel.Controls.Add(frontBB);
+            upperBodyHomeOutdoorsPanel.Controls.Add(backCTS);
             upperBodyHomeOutdoorsPanel.Controls.Add(frontCTS);
             upperBodyHomeOutdoorsPanel.Controls.Add(label1);
             upperBodyHomeOutdoorsPanel.Controls.Add(chestTricepsShoulderCheckBox);
@@ -3378,14 +3378,17 @@
             backBicepsCheckBox.TabIndex = 50;
             backBicepsCheckBox.Text = "Back and Biceps";
             backBicepsCheckBox.UseVisualStyleBackColor = false;
+            backBicepsCheckBox.CheckedChanged += backBicepsCheckBox_CheckedChanged;
             // 
-            // pictureBox1
+            // backBB
             // 
-            pictureBox1.Location = new Point(378, 100);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(62, 108);
-            pictureBox1.TabIndex = 50;
-            pictureBox1.TabStop = false;
+            backBB.Image = Properties.Resources.backBackBiceps;
+            backBB.Location = new Point(378, 100);
+            backBB.Name = "backBB";
+            backBB.Size = new Size(62, 108);
+            backBB.TabIndex = 50;
+            backBB.TabStop = false;
+            backBB.Click += backBB_Click;
             // 
             // pictureBox5
             // 
@@ -3396,30 +3399,36 @@
             pictureBox5.TabIndex = 50;
             pictureBox5.TabStop = false;
             // 
-            // pictureBox2
+            // frontBB
             // 
-            pictureBox2.Location = new Point(300, 100);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(62, 107);
-            pictureBox2.TabIndex = 41;
-            pictureBox2.TabStop = false;
+            frontBB.Image = Properties.Resources.frontBackBiceps;
+            frontBB.Location = new Point(300, 100);
+            frontBB.Name = "frontBB";
+            frontBB.Size = new Size(62, 107);
+            frontBB.TabIndex = 41;
+            frontBB.TabStop = false;
+            frontBB.Click += frontBB_Click;
             // 
-            // pictureBox3
+            // backCTS
             // 
-            pictureBox3.Location = new Point(157, 99);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(62, 108);
-            pictureBox3.TabIndex = 40;
-            pictureBox3.TabStop = false;
+            backCTS.Image = Properties.Resources.backChestShouldersTriceps;
+            backCTS.Location = new Point(157, 99);
+            backCTS.Name = "backCTS";
+            backCTS.Size = new Size(62, 108);
+            backCTS.TabIndex = 40;
+            backCTS.TabStop = false;
+            backCTS.Click += backCTS_Click;
             // 
             // frontCTS
             // 
             frontCTS.BackColor = Color.White;
+            frontCTS.Image = Properties.Resources.frontChestShouldersTriceps;
             frontCTS.Location = new Point(77, 99);
             frontCTS.Name = "frontCTS";
             frontCTS.Size = new Size(62, 107);
             frontCTS.TabIndex = 39;
             frontCTS.TabStop = false;
+            frontCTS.Click += frontCTS_Click;
             // 
             // label1
             // 
@@ -3444,6 +3453,7 @@
             chestTricepsShoulderCheckBox.TabIndex = 33;
             chestTricepsShoulderCheckBox.Text = "Chest, Triceps and Shoulders";
             chestTricepsShoulderCheckBox.UseVisualStyleBackColor = false;
+            chestTricepsShoulderCheckBox.CheckedChanged += chestTricepsShoulderCheckBox_CheckedChanged;
             // 
             // upperBodyHomeOutdoorsButPanel
             // 
@@ -3515,6 +3525,7 @@
             upperBodyHomeOutdoorsButton.TabIndex = 31;
             upperBodyHomeOutdoorsButton.Values.Text = "Next";
             upperBodyHomeOutdoorsButton.Visible = false;
+            upperBodyHomeOutdoorsButton.Click += upperBodyHomeOutdoorsButton_Click;
             // 
             // upperBodyHomeOutdoorsLabel
             // 
@@ -3680,10 +3691,10 @@
             ((System.ComponentModel.ISupportInitialize)chooseWorkoutNumberBorders).EndInit();
             upperBodyHomeOutdoorsPanel.ResumeLayout(false);
             upperBodyHomeOutdoorsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)backBB).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)frontBB).EndInit();
+            ((System.ComponentModel.ISupportInitialize)backCTS).EndInit();
             ((System.ComponentModel.ISupportInitialize)frontCTS).EndInit();
             upperBodyHomeOutdoorsButPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)upperBodyHomeOutdoorsBorders).EndInit();
@@ -3894,8 +3905,8 @@
         private FlowLayoutPanel currentExerciseList;
         private FlowLayoutPanel exerciseListPanel;
         private Panel upperBodyHomeOutdoorsPanel;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
+        private PictureBox frontBB;
+        private PictureBox backCTS;
         private PictureBox frontCTS;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
@@ -3907,7 +3918,7 @@
         private Label upperBodyHomeOutdoorsLabel;
         private PictureBox upperBodyHomeOutdoorsBorders;
         private PictureBox pictureBox5;
-        private PictureBox pictureBox1;
+        private PictureBox backBB;
         private CheckBox backBicepsCheckBox;
     }
 }

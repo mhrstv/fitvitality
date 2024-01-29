@@ -2119,6 +2119,12 @@ namespace FitVitality
                 workoutNumberComboBox.Text = "";
                 workoutNumberComboBox.SelectedIndex = -1;
                 chooseWorkoutNumberPanel.Visible = false;
+                chestTricepsShoulderCheckBox.Checked = false;
+                backBicepsCheckBox.Checked = false;
+                frontCTS.Image = Properties.Resources.frontChestShouldersTriceps;
+                backCTS.Image = Properties.Resources.backChestShouldersTriceps;
+                frontBB.Image = Properties.Resources.frontBackBiceps;
+                backBB.Image = Properties.Resources.backBackBiceps;
             }
         }
         private void workoutShow(string day)
@@ -2515,6 +2521,142 @@ namespace FitVitality
                         trainingDaysPanel.Visible = true;
                     }
                     break;
+            }
+        }
+
+        private void chestTricepsShoulderCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chestTricepsShoulderCheckBox.Checked)
+            {
+                frontCTS.Image = Properties.Resources.frontChestShouldersTricepsBordered;
+                backCTS.Image = Properties.Resources.backChestShouldersTricepsBordered;
+            }
+            else
+            {
+                frontCTS.Image = Properties.Resources.frontChestShouldersTriceps;
+                backCTS.Image = Properties.Resources.backChestShouldersTriceps;
+            }
+            if (!chestTricepsShoulderCheckBox.Checked && !backBicepsCheckBox.Checked)
+            {
+                upperBodyHomeOutdoorsButton.Visible = false;
+            }
+            else upperBodyHomeOutdoorsButton.Visible = true;
+        }
+
+        private void backBicepsCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (backBicepsCheckBox.Checked)
+            {
+                frontBB.Image = Properties.Resources.frontBackBicepsBordererd;
+                backBB.Image = Properties.Resources.backBackBicepsBordered;
+            }
+            else
+            {
+                frontBB.Image = Properties.Resources.frontBackBiceps;
+                backBB.Image = Properties.Resources.backBackBiceps;
+            }
+            if (!chestTricepsShoulderCheckBox.Checked && !backBicepsCheckBox.Checked)
+            {
+                upperBodyHomeOutdoorsButton.Visible = false;
+            }
+            else upperBodyHomeOutdoorsButton.Visible = true;
+        }
+
+        private void frontCTS_Click(object sender, EventArgs e)
+        {
+            if (chestTricepsShoulderCheckBox.Checked)
+            {
+                backCTS.Image = Properties.Resources.backChestShouldersTricepsBordered;
+                frontCTS.Image = Properties.Resources.frontChestShouldersTricepsBordered;
+                chestTricepsShoulderCheckBox.Checked = false;
+            }
+            else
+            {
+                backCTS.Image = Properties.Resources.backChestShouldersTriceps;
+                frontCTS.Image = Properties.Resources.frontChestShouldersTriceps;
+                chestTricepsShoulderCheckBox.Checked = true;
+            }
+            if (!chestTricepsShoulderCheckBox.Checked && !backBicepsCheckBox.Checked)
+            {
+                upperBodyHomeOutdoorsButton.Visible = false;
+            }
+            else upperBodyHomeOutdoorsButton.Visible = true;
+        }
+
+        private void backCTS_Click(object sender, EventArgs e)
+        {
+            if (chestTricepsShoulderCheckBox.Checked)
+            {
+                backCTS.Image = Properties.Resources.backChestShouldersTricepsBordered;
+                frontCTS.Image = Properties.Resources.frontChestShouldersTricepsBordered;
+                chestTricepsShoulderCheckBox.Checked = false;
+            }
+            else
+            {
+                backCTS.Image = Properties.Resources.backChestShouldersTriceps;
+                frontCTS.Image = Properties.Resources.frontChestShouldersTriceps;
+                chestTricepsShoulderCheckBox.Checked = true;
+            }
+            if (!chestTricepsShoulderCheckBox.Checked && !backBicepsCheckBox.Checked)
+            {
+                upperBodyHomeOutdoorsButton.Visible = false;
+            }
+            else upperBodyHomeOutdoorsButton.Visible = true;
+        }
+
+        private void frontBB_Click(object sender, EventArgs e)
+        {
+            if (backBicepsCheckBox.Checked)
+            {
+                backBB.Image = Properties.Resources.backBackBicepsBordered;
+                frontBB.Image = Properties.Resources.frontBackBicepsBordererd;
+                backBicepsCheckBox.Checked = false;
+            }
+            else
+            {
+                backBB.Image = Properties.Resources.backBackBiceps;
+                frontBB.Image = Properties.Resources.frontBackBiceps;
+                backBicepsCheckBox.Checked = true;
+            }
+            if (!chestTricepsShoulderCheckBox.Checked && !backBicepsCheckBox.Checked)
+            {
+                upperBodyHomeOutdoorsButton.Visible = false;
+            }
+            else upperBodyHomeOutdoorsButton.Visible = true;
+        }
+
+        private void backBB_Click(object sender, EventArgs e)
+        {
+            if (backBicepsCheckBox.Checked)
+            {
+                backBB.Image = Properties.Resources.backBackBicepsBordered;
+                frontBB.Image = Properties.Resources.frontBackBicepsBordererd;
+                backBicepsCheckBox.Checked = false;
+            }
+            else
+            {
+                backBB.Image = Properties.Resources.backBackBiceps;
+                frontBB.Image = Properties.Resources.frontBackBiceps;
+                backBicepsCheckBox.Checked = true;
+            }
+            if (!chestTricepsShoulderCheckBox.Checked && !backBicepsCheckBox.Checked)
+            {
+                upperBodyHomeOutdoorsButton.Visible = false;
+            }
+            else upperBodyHomeOutdoorsButton.Visible = true;
+        }
+
+        private void upperBodyHomeOutdoorsButton_Click(object sender, EventArgs e)
+        {
+            if (!lowerBodyClicked)
+            {
+                upperBodyHomeOutdoorsPanel.Visible = false;
+                chooseWorkoutNumberPanel.Visible = true;
+            }
+            else
+            {
+                upperBodyHomeOutdoorsPanel.Visible = false;
+                lowerBodyPanel.Visible = true;
             }
         }
     }

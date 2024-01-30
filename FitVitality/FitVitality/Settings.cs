@@ -17,6 +17,8 @@ using System.Drawing.Imaging;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Xml.Linq;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualBasic.Logging;
+using System.Collections;
 
 namespace FitVitality
 {
@@ -384,17 +386,156 @@ namespace FitVitality
 
         private void changePasswordButton_Click(object sender, EventArgs e)
         {
-            changePassPanel.Visible = true;
+            changePasswordPanel.Visible = true;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            //CHANGE PASSWORD CONFIRM BUTTON MARTOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!
+            bool validOldPass = false;
+            string oldPass = oldPasswordTextBox.Text;
+            string newPass = newPasswordTextBox.Text;
+            string confirmPass = confirmPasswordTextBox.Text;
+            if (oldPass == "")
+            {
+                oldPasswordTextBox.BorderColor = Color.Red;
+            }
+            else
+            {
+                oldPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+            if (newPass == "")
+            {
+                newPasswordTextBox.BorderColor = Color.Red;
+            }
+            else
+            {
+                newPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+            if (confirmPass == "")
+            {
+                confirmPasswordTextBox.BorderColor = Color.Red;
+            }
+            else
+            {
+                newPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+            if (oldPass != "" && newPass != "" && confirmPass != "")
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT UserID, Password FROM UserData WHERE Password = @Password AND UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Password", oldPass);
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string dbPass = reader["Password"].ToString();
+                                if (dbPass == oldPass)
+                                {
+                                    validOldPass = true;
+                                    oldPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+                                }
+                                else
+                                {
+                                    oldPasswordTextBox.BorderColor = Color.Red;
+                                }
+                            }
+                        }
+                    }
+                }
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    if (validOldPass)
+                    {
+                        oldPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+                        connection.Open();
+                        string query = "UPDATE UserData SET Password = @Password WHERE UserID = @UserID";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            if (isValidPassword(newPass))
+                            {   
+                                newPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+                                if (newPass == confirmPass)
+                                {
+                                    command.Parameters.AddWithValue("@Password", newPass);
+                                    command.Parameters.AddWithValue("@UserID", _userID);
+                                    command.ExecuteNonQuery();
+                                    confirmPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
+                                    changePasswordPanel.Visible = false;
+                                    oldPasswordTextBox.Text = "";
+                                    newPasswordTextBox.Text = "";
+                                    confirmPasswordTextBox.Text = "";
+                                }
+                                else
+                                {
+                                    confirmPasswordTextBox.BorderColor = Color.Red;
+                                }
+                            }
+                            else
+                            {
+                                newPasswordTextBox.BorderColor = Color.Red;
+                            }
+                        }
+                    }
+                }
+            }
         }
+        private bool isValidPassword(string str)
+        {
+            if (str.Length >= 8)
+            {
+                if (containsLetters(str))
+                {
+                    if (containsDigit(str))
+                    {
+                        if (hasSpecialChar(str))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+        private bool containsLetters(string str)
+        {
+            foreach (char c in str)
+            {
+                if (Char.IsLetter(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private bool containsDigit(string str)
+        {
+            foreach (var c in str)
+            {
+                if (Char.IsDigit(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        private static bool hasSpecialChar(string str)
+        {
+            string specialChar = @"\|!#$%&/()=?»«@£§€{}.-;'<>_,";
+            foreach (var c in specialChar)
+            {
+                if (str.Contains(c)) return true;
+            }
 
+            return false;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            changePassPanel.Visible = false;
+            changePasswordPanel.Visible = false;
         }
 
         private void changePasswordClose_MouseEnter(object sender, EventArgs e)

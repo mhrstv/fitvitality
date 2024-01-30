@@ -89,10 +89,10 @@
             changePasswordButton = new Guna.UI2.WinForms.Guna2Button();
             vLine3 = new PictureBox();
             errorPanel = new Panel();
-            changePassPanel = new Panel();
+            changePasswordPanel = new Panel();
             changePasswordClose = new PictureBox();
             changePasswordConfirmButton = new Guna.UI2.WinForms.Guna2Button();
-            PasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            confirmPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             newPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             oldPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             confirmNewPasswordLabel = new Label();
@@ -119,7 +119,7 @@
             ((System.ComponentModel.ISupportInitialize)themeComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine3).BeginInit();
             errorPanel.SuspendLayout();
-            changePassPanel.SuspendLayout();
+            changePasswordPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)changePasswordClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)changePasswordBorders).BeginInit();
             SuspendLayout();
@@ -774,23 +774,23 @@
             errorPanel.TabIndex = 50;
             errorPanel.Visible = false;
             // 
-            // changePassPanel
+            // changePasswordPanel
             // 
-            changePassPanel.Controls.Add(changePasswordClose);
-            changePassPanel.Controls.Add(changePasswordConfirmButton);
-            changePassPanel.Controls.Add(PasswordTextBox);
-            changePassPanel.Controls.Add(newPasswordTextBox);
-            changePassPanel.Controls.Add(oldPasswordTextBox);
-            changePassPanel.Controls.Add(confirmNewPasswordLabel);
-            changePassPanel.Controls.Add(newPasswordLabel);
-            changePassPanel.Controls.Add(oldPasswordLabel);
-            changePassPanel.Controls.Add(changePasswordLabel);
-            changePassPanel.Controls.Add(changePasswordBorders);
-            changePassPanel.Location = new Point(217, 51);
-            changePassPanel.Name = "changePassPanel";
-            changePassPanel.Size = new Size(257, 234);
-            changePassPanel.TabIndex = 51;
-            changePassPanel.Visible = false;
+            changePasswordPanel.Controls.Add(changePasswordClose);
+            changePasswordPanel.Controls.Add(changePasswordConfirmButton);
+            changePasswordPanel.Controls.Add(confirmPasswordTextBox);
+            changePasswordPanel.Controls.Add(newPasswordTextBox);
+            changePasswordPanel.Controls.Add(oldPasswordTextBox);
+            changePasswordPanel.Controls.Add(confirmNewPasswordLabel);
+            changePasswordPanel.Controls.Add(newPasswordLabel);
+            changePasswordPanel.Controls.Add(oldPasswordLabel);
+            changePasswordPanel.Controls.Add(changePasswordLabel);
+            changePasswordPanel.Controls.Add(changePasswordBorders);
+            changePasswordPanel.Location = new Point(217, 51);
+            changePasswordPanel.Name = "changePasswordPanel";
+            changePasswordPanel.Size = new Size(257, 234);
+            changePasswordPanel.TabIndex = 51;
+            changePasswordPanel.Visible = false;
             // 
             // changePasswordClose
             // 
@@ -826,29 +826,30 @@
             changePasswordConfirmButton.Text = "Confirm";
             changePasswordConfirmButton.Click += guna2Button1_Click;
             // 
-            // PasswordTextBox
+            // confirmPasswordTextBox
             // 
-            PasswordTextBox.BackColor = Color.WhiteSmoke;
-            PasswordTextBox.BorderRadius = 8;
-            PasswordTextBox.CustomizableEdges = customizableEdges23;
-            PasswordTextBox.DefaultText = "";
-            PasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            PasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            PasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            PasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            PasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            PasswordTextBox.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            PasswordTextBox.ForeColor = Color.Black;
-            PasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            PasswordTextBox.Location = new Point(50, 164);
-            PasswordTextBox.Name = "PasswordTextBox";
-            PasswordTextBox.PasswordChar = '\0';
-            PasswordTextBox.PlaceholderForeColor = Color.Black;
-            PasswordTextBox.PlaceholderText = "";
-            PasswordTextBox.SelectedText = "";
-            PasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            PasswordTextBox.Size = new Size(156, 25);
-            PasswordTextBox.TabIndex = 54;
+            confirmPasswordTextBox.BackColor = Color.WhiteSmoke;
+            confirmPasswordTextBox.BorderRadius = 8;
+            confirmPasswordTextBox.CustomizableEdges = customizableEdges23;
+            confirmPasswordTextBox.DefaultText = "";
+            confirmPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            confirmPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            confirmPasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            confirmPasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            confirmPasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            confirmPasswordTextBox.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            confirmPasswordTextBox.ForeColor = Color.Black;
+            confirmPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            confirmPasswordTextBox.Location = new Point(50, 164);
+            confirmPasswordTextBox.Name = "confirmPasswordTextBox";
+            confirmPasswordTextBox.PasswordChar = '●';
+            confirmPasswordTextBox.PlaceholderForeColor = Color.Black;
+            confirmPasswordTextBox.PlaceholderText = "";
+            confirmPasswordTextBox.SelectedText = "";
+            confirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            confirmPasswordTextBox.Size = new Size(156, 25);
+            confirmPasswordTextBox.TabIndex = 54;
+            confirmPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // newPasswordTextBox
             // 
@@ -866,13 +867,14 @@
             newPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             newPasswordTextBox.Location = new Point(50, 119);
             newPasswordTextBox.Name = "newPasswordTextBox";
-            newPasswordTextBox.PasswordChar = '\0';
+            newPasswordTextBox.PasswordChar = '●';
             newPasswordTextBox.PlaceholderForeColor = Color.Black;
             newPasswordTextBox.PlaceholderText = "";
             newPasswordTextBox.SelectedText = "";
             newPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges26;
             newPasswordTextBox.Size = new Size(156, 25);
             newPasswordTextBox.TabIndex = 53;
+            newPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // oldPasswordTextBox
             // 
@@ -890,13 +892,14 @@
             oldPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             oldPasswordTextBox.Location = new Point(50, 68);
             oldPasswordTextBox.Name = "oldPasswordTextBox";
-            oldPasswordTextBox.PasswordChar = '\0';
+            oldPasswordTextBox.PasswordChar = '●';
             oldPasswordTextBox.PlaceholderForeColor = Color.Black;
             oldPasswordTextBox.PlaceholderText = "";
             oldPasswordTextBox.SelectedText = "";
             oldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges28;
             oldPasswordTextBox.Size = new Size(156, 25);
             oldPasswordTextBox.TabIndex = 52;
+            oldPasswordTextBox.UseSystemPasswordChar = true;
             // 
             // confirmNewPasswordLabel
             // 
@@ -957,7 +960,7 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
-            Controls.Add(changePassPanel);
+            Controls.Add(changePasswordPanel);
             Controls.Add(errorPanel);
             Controls.Add(vLine3);
             Controls.Add(changePasswordButton);
@@ -1015,8 +1018,8 @@
             ((System.ComponentModel.ISupportInitialize)vLine3).EndInit();
             errorPanel.ResumeLayout(false);
             errorPanel.PerformLayout();
-            changePassPanel.ResumeLayout(false);
-            changePassPanel.PerformLayout();
+            changePasswordPanel.ResumeLayout(false);
+            changePasswordPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)changePasswordClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)changePasswordBorders).EndInit();
             ResumeLayout(false);
@@ -1074,13 +1077,13 @@
         private Guna.UI2.WinForms.Guna2Button changePasswordButton;
         private PictureBox vLine3;
         private Panel errorPanel;
-        private Panel changePassPanel;
+        private Panel changePasswordPanel;
         private Label confirmNewPasswordLabel;
         private Label newPasswordLabel;
         private Label oldPasswordLabel;
         private Label changePasswordLabel;
         private Guna.UI2.WinForms.Guna2Button changePasswordConfirmButton;
-        private Guna.UI2.WinForms.Guna2TextBox PasswordTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox confirmPasswordTextBox;
         private Guna.UI2.WinForms.Guna2TextBox newPasswordTextBox;
         private Guna.UI2.WinForms.Guna2TextBox oldPasswordTextBox;
         private PictureBox changePasswordBorders;

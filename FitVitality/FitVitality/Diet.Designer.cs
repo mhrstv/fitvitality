@@ -49,7 +49,6 @@
             macroАbbreviation = new Label();
             manageGoalDescription = new Label();
             manageGoalLabel = new Label();
-            activityComboBoxMacro = new Krypton.Toolkit.KryptonComboBox();
             activityLevelLabel = new Label();
             balancedButton = new PictureBox();
             highProteinButton = new PictureBox();
@@ -67,7 +66,7 @@
             hiddenPanel1 = new Panel();
             label1 = new Label();
             hiddenPanel2 = new Panel();
-            guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            activityComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -76,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dietBorder2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dietBorder1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)activityComboBoxMacro).BeginInit();
             ((System.ComponentModel.ISupportInitialize)balancedButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)highProteinButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)lowCarbsButton).BeginInit();
@@ -286,39 +284,6 @@
             manageGoalLabel.Text = "Manage \r\nGoal";
             manageGoalLabel.TextAlign = ContentAlignment.MiddleCenter;
             manageGoalLabel.Click += manageGoalLabel_Click;
-            // 
-            // activityComboBoxMacro
-            // 
-            activityComboBoxMacro.CornerRoundingRadius = -1F;
-            activityComboBoxMacro.DropDownStyle = ComboBoxStyle.DropDownList;
-            activityComboBoxMacro.DropDownWidth = 121;
-            activityComboBoxMacro.IntegralHeight = false;
-            activityComboBoxMacro.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
-            activityComboBoxMacro.Location = new Point(113, 130);
-            activityComboBoxMacro.Name = "activityComboBoxMacro";
-            activityComboBoxMacro.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            activityComboBoxMacro.Size = new Size(90, 21);
-            activityComboBoxMacro.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            activityComboBoxMacro.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
-            activityComboBoxMacro.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
-            activityComboBoxMacro.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            activityComboBoxMacro.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            activityComboBoxMacro.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBoxMacro.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            activityComboBoxMacro.TabIndex = 40;
-            activityComboBoxMacro.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
-            activityComboBoxMacro.Click += activityComboBoxMacro_Click;
             // 
             // activityLevelLabel
             // 
@@ -530,25 +495,28 @@
             hiddenPanel2.Size = new Size(0, 0);
             hiddenPanel2.TabIndex = 57;
             // 
-            // guna2ComboBox1
+            // activityComboBox
             // 
-            guna2ComboBox1.BackColor = Color.Transparent;
-            guna2ComboBox1.BorderColor = Color.FromArgb(92, 225, 230);
-            guna2ComboBox1.BorderRadius = 8;
-            guna2ComboBox1.CustomizableEdges = customizableEdges1;
-            guna2ComboBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            guna2ComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            guna2ComboBox1.FocusedColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2ComboBox1.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2ComboBox1.ForeColor = Color.Black;
-            guna2ComboBox1.ItemHeight = 30;
-            guna2ComboBox1.Items.AddRange(new object[] { "test", "test1", "test2" });
-            guna2ComboBox1.Location = new Point(113, 157);
-            guna2ComboBox1.Name = "guna2ComboBox1";
-            guna2ComboBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ComboBox1.Size = new Size(90, 36);
-            guna2ComboBox1.TabIndex = 58;
+            activityComboBox.BackColor = Color.Transparent;
+            activityComboBox.BorderColor = Color.FromArgb(92, 225, 230);
+            activityComboBox.BorderRadius = 8;
+            activityComboBox.CustomizableEdges = customizableEdges1;
+            activityComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            activityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            activityComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            activityComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            activityComboBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            activityComboBox.ForeColor = Color.Black;
+            activityComboBox.ItemHeight = 18;
+            activityComboBox.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
+            activityComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            activityComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            activityComboBox.Location = new Point(113, 129);
+            activityComboBox.Name = "activityComboBox";
+            activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            activityComboBox.Size = new Size(99, 24);
+            activityComboBox.TabIndex = 58;
+            activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
             // 
             // Diet
             // 
@@ -556,7 +524,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
-            Controls.Add(guna2ComboBox1);
+            Controls.Add(activityComboBox);
             Controls.Add(hiddenPanel2);
             Controls.Add(hiddenPanel1);
             Controls.Add(searchPanel);
@@ -572,7 +540,6 @@
             Controls.Add(highProteinButton);
             Controls.Add(balancedButton);
             Controls.Add(activityLevelLabel);
-            Controls.Add(activityComboBoxMacro);
             Controls.Add(manageGoalLabel);
             Controls.Add(manageGoalDescription);
             Controls.Add(macroАbbreviation);
@@ -605,7 +572,6 @@
             ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dietBorder2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dietBorder1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)activityComboBoxMacro).EndInit();
             ((System.ComponentModel.ISupportInitialize)balancedButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)highProteinButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)lowCarbsButton).EndInit();
@@ -637,7 +603,6 @@
         private Label macroАbbreviation;
         private Label manageGoalDescription;
         private Label manageGoalLabel;
-        private Krypton.Toolkit.KryptonComboBox activityComboBoxMacro;
         private Label activityLevelLabel;
         private PictureBox balancedButton;
         private PictureBox highProteinButton;
@@ -655,6 +620,6 @@
         private Panel hiddenPanel1;
         private Label label1;
         private Panel hiddenPanel2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox activityComboBox;
     }
 }

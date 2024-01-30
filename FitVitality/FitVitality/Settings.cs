@@ -74,8 +74,6 @@ namespace FitVitality
         private void Settings_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
-            errorPanel.Width = 230;
-            errorPanel.Height = 120;
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 languageComboBox.SelectedItem = "Bulgarian";
@@ -333,6 +331,7 @@ namespace FitVitality
                                "WHERE UserID = @UserID";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
+                        command.Parameters.AddWithValue("@UserID", _userID);
                         command.Parameters.AddWithValue("@Email", dbEmail);
                         command.ExecuteNonQuery();
                     }
@@ -381,6 +380,31 @@ namespace FitVitality
         private void errorClose_MouseLeave(object sender, EventArgs e)
         {
             errorClose.BackColor = Color.WhiteSmoke;
+        }
+
+        private void changePasswordButton_Click(object sender, EventArgs e)
+        {
+            changePassPanel.Visible = true;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            //CHANGE PASSWORD CONFIRM BUTTON MARTOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            changePassPanel.Visible = false;
+        }
+
+        private void changePasswordClose_MouseEnter(object sender, EventArgs e)
+        {
+            changePasswordClose.BackColor = Color.IndianRed;
+        }
+
+        private void changePasswordClose_MouseLeave(object sender, EventArgs e)
+        {
+            changePasswordClose.BackColor = Color.WhiteSmoke;
         }
     }
 }

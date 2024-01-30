@@ -30,12 +30,20 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             deleteAccPanel = new Panel();
             closeDAPanel = new Panel();
@@ -69,18 +77,29 @@
             vLine = new PictureBox();
             leftCorner = new PictureBox();
             rightCorner = new PictureBox();
-            errorPanel = new Panel();
             errorClose = new PictureBox();
-            welcomeErrorLabel = new Label();
+            settingErrorLabel = new Label();
             errorLabel = new Label();
-            welcomeError = new PictureBox();
+            settingsError = new PictureBox();
             themeComboBox = new Krypton.Toolkit.KryptonComboBox();
             buttonSave = new Guna.UI2.WinForms.Guna2Button();
             emailTextBox = new Krypton.Toolkit.KryptonTextBox();
-            label1 = new Label();
+            emailLabel = new Label();
             deleteAccountButton = new Guna.UI2.WinForms.Guna2Button();
             changePasswordButton = new Guna.UI2.WinForms.Guna2Button();
-            pictureBox1 = new PictureBox();
+            vLine3 = new PictureBox();
+            errorPanel = new Panel();
+            changePassPanel = new Panel();
+            changePasswordClose = new PictureBox();
+            changePasswordConfirmButton = new Guna.UI2.WinForms.Guna2Button();
+            PasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            newPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            oldPasswordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            confirmNewPasswordLabel = new Label();
+            newPasswordLabel = new Label();
+            oldPasswordLabel = new Label();
+            changePasswordLabel = new Label();
+            changePasswordBorders = new PictureBox();
             deleteAccPanel.SuspendLayout();
             closeDAPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
@@ -95,11 +114,14 @@
             ((System.ComponentModel.ISupportInitialize)vLine).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
-            errorPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorClose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)welcomeError).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)settingsError).BeginInit();
             ((System.ComponentModel.ISupportInitialize)themeComboBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine3).BeginInit();
+            errorPanel.SuspendLayout();
+            changePassPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)changePasswordClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)changePasswordBorders).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -578,23 +600,11 @@
             rightCorner.TabIndex = 40;
             rightCorner.TabStop = false;
             // 
-            // errorPanel
-            // 
-            errorPanel.Controls.Add(errorClose);
-            errorPanel.Controls.Add(welcomeErrorLabel);
-            errorPanel.Controls.Add(errorLabel);
-            errorPanel.Controls.Add(welcomeError);
-            errorPanel.Location = new Point(230, 124);
-            errorPanel.Name = "errorPanel";
-            errorPanel.Size = new Size(0, 0);
-            errorPanel.TabIndex = 41;
-            errorPanel.Visible = false;
-            // 
             // errorClose
             // 
             errorClose.BackColor = Color.WhiteSmoke;
             errorClose.Image = Properties.Resources.closebutton;
-            errorClose.Location = new Point(202, 5);
+            errorClose.Location = new Point(208, 8);
             errorClose.Name = "errorClose";
             errorClose.Size = new Size(19, 19);
             errorClose.SizeMode = PictureBoxSizeMode.Zoom;
@@ -605,37 +615,37 @@
             errorClose.MouseLeave += errorClose_MouseLeave;
             errorClose.MouseHover += errorClose_MouseHover;
             // 
-            // welcomeErrorLabel
+            // settingErrorLabel
             // 
-            welcomeErrorLabel.AutoSize = true;
-            welcomeErrorLabel.BackColor = Color.WhiteSmoke;
-            welcomeErrorLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            welcomeErrorLabel.Location = new Point(42, 41);
-            welcomeErrorLabel.Name = "welcomeErrorLabel";
-            welcomeErrorLabel.Size = new Size(157, 36);
-            welcomeErrorLabel.TabIndex = 2;
-            welcomeErrorLabel.Text = "You have input incorrect\r\ndata!";
-            welcomeErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
+            settingErrorLabel.AutoSize = true;
+            settingErrorLabel.BackColor = Color.WhiteSmoke;
+            settingErrorLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            settingErrorLabel.Location = new Point(42, 50);
+            settingErrorLabel.Name = "settingErrorLabel";
+            settingErrorLabel.Size = new Size(157, 36);
+            settingErrorLabel.TabIndex = 2;
+            settingErrorLabel.Text = "You have input incorrect\r\ndata!";
+            settingErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // errorLabel
             // 
             errorLabel.AutoSize = true;
             errorLabel.BackColor = Color.WhiteSmoke;
             errorLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            errorLabel.Location = new Point(96, 7);
+            errorLabel.Location = new Point(99, 29);
             errorLabel.Name = "errorLabel";
             errorLabel.Size = new Size(44, 19);
             errorLabel.TabIndex = 1;
             errorLabel.Text = "Error";
             // 
-            // welcomeError
+            // settingsError
             // 
-            welcomeError.Image = Properties.Resources.settingsError;
-            welcomeError.Location = new Point(0, 0);
-            welcomeError.Name = "welcomeError";
-            welcomeError.Size = new Size(230, 120);
-            welcomeError.TabIndex = 0;
-            welcomeError.TabStop = false;
+            settingsError.Image = Properties.Resources.errorPanel;
+            settingsError.Location = new Point(0, 0);
+            settingsError.Name = "settingsError";
+            settingsError.Size = new Size(237, 128);
+            settingsError.TabIndex = 0;
+            settingsError.TabStop = false;
             // 
             // themeComboBox
             // 
@@ -671,7 +681,7 @@
             // buttonSave
             // 
             buttonSave.BorderRadius = 10;
-            buttonSave.CustomizableEdges = customizableEdges13;
+            buttonSave.CustomizableEdges = customizableEdges15;
             buttonSave.DisabledState.BorderColor = Color.DarkGray;
             buttonSave.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -681,7 +691,7 @@
             buttonSave.ForeColor = Color.White;
             buttonSave.Location = new Point(515, 285);
             buttonSave.Name = "buttonSave";
-            buttonSave.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            buttonSave.ShadowDecoration.CustomizableEdges = customizableEdges16;
             buttonSave.Size = new Size(79, 40);
             buttonSave.TabIndex = 43;
             buttonSave.Text = "Save Settings";
@@ -695,20 +705,20 @@
             emailTextBox.Size = new Size(100, 23);
             emailTextBox.TabIndex = 44;
             // 
-            // label1
+            // emailLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(424, 111);
-            label1.Name = "label1";
-            label1.Size = new Size(40, 16);
-            label1.TabIndex = 45;
-            label1.Text = "Email";
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            emailLabel.Location = new Point(424, 111);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new Size(40, 16);
+            emailLabel.TabIndex = 45;
+            emailLabel.Text = "Email";
             // 
             // deleteAccountButton
             // 
             deleteAccountButton.BorderRadius = 10;
-            deleteAccountButton.CustomizableEdges = customizableEdges15;
+            deleteAccountButton.CustomizableEdges = customizableEdges17;
             deleteAccountButton.DisabledState.BorderColor = Color.DarkGray;
             deleteAccountButton.DisabledState.CustomBorderColor = Color.DarkGray;
             deleteAccountButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -718,7 +728,7 @@
             deleteAccountButton.ForeColor = Color.White;
             deleteAccountButton.Location = new Point(424, 331);
             deleteAccountButton.Name = "deleteAccountButton";
-            deleteAccountButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            deleteAccountButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
             deleteAccountButton.Size = new Size(170, 25);
             deleteAccountButton.TabIndex = 46;
             deleteAccountButton.Text = "Delete Account";
@@ -727,7 +737,7 @@
             // changePasswordButton
             // 
             changePasswordButton.BorderRadius = 10;
-            changePasswordButton.CustomizableEdges = customizableEdges17;
+            changePasswordButton.CustomizableEdges = customizableEdges19;
             changePasswordButton.DisabledState.BorderColor = Color.DarkGray;
             changePasswordButton.DisabledState.CustomBorderColor = Color.DarkGray;
             changePasswordButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -737,19 +747,209 @@
             changePasswordButton.ForeColor = Color.White;
             changePasswordButton.Location = new Point(424, 285);
             changePasswordButton.Name = "changePasswordButton";
-            changePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            changePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
             changePasswordButton.Size = new Size(88, 40);
             changePasswordButton.TabIndex = 47;
             changePasswordButton.Text = "Change Password";
+            changePasswordButton.Click += changePasswordButton_Click;
             // 
-            // pictureBox1
+            // vLine3
             // 
-            pictureBox1.Image = Properties.Resources.vline;
-            pictureBox1.Location = new Point(345, 36);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1, 300);
-            pictureBox1.TabIndex = 49;
-            pictureBox1.TabStop = false;
+            vLine3.Image = Properties.Resources.vline;
+            vLine3.Location = new Point(345, 36);
+            vLine3.Name = "vLine3";
+            vLine3.Size = new Size(1, 300);
+            vLine3.TabIndex = 49;
+            vLine3.TabStop = false;
+            // 
+            // errorPanel
+            // 
+            errorPanel.Controls.Add(settingErrorLabel);
+            errorPanel.Controls.Add(errorClose);
+            errorPanel.Controls.Add(errorLabel);
+            errorPanel.Controls.Add(settingsError);
+            errorPanel.Location = new Point(227, 131);
+            errorPanel.Name = "errorPanel";
+            errorPanel.Size = new Size(237, 128);
+            errorPanel.TabIndex = 50;
+            errorPanel.Visible = false;
+            // 
+            // changePassPanel
+            // 
+            changePassPanel.Controls.Add(changePasswordClose);
+            changePassPanel.Controls.Add(changePasswordConfirmButton);
+            changePassPanel.Controls.Add(PasswordTextBox);
+            changePassPanel.Controls.Add(newPasswordTextBox);
+            changePassPanel.Controls.Add(oldPasswordTextBox);
+            changePassPanel.Controls.Add(confirmNewPasswordLabel);
+            changePassPanel.Controls.Add(newPasswordLabel);
+            changePassPanel.Controls.Add(oldPasswordLabel);
+            changePassPanel.Controls.Add(changePasswordLabel);
+            changePassPanel.Controls.Add(changePasswordBorders);
+            changePassPanel.Location = new Point(217, 51);
+            changePassPanel.Name = "changePassPanel";
+            changePassPanel.Size = new Size(257, 234);
+            changePassPanel.TabIndex = 51;
+            changePassPanel.Visible = false;
+            // 
+            // changePasswordClose
+            // 
+            changePasswordClose.BackColor = Color.WhiteSmoke;
+            changePasswordClose.Image = Properties.Resources.closebutton;
+            changePasswordClose.Location = new Point(228, 9);
+            changePasswordClose.Name = "changePasswordClose";
+            changePasswordClose.Size = new Size(19, 19);
+            changePasswordClose.SizeMode = PictureBoxSizeMode.Zoom;
+            changePasswordClose.TabIndex = 52;
+            changePasswordClose.TabStop = false;
+            changePasswordClose.Click += pictureBox1_Click;
+            changePasswordClose.MouseEnter += changePasswordClose_MouseEnter;
+            changePasswordClose.MouseLeave += changePasswordClose_MouseLeave;
+            // 
+            // changePasswordConfirmButton
+            // 
+            changePasswordConfirmButton.BackColor = Color.WhiteSmoke;
+            changePasswordConfirmButton.BorderRadius = 10;
+            changePasswordConfirmButton.CustomizableEdges = customizableEdges21;
+            changePasswordConfirmButton.DisabledState.BorderColor = Color.DarkGray;
+            changePasswordConfirmButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            changePasswordConfirmButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            changePasswordConfirmButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            changePasswordConfirmButton.FillColor = Color.FromArgb(92, 225, 230);
+            changePasswordConfirmButton.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            changePasswordConfirmButton.ForeColor = Color.White;
+            changePasswordConfirmButton.Location = new Point(86, 198);
+            changePasswordConfirmButton.Name = "changePasswordConfirmButton";
+            changePasswordConfirmButton.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            changePasswordConfirmButton.Size = new Size(84, 25);
+            changePasswordConfirmButton.TabIndex = 55;
+            changePasswordConfirmButton.Text = "Confirm";
+            changePasswordConfirmButton.Click += guna2Button1_Click;
+            // 
+            // PasswordTextBox
+            // 
+            PasswordTextBox.BackColor = Color.WhiteSmoke;
+            PasswordTextBox.BorderRadius = 8;
+            PasswordTextBox.CustomizableEdges = customizableEdges23;
+            PasswordTextBox.DefaultText = "";
+            PasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            PasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            PasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            PasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            PasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            PasswordTextBox.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            PasswordTextBox.ForeColor = Color.Black;
+            PasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            PasswordTextBox.Location = new Point(50, 164);
+            PasswordTextBox.Name = "PasswordTextBox";
+            PasswordTextBox.PasswordChar = '\0';
+            PasswordTextBox.PlaceholderForeColor = Color.Black;
+            PasswordTextBox.PlaceholderText = "";
+            PasswordTextBox.SelectedText = "";
+            PasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            PasswordTextBox.Size = new Size(156, 25);
+            PasswordTextBox.TabIndex = 54;
+            // 
+            // newPasswordTextBox
+            // 
+            newPasswordTextBox.BackColor = Color.WhiteSmoke;
+            newPasswordTextBox.BorderRadius = 8;
+            newPasswordTextBox.CustomizableEdges = customizableEdges25;
+            newPasswordTextBox.DefaultText = "";
+            newPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            newPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            newPasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            newPasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            newPasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            newPasswordTextBox.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            newPasswordTextBox.ForeColor = Color.Black;
+            newPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            newPasswordTextBox.Location = new Point(50, 119);
+            newPasswordTextBox.Name = "newPasswordTextBox";
+            newPasswordTextBox.PasswordChar = '\0';
+            newPasswordTextBox.PlaceholderForeColor = Color.Black;
+            newPasswordTextBox.PlaceholderText = "";
+            newPasswordTextBox.SelectedText = "";
+            newPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            newPasswordTextBox.Size = new Size(156, 25);
+            newPasswordTextBox.TabIndex = 53;
+            // 
+            // oldPasswordTextBox
+            // 
+            oldPasswordTextBox.BackColor = Color.WhiteSmoke;
+            oldPasswordTextBox.BorderRadius = 8;
+            oldPasswordTextBox.CustomizableEdges = customizableEdges27;
+            oldPasswordTextBox.DefaultText = "";
+            oldPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            oldPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            oldPasswordTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            oldPasswordTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            oldPasswordTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            oldPasswordTextBox.Font = new Font("Calibri", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            oldPasswordTextBox.ForeColor = Color.Black;
+            oldPasswordTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            oldPasswordTextBox.Location = new Point(50, 68);
+            oldPasswordTextBox.Name = "oldPasswordTextBox";
+            oldPasswordTextBox.PasswordChar = '\0';
+            oldPasswordTextBox.PlaceholderForeColor = Color.Black;
+            oldPasswordTextBox.PlaceholderText = "";
+            oldPasswordTextBox.SelectedText = "";
+            oldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            oldPasswordTextBox.Size = new Size(156, 25);
+            oldPasswordTextBox.TabIndex = 52;
+            // 
+            // confirmNewPasswordLabel
+            // 
+            confirmNewPasswordLabel.AutoSize = true;
+            confirmNewPasswordLabel.BackColor = Color.WhiteSmoke;
+            confirmNewPasswordLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            confirmNewPasswordLabel.Location = new Point(54, 144);
+            confirmNewPasswordLabel.Name = "confirmNewPasswordLabel";
+            confirmNewPasswordLabel.Size = new Size(149, 18);
+            confirmNewPasswordLabel.TabIndex = 3;
+            confirmNewPasswordLabel.Text = "Confirm new password\r\n";
+            // 
+            // newPasswordLabel
+            // 
+            newPasswordLabel.AutoSize = true;
+            newPasswordLabel.BackColor = Color.WhiteSmoke;
+            newPasswordLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            newPasswordLabel.Location = new Point(62, 97);
+            newPasswordLabel.Name = "newPasswordLabel";
+            newPasswordLabel.Size = new Size(133, 18);
+            newPasswordLabel.TabIndex = 2;
+            newPasswordLabel.Text = "Enter new password\r\n";
+            // 
+            // oldPasswordLabel
+            // 
+            oldPasswordLabel.AutoSize = true;
+            oldPasswordLabel.BackColor = Color.WhiteSmoke;
+            oldPasswordLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            oldPasswordLabel.Location = new Point(65, 46);
+            oldPasswordLabel.Name = "oldPasswordLabel";
+            oldPasswordLabel.Size = new Size(126, 18);
+            oldPasswordLabel.TabIndex = 1;
+            oldPasswordLabel.Text = "Enter old password";
+            // 
+            // changePasswordLabel
+            // 
+            changePasswordLabel.AutoSize = true;
+            changePasswordLabel.BackColor = Color.WhiteSmoke;
+            changePasswordLabel.Font = new Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            changePasswordLabel.Location = new Point(54, 11);
+            changePasswordLabel.Name = "changePasswordLabel";
+            changePasswordLabel.Size = new Size(148, 23);
+            changePasswordLabel.TabIndex = 0;
+            changePasswordLabel.Text = "Change Password";
+            // 
+            // changePasswordBorders
+            // 
+            changePasswordBorders.Image = Properties.Resources.changePasswordBorders;
+            changePasswordBorders.Location = new Point(0, 0);
+            changePasswordBorders.Name = "changePasswordBorders";
+            changePasswordBorders.Size = new Size(257, 234);
+            changePasswordBorders.TabIndex = 56;
+            changePasswordBorders.TabStop = false;
             // 
             // Settings
             // 
@@ -757,14 +957,15 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
-            Controls.Add(pictureBox1);
+            Controls.Add(changePassPanel);
+            Controls.Add(errorPanel);
+            Controls.Add(vLine3);
             Controls.Add(changePasswordButton);
             Controls.Add(deleteAccountButton);
-            Controls.Add(label1);
+            Controls.Add(emailLabel);
             Controls.Add(emailTextBox);
             Controls.Add(buttonSave);
             Controls.Add(themeComboBox);
-            Controls.Add(errorPanel);
             Controls.Add(rightCorner);
             Controls.Add(leftCorner);
             Controls.Add(vLine);
@@ -808,12 +1009,16 @@
             ((System.ComponentModel.ISupportInitialize)vLine).EndInit();
             ((System.ComponentModel.ISupportInitialize)leftCorner).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)settingsError).EndInit();
+            ((System.ComponentModel.ISupportInitialize)themeComboBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine3).EndInit();
             errorPanel.ResumeLayout(false);
             errorPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)welcomeError).EndInit();
-            ((System.ComponentModel.ISupportInitialize)themeComboBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            changePassPanel.ResumeLayout(false);
+            changePassPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)changePasswordClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)changePasswordBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -857,17 +1062,28 @@
         private PictureBox vLine;
         private PictureBox leftCorner;
         private PictureBox rightCorner;
-        private Panel errorPanel;
         private PictureBox errorClose;
-        private Label welcomeErrorLabel;
+        private Label settingErrorLabel;
         private Label errorLabel;
-        private PictureBox welcomeError;
+        private PictureBox settingsError;
         private Krypton.Toolkit.KryptonComboBox themeComboBox;
         private Guna.UI2.WinForms.Guna2Button buttonSave;
         private Krypton.Toolkit.KryptonTextBox emailTextBox;
-        private Label label1;
+        private Label emailLabel;
         private Guna.UI2.WinForms.Guna2Button deleteAccountButton;
         private Guna.UI2.WinForms.Guna2Button changePasswordButton;
-        private PictureBox pictureBox1;
+        private PictureBox vLine3;
+        private Panel errorPanel;
+        private Panel changePassPanel;
+        private Label confirmNewPasswordLabel;
+        private Label newPasswordLabel;
+        private Label oldPasswordLabel;
+        private Label changePasswordLabel;
+        private Guna.UI2.WinForms.Guna2Button changePasswordConfirmButton;
+        private Guna.UI2.WinForms.Guna2TextBox PasswordTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox newPasswordTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox oldPasswordTextBox;
+        private PictureBox changePasswordBorders;
+        private PictureBox changePasswordClose;
     }
 }

@@ -675,22 +675,22 @@ namespace FitVitality
                                 switch (reader["ActivitySelection"].ToString())
                                 {
                                     case "Sedentary":
-                                        activityComboBoxMacro.SelectedItem = "Sedentary";
+                                        activityComboBox.SelectedItem = "Sedentary";
                                         break;
                                     case "Light":
-                                        activityComboBoxMacro.SelectedItem = "Light";
+                                        activityComboBox.SelectedItem = "Light";
                                         break;
                                     case "Moderate":
-                                        activityComboBoxMacro.SelectedItem = "Moderate";
+                                        activityComboBox.SelectedItem = "Moderate";
                                         break;
                                     case "Active":
-                                        activityComboBoxMacro.SelectedItem = "Active";
+                                        activityComboBox.SelectedItem = "Active";
                                         break;
                                     case "Very active":
-                                        activityComboBoxMacro.SelectedItem = "Very active";
+                                        activityComboBox.SelectedItem = "Very active";
                                         break;
                                     case "Extra active":
-                                        activityComboBoxMacro.SelectedItem = "Extra active";
+                                        activityComboBox.SelectedItem = "Extra active";
                                         break;
                                 }
                                 if (reader["MacroSelection"].ToString() != String.Empty)
@@ -715,7 +715,7 @@ namespace FitVitality
                                 }
                                 else
                                 {
-                                    if (activityComboBoxMacro.Text != "")
+                                    if (activityComboBox.Text != "")
                                     {
                                         hiddenPanel1.Visible = false;
                                         hiddenPanel2.Visible = true;
@@ -724,7 +724,7 @@ namespace FitVitality
                             }
                             else
                             {
-                                if (activityComboBoxMacro.Text != "")
+                                if (activityComboBox.Text != "")
                                 {
                                     hiddenPanel1.Visible = true;
                                     hiddenPanel2.Visible = true;
@@ -901,7 +901,7 @@ namespace FitVitality
             lowCarbsButton.Visible = true;
             lowFatButton.Visible = true;
             highProteinButton.Visible = true;
-            if (activityComboBoxMacro.Text != "")
+            if (activityComboBox.Text != "")
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
@@ -911,34 +911,34 @@ namespace FitVitality
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@UserID", _userID);
-                        if (activityComboBoxMacro.SelectedItem == "Sedentary")
+                        if (activityComboBox.SelectedItem == "Sedentary")
                         {
                             MacroBalanced(sedentaryBMR);
                         }
-                        if (activityComboBoxMacro.SelectedItem == "Light")
+                        if (activityComboBox.SelectedItem == "Light")
                         {
                             MacroBalanced(exerciseBMR13);
                         }
-                        if (activityComboBoxMacro.SelectedItem == "Moderate")
+                        if (activityComboBox.SelectedItem == "Moderate")
                         {
                             MacroBalanced(exerciseBMR45);
                         }
-                        if (activityComboBoxMacro.SelectedItem == "Active")
+                        if (activityComboBox.SelectedItem == "Active")
                         {
                             MacroBalanced(DailyBMR34);
                         }
-                        if (activityComboBoxMacro.SelectedItem == "Very active")
+                        if (activityComboBox.SelectedItem == "Very active")
                         {
                             MacroBalanced(intenseBMR67);
                         }
-                        if (activityComboBoxMacro.SelectedItem == "Extra active")
+                        if (activityComboBox.SelectedItem == "Extra active")
                         {
                             MacroBalanced(veryIntenseBMR);
                         }
-                        command.Parameters.AddWithValue("@ActivitySelection", activityComboBoxMacro.SelectedItem.ToString());
+                        command.Parameters.AddWithValue("@ActivitySelection", activityComboBox.SelectedItem.ToString());
                         connection.Open();
                         command.ExecuteNonQuery();
-                        if (activityComboBoxMacro.Text != "")
+                        if (activityComboBox.Text != "")
                         {
                             hiddenPanel2.Visible = false;
 
@@ -977,31 +977,31 @@ namespace FitVitality
                     command.ExecuteNonQuery();
                 }
             }
-            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            if (activityComboBox.SelectedItem == "Sedentary")
             {
                 MacroBalanced(sedentaryBMR);
             }
-            if (activityComboBoxMacro.SelectedItem == "Light")
+            if (activityComboBox.SelectedItem == "Light")
             {
                 MacroBalanced(exerciseBMR13);
             }
-            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            if (activityComboBox.SelectedItem == "Moderate")
             {
                 MacroBalanced(exerciseBMR45);
             }
-            if (activityComboBoxMacro.SelectedItem == "Active")
+            if (activityComboBox.SelectedItem == "Active")
             {
                 MacroBalanced(DailyBMR34);
             }
-            if (activityComboBoxMacro.SelectedItem == "Very active")
+            if (activityComboBox.SelectedItem == "Very active")
             {
                 MacroBalanced(intenseBMR67);
             }
-            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            if (activityComboBox.SelectedItem == "Extra active")
             {
                 MacroBalanced(veryIntenseBMR);
             }
-            if (activityComboBoxMacro.Text != "")
+            if (activityComboBox.Text != "")
             {
                 hiddenPanel1.Visible = false;
             }
@@ -1031,31 +1031,31 @@ namespace FitVitality
                     command.ExecuteNonQuery();
                 }
             }
-            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            if (activityComboBox.SelectedItem == "Sedentary")
             {
                 MacroHighProtein(sedentaryBMR);
             }
-            if (activityComboBoxMacro.SelectedItem == "Light")
+            if (activityComboBox.SelectedItem == "Light")
             {
                 MacroHighProtein(exerciseBMR13);
             }
-            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            if (activityComboBox.SelectedItem == "Moderate")
             {
                 MacroHighProtein(exerciseBMR45);
             }
-            if (activityComboBoxMacro.SelectedItem == "Active")
+            if (activityComboBox.SelectedItem == "Active")
             {
                 MacroHighProtein(DailyBMR34);
             }
-            if (activityComboBoxMacro.SelectedItem == "Very active")
+            if (activityComboBox.SelectedItem == "Very active")
             {
                 MacroHighProtein(intenseBMR67);
             }
-            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            if (activityComboBox.SelectedItem == "Extra active")
             {
                 MacroHighProtein(veryIntenseBMR);
             }
-            if (activityComboBoxMacro.Text != "")
+            if (activityComboBox.Text != "")
             {
                 hiddenPanel1.Visible = false;
             }
@@ -1085,31 +1085,31 @@ namespace FitVitality
                     command.ExecuteNonQuery();
                 }
             }
-            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            if (activityComboBox.SelectedItem == "Sedentary")
             {
                 MacroLowFat(sedentaryBMR);
             }
-            if (activityComboBoxMacro.SelectedItem == "Light")
+            if (activityComboBox.SelectedItem == "Light")
             {
                 MacroLowFat(exerciseBMR13);
             }
-            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            if (activityComboBox.SelectedItem == "Moderate")
             {
                 MacroLowFat(exerciseBMR45);
             }
-            if (activityComboBoxMacro.SelectedItem == "Active")
+            if (activityComboBox.SelectedItem == "Active")
             {
                 MacroLowFat(DailyBMR34);
             }
-            if (activityComboBoxMacro.SelectedItem == "Very active")
+            if (activityComboBox.SelectedItem == "Very active")
             {
                 MacroLowFat(intenseBMR67);
             }
-            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            if (activityComboBox.SelectedItem == "Extra active")
             {
                 MacroLowFat(veryIntenseBMR);
             }
-            if (activityComboBoxMacro.Text != "")
+            if (activityComboBox.Text != "")
             {
                 hiddenPanel1.Visible = false;
             }
@@ -1139,31 +1139,31 @@ namespace FitVitality
                     command.ExecuteNonQuery();
                 }
             }
-            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            if (activityComboBox.SelectedItem == "Sedentary")
             {
                 MacroLowCarb(sedentaryBMR);
             }
-            if (activityComboBoxMacro.SelectedItem == "Light")
+            if (activityComboBox.SelectedItem == "Light")
             {
                 MacroLowCarb(exerciseBMR13);
             }
-            if (activityComboBoxMacro.SelectedItem == "Moderate")
+            if (activityComboBox.SelectedItem == "Moderate")
             {
                 MacroLowCarb(exerciseBMR45);
             }
-            if (activityComboBoxMacro.SelectedItem == "Active")
+            if (activityComboBox.SelectedItem == "Active")
             {
                 MacroLowCarb(DailyBMR34);
             }
-            if (activityComboBoxMacro.SelectedItem == "Very active")
+            if (activityComboBox.SelectedItem == "Very active")
             {
                 MacroLowCarb(intenseBMR67);
             }
-            if (activityComboBoxMacro.SelectedItem == "Extra active")
+            if (activityComboBox.SelectedItem == "Extra active")
             {
                 MacroLowCarb(veryIntenseBMR);
             }
-            if (activityComboBoxMacro.Text != "")
+            if (activityComboBox.Text != "")
             {
                 hiddenPanel1.Visible = false;
             }
@@ -1395,7 +1395,7 @@ namespace FitVitality
             ifSearchNotClicked(sender, e);
         }
 
-        private void activityComboBoxMacro_Click(object sender, EventArgs e)
+        private void activityComboBox_Click(object sender, EventArgs e)
         {
             ifSearchNotClicked(sender, e);
         }

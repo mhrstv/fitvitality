@@ -323,6 +323,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap changePasswordBorders {
+            get {
+                object obj = ResourceManager.GetObject("changePasswordBorders", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chest {
             get {
                 object obj = ResourceManager.GetObject("chest", resourceCulture);
@@ -546,6 +556,16 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap email21 {
             get {
                 object obj = ResourceManager.GetObject("email21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap errorPanel {
+            get {
+                object obj = ResourceManager.GetObject("errorPanel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

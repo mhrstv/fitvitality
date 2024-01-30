@@ -265,7 +265,7 @@
             // 
             manageGoalDescription.AutoSize = true;
             manageGoalDescription.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            manageGoalDescription.Location = new Point(44, 256);
+            manageGoalDescription.Location = new Point(30, 273);
             manageGoalDescription.Name = "manageGoalDescription";
             manageGoalDescription.Size = new Size(159, 60);
             manageGoalDescription.TabIndex = 38;
@@ -290,7 +290,7 @@
             activityLevelLabel.AutoSize = true;
             activityLevelLabel.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             activityLevelLabel.ForeColor = Color.Black;
-            activityLevelLabel.Location = new Point(31, 133);
+            activityLevelLabel.Location = new Point(13, 137);
             activityLevelLabel.Name = "activityLevelLabel";
             activityLevelLabel.Size = new Size(79, 15);
             activityLevelLabel.TabIndex = 42;
@@ -511,10 +511,10 @@
             activityComboBox.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
             activityComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             activityComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            activityComboBox.Location = new Point(113, 129);
+            activityComboBox.Location = new Point(94, 133);
             activityComboBox.Name = "activityComboBox";
             activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            activityComboBox.Size = new Size(99, 24);
+            activityComboBox.Size = new Size(119, 24);
             activityComboBox.TabIndex = 58;
             activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
             // 

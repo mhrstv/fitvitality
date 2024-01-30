@@ -71,6 +71,10 @@ namespace FitVitality
             heightTextBox.Visible = false;
             goalComboBox.Visible = false;
             buttonSave.Visible = false;
+            vLine3.Visible = false;
+            themeComboBox.Visible = false;
+            emailTextBox.Visible = false;
+            changePasswordButton.Visible = false;
         }
 
         private void Settings_Load(object sender, EventArgs e)
@@ -196,6 +200,10 @@ namespace FitVitality
             heightTextBox.Visible = true;
             goalComboBox.Visible = true;
             buttonSave.Visible = true;
+            vLine3.Visible = true;
+            themeComboBox.Visible = true;
+            emailTextBox.Visible = true;
+            changePasswordButton.Visible = true;
         }
 
         private void buttonClose_MouseEnter(object sender, EventArgs e)
@@ -457,7 +465,7 @@ namespace FitVitality
                         using (SqlCommand command = new SqlCommand(query, connection))
                         {
                             if (isValidPassword(newPass))
-                            {   
+                            {
                                 newPasswordTextBox.BorderColor = Color.FromArgb(213, 218, 223);
                                 if (newPass == confirmPass)
                                 {

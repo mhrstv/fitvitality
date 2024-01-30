@@ -30,6 +30,20 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -44,6 +58,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             deleteAccPanel = new Panel();
             closeDAPanel = new Panel();
@@ -64,13 +82,6 @@
             weightLabel = new Label();
             heightLabel = new Label();
             goalLabel = new Label();
-            nameTextBox = new Krypton.Toolkit.KryptonTextBox();
-            ageTextBox = new Krypton.Toolkit.KryptonTextBox();
-            weightTextBox = new Krypton.Toolkit.KryptonTextBox();
-            heightTextBox = new Krypton.Toolkit.KryptonTextBox();
-            languageComboBox = new Krypton.Toolkit.KryptonComboBox();
-            genderComboBox = new Krypton.Toolkit.KryptonComboBox();
-            goalComboBox = new Krypton.Toolkit.KryptonComboBox();
             vLine2 = new PictureBox();
             hLine2 = new PictureBox();
             hLine1 = new PictureBox();
@@ -81,9 +92,7 @@
             settingErrorLabel = new Label();
             errorLabel = new Label();
             settingsError = new PictureBox();
-            themeComboBox = new Krypton.Toolkit.KryptonComboBox();
             buttonSave = new Guna.UI2.WinForms.Guna2Button();
-            emailTextBox = new Krypton.Toolkit.KryptonTextBox();
             emailLabel = new Label();
             deleteAccountButton = new Guna.UI2.WinForms.Guna2Button();
             changePasswordButton = new Guna.UI2.WinForms.Guna2Button();
@@ -100,14 +109,20 @@
             oldPasswordLabel = new Label();
             changePasswordLabel = new Label();
             changePasswordBorders = new PictureBox();
+            nameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            emailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            ageTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            weightTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            heightTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            themeComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            languageComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            genderComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            goalComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             deleteAccPanel.SuspendLayout();
             closeDAPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             confirmPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)deletePanel).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)languageComboBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)genderComboBox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)goalComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
@@ -116,7 +131,6 @@
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)settingsError).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)themeComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine3).BeginInit();
             errorPanel.SuspendLayout();
             changePasswordPanel.SuspendLayout();
@@ -418,134 +432,6 @@
             goalLabel.TabIndex = 22;
             goalLabel.Text = "Goal";
             // 
-            // nameTextBox
-            // 
-            nameTextBox.Location = new Point(494, 77);
-            nameTextBox.Name = "nameTextBox";
-            nameTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            nameTextBox.Size = new Size(100, 23);
-            nameTextBox.TabIndex = 23;
-            // 
-            // ageTextBox
-            // 
-            ageTextBox.Location = new Point(494, 137);
-            ageTextBox.Name = "ageTextBox";
-            ageTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            ageTextBox.Size = new Size(100, 23);
-            ageTextBox.TabIndex = 24;
-            // 
-            // weightTextBox
-            // 
-            weightTextBox.Location = new Point(494, 196);
-            weightTextBox.Name = "weightTextBox";
-            weightTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            weightTextBox.Size = new Size(100, 23);
-            weightTextBox.TabIndex = 26;
-            weightTextBox.TextChanged += weightTextBox_TextChanged;
-            // 
-            // heightTextBox
-            // 
-            heightTextBox.Location = new Point(494, 226);
-            heightTextBox.Name = "heightTextBox";
-            heightTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            heightTextBox.Size = new Size(100, 23);
-            heightTextBox.TabIndex = 27;
-            // 
-            // languageComboBox
-            // 
-            languageComboBox.CornerRoundingRadius = -1F;
-            languageComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            languageComboBox.DropDownWidth = 121;
-            languageComboBox.IntegralHeight = false;
-            languageComboBox.Items.AddRange(new object[] { "Bulgarian", "English" });
-            languageComboBox.Location = new Point(127, 78);
-            languageComboBox.Name = "languageComboBox";
-            languageComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            languageComboBox.Size = new Size(121, 21);
-            languageComboBox.StateCommon.ComboBox.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            languageComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            languageComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
-            languageComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
-            languageComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            languageComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            languageComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            languageComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            languageComboBox.TabIndex = 32;
-            languageComboBox.SelectedIndexChanged += languageComboBox_SelectedIndexChanged;
-            // 
-            // genderComboBox
-            // 
-            genderComboBox.CornerRoundingRadius = -1F;
-            genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            genderComboBox.DropDownWidth = 121;
-            genderComboBox.IntegralHeight = false;
-            genderComboBox.Items.AddRange(new object[] { "Male", "Female" });
-            genderComboBox.Location = new Point(494, 167);
-            genderComboBox.Name = "genderComboBox";
-            genderComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            genderComboBox.Size = new Size(100, 21);
-            genderComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            genderComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
-            genderComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
-            genderComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            genderComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            genderComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            genderComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            genderComboBox.TabIndex = 33;
-            // 
-            // goalComboBox
-            // 
-            goalComboBox.CornerRoundingRadius = -1F;
-            goalComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            goalComboBox.DropDownWidth = 121;
-            goalComboBox.IntegralHeight = false;
-            goalComboBox.Items.AddRange(new object[] { "Cut", "Maintain", "Bulk" });
-            goalComboBox.Location = new Point(494, 256);
-            goalComboBox.Name = "goalComboBox";
-            goalComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            goalComboBox.Size = new Size(100, 21);
-            goalComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            goalComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
-            goalComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
-            goalComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            goalComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            goalComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            goalComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            goalComboBox.TabIndex = 34;
-            // 
             // vLine2
             // 
             vLine2.Image = Properties.Resources.vline;
@@ -647,41 +533,10 @@
             settingsError.TabIndex = 0;
             settingsError.TabStop = false;
             // 
-            // themeComboBox
-            // 
-            themeComboBox.CornerRoundingRadius = -1F;
-            themeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            themeComboBox.DropDownWidth = 121;
-            themeComboBox.IntegralHeight = false;
-            themeComboBox.Items.AddRange(new object[] { "Light", "Dark" });
-            themeComboBox.Location = new Point(127, 121);
-            themeComboBox.Name = "themeComboBox";
-            themeComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            themeComboBox.Size = new Size(85, 21);
-            themeComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            themeComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
-            themeComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
-            themeComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            themeComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            themeComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            themeComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            themeComboBox.TabIndex = 42;
-            // 
             // buttonSave
             // 
             buttonSave.BorderRadius = 10;
-            buttonSave.CustomizableEdges = customizableEdges15;
+            buttonSave.CustomizableEdges = customizableEdges1;
             buttonSave.DisabledState.BorderColor = Color.DarkGray;
             buttonSave.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -691,19 +546,11 @@
             buttonSave.ForeColor = Color.White;
             buttonSave.Location = new Point(515, 285);
             buttonSave.Name = "buttonSave";
-            buttonSave.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            buttonSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
             buttonSave.Size = new Size(79, 40);
             buttonSave.TabIndex = 43;
             buttonSave.Text = "Save Settings";
             buttonSave.Click += buttonSave_Click;
-            // 
-            // emailTextBox
-            // 
-            emailTextBox.Location = new Point(494, 107);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            emailTextBox.Size = new Size(100, 23);
-            emailTextBox.TabIndex = 44;
             // 
             // emailLabel
             // 
@@ -718,7 +565,7 @@
             // deleteAccountButton
             // 
             deleteAccountButton.BorderRadius = 10;
-            deleteAccountButton.CustomizableEdges = customizableEdges17;
+            deleteAccountButton.CustomizableEdges = customizableEdges3;
             deleteAccountButton.DisabledState.BorderColor = Color.DarkGray;
             deleteAccountButton.DisabledState.CustomBorderColor = Color.DarkGray;
             deleteAccountButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -728,7 +575,7 @@
             deleteAccountButton.ForeColor = Color.White;
             deleteAccountButton.Location = new Point(424, 331);
             deleteAccountButton.Name = "deleteAccountButton";
-            deleteAccountButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            deleteAccountButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             deleteAccountButton.Size = new Size(170, 25);
             deleteAccountButton.TabIndex = 46;
             deleteAccountButton.Text = "Delete Account";
@@ -737,7 +584,7 @@
             // changePasswordButton
             // 
             changePasswordButton.BorderRadius = 10;
-            changePasswordButton.CustomizableEdges = customizableEdges19;
+            changePasswordButton.CustomizableEdges = customizableEdges5;
             changePasswordButton.DisabledState.BorderColor = Color.DarkGray;
             changePasswordButton.DisabledState.CustomBorderColor = Color.DarkGray;
             changePasswordButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -747,7 +594,7 @@
             changePasswordButton.ForeColor = Color.White;
             changePasswordButton.Location = new Point(424, 285);
             changePasswordButton.Name = "changePasswordButton";
-            changePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            changePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             changePasswordButton.Size = new Size(88, 40);
             changePasswordButton.TabIndex = 47;
             changePasswordButton.Text = "Change Password";
@@ -810,7 +657,7 @@
             // 
             changePasswordConfirmButton.BackColor = Color.WhiteSmoke;
             changePasswordConfirmButton.BorderRadius = 10;
-            changePasswordConfirmButton.CustomizableEdges = customizableEdges21;
+            changePasswordConfirmButton.CustomizableEdges = customizableEdges7;
             changePasswordConfirmButton.DisabledState.BorderColor = Color.DarkGray;
             changePasswordConfirmButton.DisabledState.CustomBorderColor = Color.DarkGray;
             changePasswordConfirmButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -820,7 +667,7 @@
             changePasswordConfirmButton.ForeColor = Color.White;
             changePasswordConfirmButton.Location = new Point(86, 198);
             changePasswordConfirmButton.Name = "changePasswordConfirmButton";
-            changePasswordConfirmButton.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            changePasswordConfirmButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             changePasswordConfirmButton.Size = new Size(84, 25);
             changePasswordConfirmButton.TabIndex = 55;
             changePasswordConfirmButton.Text = "Confirm";
@@ -830,7 +677,7 @@
             // 
             confirmPasswordTextBox.BackColor = Color.WhiteSmoke;
             confirmPasswordTextBox.BorderRadius = 8;
-            confirmPasswordTextBox.CustomizableEdges = customizableEdges23;
+            confirmPasswordTextBox.CustomizableEdges = customizableEdges9;
             confirmPasswordTextBox.DefaultText = "";
             confirmPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             confirmPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -846,7 +693,7 @@
             confirmPasswordTextBox.PlaceholderForeColor = Color.Black;
             confirmPasswordTextBox.PlaceholderText = "";
             confirmPasswordTextBox.SelectedText = "";
-            confirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            confirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
             confirmPasswordTextBox.Size = new Size(156, 25);
             confirmPasswordTextBox.TabIndex = 54;
             confirmPasswordTextBox.UseSystemPasswordChar = true;
@@ -855,7 +702,7 @@
             // 
             newPasswordTextBox.BackColor = Color.WhiteSmoke;
             newPasswordTextBox.BorderRadius = 8;
-            newPasswordTextBox.CustomizableEdges = customizableEdges25;
+            newPasswordTextBox.CustomizableEdges = customizableEdges11;
             newPasswordTextBox.DefaultText = "";
             newPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             newPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -871,7 +718,7 @@
             newPasswordTextBox.PlaceholderForeColor = Color.Black;
             newPasswordTextBox.PlaceholderText = "";
             newPasswordTextBox.SelectedText = "";
-            newPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            newPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
             newPasswordTextBox.Size = new Size(156, 25);
             newPasswordTextBox.TabIndex = 53;
             newPasswordTextBox.UseSystemPasswordChar = true;
@@ -880,7 +727,7 @@
             // 
             oldPasswordTextBox.BackColor = Color.WhiteSmoke;
             oldPasswordTextBox.BorderRadius = 8;
-            oldPasswordTextBox.CustomizableEdges = customizableEdges27;
+            oldPasswordTextBox.CustomizableEdges = customizableEdges13;
             oldPasswordTextBox.DefaultText = "";
             oldPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             oldPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -896,7 +743,7 @@
             oldPasswordTextBox.PlaceholderForeColor = Color.Black;
             oldPasswordTextBox.PlaceholderText = "";
             oldPasswordTextBox.SelectedText = "";
-            oldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            oldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
             oldPasswordTextBox.Size = new Size(156, 25);
             oldPasswordTextBox.TabIndex = 52;
             oldPasswordTextBox.UseSystemPasswordChar = true;
@@ -954,6 +801,220 @@
             changePasswordBorders.TabIndex = 56;
             changePasswordBorders.TabStop = false;
             // 
+            // nameTextBox
+            // 
+            nameTextBox.BackColor = Color.WhiteSmoke;
+            nameTextBox.BorderColor = Color.FromArgb(92, 225, 230);
+            nameTextBox.BorderRadius = 8;
+            nameTextBox.CustomizableEdges = customizableEdges15;
+            nameTextBox.DefaultText = "";
+            nameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            nameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            nameTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            nameTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            nameTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            nameTextBox.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            nameTextBox.ForeColor = Color.Black;
+            nameTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            nameTextBox.Location = new Point(494, 77);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.PasswordChar = '\0';
+            nameTextBox.PlaceholderForeColor = Color.Black;
+            nameTextBox.PlaceholderText = "";
+            nameTextBox.SelectedText = "";
+            nameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            nameTextBox.Size = new Size(100, 25);
+            nameTextBox.TabIndex = 52;
+            // 
+            // emailTextBox
+            // 
+            emailTextBox.BackColor = Color.WhiteSmoke;
+            emailTextBox.BorderColor = Color.FromArgb(92, 225, 230);
+            emailTextBox.BorderRadius = 8;
+            emailTextBox.CustomizableEdges = customizableEdges17;
+            emailTextBox.DefaultText = "";
+            emailTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            emailTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            emailTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            emailTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            emailTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            emailTextBox.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            emailTextBox.ForeColor = Color.Black;
+            emailTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            emailTextBox.Location = new Point(494, 107);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.PasswordChar = '\0';
+            emailTextBox.PlaceholderForeColor = Color.Black;
+            emailTextBox.PlaceholderText = "";
+            emailTextBox.SelectedText = "";
+            emailTextBox.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            emailTextBox.Size = new Size(100, 25);
+            emailTextBox.TabIndex = 53;
+            // 
+            // ageTextBox
+            // 
+            ageTextBox.BackColor = Color.WhiteSmoke;
+            ageTextBox.BorderColor = Color.FromArgb(92, 225, 230);
+            ageTextBox.BorderRadius = 8;
+            ageTextBox.CustomizableEdges = customizableEdges19;
+            ageTextBox.DefaultText = "";
+            ageTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            ageTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            ageTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            ageTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            ageTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ageTextBox.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ageTextBox.ForeColor = Color.Black;
+            ageTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            ageTextBox.Location = new Point(494, 137);
+            ageTextBox.Name = "ageTextBox";
+            ageTextBox.PasswordChar = '\0';
+            ageTextBox.PlaceholderForeColor = Color.Black;
+            ageTextBox.PlaceholderText = "";
+            ageTextBox.SelectedText = "";
+            ageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            ageTextBox.Size = new Size(100, 25);
+            ageTextBox.TabIndex = 54;
+            // 
+            // weightTextBox
+            // 
+            weightTextBox.BackColor = Color.WhiteSmoke;
+            weightTextBox.BorderColor = Color.FromArgb(92, 225, 230);
+            weightTextBox.BorderRadius = 8;
+            weightTextBox.CustomizableEdges = customizableEdges21;
+            weightTextBox.DefaultText = "";
+            weightTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            weightTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            weightTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            weightTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            weightTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            weightTextBox.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            weightTextBox.ForeColor = Color.Black;
+            weightTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            weightTextBox.Location = new Point(494, 196);
+            weightTextBox.Name = "weightTextBox";
+            weightTextBox.PasswordChar = '\0';
+            weightTextBox.PlaceholderForeColor = Color.Black;
+            weightTextBox.PlaceholderText = "";
+            weightTextBox.SelectedText = "";
+            weightTextBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            weightTextBox.Size = new Size(100, 25);
+            weightTextBox.TabIndex = 55;
+            // 
+            // heightTextBox
+            // 
+            heightTextBox.BackColor = Color.WhiteSmoke;
+            heightTextBox.BorderColor = Color.FromArgb(92, 225, 230);
+            heightTextBox.BorderRadius = 8;
+            heightTextBox.CustomizableEdges = customizableEdges23;
+            heightTextBox.DefaultText = "";
+            heightTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            heightTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            heightTextBox.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            heightTextBox.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            heightTextBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            heightTextBox.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            heightTextBox.ForeColor = Color.Black;
+            heightTextBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            heightTextBox.Location = new Point(494, 226);
+            heightTextBox.Name = "heightTextBox";
+            heightTextBox.PasswordChar = '\0';
+            heightTextBox.PlaceholderForeColor = Color.Black;
+            heightTextBox.PlaceholderText = "";
+            heightTextBox.SelectedText = "";
+            heightTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            heightTextBox.Size = new Size(100, 25);
+            heightTextBox.TabIndex = 56;
+            // 
+            // themeComboBox
+            // 
+            themeComboBox.BackColor = Color.Transparent;
+            themeComboBox.BorderColor = Color.FromArgb(92, 225, 230);
+            themeComboBox.BorderRadius = 8;
+            themeComboBox.CustomizableEdges = customizableEdges25;
+            themeComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            themeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            themeComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            themeComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            themeComboBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            themeComboBox.ForeColor = Color.Black;
+            themeComboBox.ItemHeight = 18;
+            themeComboBox.Items.AddRange(new object[] { "Light", "Dark" });
+            themeComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            themeComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            themeComboBox.Location = new Point(127, 121);
+            themeComboBox.Name = "themeComboBox";
+            themeComboBox.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            themeComboBox.Size = new Size(85, 24);
+            themeComboBox.TabIndex = 59;
+            // 
+            // languageComboBox
+            // 
+            languageComboBox.BackColor = Color.Transparent;
+            languageComboBox.BorderColor = Color.FromArgb(92, 225, 230);
+            languageComboBox.BorderRadius = 8;
+            languageComboBox.CustomizableEdges = customizableEdges27;
+            languageComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            languageComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            languageComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            languageComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            languageComboBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            languageComboBox.ForeColor = Color.Black;
+            languageComboBox.ItemHeight = 18;
+            languageComboBox.Items.AddRange(new object[] { "Bulgarian", "English" });
+            languageComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            languageComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            languageComboBox.Location = new Point(127, 78);
+            languageComboBox.Name = "languageComboBox";
+            languageComboBox.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            languageComboBox.Size = new Size(121, 24);
+            languageComboBox.TabIndex = 60;
+            languageComboBox.SelectedIndexChanged += languageComboBox_SelectedIndexChanged;
+            // 
+            // genderComboBox
+            // 
+            genderComboBox.BackColor = Color.Transparent;
+            genderComboBox.BorderColor = Color.FromArgb(92, 225, 230);
+            genderComboBox.BorderRadius = 8;
+            genderComboBox.CustomizableEdges = customizableEdges29;
+            genderComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            genderComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            genderComboBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            genderComboBox.ForeColor = Color.Black;
+            genderComboBox.ItemHeight = 15;
+            genderComboBox.Items.AddRange(new object[] { "Male", "Female" });
+            genderComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            genderComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            genderComboBox.Location = new Point(494, 167);
+            genderComboBox.Name = "genderComboBox";
+            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            genderComboBox.Size = new Size(100, 21);
+            genderComboBox.TabIndex = 61;
+            // 
+            // goalComboBox
+            // 
+            goalComboBox.BackColor = Color.Transparent;
+            goalComboBox.BorderColor = Color.FromArgb(92, 225, 230);
+            goalComboBox.BorderRadius = 8;
+            goalComboBox.CustomizableEdges = customizableEdges31;
+            goalComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            goalComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            goalComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            goalComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            goalComboBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            goalComboBox.ForeColor = Color.Black;
+            goalComboBox.ItemHeight = 15;
+            goalComboBox.Items.AddRange(new object[] { "Cut", "Maintain", "Bulk" });
+            goalComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            goalComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            goalComboBox.Location = new Point(494, 256);
+            goalComboBox.Name = "goalComboBox";
+            goalComboBox.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            goalComboBox.Size = new Size(100, 21);
+            goalComboBox.TabIndex = 62;
+            // 
             // Settings
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -965,23 +1026,13 @@
             Controls.Add(vLine3);
             Controls.Add(changePasswordButton);
             Controls.Add(deleteAccountButton);
-            Controls.Add(emailLabel);
-            Controls.Add(emailTextBox);
             Controls.Add(buttonSave);
-            Controls.Add(themeComboBox);
             Controls.Add(rightCorner);
             Controls.Add(leftCorner);
             Controls.Add(vLine);
             Controls.Add(vLine2);
             Controls.Add(hLine2);
             Controls.Add(hLine1);
-            Controls.Add(goalComboBox);
-            Controls.Add(genderComboBox);
-            Controls.Add(languageComboBox);
-            Controls.Add(heightTextBox);
-            Controls.Add(weightTextBox);
-            Controls.Add(ageTextBox);
-            Controls.Add(nameTextBox);
             Controls.Add(goalLabel);
             Controls.Add(heightLabel);
             Controls.Add(weightLabel);
@@ -993,6 +1044,16 @@
             Controls.Add(accSettings_label);
             Controls.Add(appSettings_label);
             Controls.Add(deleteAccPanel);
+            Controls.Add(goalComboBox);
+            Controls.Add(genderComboBox);
+            Controls.Add(themeComboBox);
+            Controls.Add(heightTextBox);
+            Controls.Add(weightTextBox);
+            Controls.Add(ageTextBox);
+            Controls.Add(emailTextBox);
+            Controls.Add(nameTextBox);
+            Controls.Add(languageComboBox);
+            Controls.Add(emailLabel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Settings";
             Text = "Settings";
@@ -1003,9 +1064,6 @@
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             confirmPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)deletePanel).EndInit();
-            ((System.ComponentModel.ISupportInitialize)languageComboBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)genderComboBox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)goalComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
@@ -1014,7 +1072,6 @@
             ((System.ComponentModel.ISupportInitialize)rightCorner).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)settingsError).EndInit();
-            ((System.ComponentModel.ISupportInitialize)themeComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)vLine3).EndInit();
             errorPanel.ResumeLayout(false);
             errorPanel.PerformLayout();
@@ -1048,13 +1105,6 @@
         private Label weightLabel;
         private Label heightLabel;
         private Label goalLabel;
-        private Krypton.Toolkit.KryptonTextBox nameTextBox;
-        private Krypton.Toolkit.KryptonTextBox ageTextBox;
-        private Krypton.Toolkit.KryptonTextBox weightTextBox;
-        private Krypton.Toolkit.KryptonTextBox heightTextBox;
-        private Krypton.Toolkit.KryptonComboBox languageComboBox;
-        private Krypton.Toolkit.KryptonComboBox genderComboBox;
-        private Krypton.Toolkit.KryptonComboBox goalComboBox;
         private PictureBox pictureBox8;
         private PictureBox pictureBox7;
         private PictureBox pictureBox6;
@@ -1069,9 +1119,7 @@
         private Label settingErrorLabel;
         private Label errorLabel;
         private PictureBox settingsError;
-        private Krypton.Toolkit.KryptonComboBox themeComboBox;
         private Guna.UI2.WinForms.Guna2Button buttonSave;
-        private Krypton.Toolkit.KryptonTextBox emailTextBox;
         private Label emailLabel;
         private Guna.UI2.WinForms.Guna2Button deleteAccountButton;
         private Guna.UI2.WinForms.Guna2Button changePasswordButton;
@@ -1088,5 +1136,14 @@
         private Guna.UI2.WinForms.Guna2TextBox oldPasswordTextBox;
         private PictureBox changePasswordBorders;
         private PictureBox changePasswordClose;
+        private Guna.UI2.WinForms.Guna2TextBox nameTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox emailTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox ageTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox weightTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox heightTextBox;
+        private Guna.UI2.WinForms.Guna2ComboBox themeComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox languageComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox genderComboBox;
+        private Guna.UI2.WinForms.Guna2ComboBox goalComboBox;
     }
 }

@@ -191,17 +191,17 @@ namespace FitVitality
         {
             bmiCalcPanel.Size = new Size(547, 270);
             bmiCalcPanel.Visible = true;
-            calorie_buttonOpen.Enabled = false;
-            macro_buttonOpen.Enabled = false;
-            idealweight_buttonOpen.Enabled = false;
+            buttonOpenCalorie.Enabled = false;
+            buttonOpenMacro.Enabled = false;
+            buttonOpenIdealWeight.Enabled = false;
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             bmiCalcPanel.Visible = false;
-            calorie_buttonOpen.Enabled = true;
-            macro_buttonOpen.Enabled = true;
-            idealweight_buttonOpen.Enabled = true;
+            buttonOpenCalorie.Enabled = true;
+            buttonOpenMacro.Enabled = true;
+            buttonOpenIdealWeight.Enabled = true;
         }
 
         private void rotationTimer_Tick(object sender, EventArgs e)
@@ -568,17 +568,17 @@ namespace FitVitality
         {
             bmrCalcPanel.Size = new Size(547, 270);
             bmrCalcPanel.Visible = true;
-            calorie_buttonOpen.Enabled = false;
-            macro_buttonOpen.Enabled = false;
-            idealweight_buttonOpen.Enabled = false;
+            buttonOpenCalorie.Enabled = false;
+            buttonOpenMacro.Enabled = false;
+            buttonOpenIdealWeight.Enabled = false;
         }
 
         private void buttonCloseBMR_Click(object sender, EventArgs e)
         {
             bmrCalcPanel.Visible = false;
-            calorie_buttonOpen.Enabled = true;
-            macro_buttonOpen.Enabled = true;
-            idealweight_buttonOpen.Enabled = true;
+            buttonOpenCalorie.Enabled = true;
+            buttonOpenMacro.Enabled = true;
+            buttonOpenIdealWeight.Enabled = true;
         }
 
         private void buttonCloseBMR_MouseEnter(object sender, EventArgs e)
@@ -594,9 +594,9 @@ namespace FitVitality
         private void bodyFatButtonClose_Click(object sender, EventArgs e)
         {
             bodyFatCalcPanel.Visible = false;
-            calorie_buttonOpen.Enabled = true;
-            macro_buttonOpen.Enabled = true;
-            idealweight_buttonOpen.Enabled = true;
+            buttonOpenCalorie.Enabled = true;
+            buttonOpenMacro.Enabled = true;
+            buttonOpenIdealWeight.Enabled = true;
         }
 
         private void bodyFatButtonClose_MouseEnter(object sender, EventArgs e)
@@ -644,9 +644,9 @@ namespace FitVitality
         {
             bodyFatCalcPanel.Size = new Size(547, 270);
             bodyFatCalcPanel.Visible = true;
-            calorie_buttonOpen.Enabled = false;
-            macro_buttonOpen.Enabled = false;
-            idealweight_buttonOpen.Enabled = false;
+            buttonOpenCalorie.Enabled = false;
+            buttonOpenMacro.Enabled = false;
+            buttonOpenIdealWeight.Enabled = false;
         }
 
         private void neckTb_TextChanged(object sender, EventArgs e)
@@ -657,9 +657,9 @@ namespace FitVitality
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             calorieCalcPanel.Visible = false;
-            calorie_buttonOpen.Enabled = true;
-            macro_buttonOpen.Enabled = true;
-            idealweight_buttonOpen.Enabled = true;
+            buttonOpenCalorie.Enabled = true;
+            buttonOpenMacro.Enabled = true;
+            buttonOpenIdealWeight.Enabled = true;
         }
 
         private void calorieButtonClose_MouseEnter(object sender, EventArgs e)
@@ -676,9 +676,9 @@ namespace FitVitality
         {
             calorieCalcPanel.Size = new Size(547, 270);
             calorieCalcPanel.Visible = true;
-            calorie_buttonOpen.Enabled = false;
-            macro_buttonOpen.Enabled = false;
-            idealweight_buttonOpen.Enabled = false;
+            buttonOpenCalorie.Enabled = false;
+            buttonOpenMacro.Enabled = false;
+            buttonOpenIdealWeight.Enabled = false;
         }
 
         private void calorieCalcButton_Click(object sender, EventArgs e)
@@ -720,9 +720,9 @@ namespace FitVitality
         private void buttonCloseIdealWeight_Click(object sender, EventArgs e)
         {
             idealWeightCalcPanel.Visible = false;
-            calorie_buttonOpen.Enabled = true;
-            macro_buttonOpen.Enabled = true;
-            idealweight_buttonOpen.Enabled = true;
+            buttonOpenCalorie.Enabled = true;
+            buttonOpenMacro.Enabled = true;
+            buttonOpenIdealWeight.Enabled = true;
         }
 
         private void buttonCloseIdealWeight_MouseEnter(object sender, EventArgs e)
@@ -739,17 +739,17 @@ namespace FitVitality
         {
             idealWeightCalcPanel.Size = new Size(547, 270);
             idealWeightCalcPanel.Visible = true;
-            calorie_buttonOpen.Enabled = false;
-            macro_buttonOpen.Enabled = false;
-            idealweight_buttonOpen.Enabled = false;
+            buttonOpenCalorie.Enabled = false;
+            buttonOpenMacro.Enabled = false;
+            buttonOpenIdealWeight.Enabled = false;
         }
 
         private void pictureBox3_Click_1(object sender, EventArgs e)
         {
             macroCalcPanel.Visible = false;
-            calorie_buttonOpen.Enabled = true;
-            macro_buttonOpen.Enabled = true;
-            idealweight_buttonOpen.Enabled = true;
+            buttonOpenCalorie.Enabled = true;
+            buttonOpenMacro.Enabled = true;
+            buttonOpenIdealWeight.Enabled = true;
         }
 
         private void buttonCloseMacroCalc_MouseEnter(object sender, EventArgs e)
@@ -766,9 +766,9 @@ namespace FitVitality
         {
             macroCalcPanel.Size = new Size(547, 270);
             macroCalcPanel.Visible = true;
-            calorie_buttonOpen.Enabled = false;
-            macro_buttonOpen.Enabled = false;
-            idealweight_buttonOpen.Enabled = false;
+            buttonOpenCalorie.Enabled = false;
+            buttonOpenMacro.Enabled = false;
+            buttonOpenIdealWeight.Enabled = false;
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)

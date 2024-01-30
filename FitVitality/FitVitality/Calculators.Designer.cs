@@ -29,22 +29,34 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculators));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             calculators_label = new Label();
             bmi_panel = new Panel();
-            bmi_openButton = new Krypton.Toolkit.KryptonButton();
+            buttonOpenBMI = new Guna.UI2.WinForms.Guna2Button();
             bmi_label = new Label();
             bmiButtonBorders = new PictureBox();
             bmr_panel = new Panel();
-            bmr_buttonOpen = new Krypton.Toolkit.KryptonButton();
+            buttonOpenBMR = new Guna.UI2.WinForms.Guna2Button();
             bmr_label = new Label();
             bmrButtonBorders = new PictureBox();
             bodyfat_panel = new Panel();
-            bodyfat_buttonOpen = new Krypton.Toolkit.KryptonButton();
+            buttonOpenBodyFat = new Guna.UI2.WinForms.Guna2Button();
             bodyfat_label = new Label();
             bodyFatButtonBorders = new PictureBox();
             idealweight_panel = new Panel();
-            idealweight_buttonOpen = new Krypton.Toolkit.KryptonButton();
+            buttonOpenIdealWeight = new Guna.UI2.WinForms.Guna2Button();
             idealweight_label = new Label();
             idealWeightButtonBorders = new PictureBox();
             leftCorner = new PictureBox();
@@ -54,11 +66,11 @@
             hLine2 = new PictureBox();
             hLine1 = new PictureBox();
             calorie_panel = new Panel();
-            calorie_buttonOpen = new Krypton.Toolkit.KryptonButton();
+            buttonOpenCalorie = new Guna.UI2.WinForms.Guna2Button();
             calorie_label = new Label();
             calorieButtonBorders = new PictureBox();
             macro_panel = new Panel();
-            macro_buttonOpen = new Krypton.Toolkit.KryptonButton();
+            buttonOpenMacro = new Guna.UI2.WinForms.Guna2Button();
             macro_label = new Label();
             macroButtonBorders = new PictureBox();
             bmiCalcPanel = new Panel();
@@ -216,7 +228,7 @@
             // bmi_panel
             // 
             bmi_panel.BackColor = Color.FromArgb(250, 252, 252);
-            bmi_panel.Controls.Add(bmi_openButton);
+            bmi_panel.Controls.Add(buttonOpenBMI);
             bmi_panel.Controls.Add(bmi_label);
             bmi_panel.Controls.Add(bmiButtonBorders);
             bmi_panel.Location = new Point(39, 109);
@@ -224,74 +236,26 @@
             bmi_panel.Size = new Size(246, 44);
             bmi_panel.TabIndex = 1;
             // 
-            // bmi_openButton
+            // buttonOpenBMI
             // 
-            bmi_openButton.CornerRoundingRadius = 15F;
-            bmi_openButton.Location = new Point(149, 10);
-            bmi_openButton.Name = "bmi_openButton";
-            bmi_openButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            bmi_openButton.Size = new Size(81, 25);
-            bmi_openButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            bmi_openButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            bmi_openButton.StateCommon.Back.ColorAngle = 0F;
-            bmi_openButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            bmi_openButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            bmi_openButton.StateCommon.Border.ColorAngle = 0F;
-            bmi_openButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmi_openButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmi_openButton.StateCommon.Border.Rounding = 15F;
-            bmi_openButton.StateCommon.Border.Width = 1;
-            bmi_openButton.StateCommon.Content.ShortText.Color1 = Color.Black;
-            bmi_openButton.StateCommon.Content.ShortText.Color2 = Color.Black;
-            bmi_openButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            bmi_openButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            bmi_openButton.StateDisabled.Back.ColorAngle = 45F;
-            bmi_openButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            bmi_openButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            bmi_openButton.StateDisabled.Border.ColorAngle = 45F;
-            bmi_openButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmi_openButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmi_openButton.StateDisabled.Border.Rounding = 15F;
-            bmi_openButton.StateDisabled.Border.Width = 1;
-            bmi_openButton.StateDisabled.Content.ShortText.Color1 = Color.White;
-            bmi_openButton.StateDisabled.Content.ShortText.Color2 = Color.White;
-            bmi_openButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            bmi_openButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            bmi_openButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            bmi_openButton.StateNormal.Back.ColorAngle = 0F;
-            bmi_openButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmi_openButton.StateNormal.Border.Color1 = Color.Black;
-            bmi_openButton.StateNormal.Border.Color2 = Color.Black;
-            bmi_openButton.StateNormal.Border.ColorAngle = 0F;
-            bmi_openButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmi_openButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmi_openButton.StateNormal.Border.Rounding = 15F;
-            bmi_openButton.StateNormal.Border.Width = 1;
-            bmi_openButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            bmi_openButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            bmi_openButton.StatePressed.Back.ColorAngle = 45F;
-            bmi_openButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmi_openButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            bmi_openButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            bmi_openButton.StatePressed.Border.ColorAngle = 45F;
-            bmi_openButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmi_openButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmi_openButton.StatePressed.Border.Rounding = 15F;
-            bmi_openButton.StatePressed.Border.Width = 1;
-            bmi_openButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            bmi_openButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            bmi_openButton.StateTracking.Back.ColorAngle = 45F;
-            bmi_openButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmi_openButton.StateTracking.Border.Color1 = Color.Black;
-            bmi_openButton.StateTracking.Border.Color2 = Color.Black;
-            bmi_openButton.StateTracking.Border.ColorAngle = 45F;
-            bmi_openButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmi_openButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmi_openButton.StateTracking.Border.Rounding = 15F;
-            bmi_openButton.StateTracking.Border.Width = 1;
-            bmi_openButton.TabIndex = 1;
-            bmi_openButton.Values.Text = "Open";
-            bmi_openButton.Click += bmi_openButton_Click;
+            buttonOpenBMI.BorderColor = Color.White;
+            buttonOpenBMI.BorderRadius = 10;
+            buttonOpenBMI.BorderThickness = 1;
+            buttonOpenBMI.CustomizableEdges = customizableEdges1;
+            buttonOpenBMI.DisabledState.BorderColor = Color.White;
+            buttonOpenBMI.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonOpenBMI.DisabledState.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenBMI.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonOpenBMI.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenBMI.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonOpenBMI.ForeColor = Color.White;
+            buttonOpenBMI.Location = new Point(149, 10);
+            buttonOpenBMI.Name = "buttonOpenBMI";
+            buttonOpenBMI.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            buttonOpenBMI.Size = new Size(81, 25);
+            buttonOpenBMI.TabIndex = 26;
+            buttonOpenBMI.Text = "Open";
+            buttonOpenBMI.Click += bmi_openButton_Click;
             // 
             // bmi_label
             // 
@@ -316,7 +280,7 @@
             // 
             // bmr_panel
             // 
-            bmr_panel.Controls.Add(bmr_buttonOpen);
+            bmr_panel.Controls.Add(buttonOpenBMR);
             bmr_panel.Controls.Add(bmr_label);
             bmr_panel.Controls.Add(bmrButtonBorders);
             bmr_panel.Location = new Point(39, 169);
@@ -324,74 +288,26 @@
             bmr_panel.Size = new Size(246, 44);
             bmr_panel.TabIndex = 2;
             // 
-            // bmr_buttonOpen
+            // buttonOpenBMR
             // 
-            bmr_buttonOpen.CornerRoundingRadius = 15F;
-            bmr_buttonOpen.Location = new Point(149, 10);
-            bmr_buttonOpen.Name = "bmr_buttonOpen";
-            bmr_buttonOpen.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            bmr_buttonOpen.Size = new Size(81, 25);
-            bmr_buttonOpen.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            bmr_buttonOpen.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            bmr_buttonOpen.StateCommon.Back.ColorAngle = 0F;
-            bmr_buttonOpen.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            bmr_buttonOpen.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            bmr_buttonOpen.StateCommon.Border.ColorAngle = 0F;
-            bmr_buttonOpen.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmr_buttonOpen.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmr_buttonOpen.StateCommon.Border.Rounding = 15F;
-            bmr_buttonOpen.StateCommon.Border.Width = 1;
-            bmr_buttonOpen.StateCommon.Content.ShortText.Color1 = Color.Black;
-            bmr_buttonOpen.StateCommon.Content.ShortText.Color2 = Color.Black;
-            bmr_buttonOpen.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            bmr_buttonOpen.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            bmr_buttonOpen.StateDisabled.Back.ColorAngle = 45F;
-            bmr_buttonOpen.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            bmr_buttonOpen.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            bmr_buttonOpen.StateDisabled.Border.ColorAngle = 45F;
-            bmr_buttonOpen.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmr_buttonOpen.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmr_buttonOpen.StateDisabled.Border.Rounding = 15F;
-            bmr_buttonOpen.StateDisabled.Border.Width = 1;
-            bmr_buttonOpen.StateDisabled.Content.ShortText.Color1 = Color.White;
-            bmr_buttonOpen.StateDisabled.Content.ShortText.Color2 = Color.White;
-            bmr_buttonOpen.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            bmr_buttonOpen.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            bmr_buttonOpen.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            bmr_buttonOpen.StateNormal.Back.ColorAngle = 0F;
-            bmr_buttonOpen.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmr_buttonOpen.StateNormal.Border.Color1 = Color.Black;
-            bmr_buttonOpen.StateNormal.Border.Color2 = Color.Black;
-            bmr_buttonOpen.StateNormal.Border.ColorAngle = 0F;
-            bmr_buttonOpen.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmr_buttonOpen.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmr_buttonOpen.StateNormal.Border.Rounding = 15F;
-            bmr_buttonOpen.StateNormal.Border.Width = 1;
-            bmr_buttonOpen.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            bmr_buttonOpen.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            bmr_buttonOpen.StatePressed.Back.ColorAngle = 45F;
-            bmr_buttonOpen.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmr_buttonOpen.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            bmr_buttonOpen.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            bmr_buttonOpen.StatePressed.Border.ColorAngle = 45F;
-            bmr_buttonOpen.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmr_buttonOpen.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmr_buttonOpen.StatePressed.Border.Rounding = 15F;
-            bmr_buttonOpen.StatePressed.Border.Width = 1;
-            bmr_buttonOpen.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            bmr_buttonOpen.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            bmr_buttonOpen.StateTracking.Back.ColorAngle = 45F;
-            bmr_buttonOpen.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmr_buttonOpen.StateTracking.Border.Color1 = Color.Black;
-            bmr_buttonOpen.StateTracking.Border.Color2 = Color.Black;
-            bmr_buttonOpen.StateTracking.Border.ColorAngle = 45F;
-            bmr_buttonOpen.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bmr_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bmr_buttonOpen.StateTracking.Border.Rounding = 15F;
-            bmr_buttonOpen.StateTracking.Border.Width = 1;
-            bmr_buttonOpen.TabIndex = 2;
-            bmr_buttonOpen.Values.Text = "Open";
-            bmr_buttonOpen.Click += bmr_buttonOpen_Click;
+            buttonOpenBMR.BorderColor = Color.White;
+            buttonOpenBMR.BorderRadius = 10;
+            buttonOpenBMR.BorderThickness = 1;
+            buttonOpenBMR.CustomizableEdges = customizableEdges3;
+            buttonOpenBMR.DisabledState.BorderColor = Color.White;
+            buttonOpenBMR.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonOpenBMR.DisabledState.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenBMR.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonOpenBMR.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenBMR.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonOpenBMR.ForeColor = Color.White;
+            buttonOpenBMR.Location = new Point(149, 10);
+            buttonOpenBMR.Name = "buttonOpenBMR";
+            buttonOpenBMR.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonOpenBMR.Size = new Size(81, 25);
+            buttonOpenBMR.TabIndex = 27;
+            buttonOpenBMR.Text = "Open";
+            buttonOpenBMR.Click += bmr_buttonOpen_Click;
             // 
             // bmr_label
             // 
@@ -416,7 +332,7 @@
             // 
             // bodyfat_panel
             // 
-            bodyfat_panel.Controls.Add(bodyfat_buttonOpen);
+            bodyfat_panel.Controls.Add(buttonOpenBodyFat);
             bodyfat_panel.Controls.Add(bodyfat_label);
             bodyfat_panel.Controls.Add(bodyFatButtonBorders);
             bodyfat_panel.Location = new Point(39, 229);
@@ -424,74 +340,26 @@
             bodyfat_panel.Size = new Size(246, 44);
             bodyfat_panel.TabIndex = 3;
             // 
-            // bodyfat_buttonOpen
+            // buttonOpenBodyFat
             // 
-            bodyfat_buttonOpen.CornerRoundingRadius = 15F;
-            bodyfat_buttonOpen.Location = new Point(149, 10);
-            bodyfat_buttonOpen.Name = "bodyfat_buttonOpen";
-            bodyfat_buttonOpen.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            bodyfat_buttonOpen.Size = new Size(81, 25);
-            bodyfat_buttonOpen.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            bodyfat_buttonOpen.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            bodyfat_buttonOpen.StateCommon.Back.ColorAngle = 0F;
-            bodyfat_buttonOpen.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            bodyfat_buttonOpen.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            bodyfat_buttonOpen.StateCommon.Border.ColorAngle = 0F;
-            bodyfat_buttonOpen.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bodyfat_buttonOpen.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bodyfat_buttonOpen.StateCommon.Border.Rounding = 15F;
-            bodyfat_buttonOpen.StateCommon.Border.Width = 1;
-            bodyfat_buttonOpen.StateCommon.Content.ShortText.Color1 = Color.Black;
-            bodyfat_buttonOpen.StateCommon.Content.ShortText.Color2 = Color.Black;
-            bodyfat_buttonOpen.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            bodyfat_buttonOpen.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            bodyfat_buttonOpen.StateDisabled.Back.ColorAngle = 45F;
-            bodyfat_buttonOpen.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            bodyfat_buttonOpen.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            bodyfat_buttonOpen.StateDisabled.Border.ColorAngle = 45F;
-            bodyfat_buttonOpen.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bodyfat_buttonOpen.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bodyfat_buttonOpen.StateDisabled.Border.Rounding = 15F;
-            bodyfat_buttonOpen.StateDisabled.Border.Width = 1;
-            bodyfat_buttonOpen.StateDisabled.Content.ShortText.Color1 = Color.White;
-            bodyfat_buttonOpen.StateDisabled.Content.ShortText.Color2 = Color.White;
-            bodyfat_buttonOpen.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            bodyfat_buttonOpen.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            bodyfat_buttonOpen.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            bodyfat_buttonOpen.StateNormal.Back.ColorAngle = 0F;
-            bodyfat_buttonOpen.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bodyfat_buttonOpen.StateNormal.Border.Color1 = Color.Black;
-            bodyfat_buttonOpen.StateNormal.Border.Color2 = Color.Black;
-            bodyfat_buttonOpen.StateNormal.Border.ColorAngle = 0F;
-            bodyfat_buttonOpen.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bodyfat_buttonOpen.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bodyfat_buttonOpen.StateNormal.Border.Rounding = 15F;
-            bodyfat_buttonOpen.StateNormal.Border.Width = 1;
-            bodyfat_buttonOpen.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            bodyfat_buttonOpen.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            bodyfat_buttonOpen.StatePressed.Back.ColorAngle = 45F;
-            bodyfat_buttonOpen.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bodyfat_buttonOpen.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            bodyfat_buttonOpen.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            bodyfat_buttonOpen.StatePressed.Border.ColorAngle = 45F;
-            bodyfat_buttonOpen.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bodyfat_buttonOpen.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bodyfat_buttonOpen.StatePressed.Border.Rounding = 15F;
-            bodyfat_buttonOpen.StatePressed.Border.Width = 1;
-            bodyfat_buttonOpen.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            bodyfat_buttonOpen.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            bodyfat_buttonOpen.StateTracking.Back.ColorAngle = 45F;
-            bodyfat_buttonOpen.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bodyfat_buttonOpen.StateTracking.Border.Color1 = Color.Black;
-            bodyfat_buttonOpen.StateTracking.Border.Color2 = Color.Black;
-            bodyfat_buttonOpen.StateTracking.Border.ColorAngle = 45F;
-            bodyfat_buttonOpen.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            bodyfat_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            bodyfat_buttonOpen.StateTracking.Border.Rounding = 15F;
-            bodyfat_buttonOpen.StateTracking.Border.Width = 1;
-            bodyfat_buttonOpen.TabIndex = 3;
-            bodyfat_buttonOpen.Values.Text = "Open";
-            bodyfat_buttonOpen.Click += bodyfat_buttonOpen_Click;
+            buttonOpenBodyFat.BorderColor = Color.White;
+            buttonOpenBodyFat.BorderRadius = 10;
+            buttonOpenBodyFat.BorderThickness = 1;
+            buttonOpenBodyFat.CustomizableEdges = customizableEdges5;
+            buttonOpenBodyFat.DisabledState.BorderColor = Color.White;
+            buttonOpenBodyFat.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonOpenBodyFat.DisabledState.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenBodyFat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonOpenBodyFat.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenBodyFat.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonOpenBodyFat.ForeColor = Color.White;
+            buttonOpenBodyFat.Location = new Point(149, 10);
+            buttonOpenBodyFat.Name = "buttonOpenBodyFat";
+            buttonOpenBodyFat.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            buttonOpenBodyFat.Size = new Size(81, 25);
+            buttonOpenBodyFat.TabIndex = 28;
+            buttonOpenBodyFat.Text = "Open";
+            buttonOpenBodyFat.Click += bodyfat_buttonOpen_Click;
             // 
             // bodyfat_label
             // 
@@ -516,7 +384,7 @@
             // 
             // idealweight_panel
             // 
-            idealweight_panel.Controls.Add(idealweight_buttonOpen);
+            idealweight_panel.Controls.Add(buttonOpenIdealWeight);
             idealweight_panel.Controls.Add(idealweight_label);
             idealweight_panel.Controls.Add(idealWeightButtonBorders);
             idealweight_panel.Location = new Point(405, 229);
@@ -524,74 +392,26 @@
             idealweight_panel.Size = new Size(246, 44);
             idealweight_panel.TabIndex = 4;
             // 
-            // idealweight_buttonOpen
+            // buttonOpenIdealWeight
             // 
-            idealweight_buttonOpen.CornerRoundingRadius = 15F;
-            idealweight_buttonOpen.Location = new Point(149, 10);
-            idealweight_buttonOpen.Name = "idealweight_buttonOpen";
-            idealweight_buttonOpen.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            idealweight_buttonOpen.Size = new Size(81, 25);
-            idealweight_buttonOpen.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            idealweight_buttonOpen.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            idealweight_buttonOpen.StateCommon.Back.ColorAngle = 0F;
-            idealweight_buttonOpen.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            idealweight_buttonOpen.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            idealweight_buttonOpen.StateCommon.Border.ColorAngle = 0F;
-            idealweight_buttonOpen.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            idealweight_buttonOpen.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            idealweight_buttonOpen.StateCommon.Border.Rounding = 15F;
-            idealweight_buttonOpen.StateCommon.Border.Width = 1;
-            idealweight_buttonOpen.StateCommon.Content.ShortText.Color1 = Color.Black;
-            idealweight_buttonOpen.StateCommon.Content.ShortText.Color2 = Color.Black;
-            idealweight_buttonOpen.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            idealweight_buttonOpen.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            idealweight_buttonOpen.StateDisabled.Back.ColorAngle = 45F;
-            idealweight_buttonOpen.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            idealweight_buttonOpen.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            idealweight_buttonOpen.StateDisabled.Border.ColorAngle = 45F;
-            idealweight_buttonOpen.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            idealweight_buttonOpen.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            idealweight_buttonOpen.StateDisabled.Border.Rounding = 15F;
-            idealweight_buttonOpen.StateDisabled.Border.Width = 1;
-            idealweight_buttonOpen.StateDisabled.Content.ShortText.Color1 = Color.White;
-            idealweight_buttonOpen.StateDisabled.Content.ShortText.Color2 = Color.White;
-            idealweight_buttonOpen.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            idealweight_buttonOpen.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            idealweight_buttonOpen.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            idealweight_buttonOpen.StateNormal.Back.ColorAngle = 0F;
-            idealweight_buttonOpen.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            idealweight_buttonOpen.StateNormal.Border.Color1 = Color.Black;
-            idealweight_buttonOpen.StateNormal.Border.Color2 = Color.Black;
-            idealweight_buttonOpen.StateNormal.Border.ColorAngle = 0F;
-            idealweight_buttonOpen.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            idealweight_buttonOpen.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            idealweight_buttonOpen.StateNormal.Border.Rounding = 15F;
-            idealweight_buttonOpen.StateNormal.Border.Width = 1;
-            idealweight_buttonOpen.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            idealweight_buttonOpen.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            idealweight_buttonOpen.StatePressed.Back.ColorAngle = 45F;
-            idealweight_buttonOpen.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            idealweight_buttonOpen.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            idealweight_buttonOpen.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            idealweight_buttonOpen.StatePressed.Border.ColorAngle = 45F;
-            idealweight_buttonOpen.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            idealweight_buttonOpen.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            idealweight_buttonOpen.StatePressed.Border.Rounding = 15F;
-            idealweight_buttonOpen.StatePressed.Border.Width = 1;
-            idealweight_buttonOpen.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            idealweight_buttonOpen.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            idealweight_buttonOpen.StateTracking.Back.ColorAngle = 45F;
-            idealweight_buttonOpen.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            idealweight_buttonOpen.StateTracking.Border.Color1 = Color.Black;
-            idealweight_buttonOpen.StateTracking.Border.Color2 = Color.Black;
-            idealweight_buttonOpen.StateTracking.Border.ColorAngle = 45F;
-            idealweight_buttonOpen.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            idealweight_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            idealweight_buttonOpen.StateTracking.Border.Rounding = 15F;
-            idealweight_buttonOpen.StateTracking.Border.Width = 1;
-            idealweight_buttonOpen.TabIndex = 6;
-            idealweight_buttonOpen.Values.Text = "Open";
-            idealweight_buttonOpen.Click += idealweight_buttonOpen_Click;
+            buttonOpenIdealWeight.BorderColor = Color.White;
+            buttonOpenIdealWeight.BorderRadius = 10;
+            buttonOpenIdealWeight.BorderThickness = 1;
+            buttonOpenIdealWeight.CustomizableEdges = customizableEdges7;
+            buttonOpenIdealWeight.DisabledState.BorderColor = Color.White;
+            buttonOpenIdealWeight.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonOpenIdealWeight.DisabledState.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenIdealWeight.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonOpenIdealWeight.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenIdealWeight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonOpenIdealWeight.ForeColor = Color.White;
+            buttonOpenIdealWeight.Location = new Point(149, 10);
+            buttonOpenIdealWeight.Name = "buttonOpenIdealWeight";
+            buttonOpenIdealWeight.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            buttonOpenIdealWeight.Size = new Size(81, 25);
+            buttonOpenIdealWeight.TabIndex = 31;
+            buttonOpenIdealWeight.Text = "Open";
+            buttonOpenIdealWeight.Click += idealweight_buttonOpen_Click;
             // 
             // idealweight_label
             // 
@@ -670,7 +490,7 @@
             // 
             // calorie_panel
             // 
-            calorie_panel.Controls.Add(calorie_buttonOpen);
+            calorie_panel.Controls.Add(buttonOpenCalorie);
             calorie_panel.Controls.Add(calorie_label);
             calorie_panel.Controls.Add(calorieButtonBorders);
             calorie_panel.Location = new Point(405, 109);
@@ -678,74 +498,26 @@
             calorie_panel.Size = new Size(246, 44);
             calorie_panel.TabIndex = 5;
             // 
-            // calorie_buttonOpen
+            // buttonOpenCalorie
             // 
-            calorie_buttonOpen.CornerRoundingRadius = 15F;
-            calorie_buttonOpen.Location = new Point(149, 10);
-            calorie_buttonOpen.Name = "calorie_buttonOpen";
-            calorie_buttonOpen.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            calorie_buttonOpen.Size = new Size(81, 25);
-            calorie_buttonOpen.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            calorie_buttonOpen.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            calorie_buttonOpen.StateCommon.Back.ColorAngle = 0F;
-            calorie_buttonOpen.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            calorie_buttonOpen.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            calorie_buttonOpen.StateCommon.Border.ColorAngle = 0F;
-            calorie_buttonOpen.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            calorie_buttonOpen.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            calorie_buttonOpen.StateCommon.Border.Rounding = 15F;
-            calorie_buttonOpen.StateCommon.Border.Width = 1;
-            calorie_buttonOpen.StateCommon.Content.ShortText.Color1 = Color.Black;
-            calorie_buttonOpen.StateCommon.Content.ShortText.Color2 = Color.Black;
-            calorie_buttonOpen.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            calorie_buttonOpen.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            calorie_buttonOpen.StateDisabled.Back.ColorAngle = 45F;
-            calorie_buttonOpen.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            calorie_buttonOpen.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            calorie_buttonOpen.StateDisabled.Border.ColorAngle = 45F;
-            calorie_buttonOpen.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            calorie_buttonOpen.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            calorie_buttonOpen.StateDisabled.Border.Rounding = 15F;
-            calorie_buttonOpen.StateDisabled.Border.Width = 1;
-            calorie_buttonOpen.StateDisabled.Content.ShortText.Color1 = Color.White;
-            calorie_buttonOpen.StateDisabled.Content.ShortText.Color2 = Color.White;
-            calorie_buttonOpen.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            calorie_buttonOpen.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            calorie_buttonOpen.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            calorie_buttonOpen.StateNormal.Back.ColorAngle = 0F;
-            calorie_buttonOpen.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            calorie_buttonOpen.StateNormal.Border.Color1 = Color.Black;
-            calorie_buttonOpen.StateNormal.Border.Color2 = Color.Black;
-            calorie_buttonOpen.StateNormal.Border.ColorAngle = 0F;
-            calorie_buttonOpen.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            calorie_buttonOpen.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            calorie_buttonOpen.StateNormal.Border.Rounding = 15F;
-            calorie_buttonOpen.StateNormal.Border.Width = 1;
-            calorie_buttonOpen.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            calorie_buttonOpen.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            calorie_buttonOpen.StatePressed.Back.ColorAngle = 45F;
-            calorie_buttonOpen.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            calorie_buttonOpen.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            calorie_buttonOpen.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            calorie_buttonOpen.StatePressed.Border.ColorAngle = 45F;
-            calorie_buttonOpen.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            calorie_buttonOpen.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            calorie_buttonOpen.StatePressed.Border.Rounding = 15F;
-            calorie_buttonOpen.StatePressed.Border.Width = 1;
-            calorie_buttonOpen.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            calorie_buttonOpen.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            calorie_buttonOpen.StateTracking.Back.ColorAngle = 45F;
-            calorie_buttonOpen.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            calorie_buttonOpen.StateTracking.Border.Color1 = Color.Black;
-            calorie_buttonOpen.StateTracking.Border.Color2 = Color.Black;
-            calorie_buttonOpen.StateTracking.Border.ColorAngle = 45F;
-            calorie_buttonOpen.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            calorie_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            calorie_buttonOpen.StateTracking.Border.Rounding = 15F;
-            calorie_buttonOpen.StateTracking.Border.Width = 1;
-            calorie_buttonOpen.TabIndex = 4;
-            calorie_buttonOpen.Values.Text = "Open";
-            calorie_buttonOpen.Click += calorie_buttonOpen_Click;
+            buttonOpenCalorie.BorderColor = Color.White;
+            buttonOpenCalorie.BorderRadius = 10;
+            buttonOpenCalorie.BorderThickness = 1;
+            buttonOpenCalorie.CustomizableEdges = customizableEdges9;
+            buttonOpenCalorie.DisabledState.BorderColor = Color.White;
+            buttonOpenCalorie.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonOpenCalorie.DisabledState.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenCalorie.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonOpenCalorie.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenCalorie.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonOpenCalorie.ForeColor = Color.White;
+            buttonOpenCalorie.Location = new Point(149, 10);
+            buttonOpenCalorie.Name = "buttonOpenCalorie";
+            buttonOpenCalorie.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            buttonOpenCalorie.Size = new Size(81, 25);
+            buttonOpenCalorie.TabIndex = 29;
+            buttonOpenCalorie.Text = "Open";
+            buttonOpenCalorie.Click += calorie_buttonOpen_Click;
             // 
             // calorie_label
             // 
@@ -770,7 +542,7 @@
             // 
             // macro_panel
             // 
-            macro_panel.Controls.Add(macro_buttonOpen);
+            macro_panel.Controls.Add(buttonOpenMacro);
             macro_panel.Controls.Add(macro_label);
             macro_panel.Controls.Add(macroButtonBorders);
             macro_panel.Location = new Point(405, 169);
@@ -778,74 +550,26 @@
             macro_panel.Size = new Size(246, 44);
             macro_panel.TabIndex = 6;
             // 
-            // macro_buttonOpen
+            // buttonOpenMacro
             // 
-            macro_buttonOpen.CornerRoundingRadius = 15F;
-            macro_buttonOpen.Location = new Point(149, 10);
-            macro_buttonOpen.Name = "macro_buttonOpen";
-            macro_buttonOpen.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            macro_buttonOpen.Size = new Size(81, 25);
-            macro_buttonOpen.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            macro_buttonOpen.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            macro_buttonOpen.StateCommon.Back.ColorAngle = 0F;
-            macro_buttonOpen.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            macro_buttonOpen.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            macro_buttonOpen.StateCommon.Border.ColorAngle = 0F;
-            macro_buttonOpen.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            macro_buttonOpen.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            macro_buttonOpen.StateCommon.Border.Rounding = 15F;
-            macro_buttonOpen.StateCommon.Border.Width = 1;
-            macro_buttonOpen.StateCommon.Content.ShortText.Color1 = Color.Black;
-            macro_buttonOpen.StateCommon.Content.ShortText.Color2 = Color.Black;
-            macro_buttonOpen.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            macro_buttonOpen.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            macro_buttonOpen.StateDisabled.Back.ColorAngle = 45F;
-            macro_buttonOpen.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            macro_buttonOpen.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            macro_buttonOpen.StateDisabled.Border.ColorAngle = 45F;
-            macro_buttonOpen.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            macro_buttonOpen.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            macro_buttonOpen.StateDisabled.Border.Rounding = 15F;
-            macro_buttonOpen.StateDisabled.Border.Width = 1;
-            macro_buttonOpen.StateDisabled.Content.ShortText.Color1 = Color.White;
-            macro_buttonOpen.StateDisabled.Content.ShortText.Color2 = Color.White;
-            macro_buttonOpen.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            macro_buttonOpen.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            macro_buttonOpen.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            macro_buttonOpen.StateNormal.Back.ColorAngle = 0F;
-            macro_buttonOpen.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            macro_buttonOpen.StateNormal.Border.Color1 = Color.Black;
-            macro_buttonOpen.StateNormal.Border.Color2 = Color.Black;
-            macro_buttonOpen.StateNormal.Border.ColorAngle = 0F;
-            macro_buttonOpen.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            macro_buttonOpen.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            macro_buttonOpen.StateNormal.Border.Rounding = 15F;
-            macro_buttonOpen.StateNormal.Border.Width = 1;
-            macro_buttonOpen.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            macro_buttonOpen.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            macro_buttonOpen.StatePressed.Back.ColorAngle = 45F;
-            macro_buttonOpen.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            macro_buttonOpen.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            macro_buttonOpen.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            macro_buttonOpen.StatePressed.Border.ColorAngle = 45F;
-            macro_buttonOpen.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            macro_buttonOpen.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            macro_buttonOpen.StatePressed.Border.Rounding = 15F;
-            macro_buttonOpen.StatePressed.Border.Width = 1;
-            macro_buttonOpen.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            macro_buttonOpen.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            macro_buttonOpen.StateTracking.Back.ColorAngle = 45F;
-            macro_buttonOpen.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            macro_buttonOpen.StateTracking.Border.Color1 = Color.Black;
-            macro_buttonOpen.StateTracking.Border.Color2 = Color.Black;
-            macro_buttonOpen.StateTracking.Border.ColorAngle = 45F;
-            macro_buttonOpen.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            macro_buttonOpen.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            macro_buttonOpen.StateTracking.Border.Rounding = 15F;
-            macro_buttonOpen.StateTracking.Border.Width = 1;
-            macro_buttonOpen.TabIndex = 5;
-            macro_buttonOpen.Values.Text = "Open";
-            macro_buttonOpen.Click += macro_buttonOpen_Click;
+            buttonOpenMacro.BorderColor = Color.White;
+            buttonOpenMacro.BorderRadius = 10;
+            buttonOpenMacro.BorderThickness = 1;
+            buttonOpenMacro.CustomizableEdges = customizableEdges11;
+            buttonOpenMacro.DisabledState.BorderColor = Color.White;
+            buttonOpenMacro.DisabledState.CustomBorderColor = Color.DarkGray;
+            buttonOpenMacro.DisabledState.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenMacro.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            buttonOpenMacro.FillColor = Color.FromArgb(92, 225, 230);
+            buttonOpenMacro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonOpenMacro.ForeColor = Color.White;
+            buttonOpenMacro.Location = new Point(149, 10);
+            buttonOpenMacro.Name = "buttonOpenMacro";
+            buttonOpenMacro.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            buttonOpenMacro.Size = new Size(81, 25);
+            buttonOpenMacro.TabIndex = 30;
+            buttonOpenMacro.Text = "Open";
+            buttonOpenMacro.Click += macro_buttonOpen_Click;
             // 
             // macro_label
             // 
@@ -2495,15 +2219,11 @@
         private Label calculators_label;
         private Panel bmi_panel;
         private Label bmi_label;
-        private Krypton.Toolkit.KryptonButton bmi_openButton;
         private Panel bmr_panel;
-        private Krypton.Toolkit.KryptonButton bmr_buttonOpen;
         private Label bmr_label;
         private Panel bodyfat_panel;
-        private Krypton.Toolkit.KryptonButton bodyfat_buttonOpen;
         private Label bodyfat_label;
         private Panel idealweight_panel;
-        private Krypton.Toolkit.KryptonButton idealweight_buttonOpen;
         private Label idealweight_label;
         private PictureBox leftCorner;
         private PictureBox rightCorner;
@@ -2512,10 +2232,8 @@
         private PictureBox hLine2;
         private PictureBox hLine1;
         private Panel calorie_panel;
-        private Krypton.Toolkit.KryptonButton calorie_buttonOpen;
         private Label calorie_label;
         private Panel macro_panel;
-        private Krypton.Toolkit.KryptonButton macro_buttonOpen;
         private Label macro_label;
         private PictureBox bmiButtonBorders;
         private PictureBox bmrButtonBorders;
@@ -2626,5 +2344,11 @@
         private Krypton.Toolkit.KryptonButton highProteinButton;
         private Krypton.Toolkit.KryptonButton lowCarbsButton;
         private Krypton.Toolkit.KryptonButton lowFatButton;
+        private Guna.UI2.WinForms.Guna2Button buttonOpenBMI;
+        private Guna.UI2.WinForms.Guna2Button buttonOpenBMR;
+        private Guna.UI2.WinForms.Guna2Button buttonOpenBodyFat;
+        private Guna.UI2.WinForms.Guna2Button buttonOpenCalorie;
+        private Guna.UI2.WinForms.Guna2Button buttonOpenMacro;
+        private Guna.UI2.WinForms.Guna2Button buttonOpenIdealWeight;
     }
 }

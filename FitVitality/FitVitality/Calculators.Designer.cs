@@ -42,6 +42,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             calculators_label = new Label();
             bmi_panel = new Panel();
             buttonOpenBMI = new Guna.UI2.WinForms.Guna2Button();
@@ -127,12 +129,12 @@
             bodyFatLabel = new Label();
             bodyFatBorders = new PictureBox();
             calorieCalcPanel = new Panel();
+            activityComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             gainLabel = new Label();
             mildGainLabel = new Label();
             maintainLabel = new Label();
             mildLossLabel = new Label();
             activityLabel = new Label();
-            activityComboBox = new Krypton.Toolkit.KryptonComboBox();
             calorieCalcButton = new Krypton.Toolkit.KryptonButton();
             lossLabel = new Label();
             extraMeasurementsL = new Label();
@@ -203,7 +205,6 @@
             ((System.ComponentModel.ISupportInitialize)bodyFatButtonClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bodyFatBorders).BeginInit();
             calorieCalcPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)activityComboBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)calorieButtonClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)calorieCalcBorders).BeginInit();
             idealWeightCalcPanel.SuspendLayout();
@@ -1236,12 +1237,12 @@
             // 
             // calorieCalcPanel
             // 
+            calorieCalcPanel.Controls.Add(activityComboBox);
             calorieCalcPanel.Controls.Add(gainLabel);
             calorieCalcPanel.Controls.Add(mildGainLabel);
             calorieCalcPanel.Controls.Add(maintainLabel);
             calorieCalcPanel.Controls.Add(mildLossLabel);
             calorieCalcPanel.Controls.Add(activityLabel);
-            calorieCalcPanel.Controls.Add(activityComboBox);
             calorieCalcPanel.Controls.Add(calorieCalcButton);
             calorieCalcPanel.Controls.Add(lossLabel);
             calorieCalcPanel.Controls.Add(extraMeasurementsL);
@@ -1251,9 +1252,32 @@
             calorieCalcPanel.Controls.Add(calorieCalcBorders);
             calorieCalcPanel.Location = new Point(72, 49);
             calorieCalcPanel.Name = "calorieCalcPanel";
-            calorieCalcPanel.Size = new Size(0, 0);
+            calorieCalcPanel.Size = new Size(600, 300);
             calorieCalcPanel.TabIndex = 23;
             calorieCalcPanel.Visible = false;
+            // 
+            // activityComboBox
+            // 
+            activityComboBox.BackColor = Color.Transparent;
+            activityComboBox.BorderColor = Color.FromArgb(92, 225, 230);
+            activityComboBox.BorderRadius = 8;
+            activityComboBox.CustomizableEdges = customizableEdges13;
+            activityComboBox.DrawMode = DrawMode.OwnerDrawFixed;
+            activityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            activityComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
+            activityComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            activityComboBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            activityComboBox.ForeColor = Color.Black;
+            activityComboBox.ItemHeight = 15;
+            activityComboBox.Items.AddRange(new object[] { "Male", "Female" });
+            activityComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            activityComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            activityComboBox.Location = new Point(85, 230);
+            activityComboBox.Name = "activityComboBox";
+            activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            activityComboBox.Size = new Size(90, 21);
+            activityComboBox.TabIndex = 62;
+            activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
             // 
             // gainLabel
             // 
@@ -1300,37 +1324,6 @@
             activityLabel.Size = new Size(72, 14);
             activityLabel.TabIndex = 36;
             activityLabel.Text = "Activity level:";
-            // 
-            // activityComboBox
-            // 
-            activityComboBox.CornerRoundingRadius = -1F;
-            activityComboBox.DropDownWidth = 121;
-            activityComboBox.IntegralHeight = false;
-            activityComboBox.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
-            activityComboBox.Location = new Point(85, 230);
-            activityComboBox.Name = "activityComboBox";
-            activityComboBox.PaletteMode = Krypton.Toolkit.PaletteMode.SparkleBlueLightMode;
-            activityComboBox.Size = new Size(90, 21);
-            activityComboBox.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
-            activityComboBox.StateCommon.DropBack.Color1 = SystemColors.ControlLightLight;
-            activityComboBox.StateCommon.DropBack.Color2 = SystemColors.ControlLightLight;
-            activityComboBox.StateCommon.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateCommon.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateCommon.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateCommon.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateCommon.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            activityComboBox.StateNormal.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateNormal.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateNormal.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateNormal.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateNormal.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            activityComboBox.StateTracking.Item.Back.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateTracking.Item.Back.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateTracking.Item.Border.Color1 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateTracking.Item.Border.Color2 = Color.FromArgb(224, 224, 224);
-            activityComboBox.StateTracking.Item.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            activityComboBox.TabIndex = 35;
-            activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
             // 
             // calorieCalcButton
             // 
@@ -2198,7 +2191,6 @@
             ((System.ComponentModel.ISupportInitialize)bodyFatBorders).EndInit();
             calorieCalcPanel.ResumeLayout(false);
             calorieCalcPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)activityComboBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)calorieButtonClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)calorieCalcBorders).EndInit();
             idealWeightCalcPanel.ResumeLayout(false);
@@ -2313,7 +2305,6 @@
         private Label calorieDescription;
         private Label calorieCalcLabel;
         private PictureBox calorieCalcBorders;
-        private Krypton.Toolkit.KryptonComboBox activityComboBox;
         private Label veryIntenseLabel;
         private Label intenseLabel;
         private Label dailyLabel;
@@ -2350,5 +2341,6 @@
         private Guna.UI2.WinForms.Guna2Button buttonOpenCalorie;
         private Guna.UI2.WinForms.Guna2Button buttonOpenMacro;
         private Guna.UI2.WinForms.Guna2Button buttonOpenIdealWeight;
+        private Guna.UI2.WinForms.Guna2ComboBox activityComboBox;
     }
 }

@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -613,22 +614,22 @@ namespace FitVitality
         {
             if (gender == "Male")
             {
-                neck = double.Parse(neckTb.Text);
-                waist = double.Parse(waistTb.Text);
+                if (Regex.IsMatch(neckTb.Text, @"^\d+$") && Regex.IsMatch(waistTb.Text, @"^\d+$"))
+                {
+                    neck = double.Parse(neckTb.Text);
+                    waist = double.Parse(waistTb.Text);
+                    bodyFat = Math.Round((495 / (1.0324 - 0.19077 * Math.Log10(waist - neck) + 0.15456 * Math.Log10(Convert.ToDouble(height)))) - 450, 0);
+                }
             }
             if (gender == "Female")
             {
-                neck = double.Parse(neckTb.Text);
-                waist = double.Parse(waistTb.Text);
-                hips = double.Parse(hipsTb.Text);
-            }
-            if (gender == "Male")
-            {
-                bodyFat = Math.Round((495 / (1.0324 - 0.19077 * Math.Log10(waist - neck) + 0.15456 * Math.Log10(Convert.ToDouble(height)))) - 450, 0);
-            }
-            if (gender == "Female")
-            {
-                bodyFat = Math.Round((495 / (1.29579 - 0.35004 * Math.Log10(waist + hips - neck) + 0.22100 * Math.Log10(Convert.ToDouble(height)))) - 450, 0);
+                if (Regex.IsMatch(neckTb.Text, @"^\d+$") && Regex.IsMatch(waistTb.Text, @"^\d+$") && Regex.IsMatch(hipsTb.Text, @"^\d+$"))
+                {
+                    neck = double.Parse(neckTb.Text);
+                    waist = double.Parse(waistTb.Text);
+                    hips = double.Parse(hipsTb.Text);
+                    bodyFat = Math.Round((495 / (1.29579 - 0.35004 * Math.Log10(waist + hips - neck) + 0.22100 * Math.Log10(Convert.ToDouble(height)))) - 450, 0);
+                }
             }
             if (bodyFat < 0)
                 bodyFat = 0;

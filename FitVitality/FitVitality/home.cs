@@ -28,9 +28,9 @@ namespace FitVitality
             InitializeComponent();
             _userID = userID;
         }
-        
 
-        
+
+
         private void home_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -134,6 +134,11 @@ namespace FitVitality
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createNextButton_Click(object sender, EventArgs e)
         {
 
         }

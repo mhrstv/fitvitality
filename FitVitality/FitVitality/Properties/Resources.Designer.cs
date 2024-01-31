@@ -523,6 +523,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dailyGoalMainBorders {
+            get {
+                object obj = ResourceManager.GetObject("dailyGoalMainBorders", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dietButton {
             get {
                 object obj = ResourceManager.GetObject("dietButton", resourceCulture);
@@ -696,6 +706,16 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap FitVitalityLogo_1 {
             get {
                 object obj = ResourceManager.GetObject("FitVitalityLogo_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap forwardArrow {
+            get {
+                object obj = ResourceManager.GetObject("forwardArrow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1956,6 +1976,26 @@ namespace FitVitality.Properties {
         internal static System.Drawing.Bitmap workout {
             get {
                 object obj = ResourceManager.GetObject("workout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap workoutMainBorders {
+            get {
+                object obj = ResourceManager.GetObject("workoutMainBorders", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap workoutMainBorders1 {
+            get {
+                object obj = ResourceManager.GetObject("workoutMainBorders1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

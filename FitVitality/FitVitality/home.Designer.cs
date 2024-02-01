@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             rotationTimer = new System.Windows.Forms.Timer(components);
             hLine1 = new PictureBox();
             hLine2 = new PictureBox();
@@ -50,7 +50,7 @@
             workoutsLabel = new Label();
             workoutsBorders = new PictureBox();
             dailyGoalPanel = new Panel();
-            label2 = new Label();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             fLabel = new Label();
             pLabel = new Label();
             cLabel = new Label();
@@ -59,8 +59,8 @@
             fat = new Label();
             carbohydrates = new Label();
             calorieIntake = new Label();
-            pictureBox1 = new PictureBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            label2 = new Label();
+            dailyGoalBorders = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
@@ -70,7 +70,7 @@
             workoutsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)workoutsBorders).BeginInit();
             dailyGoalPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).BeginInit();
             SuspendLayout();
             // 
             // rotationTimer
@@ -158,7 +158,7 @@
             // 
             workoutsButton.BackColor = Color.Transparent;
             workoutsButton.BorderRadius = 13;
-            workoutsButton.CustomizableEdges = customizableEdges5;
+            workoutsButton.CustomizableEdges = customizableEdges7;
             workoutsButton.DisabledState.BorderColor = Color.DarkGray;
             workoutsButton.DisabledState.CustomBorderColor = Color.DarkGray;
             workoutsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -170,7 +170,7 @@
             workoutsButton.Location = new Point(90, 236);
             workoutsButton.Name = "workoutsButton";
             workoutsButton.PressedColor = Color.LightGray;
-            workoutsButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            workoutsButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             workoutsButton.Size = new Size(32, 25);
             workoutsButton.TabIndex = 51;
             workoutsButton.Click += createNextButton_Click;
@@ -188,7 +188,7 @@
             // workoutsTextBox
             // 
             workoutsTextBox.BorderColor = Color.White;
-            workoutsTextBox.CustomizableEdges = customizableEdges7;
+            workoutsTextBox.CustomizableEdges = customizableEdges9;
             workoutsTextBox.DefaultText = "3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n";
             workoutsTextBox.DisabledState.BorderColor = Color.White;
             workoutsTextBox.DisabledState.FillColor = Color.White;
@@ -206,7 +206,7 @@
             workoutsTextBox.PlaceholderForeColor = Color.White;
             workoutsTextBox.PlaceholderText = "";
             workoutsTextBox.SelectedText = "";
-            workoutsTextBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            workoutsTextBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
             workoutsTextBox.Size = new Size(186, 163);
             workoutsTextBox.TabIndex = 2;
             // 
@@ -241,21 +241,31 @@
             dailyGoalPanel.Controls.Add(carbohydrates);
             dailyGoalPanel.Controls.Add(calorieIntake);
             dailyGoalPanel.Controls.Add(label2);
-            dailyGoalPanel.Controls.Add(pictureBox1);
+            dailyGoalPanel.Controls.Add(dailyGoalBorders);
             dailyGoalPanel.Location = new Point(223, 64);
             dailyGoalPanel.Name = "dailyGoalPanel";
             dailyGoalPanel.Size = new Size(183, 127);
             dailyGoalPanel.TabIndex = 15;
             // 
-            // label2
+            // guna2Button1
             // 
-            label2.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(26, 7);
-            label2.Name = "label2";
-            label2.Size = new Size(130, 23);
-            label2.TabIndex = 2;
-            label2.Text = "Daily Goal";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            guna2Button1.BackColor = Color.Transparent;
+            guna2Button1.BorderRadius = 13;
+            guna2Button1.CustomizableEdges = customizableEdges11;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.White;
+            guna2Button1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Image = Properties.Resources.forwardArrow;
+            guna2Button1.Location = new Point(139, 94);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.PressedColor = Color.LightGray;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button1.Size = new Size(32, 25);
+            guna2Button1.TabIndex = 52;
             // 
             // fLabel
             // 
@@ -268,7 +278,6 @@
             fLabel.TabIndex = 54;
             fLabel.Text = "F = ";
             fLabel.TextAlign = ContentAlignment.MiddleCenter;
-            fLabel.Visible = false;
             // 
             // pLabel
             // 
@@ -281,7 +290,6 @@
             pLabel.TabIndex = 53;
             pLabel.Text = "P = ";
             pLabel.TextAlign = ContentAlignment.MiddleCenter;
-            pLabel.Visible = false;
             // 
             // cLabel
             // 
@@ -294,7 +302,6 @@
             cLabel.TabIndex = 52;
             cLabel.Text = "C = ";
             cLabel.TextAlign = ContentAlignment.MiddleCenter;
-            cLabel.Visible = false;
             // 
             // kCalLabel
             // 
@@ -307,7 +314,6 @@
             kCalLabel.TabIndex = 51;
             kCalLabel.Text = "kCal = ";
             kCalLabel.TextAlign = ContentAlignment.MiddleCenter;
-            kCalLabel.Visible = false;
             // 
             // protein
             // 
@@ -319,7 +325,6 @@
             protein.TabIndex = 58;
             protein.Text = "#/#";
             protein.TextAlign = ContentAlignment.MiddleLeft;
-            protein.Visible = false;
             // 
             // fat
             // 
@@ -331,7 +336,6 @@
             fat.TabIndex = 57;
             fat.Text = "#/#";
             fat.TextAlign = ContentAlignment.MiddleLeft;
-            fat.Visible = false;
             // 
             // carbohydrates
             // 
@@ -343,7 +347,6 @@
             carbohydrates.TabIndex = 56;
             carbohydrates.Text = "#/#";
             carbohydrates.TextAlign = ContentAlignment.MiddleLeft;
-            carbohydrates.Visible = false;
             // 
             // calorieIntake
             // 
@@ -355,36 +358,25 @@
             calorieIntake.TabIndex = 55;
             calorieIntake.Text = "#/#";
             calorieIntake.TextAlign = ContentAlignment.MiddleLeft;
-            calorieIntake.Visible = false;
             // 
-            // pictureBox1
+            // label2
             // 
-            pictureBox1.Image = Properties.Resources.dailyGoalMainBorders;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(183, 127);
-            pictureBox1.TabIndex = 59;
-            pictureBox1.TabStop = false;
+            label2.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(26, 7);
+            label2.Name = "label2";
+            label2.Size = new Size(130, 23);
+            label2.TabIndex = 2;
+            label2.Text = "Daily Goal";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // guna2Button1
+            // dailyGoalBorders
             // 
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 13;
-            guna2Button1.CustomizableEdges = customizableEdges9;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.White;
-            guna2Button1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Image = Properties.Resources.forwardArrow;
-            guna2Button1.Location = new Point(139, 94);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.PressedColor = Color.LightGray;
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button1.Size = new Size(32, 25);
-            guna2Button1.TabIndex = 52;
+            dailyGoalBorders.Image = Properties.Resources.dailyGoalMainBorders;
+            dailyGoalBorders.Location = new Point(0, 0);
+            dailyGoalBorders.Name = "dailyGoalBorders";
+            dailyGoalBorders.Size = new Size(183, 127);
+            dailyGoalBorders.TabIndex = 59;
+            dailyGoalBorders.TabStop = false;
             // 
             // home
             // 
@@ -417,7 +409,7 @@
             ((System.ComponentModel.ISupportInitialize)workoutsBorders).EndInit();
             dailyGoalPanel.ResumeLayout(false);
             dailyGoalPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -447,7 +439,7 @@
         private Label fat;
         private Label carbohydrates;
         private Label calorieIntake;
-        private PictureBox pictureBox1;
+        private PictureBox dailyGoalBorders;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

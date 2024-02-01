@@ -564,6 +564,8 @@
             Text = "Diet";
             Load += Diet_Load;
             Click += Diet_Click;
+            ControlRemoved += Diet_ControlRemoved;
+            Leave += Diet_Leave;
             ((System.ComponentModel.ISupportInitialize)leftC).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightC).EndInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).EndInit();

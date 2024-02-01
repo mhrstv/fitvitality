@@ -36,8 +36,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             rotationTimer = new System.Windows.Forms.Timer(components);
             hLine1 = new PictureBox();
             hLine2 = new PictureBox();
@@ -47,6 +47,7 @@
             lefCorner = new PictureBox();
             label1 = new Label();
             workoutsPanel = new Panel();
+            workoutCompletedCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             workoutsButton = new Guna.UI2.WinForms.Guna2Button();
             workoutsDetails = new Label();
             workoutsTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -64,7 +65,7 @@
             calorieIntake = new Label();
             label2 = new Label();
             dailyGoalBorders = new PictureBox();
-            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            dietChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
@@ -75,7 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)workoutsBorders).BeginInit();
             dailyGoalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dietChart).BeginInit();
             SuspendLayout();
             // 
             // rotationTimer
@@ -149,15 +150,36 @@
             // 
             // workoutsPanel
             // 
+            workoutsPanel.Controls.Add(workoutCompletedCheckBox);
             workoutsPanel.Controls.Add(workoutsButton);
             workoutsPanel.Controls.Add(workoutsDetails);
             workoutsPanel.Controls.Add(workoutsTextBox);
             workoutsPanel.Controls.Add(workoutsLabel);
             workoutsPanel.Controls.Add(workoutsBorders);
-            workoutsPanel.Location = new Point(444, 64);
+            workoutsPanel.Location = new Point(464, 54);
             workoutsPanel.Name = "workoutsPanel";
             workoutsPanel.Size = new Size(213, 269);
             workoutsPanel.TabIndex = 14;
+            // 
+            // workoutCompletedCheckBox
+            // 
+            workoutCompletedCheckBox.AutoSize = true;
+            workoutCompletedCheckBox.CheckedState.BorderColor = Color.Black;
+            workoutCompletedCheckBox.CheckedState.BorderRadius = 3;
+            workoutCompletedCheckBox.CheckedState.BorderThickness = 1;
+            workoutCompletedCheckBox.CheckedState.FillColor = Color.White;
+            workoutCompletedCheckBox.CheckMarkColor = Color.Green;
+            workoutCompletedCheckBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            workoutCompletedCheckBox.Location = new Point(64, 197);
+            workoutCompletedCheckBox.Name = "workoutCompletedCheckBox";
+            workoutCompletedCheckBox.Size = new Size(84, 19);
+            workoutCompletedCheckBox.TabIndex = 52;
+            workoutCompletedCheckBox.Text = "Completed";
+            workoutCompletedCheckBox.UncheckedState.BorderColor = Color.Black;
+            workoutCompletedCheckBox.UncheckedState.BorderRadius = 3;
+            workoutCompletedCheckBox.UncheckedState.BorderThickness = 1;
+            workoutCompletedCheckBox.UncheckedState.FillColor = Color.White;
+            workoutCompletedCheckBox.CheckedChanged += workoutCompletedCheckBox_CheckedChanged;
             // 
             // workoutsButton
             // 
@@ -194,7 +216,7 @@
             // 
             workoutsTextBox.BorderColor = Color.White;
             workoutsTextBox.CustomizableEdges = customizableEdges3;
-            workoutsTextBox.DefaultText = "3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n";
+            workoutsTextBox.DefaultText = "";
             workoutsTextBox.DisabledState.BorderColor = Color.White;
             workoutsTextBox.DisabledState.FillColor = Color.White;
             workoutsTextBox.DisabledState.ForeColor = Color.Black;
@@ -247,7 +269,7 @@
             dailyGoalPanel.Controls.Add(calorieIntake);
             dailyGoalPanel.Controls.Add(label2);
             dailyGoalPanel.Controls.Add(dailyGoalBorders);
-            dailyGoalPanel.Location = new Point(223, 64);
+            dailyGoalPanel.Location = new Point(31, 22);
             dailyGoalPanel.Name = "dailyGoalPanel";
             dailyGoalPanel.Size = new Size(183, 127);
             dailyGoalPanel.TabIndex = 15;
@@ -326,7 +348,7 @@
             protein.ForeColor = Color.Black;
             protein.Location = new Point(48, 78);
             protein.Name = "protein";
-            protein.Size = new Size(75, 19);
+            protein.Size = new Size(123, 19);
             protein.TabIndex = 58;
             protein.Text = "#/#";
             protein.TextAlign = ContentAlignment.MiddleLeft;
@@ -337,7 +359,7 @@
             fat.ForeColor = Color.Black;
             fat.Location = new Point(48, 100);
             fat.Name = "fat";
-            fat.Size = new Size(75, 19);
+            fat.Size = new Size(85, 19);
             fat.TabIndex = 57;
             fat.Text = "#/#";
             fat.TextAlign = ContentAlignment.MiddleLeft;
@@ -348,7 +370,7 @@
             carbohydrates.ForeColor = Color.Black;
             carbohydrates.Location = new Point(48, 56);
             carbohydrates.Name = "carbohydrates";
-            carbohydrates.Size = new Size(75, 19);
+            carbohydrates.Size = new Size(123, 19);
             carbohydrates.TabIndex = 56;
             carbohydrates.Text = "#/#";
             carbohydrates.TextAlign = ContentAlignment.MiddleLeft;
@@ -359,7 +381,7 @@
             calorieIntake.ForeColor = Color.Black;
             calorieIntake.Location = new Point(65, 32);
             calorieIntake.Name = "calorieIntake";
-            calorieIntake.Size = new Size(75, 19);
+            calorieIntake.Size = new Size(115, 19);
             calorieIntake.TabIndex = 55;
             calorieIntake.Text = "#/#";
             calorieIntake.TextAlign = ContentAlignment.MiddleLeft;
@@ -383,23 +405,27 @@
             dailyGoalBorders.TabIndex = 59;
             dailyGoalBorders.TabStop = false;
             // 
-            // chart1
+            // dietChart
             // 
             chartArea1.Name = "ChartArea1";
-            chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chart1.Legends.Add(legend1);
-            chart1.Location = new Point(31, 201);
-            chart1.Name = "chart1";
-            chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            chart1.PaletteCustomColors = new Color[] { Color.FromArgb(92, 225, 230) };
+            dietChart.ChartAreas.Add(chartArea1);
+            dietChart.Location = new Point(22, 172);
+            dietChart.Name = "dietChart";
+            dietChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            dietChart.PaletteCustomColors = new Color[] { Color.FromArgb(92, 225, 230) };
+            series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chart1.Series.Add(series1);
-            chart1.Size = new Size(375, 132);
-            chart1.TabIndex = 16;
-            chart1.Text = "chart1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Name = "Series";
+            series1.YValuesPerPoint = 2;
+            dietChart.Series.Add(series1);
+            dietChart.Size = new Size(384, 184);
+            dietChart.TabIndex = 16;
+            dietChart.Text = "Diet";
+            title1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            title1.Name = "Diet";
+            title1.Text = "Last 7 days goal %";
+            dietChart.Titles.Add(title1);
             // 
             // home
             // 
@@ -407,7 +433,7 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
-            Controls.Add(chart1);
+            Controls.Add(dietChart);
             Controls.Add(dailyGoalPanel);
             Controls.Add(workoutsPanel);
             Controls.Add(label1);
@@ -434,7 +460,7 @@
             dailyGoalPanel.ResumeLayout(false);
             dailyGoalPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).EndInit();
-            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dietChart).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -466,6 +492,7 @@
         private Label calorieIntake;
         private PictureBox dailyGoalBorders;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart dietChart;
+        private Guna.UI2.WinForms.Guna2CheckBox workoutCompletedCheckBox;
     }
 }

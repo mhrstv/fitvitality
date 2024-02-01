@@ -908,6 +908,39 @@
             "rid": "win"
           }
         }
+      },
+      "System.Windows.Forms.DataVisualization/1.0.0-prerelease.20110.1": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp3.0/System.Windows.Forms.DataVisualization.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Windows.Forms.DataVisualization.dll": {
+            "related": ".pdb"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.NETCore.App"
+        ]
+      },
+      "WinForms.DataVisualization/1.9.1": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll": {
+            "related": ".pdb;.xml"
+          },
+          "lib/net6.0-windows7.0/WinForms.DataVisualization.dll": {
+            "related": ".pdb;.Utilities.pdb;.Utilities.xml;.xml"
+          }
+        }
       }
     }
   },
@@ -2457,6 +2490,59 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "System.Windows.Forms.DataVisualization/1.0.0-prerelease.20110.1": {
+      "sha512": "1EdLFl/I5QobO4shpqUNslDGWTeRbpt3pLMSkiLQYzdWBDqf44/8TM5hXMtkA8ktHU80aVZYVEuxr8vJqcB1Ig==",
+      "type": "package",
+      "path": "system.windows.forms.datavisualization/1.0.0-prerelease.20110.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.0/System.Windows.Forms.DataVisualization.dll",
+        "lib/netcoreapp3.0/System.Windows.Forms.DataVisualization.pdb",
+        "ref/netcoreapp3.0/System.Windows.Forms.DataVisualization.dll",
+        "system.windows.forms.datavisualization.1.0.0-prerelease.20110.1.nupkg.sha512",
+        "system.windows.forms.datavisualization.nuspec"
+      ]
+    },
+    "WinForms.DataVisualization/1.9.1": {
+      "sha512": "/mKuUVwHYg0EpcjJbuvU5eGY8QGFB4iUMVEl0inHE5iF1fG/NK1dRR2sL26QDnv1wG0dnpuhE3jO5ktKQlvEGg==",
+      "type": "package",
+      "path": "winforms.datavisualization/1.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "NuGetReadme.md",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net6.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net6.0-windows7.0/WinForms.DataVisualization.xml",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Designer.Server.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/Server/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.Client.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Designer.ClientServerProtocol.dll",
+        "lib/net7.0-windows7.0/Design/WinForms/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.pdb",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.Utilities.xml",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.dll",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.pdb",
+        "lib/net7.0-windows7.0/WinForms.DataVisualization.xml",
+        "winforms.datavisualization.1.9.1.nupkg.sha512",
+        "winforms.datavisualization.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -2464,7 +2550,9 @@
       "Aspose.Imaging >= 23.12.0",
       "Guna.UI2.WinForms >= 2.0.4.6",
       "Krypton.Toolkit >= 70.22.11.312",
-      "Microsoft.Data.SqlClient >= 5.1.4"
+      "Microsoft.Data.SqlClient >= 5.1.4",
+      "System.Windows.Forms.DataVisualization >= 1.0.0-prerelease.20110.1",
+      "WinForms.DataVisualization >= 1.9.1"
     ]
   },
   "packageFolders": {
@@ -2526,6 +2614,14 @@
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[5.1.4, )"
+          },
+          "System.Windows.Forms.DataVisualization": {
+            "target": "Package",
+            "version": "[1.0.0-prerelease.20110.1, )"
+          },
+          "WinForms.DataVisualization": {
+            "target": "Package",
+            "version": "[1.9.1, )"
           }
         },
         "imports": [

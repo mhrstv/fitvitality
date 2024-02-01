@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             rotationTimer = new System.Windows.Forms.Timer(components);
             hLine1 = new PictureBox();
             hLine2 = new PictureBox();
@@ -61,6 +64,7 @@
             calorieIntake = new Label();
             label2 = new Label();
             dailyGoalBorders = new PictureBox();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
@@ -71,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)workoutsBorders).BeginInit();
             dailyGoalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
             SuspendLayout();
             // 
             // rotationTimer
@@ -158,7 +163,7 @@
             // 
             workoutsButton.BackColor = Color.Transparent;
             workoutsButton.BorderRadius = 13;
-            workoutsButton.CustomizableEdges = customizableEdges7;
+            workoutsButton.CustomizableEdges = customizableEdges1;
             workoutsButton.DisabledState.BorderColor = Color.DarkGray;
             workoutsButton.DisabledState.CustomBorderColor = Color.DarkGray;
             workoutsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -170,7 +175,7 @@
             workoutsButton.Location = new Point(90, 236);
             workoutsButton.Name = "workoutsButton";
             workoutsButton.PressedColor = Color.LightGray;
-            workoutsButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            workoutsButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             workoutsButton.Size = new Size(32, 25);
             workoutsButton.TabIndex = 51;
             workoutsButton.Click += createNextButton_Click;
@@ -188,7 +193,7 @@
             // workoutsTextBox
             // 
             workoutsTextBox.BorderColor = Color.White;
-            workoutsTextBox.CustomizableEdges = customizableEdges9;
+            workoutsTextBox.CustomizableEdges = customizableEdges3;
             workoutsTextBox.DefaultText = "3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n3x12 dumbell mumbell\r\n";
             workoutsTextBox.DisabledState.BorderColor = Color.White;
             workoutsTextBox.DisabledState.FillColor = Color.White;
@@ -206,7 +211,7 @@
             workoutsTextBox.PlaceholderForeColor = Color.White;
             workoutsTextBox.PlaceholderText = "";
             workoutsTextBox.SelectedText = "";
-            workoutsTextBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            workoutsTextBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
             workoutsTextBox.Size = new Size(186, 163);
             workoutsTextBox.TabIndex = 2;
             // 
@@ -251,7 +256,7 @@
             // 
             guna2Button1.BackColor = Color.Transparent;
             guna2Button1.BorderRadius = 13;
-            guna2Button1.CustomizableEdges = customizableEdges11;
+            guna2Button1.CustomizableEdges = customizableEdges5;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -263,7 +268,7 @@
             guna2Button1.Location = new Point(139, 94);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.PressedColor = Color.LightGray;
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2Button1.Size = new Size(32, 25);
             guna2Button1.TabIndex = 52;
             // 
@@ -378,12 +383,31 @@
             dailyGoalBorders.TabIndex = 59;
             dailyGoalBorders.TabStop = false;
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(31, 201);
+            chart1.Name = "chart1";
+            chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            chart1.PaletteCustomColors = new Color[] { Color.FromArgb(92, 225, 230) };
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(375, 132);
+            chart1.TabIndex = 16;
+            chart1.Text = "chart1";
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(chart1);
             Controls.Add(dailyGoalPanel);
             Controls.Add(workoutsPanel);
             Controls.Add(label1);
@@ -410,6 +434,7 @@
             dailyGoalPanel.ResumeLayout(false);
             dailyGoalPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -441,5 +466,6 @@
         private Label calorieIntake;
         private PictureBox dailyGoalBorders;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

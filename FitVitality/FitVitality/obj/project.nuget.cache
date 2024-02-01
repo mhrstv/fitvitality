@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FuxMSksk1tz7hXMrXoX4IwUxqU4HmBPJS27sgCzUQD6QYCGuSv3346hKTv7ameKQ9IeYWC7FiYu8o9UbyYp9tw==",
+  "dgSpecHash": "kRgD8tO2vrZikxiVpaTozn1J1Nw7gTnTFKUzpaa4SgXvP823gz6tiWAZM3qFciqu9lWo6kp9VtVTDfm3rGcSQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\User1\\Desktop\\Projects\\olympiad-project\\FitVitality\\FitVitality\\FitVitality.csproj",
   "expectedPackageFiles": [
@@ -53,7 +53,6 @@
     "C:\\Users\\User1\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\User1\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\User1\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\User1\\.nuget\\packages\\system.windows.forms.datavisualization\\1.0.0-prerelease.20110.1\\system.windows.forms.datavisualization.1.0.0-prerelease.20110.1.nupkg.sha512",
     "C:\\Users\\User1\\.nuget\\packages\\winforms.datavisualization\\1.9.1\\winforms.datavisualization.1.9.1.nupkg.sha512"
   ],
   "logs": []

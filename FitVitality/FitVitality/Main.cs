@@ -63,6 +63,22 @@ namespace FitVitality
                 nutrition_Opened = false;
                 settings_Opened = false;
             }
+            using(SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM UserData WHERE UserID = @userID";
+                using(SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@userID", _userID);
+                    using(SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if(reader.Read())
+                        {
+                            loggedInAsLabel.Text = "Logged in as " + reader["Username"].ToString();
+                        }
+                    }
+                }
+            }
         }
 
         private void Form1_Shown(object sender, EventArgs e)

@@ -34,6 +34,7 @@
             buttonDashboard = new Krypton.Toolkit.KryptonButton();
             mainPanel = new Panel();
             topbar = new Panel();
+            loggedInAsLabel = new Label();
             dietButton = new Krypton.Toolkit.KryptonButton();
             settingsButton = new PictureBox();
             buttonMin = new PictureBox();
@@ -166,6 +167,7 @@
             // 
             // topbar
             // 
+            topbar.Controls.Add(loggedInAsLabel);
             topbar.Controls.Add(dietButton);
             topbar.Controls.Add(settingsButton);
             topbar.Controls.Add(buttonMin);
@@ -189,6 +191,17 @@
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
+            // 
+            // loggedInAsLabel
+            // 
+            loggedInAsLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            loggedInAsLabel.ForeColor = Color.FromArgb(92, 230, 225);
+            loggedInAsLabel.Location = new Point(447, 5);
+            loggedInAsLabel.Name = "loggedInAsLabel";
+            loggedInAsLabel.Size = new Size(156, 23);
+            loggedInAsLabel.TabIndex = 13;
+            loggedInAsLabel.Text = "Logged in as {user}";
+            loggedInAsLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // dietButton
             // 
@@ -557,5 +570,6 @@
         private PictureBox pictureBox2;
         private PictureBox hLine;
         private Krypton.Toolkit.KryptonButton dietButton;
+        private Label loggedInAsLabel;
     }
 }

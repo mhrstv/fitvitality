@@ -86,10 +86,14 @@ namespace FitVitality
                             if (reader["Today"].ToString() == "Completed")
                             {
                                 workoutCompletedCheckBox.Checked = true;
+                                workoutCompletedCheckBox.ForeColor = Color.Green;
+                                workoutsLabel.ForeColor = Color.Green;
                             }
                             else
                             {
                                 workoutCompletedCheckBox.Checked = false;
+                                workoutCompletedCheckBox.ForeColor = Color.Black;
+                                workoutsLabel.ForeColor = Color.Black;
                             }
                         }
                     }
@@ -308,6 +312,51 @@ namespace FitVitality
                     workoutsTextBox.TextAlign = HorizontalAlignment.Center;
                 }
             }
+
+            int monVal = 0;
+            int tueVal = 0;
+            int wedVal = 0;
+            int thuVal = 0;
+            int friVal = 0;
+            int satVal = 0;
+            int sunVal = 0;
+            SqlDataAdapter da = new SqlDataAdapter();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday FROM WeeklyInformation WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            monVal = int.Parse(reader["Monday"].ToString());
+                            tueVal = int.Parse(reader["Tuesday"].ToString());
+                            wedVal = int.Parse(reader["Wednesday"].ToString());
+                            thuVal = int.Parse(reader["Thursday"].ToString());
+                            friVal = int.Parse(reader["Friday"].ToString());
+                            satVal = int.Parse(reader["Saturday"].ToString());
+                            sunVal = int.Parse(reader["Sunday"].ToString());
+                        }
+                    }
+                }
+            }
+            dietChart.Series["WeeklyGoals"].Points[0].SetValueY(monVal);
+            dietChart.Series["WeeklyGoals"].Points[1].SetValueY(tueVal);
+            dietChart.Series["WeeklyGoals"].Points[2].SetValueY(wedVal);
+            dietChart.Series["WeeklyGoals"].Points[3].SetValueY(thuVal);
+            dietChart.Series["WeeklyGoals"].Points[4].SetValueY(friVal);
+            dietChart.Series["WeeklyGoals"].Points[5].SetValueY(satVal);
+            dietChart.Series["WeeklyGoals"].Points[6].SetValueY(sunVal);
+            dietChart.Series["WeeklyGoals"].Points[0].Label = monVal.ToString() + "%";
+            dietChart.Series["WeeklyGoals"].Points[1].Label = tueVal.ToString() + "%";
+            dietChart.Series["WeeklyGoals"].Points[2].Label = wedVal.ToString() + "%";
+            dietChart.Series["WeeklyGoals"].Points[3].Label = thuVal.ToString() + "%";
+            dietChart.Series["WeeklyGoals"].Points[4].Label = friVal.ToString() + "%";
+            dietChart.Series["WeeklyGoals"].Points[5].Label = satVal.ToString() + "%";
+            dietChart.Series["WeeklyGoals"].Points[6].Label = sunVal.ToString() + "%";
         }
 
         private void home_Activated(object sender, EventArgs e)
@@ -404,10 +453,14 @@ namespace FitVitality
                     if (workoutCompletedCheckBox.Checked == true)
                     {
                         command.Parameters.AddWithValue("@Today", "Completed");
+                        workoutsLabel.ForeColor = Color.Green;
+                        workoutCompletedCheckBox.ForeColor = Color.Green;
                     }
                     else
                     {
                         command.Parameters.AddWithValue("@Today", "Not Completed");
+                        workoutsLabel.ForeColor = Color.Black;
+                        workoutCompletedCheckBox.ForeColor = Color.Black;
                     }
                     command.ExecuteNonQuery();
                 }

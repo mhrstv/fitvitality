@@ -517,6 +517,7 @@
             activityComboBox.Size = new Size(119, 24);
             activityComboBox.TabIndex = 58;
             activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
+            activityComboBox.Click += activityComboBox_Click_1;
             // 
             // Diet
             // 

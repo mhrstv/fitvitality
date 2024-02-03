@@ -1949,11 +1949,12 @@ namespace FitVitality
 
         private void Diet_ControlRemoved(object sender, ControlEventArgs e)
         {
-           
+
         }
 
         private void Diet_Leave(object sender, EventArgs e)
         {
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -1975,6 +1976,86 @@ namespace FitVitality
                     command.ExecuteNonQuery();
                 }
             }
+            double caloriePercentage = ((double)currentCalories / (double)caloriesGoal) * 100;
+            double proteinPercentage = ((double)currentProtein / (double)proteinGoal) * 100;
+            double carbsPercentage = ((double)currentCarbs / (double)carbsGoal) * 100;
+            double fatsPercentage = ((double)currentFats / (double)fatsGoal) * 100;
+            if (currentCalories > caloriesGoal)
+            {
+                caloriePercentage = 100;
+            }
+            if (currentProtein > proteinGoal)
+            {
+                proteinPercentage = 100;
+            }
+            if (currentCarbs > carbsGoal)
+            {
+                carbsPercentage = 100;
+            }
+            if (currentFats > fatsGoal)
+            {
+                fatsPercentage = 100;
+            }
+
+            double totalPercentage = (caloriePercentage + proteinPercentage + carbsPercentage + fatsPercentage) / 4;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "";
+                if (DateTime.Today.DayOfWeek == DayOfWeek.Monday)
+                {
+                    query = "UPDATE WeeklyInformation " +
+                   "SET Monday = @Percentage " +
+                   "WHERE UserID = @UserID";
+                }
+                else if (DateTime.Today.DayOfWeek == DayOfWeek.Tuesday)
+                {
+                    query = "UPDATE WeeklyInformation " +
+                   "SET Tuesday = @Percentage " +
+                   "WHERE UserID = @UserID";
+                }
+                else if (DateTime.Today.DayOfWeek == DayOfWeek.Wednesday)
+                {
+                    query = "UPDATE WeeklyInformation " +
+                   "SET Wednesday = @Percentage " +
+                   "WHERE UserID = @UserID";
+                }
+                else if (DateTime.Today.DayOfWeek == DayOfWeek.Thursday)
+                {
+                    query = "UPDATE WeeklyInformation " +
+                   "SET Thursday = @Percentage " +
+                   "WHERE UserID = @UserID";
+                }
+                else if (DateTime.Today.DayOfWeek == DayOfWeek.Friday)
+                {
+                    query = "UPDATE WeeklyInformation " +
+                   "SET Friday = @Percentage " +
+                   "WHERE UserID = @UserID";
+                }
+                else if (DateTime.Today.DayOfWeek == DayOfWeek.Saturday)
+                {
+                    query = "UPDATE WeeklyInformation " +
+                   "SET Saturday = @Percentage " +
+                   "WHERE UserID = @UserID";
+                }
+                else if (DateTime.Today.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    query = "UPDATE WeeklyInformation " +
+                   "SET Sunday = @Percentage " +
+                   "WHERE UserID = @UserID";
+                }
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    command.Parameters.AddWithValue("@Percentage", (int)totalPercentage);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void activityComboBox_Click_1(object sender, EventArgs e)
+        {
+            ifSearchNotClicked(sender, e);
         }
     }
 }

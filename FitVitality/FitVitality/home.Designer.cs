@@ -37,6 +37,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 15D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 30D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 60D);
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             rotationTimer = new System.Windows.Forms.Timer(components);
             hLine1 = new PictureBox();
@@ -156,7 +163,7 @@
             workoutsPanel.Controls.Add(workoutsTextBox);
             workoutsPanel.Controls.Add(workoutsLabel);
             workoutsPanel.Controls.Add(workoutsBorders);
-            workoutsPanel.Location = new Point(464, 54);
+            workoutsPanel.Location = new Point(461, 60);
             workoutsPanel.Name = "workoutsPanel";
             workoutsPanel.Size = new Size(213, 269);
             workoutsPanel.TabIndex = 14;
@@ -240,6 +247,7 @@
             // workoutsLabel
             // 
             workoutsLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            workoutsLabel.ForeColor = SystemColors.ControlText;
             workoutsLabel.Location = new Point(13, 14);
             workoutsLabel.Name = "workoutsLabel";
             workoutsLabel.Size = new Size(186, 23);
@@ -269,7 +277,7 @@
             dailyGoalPanel.Controls.Add(calorieIntake);
             dailyGoalPanel.Controls.Add(label2);
             dailyGoalPanel.Controls.Add(dailyGoalBorders);
-            dailyGoalPanel.Location = new Point(31, 22);
+            dailyGoalPanel.Location = new Point(15, 21);
             dailyGoalPanel.Name = "dailyGoalPanel";
             dailyGoalPanel.Size = new Size(183, 127);
             dailyGoalPanel.TabIndex = 15;
@@ -407,24 +415,53 @@
             // 
             // dietChart
             // 
-            chartArea1.Name = "ChartArea1";
+            chartArea1.AxisX.Maximum = 7D;
+            chartArea1.AxisX.Minimum = 1D;
+            chartArea1.AxisY.Maximum = 100D;
+            chartArea1.AxisY.Minimum = 0D;
+            chartArea1.Name = "ChartArea";
             dietChart.ChartAreas.Add(chartArea1);
-            dietChart.Location = new Point(22, 172);
+            dietChart.Location = new Point(17, 153);
             dietChart.Name = "dietChart";
             dietChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             dietChart.PaletteCustomColors = new Color[] { Color.FromArgb(92, 225, 230) };
             series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
+            series1.ChartArea = "ChartArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Name = "Series";
-            series1.YValuesPerPoint = 2;
+            series1.Font = new Font("Arial", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            series1.Name = "WeeklyGoals";
+            dataPoint1.AxisLabel = "Mon";
+            dataPoint1.Color = Color.FromArgb(92, 230, 255);
+            dataPoint1.Label = "";
+            dataPoint1.LabelForeColor = Color.Black;
+            dataPoint2.AxisLabel = "Tue";
+            dataPoint2.Color = Color.FromArgb(92, 230, 255);
+            dataPoint3.AxisLabel = "Wed";
+            dataPoint3.Color = Color.FromArgb(92, 230, 255);
+            dataPoint4.AxisLabel = "Thu";
+            dataPoint4.Color = Color.FromArgb(92, 230, 255);
+            dataPoint5.AxisLabel = "Fri";
+            dataPoint5.Color = Color.FromArgb(92, 230, 255);
+            dataPoint6.AxisLabel = "Sat";
+            dataPoint6.Color = Color.FromArgb(92, 230, 255);
+            dataPoint7.AxisLabel = "Sun";
+            dataPoint7.Color = Color.FromArgb(92, 230, 255);
+            dataPoint7.Label = "";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            series1.Points.Add(dataPoint4);
+            series1.Points.Add(dataPoint5);
+            series1.Points.Add(dataPoint6);
+            series1.Points.Add(dataPoint7);
             dietChart.Series.Add(series1);
-            dietChart.Size = new Size(384, 184);
+            dietChart.Size = new Size(380, 201);
             dietChart.TabIndex = 16;
             dietChart.Text = "Diet";
-            title1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            title1.Alignment = ContentAlignment.BottomCenter;
+            title1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             title1.Name = "Diet";
-            title1.Text = "Last 7 days goal %";
+            title1.Text = "This week's goals %";
             dietChart.Titles.Add(title1);
             // 
             // home

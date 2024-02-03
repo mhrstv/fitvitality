@@ -31,10 +31,6 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 15D);
@@ -55,13 +51,10 @@
             label1 = new Label();
             workoutsPanel = new Panel();
             workoutCompletedCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
-            workoutsButton = new Guna.UI2.WinForms.Guna2Button();
-            workoutsDetails = new Label();
             workoutsTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             workoutsLabel = new Label();
             workoutsBorders = new PictureBox();
             dailyGoalPanel = new Panel();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             fLabel = new Label();
             pLabel = new Label();
             cLabel = new Label();
@@ -158,12 +151,10 @@
             // workoutsPanel
             // 
             workoutsPanel.Controls.Add(workoutCompletedCheckBox);
-            workoutsPanel.Controls.Add(workoutsButton);
-            workoutsPanel.Controls.Add(workoutsDetails);
             workoutsPanel.Controls.Add(workoutsTextBox);
             workoutsPanel.Controls.Add(workoutsLabel);
             workoutsPanel.Controls.Add(workoutsBorders);
-            workoutsPanel.Location = new Point(461, 60);
+            workoutsPanel.Location = new Point(464, 48);
             workoutsPanel.Name = "workoutsPanel";
             workoutsPanel.Size = new Size(213, 269);
             workoutsPanel.TabIndex = 14;
@@ -177,7 +168,7 @@
             workoutCompletedCheckBox.CheckedState.FillColor = Color.White;
             workoutCompletedCheckBox.CheckMarkColor = Color.Green;
             workoutCompletedCheckBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            workoutCompletedCheckBox.Location = new Point(64, 197);
+            workoutCompletedCheckBox.Location = new Point(64, 234);
             workoutCompletedCheckBox.Name = "workoutCompletedCheckBox";
             workoutCompletedCheckBox.Size = new Size(84, 19);
             workoutCompletedCheckBox.TabIndex = 52;
@@ -188,41 +179,10 @@
             workoutCompletedCheckBox.UncheckedState.FillColor = Color.White;
             workoutCompletedCheckBox.CheckedChanged += workoutCompletedCheckBox_CheckedChanged;
             // 
-            // workoutsButton
-            // 
-            workoutsButton.BackColor = Color.Transparent;
-            workoutsButton.BorderRadius = 13;
-            workoutsButton.CustomizableEdges = customizableEdges1;
-            workoutsButton.DisabledState.BorderColor = Color.DarkGray;
-            workoutsButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            workoutsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            workoutsButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            workoutsButton.FillColor = Color.White;
-            workoutsButton.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            workoutsButton.ForeColor = Color.White;
-            workoutsButton.Image = Properties.Resources.forwardArrow;
-            workoutsButton.Location = new Point(90, 236);
-            workoutsButton.Name = "workoutsButton";
-            workoutsButton.PressedColor = Color.LightGray;
-            workoutsButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            workoutsButton.Size = new Size(32, 25);
-            workoutsButton.TabIndex = 51;
-            workoutsButton.Click += createNextButton_Click;
-            // 
-            // workoutsDetails
-            // 
-            workoutsDetails.AutoSize = true;
-            workoutsDetails.Font = new Font("Calibri", 8.25F, FontStyle.Italic, GraphicsUnit.Point);
-            workoutsDetails.Location = new Point(29, 218);
-            workoutsDetails.Name = "workoutsDetails";
-            workoutsDetails.Size = new Size(154, 13);
-            workoutsDetails.TabIndex = 3;
-            workoutsDetails.Text = "Press the arrow for more details.";
-            // 
             // workoutsTextBox
             // 
             workoutsTextBox.BorderColor = Color.White;
-            workoutsTextBox.CustomizableEdges = customizableEdges3;
+            workoutsTextBox.CustomizableEdges = customizableEdges1;
             workoutsTextBox.DefaultText = "";
             workoutsTextBox.DisabledState.BorderColor = Color.White;
             workoutsTextBox.DisabledState.FillColor = Color.White;
@@ -240,8 +200,8 @@
             workoutsTextBox.PlaceholderForeColor = Color.White;
             workoutsTextBox.PlaceholderText = "";
             workoutsTextBox.SelectedText = "";
-            workoutsTextBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            workoutsTextBox.Size = new Size(186, 163);
+            workoutsTextBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            workoutsTextBox.Size = new Size(186, 182);
             workoutsTextBox.TabIndex = 2;
             // 
             // workoutsLabel
@@ -266,7 +226,6 @@
             // 
             // dailyGoalPanel
             // 
-            dailyGoalPanel.Controls.Add(guna2Button1);
             dailyGoalPanel.Controls.Add(fLabel);
             dailyGoalPanel.Controls.Add(pLabel);
             dailyGoalPanel.Controls.Add(cLabel);
@@ -277,30 +236,10 @@
             dailyGoalPanel.Controls.Add(calorieIntake);
             dailyGoalPanel.Controls.Add(label2);
             dailyGoalPanel.Controls.Add(dailyGoalBorders);
-            dailyGoalPanel.Location = new Point(15, 21);
+            dailyGoalPanel.Location = new Point(17, 48);
             dailyGoalPanel.Name = "dailyGoalPanel";
             dailyGoalPanel.Size = new Size(183, 127);
             dailyGoalPanel.TabIndex = 15;
-            // 
-            // guna2Button1
-            // 
-            guna2Button1.BackColor = Color.Transparent;
-            guna2Button1.BorderRadius = 13;
-            guna2Button1.CustomizableEdges = customizableEdges5;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.White;
-            guna2Button1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Image = Properties.Resources.forwardArrow;
-            guna2Button1.Location = new Point(139, 94);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.PressedColor = Color.LightGray;
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button1.Size = new Size(32, 25);
-            guna2Button1.TabIndex = 52;
             // 
             // fLabel
             // 
@@ -421,7 +360,7 @@
             chartArea1.AxisY.Minimum = 0D;
             chartArea1.Name = "ChartArea";
             dietChart.ChartAreas.Add(chartArea1);
-            dietChart.Location = new Point(17, 153);
+            dietChart.Location = new Point(17, 181);
             dietChart.Name = "dietChart";
             dietChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             dietChart.PaletteCustomColors = new Color[] { Color.FromArgb(92, 225, 230) };
@@ -455,7 +394,7 @@
             series1.Points.Add(dataPoint6);
             series1.Points.Add(dataPoint7);
             dietChart.Series.Add(series1);
-            dietChart.Size = new Size(380, 201);
+            dietChart.Size = new Size(380, 173);
             dietChart.TabIndex = 16;
             dietChart.Text = "Diet";
             title1.Alignment = ContentAlignment.BottomCenter;
@@ -514,9 +453,7 @@
         private Panel workoutsPanel;
         private PictureBox workoutsBorders;
         private Label workoutsLabel;
-        private Label workoutsDetails;
         private Guna.UI2.WinForms.Guna2TextBox workoutsTextBox;
-        private Guna.UI2.WinForms.Guna2Button workoutsButton;
         private Panel dailyGoalPanel;
         private Label label2;
         private Label fLabel;
@@ -528,7 +465,6 @@
         private Label carbohydrates;
         private Label calorieIntake;
         private PictureBox dailyGoalBorders;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.DataVisualization.Charting.Chart dietChart;
         private Guna.UI2.WinForms.Guna2CheckBox workoutCompletedCheckBox;
     }

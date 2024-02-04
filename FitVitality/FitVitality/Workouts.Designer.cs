@@ -256,7 +256,7 @@
             frontBB = new PictureBox();
             backCTS = new PictureBox();
             frontCTS = new PictureBox();
-            label1 = new Label();
+            upperLabel2 = new Label();
             chestTricepsShoulderCheckBox = new CheckBox();
             upperBodyHomeOutdoorsButPanel = new Panel();
             upperBodyHomeOutdoorsButton = new Krypton.Toolkit.KryptonButton();
@@ -564,11 +564,11 @@
             // 
             trainPlaceLabel.AutoSize = true;
             trainPlaceLabel.BackColor = Color.FromArgb(242, 242, 242);
-            trainPlaceLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            trainPlaceLabel.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
             trainPlaceLabel.ForeColor = SystemColors.ControlText;
-            trainPlaceLabel.Location = new Point(64, 31);
+            trainPlaceLabel.Location = new Point(70, 50);
             trainPlaceLabel.Name = "trainPlaceLabel";
-            trainPlaceLabel.Size = new Size(428, 92);
+            trainPlaceLabel.Size = new Size(379, 72);
             trainPlaceLabel.TabIndex = 1;
             trainPlaceLabel.Text = "Hello, ... . That is the workout section and we will \r\nask you a few questions in order to create the \r\nperfect workout for you.\r\nTo begin with, what place do you desire to workout at?";
             trainPlaceLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -3349,7 +3349,7 @@
             upperBodyHomeOutdoorsPanel.Controls.Add(frontBB);
             upperBodyHomeOutdoorsPanel.Controls.Add(backCTS);
             upperBodyHomeOutdoorsPanel.Controls.Add(frontCTS);
-            upperBodyHomeOutdoorsPanel.Controls.Add(label1);
+            upperBodyHomeOutdoorsPanel.Controls.Add(upperLabel2);
             upperBodyHomeOutdoorsPanel.Controls.Add(chestTricepsShoulderCheckBox);
             upperBodyHomeOutdoorsPanel.Controls.Add(upperBodyHomeOutdoorsButPanel);
             upperBodyHomeOutdoorsPanel.Controls.Add(upperBodyHomeOutdoorsLabel);
@@ -3422,18 +3422,18 @@
             frontCTS.TabStop = false;
             frontCTS.Click += frontCTS_Click;
             // 
-            // label1
+            // upperLabel2
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(242, 242, 242);
-            label1.Font = new Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(135, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(45, 18);
-            label1.TabIndex = 34;
-            label1.Text = "upper";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            upperLabel2.AutoSize = true;
+            upperLabel2.BackColor = Color.FromArgb(242, 242, 242);
+            upperLabel2.Font = new Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            upperLabel2.ForeColor = SystemColors.ControlText;
+            upperLabel2.Location = new Point(135, 29);
+            upperLabel2.Name = "upperLabel2";
+            upperLabel2.Size = new Size(45, 18);
+            upperLabel2.TabIndex = 34;
+            upperLabel2.Text = "upper";
+            upperLabel2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // chestTricepsShoulderCheckBox
             // 
@@ -3900,7 +3900,7 @@
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private CheckBox checkBox3;
-        private Label label1;
+        private Label upperLabel2;
         private CheckBox chestTricepsShoulderCheckBox;
         private Panel upperBodyHomeOutdoorsButPanel;
         private Krypton.Toolkit.KryptonButton upperBodyHomeOutdoorsButton;

@@ -66,6 +66,7 @@
             label2 = new Label();
             dailyGoalBorders = new PictureBox();
             dietChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            graphBorders = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
@@ -77,6 +78,7 @@
             dailyGoalPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dietChart).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)graphBorders).BeginInit();
             SuspendLayout();
             // 
             // rotationTimer
@@ -154,7 +156,7 @@
             workoutsPanel.Controls.Add(workoutsTextBox);
             workoutsPanel.Controls.Add(workoutsLabel);
             workoutsPanel.Controls.Add(workoutsBorders);
-            workoutsPanel.Location = new Point(464, 48);
+            workoutsPanel.Location = new Point(445, 66);
             workoutsPanel.Name = "workoutsPanel";
             workoutsPanel.Size = new Size(213, 269);
             workoutsPanel.TabIndex = 14;
@@ -236,7 +238,7 @@
             dailyGoalPanel.Controls.Add(calorieIntake);
             dailyGoalPanel.Controls.Add(label2);
             dailyGoalPanel.Controls.Add(dailyGoalBorders);
-            dailyGoalPanel.Location = new Point(17, 48);
+            dailyGoalPanel.Location = new Point(46, 223);
             dailyGoalPanel.Name = "dailyGoalPanel";
             dailyGoalPanel.Size = new Size(183, 127);
             dailyGoalPanel.TabIndex = 15;
@@ -354,13 +356,15 @@
             // 
             // dietChart
             // 
+            dietChart.BorderlineColor = Color.Empty;
+            dietChart.BorderlineWidth = 0;
             chartArea1.AxisX.Maximum = 7D;
             chartArea1.AxisX.Minimum = 1D;
             chartArea1.AxisY.Maximum = 100D;
             chartArea1.AxisY.Minimum = 0D;
             chartArea1.Name = "ChartArea";
             dietChart.ChartAreas.Add(chartArea1);
-            dietChart.Location = new Point(17, 181);
+            dietChart.Location = new Point(51, 71);
             dietChart.Name = "dietChart";
             dietChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             dietChart.PaletteCustomColors = new Color[] { Color.FromArgb(92, 225, 230) };
@@ -394,7 +398,7 @@
             series1.Points.Add(dataPoint6);
             series1.Points.Add(dataPoint7);
             dietChart.Series.Add(series1);
-            dietChart.Size = new Size(380, 173);
+            dietChart.Size = new Size(342, 136);
             dietChart.TabIndex = 16;
             dietChart.Text = "Diet";
             title1.Alignment = ContentAlignment.BottomCenter;
@@ -403,6 +407,15 @@
             title1.Text = "This week's goals %";
             dietChart.Titles.Add(title1);
             // 
+            // graphBorders
+            // 
+            graphBorders.Image = Properties.Resources.graphBorders;
+            graphBorders.Location = new Point(46, 66);
+            graphBorders.Name = "graphBorders";
+            graphBorders.Size = new Size(352, 146);
+            graphBorders.TabIndex = 17;
+            graphBorders.TabStop = false;
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -410,6 +423,7 @@
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
             Controls.Add(dietChart);
+            Controls.Add(graphBorders);
             Controls.Add(dailyGoalPanel);
             Controls.Add(workoutsPanel);
             Controls.Add(label1);
@@ -437,6 +451,7 @@
             dailyGoalPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).EndInit();
             ((System.ComponentModel.ISupportInitialize)dietChart).EndInit();
+            ((System.ComponentModel.ISupportInitialize)graphBorders).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -467,5 +482,6 @@
         private PictureBox dailyGoalBorders;
         private System.Windows.Forms.DataVisualization.Charting.Chart dietChart;
         private Guna.UI2.WinForms.Guna2CheckBox workoutCompletedCheckBox;
+        private PictureBox graphBorders;
     }
 }

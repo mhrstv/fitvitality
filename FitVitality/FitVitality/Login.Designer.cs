@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             loginLabel = new Label();
             textBoxUsername = new Krypton.Toolkit.KryptonTextBox();
@@ -127,14 +127,14 @@
             // 
             // loginLabel
             // 
-            loginLabel.AutoSize = true;
             loginLabel.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
             loginLabel.ForeColor = Color.FromArgb(92, 225, 230);
-            loginLabel.Location = new Point(68, 67);
+            loginLabel.Location = new Point(24, 67);
             loginLabel.Name = "loginLabel";
-            loginLabel.Size = new Size(151, 46);
+            loginLabel.Size = new Size(239, 46);
             loginLabel.TabIndex = 2;
             loginLabel.Text = "LOGIN";
+            loginLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBoxUsername
             // 
@@ -188,26 +188,26 @@
             // 
             // newUserLabel
             // 
-            newUserLabel.AutoSize = true;
             newUserLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             newUserLabel.ForeColor = Color.FromArgb(150, 208, 250);
-            newUserLabel.Location = new Point(53, 343);
+            newUserLabel.Location = new Point(68, 348);
             newUserLabel.Name = "newUserLabel";
-            newUserLabel.Size = new Size(69, 14);
+            newUserLabel.Size = new Size(151, 14);
             newUserLabel.TabIndex = 6;
             newUserLabel.Text = "New user?";
+            newUserLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // createAccButton
             // 
-            createAccButton.AutoSize = true;
             createAccButton.Cursor = Cursors.Hand;
             createAccButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             createAccButton.ForeColor = Color.FromArgb(150, 208, 250);
-            createAccButton.Location = new Point(121, 343);
+            createAccButton.Location = new Point(68, 364);
             createAccButton.Name = "createAccButton";
-            createAccButton.Size = new Size(112, 14);
+            createAccButton.Size = new Size(151, 14);
             createAccButton.TabIndex = 6;
             createAccButton.Text = "Create an account";
+            createAccButton.TextAlign = ContentAlignment.MiddleCenter;
             createAccButton.Click += label5_Click;
             // 
             // topbar
@@ -245,7 +245,7 @@
             buttonClose.ImageSize = new Size(19, 19);
             buttonClose.Location = new Point(256, 7);
             buttonClose.Name = "buttonClose";
-            buttonClose.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonClose.ShadowDecoration.CustomizableEdges = customizableEdges1;
             buttonClose.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             buttonClose.Size = new Size(19, 19);
             buttonClose.TabIndex = 39;
@@ -475,7 +475,7 @@
             // buttonLogin
             // 
             buttonLogin.BorderRadius = 10;
-            buttonLogin.CustomizableEdges = customizableEdges5;
+            buttonLogin.CustomizableEdges = customizableEdges2;
             buttonLogin.DisabledState.BorderColor = Color.DarkGray;
             buttonLogin.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -483,9 +483,9 @@
             buttonLogin.FillColor = Color.FromArgb(92, 225, 230);
             buttonLogin.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonLogin.ForeColor = Color.White;
-            buttonLogin.Location = new Point(99, 306);
+            buttonLogin.Location = new Point(99, 320);
             buttonLogin.Name = "buttonLogin";
-            buttonLogin.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            buttonLogin.ShadowDecoration.CustomizableEdges = customizableEdges3;
             buttonLogin.Size = new Size(90, 25);
             buttonLogin.TabIndex = 44;
             buttonLogin.Text = "Login";

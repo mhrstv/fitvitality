@@ -110,15 +110,15 @@
             // 
             // haveAnAccButton
             // 
-            haveAnAccButton.AutoSize = true;
             haveAnAccButton.Cursor = Cursors.Hand;
             haveAnAccButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
             haveAnAccButton.ForeColor = Color.FromArgb(150, 208, 250);
-            haveAnAccButton.Location = new Point(65, 368);
+            haveAnAccButton.Location = new Point(31, 368);
             haveAnAccButton.Name = "haveAnAccButton";
-            haveAnAccButton.Size = new Size(157, 14);
+            haveAnAccButton.Size = new Size(225, 14);
             haveAnAccButton.TabIndex = 7;
             haveAnAccButton.Text = "Already have an account?";
+            haveAnAccButton.TextAlign = ContentAlignment.MiddleCenter;
             haveAnAccButton.Click += label5_Click;
             // 
             // passLabel
@@ -177,14 +177,14 @@
             // 
             // registerLabel
             // 
-            registerLabel.AutoSize = true;
-            registerLabel.Font = new Font("Arial Rounded MT Bold", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            registerLabel.Font = new Font("Arial Rounded MT Bold", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             registerLabel.ForeColor = Color.FromArgb(92, 225, 230);
-            registerLabel.Location = new Point(29, 47);
+            registerLabel.Location = new Point(1, 47);
             registerLabel.Name = "registerLabel";
-            registerLabel.Size = new Size(229, 46);
+            registerLabel.Size = new Size(284, 46);
             registerLabel.TabIndex = 2;
             registerLabel.Text = "REGISTER";
+            registerLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // emailLabel
             // 
@@ -425,14 +425,14 @@
             // 
             // emailErrorLabel
             // 
-            emailErrorLabel.AutoSize = true;
             emailErrorLabel.BackColor = Color.FromArgb(255, 0, 42);
-            emailErrorLabel.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            emailErrorLabel.Location = new Point(49, 5);
+            emailErrorLabel.Font = new Font("Calibri", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            emailErrorLabel.Location = new Point(44, 5);
             emailErrorLabel.Name = "emailErrorLabel";
-            emailErrorLabel.Size = new Size(96, 14);
+            emailErrorLabel.Size = new Size(105, 14);
             emailErrorLabel.TabIndex = 0;
             emailErrorLabel.Text = "Email is not valid!";
+            emailErrorLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // emailError
             // 
@@ -555,6 +555,7 @@
             labelcreated.Size = new Size(168, 15);
             labelcreated.TabIndex = 23;
             labelcreated.Text = "Account created successfully.";
+            labelcreated.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // accCreated
             // 
@@ -625,10 +626,10 @@
             buttonRegister.FillColor = Color.FromArgb(92, 225, 230);
             buttonRegister.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonRegister.ForeColor = Color.White;
-            buttonRegister.Location = new Point(96, 332);
+            buttonRegister.Location = new Point(82, 332);
             buttonRegister.Name = "buttonRegister";
             buttonRegister.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            buttonRegister.Size = new Size(90, 25);
+            buttonRegister.Size = new Size(122, 25);
             buttonRegister.TabIndex = 45;
             buttonRegister.Text = "Register";
             buttonRegister.Click += kryptonButton1_Click;
@@ -687,7 +688,6 @@
             userError.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)errPanel1).EndInit();
             emailPanel.ResumeLayout(false);
-            emailPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)emailError).EndInit();
             passPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)passError).EndInit();

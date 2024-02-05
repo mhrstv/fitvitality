@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Krypton.Toolkit;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace FitVitality
 {
@@ -25,7 +26,17 @@ namespace FitVitality
 
         private void WorkoutListItem_Load(object sender, EventArgs e)
         {
-
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                workoutNumLabel.Text = "Workout [Number]";
+                selectButton.Text = "Preview";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                workoutNumLabel.Text = "Тренировка [Number]";
+                selectButton.Text = "Преглед";
+            }
         }
 
         private void selectButton_Click(object sender, EventArgs e)

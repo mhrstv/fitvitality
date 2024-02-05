@@ -330,27 +330,27 @@
             // 
             // appSettings_label
             // 
-            appSettings_label.AutoSize = true;
             appSettings_label.BackColor = Color.FromArgb(250, 252, 252);
             appSettings_label.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             appSettings_label.ForeColor = Color.FromArgb(92, 225, 230);
-            appSettings_label.Location = new Point(85, 29);
+            appSettings_label.Location = new Point(26, 29);
             appSettings_label.Name = "appSettings_label";
-            appSettings_label.Size = new Size(139, 24);
+            appSettings_label.Size = new Size(247, 24);
             appSettings_label.TabIndex = 12;
             appSettings_label.Text = "App Settings";
+            appSettings_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // accSettings_label
             // 
-            accSettings_label.AutoSize = true;
             accSettings_label.BackColor = Color.FromArgb(250, 252, 252);
             accSettings_label.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             accSettings_label.ForeColor = Color.FromArgb(92, 225, 230);
-            accSettings_label.Location = new Point(424, 29);
+            accSettings_label.Location = new Point(373, 29);
             accSettings_label.Name = "accSettings_label";
-            accSettings_label.Size = new Size(183, 24);
+            accSettings_label.Size = new Size(265, 24);
             accSettings_label.TabIndex = 13;
             accSettings_label.Text = "Account Settings";
+            accSettings_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // langLabel
             // 
@@ -361,6 +361,7 @@
             langLabel.Size = new Size(63, 16);
             langLabel.TabIndex = 14;
             langLabel.Text = "Language";
+            langLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // themeLabel
             // 
@@ -490,7 +491,7 @@
             // 
             errorClose.BackColor = Color.WhiteSmoke;
             errorClose.Image = Properties.Resources.closebutton;
-            errorClose.Location = new Point(208, 8);
+            errorClose.Location = new Point(207, 9);
             errorClose.Name = "errorClose";
             errorClose.Size = new Size(19, 19);
             errorClose.SizeMode = PictureBoxSizeMode.Zoom;
@@ -503,26 +504,25 @@
             // 
             // settingErrorLabel
             // 
-            settingErrorLabel.AutoSize = true;
             settingErrorLabel.BackColor = Color.WhiteSmoke;
             settingErrorLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            settingErrorLabel.Location = new Point(42, 50);
+            settingErrorLabel.Location = new Point(24, 50);
             settingErrorLabel.Name = "settingErrorLabel";
-            settingErrorLabel.Size = new Size(157, 36);
+            settingErrorLabel.Size = new Size(188, 36);
             settingErrorLabel.TabIndex = 2;
             settingErrorLabel.Text = "You have input incorrect\r\ndata!";
             settingErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // errorLabel
             // 
-            errorLabel.AutoSize = true;
             errorLabel.BackColor = Color.WhiteSmoke;
             errorLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            errorLabel.Location = new Point(99, 29);
+            errorLabel.Location = new Point(81, 29);
             errorLabel.Name = "errorLabel";
-            errorLabel.Size = new Size(44, 19);
+            errorLabel.Size = new Size(75, 19);
             errorLabel.TabIndex = 1;
             errorLabel.Text = "Error";
+            errorLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // settingsError
             // 
@@ -547,7 +547,7 @@
             buttonSave.Location = new Point(515, 285);
             buttonSave.Name = "buttonSave";
             buttonSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            buttonSave.Size = new Size(79, 40);
+            buttonSave.Size = new Size(103, 40);
             buttonSave.TabIndex = 43;
             buttonSave.Text = "Save Settings";
             buttonSave.Click += buttonSave_Click;
@@ -576,7 +576,7 @@
             deleteAccountButton.Location = new Point(424, 331);
             deleteAccountButton.Name = "deleteAccountButton";
             deleteAccountButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            deleteAccountButton.Size = new Size(170, 25);
+            deleteAccountButton.Size = new Size(194, 25);
             deleteAccountButton.TabIndex = 46;
             deleteAccountButton.Text = "Delete Account";
             deleteAccountButton.Click += kryptonButton1_Click;
@@ -615,7 +615,7 @@
             errorPanel.Controls.Add(errorClose);
             errorPanel.Controls.Add(errorLabel);
             errorPanel.Controls.Add(settingsError);
-            errorPanel.Location = new Point(227, 131);
+            errorPanel.Location = new Point(227, 90);
             errorPanel.Name = "errorPanel";
             errorPanel.Size = new Size(237, 128);
             errorPanel.TabIndex = 50;
@@ -633,7 +633,7 @@
             changePasswordPanel.Controls.Add(oldPasswordLabel);
             changePasswordPanel.Controls.Add(changePasswordLabel);
             changePasswordPanel.Controls.Add(changePasswordBorders);
-            changePasswordPanel.Location = new Point(217, 51);
+            changePasswordPanel.Location = new Point(217, 45);
             changePasswordPanel.Name = "changePasswordPanel";
             changePasswordPanel.Size = new Size(257, 234);
             changePasswordPanel.TabIndex = 51;
@@ -665,10 +665,10 @@
             changePasswordConfirmButton.FillColor = Color.FromArgb(92, 225, 230);
             changePasswordConfirmButton.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             changePasswordConfirmButton.ForeColor = Color.White;
-            changePasswordConfirmButton.Location = new Point(86, 198);
+            changePasswordConfirmButton.Location = new Point(80, 198);
             changePasswordConfirmButton.Name = "changePasswordConfirmButton";
             changePasswordConfirmButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            changePasswordConfirmButton.Size = new Size(84, 25);
+            changePasswordConfirmButton.Size = new Size(96, 25);
             changePasswordConfirmButton.TabIndex = 55;
             changePasswordConfirmButton.Text = "Confirm";
             changePasswordConfirmButton.Click += guna2Button1_Click;
@@ -750,47 +750,47 @@
             // 
             // confirmNewPasswordLabel
             // 
-            confirmNewPasswordLabel.AutoSize = true;
             confirmNewPasswordLabel.BackColor = Color.WhiteSmoke;
             confirmNewPasswordLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            confirmNewPasswordLabel.Location = new Point(54, 144);
+            confirmNewPasswordLabel.Location = new Point(34, 144);
             confirmNewPasswordLabel.Name = "confirmNewPasswordLabel";
-            confirmNewPasswordLabel.Size = new Size(149, 18);
+            confirmNewPasswordLabel.Size = new Size(189, 18);
             confirmNewPasswordLabel.TabIndex = 3;
             confirmNewPasswordLabel.Text = "Confirm new password\r\n";
+            confirmNewPasswordLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // newPasswordLabel
             // 
-            newPasswordLabel.AutoSize = true;
             newPasswordLabel.BackColor = Color.WhiteSmoke;
             newPasswordLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            newPasswordLabel.Location = new Point(62, 97);
+            newPasswordLabel.Location = new Point(42, 97);
             newPasswordLabel.Name = "newPasswordLabel";
-            newPasswordLabel.Size = new Size(133, 18);
+            newPasswordLabel.Size = new Size(173, 18);
             newPasswordLabel.TabIndex = 2;
             newPasswordLabel.Text = "Enter new password\r\n";
+            newPasswordLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // oldPasswordLabel
             // 
-            oldPasswordLabel.AutoSize = true;
             oldPasswordLabel.BackColor = Color.WhiteSmoke;
             oldPasswordLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            oldPasswordLabel.Location = new Point(65, 46);
+            oldPasswordLabel.Location = new Point(45, 46);
             oldPasswordLabel.Name = "oldPasswordLabel";
-            oldPasswordLabel.Size = new Size(126, 18);
+            oldPasswordLabel.Size = new Size(166, 18);
             oldPasswordLabel.TabIndex = 1;
             oldPasswordLabel.Text = "Enter old password";
+            oldPasswordLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // changePasswordLabel
             // 
-            changePasswordLabel.AutoSize = true;
             changePasswordLabel.BackColor = Color.WhiteSmoke;
             changePasswordLabel.Font = new Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            changePasswordLabel.Location = new Point(54, 11);
+            changePasswordLabel.Location = new Point(34, 11);
             changePasswordLabel.Name = "changePasswordLabel";
-            changePasswordLabel.Size = new Size(148, 23);
+            changePasswordLabel.Size = new Size(188, 23);
             changePasswordLabel.TabIndex = 0;
             changePasswordLabel.Text = "Change Password";
+            changePasswordLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // changePasswordBorders
             // 
@@ -823,7 +823,7 @@
             nameTextBox.PlaceholderText = "";
             nameTextBox.SelectedText = "";
             nameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            nameTextBox.Size = new Size(100, 25);
+            nameTextBox.Size = new Size(124, 25);
             nameTextBox.TabIndex = 52;
             // 
             // emailTextBox
@@ -848,7 +848,7 @@
             emailTextBox.PlaceholderText = "";
             emailTextBox.SelectedText = "";
             emailTextBox.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            emailTextBox.Size = new Size(100, 25);
+            emailTextBox.Size = new Size(124, 25);
             emailTextBox.TabIndex = 53;
             // 
             // ageTextBox
@@ -873,7 +873,7 @@
             ageTextBox.PlaceholderText = "";
             ageTextBox.SelectedText = "";
             ageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            ageTextBox.Size = new Size(100, 25);
+            ageTextBox.Size = new Size(124, 25);
             ageTextBox.TabIndex = 54;
             // 
             // weightTextBox
@@ -898,7 +898,7 @@
             weightTextBox.PlaceholderText = "";
             weightTextBox.SelectedText = "";
             weightTextBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            weightTextBox.Size = new Size(100, 25);
+            weightTextBox.Size = new Size(124, 25);
             weightTextBox.TabIndex = 55;
             // 
             // heightTextBox
@@ -923,7 +923,7 @@
             heightTextBox.PlaceholderText = "";
             heightTextBox.SelectedText = "";
             heightTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            heightTextBox.Size = new Size(100, 25);
+            heightTextBox.Size = new Size(124, 25);
             heightTextBox.TabIndex = 56;
             // 
             // themeComboBox
@@ -990,7 +990,7 @@
             genderComboBox.Location = new Point(494, 167);
             genderComboBox.Name = "genderComboBox";
             genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            genderComboBox.Size = new Size(100, 21);
+            genderComboBox.Size = new Size(124, 21);
             genderComboBox.TabIndex = 61;
             // 
             // goalComboBox
@@ -1012,7 +1012,7 @@
             goalComboBox.Location = new Point(494, 256);
             goalComboBox.Name = "goalComboBox";
             goalComboBox.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            goalComboBox.Size = new Size(100, 21);
+            goalComboBox.Size = new Size(124, 21);
             goalComboBox.TabIndex = 62;
             // 
             // Settings
@@ -1074,9 +1074,7 @@
             ((System.ComponentModel.ISupportInitialize)settingsError).EndInit();
             ((System.ComponentModel.ISupportInitialize)vLine3).EndInit();
             errorPanel.ResumeLayout(false);
-            errorPanel.PerformLayout();
             changePasswordPanel.ResumeLayout(false);
-            changePasswordPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)changePasswordClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)changePasswordBorders).EndInit();
             ResumeLayout(false);

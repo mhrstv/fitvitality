@@ -47,6 +47,32 @@ namespace FitVitality
                 textBoxUsername.Text = "";
                 rememberMe.Checked = false;
             }
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                loginLabel.Text = "LOGIN";
+                usernameLabel.Text = "Username";
+                labelPassword.Text = "Password";
+                textBoxUsername.CueHint.CueHintText = "Enter username";
+                textBoxPassword.CueHint.CueHintText = "Enter password";
+                rememberMe.Text = "Remember me";
+                buttonLogin.Text = "Login";
+                newUserLabel.Text = "New user?";
+                createAccButton.Text = "Create an account";
+                loginFail.Text = "Incorrect username or password!";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                loginLabel.Text = "ВЛИЗАНЕ";
+                usernameLabel.Text = "Потребителско име";
+                labelPassword.Text = "Парола";
+                textBoxUsername.CueHint.CueHintText = "Въведи потребителско име";
+                textBoxPassword.CueHint.CueHintText = "Въведи парола";
+                rememberMe.Text = "Запомни ме";
+                buttonLogin.Text = "Влизане";
+                newUserLabel.Text = "Нов потребител?";
+                createAccButton.Text = "Създай акаунт";
+                loginFail.Text = "Грешно име или парола!";
+            }
         }
 
         private void WelcomeScreen_Shown(object sender, EventArgs e)

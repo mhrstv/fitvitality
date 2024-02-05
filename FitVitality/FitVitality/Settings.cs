@@ -82,11 +82,87 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                languageComboBox.SelectedItem = "Bulgarian";
+                languageComboBox.Items.Clear();
+                languageComboBox.Items.Add("Български");
+                languageComboBox.Items.Add("Английски");
+                languageComboBox.SelectedItem = "Български";
+                appSettings_label.Text = "Настройки на програма";
+                accSettings_label.Text = "Настройки на акаунт";
+                langLabel.Text = "Език";
+                themeLabel.Text = "Тема";
+                changePasswordLabel.Text = "Смени парола";
+                oldPasswordLabel.Text = "Въведи стара парола";
+                newPasswordLabel.Text = "Въведи нова парола";
+                confirmNewPasswordLabel.Text = "Потвърди нова парола";
+                changePasswordConfirmButton.Text = "Потвърди";
+                errorLabel.Text = "Грешка";
+                settingErrorLabel.Text = "Въвели сте грешни данни!";
+                changePasswordButton.Text = "Смени\nПарола";
+                buttonSave.Text = "Запази\nНастройки";
+                deleteAccountButton.Text = "Изтрий Акаунт";
+                nameLabel.Text = "Име";
+                ageLabel.Text = "Години";
+                emailLabel.Text = "Имейл";
+                genderLabel.Text = "Пол";
+                weightLabel.Text = "Тегло";
+                heightLabel.Text = "Височина";
+                goalLabel.Text = "Цел";
+                confirmLabel1.Text = "Напиши \"ПОТВЪРЖДАВАМ\" за да потвърдиш, изтриването на акаунта.";
+                confirmLabel2.Text = "ВНИМАНИЕ: Всички твои данни ще изчезнат ЗАВИНАГИ.";
+                textBoxConfirm.CueHint.CueHintText = "ПОТВЪРДИ";
+                confirmButton.Text = "Потвърди";
+                themeComboBox.Items.Clear();
+                themeComboBox.Items.Add("Тъмна");
+                themeComboBox.Items.Add("Светла");
+                genderComboBox.Items.Clear();
+                genderComboBox.Items.Add("Мъж");
+                genderComboBox.Items.Add("Жена");
+                goalComboBox.Items.Clear();
+                goalComboBox.Items.Add("Сваляне");
+                goalComboBox.Items.Add("Поддържане");
+                goalComboBox.Items.Add("Покачване");
             }
             else if (cfg.Read("Language", "SETTINGS") == "en")
             {
+                languageComboBox.Items.Clear();
+                languageComboBox.Items.Add("Bulgarian");
+                languageComboBox.Items.Add("English");
                 languageComboBox.SelectedItem = "English";
+                appSettings_label.Text = "App Settings";
+                accSettings_label.Text = "Account Settings";
+                langLabel.Text = "Language";
+                themeLabel.Text = "Theme";
+                changePasswordLabel.Text = "Change Password";
+                oldPasswordLabel.Text = "Enter old password";
+                newPasswordLabel.Text = "Enter new password";
+                confirmNewPasswordLabel.Text = "Confirm new password";
+                changePasswordConfirmButton.Text = "Confirm";
+                errorLabel.Text = "Error";
+                settingErrorLabel.Text = "You have input incorrect data!";
+                changePasswordButton.Text = "Change\nPassword";
+                buttonSave.Text = "Save\nSettings";
+                deleteAccountButton.Text = "Delete Account";
+                nameLabel.Text = "Name";
+                ageLabel.Text = "Age";
+                emailLabel.Text = "Email";
+                genderLabel.Text = "Gender";
+                weightLabel.Text = "Weight";
+                heightLabel.Text = "Height";
+                goalLabel.Text = "Goal";
+                confirmLabel1.Text = "Type \"CONFIRM\" to confirm that you want to DELETE your account.";
+                confirmLabel2.Text = "WARNING: All your data and stored information will be GONE.";
+                textBoxConfirm.CueHint.CueHintText = "CONFIRM";
+                confirmButton.Text = "Confirm";
+                themeComboBox.Items.Clear();
+                themeComboBox.Items.Add("Dark");
+                themeComboBox.Items.Add("Light");
+                genderComboBox.Items.Clear();
+                genderComboBox.Items.Add("Male");
+                genderComboBox.Items.Add("Female");
+                goalComboBox.Items.Clear();
+                goalComboBox.Items.Add("Cut");
+                goalComboBox.Items.Add("Maintain");
+                goalComboBox.Items.Add("Bulk");
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -101,27 +177,59 @@ namespace FitVitality
                         {
                             nameTextBox.Text = reader["Name"].ToString();
                             ageTextBox.Text = reader["Age"].ToString();
-                            if (reader["Gender"].ToString() == "Male")
+                            if (cfg.Read("Language", "SETTINGS") == "en")
                             {
-                                genderComboBox.SelectedItem = "Male";
+                                if (reader["Gender"].ToString() == "Male")
+                                {
+                                    genderComboBox.SelectedItem = "Male";
+                                }
+                                else
+                                {
+                                    genderComboBox.SelectedItem = "Female";
+                                }
                             }
-                            else
+                            if (cfg.Read("Language", "SETTINGS") == "bg")
                             {
-                                genderComboBox.SelectedItem = "Female";
+                                if (reader["Gender"].ToString() == "Male")
+                                {
+                                    genderComboBox.SelectedItem = "Мъж";
+                                }
+                                else
+                                {
+                                    genderComboBox.SelectedItem = "Жена";
+                                }
                             }
                             weightTextBox.Text = reader["Weight"].ToString();
                             heightTextBox.Text = reader["Height"].ToString();
-                            if (reader["Goal"].ToString() == "Cut")
+                            if (cfg.Read("Language", "SETTINGS") == "en")
                             {
-                                goalComboBox.SelectedItem = "Cut";
+                                if (reader["Goal"].ToString() == "Cut")
+                                {
+                                    goalComboBox.SelectedItem = "Cut";
+                                }
+                                else if (reader["Goal"].ToString() == "Maintain")
+                                {
+                                    goalComboBox.SelectedItem = "Maintain";
+                                }
+                                else
+                                {
+                                    goalComboBox.SelectedItem = "Bulk";
+                                }
                             }
-                            else if (reader["Goal"].ToString() == "Maintain")
+                            if (cfg.Read("Language", "SETTINGS") == "bg")
                             {
-                                goalComboBox.SelectedItem = "Maintain";
-                            }
-                            else
-                            {
-                                goalComboBox.SelectedItem = "Bulk";
+                                if (reader["Goal"].ToString() == "Cut")
+                                {
+                                    goalComboBox.SelectedItem = "Сваляне";
+                                }
+                                else if (reader["Goal"].ToString() == "Maintain")
+                                {
+                                    goalComboBox.SelectedItem = "Поддържане";
+                                }
+                                else
+                                {
+                                    goalComboBox.SelectedItem = "Покачване";
+                                }
                             }
                         }
                     }
@@ -147,13 +255,28 @@ namespace FitVitality
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBoxConfirm.Text == "CONFIRM")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                confirmButton.Enabled = true;
+                if (textBoxConfirm.Text == "ПОТВЪРДИ")
+                {
+                    confirmButton.Enabled = true;
+                }
+                else
+                {
+                    confirmButton.Enabled = false;
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                confirmButton.Enabled = false;
+                if (textBoxConfirm.Text == "CONFIRM")
+                {
+                    confirmButton.Enabled = true;
+                }
+                else
+                {
+                    confirmButton.Enabled = false;
+                }
             }
         }
 
@@ -288,25 +411,57 @@ namespace FitVitality
             dbAge = ageTextBox.Text;
             dbWeight = weightTextBox.Text;
             dbHeight = heightTextBox.Text;
-            if (genderComboBox.SelectedItem == "Male")
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                dbGender = "Male";
+                if (genderComboBox.SelectedItem == "Male")
+                {
+                    dbGender = "Male";
+                }
+                else
+                {
+                    dbGender = "Female";
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                dbGender = "Female";
+                if (genderComboBox.SelectedItem == "Жена")
+                {
+                    dbGender = "Male";
+                }
+                else
+                {
+                    dbGender = "Female";
+                }
             }
-            if (goalComboBox.SelectedItem == "Cut")
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                dbGoal = "Cut";
+                if (goalComboBox.SelectedItem == "Cut")
+                {
+                    dbGoal = "Cut";
+                }
+                else if (goalComboBox.SelectedItem == "Maintain")
+                {
+                    dbGoal = "Maintain";
+                }
+                else
+                {
+                    dbGoal = "Bulk";
+                }
             }
-            else if (goalComboBox.SelectedItem == "Maintain")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                dbGoal = "Maintain";
-            }
-            else
-            {
-                dbGoal = "Bulk";
+                if (goalComboBox.SelectedItem == "Сваляне")
+                {
+                    dbGoal = "Cut";
+                }
+                else if (goalComboBox.SelectedItem == "Поддържане")
+                {
+                    dbGoal = "Maintain";
+                }
+                else
+                {
+                    dbGoal = "Bulk";
+                }
             }
             if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && validEmail(dbEmail) && dbGender != "" && dbGoal != "")
             {
@@ -357,13 +512,19 @@ namespace FitVitality
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
-            if (languageComboBox.SelectedItem == "Bulgarian")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                cfg.Write("Language", "bg", "SETTINGS");
+                if (languageComboBox.SelectedItem == "Български")
+                {
+                    cfg.Write("Language", "bg", "SETTINGS");
+                }
             }
-            else if (languageComboBox.SelectedItem == "English")
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                cfg.Write("Language", "en", "SETTINGS");
+                if (languageComboBox.SelectedItem == "English")
+                {
+                    cfg.Write("Language", "en", "SETTINGS");
+                }
             }
         }
 

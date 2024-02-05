@@ -201,6 +201,7 @@ namespace FitVitality
         }
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            var cfg = new Config("FitVitality.ini");
             bool validUsername = false;
             bool validEmail = false;
             bool validPassword = false;
@@ -244,7 +245,14 @@ namespace FitVitality
                 emailError.Location = new Point(45, 0);
                 emailError.Size = new Size(107, 27);
                 emailErrorLabel.Size = new Size(96, 14);
-                emailErrorLabel.Text = "Email is not valid!";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    emailErrorLabel.Text = "Email is not valid!";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    emailErrorLabel.Text = "Невалиден мейл!";
+                }
                 textBoxEmail.Text = "";
                 textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
@@ -314,7 +322,14 @@ namespace FitVitality
                         emailError.Size = new Size(151, 27);
                         emailErrorLabel.Size = new Size(122, 14);
                         emailmark.Visible = true;
-                        emailErrorLabel.Text = "Email is already in use!";
+                        if (cfg.Read("Language", "SETTINGS") == "en")
+                        {
+                            emailErrorLabel.Text = "Email is already in use!";
+                        }
+                        if (cfg.Read("Language", "SETTINGS") == "bg")
+                        {
+                            emailErrorLabel.Text = "Имейлът вече съществува!";
+                        }
                         textBoxEmail.Text = "";
                         textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                         textBoxEmail.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
@@ -324,7 +339,14 @@ namespace FitVitality
                 {
                     usrmark.Visible = true;
                     userError.Visible = true;
-                    usrError.Text = "Username is already in use!";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        usrError.Text = "Username is already in use!";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        usrError.Text = "Името вече съществува!";
+                    }
                     textBoxUsername.Text = "";
                     textBoxUsername.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                     textBoxUsername.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
@@ -337,6 +359,45 @@ namespace FitVitality
         {
             opened = true;
             this.Location = loadingScreen.ActiveForm.Location;
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                registerLabel.Text = "REGISTER";
+                usrError.Text = "Username must contain only digits or letters!";
+                usrLabel.Text = "Username";
+                textBoxUsername.CueHint.CueHintText = "Enter username";
+                emailError.Text = "Email is not valid!";
+                emailLabel.Text = "Email";
+                textBoxEmail.CueHint.CueHintText = "Enter email";
+                passError.Text = "Enter a combination of at least 8\nletters, numbers and symbols!";
+                passLabel.Text = "Password";
+                textBoxPass.CueHint.CueHintText = "Enter password";
+                repassError.Text = "Passwords do not match!";
+                repassLabel.Text = "Confirm password";
+                textBoxRepass.CueHint.CueHintText = "Re-enter password";
+                buttonRegister.Text = "Register";
+                haveAnAccButton.Text = "Already have an account?";
+                labelcreated.Text = "Account created successfully.";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                registerLabel.Text = "РЕГИСТРАЦИЯ";
+                usrError.Text = "Трябва да съдържа само букви и цифри!";
+                usrLabel.Text = "Потребителско име";
+                textBoxUsername.CueHint.CueHintText = "Въведи потребителско име";
+                emailError.Text = "Невалиден мейл!";
+                emailLabel.Text = "Имейл";
+                textBoxEmail.CueHint.CueHintText = "Въведи имейл";
+                passError.Text = "Въведи комбинация от поне 8 букви,\nцифри и символи!";
+                passLabel.Text = "Парола";
+                textBoxPass.CueHint.CueHintText = "Въведи парола";
+                repassError.Text = "Паролите не съвпадат!";
+                repassLabel.Text = "Потвърди парола";
+                textBoxRepass.CueHint.CueHintText = "Въведи парола";
+                buttonRegister.Text = "Регистрация";
+                haveAnAccButton.Text = "Вече имаш акаунт?";
+                labelcreated.Text = "Акаунтът е създаден.";
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -469,10 +530,18 @@ namespace FitVitality
 
         private void textBoxUsername_Enter(object sender, EventArgs e)
         {
+            var cfg = new Config("FitVitality.ini");
             if (user_Error)
             {
                 userError.Visible = true;
-                usrError.Text = "Username must contain only digits or letters!";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    usrError.Text = "Username must contain only digits or letters!";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    usrError.Text = "Трябва да съдържа само букви и цифри!";
+                }
             }
         }
 
@@ -503,10 +572,18 @@ namespace FitVitality
 
         private void textBoxPass_Enter(object sender, EventArgs e)
         {
+            var cfg = new Config("FitVitality.ini");
             if (password_Error)
             {
                 passPanel.Visible = true;
-                passErrorLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    passErrorLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    passErrorLabel.Text = "Въведи комбинация от поне 8 цифри, букви и символи!";
+                }
             }
         }
 
@@ -520,10 +597,18 @@ namespace FitVitality
 
         private void textBoxRepass_Enter(object sender, EventArgs e)
         {
+            var cfg = new Config("FitVitality.ini");
             if (passMatch_Error)
             {
                 repassErrorPanel.Visible = true;
-                repassErrorLabel.Text = "Passwords do not match!";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    repassErrorLabel.Text = "Passwords do not match!";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    repassErrorLabel.Text = "Паролите не съвпадат!";
+                }
             }
         }
 

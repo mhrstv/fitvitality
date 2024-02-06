@@ -659,9 +659,9 @@
             // 
             bmiPanelLabel.BackColor = Color.FromArgb(160, 218, 220);
             bmiPanelLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            bmiPanelLabel.Location = new Point(61, 141);
+            bmiPanelLabel.Location = new Point(12, 141);
             bmiPanelLabel.Name = "bmiPanelLabel";
-            bmiPanelLabel.Size = new Size(138, 22);
+            bmiPanelLabel.Size = new Size(235, 22);
             bmiPanelLabel.TabIndex = 1;
             bmiPanelLabel.Text = "{BMI}";
             bmiPanelLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -721,9 +721,9 @@
             // 
             bmicategory_label.BackColor = Color.FromArgb(160, 218, 220);
             bmicategory_label.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            bmicategory_label.Location = new Point(28, 32);
+            bmicategory_label.Location = new Point(2, 32);
             bmicategory_label.Name = "bmicategory_label";
-            bmicategory_label.Size = new Size(205, 23);
+            bmicategory_label.Size = new Size(255, 23);
             bmicategory_label.TabIndex = 2;
             bmicategory_label.Text = "{Category}";
             bmicategory_label.TextAlign = ContentAlignment.MiddleCenter;
@@ -1208,11 +1208,10 @@
             // 
             // extraMeasurementsLabel
             // 
-            extraMeasurementsLabel.AutoSize = true;
             extraMeasurementsLabel.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
             extraMeasurementsLabel.Location = new Point(27, 195);
             extraMeasurementsLabel.Name = "extraMeasurementsLabel";
-            extraMeasurementsLabel.Size = new Size(251, 14);
+            extraMeasurementsLabel.Size = new Size(284, 14);
             extraMeasurementsLabel.TabIndex = 13;
             extraMeasurementsLabel.Text = "We need extra measurements for this calculation.";
             // 
@@ -1278,7 +1277,7 @@
             calorieCalcPanel.Controls.Add(calorieCalcBorders);
             calorieCalcPanel.Location = new Point(72, 49);
             calorieCalcPanel.Name = "calorieCalcPanel";
-            calorieCalcPanel.Size = new Size(0, 0);
+            calorieCalcPanel.Size = new Size(600, 300);
             calorieCalcPanel.TabIndex = 23;
             calorieCalcPanel.Visible = false;
             // 

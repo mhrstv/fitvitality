@@ -234,6 +234,53 @@ namespace FitVitality
         private void Calculators_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                calculators_label.Text = "Calculators";
+                bodyfat_label.Text = "Body Fat";
+                calorie_label.Text = "Calorie";
+                macro_label.Text = "Macro";
+                idealweight_label.Text = "Ideal Weight";
+                buttonOpenBMI.Text = "Open";
+                buttonOpenBMR.Text = "Open";
+                buttonOpenBodyFat.Text = "Open";
+                buttonOpenCalorie.Text = "Open";
+                buttonOpenMacro.Text = "Open";
+                buttonOpenIdealWeight.Text = "Open";
+                bmiCalcLabel.Text = "BMI Calculator";
+                bmicalc_label.Text = "BMI Calculator";
+                bmiDescription.Text = "The Body Mass Index is a \r\nmeasurement " +
+                    "of a\r\nperson's leanness based on\r\ntheir height and weight.  \r\n" +
+                    "Specifically, the value obtained \r\nfrom the calculation of BMI is \r\nused " +
+                    "to categorize whether a \r\nperson is underweight, normal \r\nweight, overweight, " +
+                    "or obese \r\ndepending on what range the \r\nvalue falls between.\r\n";
+                bmrCalcLabel.Text = "BMR Calculator";
+                bmrDescription.Text = "Your Basal Metabolic Rate \r\nis the number of " +
+                    "calories \r\nyou burn as your body performs \r\nbasic (basal) life-sustaining " +
+                    "\r\nfunction that are based on your \r\nactivity level (you can change \r\nthat " +
+                    "from the settings).\r\n";
+                activityDescriptions.Text = "Sedentary - little or no exercise (<30mins)\r\n" +
+                    "Exercise - 4, 5 times a week (~40-50mins)\r\nIntense exercise - daily (2+ hours) \r\n";
+                dailyCalsLabel.Text = "Daily calories based on activity level:";
+                bodyFatLabel.Text = "Body Fat Calculator";
+                bodyFatDescription.Text = "Body fat percentage is \r\ndefined as the percentage \r\nof " +
+                    "your body that consists \r\nof fat. Measuring body fat \r\nis key to assessing " +
+                    "whether \r\na person is overweight, \r\nobese or at a healthy weight.\r\n";
+                extraMeasurementsLabel.Text = "We need extra measurements for this calculation.\r\n";
+                neckLabel.Text = "Neck (cm)";
+                waistLabel.Text = "Waist (cm)";
+                hipsLabel.Text = "Hips (cm)";
+                bodyFatCalculateButton.Text = "Calculate";
+                essentialLabel.Text = "Essential";
+                athletesLabel.Text = "Athletes";
+                fitnessLabel.Text = "Fitness";
+                averageLabel.Text = "Average";
+                obeseLabel.Text = "Obese";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+
+            }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -286,72 +333,146 @@ namespace FitVitality
                 percentagesStudents = 0;
             if (percentagesStudents > 100)
                 percentagesStudents = 100;
-            if (age <= 20 && age > 2)
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                bmiPicture.Image = Properties.Resources.bmiMalki;
-                if (percentagesStudents <= 5)
+                if (age <= 20 && age > 2)
                 {
-                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Underweight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(228, 155, 42);
-                }
-                if (percentagesStudents <= 85 && percentagesStudents > 5)
-                {
-                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Healthy weight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
-                }
-                if (percentagesStudents <= 95 && percentagesStudents > 85)
-                {
-                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - At risk of overweight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
-                }
-                if (percentagesStudents >= 95)
-                {
-                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Overweight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(185, 6, 6);
-                }
-            }
-            else
-            {
-                bmiPicture.Image = Properties.Resources.bmiFinal1;
-                if (bmi < 16)
-                {
-                    bmicategory_label.Text = "(" + percentages.ToString() + "% - Severe Thinness)";
-                    bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
-                }
-                else if (bmi >= 16 && bmi < 17)
-                {
-                    bmicategory_label.Text = "(" + percentages.ToString() + "% - Moderate Thinness)";
-                    bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
-                }
-                else if (bmi >= 17 && bmi < 18.5)
-                {
-                    bmicategory_label.Text = "(" + percentages.ToString() + "% - Mild Thinness)";
-                    bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
-                }
-                else if (bmi >= 18.5 && bmi < 25)
-                {
-                    bmicategory_label.Text = "(" + percentages.ToString() + "% - Normal)";
-                    bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
-                }
-                else if (bmi >= 25 && bmi < 30)
-                {
-                    bmicategory_label.Text = "(" + percentages.ToString() + "% - Overweight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
-                }
-                else if (bmi >= 30 && bmi < 35)
-                {
-                    bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class I)";
-                    bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
-                }
-                else if (bmi >= 35 && bmi < 40)
-                {
-                    bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class II)";
-                    bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    bmiPicture.Image = Properties.Resources.bmiMalki;
+                    if (percentagesStudents <= 5)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Underweight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(228, 155, 42);
+                    }
+                    if (percentagesStudents <= 85 && percentagesStudents > 5)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Healthy weight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                    }
+                    if (percentagesStudents <= 95 && percentagesStudents > 85)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - At risk of overweight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    if (percentagesStudents >= 95)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Overweight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(185, 6, 6);
+                    }
                 }
                 else
                 {
-                    bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class III)";
-                    bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
+                    bmiPicture.Image = Properties.Resources.bmiFinal1;
+                    if (bmi < 16)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Severe Thinness)";
+                        bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    }
+                    else if (bmi >= 16 && bmi < 17)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Moderate Thinness)";
+                        bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
+                    }
+                    else if (bmi >= 17 && bmi < 18.5)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Mild Thinness)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    else if (bmi >= 18.5 && bmi < 25)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Normal)";
+                        bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                    }
+                    else if (bmi >= 25 && bmi < 30)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Overweight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    else if (bmi >= 30 && bmi < 35)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class I)";
+                        bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
+                    }
+                    else if (bmi >= 35 && bmi < 40)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class II)";
+                        bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    }
+                    else
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class III)";
+                        bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
+                    }
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (age <= 20 && age > 2)
+                {
+                    bmiPicture.Image = Properties.Resources.bmiMalki;
+                    if (percentagesStudents <= 5)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Поднормено тегло)";
+                        bmicategory_label.ForeColor = Color.FromArgb(228, 155, 42);
+                    }
+                    if (percentagesStudents <= 85 && percentagesStudents > 5)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Здравословно тегло)";
+                        bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                    }
+                    if (percentagesStudents <= 95 && percentagesStudents > 85)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Риско от наднормено)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    if (percentagesStudents >= 95)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Наднормено тегло)";
+                        bmicategory_label.ForeColor = Color.FromArgb(185, 6, 6);
+                    }
+                }
+                else
+                {
+                    bmiPicture.Image = Properties.Resources.bmiFinal1;
+                    if (bmi < 16)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Тежка слабост)";
+                        bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    }
+                    else if (bmi >= 16 && bmi < 17)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Умерена слабост)";
+                        bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
+                    }
+                    else if (bmi >= 17 && bmi < 18.5)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Лека слабост)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    else if (bmi >= 18.5 && bmi < 25)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Нормално)";
+                        bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                    }
+                    else if (bmi >= 25 && bmi < 30)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Наднормено тегло)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    else if (bmi >= 30 && bmi < 35)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Затлъстялост Ниво 1)";
+                        bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
+                    }
+                    else if (bmi >= 35 && bmi < 40)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Затлъстялост Ниво 2)";
+                        bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    }
+                    else
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Затлъстялост Ниво 3)";
+                        bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
+                    }
                 }
             }
 
@@ -371,15 +492,33 @@ namespace FitVitality
             intenseBMR67 = Math.Round(bmr * 1.72, 0);
             veryIntenseBMR = Math.Round(bmr * 1.9, 0);
 
-            currentBMR.Text = $"BMR = {bmr.ToString()} calories/day";
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                currentBMR.Text = $"BMR = {bmr.ToString()} calories/day";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                currentBMR.Text = $"BMR = {bmr.ToString()} калории/ден";
+            }
 
-            sedentaryLabel.Text = $"Sedentary =  ≈{sedentaryBMR.ToString()} calories/day";
-            exerciseLabel1.Text = $"Exercise 1 - 3 days =  ≈{exerciseBMR13.ToString()} calories/day";
-            exerciseLabel2.Text = $"Exercise 4 - 5 days =  ≈{exerciseBMR45.ToString()} calories/day";
-            dailyLabel.Text = $"Daily exercise =  ≈{DailyBMR34.ToString()} calories/day";
-            intenseLabel.Text = $"Intense exercise =  ≈{intenseBMR67.ToString()} calories/day";
-            veryIntenseLabel.Text = $"Very intense exercise =  ≈{veryIntenseBMR.ToString()} calories/day";
-
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                sedentaryLabel.Text = $"Sedentary =  ≈{sedentaryBMR.ToString()} calories/day";
+                exerciseLabel1.Text = $"Exercise 1 - 3 days =  ≈{exerciseBMR13.ToString()} calories/day";
+                exerciseLabel2.Text = $"Exercise 4 - 5 days =  ≈{exerciseBMR45.ToString()} calories/day";
+                dailyLabel.Text = $"Daily exercise =  ≈{DailyBMR34.ToString()} calories/day";
+                intenseLabel.Text = $"Intense exercise =  ≈{intenseBMR67.ToString()} calories/day";
+                veryIntenseLabel.Text = $"Very intense exercise =  ≈{veryIntenseBMR.ToString()} calories/day";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                sedentaryLabel.Text = $"Заседналост =  ≈{sedentaryBMR.ToString()} калории/ден";
+                exerciseLabel1.Text = $"Упражнения 1 - 3 дни =  ≈{exerciseBMR13.ToString()} калории/ден";
+                exerciseLabel2.Text = $"Упражнения 4 - 5 дни =  ≈{exerciseBMR45.ToString()} калории/ден";
+                dailyLabel.Text = $"Дневни упражнения =  ≈{DailyBMR34.ToString()} калории/ден";
+                intenseLabel.Text = $"Интензивни упражнения =  ≈{intenseBMR67.ToString()} калории/ден";
+                veryIntenseLabel.Text = $"Много интензивни упражнения =  ≈{veryIntenseBMR.ToString()} калории/ден";
+            }
 
             //Body Fat Percentage
             if (gender == "Male")
@@ -431,6 +570,7 @@ namespace FitVitality
 
         private void Calculators_Activated(object sender, EventArgs e)
         {
+            var cfg = new Config("FitVitality.ini");
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -481,71 +621,146 @@ namespace FitVitality
                 percentagesStudents = 0;
             if (percentagesStudents > 100)
                 percentagesStudents = 100;
-            if (age <= 20 && age > 2)
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                bmiPicture.Image = Properties.Resources.bmiMalki;
-                if (percentagesStudents <= 5)
+                if (age <= 20 && age > 2)
                 {
-                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Underweight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(228, 155, 42);
-                }
-                if (percentagesStudents <= 85 && percentagesStudents > 5)
-                {
-                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Healthy weight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
-                }
-                if (percentagesStudents <= 95 && percentagesStudents > 85)
-                {
-                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - At risk of overweight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
-                }
-                if (percentagesStudents >= 95)
-                {
-                    bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Overweight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(185, 6, 6);
-                }
-            }
-            else
-            {
-                if (bmi < 16)
-                {
-                    bmicategory_label.Text = "(Severe Thinness)";
-                    bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
-                }
-                else if (bmi >= 16 && bmi < 17)
-                {
-                    bmicategory_label.Text = "(Moderate Thinness)";
-                    bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
-                }
-                else if (bmi >= 17 && bmi < 18.5)
-                {
-                    bmicategory_label.Text = "(Mild Thinness)";
-                    bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
-                }
-                else if (bmi >= 18.5 && bmi < 25)
-                {
-                    bmicategory_label.Text = "(Normal)";
-                    bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
-                }
-                else if (bmi >= 25 && bmi < 30)
-                {
-                    bmicategory_label.Text = "(Overweight)";
-                    bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
-                }
-                else if (bmi >= 30 && bmi < 35)
-                {
-                    bmicategory_label.Text = "(Obese Class I)";
-                    bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
-                }
-                else if (bmi >= 35 && bmi < 40)
-                {
-                    bmicategory_label.Text = "(Obese Class II)";
-                    bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    bmiPicture.Image = Properties.Resources.bmiMalki;
+                    if (percentagesStudents <= 5)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Underweight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(228, 155, 42);
+                    }
+                    if (percentagesStudents <= 85 && percentagesStudents > 5)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Healthy weight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                    }
+                    if (percentagesStudents <= 95 && percentagesStudents > 85)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - At risk of overweight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    if (percentagesStudents >= 95)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Overweight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(185, 6, 6);
+                    }
                 }
                 else
                 {
-                    bmicategory_label.Text = "(Obese Class III)";
-                    bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
+                    bmiPicture.Image = Properties.Resources.bmiFinal1;
+                    if (bmi < 16)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Severe Thinness)";
+                        bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    }
+                    else if (bmi >= 16 && bmi < 17)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Moderate Thinness)";
+                        bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
+                    }
+                    else if (bmi >= 17 && bmi < 18.5)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Mild Thinness)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    else if (bmi >= 18.5 && bmi < 25)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Normal)";
+                        bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                    }
+                    else if (bmi >= 25 && bmi < 30)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Overweight)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    else if (bmi >= 30 && bmi < 35)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class I)";
+                        bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
+                    }
+                    else if (bmi >= 35 && bmi < 40)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class II)";
+                        bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    }
+                    else
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Obese Class III)";
+                        bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
+                    }
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (age <= 20 && age > 2)
+                {
+                    bmiPicture.Image = Properties.Resources.bmiMalki;
+                    if (percentagesStudents <= 5)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Поднормено тегло)";
+                        bmicategory_label.ForeColor = Color.FromArgb(228, 155, 42);
+                    }
+                    if (percentagesStudents <= 85 && percentagesStudents > 5)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Здравословно тегло)";
+                        bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                    }
+                    if (percentagesStudents <= 95 && percentagesStudents > 85)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Риско от наднормено)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    if (percentagesStudents >= 95)
+                    {
+                        bmicategory_label.Text = "(" + percentagesStudents.ToString() + "% - Наднормено тегло)";
+                        bmicategory_label.ForeColor = Color.FromArgb(185, 6, 6);
+                    }
+                }
+                else
+                {
+                    bmiPicture.Image = Properties.Resources.bmiFinal1;
+                    if (bmi < 16)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Тежка слабост)";
+                        bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    }
+                    else if (bmi >= 16 && bmi < 17)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Умерена слабост)";
+                        bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
+                    }
+                    else if (bmi >= 17 && bmi < 18.5)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Лека слабост)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    else if (bmi >= 18.5 && bmi < 25)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Нормално)";
+                        bmicategory_label.ForeColor = Color.FromArgb(0, 129, 55);
+                    }
+                    else if (bmi >= 25 && bmi < 30)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Наднормено тегло)";
+                        bmicategory_label.ForeColor = Color.FromArgb(255, 228, 0);
+                    }
+                    else if (bmi >= 30 && bmi < 35)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Затлъстялост Ниво 1)";
+                        bmicategory_label.ForeColor = Color.FromArgb(211, 136, 136);
+                    }
+                    else if (bmi >= 35 && bmi < 40)
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Затлъстялост Ниво 2)";
+                        bmicategory_label.ForeColor = Color.FromArgb(188, 32, 32);
+                    }
+                    else
+                    {
+                        bmicategory_label.Text = "(" + percentages.ToString() + "% - Затлъстялост Ниво 3)";
+                        bmicategory_label.ForeColor = Color.FromArgb(138, 1, 1);
+                    }
                 }
             }
         }

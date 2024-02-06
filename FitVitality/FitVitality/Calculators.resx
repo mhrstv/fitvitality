@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -171,7 +171,8 @@ you burn as your body performs
 basic (basal) life-sustaining 
 function that are based on your 
 activity level (you can change 
-that from the settings).</value>
+that from the settings).
+</value>
   </data>
   <data name="calorieDescription.Text" xml:space="preserve">
     <value>The Calorie Calculator is very 
@@ -194,6 +195,6 @@ proteins, fats, and carbohydrates
 that they should consume.</value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>30</value>
+    <value>31</value>
   </metadata>
 </root>

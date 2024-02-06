@@ -89,6 +89,7 @@ namespace FitVitality
                 appSettings_label.Text = "Настройки на програма";
                 accSettings_label.Text = "Настройки на акаунт";
                 langLabel.Text = "Език";
+                langLabel.Location = new Point(58, langLabel.Location.Y);
                 themeLabel.Text = "Тема";
                 changePasswordLabel.Text = "Смени парола";
                 oldPasswordLabel.Text = "Въведи стара парола";
@@ -131,6 +132,7 @@ namespace FitVitality
                 appSettings_label.Text = "App Settings";
                 accSettings_label.Text = "Account Settings";
                 langLabel.Text = "Language";
+                langLabel.Location = new Point(48, langLabel.Location.Y);
                 themeLabel.Text = "Theme";
                 changePasswordLabel.Text = "Change Password";
                 oldPasswordLabel.Text = "Enter old password";
@@ -282,7 +284,7 @@ namespace FitVitality
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
-            string query = "DELETE FROM UserData WHERE UserID = @ID; DELETE FROM UserSettings WHERE UserID = @ID; DELETE FROM Workouts WHERE UserID = @ID";
+            string query = "DELETE FROM UserData WHERE UserID = @ID; DELETE FROM UserSettings WHERE UserID = @ID; DELETE FROM Workouts WHERE UserID = @ID; DELETE FROM UserNutrition WHERE UserID = @ID; DELETE FROM WeeklyInformation WHERE UserID = @ID";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -411,57 +413,25 @@ namespace FitVitality
             dbAge = ageTextBox.Text;
             dbWeight = weightTextBox.Text;
             dbHeight = heightTextBox.Text;
-            if (cfg.Read("Language", "SETTINGS") == "en")
+            if (genderComboBox.SelectedItem == "Male" || genderComboBox.SelectedItem == "Мъж")
             {
-                if (genderComboBox.SelectedItem == "Male")
-                {
-                    dbGender = "Male";
-                }
-                else
-                {
-                    dbGender = "Female";
-                }
+                dbGender = "Male";
             }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
+            else
             {
-                if (genderComboBox.SelectedItem == "Жена")
-                {
-                    dbGender = "Male";
-                }
-                else
-                {
-                    dbGender = "Female";
-                }
+                dbGender = "Female";
             }
-            if (cfg.Read("Language", "SETTINGS") == "en")
+            if (goalComboBox.SelectedItem == "Cut" || goalComboBox.SelectedItem == "Сваляне")
             {
-                if (goalComboBox.SelectedItem == "Cut")
-                {
-                    dbGoal = "Cut";
-                }
-                else if (goalComboBox.SelectedItem == "Maintain")
-                {
-                    dbGoal = "Maintain";
-                }
-                else
-                {
-                    dbGoal = "Bulk";
-                }
+                dbGoal = "Cut";
             }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
+            else if (goalComboBox.SelectedItem == "Maintain" || goalComboBox.SelectedItem == "Поддържане")
             {
-                if (goalComboBox.SelectedItem == "Сваляне")
-                {
-                    dbGoal = "Cut";
-                }
-                else if (goalComboBox.SelectedItem == "Поддържане")
-                {
-                    dbGoal = "Maintain";
-                }
-                else
-                {
-                    dbGoal = "Bulk";
-                }
+                dbGoal = "Maintain";
+            }
+            else
+            {
+                dbGoal = "Bulk";
             }
             if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && validEmail(dbEmail) && dbGender != "" && dbGoal != "")
             {
@@ -512,19 +482,99 @@ namespace FitVitality
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "bg")
+            if (languageComboBox.SelectedItem == "Български" || languageComboBox.SelectedItem == "Bulgarian")
             {
-                if (languageComboBox.SelectedItem == "Български")
+                cfg.Write("Language", "bg", "SETTINGS");
+                if (languageComboBox.SelectedItem == "Bulgarian")
                 {
-                    cfg.Write("Language", "bg", "SETTINGS");
+                    languageComboBox.Items.Clear();
+                    languageComboBox.Items.Add("Български");
+                    languageComboBox.Items.Add("Английски");
+                    languageComboBox.SelectedItem = "Български";
                 }
+                appSettings_label.Text = "Настройки на програма";
+                accSettings_label.Text = "Настройки на акаунт";
+                langLabel.Text = "Език";
+                langLabel.Location = new Point(58, langLabel.Location.Y);
+                themeLabel.Text = "Тема";
+                changePasswordLabel.Text = "Смени парола";
+                oldPasswordLabel.Text = "Въведи стара парола";
+                newPasswordLabel.Text = "Въведи нова парола";
+                confirmNewPasswordLabel.Text = "Потвърди нова парола";
+                changePasswordConfirmButton.Text = "Потвърди";
+                errorLabel.Text = "Грешка";
+                settingErrorLabel.Text = "Въвели сте грешни данни!";
+                changePasswordButton.Text = "Смени\nПарола";
+                buttonSave.Text = "Запази\nНастройки";
+                deleteAccountButton.Text = "Изтрий Акаунт";
+                nameLabel.Text = "Име";
+                ageLabel.Text = "Години";
+                emailLabel.Text = "Имейл";
+                genderLabel.Text = "Пол";
+                weightLabel.Text = "Тегло";
+                heightLabel.Text = "Височина";
+                goalLabel.Text = "Цел";
+                confirmLabel1.Text = "Напиши \"ПОТВЪРЖДАВАМ\" за да потвърдиш, изтриването на акаунта.";
+                confirmLabel2.Text = "ВНИМАНИЕ: Всички твои данни ще изчезнат ЗАВИНАГИ.";
+                textBoxConfirm.CueHint.CueHintText = "ПОТВЪРДИ";
+                confirmButton.Text = "Потвърди";
+                themeComboBox.Items.Clear();
+                themeComboBox.Items.Add("Тъмна");
+                themeComboBox.Items.Add("Светла");
+                genderComboBox.Items.Clear();
+                genderComboBox.Items.Add("Мъж");
+                genderComboBox.Items.Add("Жена");
+                goalComboBox.Items.Clear();
+                goalComboBox.Items.Add("Сваляне");
+                goalComboBox.Items.Add("Поддържане");
+                goalComboBox.Items.Add("Покачване");
             }
-            if (cfg.Read("Language", "SETTINGS") == "en")
+            else if (languageComboBox.SelectedItem == "English" || languageComboBox.SelectedItem == "Английски")
             {
-                if (languageComboBox.SelectedItem == "English")
+                cfg.Write("Language", "en", "SETTINGS");
+                if (languageComboBox.SelectedItem == "Английски")
                 {
-                    cfg.Write("Language", "en", "SETTINGS");
+                    languageComboBox.Items.Clear();
+                    languageComboBox.Items.Add("Bulgarian");
+                    languageComboBox.Items.Add("English");
+                    languageComboBox.SelectedItem = "English";
                 }
+                appSettings_label.Text = "App Settings";
+                accSettings_label.Text = "Account Settings";
+                langLabel.Text = "Language";
+                langLabel.Location = new Point(48, langLabel.Location.Y);
+                themeLabel.Text = "Theme";
+                changePasswordLabel.Text = "Change Password";
+                oldPasswordLabel.Text = "Enter old password";
+                newPasswordLabel.Text = "Enter new password";
+                confirmNewPasswordLabel.Text = "Confirm new password";
+                changePasswordConfirmButton.Text = "Confirm";
+                errorLabel.Text = "Error";
+                settingErrorLabel.Text = "You have input incorrect data!";
+                changePasswordButton.Text = "Change\nPassword";
+                buttonSave.Text = "Save\nSettings";
+                deleteAccountButton.Text = "Delete Account";
+                nameLabel.Text = "Name";
+                ageLabel.Text = "Age";
+                emailLabel.Text = "Email";
+                genderLabel.Text = "Gender";
+                weightLabel.Text = "Weight";
+                heightLabel.Text = "Height";
+                goalLabel.Text = "Goal";
+                confirmLabel1.Text = "Type \"CONFIRM\" to confirm that you want to DELETE your account.";
+                confirmLabel2.Text = "WARNING: All your data and stored information will be GONE.";
+                textBoxConfirm.CueHint.CueHintText = "CONFIRM";
+                confirmButton.Text = "Confirm";
+                themeComboBox.Items.Clear();
+                themeComboBox.Items.Add("Dark");
+                themeComboBox.Items.Add("Light");
+                genderComboBox.Items.Clear();
+                genderComboBox.Items.Add("Male");
+                genderComboBox.Items.Add("Female");
+                goalComboBox.Items.Clear();
+                goalComboBox.Items.Add("Cut");
+                goalComboBox.Items.Add("Maintain");
+                goalComboBox.Items.Add("Bulk");
             }
         }
 

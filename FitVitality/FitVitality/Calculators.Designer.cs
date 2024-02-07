@@ -1277,7 +1277,7 @@
             calorieCalcPanel.Controls.Add(calorieCalcBorders);
             calorieCalcPanel.Location = new Point(72, 49);
             calorieCalcPanel.Name = "calorieCalcPanel";
-            calorieCalcPanel.Size = new Size(600, 300);
+            calorieCalcPanel.Size = new Size(0, 0);
             calorieCalcPanel.TabIndex = 23;
             calorieCalcPanel.Visible = false;
             // 
@@ -1381,11 +1381,10 @@
             // 
             // extraMeasurementsL
             // 
-            extraMeasurementsL.AutoSize = true;
             extraMeasurementsL.Font = new Font("Calibri Light", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            extraMeasurementsL.Location = new Point(23, 201);
+            extraMeasurementsL.Location = new Point(13, 201);
             extraMeasurementsL.Name = "extraMeasurementsL";
-            extraMeasurementsL.Size = new Size(233, 14);
+            extraMeasurementsL.Size = new Size(247, 14);
             extraMeasurementsL.TabIndex = 13;
             extraMeasurementsL.Text = "We need information about your activity level.";
             // 
@@ -1537,7 +1536,7 @@
             macroCalcPanel.Controls.Add(macroCalcBorders);
             macroCalcPanel.Location = new Point(72, 49);
             macroCalcPanel.Name = "macroCalcPanel";
-            macroCalcPanel.Size = new Size(0, 0);
+            macroCalcPanel.Size = new Size(600, 300);
             macroCalcPanel.TabIndex = 25;
             macroCalcPanel.Visible = false;
             // 
@@ -1557,7 +1556,7 @@
             activityComboBoxMacro.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
             activityComboBoxMacro.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             activityComboBoxMacro.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            activityComboBoxMacro.Location = new Point(105, 240);
+            activityComboBoxMacro.Location = new Point(99, 240);
             activityComboBoxMacro.Name = "activityComboBoxMacro";
             activityComboBoxMacro.ShadowDecoration.CustomizableEdges = customizableEdges26;
             activityComboBoxMacro.Size = new Size(119, 21);
@@ -1656,7 +1655,7 @@
             macroCalcButton.FillColor = Color.FromArgb(92, 225, 230);
             macroCalcButton.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             macroCalcButton.ForeColor = Color.Black;
-            macroCalcButton.Location = new Point(233, 238);
+            macroCalcButton.Location = new Point(227, 238);
             macroCalcButton.Name = "macroCalcButton";
             macroCalcButton.ShadowDecoration.CustomizableEdges = customizableEdges36;
             macroCalcButton.Size = new Size(92, 25);
@@ -1732,11 +1731,11 @@
             changeGoalLabel.AutoSize = true;
             changeGoalLabel.Font = new Font("Calibri", 9F, FontStyle.Italic, GraphicsUnit.Point);
             changeGoalLabel.ForeColor = SystemColors.ControlDarkDark;
-            changeGoalLabel.Location = new Point(327, 248);
+            changeGoalLabel.Location = new Point(319, 242);
             changeGoalLabel.Name = "changeGoalLabel";
-            changeGoalLabel.Size = new Size(178, 14);
+            changeGoalLabel.Size = new Size(221, 14);
             changeGoalLabel.TabIndex = 40;
-            changeGoalLabel.Text = "You can change goal from settings!";
+            changeGoalLabel.Text = "You can change your goal from the settings!";
             // 
             // activityLevelNeedLabel
             // 
@@ -1754,7 +1753,7 @@
             actLevelLabel.AutoSize = true;
             actLevelLabel.Font = new Font("Calibri", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             actLevelLabel.ForeColor = SystemColors.ControlDarkDark;
-            actLevelLabel.Location = new Point(23, 243);
+            actLevelLabel.Location = new Point(17, 243);
             actLevelLabel.Name = "actLevelLabel";
             actLevelLabel.Size = new Size(76, 15);
             actLevelLabel.TabIndex = 37;

@@ -44,118 +44,255 @@ namespace FitVitality
 
         public void CalorieCalculation(double activity)
         {
-            lossLabel.Text = $"Weight loss - {Math.Round(activity * 0.75, 0)} calories/day";
-            mildLossLabel.Text = $"Mild weight loss - {Math.Round(activity * 0.88, 0)} calories/day";
-            maintainLabel.Text = $"Maintain weight - {Math.Round(activity, 0)} calories/day";
-            mildGainLabel.Text = $"Mild weight gain - {Math.Round(activity * 1.12, 0)} calories/day";
-            gainLabel.Text = $"Gain weight - {Math.Round(activity * 1.25, 0)} calories/day";
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                lossLabel.Text = $"Weight loss - {Math.Round(activity * 0.75, 0)} calories/day";
+                mildLossLabel.Text = $"Mild weight loss - {Math.Round(activity * 0.88, 0)} calories/day";
+                maintainLabel.Text = $"Maintain weight - {Math.Round(activity, 0)} calories/day";
+                mildGainLabel.Text = $"Mild weight gain - {Math.Round(activity * 1.12, 0)} calories/day";
+                gainLabel.Text = $"Gain weight - {Math.Round(activity * 1.25, 0)} calories/day";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                lossLabel.Text = $"Отслабване - {Math.Round(activity * 0.75, 0)} калории/ден";
+                mildLossLabel.Text = $"Леко отслабване - {Math.Round(activity * 0.88, 0)} калории/ден";
+                maintainLabel.Text = $"Поддържане - {Math.Round(activity, 0)} калории/ден";
+                mildGainLabel.Text = $"Леко покачване - {Math.Round(activity * 1.12, 0)} калории/ден";
+                gainLabel.Text = $"Покачване - {Math.Round(activity * 1.25, 0)} калории/ден";
+            }
         }
         public void MacroBalanced(double activity)
         {
-            if (goal == "Cut")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
-                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.25 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
+                if (goal == "Cut")
+                {
+                    activity *= Math.Round(0.75, 0);
+                    calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.25 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
+                }
+                if (goal == "Maintain")
+                {
+                    activity = activity;
+                    calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.25 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
+                }
+                if (goal == "Bulk")
+                {
+                    activity *= Math.Round(1.25, 0);
+                    calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.25 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
+                }
             }
-            if (goal == "Maintain")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                activity = activity;
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
-                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.25 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
-            }
-            if (goal == "Bulk")
-            {
-                activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
-                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.25 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.5 / 4:f1}g/day";
+                if (goal == "Cut")
+                {
+                    activity *= Math.Round(0.75, 0);
+                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 0.88, 0)}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.25 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.5 / 4:f1}г/ден";
+                }
+                if (goal == "Maintain")
+                {
+                    activity = activity;
+                    calorieIntake.Text = $"Дневното приемане на калории е {activity.ToString()}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.25 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.5 / 4:f1}г/ден";
+                }
+                if (goal == "Bulk")
+                {
+                    activity *= Math.Round(1.25, 0);
+                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 1.12, 0)}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.25 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.5 / 4:f1}г/ден";
+                }
             }
         }
         public void MacroLowFat(double activity)
         {
-            if (goal == "Cut")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
-                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
+                if (goal == "Cut")
+                {
+                    activity *= Math.Round(0.75, 0);
+                    calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
+                }
+                if (goal == "Maintain")
+                {
+                    activity = activity;
+                    calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
+                }
+                if (goal == "Bulk")
+                {
+                    activity *= Math.Round(1.25, 0);
+                    calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
+                }
             }
-            if (goal == "Maintain")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                activity = activity;
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
-                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
-            }
-            if (goal == "Bulk")
-            {
-                activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
-                protein.Text = $"{activity * 0.25 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.55 / 4:f1}g/day";
+                if (goal == "Cut")
+                {
+                    activity *= Math.Round(0.75, 0);
+                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 0.88, 0)}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.55 / 4:f1}г/ден";
+                }
+                if (goal == "Maintain")
+                {
+                    activity = activity;
+                    calorieIntake.Text = $"Дневното приемане на калории е {activity.ToString()}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.55 / 4:f1}г/ден";
+                }
+                if (goal == "Bulk")
+                {
+                    activity *= Math.Round(1.25, 0);
+                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 1.12, 0)}.";
+                    protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.55 / 4:f1}г/ден";
+                }
+            
             }
         }
         public void MacroLowCarb(double activity)
         {
-            if (goal == "Cut")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
-                protein.Text = $"{activity * 0.3 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.3 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
+                if (goal == "Cut")
+                {
+                    activity *= Math.Round(0.75, 0);
+                    calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
+                    protein.Text = $"{activity * 0.3 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.3 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
+                }
+                if (goal == "Maintain")
+                {
+                    activity = activity;
+                    calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                    protein.Text = $"{activity * 0.3 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.3 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
+                }
+                if (goal == "Bulk")
+                {
+                    activity *= Math.Round(1.25, 0);
+                    calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
+                    protein.Text = $"{activity * 0.3 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.3 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
+                }
             }
-            if (goal == "Maintain")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                activity = activity;
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
-                protein.Text = $"{activity * 0.3 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.3 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
-            }
-            if (goal == "Bulk")
-            {
-                activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
-                protein.Text = $"{activity * 0.3 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.3 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.4 / 4:f1}g/day";
+                if (goal == "Cut")
+                {
+                    activity *= Math.Round(0.75, 0);
+                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 0.88, 0)}.";
+                    protein.Text = $"{activity * 0.3 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.3 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.4 / 4:f1}г/ден";
+                }
+                if (goal == "Maintain")
+                {
+                    activity = activity;
+                    calorieIntake.Text = $"Дневното приемане на калории е {activity.ToString()}.";
+                    protein.Text = $"{activity * 0.3 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.3 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.4 / 4:f1}г/ден";
+                }
+                if (goal == "Bulk")
+                {
+                    activity *= Math.Round(1.25, 0);
+                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 1.12, 0)}.";
+                    protein.Text = $"{activity * 0.3 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.3 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.4 / 4:f1}г/ден";
+                }
             }
         }
         public void MacroHighProtein(double activity)
         {
-            if (goal == "Cut")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                activity *= Math.Round(0.75, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
-                protein.Text = $"{activity * 0.35 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
+                if (goal == "Cut")
+                {
+                    activity *= Math.Round(0.75, 0);
+                    calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 0.88, 0)}.";
+                    protein.Text = $"{activity * 0.35 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
+                }
+                if (goal == "Maintain")
+                {
+                    activity = activity;
+                    calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
+                    protein.Text = $"{activity * 0.35 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
+                }
+                if (goal == "Bulk")
+                {
+                    activity *= Math.Round(1.25, 0);
+                    calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
+                    protein.Text = $"{activity * 0.35 / 4:f1}g/day";
+                    fat.Text = $"{activity * 0.2 / 9:f1}g/day";
+                    carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
+                }
             }
-            if (goal == "Maintain")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                activity = activity;
-                calorieIntake.Text = $"Current calorie intake per day is {activity.ToString()}.";
-                protein.Text = $"{activity * 0.35 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
-            }
-            if (goal == "Bulk")
-            {
-                activity *= Math.Round(1.25, 0);
-                calorieIntake.Text = $"Current calorie intake per day is {Math.Round(activity * 1.12, 0)}.";
-                protein.Text = $"{activity * 0.35 / 4:f1}g/day";
-                fat.Text = $"{activity * 0.2 / 9:f1}g/day";
-                carbohydrates.Text = $"{activity * 0.45 / 4:f1}g/day";
+                if (goal == "Cut")
+                {
+                    activity *= Math.Round(0.75, 0);
+                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 0.88, 0)}.";
+                    protein.Text = $"{activity * 0.35 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.45 / 4:f1}г/ден";
+                }
+                if (goal == "Maintain")
+                {
+                    activity = activity;
+                    calorieIntake.Text = $"Дневното приемане на калории е {activity.ToString()}.";
+                    protein.Text = $"{activity * 0.35 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.45 / 4:f1}г/ден";
+                }
+                if (goal == "Bulk")
+                {
+                    activity *= Math.Round(1.25, 0);
+                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 1.12, 0)}.";
+                    protein.Text = $"{activity * 0.35 / 4:f1}г/ден";
+                    fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
+                    carbohydrates.Text = $"{activity * 0.45 / 4:f1}г/ден";
+                }
             }
         }
         public Calculators(string userID)
@@ -276,6 +413,44 @@ namespace FitVitality
                 fitnessLabel.Text = "Fitness";
                 averageLabel.Text = "Average";
                 obeseLabel.Text = "Obese";
+                calorieCalcLabel.Text = "Calorie Calculator";
+                extraMeasurementsL.Text = "We need information about your activity level.";
+                activityLabel.Text = "Activity level";
+                calorieCalcButton.Text = "Calculate";
+                calorieDescription.Text = "The Calorie Calculator is very \r\nsimilar to the " +
+                    "Basal Metabolic \r\nRate calculator. This calculator \r\ncan provide some simple" +
+                    " \r\nguidelines for gaining, losing \r\nor maintaining weight based\r\non your " +
+                    "activity level.\r\n";
+                activityComboBox.Items.Clear();
+                activityComboBox.Items.Add("Sedentary");
+                activityComboBox.Items.Add("Light");
+                activityComboBox.Items.Add("Moderate");
+                activityComboBox.Items.Add("Active");
+                activityComboBox.Items.Add("Very active");
+                activityComboBox.Items.Add("Extra active");
+                macroCalcLabel.Text = "Macro Calculator";
+                balancedButton.Text = "Balanced";
+                lowFatButton.Text = "Low fat";
+                lowCarbsButton.Text = "Low carbs";
+                highProteinButton.Text = "High protein";
+                macroCalcDescription.Text = "A macro calculator is a tool\r\nthat helps " +
+                    "individuals \r\ndetermine their \r\nmacronutrient intake based \r\non theri weight, " +
+                    "height, \r\nactivity, and goals. It \r\ncalculates the amounts of \r\nproteins, " +
+                    "fats, and carbohydrates \r\nthat they should consume.\r\n";
+                activityLevelNeedLabel.Text = "We will need your activity level for this calculation:";
+                actLevelLabel.Text = "Activity level:";
+                changeGoalLabel.Text = "You can change your goal from the settings!\r\n";
+                macroCalcButton.Text = "Calculate";
+                proteinLabel.Text = "Protein - ";
+                carbsLabel.Text = "Carbs - ";
+                fatLabel.Text = "Fat - ";
+                activityComboBoxMacro.Items.Clear();
+                activityComboBoxMacro.Items.Add("Sedentary");
+                activityComboBoxMacro.Items.Add("Light");
+                activityComboBoxMacro.Items.Add("Moderate");
+                activityComboBoxMacro.Items.Add("Active");
+                activityComboBoxMacro.Items.Add("Very active");
+                activityComboBoxMacro.Items.Add("Extra active");
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
@@ -852,7 +1027,15 @@ namespace FitVitality
                 bodyFat = 100;
             bodyFatPercentage.Location = new Point(Convert.ToInt16(Math.Round((bodyFat / 40 * 254) - 4, 0)), 0);
             bodyFatArrow.Location = new Point(Convert.ToInt16(Math.Round(bodyFat / 40 * 254, 0)), 15);
-            currentBFP.Text = $"Body Fat Percentage = {bodyFat.ToString()}%";
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                currentBFP.Text = $"Body Fat Percentage = {bodyFat.ToString()}%";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                currentBFP.Text = $"Процент на мазнини = {bodyFat.ToString()}%";
+            }
             bodyFatPercentage.Text = bodyFat.ToString() + "%";
         }
 
@@ -899,37 +1082,79 @@ namespace FitVitality
 
         private void calorieCalcButton_Click(object sender, EventArgs e)
         {
-            if (activityComboBox.SelectedItem == "Sedentary")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                CalorieCalculation(sedentaryBMR);
+                if (activityComboBox.SelectedItem == "Sedentary")
+                {
+                    CalorieCalculation(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Light")
+                {
+                    CalorieCalculation(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Moderate")
+                {
+                    CalorieCalculation(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Active")
+                {
+                    CalorieCalculation(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Very active")
+                {
+                    CalorieCalculation(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Extra active")
+                {
+                    CalorieCalculation(veryIntenseBMR);
+                }
             }
-            if (activityComboBox.SelectedItem == "Light")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                CalorieCalculation(exerciseBMR13);
-            }
-            if (activityComboBox.SelectedItem == "Moderate")
-            {
-                CalorieCalculation(exerciseBMR45);
-            }
-            if (activityComboBox.SelectedItem == "Active")
-            {
-                CalorieCalculation(DailyBMR34);
-            }
-            if (activityComboBox.SelectedItem == "Very active")
-            {
-                CalorieCalculation(intenseBMR67);
-            }
-            if (activityComboBox.SelectedItem == "Extra active")
-            {
-                CalorieCalculation(veryIntenseBMR);
+                if (activityComboBox.SelectedItem == "Заседналост")
+                {
+                    CalorieCalculation(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Лека")
+                {
+                    CalorieCalculation(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Умерена")
+                {
+                    CalorieCalculation(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Активна")
+                {
+                    CalorieCalculation(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Много активна")
+                {
+                    CalorieCalculation(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Екстра активна")
+                {
+                    CalorieCalculation(veryIntenseBMR);
+                }
             }
         }
 
         private void activityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (activityComboBox.SelectedItem == "Sedentary" || activityComboBox.SelectedItem == "Light" || activityComboBox.SelectedItem == "Moderate" || activityComboBox.SelectedItem == "Active" || activityComboBox.SelectedItem == "Very active" || activityComboBox.SelectedItem == "Extra active")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                calorieCalcButton.Enabled = true;
+                if (activityComboBox.SelectedItem == "Sedentary" || activityComboBox.SelectedItem == "Light" || activityComboBox.SelectedItem == "Moderate" || activityComboBox.SelectedItem == "Active" || activityComboBox.SelectedItem == "Very active" || activityComboBox.SelectedItem == "Extra active")
+                {
+                    calorieCalcButton.Enabled = true;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (activityComboBox.SelectedItem == "Заседналост" || activityComboBox.SelectedItem == "Лека" || activityComboBox.SelectedItem == "Умерена" || activityComboBox.SelectedItem == "Активна" || activityComboBox.SelectedItem == "Много активна" || activityComboBox.SelectedItem == "Екстра активна")
+                {
+                    calorieCalcButton.Enabled = true;
+                }
             }
         }
 
@@ -993,37 +1218,79 @@ namespace FitVitality
             lowCarbsButton.Visible = true;
             lowFatButton.Visible = true;
             highProteinButton.Visible = true;
-            if (activityComboBoxMacro.SelectedItem == "Sedentary")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                MacroBalanced(sedentaryBMR);
+                if (activityComboBoxMacro.SelectedItem == "Sedentary")
+                {
+                    MacroBalanced(sedentaryBMR);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Light")
+                {
+                    MacroBalanced(exerciseBMR13);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Moderate")
+                {
+                    MacroBalanced(exerciseBMR45);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Active")
+                {
+                    MacroBalanced(DailyBMR34);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Very active")
+                {
+                    MacroBalanced(intenseBMR67);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Extra active")
+                {
+                    MacroBalanced(veryIntenseBMR);
+                }
             }
-            if (activityComboBoxMacro.SelectedItem == "Light")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                MacroBalanced(exerciseBMR13);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Moderate")
-            {
-                MacroBalanced(exerciseBMR45);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Active")
-            {
-                MacroBalanced(DailyBMR34);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Very active")
-            {
-                MacroBalanced(intenseBMR67);
-            }
-            if (activityComboBoxMacro.SelectedItem == "Extra active")
-            {
-                MacroBalanced(veryIntenseBMR);
+                if (activityComboBoxMacro.SelectedItem == "Заседналост")
+                {
+                    MacroBalanced(sedentaryBMR);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Лека")
+                {
+                    MacroBalanced(exerciseBMR13);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Умерена")
+                {
+                    MacroBalanced(exerciseBMR45);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Активна")
+                {
+                    MacroBalanced(DailyBMR34);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Много активна")
+                {
+                    MacroBalanced(intenseBMR67);
+                }
+                if (activityComboBoxMacro.SelectedItem == "Екстра активна")
+                {
+                    MacroBalanced(veryIntenseBMR);
+                }
             }
         }
 
         private void kryptonComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (activityComboBoxMacro.SelectedItem == "Sedentary" || activityComboBoxMacro.SelectedItem == "Light" || activityComboBoxMacro.SelectedItem == "Moderate" || activityComboBoxMacro.SelectedItem == "Active" || activityComboBoxMacro.SelectedItem == "Very active" || activityComboBoxMacro.SelectedItem == "Extra active")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                macroCalcButton.Enabled = true;
+                if (activityComboBoxMacro.SelectedItem == "Sedentary" || activityComboBoxMacro.SelectedItem == "Light" || activityComboBoxMacro.SelectedItem == "Moderate" || activityComboBoxMacro.SelectedItem == "Active" || activityComboBoxMacro.SelectedItem == "Very active" || activityComboBoxMacro.SelectedItem == "Extra active")
+                {
+                    macroCalcButton.Enabled = true;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (activityComboBoxMacro.SelectedItem == "Заседналост" || activityComboBoxMacro.SelectedItem == "Лека" || activityComboBoxMacro.SelectedItem == "Умерена" || activityComboBoxMacro.SelectedItem == "Активна" || activityComboBoxMacro.SelectedItem == "Много активна" || activityComboBoxMacro.SelectedItem == "Екстра активна")
+                {
+                    macroCalcButton.Enabled = true;
+                }
             }
         }
 

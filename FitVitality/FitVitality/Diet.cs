@@ -702,6 +702,34 @@ namespace FitVitality
         private void Diet_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                dietLabel.Text = "Diet";
+                manageGoalLabel.Text = "Manage\nGoal";
+                addFoodLabel.Text = "Today`s food";
+                dailyGoalLabel.Text = "Daily\nGoal";
+                activityLevelLabel.Text = "Activity level:";
+                manageGoalDescription.Text = "In this section you enter your \r\ngoal " +
+                    "and activity depending \r\non your busyness and dream\r\nphysique.\r\n";
+                macroАbbreviation.Text = "C -  Въглехидрат, P - Протеин, F - Мазнини\r\n";
+                activityComboBox.Items.Clear();
+                activityComboBox.Items.Add("Sedentary");
+                activityComboBox.Items.Add("Light");
+                activityComboBox.Items.Add("Moderate");
+                activityComboBox.Items.Add("Active");
+                activityComboBox.Items.Add("Very active");
+                activityComboBox.Items.Add("Extra active");
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                activityComboBox.Items.Clear();
+                activityComboBox.Items.Add("Заседналост");
+                activityComboBox.Items.Add("Лека");
+                activityComboBox.Items.Add("Умерена");
+                activityComboBox.Items.Add("Активна");
+                activityComboBox.Items.Add("Много активна");
+                activityComboBox.Items.Add("Екстра активна");
+            }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -967,6 +995,7 @@ namespace FitVitality
                                         balancedButton_Click(sender, e);
                                         break;
                                     case "HighProtein":
+
                                         highProteinButton_Click(sender, e);
                                         break;
                                     case "LowFat":

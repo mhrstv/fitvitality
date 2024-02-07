@@ -239,13 +239,13 @@
             // 
             // calculators_label
             // 
-            calculators_label.AutoSize = true;
             calculators_label.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            calculators_label.Location = new Point(282, 22);
+            calculators_label.Location = new Point(251, 22);
             calculators_label.Name = "calculators_label";
-            calculators_label.Size = new Size(127, 24);
+            calculators_label.Size = new Size(189, 24);
             calculators_label.TabIndex = 0;
             calculators_label.Text = "Calculators";
+            calculators_label.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // bmi_panel
             // 
@@ -285,7 +285,7 @@
             bmi_label.BackColor = Color.FromArgb(250, 252, 252);
             bmi_label.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bmi_label.ForeColor = Color.Black;
-            bmi_label.Location = new Point(16, 13);
+            bmi_label.Location = new Point(7, 13);
             bmi_label.Name = "bmi_label";
             bmi_label.Size = new Size(38, 19);
             bmi_label.TabIndex = 0;
@@ -337,7 +337,7 @@
             bmr_label.BackColor = Color.FromArgb(250, 252, 252);
             bmr_label.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bmr_label.ForeColor = Color.Black;
-            bmr_label.Location = new Point(16, 13);
+            bmr_label.Location = new Point(7, 13);
             bmr_label.Name = "bmr_label";
             bmr_label.Size = new Size(46, 19);
             bmr_label.TabIndex = 0;
@@ -389,7 +389,7 @@
             bodyfat_label.BackColor = Color.FromArgb(250, 252, 252);
             bodyfat_label.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bodyfat_label.ForeColor = Color.Black;
-            bodyfat_label.Location = new Point(16, 13);
+            bodyfat_label.Location = new Point(7, 13);
             bodyfat_label.Name = "bodyfat_label";
             bodyfat_label.Size = new Size(78, 19);
             bodyfat_label.TabIndex = 0;
@@ -441,7 +441,7 @@
             idealweight_label.BackColor = Color.FromArgb(250, 252, 252);
             idealweight_label.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             idealweight_label.ForeColor = Color.Black;
-            idealweight_label.Location = new Point(16, 13);
+            idealweight_label.Location = new Point(7, 13);
             idealweight_label.Name = "idealweight_label";
             idealweight_label.Size = new Size(102, 19);
             idealweight_label.TabIndex = 0;
@@ -547,7 +547,7 @@
             calorie_label.BackColor = Color.FromArgb(250, 252, 252);
             calorie_label.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             calorie_label.ForeColor = Color.Black;
-            calorie_label.Location = new Point(16, 13);
+            calorie_label.Location = new Point(7, 13);
             calorie_label.Name = "calorie_label";
             calorie_label.Size = new Size(63, 19);
             calorie_label.TabIndex = 0;
@@ -599,7 +599,7 @@
             macro_label.BackColor = Color.FromArgb(250, 252, 252);
             macro_label.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
             macro_label.ForeColor = Color.Black;
-            macro_label.Location = new Point(16, 13);
+            macro_label.Location = new Point(7, 13);
             macro_label.Name = "macro_label";
             macro_label.Size = new Size(56, 19);
             macro_label.TabIndex = 0;
@@ -632,7 +632,7 @@
             bmiDescription.AutoSize = true;
             bmiDescription.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             bmiDescription.ForeColor = SystemColors.ControlDarkDark;
-            bmiDescription.Location = new Point(27, 49);
+            bmiDescription.Location = new Point(20, 49);
             bmiDescription.Name = "bmiDescription";
             bmiDescription.Size = new Size(213, 209);
             bmiDescription.TabIndex = 5;
@@ -751,13 +751,13 @@
             // 
             // bmiCalcLabel
             // 
-            bmiCalcLabel.AutoSize = true;
             bmiCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            bmiCalcLabel.Location = new Point(193, 19);
+            bmiCalcLabel.Location = new Point(146, 19);
             bmiCalcLabel.Name = "bmiCalcLabel";
-            bmiCalcLabel.Size = new Size(160, 24);
+            bmiCalcLabel.Size = new Size(254, 24);
             bmiCalcLabel.TabIndex = 2;
             bmiCalcLabel.Text = "BMI Calculator";
+            bmiCalcLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // buttonCloseBMI
             // 
@@ -811,7 +811,7 @@
             veryIntenseLabel.AutoSize = true;
             veryIntenseLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             veryIntenseLabel.ForeColor = Color.Black;
-            veryIntenseLabel.Location = new Point(270, 186);
+            veryIntenseLabel.Location = new Point(256, 186);
             veryIntenseLabel.Name = "veryIntenseLabel";
             veryIntenseLabel.Size = new Size(96, 18);
             veryIntenseLabel.TabIndex = 15;
@@ -823,7 +823,7 @@
             intenseLabel.AutoSize = true;
             intenseLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             intenseLabel.ForeColor = Color.Black;
-            intenseLabel.Location = new Point(270, 163);
+            intenseLabel.Location = new Point(256, 163);
             intenseLabel.Name = "intenseLabel";
             intenseLabel.Size = new Size(85, 18);
             intenseLabel.TabIndex = 14;
@@ -835,7 +835,7 @@
             dailyLabel.AutoSize = true;
             dailyLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             dailyLabel.ForeColor = Color.Black;
-            dailyLabel.Location = new Point(270, 140);
+            dailyLabel.Location = new Point(256, 140);
             dailyLabel.Name = "dailyLabel";
             dailyLabel.Size = new Size(69, 18);
             dailyLabel.TabIndex = 13;
@@ -860,7 +860,7 @@
             // 
             activityDescriptions.AutoSize = true;
             activityDescriptions.ForeColor = SystemColors.ControlDarkDark;
-            activityDescriptions.Location = new Point(270, 212);
+            activityDescriptions.Location = new Point(256, 212);
             activityDescriptions.Name = "activityDescriptions";
             activityDescriptions.Size = new Size(226, 45);
             activityDescriptions.TabIndex = 11;
@@ -871,7 +871,7 @@
             exerciseLabel2.AutoSize = true;
             exerciseLabel2.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             exerciseLabel2.ForeColor = Color.Black;
-            exerciseLabel2.Location = new Point(270, 118);
+            exerciseLabel2.Location = new Point(256, 118);
             exerciseLabel2.Name = "exerciseLabel2";
             exerciseLabel2.Size = new Size(89, 18);
             exerciseLabel2.TabIndex = 10;
@@ -883,7 +883,7 @@
             exerciseLabel1.AutoSize = true;
             exerciseLabel1.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             exerciseLabel1.ForeColor = Color.Black;
-            exerciseLabel1.Location = new Point(270, 95);
+            exerciseLabel1.Location = new Point(256, 95);
             exerciseLabel1.Name = "exerciseLabel1";
             exerciseLabel1.Size = new Size(89, 18);
             exerciseLabel1.TabIndex = 9;
@@ -895,7 +895,7 @@
             sedentaryLabel.AutoSize = true;
             sedentaryLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             sedentaryLabel.ForeColor = Color.Black;
-            sedentaryLabel.Location = new Point(270, 74);
+            sedentaryLabel.Location = new Point(256, 74);
             sedentaryLabel.Name = "sedentaryLabel";
             sedentaryLabel.Size = new Size(81, 18);
             sedentaryLabel.TabIndex = 8;
@@ -906,7 +906,7 @@
             // 
             dailyCalsLabel.AutoSize = true;
             dailyCalsLabel.ForeColor = SystemColors.ControlDarkDark;
-            dailyCalsLabel.Location = new Point(270, 55);
+            dailyCalsLabel.Location = new Point(256, 55);
             dailyCalsLabel.Name = "dailyCalsLabel";
             dailyCalsLabel.Size = new Size(198, 15);
             dailyCalsLabel.TabIndex = 7;
@@ -935,13 +935,13 @@
             // 
             // bmrCalcLabel
             // 
-            bmrCalcLabel.AutoSize = true;
             bmrCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            bmrCalcLabel.Location = new Point(193, 19);
+            bmrCalcLabel.Location = new Point(135, 19);
             bmrCalcLabel.Name = "bmrCalcLabel";
-            bmrCalcLabel.Size = new Size(168, 24);
+            bmrCalcLabel.Size = new Size(274, 24);
             bmrCalcLabel.TabIndex = 2;
             bmrCalcLabel.Text = "BMR Calculator";
+            bmrCalcLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // bmrBorders
             // 
@@ -976,6 +976,7 @@
             bodyFatCalcPanel.Controls.Add(bodyFatDescription);
             bodyFatCalcPanel.Controls.Add(bodyFatLabel);
             bodyFatCalcPanel.Controls.Add(bodyFatBorders);
+            bodyFatCalcPanel.ImeMode = ImeMode.On;
             bodyFatCalcPanel.Location = new Point(72, 49);
             bodyFatCalcPanel.Name = "bodyFatCalcPanel";
             bodyFatCalcPanel.Size = new Size(0, 0);
@@ -1242,13 +1243,13 @@
             // 
             // bodyFatLabel
             // 
-            bodyFatLabel.AutoSize = true;
             bodyFatLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            bodyFatLabel.Location = new Point(168, 19);
+            bodyFatLabel.Location = new Point(87, 19);
             bodyFatLabel.Name = "bodyFatLabel";
-            bodyFatLabel.Size = new Size(210, 24);
+            bodyFatLabel.Size = new Size(370, 24);
             bodyFatLabel.TabIndex = 2;
             bodyFatLabel.Text = "Body Fat Calculator";
+            bodyFatLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // bodyFatBorders
             // 
@@ -1309,6 +1310,7 @@
             activityComboBox.CustomizableEdges = customizableEdges23;
             activityComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             activityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            activityComboBox.DropDownWidth = 140;
             activityComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
             activityComboBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             activityComboBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
@@ -1415,13 +1417,13 @@
             // 
             // calorieCalcLabel
             // 
-            calorieCalcLabel.AutoSize = true;
             calorieCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            calorieCalcLabel.Location = new Point(176, 19);
+            calorieCalcLabel.Location = new Point(143, 19);
             calorieCalcLabel.Name = "calorieCalcLabel";
-            calorieCalcLabel.Size = new Size(195, 24);
+            calorieCalcLabel.Size = new Size(259, 24);
             calorieCalcLabel.TabIndex = 2;
             calorieCalcLabel.Text = "Calorie Calculator";
+            calorieCalcLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // calorieCalcBorders
             // 
@@ -1494,13 +1496,13 @@
             // 
             // idealWeightCalcLabel
             // 
-            idealWeightCalcLabel.AutoSize = true;
             idealWeightCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            idealWeightCalcLabel.Location = new Point(150, 19);
+            idealWeightCalcLabel.Location = new Point(101, 19);
             idealWeightCalcLabel.Name = "idealWeightCalcLabel";
-            idealWeightCalcLabel.Size = new Size(247, 24);
+            idealWeightCalcLabel.Size = new Size(343, 24);
             idealWeightCalcLabel.TabIndex = 2;
             idealWeightCalcLabel.Text = "Ideal Weight Calculator";
+            idealWeightCalcLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // idealWeightBorders
             // 
@@ -1536,7 +1538,7 @@
             macroCalcPanel.Controls.Add(macroCalcBorders);
             macroCalcPanel.Location = new Point(72, 49);
             macroCalcPanel.Name = "macroCalcPanel";
-            macroCalcPanel.Size = new Size(600, 300);
+            macroCalcPanel.Size = new Size(0, 0);
             macroCalcPanel.TabIndex = 25;
             macroCalcPanel.Visible = false;
             // 
@@ -1575,10 +1577,10 @@
             highProteinButton.FillColor = Color.FromArgb(92, 225, 230);
             highProteinButton.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             highProteinButton.ForeColor = Color.Black;
-            highProteinButton.Location = new Point(451, 57);
+            highProteinButton.Location = new Point(457, 53);
             highProteinButton.Name = "highProteinButton";
             highProteinButton.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            highProteinButton.Size = new Size(74, 25);
+            highProteinButton.Size = new Size(84, 29);
             highProteinButton.TabIndex = 69;
             highProteinButton.Text = "High protein";
             highProteinButton.Click += highProteinButton_Click;
@@ -1595,10 +1597,10 @@
             lowCarbsButton.FillColor = Color.FromArgb(92, 225, 230);
             lowCarbsButton.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             lowCarbsButton.ForeColor = Color.Black;
-            lowCarbsButton.Location = new Point(381, 57);
+            lowCarbsButton.Location = new Point(379, 53);
             lowCarbsButton.Name = "lowCarbsButton";
             lowCarbsButton.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            lowCarbsButton.Size = new Size(69, 25);
+            lowCarbsButton.Size = new Size(79, 29);
             lowCarbsButton.TabIndex = 68;
             lowCarbsButton.Text = "Low carbs";
             lowCarbsButton.Click += lowCarbsButton_Click;
@@ -1615,10 +1617,10 @@
             lowFatButton.FillColor = Color.FromArgb(92, 225, 230);
             lowFatButton.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             lowFatButton.ForeColor = Color.Black;
-            lowFatButton.Location = new Point(315, 57);
+            lowFatButton.Location = new Point(304, 53);
             lowFatButton.Name = "lowFatButton";
             lowFatButton.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            lowFatButton.Size = new Size(65, 25);
+            lowFatButton.Size = new Size(75, 29);
             lowFatButton.TabIndex = 67;
             lowFatButton.Text = "Low fat";
             lowFatButton.Click += lowFatButton_Click;
@@ -1635,10 +1637,10 @@
             balancedButton.FillColor = Color.FromArgb(92, 225, 230);
             balancedButton.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             balancedButton.ForeColor = Color.Black;
-            balancedButton.Location = new Point(250, 57);
+            balancedButton.Location = new Point(230, 53);
             balancedButton.Name = "balancedButton";
             balancedButton.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            balancedButton.Size = new Size(65, 25);
+            balancedButton.Size = new Size(75, 29);
             balancedButton.TabIndex = 66;
             balancedButton.Text = "Balanced";
             balancedButton.Click += balancedButton_Click;
@@ -1655,10 +1657,10 @@
             macroCalcButton.FillColor = Color.FromArgb(92, 225, 230);
             macroCalcButton.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             macroCalcButton.ForeColor = Color.Black;
-            macroCalcButton.Location = new Point(227, 238);
+            macroCalcButton.Location = new Point(220, 238);
             macroCalcButton.Name = "macroCalcButton";
             macroCalcButton.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            macroCalcButton.Size = new Size(92, 25);
+            macroCalcButton.Size = new Size(99, 25);
             macroCalcButton.TabIndex = 65;
             macroCalcButton.Text = "Calculate";
             macroCalcButton.Click += kryptonButton1_Click;
@@ -1731,11 +1733,12 @@
             changeGoalLabel.AutoSize = true;
             changeGoalLabel.Font = new Font("Calibri", 9F, FontStyle.Italic, GraphicsUnit.Point);
             changeGoalLabel.ForeColor = SystemColors.ControlDarkDark;
-            changeGoalLabel.Location = new Point(319, 242);
+            changeGoalLabel.Location = new Point(319, 238);
             changeGoalLabel.Name = "changeGoalLabel";
             changeGoalLabel.Size = new Size(221, 14);
             changeGoalLabel.TabIndex = 40;
             changeGoalLabel.Text = "You can change your goal from the settings!";
+            changeGoalLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // activityLevelNeedLabel
             // 
@@ -1763,7 +1766,7 @@
             // 
             calorieIntake.AutoSize = true;
             calorieIntake.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            calorieIntake.Location = new Point(291, 204);
+            calorieIntake.Location = new Point(283, 204);
             calorieIntake.Name = "calorieIntake";
             calorieIntake.Size = new Size(0, 18);
             calorieIntake.TabIndex = 27;
@@ -1796,13 +1799,13 @@
             // 
             // macroCalcLabel
             // 
-            macroCalcLabel.AutoSize = true;
             macroCalcLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            macroCalcLabel.Location = new Point(181, 19);
+            macroCalcLabel.Location = new Point(125, 19);
             macroCalcLabel.Name = "macroCalcLabel";
-            macroCalcLabel.Size = new Size(184, 24);
+            macroCalcLabel.Size = new Size(296, 24);
             macroCalcLabel.TabIndex = 2;
             macroCalcLabel.Text = "Macro Calculator";
+            macroCalcLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // macroCalcBorders
             // 
@@ -1902,7 +1905,6 @@
             ((System.ComponentModel.ISupportInitialize)buttonCloseMacroCalc).EndInit();
             ((System.ComponentModel.ISupportInitialize)macroCalcBorders).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

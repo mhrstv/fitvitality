@@ -168,12 +168,11 @@
             // 
             // dailyGoalLabel
             // 
-            dailyGoalLabel.AutoSize = true;
             dailyGoalLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dailyGoalLabel.ForeColor = Color.FromArgb(92, 225, 230);
-            dailyGoalLabel.Location = new Point(556, 53);
+            dailyGoalLabel.Location = new Point(523, 53);
             dailyGoalLabel.Name = "dailyGoalLabel";
-            dailyGoalLabel.Size = new Size(47, 38);
+            dailyGoalLabel.Size = new Size(123, 38);
             dailyGoalLabel.TabIndex = 24;
             dailyGoalLabel.Text = "Daily \r\nGoal";
             dailyGoalLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -181,12 +180,11 @@
             // 
             // addFoodLabel
             // 
-            addFoodLabel.AutoSize = true;
             addFoodLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             addFoodLabel.ForeColor = Color.FromArgb(92, 225, 230);
-            addFoodLabel.Location = new Point(297, 48);
+            addFoodLabel.Location = new Point(267, 48);
             addFoodLabel.Name = "addFoodLabel";
-            addFoodLabel.Size = new Size(96, 19);
+            addFoodLabel.Size = new Size(156, 19);
             addFoodLabel.TabIndex = 26;
             addFoodLabel.Text = "Today's food";
             addFoodLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -250,12 +248,11 @@
             // 
             // macroАbbreviation
             // 
-            macroАbbreviation.AutoSize = true;
             macroАbbreviation.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             macroАbbreviation.ForeColor = Color.Black;
-            macroАbbreviation.Location = new Point(237, 344);
+            macroАbbreviation.Location = new Point(189, 344);
             macroАbbreviation.Name = "macroАbbreviation";
-            macroАbbreviation.Size = new Size(216, 15);
+            macroАbbreviation.Size = new Size(312, 15);
             macroАbbreviation.TabIndex = 31;
             macroАbbreviation.Text = "C -  Carbohydrates, P - Protein, F - Fats";
             macroАbbreviation.TextAlign = ContentAlignment.MiddleCenter;
@@ -274,12 +271,11 @@
             // 
             // manageGoalLabel
             // 
-            manageGoalLabel.AutoSize = true;
             manageGoalLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
             manageGoalLabel.ForeColor = Color.FromArgb(92, 225, 230);
-            manageGoalLabel.Location = new Point(76, 53);
+            manageGoalLabel.Location = new Point(45, 53);
             manageGoalLabel.Name = "manageGoalLabel";
-            manageGoalLabel.Size = new Size(68, 38);
+            manageGoalLabel.Size = new Size(121, 38);
             manageGoalLabel.TabIndex = 39;
             manageGoalLabel.Text = "Manage \r\nGoal";
             manageGoalLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -287,7 +283,6 @@
             // 
             // activityLevelLabel
             // 
-            activityLevelLabel.AutoSize = true;
             activityLevelLabel.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             activityLevelLabel.ForeColor = Color.Black;
             activityLevelLabel.Location = new Point(13, 137);
@@ -295,7 +290,7 @@
             activityLevelLabel.Size = new Size(79, 15);
             activityLevelLabel.TabIndex = 42;
             activityLevelLabel.Text = "Activity level:";
-            activityLevelLabel.TextAlign = ContentAlignment.MiddleCenter;
+            activityLevelLabel.TextAlign = ContentAlignment.MiddleRight;
             activityLevelLabel.Click += activityLevelLabel_Click;
             // 
             // balancedButton

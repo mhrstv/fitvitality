@@ -76,6 +76,7 @@
             todaysDate = new Label();
             weightChangesTextBox = new TextBox();
             label3 = new Label();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
@@ -89,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)dietChart).BeginInit();
             ((System.ComponentModel.ISupportInitialize)graphBorders).BeginInit();
             weightChangesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // rotationTimer
@@ -434,6 +436,7 @@
             weightChangesPanel.Controls.Add(todaysDate);
             weightChangesPanel.Controls.Add(weightChangesTextBox);
             weightChangesPanel.Controls.Add(label3);
+            weightChangesPanel.Controls.Add(pictureBox1);
             weightChangesPanel.CustomizableEdges = customizableEdges5;
             weightChangesPanel.Location = new Point(251, 223);
             weightChangesPanel.Name = "weightChangesPanel";
@@ -488,6 +491,15 @@
             label3.Text = "Weight\r\nChanges";
             label3.TextAlign = ContentAlignment.TopCenter;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.weightChangeBorders;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(173, 127);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -527,6 +539,7 @@
             ((System.ComponentModel.ISupportInitialize)graphBorders).EndInit();
             weightChangesPanel.ResumeLayout(false);
             weightChangesPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -563,5 +576,6 @@
         private TextBox weightChangesTextBox;
         private Label todaysDate;
         private Guna.UI2.WinForms.Guna2Button weightChangesButton;
+        private PictureBox pictureBox1;
     }
 }

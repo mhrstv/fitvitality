@@ -41,6 +41,10 @@
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 70D);
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 60D);
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             rotationTimer = new System.Windows.Forms.Timer(components);
             hLine1 = new PictureBox();
             hLine2 = new PictureBox();
@@ -63,10 +67,15 @@
             fat = new Label();
             carbohydrates = new Label();
             calorieIntake = new Label();
-            label2 = new Label();
+            dailyGoalLabel = new Label();
             dailyGoalBorders = new PictureBox();
             dietChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             graphBorders = new PictureBox();
+            weightChangesPanel = new Guna.UI2.WinForms.Guna2Panel();
+            weightChangesButton = new Guna.UI2.WinForms.Guna2Button();
+            todaysDate = new Label();
+            weightChangesTextBox = new TextBox();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
@@ -79,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dietChart).BeginInit();
             ((System.ComponentModel.ISupportInitialize)graphBorders).BeginInit();
+            weightChangesPanel.SuspendLayout();
             SuspendLayout();
             // 
             // rotationTimer
@@ -236,7 +246,7 @@
             dailyGoalPanel.Controls.Add(fat);
             dailyGoalPanel.Controls.Add(carbohydrates);
             dailyGoalPanel.Controls.Add(calorieIntake);
-            dailyGoalPanel.Controls.Add(label2);
+            dailyGoalPanel.Controls.Add(dailyGoalLabel);
             dailyGoalPanel.Controls.Add(dailyGoalBorders);
             dailyGoalPanel.Location = new Point(46, 223);
             dailyGoalPanel.Name = "dailyGoalPanel";
@@ -335,15 +345,15 @@
             calorieIntake.Text = "#/#";
             calorieIntake.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // dailyGoalLabel
             // 
-            label2.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(26, 7);
-            label2.Name = "label2";
-            label2.Size = new Size(130, 23);
-            label2.TabIndex = 2;
-            label2.Text = "Daily Goal";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            dailyGoalLabel.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dailyGoalLabel.Location = new Point(26, 7);
+            dailyGoalLabel.Name = "dailyGoalLabel";
+            dailyGoalLabel.Size = new Size(130, 23);
+            dailyGoalLabel.TabIndex = 2;
+            dailyGoalLabel.Text = "Daily Goal";
+            dailyGoalLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // dailyGoalBorders
             // 
@@ -416,12 +426,75 @@
             graphBorders.TabIndex = 17;
             graphBorders.TabStop = false;
             // 
+            // weightChangesPanel
+            // 
+            weightChangesPanel.BorderRadius = 8;
+            weightChangesPanel.BorderThickness = 1;
+            weightChangesPanel.Controls.Add(weightChangesButton);
+            weightChangesPanel.Controls.Add(todaysDate);
+            weightChangesPanel.Controls.Add(weightChangesTextBox);
+            weightChangesPanel.Controls.Add(label3);
+            weightChangesPanel.CustomizableEdges = customizableEdges5;
+            weightChangesPanel.Location = new Point(251, 223);
+            weightChangesPanel.Name = "weightChangesPanel";
+            weightChangesPanel.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            weightChangesPanel.Size = new Size(173, 127);
+            weightChangesPanel.TabIndex = 18;
+            // 
+            // weightChangesButton
+            // 
+            weightChangesButton.BorderRadius = 8;
+            weightChangesButton.CustomizableEdges = customizableEdges3;
+            weightChangesButton.DisabledState.BorderColor = Color.DarkGray;
+            weightChangesButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            weightChangesButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            weightChangesButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            weightChangesButton.FillColor = Color.FromArgb(92, 230, 225);
+            weightChangesButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            weightChangesButton.ForeColor = Color.White;
+            weightChangesButton.Location = new Point(48, 95);
+            weightChangesButton.Name = "weightChangesButton";
+            weightChangesButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            weightChangesButton.Size = new Size(77, 24);
+            weightChangesButton.TabIndex = 4;
+            weightChangesButton.Text = "Change";
+            weightChangesButton.Click += weightChangesButton_Click;
+            // 
+            // todaysDate
+            // 
+            todaysDate.Font = new Font("Calibri", 13.25F, FontStyle.Regular, GraphicsUnit.Point);
+            todaysDate.Location = new Point(21, 5);
+            todaysDate.Name = "todaysDate";
+            todaysDate.Size = new Size(130, 23);
+            todaysDate.TabIndex = 3;
+            todaysDate.Text = "XX.XX";
+            todaysDate.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // weightChangesTextBox
+            // 
+            weightChangesTextBox.Location = new Point(66, 67);
+            weightChangesTextBox.MaxLength = 4;
+            weightChangesTextBox.Name = "weightChangesTextBox";
+            weightChangesTextBox.Size = new Size(41, 23);
+            weightChangesTextBox.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(21, 27);
+            label3.Name = "label3";
+            label3.Size = new Size(134, 42);
+            label3.TabIndex = 0;
+            label3.Text = "Weight\r\nChanges";
+            label3.TextAlign = ContentAlignment.TopCenter;
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(weightChangesPanel);
             Controls.Add(dietChart);
             Controls.Add(graphBorders);
             Controls.Add(dailyGoalPanel);
@@ -452,6 +525,8 @@
             ((System.ComponentModel.ISupportInitialize)dailyGoalBorders).EndInit();
             ((System.ComponentModel.ISupportInitialize)dietChart).EndInit();
             ((System.ComponentModel.ISupportInitialize)graphBorders).EndInit();
+            weightChangesPanel.ResumeLayout(false);
+            weightChangesPanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -470,7 +545,7 @@
         private Label workoutsLabel;
         private Guna.UI2.WinForms.Guna2TextBox workoutsTextBox;
         private Panel dailyGoalPanel;
-        private Label label2;
+        private Label dailyGoalLabel;
         private Label fLabel;
         private Label pLabel;
         private Label cLabel;
@@ -483,5 +558,10 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart dietChart;
         private Guna.UI2.WinForms.Guna2CheckBox workoutCompletedCheckBox;
         private PictureBox graphBorders;
+        private Guna.UI2.WinForms.Guna2Panel weightChangesPanel;
+        private Label label3;
+        private TextBox weightChangesTextBox;
+        private Label todaysDate;
+        private Guna.UI2.WinForms.Guna2Button weightChangesButton;
     }
 }

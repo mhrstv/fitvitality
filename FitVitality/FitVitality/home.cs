@@ -357,6 +357,8 @@ namespace FitVitality
             dietChart.Series["WeeklyGoals"].Points[4].Label = friVal.ToString() + "%";
             dietChart.Series["WeeklyGoals"].Points[5].Label = satVal.ToString() + "%";
             dietChart.Series["WeeklyGoals"].Points[6].Label = sunVal.ToString() + "%";
+
+            todaysDate.Text = DateTime.Now.ToString("dd.MM");
         }
 
         private void home_Activated(object sender, EventArgs e)
@@ -462,6 +464,39 @@ namespace FitVitality
                         workoutsLabel.ForeColor = Color.Black;
                         workoutCompletedCheckBox.ForeColor = Color.Black;
                     }
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void weightChangesButton_Click(object sender, EventArgs e)
+        {
+            double dbWeight = 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Weight FROM UserSettings WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            dbWeight = double.Parse(reader["Weight"].ToString());
+                        }
+                    }
+                }
+            }
+            double weight = weightChangesTextBox.Text != "" ? double.Parse(weightChangesTextBox.Text) : 0;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE UserSettings SET Weight = @Weight WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    command.Parameters.AddWithValue("@Weight", dbWeight + weight);
                     command.ExecuteNonQuery();
                 }
             }

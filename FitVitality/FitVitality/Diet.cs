@@ -21,6 +21,8 @@ using System.Diagnostics.Eventing.Reader;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 using System.Security.Policy;
+using Aspose.Imaging.FileFormats.Cdr.Objects;
+using System.Collections;
 
 namespace FitVitality
 {
@@ -722,6 +724,7 @@ namespace FitVitality
                 hintLabel.Text = "Add food to the box from the search bar.";
                 chooseActivityLabel.Text = "Please select the desired\r\nactivity level and " +
                     "nutrition goal\r\nin order to make all the tabs visible!\r\n";
+                searchTextBox.CueHint.CueHintText = "Search";
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
@@ -743,6 +746,7 @@ namespace FitVitality
                 hintLabel.Text = "Добави храна от кутията за търсене.";
                 chooseActivityLabel.Text = "Моля изберете желаната\r\nактивност и цел " +
                     "за да\r\nнаправите всички панели\r\nвидими.";
+                searchTextBox.CueHint.CueHintText = "Търси";
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1022,10 +1026,11 @@ namespace FitVitality
             for (int i = 0; i < dbFoodItemsList.Count; i++)
             {
                 FoodItem foodItem = new FoodItem();
+                string query = "";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "SELECT * FROM FoodItems WHERE Name = @FoodName";
+                    query = "SELECT * FROM FoodItems WHERE Name = @FoodName";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@FoodName", dbFoodItemsList[i]);
@@ -1033,7 +1038,15 @@ namespace FitVitality
                         {
                             if (reader.Read())
                             {
-                                foodItem.FoodName = reader["Name"].ToString();
+                                if(cfg.Read("Language", "SETTINGS") == "en")
+                                {
+                                    foodItem.FoodName = reader["Name"].ToString();
+                                }
+                                else if(cfg.Read("Language", "SETTINGS") == "bg")
+                                {
+                                    foodItem.FoodName = reader["NameBG"].ToString();
+                                }
+                                foodItem.FoodNameOrigin = reader["Name"].ToString();
                                 foodItem.FoodCalories = Convert.ToDouble(dbFoodItemsCaloriesList[i]);
                                 foodItem.FoodProtein = Convert.ToDouble(dbFoodItemsProteinList[i]);
                                 foodItem.FoodCarbs = Convert.ToDouble(dbFoodItemsCarbsList[i]);
@@ -1198,30 +1211,34 @@ namespace FitVitality
                             if (activityComboBox.SelectedItem == "Заседналост")
                             {
                                 MacroBalanced(sedentaryBMR);
+                                command.Parameters.AddWithValue("@ActivitySelection", "Sedentary");
                             }
                             if (activityComboBox.SelectedItem == "Лека")
                             {
                                 MacroBalanced(exerciseBMR13);
+                                command.Parameters.AddWithValue("@ActivitySelection", "Light");
                             }
                             if (activityComboBox.SelectedItem == "Умерена")
                             {
                                 MacroBalanced(exerciseBMR45);
+                                command.Parameters.AddWithValue("@ActivitySelection", "Moderate");
                             }
                             if (activityComboBox.SelectedItem == "Активна")
                             {
                                 MacroBalanced(DailyBMR34);
+                                command.Parameters.AddWithValue("@ActivitySelection", "Active");
                             }
                             if (activityComboBox.SelectedItem == "Много активна")
                             {
                                 MacroBalanced(intenseBMR67);
+                                command.Parameters.AddWithValue("@ActivitySelection", "Very active");
                             }
                             if (activityComboBox.SelectedItem == "Екстра активна")
                             {
                                 MacroBalanced(veryIntenseBMR);
+                                command.Parameters.AddWithValue("@ActivitySelection", "Extra active");
                             }
-                            command.Parameters.AddWithValue("@ActivitySelection", activityComboBox.SelectedItem.ToString());
                             connection.Open();
-                            
                             command.ExecuteNonQuery();
                             if (activityComboBox.Text != "")
                             {
@@ -1842,14 +1859,23 @@ namespace FitVitality
 
         private void searchIcon_Click(object sender, EventArgs e)
         {
+            var cfg = new Config("FitVitality.ini");
             if (searchPanel.Visible != true && searchTextBox.Text != "")
             {
                 searchPanel.Controls.Clear();
                 searchFoodItems.Clear();
                 string keyword = searchTextBox.Text;
+                string query = "";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM FoodItems WHERE Name LIKE @keyword";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        query = "SELECT * FROM FoodItems WHERE Name LIKE @keyword";
+                    }
+                    else if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        query = "SELECT * FROM FoodItems WHERE NameBG LIKE @keyword";
+                    }
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
@@ -1860,7 +1886,15 @@ namespace FitVitality
                             {
                                 searchPanel.Visible = true;
                                 SearchFoodItem searchFoodItem = new SearchFoodItem();
-                                searchFoodItem.FoodName = reader["Name"].ToString();
+                                if (cfg.Read("Language", "SETTINGS") == "en")
+                                {
+                                    searchFoodItem.FoodName = reader["Name"].ToString();
+                                }
+                                else if (cfg.Read("Language", "SETTINGS") == "bg")
+                                {
+                                    searchFoodItem.FoodName = reader["NameBG"].ToString();
+                                }
+                                searchFoodItem.FoodNameOrigin = reader["Name"].ToString();
                                 searchFoodItem.FoodCalories = double.Parse(reader["Calories"].ToString());
                                 searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
                                 searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
@@ -1876,13 +1910,14 @@ namespace FitVitality
                 for (int i = 0; i < searchFoodItems.Count; i++)
                 {
                     string foodName = searchFoodItems[i].FoodName;
+                    string foodNameOrigin = searchFoodItems[i].FoodNameOrigin;
                     double foodCalories = searchFoodItems[i].FoodCalories;
                     double foodProtein = searchFoodItems[i].FoodProtein;
                     double foodCarbs = searchFoodItems[i].FoodCarbs;
                     double foodFat = searchFoodItems[i].FoodFat;
                     double foodGrams = searchFoodItems[i].FoodGrams;
                     string foodImage = searchFoodItems[i].FoodImage;
-                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodCalories, foodProtein, foodCarbs, foodFat, foodGrams, foodImage);
+                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodNameOrigin, foodCalories, foodProtein, foodCarbs, foodFat, foodGrams, foodImage);
                     if (searchPanel.Height < 120)
                     {
                         searchPanel.Height += 40;
@@ -1895,9 +1930,17 @@ namespace FitVitality
                 searchPanel.Controls.Clear();
                 searchFoodItems.Clear();
                 string keyword = searchTextBox.Text;
+                string query = "";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT * FROM FoodItems WHERE Name LIKE @keyword";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        query = "SELECT * FROM FoodItems WHERE Name LIKE @keyword";
+                    }
+                    else if(cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        query = "SELECT * FROM FoodItems WHERE NameBG LIKE @keyword";
+                    }
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
@@ -1908,7 +1951,15 @@ namespace FitVitality
                             {
 
                                 SearchFoodItem searchFoodItem = new SearchFoodItem();
-                                searchFoodItem.FoodName = reader["Name"].ToString();
+                                if(cfg.Read("Language", "SETTINGS") == "en")
+                                {
+                                    searchFoodItem.FoodName = reader["Name"].ToString();
+                                }
+                                else if(cfg.Read("Language", "SETTINGS") == "bg")
+                                {
+                                    searchFoodItem.FoodName = reader["NameBG"].ToString();
+                                }
+                                searchFoodItem.FoodNameOrigin = reader["Name"].ToString();
                                 searchFoodItem.FoodCalories = double.Parse(reader["Calories"].ToString());
                                 searchFoodItem.FoodProtein = double.Parse(reader["Protein"].ToString());
                                 searchFoodItem.FoodCarbs = double.Parse(reader["Carbohydrates"].ToString());
@@ -1924,13 +1975,14 @@ namespace FitVitality
                 for (int i = 0; i < searchFoodItems.Count; i++)
                 {
                     string foodName = searchFoodItems[i].FoodName;
+                    string foodNameOrigin = searchFoodItems[i].FoodNameOrigin;
                     double foodCalories = searchFoodItems[i].FoodCalories;
                     double foodProtein = searchFoodItems[i].FoodProtein;
                     double foodCarbs = searchFoodItems[i].FoodCarbs;
                     double foodFat = searchFoodItems[i].FoodFat;
                     double foodGrams = searchFoodItems[i].FoodGrams;
                     string foodImage = searchFoodItems[i].FoodImage;
-                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodCalories, foodProtein, foodCarbs, foodFat, foodGrams, foodImage);
+                    searchFoodItems[i].ButtonClicked += (sender, e) => searchFoodItem_Click(sender, e, foodName, foodNameOrigin, foodCalories, foodProtein, foodCarbs, foodFat, foodGrams, foodImage);
                     if (searchPanel.Height < 120)
                     {
                         searchPanel.Height += 40;
@@ -1942,14 +1994,13 @@ namespace FitVitality
             {
                 searchTextBox.StateCommon.Border.Color1 = Color.Red;
                 searchTextBox.StateNormal.Border.Color1 = Color.Red;
-                var cfg = new Config("FitVitality.ini");
                 if (cfg.Read("Language", "SETTINGS") == "en")
                 {
                     searchTextBox.CueHint.CueHintText = "Search must not be empty.";
                 }
                 if (cfg.Read("Language", "SETTINGS") == "bg")
                 {
-                    searchTextBox.CueHint.CueHintText = "Търсачката не тможе да е празна.";
+                    searchTextBox.CueHint.CueHintText = "Търсачката не може да е празна.";
                 }
                 searchTextBox.CueHint.Color1 = Color.Red;
             }
@@ -2077,13 +2128,14 @@ namespace FitVitality
         {
             ifSearchNotClicked(sender, e);
         }
-        private void searchFoodItem_Click(object sender, EventArgs e, string name, double calories, double protein, double carbs, double fat, double grams, string image)
+        private void searchFoodItem_Click(object sender, EventArgs e, string name, string nameorigin, double calories, double protein, double carbs, double fat, double grams, string image)
         {
             searchPanel.Visible = false;
             searchFoodItems.Clear();
             searchPanel.Controls.Clear();
             FoodItem foodItem = new FoodItem();
             foodItem.FoodName = name;
+            foodItem.FoodNameOrigin = nameorigin;
             foodItem.FoodCalories = calories;
             foodItem.FoodProtein = protein;
             foodItem.FoodCarbs = carbs;
@@ -2146,7 +2198,7 @@ namespace FitVitality
             string itemsFat = "";
             for (int i = 0; i < foodItems.Count; i++)
             {
-                items += foodItems[i].FoodName + ",";
+                items += foodItems[i].FoodNameOrigin + ",";
                 itemsamount += foodItems[i].FoodGrams + ",";
                 itemsCalories += foodItems[i].FoodCalories + ",";
                 itemsProtein += foodItems[i].FoodProtein + ",";
@@ -2230,7 +2282,7 @@ namespace FitVitality
             string itemsFat = "";
             for (int i = 0; i < foodItems.Count; i++)
             {
-                items += foodItems[i].FoodName + ",";
+                items += foodItems[i].FoodNameOrigin + ",";
                 itemsamount += foodItems[i].FoodGrams + ",";
                 itemsCalories += foodItems[i].FoodCalories + ",";
                 itemsProtein += foodItems[i].FoodProtein + ",";
@@ -2314,7 +2366,7 @@ namespace FitVitality
             string itemsFat = "";
             for (int i = 0; i < foodItems.Count; i++)
             {
-                items += foodItems[i].FoodName + ",";
+                items += foodItems[i].FoodNameOrigin + ",";
                 itemsamount += foodItems[i].FoodGrams + ",";
                 itemsCalories += foodItems[i].FoodCalories + ",";
                 itemsProtein += foodItems[i].FoodProtein + ",";
@@ -2411,7 +2463,7 @@ namespace FitVitality
             string itemsFat = "";
             for (int i = 0; i < foodItems.Count; i++)
             {
-                items += foodItems[i].FoodName + ",";
+                items += foodItems[i].FoodNameOrigin + ",";
                 itemsamount += foodItems[i].FoodGrams + ",";
                 itemsCalories += foodItems[i].FoodCalories + ",";
                 itemsProtein += foodItems[i].FoodProtein + ",";

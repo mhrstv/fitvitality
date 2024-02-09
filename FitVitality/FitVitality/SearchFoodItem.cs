@@ -19,6 +19,7 @@ namespace FitVitality
         public event EventHandler ButtonClicked;
         #region
         private string _foodName;
+        private string _foodNameOrigin;
         private double _foodCalories;
         private double _foodProtein;
         private double _foodCarbs;
@@ -66,6 +67,12 @@ namespace FitVitality
         {
             get { return _foodName; }
             set { _foodName = value; foodName.Text = value; }
+        }
+        [Category("Custom Props")]
+        public string FoodNameOrigin
+        {
+            get { return _foodNameOrigin; }
+            set { _foodNameOrigin = value; }
         }
         [Category("Custom Props")]
         public double FoodCalories

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diet));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftC = new PictureBox();
             rightC = new PictureBox();
             vLine1 = new PictureBox();
@@ -64,7 +64,7 @@
             searchPanel = new FlowLayoutPanel();
             hintLabel = new Label();
             hiddenPanel1 = new Panel();
-            label1 = new Label();
+            chooseActivityLabel = new Label();
             hiddenPanel2 = new Panel();
             activityComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
@@ -139,13 +139,13 @@
             // 
             // dietLabel
             // 
-            dietLabel.AutoSize = true;
             dietLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dietLabel.Location = new Point(320, 12);
+            dietLabel.Location = new Point(269, 12);
             dietLabel.Name = "dietLabel";
-            dietLabel.Size = new Size(51, 24);
+            dietLabel.Size = new Size(152, 24);
             dietLabel.TabIndex = 21;
             dietLabel.Text = "Diet";
+            dietLabel.TextAlign = ContentAlignment.MiddleCenter;
             dietLabel.Click += dietLabel_Click;
             // 
             // dietBorder2
@@ -456,32 +456,32 @@
             // 
             // hintLabel
             // 
-            hintLabel.AutoSize = true;
             hintLabel.Font = new Font("Calibri", 8.25F, FontStyle.Italic, GraphicsUnit.Point);
-            hintLabel.Location = new Point(252, 119);
+            hintLabel.Location = new Point(225, 119);
             hintLabel.Name = "hintLabel";
-            hintLabel.Size = new Size(189, 13);
+            hintLabel.Size = new Size(241, 13);
             hintLabel.TabIndex = 55;
             hintLabel.Text = "Add food to the box from the search bar.";
+            hintLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // hiddenPanel1
             // 
-            hiddenPanel1.Controls.Add(label1);
+            hiddenPanel1.Controls.Add(chooseActivityLabel);
             hiddenPanel1.Location = new Point(226, 51);
             hiddenPanel1.Name = "hiddenPanel1";
             hiddenPanel1.Size = new Size(0, 0);
             hiddenPanel1.TabIndex = 56;
             // 
-            // label1
+            // chooseActivityLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(13, 130);
-            label1.Name = "label1";
-            label1.Size = new Size(215, 48);
-            label1.TabIndex = 0;
-            label1.Text = "Please select the desired\r\n activity level and nutrition goal \r\nin order to make all the tabs visible!";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            chooseActivityLabel.AutoSize = true;
+            chooseActivityLabel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            chooseActivityLabel.Location = new Point(13, 130);
+            chooseActivityLabel.Name = "chooseActivityLabel";
+            chooseActivityLabel.Size = new Size(215, 48);
+            chooseActivityLabel.TabIndex = 0;
+            chooseActivityLabel.Text = "Please select the desired\r\n activity level and nutrition goal \r\nin order to make all the tabs visible!";
+            chooseActivityLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // hiddenPanel2
             // 
@@ -495,7 +495,7 @@
             activityComboBox.BackColor = Color.Transparent;
             activityComboBox.BorderColor = Color.FromArgb(92, 225, 230);
             activityComboBox.BorderRadius = 8;
-            activityComboBox.CustomizableEdges = customizableEdges1;
+            activityComboBox.CustomizableEdges = customizableEdges3;
             activityComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             activityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             activityComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -508,7 +508,7 @@
             activityComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             activityComboBox.Location = new Point(94, 133);
             activityComboBox.Name = "activityComboBox";
-            activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
             activityComboBox.Size = new Size(119, 24);
             activityComboBox.TabIndex = 58;
             activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
@@ -616,7 +616,7 @@
         private FlowLayoutPanel searchPanel;
         private Label hintLabel;
         private Panel hiddenPanel1;
-        private Label label1;
+        private Label chooseActivityLabel;
         private Panel hiddenPanel2;
         private Guna.UI2.WinForms.Guna2ComboBox activityComboBox;
     }

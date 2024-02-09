@@ -711,7 +711,7 @@ namespace FitVitality
                 activityLevelLabel.Text = "Activity level:";
                 manageGoalDescription.Text = "In this section you enter your \r\ngoal " +
                     "and activity depending \r\non your busyness and dream\r\nphysique.\r\n";
-                macroАbbreviation.Text = "C -  Въглехидрат, P - Протеин, F - Мазнини\r\n";
+                macroАbbreviation.Text = "C -  Carbohydrates, P - Protein, F - Fats\r\n";
                 activityComboBox.Items.Clear();
                 activityComboBox.Items.Add("Sedentary");
                 activityComboBox.Items.Add("Light");
@@ -719,9 +719,20 @@ namespace FitVitality
                 activityComboBox.Items.Add("Active");
                 activityComboBox.Items.Add("Very active");
                 activityComboBox.Items.Add("Extra active");
+                hintLabel.Text = "Add food to the box from the search bar.";
+                chooseActivityLabel.Text = "Please select the desired\r\nactivity level and " +
+                    "nutrition goal\r\nin order to make all the tabs visible!\r\n";
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
+                dietLabel.Text = "Диета";
+                manageGoalLabel.Text = "Управлявайте\nЦелта";
+                addFoodLabel.Text = "Днешно хранене";
+                dailyGoalLabel.Text = "Днешна\nЦел";
+                activityLevelLabel.Text = "Активност:";
+                manageGoalDescription.Text = "В тази секция въвеждате\r\nцелта и активността си\r\n" +
+                    "според вашата заетост\r\nи желан външен вид.";
+                macroАbbreviation.Text = "C -  Въглехидрат, P - Протеин, F - Мазнини\r\n";
                 activityComboBox.Items.Clear();
                 activityComboBox.Items.Add("Заседналост");
                 activityComboBox.Items.Add("Лека");
@@ -729,6 +740,9 @@ namespace FitVitality
                 activityComboBox.Items.Add("Активна");
                 activityComboBox.Items.Add("Много активна");
                 activityComboBox.Items.Add("Екстра активна");
+                hintLabel.Text = "Добави храна от кутията за търсене.";
+                chooseActivityLabel.Text = "Моля изберете желаната\r\nактивност и цел " +
+                    "за да\r\nнаправите всички панели\r\nвидими.";
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -796,66 +810,135 @@ namespace FitVitality
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.Read())
+                        if (cfg.Read("Language", "SETTINGS") == "en")
                         {
-                            if (reader["ActivitySelection"].ToString() != String.Empty)
+                            if (reader.Read())
                             {
-                                switch (reader["ActivitySelection"].ToString())
+                                if (reader["ActivitySelection"].ToString() != String.Empty)
                                 {
-                                    case "Sedentary":
-                                        activityComboBox.SelectedItem = "Sedentary";
-                                        break;
-                                    case "Light":
-                                        activityComboBox.SelectedItem = "Light";
-                                        break;
-                                    case "Moderate":
-                                        activityComboBox.SelectedItem = "Moderate";
-                                        break;
-                                    case "Active":
-                                        activityComboBox.SelectedItem = "Active";
-                                        break;
-                                    case "Very active":
-                                        activityComboBox.SelectedItem = "Very active";
-                                        break;
-                                    case "Extra active":
-                                        activityComboBox.SelectedItem = "Extra active";
-                                        break;
-                                }
-                                if (reader["MacroSelection"].ToString() != String.Empty)
-                                {
-                                    switch (reader["MacroSelection"].ToString())
+                                    switch (reader["ActivitySelection"].ToString())
                                     {
-                                        case "Balanced":
-                                            balancedButton_Click(sender, e);
+                                        case "Sedentary":
+                                            activityComboBox.SelectedItem = "Sedentary";
                                             break;
-                                        case "HighProtein":
-                                            highProteinButton_Click(sender, e);
+                                        case "Light":
+                                            activityComboBox.SelectedItem = "Light";
                                             break;
-                                        case "LowFat":
-                                            lowFatButton_Click(sender, e);
+                                        case "Moderate":
+                                            activityComboBox.SelectedItem = "Moderate";
                                             break;
-                                        case "LowCarbs":
-                                            lowCarbsButton_Click(sender, e);
+                                        case "Active":
+                                            activityComboBox.SelectedItem = "Active";
+                                            break;
+                                        case "Very active":
+                                            activityComboBox.SelectedItem = "Very active";
+                                            break;
+                                        case "Extra active":
+                                            activityComboBox.SelectedItem = "Extra active";
                                             break;
                                     }
-                                    hiddenPanel1.Visible = false;
-                                    hiddenPanel2.Visible = false;
+                                    if (reader["MacroSelection"].ToString() != String.Empty)
+                                    {
+                                        switch (reader["MacroSelection"].ToString())
+                                        {
+                                            case "Balanced":
+                                                balancedButton_Click(sender, e);
+                                                break;
+                                            case "HighProtein":
+                                                highProteinButton_Click(sender, e);
+                                                break;
+                                            case "LowFat":
+                                                lowFatButton_Click(sender, e);
+                                                break;
+                                            case "LowCarbs":
+                                                lowCarbsButton_Click(sender, e);
+                                                break;
+                                        }
+                                        hiddenPanel1.Visible = false;
+                                        hiddenPanel2.Visible = false;
+                                    }
+                                    else
+                                    {
+                                        if (activityComboBox.Text != "")
+                                        {
+                                            hiddenPanel1.Visible = false;
+                                            hiddenPanel2.Visible = true;
+                                        }
+                                    }
                                 }
                                 else
                                 {
                                     if (activityComboBox.Text != "")
                                     {
-                                        hiddenPanel1.Visible = false;
+                                        hiddenPanel1.Visible = true;
                                         hiddenPanel2.Visible = true;
                                     }
                                 }
                             }
-                            else
+                        }
+                        if (cfg.Read("Language", "SETTINGS") == "bg")
+                        {
+                            if (reader.Read())
                             {
-                                if (activityComboBox.Text != "")
+                                if (reader["ActivitySelection"].ToString() != String.Empty)
                                 {
-                                    hiddenPanel1.Visible = true;
-                                    hiddenPanel2.Visible = true;
+                                    switch (reader["ActivitySelection"].ToString())
+                                    {
+                                        case "Sedentary":
+                                            activityComboBox.SelectedItem = "Заседналост";
+                                            break;
+                                        case "Light":
+                                            activityComboBox.SelectedItem = "Лека";
+                                            break;
+                                        case "Moderate":
+                                            activityComboBox.SelectedItem = "Умерена";
+                                            break;
+                                        case "Active":
+                                            activityComboBox.SelectedItem = "Активна";
+                                            break;
+                                        case "Very active":
+                                            activityComboBox.SelectedItem = "Много активна";
+                                            break;
+                                        case "Extra active":
+                                            activityComboBox.SelectedItem = "Екстра активна";
+                                            break;
+                                    }
+                                    if (reader["MacroSelection"].ToString() != String.Empty)
+                                    {
+                                        switch (reader["MacroSelection"].ToString())
+                                        {
+                                            case "Balanced":
+                                                balancedButton_Click(sender, e);
+                                                break;
+                                            case "HighProtein":
+                                                highProteinButton_Click(sender, e);
+                                                break;
+                                            case "LowFat":
+                                                lowFatButton_Click(sender, e);
+                                                break;
+                                            case "LowCarbs":
+                                                lowCarbsButton_Click(sender, e);
+                                                break;
+                                        }
+                                        hiddenPanel1.Visible = false;
+                                        hiddenPanel2.Visible = false;
+                                    }
+                                    else
+                                    {
+                                        if (activityComboBox.Text != "")
+                                        {
+                                            hiddenPanel1.Visible = false;
+                                            hiddenPanel2.Visible = true;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (activityComboBox.Text != "")
+                                    {
+                                        hiddenPanel1.Visible = true;
+                                        hiddenPanel2.Visible = true;
+                                    }
                                 }
                             }
                         }
@@ -1014,351 +1097,741 @@ namespace FitVitality
 
         private void activityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            kCalLabel.Visible = true;
-            cLabel.Visible = true;
-            pLabel.Visible = true;
-            fLabel.Visible = true;
-            calorieIntake.Visible = true;
-            carbohydrates.Visible = true;
-            fat.Visible = true;
-            protein.Visible = true;
-            balancedButton.Visible = true;
-            balancedButton.Image = Properties.Resources.balanced;
-            highProteinButton.Image = Properties.Resources.highProtein;
-            lowFatButton.Image = Properties.Resources.lowFat;
-            lowCarbsButton.Image = Properties.Resources.lowCarbs;
-            lowCarbsButton.Visible = true;
-            lowFatButton.Visible = true;
-            highProteinButton.Visible = true;
-            if (activityComboBox.Text != "")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                kCalLabel.Visible = true;
+                cLabel.Visible = true;
+                pLabel.Visible = true;
+                fLabel.Visible = true;
+                calorieIntake.Visible = true;
+                carbohydrates.Visible = true;
+                fat.Visible = true;
+                protein.Visible = true;
+                balancedButton.Visible = true;
+                balancedButton.Image = Properties.Resources.balanced;
+                highProteinButton.Image = Properties.Resources.highProtein;
+                lowFatButton.Image = Properties.Resources.lowFat;
+                lowCarbsButton.Image = Properties.Resources.lowCarbs;
+                lowCarbsButton.Visible = true;
+                lowFatButton.Visible = true;
+                highProteinButton.Visible = true;
+                if (activityComboBox.Text != "")
                 {
-                    string query = "UPDATE UserNutrition " +
-                                   "SET ActivitySelection = @ActivitySelection " +
-                                   "WHERE UserID = @UserID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        command.Parameters.AddWithValue("@UserID", _userID);
-                        if (activityComboBox.SelectedItem == "Sedentary")
+                        string query = "UPDATE UserNutrition " +
+                                       "SET ActivitySelection = @ActivitySelection " +
+                                       "WHERE UserID = @UserID";
+                        using (SqlCommand command = new SqlCommand(query, connection))
                         {
-                            MacroBalanced(sedentaryBMR);
-                        }
-                        if (activityComboBox.SelectedItem == "Light")
-                        {
-                            MacroBalanced(exerciseBMR13);
-                        }
-                        if (activityComboBox.SelectedItem == "Moderate")
-                        {
-                            MacroBalanced(exerciseBMR45);
-                        }
-                        if (activityComboBox.SelectedItem == "Active")
-                        {
-                            MacroBalanced(DailyBMR34);
-                        }
-                        if (activityComboBox.SelectedItem == "Very active")
-                        {
-                            MacroBalanced(intenseBMR67);
-                        }
-                        if (activityComboBox.SelectedItem == "Extra active")
-                        {
-                            MacroBalanced(veryIntenseBMR);
-                        }
-                        command.Parameters.AddWithValue("@ActivitySelection", activityComboBox.SelectedItem.ToString());
-                        connection.Open();
-                        command.ExecuteNonQuery();
-                        if (activityComboBox.Text != "")
-                        {
-                            hiddenPanel2.Visible = false;
+                            command.Parameters.AddWithValue("@UserID", _userID);
+                            if (activityComboBox.SelectedItem == "Sedentary")
+                            {
+                                MacroBalanced(sedentaryBMR);
+                            }
+                            if (activityComboBox.SelectedItem == "Light")
+                            {
+                                MacroBalanced(exerciseBMR13);
+                            }
+                            if (activityComboBox.SelectedItem == "Moderate")
+                            {
+                                MacroBalanced(exerciseBMR45);
+                            }
+                            if (activityComboBox.SelectedItem == "Active")
+                            {
+                                MacroBalanced(DailyBMR34);
+                            }
+                            if (activityComboBox.SelectedItem == "Very active")
+                            {
+                                MacroBalanced(intenseBMR67);
+                            }
+                            if (activityComboBox.SelectedItem == "Extra active")
+                            {
+                                MacroBalanced(veryIntenseBMR);
+                            }
+                            command.Parameters.AddWithValue("@ActivitySelection", activityComboBox.SelectedItem.ToString());
+                            connection.Open();
+                            command.ExecuteNonQuery();
+                            if (activityComboBox.Text != "")
+                            {
+                                hiddenPanel2.Visible = false;
 
+                            }
                         }
                     }
                 }
+                else
+                {
+                    hiddenPanel1.Visible = true;
+                    hiddenPanel2.Visible = true;
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                hiddenPanel1.Visible = true;
-                hiddenPanel2.Visible = true;
+                kCalLabel.Visible = true;
+                cLabel.Visible = true;
+                pLabel.Visible = true;
+                fLabel.Visible = true;
+                calorieIntake.Visible = true;
+                carbohydrates.Visible = true;
+                fat.Visible = true;
+                protein.Visible = true;
+                balancedButton.Visible = true;
+                balancedButton.Image = Properties.Resources.balancedbg;
+                highProteinButton.Image = Properties.Resources.highProteinbg;
+                lowFatButton.Image = Properties.Resources.lowFatbg;
+                lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
+                lowCarbsButton.Visible = true;
+                lowFatButton.Visible = true;
+                highProteinButton.Visible = true;
+                if (activityComboBox.Text != "")
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        string query = "UPDATE UserNutrition " +
+                                       "SET ActivitySelection = @ActivitySelection " +
+                                       "WHERE UserID = @UserID";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@UserID", _userID);
+                            if (activityComboBox.SelectedItem == "Заседналост")
+                            {
+                                MacroBalanced(sedentaryBMR);
+                            }
+                            if (activityComboBox.SelectedItem == "Лека")
+                            {
+                                MacroBalanced(exerciseBMR13);
+                            }
+                            if (activityComboBox.SelectedItem == "Умерена")
+                            {
+                                MacroBalanced(exerciseBMR45);
+                            }
+                            if (activityComboBox.SelectedItem == "Активна")
+                            {
+                                MacroBalanced(DailyBMR34);
+                            }
+                            if (activityComboBox.SelectedItem == "Много активна")
+                            {
+                                MacroBalanced(intenseBMR67);
+                            }
+                            if (activityComboBox.SelectedItem == "Екстра активна")
+                            {
+                                MacroBalanced(veryIntenseBMR);
+                            }
+                            command.Parameters.AddWithValue("@ActivitySelection", activityComboBox.SelectedItem.ToString());
+                            connection.Open();
+                            
+                            command.ExecuteNonQuery();
+                            if (activityComboBox.Text != "")
+                            {
+                                hiddenPanel2.Visible = false;
+
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    hiddenPanel1.Visible = true;
+                    hiddenPanel2.Visible = true;
+                }
             }
         }
 
         private void balancedButton_Click(object sender, EventArgs e)
         {
-            ifSearchNotClicked(sender, e);
-            balancedButton.Image = Properties.Resources.balancedSelected;
-            highProteinButton.Image = Properties.Resources.highProtein;
-            lowFatButton.Image = Properties.Resources.lowFat;
-            lowCarbsButton.Image = Properties.Resources.lowCarbs;
-            balancedClicked = true;
-            highProteinClicked = false;
-            lowFatClicked = false;
-            lowCarbsClicked = false;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                string query = "UPDATE UserNutrition " +
-                               "SET MacroSelection = @MacroSelection " +
-                               "WHERE UserID = @UserID";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                ifSearchNotClicked(sender, e);
+                balancedButton.Image = Properties.Resources.balancedSelected;
+                highProteinButton.Image = Properties.Resources.highProtein;
+                lowFatButton.Image = Properties.Resources.lowFat;
+                lowCarbsButton.Image = Properties.Resources.lowCarbs;
+                balancedClicked = true;
+                highProteinClicked = false;
+                lowFatClicked = false;
+                lowCarbsClicked = false;
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UserID", _userID);
-                    command.Parameters.AddWithValue("@MacroSelection", "Balanced");
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                    string query = "UPDATE UserNutrition " +
+                                   "SET MacroSelection = @MacroSelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@MacroSelection", "Balanced");
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                if (activityComboBox.SelectedItem == "Sedentary")
+                {
+                    MacroBalanced(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Light")
+                {
+                    MacroBalanced(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Moderate")
+                {
+                    MacroBalanced(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Active")
+                {
+                    MacroBalanced(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Very active")
+                {
+                    MacroBalanced(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Extra active")
+                {
+                    MacroBalanced(veryIntenseBMR);
+                }
+                if (activityComboBox.Text != "")
+                {
+                    hiddenPanel1.Visible = false;
                 }
             }
-            if (activityComboBox.SelectedItem == "Sedentary")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                MacroBalanced(sedentaryBMR);
-            }
-            if (activityComboBox.SelectedItem == "Light")
-            {
-                MacroBalanced(exerciseBMR13);
-            }
-            if (activityComboBox.SelectedItem == "Moderate")
-            {
-                MacroBalanced(exerciseBMR45);
-            }
-            if (activityComboBox.SelectedItem == "Active")
-            {
-                MacroBalanced(DailyBMR34);
-            }
-            if (activityComboBox.SelectedItem == "Very active")
-            {
-                MacroBalanced(intenseBMR67);
-            }
-            if (activityComboBox.SelectedItem == "Extra active")
-            {
-                MacroBalanced(veryIntenseBMR);
-            }
-            if (activityComboBox.Text != "")
-            {
-                hiddenPanel1.Visible = false;
+                ifSearchNotClicked(sender, e);
+                balancedButton.Image = Properties.Resources.balancedSelectedbg;
+                highProteinButton.Image = Properties.Resources.highProteinbg;
+                lowFatButton.Image = Properties.Resources.lowFatbg;
+                lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
+                balancedClicked = true;
+                highProteinClicked = false;
+                lowFatClicked = false;
+                lowCarbsClicked = false;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE UserNutrition " +
+                                   "SET MacroSelection = @MacroSelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@MacroSelection", "Balanced");
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                if (activityComboBox.SelectedItem == "Заседналост")
+                {
+                    MacroBalanced(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Лека")
+                {
+                    MacroBalanced(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Умерена")
+                {
+                    MacroBalanced(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Активна")
+                {
+                    MacroBalanced(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Много активна")
+                {
+                    MacroBalanced(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Екстра активна")
+                {
+                    MacroBalanced(veryIntenseBMR);
+                }
+                if (activityComboBox.Text != "")
+                {
+                    hiddenPanel1.Visible = false;
+                }
             }
         }
 
         private void highProteinButton_Click(object sender, EventArgs e)
         {
-            ifSearchNotClicked(sender, e);
-            balancedButton.Image = Properties.Resources.balanced;
-            highProteinButton.Image = Properties.Resources.highProteinSelected;
-            lowFatButton.Image = Properties.Resources.lowFat;
-            lowCarbsButton.Image = Properties.Resources.lowCarbs;
-            balancedClicked = false;
-            highProteinClicked = true;
-            lowFatClicked = false;
-            lowCarbsClicked = false;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                string query = "UPDATE UserNutrition " +
-                               "SET MacroSelection = @MacroSelection " +
-                               "WHERE UserID = @UserID";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                ifSearchNotClicked(sender, e);
+                balancedButton.Image = Properties.Resources.balanced;
+                highProteinButton.Image = Properties.Resources.highProteinSelected;
+                lowFatButton.Image = Properties.Resources.lowFat;
+                lowCarbsButton.Image = Properties.Resources.lowCarbs;
+                balancedClicked = false;
+                highProteinClicked = true;
+                lowFatClicked = false;
+                lowCarbsClicked = false;
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UserID", _userID);
-                    command.Parameters.AddWithValue("@MacroSelection", "HighProtein");
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                    string query = "UPDATE UserNutrition " +
+                                   "SET MacroSelection = @MacroSelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@MacroSelection", "HighProtein");
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                if (activityComboBox.SelectedItem == "Sedentary")
+                {
+                    MacroHighProtein(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Light")
+                {
+                    MacroHighProtein(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Moderate")
+                {
+                    MacroHighProtein(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Active")
+                {
+                    MacroHighProtein(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Very active")
+                {
+                    MacroHighProtein(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Extra active")
+                {
+                    MacroHighProtein(veryIntenseBMR);
+                }
+                if (activityComboBox.Text != "")
+                {
+                    hiddenPanel1.Visible = false;
                 }
             }
-            if (activityComboBox.SelectedItem == "Sedentary")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                MacroHighProtein(sedentaryBMR);
-            }
-            if (activityComboBox.SelectedItem == "Light")
-            {
-                MacroHighProtein(exerciseBMR13);
-            }
-            if (activityComboBox.SelectedItem == "Moderate")
-            {
-                MacroHighProtein(exerciseBMR45);
-            }
-            if (activityComboBox.SelectedItem == "Active")
-            {
-                MacroHighProtein(DailyBMR34);
-            }
-            if (activityComboBox.SelectedItem == "Very active")
-            {
-                MacroHighProtein(intenseBMR67);
-            }
-            if (activityComboBox.SelectedItem == "Extra active")
-            {
-                MacroHighProtein(veryIntenseBMR);
-            }
-            if (activityComboBox.Text != "")
-            {
-                hiddenPanel1.Visible = false;
+                ifSearchNotClicked(sender, e);
+                balancedButton.Image = Properties.Resources.balancedbg;
+                highProteinButton.Image = Properties.Resources.highProteinSelectedbg;
+                lowFatButton.Image = Properties.Resources.lowFatbg;
+                lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
+                balancedClicked = false;
+                highProteinClicked = true;
+                lowFatClicked = false;
+                lowCarbsClicked = false;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE UserNutrition " +
+                                   "SET MacroSelection = @MacroSelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@MacroSelection", "HighProtein");
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                if (activityComboBox.SelectedItem == "Заседналост")
+                {
+                    MacroHighProtein(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Лека")
+                {
+                    MacroHighProtein(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Умерена")
+                {
+                    MacroHighProtein(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Активна")
+                {
+                    MacroHighProtein(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Много активна")
+                {
+                    MacroHighProtein(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Екстра активна")
+                {
+                    MacroHighProtein(veryIntenseBMR);
+                }
+                if (activityComboBox.Text != "")
+                {
+                    hiddenPanel1.Visible = false;
+                }
             }
         }
 
         private void lowFatButton_Click(object sender, EventArgs e)
         {
-            ifSearchNotClicked(sender, e);
-            balancedButton.Image = Properties.Resources.balanced;
-            highProteinButton.Image = Properties.Resources.highProtein;
-            lowFatButton.Image = Properties.Resources.lowFatSelected;
-            lowCarbsButton.Image = Properties.Resources.lowCarbs;
-            balancedClicked = false;
-            highProteinClicked = false;
-            lowFatClicked = true;
-            lowCarbsClicked = false;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                string query = "UPDATE UserNutrition " +
-                               "SET MacroSelection = @MacroSelection " +
-                               "WHERE UserID = @UserID";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                ifSearchNotClicked(sender, e);
+                balancedButton.Image = Properties.Resources.balanced;
+                highProteinButton.Image = Properties.Resources.highProtein;
+                lowFatButton.Image = Properties.Resources.lowFatSelected;
+                lowCarbsButton.Image = Properties.Resources.lowCarbs;
+                balancedClicked = false;
+                highProteinClicked = false;
+                lowFatClicked = true;
+                lowCarbsClicked = false;
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UserID", _userID);
-                    command.Parameters.AddWithValue("@MacroSelection", "LowFat");
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                    string query = "UPDATE UserNutrition " +
+                                   "SET MacroSelection = @MacroSelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@MacroSelection", "LowFat");
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                if (activityComboBox.SelectedItem == "Sedentary")
+                {
+                    MacroLowFat(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Light")
+                {
+                    MacroLowFat(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Moderate")
+                {
+                    MacroLowFat(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Active")
+                {
+                    MacroLowFat(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Very active")
+                {
+                    MacroLowFat(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Extra active")
+                {
+                    MacroLowFat(veryIntenseBMR);
+                }
+                if (activityComboBox.Text != "")
+                {
+                    hiddenPanel1.Visible = false;
                 }
             }
-            if (activityComboBox.SelectedItem == "Sedentary")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                MacroLowFat(sedentaryBMR);
-            }
-            if (activityComboBox.SelectedItem == "Light")
-            {
-                MacroLowFat(exerciseBMR13);
-            }
-            if (activityComboBox.SelectedItem == "Moderate")
-            {
-                MacroLowFat(exerciseBMR45);
-            }
-            if (activityComboBox.SelectedItem == "Active")
-            {
-                MacroLowFat(DailyBMR34);
-            }
-            if (activityComboBox.SelectedItem == "Very active")
-            {
-                MacroLowFat(intenseBMR67);
-            }
-            if (activityComboBox.SelectedItem == "Extra active")
-            {
-                MacroLowFat(veryIntenseBMR);
-            }
-            if (activityComboBox.Text != "")
-            {
-                hiddenPanel1.Visible = false;
+                ifSearchNotClicked(sender, e);
+                balancedButton.Image = Properties.Resources.balancedbg;
+                highProteinButton.Image = Properties.Resources.highProteinbg;
+                lowFatButton.Image = Properties.Resources.lowFatSelectedbg;
+                lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
+                balancedClicked = false;
+                highProteinClicked = false;
+                lowFatClicked = true;
+                lowCarbsClicked = false;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE UserNutrition " +
+                                   "SET MacroSelection = @MacroSelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@MacroSelection", "LowFat");
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                if (activityComboBox.SelectedItem == "Заседналост")
+                {
+                    MacroLowFat(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Лека")
+                {
+                    MacroLowFat(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Умерена")
+                {
+                    MacroLowFat(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Активна")
+                {
+                    MacroLowFat(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Много активна")
+                {
+                    MacroLowFat(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Екстра активна")
+                {
+                    MacroLowFat(veryIntenseBMR);
+                }
+                if (activityComboBox.Text != "")
+                {
+                    hiddenPanel1.Visible = false;
+                }
             }
         }
 
         private void lowCarbsButton_Click(object sender, EventArgs e)
         {
-            ifSearchNotClicked(sender, e);
-            balancedButton.Image = Properties.Resources.balanced;
-            highProteinButton.Image = Properties.Resources.highProtein;
-            lowFatButton.Image = Properties.Resources.lowFat;
-            lowCarbsButton.Image = Properties.Resources.lowCarbsSelected;
-            balancedClicked = false;
-            highProteinClicked = false;
-            lowFatClicked = false;
-            lowCarbsClicked = true;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                string query = "UPDATE UserNutrition " +
-                               "SET MacroSelection = @MacroSelection " +
-                               "WHERE UserID = @UserID";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                ifSearchNotClicked(sender, e);
+                balancedButton.Image = Properties.Resources.balanced;
+                highProteinButton.Image = Properties.Resources.highProtein;
+                lowFatButton.Image = Properties.Resources.lowFat;
+                lowCarbsButton.Image = Properties.Resources.lowCarbsSelected;
+                balancedClicked = false;
+                highProteinClicked = false;
+                lowFatClicked = false;
+                lowCarbsClicked = true;
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UserID", _userID);
-                    command.Parameters.AddWithValue("@MacroSelection", "LowCarbs");
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                    string query = "UPDATE UserNutrition " +
+                                   "SET MacroSelection = @MacroSelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@MacroSelection", "LowCarbs");
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                if (activityComboBox.SelectedItem == "Sedentary")
+                {
+                    MacroLowCarb(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Light")
+                {
+                    MacroLowCarb(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Moderate")
+                {
+                    MacroLowCarb(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Active")
+                {
+                    MacroLowCarb(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Very active")
+                {
+                    MacroLowCarb(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Extra active")
+                {
+                    MacroLowCarb(veryIntenseBMR);
+                }
+                if (activityComboBox.Text != "")
+                {
+                    hiddenPanel1.Visible = false;
                 }
             }
-            if (activityComboBox.SelectedItem == "Sedentary")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                MacroLowCarb(sedentaryBMR);
-            }
-            if (activityComboBox.SelectedItem == "Light")
-            {
-                MacroLowCarb(exerciseBMR13);
-            }
-            if (activityComboBox.SelectedItem == "Moderate")
-            {
-                MacroLowCarb(exerciseBMR45);
-            }
-            if (activityComboBox.SelectedItem == "Active")
-            {
-                MacroLowCarb(DailyBMR34);
-            }
-            if (activityComboBox.SelectedItem == "Very active")
-            {
-                MacroLowCarb(intenseBMR67);
-            }
-            if (activityComboBox.SelectedItem == "Extra active")
-            {
-                MacroLowCarb(veryIntenseBMR);
-            }
-            if (activityComboBox.Text != "")
-            {
-                hiddenPanel1.Visible = false;
+                ifSearchNotClicked(sender, e);
+                balancedButton.Image = Properties.Resources.balancedbg;
+                highProteinButton.Image = Properties.Resources.highProteinbg;
+                lowFatButton.Image = Properties.Resources.lowFatbg;
+                lowCarbsButton.Image = Properties.Resources.lowCarbsSelectedbg;
+                balancedClicked = false;
+                highProteinClicked = false;
+                lowFatClicked = false;
+                lowCarbsClicked = true;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE UserNutrition " +
+                                   "SET MacroSelection = @MacroSelection " +
+                                   "WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@MacroSelection", "LowCarbs");
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+                if (activityComboBox.SelectedItem == "Заседналост")
+                {
+                    MacroLowCarb(sedentaryBMR);
+                }
+                if (activityComboBox.SelectedItem == "Лека")
+                {
+                    MacroLowCarb(exerciseBMR13);
+                }
+                if (activityComboBox.SelectedItem == "Умерена")
+                {
+                    MacroLowCarb(exerciseBMR45);
+                }
+                if (activityComboBox.SelectedItem == "Активна")
+                {
+                    MacroLowCarb(DailyBMR34);
+                }
+                if (activityComboBox.SelectedItem == "Много активна")
+                {
+                    MacroLowCarb(intenseBMR67);
+                }
+                if (activityComboBox.SelectedItem == "Екстра активна")
+                {
+                    MacroLowCarb(veryIntenseBMR);
+                }
+                if (activityComboBox.Text != "")
+                {
+                    hiddenPanel1.Visible = false;
+                }
             }
         }
 
         private void balancedButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!balancedClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                balancedButton.Image = Properties.Resources.balancedHover;
+                if (!balancedClicked)
+                {
+                    balancedButton.Image = Properties.Resources.balancedHover;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!balancedClicked)
+                {
+                    balancedButton.Image = Properties.Resources.balancedHoverbg;
+                }
             }
         }
 
         private void balancedButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!balancedClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                balancedButton.Image = Properties.Resources.balanced;
+                if (!balancedClicked)
+                {
+                    balancedButton.Image = Properties.Resources.balanced;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!balancedClicked)
+                {
+                    balancedButton.Image = Properties.Resources.balancedbg;
+                }
             }
         }
 
         private void highProteinButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!highProteinClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                highProteinButton.Image = Properties.Resources.highProteinHover;
+                if (!highProteinClicked)
+                {
+                    highProteinButton.Image = Properties.Resources.highProteinHover;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!highProteinClicked)
+                {
+                    highProteinButton.Image = Properties.Resources.highProteinHoverbg;
+                }
             }
         }
 
         private void highProteinButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!highProteinClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                highProteinButton.Image = Properties.Resources.highProtein;
+                if (!highProteinClicked)
+                {
+                    highProteinButton.Image = Properties.Resources.highProtein;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!highProteinClicked)
+                {
+                    highProteinButton.Image = Properties.Resources.highProteinbg;
+                }
             }
         }
 
         private void lowFatButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!lowFatClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                lowFatButton.Image = Properties.Resources.lowFatHover;
+                if (!lowFatClicked)
+                {
+                    lowFatButton.Image = Properties.Resources.lowFatHover;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!lowFatClicked)
+                {
+                    lowFatButton.Image = Properties.Resources.lowFatHoverbg;
+                }
             }
         }
 
         private void lowFatButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!lowFatClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                lowFatButton.Image = Properties.Resources.lowFat;
+                if (!lowFatClicked)
+                {
+                    lowFatButton.Image = Properties.Resources.lowFat;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!lowFatClicked)
+                {
+                    lowFatButton.Image = Properties.Resources.lowFatbg;
+                }
             }
         }
 
         private void lowCarbsButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!lowCarbsClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                lowCarbsButton.Image = Properties.Resources.lowCarbsHover;
+                if (!lowCarbsClicked)
+                {
+                    lowCarbsButton.Image = Properties.Resources.lowCarbsHover;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!lowCarbsClicked)
+                {
+                    lowCarbsButton.Image = Properties.Resources.lowCarbsHoverbg;
+                }
             }
         }
 
         private void lowCarbsButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!lowCarbsClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                lowCarbsButton.Image = Properties.Resources.lowCarbs;
+                if (!lowCarbsClicked)
+                {
+                    lowCarbsButton.Image = Properties.Resources.lowCarbs;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!lowCarbsClicked)
+                {
+                    lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
+                }
             }
         }
 
@@ -1469,7 +1942,15 @@ namespace FitVitality
             {
                 searchTextBox.StateCommon.Border.Color1 = Color.Red;
                 searchTextBox.StateNormal.Border.Color1 = Color.Red;
-                searchTextBox.CueHint.CueHintText = "Search must not be empty.";
+                var cfg = new Config("FitVitality.ini");
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    searchTextBox.CueHint.CueHintText = "Search must not be empty.";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    searchTextBox.CueHint.CueHintText = "Търсачката не тможе да е празна.";
+                }
                 searchTextBox.CueHint.Color1 = Color.Red;
             }
         }
@@ -1487,7 +1968,15 @@ namespace FitVitality
                 searchPanel.Controls.Clear();
                 searchTextBox.Enabled = false;
                 searchTextBox.Enabled = true;
-                searchTextBox.CueHint.CueHintText = "Search";
+                var cfg = new Config("FitVitality.ini");
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    searchTextBox.CueHint.CueHintText = "Search";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    searchTextBox.CueHint.CueHintText = "Търси";
+                }
                 searchTextBox.CueHint.Color1 = Color.FromArgb(63, 63, 63);
                 searchTextBox.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
                 searchTextBox.StateNormal.Border.Color1 = Color.FromArgb(177, 192, 214);

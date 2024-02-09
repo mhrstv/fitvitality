@@ -30,8 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             topbar = new Panel();
             logo2 = new PictureBox();
@@ -270,14 +270,14 @@
             // 
             // name_UsageLabel
             // 
-            name_UsageLabel.AutoSize = true;
             name_UsageLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             name_UsageLabel.ForeColor = SystemColors.Control;
-            name_UsageLabel.Location = new Point(0, 0);
+            name_UsageLabel.Location = new Point(-26, 0);
             name_UsageLabel.Name = "name_UsageLabel";
-            name_UsageLabel.Size = new Size(482, 19);
+            name_UsageLabel.Size = new Size(534, 19);
             name_UsageLabel.TabIndex = 6;
             name_UsageLabel.Text = "Note that we will only be using your name to address you within the app.";
+            name_UsageLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox_Name
             // 
@@ -309,11 +309,12 @@
             // 
             nameQuestion.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             nameQuestion.ForeColor = SystemColors.Control;
-            nameQuestion.Location = new Point(0, 0);
+            nameQuestion.Location = new Point(-15, 0);
             nameQuestion.Name = "nameQuestion";
-            nameQuestion.Size = new Size(142, 21);
+            nameQuestion.Size = new Size(171, 21);
             nameQuestion.TabIndex = 1;
             nameQuestion.Text = "What is your name?";
+            nameQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // namePanel1
             // 
@@ -427,7 +428,7 @@
             info1_ageGender.Name = "info1_ageGender";
             info1_ageGender.Size = new Size(309, 22);
             info1_ageGender.TabIndex = 13;
-            info1_ageGender.Text = "We do NOT share any of your private data and";
+            info1_ageGender.Text = "We do NOT share any of your private data and\r\n";
             info1_ageGender.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ageGenderPanel3
@@ -440,7 +441,6 @@
             // 
             // genderQuestion
             // 
-            genderQuestion.AutoSize = true;
             genderQuestion.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             genderQuestion.ForeColor = SystemColors.Control;
             genderQuestion.Location = new Point(0, 0);
@@ -448,6 +448,7 @@
             genderQuestion.Size = new Size(147, 19);
             genderQuestion.TabIndex = 2;
             genderQuestion.Text = "What is your gender?";
+            genderQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ageGenderPanel2
             // 
@@ -459,14 +460,14 @@
             // 
             // ageQuestion
             // 
-            ageQuestion.AutoSize = true;
             ageQuestion.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ageQuestion.ForeColor = SystemColors.Control;
-            ageQuestion.Location = new Point(0, 0);
+            ageQuestion.Location = new Point(-52, 0);
             ageQuestion.Name = "ageQuestion";
-            ageQuestion.Size = new Size(121, 19);
+            ageQuestion.Size = new Size(224, 19);
             ageQuestion.TabIndex = 1;
             ageQuestion.Text = "How old are you?";
+            ageQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // ageGenderPanel1
             // 
@@ -600,9 +601,9 @@
             // 
             info2_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             info2_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
-            info2_weightHeight.Location = new Point(0, 0);
+            info2_weightHeight.Location = new Point(-57, 0);
             info2_weightHeight.Name = "info2_weightHeight";
-            info2_weightHeight.Size = new Size(179, 18);
+            info2_weightHeight.Size = new Size(293, 18);
             info2_weightHeight.TabIndex = 14;
             info2_weightHeight.Text = "You can update these later!";
             info2_weightHeight.TextAlign = ContentAlignment.MiddleCenter;
@@ -617,7 +618,6 @@
             // 
             // heightQuestion
             // 
-            heightQuestion.AutoSize = true;
             heightQuestion.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             heightQuestion.ForeColor = SystemColors.Control;
             heightQuestion.Location = new Point(0, 0);
@@ -625,6 +625,7 @@
             heightQuestion.Size = new Size(122, 19);
             heightQuestion.TabIndex = 3;
             heightQuestion.Text = "How tall are you?";
+            heightQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // weightHeightPanel3
             // 
@@ -636,7 +637,6 @@
             // 
             // weightQuestion
             // 
-            weightQuestion.AutoSize = true;
             weightQuestion.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             weightQuestion.ForeColor = SystemColors.Control;
             weightQuestion.Location = new Point(0, 0);
@@ -644,6 +644,7 @@
             weightQuestion.Size = new Size(174, 19);
             weightQuestion.TabIndex = 1;
             weightQuestion.Text = "How much do you weigh?";
+            weightQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // weightHeightPanel2
             // 
@@ -657,11 +658,12 @@
             // 
             weightHeightQuestion2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             weightHeightQuestion2.ForeColor = SystemColors.Control;
-            weightHeightQuestion2.Location = new Point(0, 0);
+            weightHeightQuestion2.Location = new Point(-11, 0);
             weightHeightQuestion2.Name = "weightHeightQuestion2";
-            weightHeightQuestion2.Size = new Size(417, 19);
+            weightHeightQuestion2.Size = new Size(432, 19);
             weightHeightQuestion2.TabIndex = 16;
             weightHeightQuestion2.Text = "We will be using these measurements for future calculations.";
+            weightHeightQuestion2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // weightHeightPanel1
             // 
@@ -675,11 +677,12 @@
             // 
             weightHeightQuestion1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             weightHeightQuestion1.ForeColor = SystemColors.Control;
-            weightHeightQuestion1.Location = new Point(0, 0);
+            weightHeightQuestion1.Location = new Point(-6, 0);
             weightHeightQuestion1.Name = "weightHeightQuestion1";
-            weightHeightQuestion1.Size = new Size(318, 19);
+            weightHeightQuestion1.Size = new Size(320, 19);
             weightHeightQuestion1.TabIndex = 15;
             weightHeightQuestion1.Text = "Please provide us with your weight and height.";
+            weightHeightQuestion1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // textBox_Height
             // 
@@ -728,7 +731,7 @@
             // buttonDone
             // 
             buttonDone.BorderRadius = 10;
-            buttonDone.CustomizableEdges = customizableEdges1;
+            buttonDone.CustomizableEdges = customizableEdges3;
             buttonDone.DisabledState.BorderColor = Color.DarkGray;
             buttonDone.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonDone.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -738,7 +741,7 @@
             buttonDone.ForeColor = Color.White;
             buttonDone.Location = new Point(225, 242);
             buttonDone.Name = "buttonDone";
-            buttonDone.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            buttonDone.ShadowDecoration.CustomizableEdges = customizableEdges4;
             buttonDone.Size = new Size(90, 25);
             buttonDone.TabIndex = 45;
             buttonDone.Text = "Done";
@@ -797,9 +800,9 @@
             timerLabel.ForeColor = Color.FromArgb(36, 41, 46);
             timerLabel.Location = new Point(447, 237);
             timerLabel.Name = "timerLabel";
-            timerLabel.Size = new Size(44, 15);
+            timerLabel.Size = new Size(49, 15);
             timerLabel.TabIndex = 11;
-            timerLabel.Text = "label16";
+            timerLabel.Text = "aaaaaaa";
             timerLabel.Visible = false;
             // 
             // goalPanel1
@@ -812,7 +815,6 @@
             // 
             // goalLabel1
             // 
-            goalLabel1.AutoSize = true;
             goalLabel1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             goalLabel1.ForeColor = SystemColors.Control;
             goalLabel1.Location = new Point(0, 0);
@@ -820,6 +822,7 @@
             goalLabel1.Size = new Size(283, 19);
             goalLabel1.TabIndex = 9;
             goalLabel1.Text = "Lastly, we need to know what your goal is.";
+            goalLabel1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // buttonNext
             // 
@@ -851,9 +854,9 @@
             // 
             labelWelcome.Font = new Font("Arial Rounded MT Bold", 48F, FontStyle.Regular, GraphicsUnit.Point);
             labelWelcome.ForeColor = Color.FromArgb(250, 252, 252);
-            labelWelcome.Location = new Point(0, 0);
+            labelWelcome.Location = new Point(6, -6);
             labelWelcome.Name = "labelWelcome";
-            labelWelcome.Size = new Size(609, 133);
+            labelWelcome.Size = new Size(609, 168);
             labelWelcome.TabIndex = 3;
             labelWelcome.Text = "Welcome!";
             labelWelcome.TextAlign = ContentAlignment.MiddleCenter;
@@ -1002,26 +1005,25 @@
             // 
             // welcomeErrorLabel
             // 
-            welcomeErrorLabel.AutoSize = true;
             welcomeErrorLabel.BackColor = Color.WhiteSmoke;
             welcomeErrorLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            welcomeErrorLabel.Location = new Point(42, 41);
+            welcomeErrorLabel.Location = new Point(3, 41);
             welcomeErrorLabel.Name = "welcomeErrorLabel";
-            welcomeErrorLabel.Size = new Size(157, 36);
+            welcomeErrorLabel.Size = new Size(224, 36);
             welcomeErrorLabel.TabIndex = 2;
             welcomeErrorLabel.Text = "You have input incorrect\r\ndata!";
             welcomeErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // errorLabel
             // 
-            errorLabel.AutoSize = true;
             errorLabel.BackColor = Color.WhiteSmoke;
             errorLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            errorLabel.Location = new Point(96, 7);
+            errorLabel.Location = new Point(57, 7);
             errorLabel.Name = "errorLabel";
-            errorLabel.Size = new Size(44, 19);
+            errorLabel.Size = new Size(114, 19);
             errorLabel.TabIndex = 1;
             errorLabel.Text = "Error";
+            errorLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // welcomeError
             // 
@@ -1065,7 +1067,6 @@
             namePanel.ResumeLayout(false);
             namePanel.PerformLayout();
             panel_nameUsage.ResumeLayout(false);
-            panel_nameUsage.PerformLayout();
             namePanel2.ResumeLayout(false);
             namePanel1.ResumeLayout(false);
             ageGender_Panel.ResumeLayout(false);
@@ -1076,9 +1077,7 @@
             info2_ageGender_Panel.ResumeLayout(false);
             info1_ageGender_Panel.ResumeLayout(false);
             ageGenderPanel3.ResumeLayout(false);
-            ageGenderPanel3.PerformLayout();
             ageGenderPanel2.ResumeLayout(false);
-            ageGenderPanel2.PerformLayout();
             ageGenderPanel1.ResumeLayout(false);
             helloPanel.ResumeLayout(false);
             weightHeight_Panel.ResumeLayout(false);
@@ -1087,9 +1086,7 @@
             info1_Panel.ResumeLayout(false);
             info2_Panel.ResumeLayout(false);
             weightHeightPanel4.ResumeLayout(false);
-            weightHeightPanel4.PerformLayout();
             weightHeightPanel3.ResumeLayout(false);
-            weightHeightPanel3.PerformLayout();
             weightHeightPanel2.ResumeLayout(false);
             weightHeightPanel1.ResumeLayout(false);
             goalPanel.ResumeLayout(false);
@@ -1099,13 +1096,11 @@
             ((System.ComponentModel.ISupportInitialize)buttonMaintain).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonBulk).EndInit();
             goalPanel1.ResumeLayout(false);
-            goalPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)buttonNext).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonPrevious).EndInit();
             panelWelcome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)currentPage).EndInit();
             errorPanel.ResumeLayout(false);
-            errorPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)welcomeError).EndInit();
             ResumeLayout(false);

@@ -474,11 +474,10 @@
             // 
             // chooseActivityLabel
             // 
-            chooseActivityLabel.AutoSize = true;
             chooseActivityLabel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            chooseActivityLabel.Location = new Point(13, 130);
+            chooseActivityLabel.Location = new Point(2, 130);
             chooseActivityLabel.Name = "chooseActivityLabel";
-            chooseActivityLabel.Size = new Size(215, 48);
+            chooseActivityLabel.Size = new Size(237, 79);
             chooseActivityLabel.TabIndex = 0;
             chooseActivityLabel.Text = "Please select the desired\r\n activity level and nutrition goal \r\nin order to make all the tabs visible!";
             chooseActivityLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -576,7 +575,6 @@
             ((System.ComponentModel.ISupportInitialize)lowFatButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)searchIcon).EndInit();
             hiddenPanel1.ResumeLayout(false);
-            hiddenPanel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

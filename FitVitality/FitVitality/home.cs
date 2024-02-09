@@ -33,6 +33,38 @@ namespace FitVitality
         private void home_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                dashboardLabel.Text = "Dashboard";
+                dailyGoalLabel.Text = "Daily Goal";
+                weightChangesLabel.Text = "Weight\r\nChanges";
+                weightChangesButton.Text = "Change";
+                workoutCompletedCheckBox.Text = "Completed";
+                dietChart.Titles["Diet"].Text = "This week`s goals %";
+                dietChart.Series["WeeklyGoals"].Points[0].AxisLabel = "Mon";
+                dietChart.Series["WeeklyGoals"].Points[1].AxisLabel = "Tue";
+                dietChart.Series["WeeklyGoals"].Points[2].AxisLabel = "Wed";
+                dietChart.Series["WeeklyGoals"].Points[3].AxisLabel = "Thu";
+                dietChart.Series["WeeklyGoals"].Points[4].AxisLabel = "Fri";
+                dietChart.Series["WeeklyGoals"].Points[5].AxisLabel = "Sat";
+                dietChart.Series["WeeklyGoals"].Points[6].AxisLabel = "Sun";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                dashboardLabel.Text = "Табло";
+                dailyGoalLabel.Text = "Днешна цел";
+                weightChangesLabel.Text = "Промяна в тегло";
+                weightChangesButton.Text = "Промяна";
+                workoutCompletedCheckBox.Text = "Завършена";
+                dietChart.Titles["Diet"].Text = "Седмични цели %";
+                dietChart.Series["WeeklyGoals"].Points[0].AxisLabel = "Пон";
+                dietChart.Series["WeeklyGoals"].Points[1].AxisLabel = "Вт";
+                dietChart.Series["WeeklyGoals"].Points[2].AxisLabel = "Ср";
+                dietChart.Series["WeeklyGoals"].Points[3].AxisLabel = "Чет";
+                dietChart.Series["WeeklyGoals"].Points[4].AxisLabel = "Пет";
+                dietChart.Series["WeeklyGoals"].Points[5].AxisLabel = "Съб";
+                dietChart.Series["WeeklyGoals"].Points[6].AxisLabel = "Нед";
+            }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -155,7 +187,6 @@ namespace FitVitality
                 fat.ForeColor = Color.Red;
             }
 
-
             string monday_workout = "Rest Day";
             string tuesday_workout = "Rest Day";
             string wednesday_workout = "Rest Day";
@@ -216,7 +247,14 @@ namespace FitVitality
             }
             if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
             {
-                workoutsLabel.Text = "Monday";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workoutsLabel.Text = "Monday";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workoutsLabel.Text = "Понеделник";
+                }
                 for (int i = 0; i < monday_List.Count; i++)
                 {
                     if (i < monday_List.Count - 1) workoutsTextBox.Text += "3x12 - " + monday_List[i] + "\n";
@@ -224,13 +262,27 @@ namespace FitVitality
                 }
                 if (workoutsTextBox.Text == "")
                 {
-                    workoutsTextBox.Text = "None - Rest Day";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutsTextBox.Text = "None - Rest Day";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutsTextBox.Text = "Нищо - Почивен Ден";
+                    }
                     workoutsTextBox.TextAlign = HorizontalAlignment.Center;
                 }
             }
             else if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
             {
-                workoutsLabel.Text = "Tuesday";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workoutsLabel.Text = "Tuesday";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workoutsLabel.Text = "Вторник";
+                }
                 for (int i = 0; i < tuesday_List.Count; i++)
                 {
                     if (i < tuesday_List.Count - 1) workoutsTextBox.Text += "3x12 - " + tuesday_List[i] + "\n";
@@ -238,13 +290,27 @@ namespace FitVitality
                 }
                 if (workoutsTextBox.Text == "")
                 {
-                    workoutsTextBox.Text = "None - Rest Day";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutsTextBox.Text = "None - Rest Day";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutsTextBox.Text = "Нищо - Почивен Ден";
+                    }
                     workoutsTextBox.TextAlign = HorizontalAlignment.Center;
                 }
             }
             else if (DateTime.Now.DayOfWeek == DayOfWeek.Wednesday)
             {
-                workoutsLabel.Text = "Wednesday";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workoutsLabel.Text = "Wednesday";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workoutsLabel.Text = "Сряда";
+                }
                 for (int i = 0; i < wednesday_List.Count; i++)
                 {
                     if (i < wednesday_List.Count - 1) workoutsTextBox.Text += "3x12 - " + wednesday_List[i] + "\n";
@@ -252,13 +318,27 @@ namespace FitVitality
                 }
                 if (workoutsTextBox.Text == "")
                 {
-                    workoutsTextBox.Text = "None - Rest Day";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutsTextBox.Text = "None - Rest Day";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutsTextBox.Text = "Нищо - Почивен Ден";
+                    }
                     workoutsTextBox.TextAlign = HorizontalAlignment.Center;
                 }
             }
             else if (DateTime.Now.DayOfWeek == DayOfWeek.Thursday)
             {
-                workoutsLabel.Text = "Thursday";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workoutsLabel.Text = "Thursday";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workoutsLabel.Text = "Четвъртък";
+                }
                 for (int i = 0; i < thursday_List.Count; i++)
                 {
                     if (i < thursday_List.Count - 1) workoutsTextBox.Text += "3x12 - " + thursday_List[i] + "\n";
@@ -266,13 +346,27 @@ namespace FitVitality
                 }
                 if (workoutsTextBox.Text == "")
                 {
-                    workoutsTextBox.Text = "None - Rest Day";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutsTextBox.Text = "None - Rest Day";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutsTextBox.Text = "Нищо - Почивен Ден";
+                    }
                     workoutsTextBox.TextAlign = HorizontalAlignment.Center;
                 }
             }
             else if (DateTime.Now.DayOfWeek == DayOfWeek.Friday)
             {
-                workoutsLabel.Text = "Friday";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workoutsLabel.Text = "Friday";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workoutsLabel.Text = "Петък";
+                }
                 for (int i = 0; i < friday_List.Count; i++)
                 {
                     if (i < friday_List.Count - 1) workoutsTextBox.Text += "3x12 - " + friday_List[i] + "\n";
@@ -280,13 +374,27 @@ namespace FitVitality
                 }
                 if (workoutsTextBox.Text == "")
                 {
-                    workoutsTextBox.Text = "None - Rest Day";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutsTextBox.Text = "None - Rest Day";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutsTextBox.Text = "Нищо - Почивен Ден";
+                    }
                     workoutsTextBox.TextAlign = HorizontalAlignment.Center;
                 }
             }
             else if (DateTime.Now.DayOfWeek == DayOfWeek.Saturday)
             {
-                workoutsLabel.Text = "Saturday";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workoutsLabel.Text = "Saturday";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workoutsLabel.Text = "Събота";
+                }
                 for (int i = 0; i < saturday_List.Count; i++)
                 {
                     if (i < saturday_List.Count - 1) workoutsTextBox.Text += "3x12 - " + saturday_List[i] + "\n";
@@ -294,13 +402,27 @@ namespace FitVitality
                 }
                 if (workoutsTextBox.Text == "")
                 {
-                    workoutsTextBox.Text = "None - Rest Day";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutsTextBox.Text = "None - Rest Day";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutsTextBox.Text = "Нищо - Почивен Ден";
+                    }
                     workoutsTextBox.TextAlign = HorizontalAlignment.Center;
                 }
             }
             else if (DateTime.Now.DayOfWeek == DayOfWeek.Sunday)
             {
-                workoutsLabel.Text = "Sunday";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workoutsLabel.Text = "Sunday";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workoutsLabel.Text = "Неделя";
+                }
                 for (int i = 0; i < sunday_List.Count; i++)
                 {
                     if (i < sunday_List.Count - 1) workoutsTextBox.Text += "3x12 - " + sunday_List[i] + "\n";
@@ -308,7 +430,14 @@ namespace FitVitality
                 }
                 if (workoutsTextBox.Text == "")
                 {
-                    workoutsTextBox.Text = "None - Rest Day";
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutsTextBox.Text = "None - Rest Day";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutsTextBox.Text = "Нищо - Почивен Ден";
+                    }
                     workoutsTextBox.TextAlign = HorizontalAlignment.Center;
                 }
             }
@@ -500,6 +629,11 @@ namespace FitVitality
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void dietChart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

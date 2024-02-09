@@ -52,7 +52,7 @@
             vLine1 = new PictureBox();
             rightC = new PictureBox();
             lefCorner = new PictureBox();
-            label1 = new Label();
+            dashboardLabel = new Label();
             workoutsPanel = new Panel();
             workoutCompletedCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             workoutsTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -75,8 +75,8 @@
             weightChangesButton = new Guna.UI2.WinForms.Guna2Button();
             todaysDate = new Label();
             weightChangesTextBox = new TextBox();
-            label3 = new Label();
-            pictureBox1 = new PictureBox();
+            weightChangesLabel = new Label();
+            weightChangesBorders = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
@@ -90,7 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)dietChart).BeginInit();
             ((System.ComponentModel.ISupportInitialize)graphBorders).BeginInit();
             weightChangesPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)weightChangesBorders).BeginInit();
             SuspendLayout();
             // 
             // rotationTimer
@@ -152,15 +152,15 @@
             lefCorner.TabIndex = 12;
             lefCorner.TabStop = false;
             // 
-            // label1
+            // dashboardLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(284, 22);
-            label1.Name = "label1";
-            label1.Size = new Size(122, 24);
-            label1.TabIndex = 13;
-            label1.Text = "Dashboard";
+            dashboardLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dashboardLabel.Location = new Point(259, 22);
+            dashboardLabel.Name = "dashboardLabel";
+            dashboardLabel.Size = new Size(173, 24);
+            dashboardLabel.TabIndex = 13;
+            dashboardLabel.Text = "Dashboard";
+            dashboardLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // workoutsPanel
             // 
@@ -175,16 +175,15 @@
             // 
             // workoutCompletedCheckBox
             // 
-            workoutCompletedCheckBox.AutoSize = true;
             workoutCompletedCheckBox.CheckedState.BorderColor = Color.Black;
             workoutCompletedCheckBox.CheckedState.BorderRadius = 3;
             workoutCompletedCheckBox.CheckedState.BorderThickness = 1;
             workoutCompletedCheckBox.CheckedState.FillColor = Color.White;
             workoutCompletedCheckBox.CheckMarkColor = Color.Green;
             workoutCompletedCheckBox.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            workoutCompletedCheckBox.Location = new Point(64, 234);
+            workoutCompletedCheckBox.Location = new Point(58, 234);
             workoutCompletedCheckBox.Name = "workoutCompletedCheckBox";
-            workoutCompletedCheckBox.Size = new Size(84, 19);
+            workoutCompletedCheckBox.Size = new Size(97, 19);
             workoutCompletedCheckBox.TabIndex = 52;
             workoutCompletedCheckBox.Text = "Completed";
             workoutCompletedCheckBox.UncheckedState.BorderColor = Color.Black;
@@ -418,6 +417,7 @@
             title1.Name = "Diet";
             title1.Text = "This week's goals %";
             dietChart.Titles.Add(title1);
+            dietChart.Click += dietChart_Click;
             // 
             // graphBorders
             // 
@@ -435,8 +435,8 @@
             weightChangesPanel.Controls.Add(weightChangesButton);
             weightChangesPanel.Controls.Add(todaysDate);
             weightChangesPanel.Controls.Add(weightChangesTextBox);
-            weightChangesPanel.Controls.Add(label3);
-            weightChangesPanel.Controls.Add(pictureBox1);
+            weightChangesPanel.Controls.Add(weightChangesLabel);
+            weightChangesPanel.Controls.Add(weightChangesBorders);
             weightChangesPanel.CustomizableEdges = customizableEdges5;
             weightChangesPanel.Location = new Point(251, 223);
             weightChangesPanel.Name = "weightChangesPanel";
@@ -455,10 +455,10 @@
             weightChangesButton.FillColor = Color.FromArgb(92, 230, 225);
             weightChangesButton.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             weightChangesButton.ForeColor = Color.White;
-            weightChangesButton.Location = new Point(48, 95);
+            weightChangesButton.Location = new Point(39, 95);
             weightChangesButton.Name = "weightChangesButton";
             weightChangesButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            weightChangesButton.Size = new Size(77, 24);
+            weightChangesButton.Size = new Size(94, 24);
             weightChangesButton.TabIndex = 4;
             weightChangesButton.Text = "Change";
             weightChangesButton.Click += weightChangesButton_Click;
@@ -481,24 +481,24 @@
             weightChangesTextBox.Size = new Size(41, 23);
             weightChangesTextBox.TabIndex = 1;
             // 
-            // label3
+            // weightChangesLabel
             // 
-            label3.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(21, 27);
-            label3.Name = "label3";
-            label3.Size = new Size(134, 42);
-            label3.TabIndex = 0;
-            label3.Text = "Weight\r\nChanges";
-            label3.TextAlign = ContentAlignment.TopCenter;
+            weightChangesLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            weightChangesLabel.Location = new Point(21, 27);
+            weightChangesLabel.Name = "weightChangesLabel";
+            weightChangesLabel.Size = new Size(134, 42);
+            weightChangesLabel.TabIndex = 0;
+            weightChangesLabel.Text = "Weight\r\nChanges";
+            weightChangesLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // weightChangesBorders
             // 
-            pictureBox1.Image = Properties.Resources.weightChangeBorders;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(173, 127);
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            weightChangesBorders.Image = Properties.Resources.weightChangeBorders;
+            weightChangesBorders.Location = new Point(0, 0);
+            weightChangesBorders.Name = "weightChangesBorders";
+            weightChangesBorders.Size = new Size(173, 127);
+            weightChangesBorders.TabIndex = 5;
+            weightChangesBorders.TabStop = false;
             // 
             // home
             // 
@@ -511,7 +511,7 @@
             Controls.Add(graphBorders);
             Controls.Add(dailyGoalPanel);
             Controls.Add(workoutsPanel);
-            Controls.Add(label1);
+            Controls.Add(dashboardLabel);
             Controls.Add(lefCorner);
             Controls.Add(rightC);
             Controls.Add(vLine1);
@@ -530,7 +530,6 @@
             ((System.ComponentModel.ISupportInitialize)rightC).EndInit();
             ((System.ComponentModel.ISupportInitialize)lefCorner).EndInit();
             workoutsPanel.ResumeLayout(false);
-            workoutsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)workoutsBorders).EndInit();
             dailyGoalPanel.ResumeLayout(false);
             dailyGoalPanel.PerformLayout();
@@ -539,9 +538,8 @@
             ((System.ComponentModel.ISupportInitialize)graphBorders).EndInit();
             weightChangesPanel.ResumeLayout(false);
             weightChangesPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)weightChangesBorders).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -552,7 +550,7 @@
         private PictureBox vLine1;
         private PictureBox rightC;
         private PictureBox lefCorner;
-        private Label label1;
+        private Label dashboardLabel;
         private Panel workoutsPanel;
         private PictureBox workoutsBorders;
         private Label workoutsLabel;
@@ -572,10 +570,10 @@
         private Guna.UI2.WinForms.Guna2CheckBox workoutCompletedCheckBox;
         private PictureBox graphBorders;
         private Guna.UI2.WinForms.Guna2Panel weightChangesPanel;
-        private Label label3;
+        private Label weightChangesLabel;
         private TextBox weightChangesTextBox;
         private Label todaysDate;
         private Guna.UI2.WinForms.Guna2Button weightChangesButton;
-        private PictureBox pictureBox1;
+        private PictureBox weightChangesBorders;
     }
 }

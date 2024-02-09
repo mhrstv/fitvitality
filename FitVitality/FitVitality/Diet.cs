@@ -1038,11 +1038,11 @@ namespace FitVitality
                         {
                             if (reader.Read())
                             {
-                                if(cfg.Read("Language", "SETTINGS") == "en")
+                                if (cfg.Read("Language", "SETTINGS") == "en")
                                 {
                                     foodItem.FoodName = reader["Name"].ToString();
                                 }
-                                else if(cfg.Read("Language", "SETTINGS") == "bg")
+                                else if (cfg.Read("Language", "SETTINGS") == "bg")
                                 {
                                     foodItem.FoodName = reader["NameBG"].ToString();
                                 }
@@ -1937,7 +1937,7 @@ namespace FitVitality
                     {
                         query = "SELECT * FROM FoodItems WHERE Name LIKE @keyword";
                     }
-                    else if(cfg.Read("Language", "SETTINGS") == "bg")
+                    else if (cfg.Read("Language", "SETTINGS") == "bg")
                     {
                         query = "SELECT * FROM FoodItems WHERE NameBG LIKE @keyword";
                     }
@@ -1951,11 +1951,11 @@ namespace FitVitality
                             {
 
                                 SearchFoodItem searchFoodItem = new SearchFoodItem();
-                                if(cfg.Read("Language", "SETTINGS") == "en")
+                                if (cfg.Read("Language", "SETTINGS") == "en")
                                 {
                                     searchFoodItem.FoodName = reader["Name"].ToString();
                                 }
-                                else if(cfg.Read("Language", "SETTINGS") == "bg")
+                                else if (cfg.Read("Language", "SETTINGS") == "bg")
                                 {
                                     searchFoodItem.FoodName = reader["NameBG"].ToString();
                                 }

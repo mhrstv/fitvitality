@@ -48,7 +48,58 @@ namespace FitVitality
         private void Welcome_Load(object sender, EventArgs e) // Анимация при зареждане на формата
         {
             var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
-
+            if (config.Read("Language", "SETTINGS") == "en")
+            {
+                errorLabel.Text = "Error";
+                welcomeErrorLabel.Text = "You have input incorrect\r\ndata!";
+                buttonDone.Text = "Done";
+                ageQuestion.Text = "How old are you?";
+                info1_ageGender.Text = "We do NOT share any of your private data and\r\n";
+                genderQuestion.Text = "What is your gender?";
+                goalLabel1.Text = "Lastly, we need to know what your goal is.\r\n";
+                heightQuestion.Text = "How tall are you?";
+                info1_weightHeight.Text = "We do NOT share any of your private data and\r\n";
+                info2_ageGender.Text = "use it only for in-app use such as formulas.\r\n";
+                info2_weightHeight.Text = "You can update these later!\r\n";
+                info3_weightHeight.Text = "use it only for in-app use such as formulas.\r\n";
+                labelWelcome.Text = "Welcome!";
+                name_UsageLabel.Text = "Note that we will only be using your name to address you within the app.\r\n";
+                nameLabel1.Text = "We would like to know a bit more about you before we continue.\r\n";
+                nameLabelFirst.Text = "Now to get to know each other we would like to ask you a few questions.\r\n";
+                nameQuestion.Text = "What is your name?";
+                timerLabel.Text = "aaaaaaa";
+                timerLabel2.Text = "";
+                timerLabel3.Text = "";
+                weightHeightQuestion1.Text = "Please provide us with your weight and height.\r\n";
+                weightHeightQuestion2.Text = "We will be using these measurements for future calculations.\r\n";
+                weightQuestion.Text = "How much do you weigh?\r\n";
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                errorLabel.Text = "Грешка";
+                welcomeErrorLabel.Text = "Въвели сте грешни\r\nданни!";
+                buttonDone.Text = "Готово";
+                ageQuestion.Text = "На каква възраст сте?";
+                info1_ageGender.Text = "Не използваме вашите данни за нищо друго\r\n";
+                genderQuestion.Text = "От какъв пол сте?";
+                goalLabel1.Text = "Последно, ще ни трябва вашата цел.\r\n";
+                heightQuestion.Text = "Колко сте високи?";
+                info1_weightHeight.Text = "Не използваме вапите данни за нищо друго\r\n";
+                info2_ageGender.Text = "освен за пресмятания в приложението.\r\n";
+                info2_weightHeight.Text = "Можете да промените по-късно!\r\n";
+                info3_weightHeight.Text = "освен за пресмятания в приложението.\r\n";
+                labelWelcome.Text = "Добре\r\nдошли!";
+                name_UsageLabel.Text = "Ще ни трябва името ви само за да се обръщаме към вас в приложението.\r\n";
+                nameLabel1.Text = "Ще трябва да знаем повече за вас преди да продължите.\r\n";
+                nameLabelFirst.Text = "Сега за да се запознаем по-добре ще ви попитаме няколко въпроса.\r\n";
+                nameQuestion.Text = "Как се казвате?";
+                timerLabel.Text = "aaaaaaa";
+                timerLabel2.Text = "";
+                timerLabel3.Text = "";
+                weightHeightQuestion1.Text = "Моля споделете вашето тегло и ръст.\r\n";
+                weightHeightQuestion2.Text = "Ще ползваме тези измервания за бъдещи калкулации.\r\n";
+                weightQuestion.Text = "Колко тежите?\r\n";
+            }
             buttonPrevious.Visible = false; // Скриване на бутона за предишна страница
             buttonNext.Visible = false; // Скриване на бутона за следваща страница
             namePanel.Visible = false; // Скриване на панела за въвеждане на име
@@ -140,7 +191,15 @@ namespace FitVitality
         private void buttonPrevious_Click(object sender, EventArgs e) // Метод при натискане на бутона за предишна страница
         {
             dbName = textBox_Name.Text.ToString(); // Присвояване на въведеното име в променливата dbName
-            helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!"; // Промяна на текста в надписа
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
+            {
+                helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!"; // Промяна на текста в надписа
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                helloLabel.Text = "Здравейте, " + dbName + "! Благодарим, че избрахте FitVitality!"; // Промяна на текста в надписа
+            }
             if (page > 0) // Проверка дали сегашната страница е по-голяма от 0
             {
                 page--; // Намаляне на сегашната страница с 1
@@ -173,7 +232,15 @@ namespace FitVitality
         private void buttonNext_Click(object sender, EventArgs e) // Метод при натискане на бутона за следваща страница
         {
             dbName = textBox_Name.Text.ToString(); // Присвояване на въведеното име в променливата dbName
-            helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!"; // Промяна на текста в надписа
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
+            {
+                helloLabel.Text = "Hello, " + dbName + "! Thank you for choosing FitVitality!"; // Промяна на текста в надписа
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                helloLabel.Text = "Здравейте, " + dbName + "! Благодарим, че избрахте FitVitality!"; // Промяна на текста в надписа
+            }
             if (page < listPanels.Count - 1) // Проверка дали сегашната страница е по-малка от броя на страниците
             {
                 page++; // Увеличаване на сегашната страница с 1
@@ -436,49 +503,115 @@ namespace FitVitality
 
         private void male_Click(object sender, EventArgs e) // Метод при натискане на бутона за мъжки пол
         {
-            maleButton.Image = Properties.Resources.malepressed1; // Промяна на изображението на бутона на натиснато състояние
-            femaleButton.Image = Properties.Resources.female1; // Промяна на изображението на бутона на нормално състояние
-            male_Clicked = true; // Променя променливата за натиснато състояние на бутона за мъжки пол на true
-            female_Clicked = false; // Променя променливата за натиснато състояние на бутона за женски пол на false
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
+            {
+                maleButton.Image = Properties.Resources.malepressed1; // Промяна на изображението на бутона на натиснато състояние
+                femaleButton.Image = Properties.Resources.female1; // Промяна на изображението на бутона на нормално състояние
+                male_Clicked = true; // Променя променливата за натиснато състояние на бутона за мъжки пол на true
+                female_Clicked = false; // Променя променливата за натиснато състояние на бутона за женски пол на false
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                maleButton.Image = Properties.Resources.malepressedbg; // Промяна на изображението на бутона на натиснато състояние
+                femaleButton.Image = Properties.Resources.femalebg; // Промяна на изображението на бутона на нормално състояние
+                male_Clicked = true; // Променя променливата за натиснато състояние на бутона за мъжки пол на true
+                female_Clicked = false; // Променя променливата за натиснато състояние на бутона за женски пол на false
+            }
         }
 
         private void female_Click(object sender, EventArgs e) // Метод при натискане на бутона за женски пол
         {
-            femaleButton.Image = Properties.Resources.femalepressed1; // Промяна на изображението на бутона на натиснато състояние
-            maleButton.Image = Properties.Resources.male1; // Промяна на изображението на бутона на нормално състояние
-            female_Clicked = true; // Променя променливата за натиснато състояние на бутона за женски пол на true
-            male_Clicked = false; // Променя променливата за натиснато състояние на бутона за мъжки пол на false
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
+            {
+                femaleButton.Image = Properties.Resources.femalepressed1; // Промяна на изображението на бутона на натиснато състояние
+                maleButton.Image = Properties.Resources.male1; // Промяна на изображението на бутона на нормално състояние
+                female_Clicked = true; // Променя променливата за натиснато състояние на бутона за женски пол на true
+                male_Clicked = false; // Променя променливата за натиснато състояние на бутона за мъжки пол на false
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                femaleButton.Image = Properties.Resources.femalepressedbg; // Промяна на изображението на бутона на натиснато състояние
+                maleButton.Image = Properties.Resources.malebg; // Промяна на изображението на бутона на нормално състояние
+                female_Clicked = true; // Променя променливата за натиснато състояние на бутона за женски пол на true
+                male_Clicked = false; // Променя променливата за натиснато състояние на бутона за мъжки пол на false
+            }
         }
 
         private void male_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за мъжки пол се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!male_Clicked) // Проверка дали бутона за мъжки пол не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                maleButton.Image = Properties.Resources.maletracked1; // Промяна на изображението на бутона ( анимация )
+                if (!male_Clicked) // Проверка дали бутона за мъжки пол не е натиснат
+                {
+                    maleButton.Image = Properties.Resources.maletracked1; // Промяна на изображението на бутона ( анимация )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!male_Clicked) // Проверка дали бутона за мъжки пол не е натиснат
+                {
+                    maleButton.Image = Properties.Resources.maletrackedbg; // Промяна на изображението на бутона ( анимация )
+                }
             }
         }
 
         private void female_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за женски пол се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!female_Clicked) // Проверка дали бутона за женски пол не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                femaleButton.Image = Properties.Resources.femaletracked1; // Промяна на изображението на бутона ( анимация )
+                if (!female_Clicked) // Проверка дали бутона за женски пол не е натиснат
+                {
+                    femaleButton.Image = Properties.Resources.femaletracked1; // Промяна на изображението на бутона ( анимация )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!female_Clicked) // Проверка дали бутона за женски пол не е натиснат
+                {
+                    femaleButton.Image = Properties.Resources.femaletrackedbg; // Промяна на изображението на бутона ( анимация )
+                }
             }
         }
 
         private void male_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за мъжки пол се връща в нормално състояние
         {
-            if (!male_Clicked) // Проверка дали бутона за мъжки пол не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                maleButton.Image = Properties.Resources.male1; // Промяна на изображението на бутона ( нормално състояние )
+                if (!male_Clicked) // Проверка дали бутона за мъжки пол не е натиснат
+                {
+                    maleButton.Image = Properties.Resources.male1; // Промяна на изображението на бутона ( нормално състояние )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!male_Clicked) // Проверка дали бутона за мъжки пол не е натиснат
+                {
+                    maleButton.Image = Properties.Resources.malebg; // Промяна на изображението на бутона ( нормално състояние )
+                }
             }
         }
 
         private void female_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за женски пол се връща в нормално състояние
         {
-            if (!female_Clicked) // Проверка дали бутона за женски пол не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                femaleButton.Image = Properties.Resources.female1; // Промяна на изображението на бутона ( нормално състояние )
+                if (!female_Clicked) // Проверка дали бутона за женски пол не е натиснат
+                {
+                    femaleButton.Image = Properties.Resources.female1; // Промяна на изображението на бутона ( нормално състояние )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!female_Clicked) // Проверка дали бутона за женски пол не е натиснат
+                {
+                    femaleButton.Image = Properties.Resources.femalebg; // Промяна на изображението на бутона ( нормално състояние )
+                }
             }
         }
 
@@ -606,79 +739,184 @@ namespace FitVitality
 
         private void pictureBox5_Click(object sender, EventArgs e) // Метод при натискането на бутона за цел Bulk
         {
-            buttonBulk.Image = Properties.Resources.gainPressed; // Промяна на изображението на бутона на натиснато състояние
-            buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона на нормално състояние
-            buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона на нормално състояние
-            bulk_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Bulk на true
-            maintain_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Maintain на false
-            cut_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Cut на false
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
+            {
+                buttonBulk.Image = Properties.Resources.gainPressed; // Промяна на изображението на бутона на натиснато състояние
+                buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона на нормално състояние
+                buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона на нормално състояние
+                bulk_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Bulk на true
+                maintain_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Maintain на false
+                cut_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Cut на false
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                buttonBulk.Image = Properties.Resources.gainPressedbg; // Промяна на изображението на бутона на натиснато състояние
+                buttonCut.Image = Properties.Resources.loseNormalbg; // Промяна на изображението на бутона на нормално състояние
+                buttonMaintain.Image = Properties.Resources.maintainNormalbg; // Промяна на изображението на бутона на нормално състояние
+                bulk_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Bulk на true
+                maintain_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Maintain на false
+                cut_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Cut на false
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) // Метод при натискането на бутона за цел Cut
         {
-            buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона на нормално състояние
-            buttonCut.Image = Properties.Resources.losePressed; // Промяна на изображението на бутона на натиснато състояние
-            buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона на нормално състояние
-            bulk_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Bulk на false
-            maintain_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Maintain на false
-            cut_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Cut на true
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
+            {
+                buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона на нормално състояние
+                buttonCut.Image = Properties.Resources.losePressed; // Промяна на изображението на бутона на натиснато състояние
+                buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона на нормално състояние
+                bulk_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Bulk на false
+                maintain_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Maintain на false
+                cut_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Cut на true
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                buttonBulk.Image = Properties.Resources.gainNormalbg; // Промяна на изображението на бутона на нормално състояние
+                buttonCut.Image = Properties.Resources.losePressedbg; // Промяна на изображението на бутона на натиснато състояние
+                buttonMaintain.Image = Properties.Resources.maintainNormalbg; // Промяна на изображението на бутона на нормално състояние
+                bulk_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Bulk на false
+                maintain_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Maintain на false
+                cut_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Cut на true
+            }
         }
 
         private void buttonMaintain_Click(object sender, EventArgs e) // Метод при натискането на бутона за цел Maintain
         {
-            buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона на нормално състояние
-            buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона на нормално състояние
-            buttonMaintain.Image = Properties.Resources.maintainPressed; // Промяна на изображението на бутона на натиснато състояние
-            bulk_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Bulk на false
-            maintain_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Maintain на true
-            cut_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Cut на false
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
+            {
+                buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона на нормално състояние
+                buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона на нормално състояние
+                buttonMaintain.Image = Properties.Resources.maintainPressed; // Промяна на изображението на бутона на натиснато състояние
+                bulk_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Bulk на false
+                maintain_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Maintain на true
+                cut_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Cut на false
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                buttonBulk.Image = Properties.Resources.gainNormalbg; // Промяна на изображението на бутона на нормално състояние
+                buttonCut.Image = Properties.Resources.loseNormalbg; // Промяна на изображението на бутона на нормално състояние
+                buttonMaintain.Image = Properties.Resources.maintainPressedbg; // Промяна на изображението на бутона на натиснато състояние
+                bulk_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Bulk на false
+                maintain_Clicked = true; // Променя променливата за натиснато състояние на бутона за цел Maintain на true
+                cut_Clicked = false; // Променя променливата за натиснато състояние на бутона за цел Cut на false
+            }
         }
 
         private void buttonCut_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за цел Cut се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!cut_Clicked) // Проверка дали бутона за цел Cut не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                buttonCut.Image = Properties.Resources.loseTracked; // Промяна на изображението на бутона ( анимация )
+                if (!cut_Clicked) // Проверка дали бутона за цел Cut не е натиснат
+                {
+                    buttonCut.Image = Properties.Resources.loseTracked; // Промяна на изображението на бутона ( анимация )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!cut_Clicked) // Проверка дали бутона за цел Cut не е натиснат
+                {
+                    buttonCut.Image = Properties.Resources.loseTrackedbg; // Промяна на изображението на бутона ( анимация )
+                }
             }
         }
 
         private void buttonCut_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за цел Cut се връща в нормално състояние
         {
-            if (!cut_Clicked) // Проверка дали бутона за цел Cut не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона ( нормално състояние )
+                if (!cut_Clicked) // Проверка дали бутона за цел Cut не е натиснат
+                {
+                    buttonCut.Image = Properties.Resources.loseNormal; // Промяна на изображението на бутона ( нормално състояние )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!cut_Clicked) // Проверка дали бутона за цел Cut не е натиснат
+                {
+                    buttonCut.Image = Properties.Resources.loseNormalbg; // Промяна на изображението на бутона ( нормално състояние )
+                }
             }
         }
 
         private void buttonMaintain_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за цел Maintain се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!maintain_Clicked) // Проверка дали бутона за цел Maintain не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                buttonMaintain.Image = Properties.Resources.maintainTracked; // Промяна на изображението на бутона ( анимация )
+                if (!maintain_Clicked) // Проверка дали бутона за цел Maintain не е натиснат
+                {
+                    buttonMaintain.Image = Properties.Resources.maintainTracked; // Промяна на изображението на бутона ( анимация )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!maintain_Clicked) // Проверка дали бутона за цел Maintain не е натиснат
+                {
+                    buttonMaintain.Image = Properties.Resources.maintainTrackedbg; // Промяна на изображението на бутона ( анимация )
+                }
             }
         }
 
         private void buttonMaintain_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за цел Maintain се връща в нормално състояние
         {
-            if (!maintain_Clicked) // Проверка дали бутона за цел Maintain не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона ( нормално състояние )
+                if (!maintain_Clicked) // Проверка дали бутона за цел Maintain не е натиснат
+                {
+                    buttonMaintain.Image = Properties.Resources.maintainNormal; // Промяна на изображението на бутона ( нормално състояние )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!maintain_Clicked) // Проверка дали бутона за цел Maintain не е натиснат
+                {
+                    buttonMaintain.Image = Properties.Resources.maintainNormalbg; // Промяна на изображението на бутона ( нормално състояние )
+                }
             }
         }
 
         private void buttonBulk_MouseEnter(object sender, EventArgs e) // При преминаване на мишката върху бутона за цел Bulk се анимира чрез снимка (Правена чрез Photoshop)
         {
-            if (!bulk_Clicked) // Проверка дали бутона за цел Bulk не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                buttonBulk.Image = Properties.Resources.gainTracked; // Промяна на изображението на бутона ( анимация )
+                if (!bulk_Clicked) // Проверка дали бутона за цел Bulk не е натиснат
+                {
+                    buttonBulk.Image = Properties.Resources.gainTracked; // Промяна на изображението на бутона ( анимация )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!bulk_Clicked) // Проверка дали бутона за цел Bulk не е натиснат
+                {
+                    buttonBulk.Image = Properties.Resources.gainTrackedbg; // Промяна на изображението на бутона ( анимация )
+                }
             }
         }
 
         private void buttonBulk_MouseLeave(object sender, EventArgs e) // При излизане на мишката от бутона за цел Bulk се връща в нормално състояние
         {
-            if (!bulk_Clicked) // Проверка дали бутона за цел Bulk не е натиснат
+            var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
+            if (config.Read("Language", "SETTINGS") == "en")
             {
-                buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона ( нормално състояние )
+                if (!bulk_Clicked) // Проверка дали бутона за цел Bulk не е натиснат
+                {
+                    buttonBulk.Image = Properties.Resources.gainNormal; // Промяна на изображението на бутона ( нормално състояние )
+                }
+            }
+            if (config.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!bulk_Clicked) // Проверка дали бутона за цел Bulk не е натиснат
+                {
+                    buttonBulk.Image = Properties.Resources.gainNormalbg; // Промяна на изображението на бутона ( нормално състояние )
+                }
             }
         }
 

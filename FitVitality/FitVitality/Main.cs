@@ -72,9 +72,20 @@ namespace FitVitality
                     command.Parameters.AddWithValue("@userID", _userID);
                     using(SqlDataReader reader = command.ExecuteReader())
                     {
-                        if(reader.Read())
+                        var cfg = new Config("FitVitality.ini");
+                        if (cfg.Read("Language", "SETTINGS") == "en")
                         {
-                            loggedInAsLabel.Text = "Logged in as " + reader["Username"].ToString();
+                            if (reader.Read())
+                            {
+                                loggedInAsLabel.Text = "Logged in as " + reader["Username"].ToString();
+                            }
+                        }
+                        if (cfg.Read("Language", "SETTINGS") == "bg")
+                        {
+                            if (reader.Read())
+                            {
+                                loggedInAsLabel.Text = "Влязъл като " + reader["Username"].ToString();
+                            }
                         }
                     }
                 }

@@ -73,6 +73,15 @@ namespace FitVitality
                 weightHeightQuestion1.Text = "Please provide us with your weight and height.\r\n";
                 weightHeightQuestion2.Text = "We will be using these measurements for future calculations.\r\n";
                 weightQuestion.Text = "How much do you weigh?\r\n";
+                textBox_Age.CueHint.CueHintText = "ex. 25";
+                textBox_Height.CueHint.CueHintText = "ex.183";
+                textBox_Name.CueHint.CueHintText = "ex. \"John\"";
+                textBox_Weight.CueHint.CueHintText = "ex. 82";
+                maleButton.Image = Properties.Resources.male;
+                femaleButton.Image = Properties.Resources.female;
+                buttonBulk.Image = Properties.Resources.gainNormal;
+                buttonCut.Image = Properties.Resources.loseNormal;
+                buttonMaintain.Image = Properties.Resources.maintainNormal;
             }
             if (config.Read("Language", "SETTINGS") == "bg")
             {
@@ -88,8 +97,8 @@ namespace FitVitality
                 info2_ageGender.Text = "освен за пресмятания в приложението.\r\n";
                 info2_weightHeight.Text = "Можете да промените по-късно!\r\n";
                 info3_weightHeight.Text = "освен за пресмятания в приложението.\r\n";
-                labelWelcome.Text = "Добре\r\nдошли!";
-                name_UsageLabel.Text = "Ще ни трябва името ви само за да се обръщаме към вас в приложението.\r\n";
+                labelWelcome.Text = "Добре дошли!";
+                name_UsageLabel.Text = "Ще ни трябва името ви само за да се обръщаме към вас.";
                 nameLabel1.Text = "Ще трябва да знаем повече за вас преди да продължите.\r\n";
                 nameLabelFirst.Text = "Сега за да се запознаем по-добре ще ви попитаме няколко въпроса.\r\n";
                 nameQuestion.Text = "Как се казвате?";
@@ -99,6 +108,15 @@ namespace FitVitality
                 weightHeightQuestion1.Text = "Моля споделете вашето тегло и ръст.\r\n";
                 weightHeightQuestion2.Text = "Ще ползваме тези измервания за бъдещи калкулации.\r\n";
                 weightQuestion.Text = "Колко тежите?\r\n";
+                textBox_Age.CueHint.CueHintText = "пр. 25";
+                textBox_Height.CueHint.CueHintText = "пр.183";
+                textBox_Name.CueHint.CueHintText = "пр. \"Иван\"";
+                textBox_Weight.CueHint.CueHintText = "пр. 82";
+                maleButton.Image = Properties.Resources.malebg;
+                femaleButton.Image = Properties.Resources.femalebg;
+                buttonBulk.Image = Properties.Resources.gainNormalbg;
+                buttonCut.Image = Properties.Resources.loseNormalbg;
+                buttonMaintain.Image = Properties.Resources.maintainNormalbg;
             }
             buttonPrevious.Visible = false; // Скриване на бутона за предишна страница
             buttonNext.Visible = false; // Скриване на бутона за следваща страница
@@ -643,11 +661,11 @@ namespace FitVitality
 
         private void timerage3_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
         {
-            if (ageGenderPanel2.Width <= 121) // Проверка дали ширината на панела е по-малка от 121
+            if (ageGenderPanel2.Width <= 174) // Проверка дали ширината на панела е по-малка от 121
             {
                 ageGenderPanel2.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (ageGenderPanel2.Width >= 121) // Проверка дали ширината на панела е по-голяма от 121
+            if (ageGenderPanel2.Width >= 174) // Проверка дали ширината на панела е по-голяма от 121
             {
                 timerAge3.Enabled = false; // Изключване на таймера
                 textBox_Age.Visible = true; // Показване на текстовото поле за въвеждане на възраст
@@ -710,11 +728,11 @@ namespace FitVitality
 
         private void timerWeight4_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
         {
-            if (weightHeightPanel4.Width <= 130) // Проверка дали ширината на панела е по-малка от 130
+            if (weightHeightPanel4.Width <= 149) // Проверка дали ширината на панела е по-малка от 130
             {
                 weightHeightPanel4.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (weightHeightPanel4.Width >= 130) // Проверка дали ширината на панела е по-голяма от 130
+            if (weightHeightPanel4.Width >= 149) // Проверка дали ширината на панела е по-голяма от 130
             {
                 timerWeight4.Enabled = false; // Изключване на таймера
                 textBox_Height.Visible = true; // Показване на текстовото поле за въвеждане на височина
@@ -949,11 +967,11 @@ namespace FitVitality
 
         private void timerWeight5_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на тегло и височина
         {
-            if (info2_Panel.Width <= 179) // Проверка дали ширината на панела е по-малка от 179
+            if (info2_Panel.Width <= 222) // Проверка дали ширината на панела е по-малка от 179
             {
                 info2_Panel.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (info2_Panel.Width >= 179) // Проверка дали ширината на панела е по-голяма от 179
+            if (info2_Panel.Width >= 222) // Проверка дали ширината на панела е по-голяма от 179
             {
                 timerWeight5.Enabled = false; // Изключване на таймера
                 timerWeight6.Enabled = true; // Включване на следващия таймер
@@ -1027,11 +1045,11 @@ namespace FitVitality
 
         private void timerName3_Tick(object sender, EventArgs e)
         {
-            if (panel_nameUsage.Width <= 482) // Проверка дали ширината на панела е по-малка от 482
+            if (panel_nameUsage.Width <= 509) // Проверка дали ширината на панела е по-малка от 482
             {
                 panel_nameUsage.Width += 8; // Увеличаване на ширината на панела с 8
             }
-            if (panel_nameUsage.Width >= 482)
+            if (panel_nameUsage.Width >= 509)
             {
                 timerName3.Enabled = false;
             }
@@ -1050,6 +1068,11 @@ namespace FitVitality
         private void errorClose_MouseLeave(object sender, EventArgs e)
         {
             errorClose.BackColor = Color.WhiteSmoke;
+        }
+
+        private void Welcome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

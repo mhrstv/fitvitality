@@ -30,8 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             topbar = new Panel();
             logo2 = new PictureBox();
@@ -263,18 +263,18 @@
             // panel_nameUsage
             // 
             panel_nameUsage.Controls.Add(name_UsageLabel);
-            panel_nameUsage.Location = new Point(29, 204);
+            panel_nameUsage.Location = new Point(16, 204);
             panel_nameUsage.Name = "panel_nameUsage";
-            panel_nameUsage.Size = new Size(0, 19);
+            panel_nameUsage.Size = new Size(0, 45);
             panel_nameUsage.TabIndex = 5;
             // 
             // name_UsageLabel
             // 
             name_UsageLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             name_UsageLabel.ForeColor = SystemColors.Control;
-            name_UsageLabel.Location = new Point(-26, 0);
+            name_UsageLabel.Location = new Point(0, 0);
             name_UsageLabel.Name = "name_UsageLabel";
-            name_UsageLabel.Size = new Size(534, 19);
+            name_UsageLabel.Size = new Size(509, 19);
             name_UsageLabel.TabIndex = 6;
             name_UsageLabel.Text = "Note that we will only be using your name to address you within the app.";
             name_UsageLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -453,18 +453,18 @@
             // ageGenderPanel2
             // 
             ageGenderPanel2.Controls.Add(ageQuestion);
-            ageGenderPanel2.Location = new Point(210, 98);
+            ageGenderPanel2.Location = new Point(181, 98);
             ageGenderPanel2.Name = "ageGenderPanel2";
-            ageGenderPanel2.Size = new Size(1, 19);
+            ageGenderPanel2.Size = new Size(0, 19);
             ageGenderPanel2.TabIndex = 11;
             // 
             // ageQuestion
             // 
             ageQuestion.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ageQuestion.ForeColor = SystemColors.Control;
-            ageQuestion.Location = new Point(-52, 0);
+            ageQuestion.Location = new Point(0, 0);
             ageQuestion.Name = "ageQuestion";
-            ageQuestion.Size = new Size(224, 19);
+            ageQuestion.Size = new Size(174, 19);
             ageQuestion.TabIndex = 1;
             ageQuestion.Text = "How old are you?";
             ageQuestion.TextAlign = ContentAlignment.MiddleCenter;
@@ -592,18 +592,18 @@
             // info2_Panel
             // 
             info2_Panel.Controls.Add(info2_weightHeight);
-            info2_Panel.Location = new Point(181, 228);
+            info2_Panel.Location = new Point(160, 228);
             info2_Panel.Name = "info2_Panel";
-            info2_Panel.Size = new Size(1, 18);
+            info2_Panel.Size = new Size(0, 18);
             info2_Panel.TabIndex = 21;
             // 
             // info2_weightHeight
             // 
             info2_weightHeight.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             info2_weightHeight.ForeColor = Color.FromArgb(92, 90, 90);
-            info2_weightHeight.Location = new Point(-57, 0);
+            info2_weightHeight.Location = new Point(0, 0);
             info2_weightHeight.Name = "info2_weightHeight";
-            info2_weightHeight.Size = new Size(293, 18);
+            info2_weightHeight.Size = new Size(222, 18);
             info2_weightHeight.TabIndex = 14;
             info2_weightHeight.Text = "You can update these later!";
             info2_weightHeight.TextAlign = ContentAlignment.MiddleCenter;
@@ -611,9 +611,9 @@
             // weightHeightPanel4
             // 
             weightHeightPanel4.Controls.Add(heightQuestion);
-            weightHeightPanel4.Location = new Point(209, 170);
+            weightHeightPanel4.Location = new Point(195, 170);
             weightHeightPanel4.Name = "weightHeightPanel4";
-            weightHeightPanel4.Size = new Size(1, 19);
+            weightHeightPanel4.Size = new Size(0, 19);
             weightHeightPanel4.TabIndex = 20;
             // 
             // heightQuestion
@@ -622,7 +622,7 @@
             heightQuestion.ForeColor = SystemColors.Control;
             heightQuestion.Location = new Point(0, 0);
             heightQuestion.Name = "heightQuestion";
-            heightQuestion.Size = new Size(122, 19);
+            heightQuestion.Size = new Size(149, 19);
             heightQuestion.TabIndex = 3;
             heightQuestion.Text = "How tall are you?";
             heightQuestion.TextAlign = ContentAlignment.MiddleCenter;
@@ -731,7 +731,7 @@
             // buttonDone
             // 
             buttonDone.BorderRadius = 10;
-            buttonDone.CustomizableEdges = customizableEdges3;
+            buttonDone.CustomizableEdges = customizableEdges1;
             buttonDone.DisabledState.BorderColor = Color.DarkGray;
             buttonDone.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonDone.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -741,7 +741,7 @@
             buttonDone.ForeColor = Color.White;
             buttonDone.Location = new Point(225, 242);
             buttonDone.Name = "buttonDone";
-            buttonDone.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonDone.ShadowDecoration.CustomizableEdges = customizableEdges2;
             buttonDone.Size = new Size(90, 25);
             buttonDone.TabIndex = 45;
             buttonDone.Text = "Done";
@@ -1057,6 +1057,7 @@
             PaletteMode = Krypton.Toolkit.PaletteMode.Custom;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FitVitality";
+            FormClosing += Welcome_FormClosing;
             Load += Welcome_Load;
             Shown += Welcome_Shown;
             topbar.ResumeLayout(false);

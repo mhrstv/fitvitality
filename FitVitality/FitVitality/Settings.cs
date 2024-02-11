@@ -122,6 +122,14 @@ namespace FitVitality
                 goalComboBox.Items.Add("Сваляне");
                 goalComboBox.Items.Add("Поддържане");
                 goalComboBox.Items.Add("Покачване");
+                if (cfg.Read("Theme", "SETTINGS") == "light")
+                {
+                    themeComboBox.SelectedItem = "Светла";
+                }
+                else
+                {
+                    themeComboBox.SelectedItem = "Тъмна";
+                }
             }
             else if (cfg.Read("Language", "SETTINGS") == "en")
             {
@@ -165,6 +173,14 @@ namespace FitVitality
                 goalComboBox.Items.Add("Cut");
                 goalComboBox.Items.Add("Maintain");
                 goalComboBox.Items.Add("Bulk");
+                if (cfg.Read("Theme", "SETTINGS") == "light")
+                {
+                    themeComboBox.SelectedItem = "Light";
+                }
+                else
+                {
+                    themeComboBox.SelectedItem = "Dark";
+                }
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -528,6 +544,14 @@ namespace FitVitality
                 goalComboBox.Items.Add("Сваляне");
                 goalComboBox.Items.Add("Поддържане");
                 goalComboBox.Items.Add("Покачване");
+                if (themeComboBox.SelectedItem == "Light" || themeComboBox.SelectedItem == "Светла")
+                {
+                    themeComboBox.SelectedItem = "Светла";
+                }
+                else
+                {
+                    themeComboBox.SelectedItem = "Тъмна";
+                }
             }
             else if (languageComboBox.SelectedItem == "English" || languageComboBox.SelectedItem == "Английски")
             {
@@ -575,6 +599,14 @@ namespace FitVitality
                 goalComboBox.Items.Add("Cut");
                 goalComboBox.Items.Add("Maintain");
                 goalComboBox.Items.Add("Bulk");
+                if (themeComboBox.SelectedItem == "Light" || themeComboBox.SelectedItem == "Светла")
+                {
+                    themeComboBox.SelectedItem = "Light";
+                }
+                else
+                {
+                    themeComboBox.SelectedItem = "Dark";
+                }
             }
         }
 
@@ -765,6 +797,17 @@ namespace FitVitality
         private void changePasswordClose_MouseLeave(object sender, EventArgs e)
         {
             changePasswordClose.BackColor = Color.WhiteSmoke;
+        }
+
+        private void themeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var cfg = new Config("FitVitality.ini");
+            if(themeComboBox.SelectedItem == "Light" || themeComboBox.SelectedItem == "Светла")
+            {
+                cfg.Write("Theme", "light", "SETTINGS");
+            }
+            else
+               cfg.Write("Theme", "dark", "SETTINGS");
         }
     }
 }

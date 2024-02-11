@@ -31,12 +31,6 @@ namespace FitVitality
         bool coreClicked = false;
         bool lowerBodyClicked = false;
 
-        // Булеви променливи, които отбелязват дали е натиснато да или не
-        bool yesClicked = false;
-        bool noClicked = false;
-
-        // Допълнителни булеви променливи, които отбелязват какъв тип тренировка ще се изпълнява
-        bool cardioClicked = false;
         string name = "";
 
         // Булеви променливи, които отбелязват дали е натиснато готова тренировка или създаване на собствена
@@ -115,6 +109,203 @@ namespace FitVitality
         }
         private void Workouts_Load(object sender, EventArgs e)
         {
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                workoutsLabel.Text = "Workouts";
+                activityGroupLabel.Text = "What concerns us next is how often you would like to train.";
+                activityLevelComboBox.Items.Clear();
+                activityLevelComboBox.Items.Add("1 day / week");
+                activityLevelComboBox.Items.Add("2 days / week");
+                activityLevelComboBox.Items.Add("3 days / week");
+                activityLevelComboBox.Items.Add("4 days / week");
+                activityLevelComboBox.Items.Add("5 days / week");
+                activityLevelComboBox.Items.Add("6 days / week");
+                activityLevelComboBox.Items.Add("7 days / week");
+                armsCheckBox.Text = "Arms";
+                backBicepsCheckBox.Text = "Back and Biceps";
+                backCheckBox.Text = "Back";
+                calvesCheckBox.Text = "Calves";
+                chestCheckBox.Text = "Chest";
+                chestTricepsShoulderCheckBox.Text = "Chest, Triceps and Shoulders";
+                chooseWorkoutNumberLabel.Text = "Choose how many workouts\r\nyou want to make.";
+                chooseWorkoutNumberNextBut.Text = "Next";
+                createLabel.Text = "Workout creation - #";
+                createNextButton.Text = "Next";
+                editWorkoutLabel.Text = "Edit Workouts";
+                fridayLabel.Text = "Fri";
+                fridayShowButton.Text = "SHOW";
+                glutesCheckBox.Text = "Glutes";
+                hamstringsCheckBox.Text = "Hamstrings";
+                labelExercises.Text = "[MUSCLE GROUP] - [EXERCISES]";
+                labelPanel1.Text = "Mon";
+                labelPanel2.Text = "Tue";
+                labelPanel3.Text = "Wed";
+                labelPanel4.Text = "Thu";
+                labelPanel5.Text = "Fri";
+                labelPanel6.Text = "Sat";
+                labelPanel7.Text = "Sun";
+                lowerBodyLabel.Text = "Which upper body muscles would you like to train?";
+                lowerBodyLabel2.Text = "lower";
+                mondayLabel.Text = "Mon";
+                multipleSelectionsLabel.Text = "You can select multiple muscle groups.";
+                muscleGroupLabel.Text = "We would like to know which muscle groups from the ones\r\nbelow, you would like to train?";
+                nextButt7.Text = "Next";
+                nextButton1.Text = "Next";
+                nextButton2.Text = "Next";
+                nextButton3.Text = "Next";
+                nextButton4.Text = "Next";
+                nextButton5.Text = "Next";
+                preNextButton2.Text = "Next";
+                preNextButton3.Text = "Done";
+                quadricepsCheckBox.Text = "Quadriceps";
+                restDay1.Text = "Rest Day";
+                restDay2.Text = "Rest Day";
+                restDay3.Text = "Rest Day";
+                restDay4.Text = "Rest Day";
+                restDay5.Text = "Rest Day";
+                restDay6.Text = "Rest Day";
+                restDay7.Text = "Rest Day";
+                saturdayLabel.Text = "Sat";
+                saturdayShowButton.Text = "SHOW";
+                selectWorkoutButton.Text = "Select";
+                selectWorkoutsDescription.Text = "Please select a workout for every day.";
+                selectWorkoutsLabel.Text = "Select Workouts";
+                sundayLabel.Text = "Sun";
+                sundayShowButton.Text = "SHOW";
+                thursdayLabel.Text = "Thu";
+                thursdayShowButton.Text = "SHOW";
+                trainingDaysDescription.Text = "Please select which days you want to train in.";
+                trainingDaysLabel.Text = "Training days";
+                tuesdayLabel.Text = "Tue";
+                tuesdayShowButton.Text = "SHOW";
+                upperBodyHomeOutdoorsButton.Text = "Next";
+                upperBodyHomeOutdoorsLabel.Text = "Which upper body muscles would you like to train? ";
+                upperBodyLabel.Text = "Which upper body muscles would you like to train? ";
+                upperLabel.Text = "upper";
+                upperLabel2.Text = "upper";
+                wdExercises.Text = "Exercises:";
+                wdFriday.Text = "-    Friday";
+                wdMonday.Text = "-    Monday";
+                wdSaturday.Text = "-    Saturday";
+                wdSelectedLabel.Text = "Selected:";
+                wdSunday.Text = "-    Sunday";
+                wdThursday.Text = "-    Thursday";
+                wdTuesday.Text = "-    Tuesday";
+                wdWednesday.Text = "-    Wednesday";
+                wednesdayLabel.Text = "Wed";
+                wednesdayShowButton.Text = "SHOW";
+                mondayShowButton.Text = "SHOW";
+                workoutDashboardLabel.Text = "Workout Dashboard";
+                workoutDaysHint.Text = "You must choose a workout for each day.";
+                workoutNameLabel.Text = "Name your workout:";
+                workoutNumberComboBox.Items.Clear();
+                workoutNumberComboBox.Items.Add(1);
+                workoutNumberComboBox.Items.Add(2);
+                workoutNumberComboBox.Items.Add(3);
+                workoutNumberComboBox.Items.Add(4);
+                workoutNumberComboBox.Items.Add(5);
+                workoutNumberComboBox.Items.Add(6);
+                workoutNumberComboBox.Items.Add(7);
+                workoutTypeLabel.Text = "Do you want to choose a pre-generated workout or\r\nwould you rather create your own?";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                workoutsLabel.Text = "Тренировки";
+                activityGroupLabel.Text = "Колко често смятате да тренирате?";
+                activityLevelComboBox.Items.Clear();
+                activityLevelComboBox.Items.Add("1 ден / седминца");
+                activityLevelComboBox.Items.Add("2 дни / седминца");
+                activityLevelComboBox.Items.Add("3 дни / седминца");
+                activityLevelComboBox.Items.Add("4 дни / седминца");
+                activityLevelComboBox.Items.Add("5 дни / седминца");
+                activityLevelComboBox.Items.Add("6 дни / седминца");
+                activityLevelComboBox.Items.Add("7 дни / седминца");
+                armsCheckBox.Text = "Ръце";
+                backBicepsCheckBox.Text = "Гръб и бицепс";
+                backCheckBox.Text = "Гръб";
+                calvesCheckBox.Text = "Прасец";
+                chestCheckBox.Text = "Гърди";
+                chestTricepsShoulderCheckBox.Text = "Гърди, Трицепс и Рамена";
+                chooseWorkoutNumberLabel.Text = "Изберете колко\r\nтренировки желаете.";
+                chooseWorkoutNumberNextBut.Text = "Продължи";
+                createNextButton.Text = "Продължи";
+                editWorkoutLabel.Text = "Редактирай Тренировка";
+                fridayLabel.Text = "Пет";
+                fridayShowButton.Text = "ПОКАЖИ";
+                glutesCheckBox.Text = "Глутеус";
+                hamstringsCheckBox.Text = "Задно бедро";
+                labelPanel1.Text = "Пон";
+                labelPanel2.Text = "Вто";
+                labelPanel3.Text = "Ср";
+                labelPanel4.Text = "Чет";
+                labelPanel5.Text = "Пет";
+                labelPanel6.Text = "Съб";
+                labelPanel7.Text = "Нед";
+                lowerBodyLabel.Text = "Which upper body muscles would you like to train?";
+                lowerBodyLabel2.Text = "долна";
+                mondayLabel.Text = "Пон";
+                multipleSelectionsLabel.Text = "You can select multiple muscle groups.";
+                muscleGroupLabel.Text = "We would like to know which muscle groups from the ones\r\nbelow, you would like to train?";
+                nextButt7.Text = "Next";
+                nextButton1.Text = "Продължи";
+                nextButton2.Text = "Продължи";
+                nextButton3.Text = "Продължи";
+                nextButton4.Text = "Продължи";
+                nextButton5.Text = "Продължи";
+                preNextButton2.Text = "Продължи";
+                preNextButton3.Text = "Готово";
+                quadricepsCheckBox.Text = "Quadriceps";
+                restDay1.Text = "Rest Day";
+                restDay2.Text = "Rest Day";
+                restDay3.Text = "Rest Day";
+                restDay4.Text = "Rest Day";
+                restDay5.Text = "Rest Day";
+                restDay6.Text = "Rest Day";
+                restDay7.Text = "Rest Day";
+                saturdayLabel.Text = "Sat";
+                saturdayShowButton.Text = "ПОКАЖИ";
+                selectWorkoutButton.Text = "Select";
+                selectWorkoutsDescription.Text = "Please select a workout for every day.";
+                selectWorkoutsLabel.Text = "Select Workouts";
+                sundayLabel.Text = "Sun";
+                sundayShowButton.Text = "ПОКАЖИ";
+                thursdayLabel.Text = "Thu";
+                thursdayShowButton.Text = "ПОКАЖИ";
+                trainingDaysDescription.Text = "Please select which days you want to train in.";
+                trainingDaysLabel.Text = "Training days";
+                tuesdayLabel.Text = "Tue";
+                tuesdayShowButton.Text = "ПОКАЖИ";
+                upperBodyHomeOutdoorsButton.Text = "Next";
+                upperBodyHomeOutdoorsLabel.Text = "Which upper body muscles would you like to train? ";
+                upperBodyLabel.Text = "Which upper body muscles would you like to train? ";
+                upperLabel.Text = "upper";
+                upperLabel2.Text = "upper";
+                wdExercises.Text = "Exercises:";
+                wdFriday.Text = "-    Friday";
+                wdMonday.Text = "-    Monday";
+                wdSaturday.Text = "-    Saturday";
+                wdSelectedLabel.Text = "Selected:";
+                wdSunday.Text = "-    Sunday";
+                wdThursday.Text = "-    Thursday";
+                wdTuesday.Text = "-    Tuesday";
+                wdWednesday.Text = "-    Wednesday";
+                wednesdayLabel.Text = "Wed";
+                wednesdayShowButton.Text = "ПОКАЖИ";
+                mondayShowButton.Text = "ПОКАЖИ";
+                workoutDashboardLabel.Text = "Workout Dashboard";
+                workoutDaysHint.Text = "You must choose a workout for each day.";
+                workoutNameLabel.Text = "Name your workout:";
+                workoutNumberComboBox.Items.Clear();
+                workoutNumberComboBox.Items.Add(1);
+                workoutNumberComboBox.Items.Add(2);
+                workoutNumberComboBox.Items.Add(3);
+                workoutNumberComboBox.Items.Add(4);
+                workoutNumberComboBox.Items.Add(5);
+                workoutNumberComboBox.Items.Add(6);
+                workoutNumberComboBox.Items.Add(7);
+                workoutTypeLabel.Text = "Do you want to choose a pre-generated workout or\r\nwould you rather create your own?";
+            }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -157,7 +348,14 @@ namespace FitVitality
                     }
                 }
             }
-            trainPlaceLabel.Text = $"Hello, {name}. This is the workout section and we will \r\nask you a few questions in order to create the \r\nperfect workout for you.\r\nTo begin with, what place do you desire to workout at?\r\n";
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                trainPlaceLabel.Text = $"Здравейте, {name}. Това е тренировъчната секция в\r\nкоято, ще ви попитаме няколко въпроса за да създадем\r\nтренировка за вас.\r\nНека започнем с това къде желаете да тренирате?";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                trainPlaceLabel.Text = $"Hello, {name}. This is the workout section and we will \r\nask you a few questions in order to create the \r\nperfect workout for you.\r\nTo begin with, what place do you desire to workout at?";
+            }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -339,7 +537,15 @@ namespace FitVitality
                     nextButton2.Visible = false;
                     break;
             }
-            upToDaysLabel.Text = $"You must select {activity} days.";
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                upToDaysLabel.Text = $"You must select {activity} days.";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                upToDaysLabel.Text = $"You must select {activity} days.";
+            }
         }
 
         private void upperButton_Click(object sender, EventArgs e)
@@ -2161,13 +2367,6 @@ namespace FitVitality
         {
             wdSelectedExercises.Text = "";
             wdSelectedDay.Text = "";
-            string monday_workout = "Rest Day";
-            string tuesday_workout = "Rest Day";
-            string wednesday_workout = "Rest Day";
-            string thursday_workout = "Rest Day";
-            string friday_workout = "Rest Day";
-            string saturday_workout = "Rest Day";
-            string sunday_workout = "Rest Day";
             List<string> monday_List = new List<string>();
             List<string> tuesday_List = new List<string>();
             List<string> wednesday_List = new List<string>();

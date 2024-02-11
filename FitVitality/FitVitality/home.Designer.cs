@@ -409,7 +409,7 @@
             series1.Points.Add(dataPoint6);
             series1.Points.Add(dataPoint7);
             dietChart.Series.Add(series1);
-            dietChart.Size = new Size(342, 136);
+            dietChart.Size = new Size(340, 135);
             dietChart.TabIndex = 16;
             dietChart.Text = "Diet";
             title1.Alignment = ContentAlignment.BottomCenter;

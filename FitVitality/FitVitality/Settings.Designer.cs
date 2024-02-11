@@ -947,6 +947,7 @@
             themeComboBox.ShadowDecoration.CustomizableEdges = customizableEdges26;
             themeComboBox.Size = new Size(85, 24);
             themeComboBox.TabIndex = 59;
+            themeComboBox.SelectedIndexChanged += themeComboBox_SelectedIndexChanged;
             // 
             // languageComboBox
             // 

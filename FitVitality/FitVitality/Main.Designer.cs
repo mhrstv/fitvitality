@@ -48,6 +48,7 @@
             pictureBox2 = new PictureBox();
             vLine2 = new PictureBox();
             topRightC = new PictureBox();
+            loggedAsTimer = new System.Windows.Forms.Timer(components);
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)settingsButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
@@ -505,6 +506,11 @@
             topRightC.TabIndex = 0;
             topRightC.TabStop = false;
             // 
+            // loggedAsTimer
+            // 
+            loggedAsTimer.Enabled = true;
+            loggedAsTimer.Tick += loggedAsTimer_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -571,5 +577,6 @@
         private PictureBox hLine;
         private Krypton.Toolkit.KryptonButton dietButton;
         private Label loggedInAsLabel;
+        private System.Windows.Forms.Timer loggedAsTimer;
     }
 }

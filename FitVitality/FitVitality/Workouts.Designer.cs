@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Workouts));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges68 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges69 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges70 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges71 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges72 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges73 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges74 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges75 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges76 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges77 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges78 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges79 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges80 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftCorner = new PictureBox();
             rightCorner = new PictureBox();
             vLine1 = new PictureBox();
@@ -68,7 +68,7 @@
             activityLevelComboBox = new ComboBox();
             nextButtonPanel2 = new Panel();
             nextButton2 = new Krypton.Toolkit.KryptonButton();
-            acticityGroupLabel = new Label();
+            activityGroupLabel = new Label();
             activityGroupBorders = new PictureBox();
             muscleGroupPanel = new Panel();
             multipleSelectionsLabel = new Label();
@@ -127,7 +127,6 @@
             currentExerciseList = new FlowLayoutPanel();
             hLine3 = new PictureBox();
             createLabel = new Label();
-            createBorders = new PictureBox();
             workoutsList = new FlowLayoutPanel();
             workoutPreviewPanel = new Panel();
             labelExercises = new Label();
@@ -252,7 +251,7 @@
             upperBodyHomeOutdoorsPanel = new Panel();
             backBicepsCheckBox = new CheckBox();
             backBB = new PictureBox();
-            pictureBox5 = new PictureBox();
+            vLine6 = new PictureBox();
             frontBB = new PictureBox();
             backCTS = new PictureBox();
             frontCTS = new PictureBox();
@@ -262,6 +261,7 @@
             upperBodyHomeOutdoorsButton = new Krypton.Toolkit.KryptonButton();
             upperBodyHomeOutdoorsLabel = new Label();
             upperBodyHomeOutdoorsBorders = new PictureBox();
+            createBorders = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)leftCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightCorner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -306,7 +306,6 @@
             ((System.ComponentModel.ISupportInitialize)preBorders).BeginInit();
             createPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)hLine3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)createBorders).BeginInit();
             workoutPreviewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)workoutPreviewClose).BeginInit();
             workoutPreviewButtonBorders.SuspendLayout();
@@ -360,12 +359,13 @@
             ((System.ComponentModel.ISupportInitialize)chooseWorkoutNumberBorders).BeginInit();
             upperBodyHomeOutdoorsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)backBB).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)vLine6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)frontBB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)backCTS).BeginInit();
             ((System.ComponentModel.ISupportInitialize)frontCTS).BeginInit();
             upperBodyHomeOutdoorsButPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)upperBodyHomeOutdoorsBorders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)createBorders).BeginInit();
             SuspendLayout();
             // 
             // leftCorner
@@ -430,13 +430,13 @@
             // 
             // workoutsLabel
             // 
-            workoutsLabel.AutoSize = true;
             workoutsLabel.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            workoutsLabel.Location = new Point(291, 13);
+            workoutsLabel.Location = new Point(252, 13);
             workoutsLabel.Name = "workoutsLabel";
-            workoutsLabel.Size = new Size(108, 24);
+            workoutsLabel.Size = new Size(187, 24);
             workoutsLabel.TabIndex = 20;
             workoutsLabel.Text = "Workouts";
+            workoutsLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // trainPlacePanel
             // 
@@ -456,9 +456,9 @@
             // 
             nextButtonPanel1.BackColor = Color.WhiteSmoke;
             nextButtonPanel1.Controls.Add(nextButton1);
-            nextButtonPanel1.Location = new Point(214, 221);
+            nextButtonPanel1.Location = new Point(197, 221);
             nextButtonPanel1.Name = "nextButtonPanel1";
-            nextButtonPanel1.Size = new Size(90, 25);
+            nextButtonPanel1.Size = new Size(125, 25);
             nextButtonPanel1.TabIndex = 32;
             // 
             // nextButton1
@@ -467,7 +467,7 @@
             nextButton1.Location = new Point(0, 0);
             nextButton1.Name = "nextButton1";
             nextButton1.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            nextButton1.Size = new Size(90, 25);
+            nextButton1.Size = new Size(125, 25);
             nextButton1.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             nextButton1.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             nextButton1.StateCommon.Back.ColorAngle = 45F;
@@ -586,7 +586,7 @@
             // 
             activityGroupPanel.Controls.Add(activityLevelComboBox);
             activityGroupPanel.Controls.Add(nextButtonPanel2);
-            activityGroupPanel.Controls.Add(acticityGroupLabel);
+            activityGroupPanel.Controls.Add(activityGroupLabel);
             activityGroupPanel.Controls.Add(activityGroupBorders);
             activityGroupPanel.Location = new Point(86, 70);
             activityGroupPanel.Name = "activityGroupPanel";
@@ -610,9 +610,9 @@
             // 
             nextButtonPanel2.BackColor = Color.WhiteSmoke;
             nextButtonPanel2.Controls.Add(nextButton2);
-            nextButtonPanel2.Location = new Point(214, 221);
+            nextButtonPanel2.Location = new Point(197, 221);
             nextButtonPanel2.Name = "nextButtonPanel2";
-            nextButtonPanel2.Size = new Size(90, 25);
+            nextButtonPanel2.Size = new Size(125, 25);
             nextButtonPanel2.TabIndex = 32;
             // 
             // nextButton2
@@ -621,7 +621,7 @@
             nextButton2.Location = new Point(0, 0);
             nextButton2.Name = "nextButton2";
             nextButton2.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            nextButton2.Size = new Size(90, 25);
+            nextButton2.Size = new Size(125, 25);
             nextButton2.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             nextButton2.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             nextButton2.StateCommon.Back.ColorAngle = 45F;
@@ -678,17 +678,17 @@
             nextButton2.Visible = false;
             nextButton2.Click += kryptonButton1_Click;
             // 
-            // acticityGroupLabel
+            // activityGroupLabel
             // 
-            acticityGroupLabel.AutoSize = true;
-            acticityGroupLabel.BackColor = Color.FromArgb(242, 242, 242);
-            acticityGroupLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            acticityGroupLabel.ForeColor = SystemColors.ControlText;
-            acticityGroupLabel.Location = new Point(63, 38);
-            acticityGroupLabel.Name = "acticityGroupLabel";
-            acticityGroupLabel.Size = new Size(392, 19);
-            acticityGroupLabel.TabIndex = 1;
-            acticityGroupLabel.Text = "What concerns us next is how often you would like to train.";
+            activityGroupLabel.AutoSize = true;
+            activityGroupLabel.BackColor = Color.FromArgb(242, 242, 242);
+            activityGroupLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            activityGroupLabel.ForeColor = SystemColors.ControlText;
+            activityGroupLabel.Location = new Point(63, 38);
+            activityGroupLabel.Name = "activityGroupLabel";
+            activityGroupLabel.Size = new Size(392, 19);
+            activityGroupLabel.TabIndex = 1;
+            activityGroupLabel.Text = "What concerns us next is how often you would like to train.";
             // 
             // activityGroupBorders
             // 
@@ -766,9 +766,9 @@
             // 
             nextButtonPanel3.BackColor = Color.WhiteSmoke;
             nextButtonPanel3.Controls.Add(nextButton3);
-            nextButtonPanel3.Location = new Point(214, 221);
+            nextButtonPanel3.Location = new Point(197, 221);
             nextButtonPanel3.Name = "nextButtonPanel3";
-            nextButtonPanel3.Size = new Size(90, 25);
+            nextButtonPanel3.Size = new Size(125, 25);
             nextButtonPanel3.TabIndex = 32;
             // 
             // nextButton3
@@ -777,7 +777,7 @@
             nextButton3.Location = new Point(0, 0);
             nextButton3.Name = "nextButton3";
             nextButton3.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            nextButton3.Size = new Size(90, 25);
+            nextButton3.Size = new Size(125, 25);
             nextButton3.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             nextButton3.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             nextButton3.StateCommon.Back.ColorAngle = 45F;
@@ -981,9 +981,9 @@
             // 
             nextButtonPanel4.BackColor = Color.WhiteSmoke;
             nextButtonPanel4.Controls.Add(nextButton4);
-            nextButtonPanel4.Location = new Point(214, 221);
+            nextButtonPanel4.Location = new Point(197, 221);
             nextButtonPanel4.Name = "nextButtonPanel4";
-            nextButtonPanel4.Size = new Size(90, 25);
+            nextButtonPanel4.Size = new Size(125, 25);
             nextButtonPanel4.TabIndex = 32;
             // 
             // nextButton4
@@ -992,7 +992,7 @@
             nextButton4.Location = new Point(0, 0);
             nextButton4.Name = "nextButton4";
             nextButton4.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            nextButton4.Size = new Size(90, 25);
+            nextButton4.Size = new Size(125, 25);
             nextButton4.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             nextButton4.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             nextButton4.StateCommon.Back.ColorAngle = 45F;
@@ -1196,9 +1196,9 @@
             // 
             nextButton5B.BackColor = Color.WhiteSmoke;
             nextButton5B.Controls.Add(nextButton5);
-            nextButton5B.Location = new Point(214, 221);
+            nextButton5B.Location = new Point(197, 221);
             nextButton5B.Name = "nextButton5B";
-            nextButton5B.Size = new Size(90, 25);
+            nextButton5B.Size = new Size(125, 25);
             nextButton5B.TabIndex = 32;
             // 
             // nextButton5
@@ -1207,7 +1207,7 @@
             nextButton5.Location = new Point(0, 0);
             nextButton5.Name = "nextButton5";
             nextButton5.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            nextButton5.Size = new Size(90, 25);
+            nextButton5.Size = new Size(125, 25);
             nextButton5.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             nextButton5.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             nextButton5.StateCommon.Back.ColorAngle = 45F;
@@ -1304,9 +1304,9 @@
             // 
             nextButtPanel.BackColor = Color.WhiteSmoke;
             nextButtPanel.Controls.Add(nextButt7);
-            nextButtPanel.Location = new Point(214, 214);
+            nextButtPanel.Location = new Point(197, 214);
             nextButtPanel.Name = "nextButtPanel";
-            nextButtPanel.Size = new Size(90, 25);
+            nextButtPanel.Size = new Size(125, 25);
             nextButtPanel.TabIndex = 44;
             // 
             // nextButt7
@@ -1315,7 +1315,7 @@
             nextButt7.Location = new Point(0, 0);
             nextButt7.Name = "nextButt7";
             nextButt7.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            nextButt7.Size = new Size(90, 25);
+            nextButt7.Size = new Size(125, 25);
             nextButt7.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             nextButt7.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             nextButt7.StateCommon.Back.ColorAngle = 45F;
@@ -1596,7 +1596,7 @@
             // 
             createNextButton.BackColor = Color.WhiteSmoke;
             createNextButton.BorderRadius = 10;
-            createNextButton.CustomizableEdges = customizableEdges1;
+            createNextButton.CustomizableEdges = customizableEdges61;
             createNextButton.DisabledState.BorderColor = Color.DarkGray;
             createNextButton.DisabledState.CustomBorderColor = Color.DarkGray;
             createNextButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1604,11 +1604,11 @@
             createNextButton.FillColor = Color.FromArgb(92, 225, 230);
             createNextButton.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
             createNextButton.ForeColor = Color.White;
-            createNextButton.Location = new Point(231, 274);
+            createNextButton.Location = new Point(214, 274);
             createNextButton.Name = "createNextButton";
             createNextButton.PressedColor = Color.LightGray;
-            createNextButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            createNextButton.Size = new Size(90, 25);
+            createNextButton.ShadowDecoration.CustomizableEdges = customizableEdges62;
+            createNextButton.Size = new Size(125, 25);
             createNextButton.TabIndex = 50;
             createNextButton.Text = "Next";
             createNextButton.Click += createNextButton_Click;
@@ -1628,7 +1628,7 @@
             // 
             workoutNameTextBox.BackColor = Color.WhiteSmoke;
             workoutNameTextBox.BorderRadius = 8;
-            workoutNameTextBox.CustomizableEdges = customizableEdges3;
+            workoutNameTextBox.CustomizableEdges = customizableEdges63;
             workoutNameTextBox.DefaultText = "";
             workoutNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             workoutNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1644,7 +1644,7 @@
             workoutNameTextBox.PlaceholderForeColor = Color.Black;
             workoutNameTextBox.PlaceholderText = "";
             workoutNameTextBox.SelectedText = "";
-            workoutNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            workoutNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges64;
             workoutNameTextBox.Size = new Size(140, 22);
             workoutNameTextBox.TabIndex = 51;
             workoutNameTextBox.TextChanged += workoutNameTextBox_TextChanged;
@@ -1686,15 +1686,6 @@
             createLabel.Size = new Size(193, 22);
             createLabel.TabIndex = 40;
             createLabel.Text = "Workout creation - #";
-            // 
-            // createBorders
-            // 
-            createBorders.Image = (Image)resources.GetObject("createBorders.Image");
-            createBorders.Location = new Point(0, 0);
-            createBorders.Name = "createBorders";
-            createBorders.Size = new Size(553, 307);
-            createBorders.TabIndex = 0;
-            createBorders.TabStop = false;
             // 
             // workoutsList
             // 
@@ -2173,9 +2164,9 @@
             // 
             nextButtonPanel13Borders.BackColor = Color.WhiteSmoke;
             nextButtonPanel13Borders.Controls.Add(preNextButton2);
-            nextButtonPanel13Borders.Location = new Point(231, 270);
+            nextButtonPanel13Borders.Location = new Point(214, 270);
             nextButtonPanel13Borders.Name = "nextButtonPanel13Borders";
-            nextButtonPanel13Borders.Size = new Size(90, 25);
+            nextButtonPanel13Borders.Size = new Size(125, 25);
             nextButtonPanel13Borders.TabIndex = 32;
             // 
             // preNextButton2
@@ -2184,7 +2175,7 @@
             preNextButton2.Location = new Point(0, 0);
             preNextButton2.Name = "preNextButton2";
             preNextButton2.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            preNextButton2.Size = new Size(90, 25);
+            preNextButton2.Size = new Size(125, 25);
             preNextButton2.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             preNextButton2.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             preNextButton2.StateCommon.Back.ColorAngle = 45F;
@@ -2707,9 +2698,9 @@
             // 
             preNextButton3Panel.BackColor = Color.WhiteSmoke;
             preNextButton3Panel.Controls.Add(preNextButton3);
-            preNextButton3Panel.Location = new Point(231, 270);
+            preNextButton3Panel.Location = new Point(214, 270);
             preNextButton3Panel.Name = "preNextButton3Panel";
-            preNextButton3Panel.Size = new Size(90, 25);
+            preNextButton3Panel.Size = new Size(125, 25);
             preNextButton3Panel.TabIndex = 32;
             // 
             // preNextButton3
@@ -2718,7 +2709,7 @@
             preNextButton3.Location = new Point(0, 0);
             preNextButton3.Name = "preNextButton3";
             preNextButton3.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            preNextButton3.Size = new Size(90, 25);
+            preNextButton3.Size = new Size(125, 25);
             preNextButton3.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             preNextButton3.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             preNextButton3.StateCommon.Back.ColorAngle = 45F;
@@ -2839,7 +2830,7 @@
             // 
             editWorkoutButton.BackColor = Color.White;
             editWorkoutButton.BorderRadius = 8;
-            editWorkoutButton.CustomizableEdges = customizableEdges5;
+            editWorkoutButton.CustomizableEdges = customizableEdges65;
             editWorkoutButton.DisabledState.BorderColor = Color.DarkGray;
             editWorkoutButton.DisabledState.CustomBorderColor = Color.DarkGray;
             editWorkoutButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2852,7 +2843,7 @@
             editWorkoutButton.Location = new Point(19, 14);
             editWorkoutButton.Name = "editWorkoutButton";
             editWorkoutButton.PressedColor = Color.LightGray;
-            editWorkoutButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            editWorkoutButton.ShadowDecoration.CustomizableEdges = customizableEdges66;
             editWorkoutButton.Size = new Size(30, 30);
             editWorkoutButton.TabIndex = 1;
             editWorkoutButton.Click += guna2Button1_Click;
@@ -2900,7 +2891,7 @@
             // sundayShowButton
             // 
             sundayShowButton.BorderRadius = 10;
-            sundayShowButton.CustomizableEdges = customizableEdges7;
+            sundayShowButton.CustomizableEdges = customizableEdges67;
             sundayShowButton.DisabledState.BorderColor = Color.DarkGray;
             sundayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             sundayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2912,7 +2903,7 @@
             sundayShowButton.ForeColor = Color.White;
             sundayShowButton.Location = new Point(196, 279);
             sundayShowButton.Name = "sundayShowButton";
-            sundayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            sundayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges68;
             sundayShowButton.Size = new Size(64, 23);
             sundayShowButton.TabIndex = 8;
             sundayShowButton.Text = "SHOW";
@@ -2921,7 +2912,7 @@
             // saturdayShowButton
             // 
             saturdayShowButton.BorderRadius = 10;
-            saturdayShowButton.CustomizableEdges = customizableEdges9;
+            saturdayShowButton.CustomizableEdges = customizableEdges69;
             saturdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             saturdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             saturdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2933,7 +2924,7 @@
             saturdayShowButton.ForeColor = Color.White;
             saturdayShowButton.Location = new Point(196, 244);
             saturdayShowButton.Name = "saturdayShowButton";
-            saturdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            saturdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges70;
             saturdayShowButton.Size = new Size(64, 23);
             saturdayShowButton.TabIndex = 7;
             saturdayShowButton.Text = "SHOW";
@@ -2942,7 +2933,7 @@
             // fridayShowButton
             // 
             fridayShowButton.BorderRadius = 10;
-            fridayShowButton.CustomizableEdges = customizableEdges11;
+            fridayShowButton.CustomizableEdges = customizableEdges71;
             fridayShowButton.DisabledState.BorderColor = Color.DarkGray;
             fridayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             fridayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2954,7 +2945,7 @@
             fridayShowButton.ForeColor = Color.White;
             fridayShowButton.Location = new Point(196, 209);
             fridayShowButton.Name = "fridayShowButton";
-            fridayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            fridayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges72;
             fridayShowButton.Size = new Size(64, 23);
             fridayShowButton.TabIndex = 6;
             fridayShowButton.Text = "SHOW";
@@ -2963,7 +2954,7 @@
             // thursdayShowButton
             // 
             thursdayShowButton.BorderRadius = 10;
-            thursdayShowButton.CustomizableEdges = customizableEdges13;
+            thursdayShowButton.CustomizableEdges = customizableEdges73;
             thursdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             thursdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             thursdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2975,7 +2966,7 @@
             thursdayShowButton.ForeColor = Color.White;
             thursdayShowButton.Location = new Point(196, 174);
             thursdayShowButton.Name = "thursdayShowButton";
-            thursdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            thursdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges74;
             thursdayShowButton.Size = new Size(64, 23);
             thursdayShowButton.TabIndex = 5;
             thursdayShowButton.Text = "SHOW";
@@ -2984,7 +2975,7 @@
             // wednesdayShowButton
             // 
             wednesdayShowButton.BorderRadius = 10;
-            wednesdayShowButton.CustomizableEdges = customizableEdges15;
+            wednesdayShowButton.CustomizableEdges = customizableEdges75;
             wednesdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             wednesdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             wednesdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2996,7 +2987,7 @@
             wednesdayShowButton.ForeColor = Color.White;
             wednesdayShowButton.Location = new Point(196, 139);
             wednesdayShowButton.Name = "wednesdayShowButton";
-            wednesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            wednesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges76;
             wednesdayShowButton.Size = new Size(64, 23);
             wednesdayShowButton.TabIndex = 4;
             wednesdayShowButton.Text = "SHOW";
@@ -3005,7 +2996,7 @@
             // tuesdayShowButton
             // 
             tuesdayShowButton.BorderRadius = 10;
-            tuesdayShowButton.CustomizableEdges = customizableEdges17;
+            tuesdayShowButton.CustomizableEdges = customizableEdges77;
             tuesdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             tuesdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             tuesdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -3017,7 +3008,7 @@
             tuesdayShowButton.ForeColor = Color.White;
             tuesdayShowButton.Location = new Point(196, 106);
             tuesdayShowButton.Name = "tuesdayShowButton";
-            tuesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            tuesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges78;
             tuesdayShowButton.Size = new Size(64, 23);
             tuesdayShowButton.TabIndex = 3;
             tuesdayShowButton.Text = "SHOW";
@@ -3026,7 +3017,7 @@
             // mondayShowButton
             // 
             mondayShowButton.BorderRadius = 10;
-            mondayShowButton.CustomizableEdges = customizableEdges19;
+            mondayShowButton.CustomizableEdges = customizableEdges79;
             mondayShowButton.DisabledState.BorderColor = Color.DarkGray;
             mondayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             mondayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -3038,7 +3029,7 @@
             mondayShowButton.ForeColor = Color.White;
             mondayShowButton.Location = new Point(196, 69);
             mondayShowButton.Name = "mondayShowButton";
-            mondayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            mondayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges80;
             mondayShowButton.Size = new Size(64, 23);
             mondayShowButton.TabIndex = 2;
             mondayShowButton.Text = "SHOW";
@@ -3250,12 +3241,11 @@
             // 
             // chooseWorkoutNumberLabel
             // 
-            chooseWorkoutNumberLabel.AutoSize = true;
             chooseWorkoutNumberLabel.BackColor = Color.WhiteSmoke;
             chooseWorkoutNumberLabel.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            chooseWorkoutNumberLabel.Location = new Point(142, 15);
+            chooseWorkoutNumberLabel.Location = new Point(101, 15);
             chooseWorkoutNumberLabel.Name = "chooseWorkoutNumberLabel";
-            chooseWorkoutNumberLabel.Size = new Size(268, 44);
+            chooseWorkoutNumberLabel.Size = new Size(350, 44);
             chooseWorkoutNumberLabel.TabIndex = 40;
             chooseWorkoutNumberLabel.Text = "Choose how many workouts \r\nyou want to make.";
             chooseWorkoutNumberLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -3272,10 +3262,10 @@
             // chooseWorkoutNumberNextBut
             // 
             chooseWorkoutNumberNextBut.CornerRoundingRadius = 15F;
-            chooseWorkoutNumberNextBut.Location = new Point(0, 0);
+            chooseWorkoutNumberNextBut.Location = new Point(-17, 0);
             chooseWorkoutNumberNextBut.Name = "chooseWorkoutNumberNextBut";
             chooseWorkoutNumberNextBut.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            chooseWorkoutNumberNextBut.Size = new Size(90, 25);
+            chooseWorkoutNumberNextBut.Size = new Size(125, 25);
             chooseWorkoutNumberNextBut.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             chooseWorkoutNumberNextBut.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             chooseWorkoutNumberNextBut.StateCommon.Back.ColorAngle = 45F;
@@ -3345,7 +3335,7 @@
             // 
             upperBodyHomeOutdoorsPanel.Controls.Add(backBicepsCheckBox);
             upperBodyHomeOutdoorsPanel.Controls.Add(backBB);
-            upperBodyHomeOutdoorsPanel.Controls.Add(pictureBox5);
+            upperBodyHomeOutdoorsPanel.Controls.Add(vLine6);
             upperBodyHomeOutdoorsPanel.Controls.Add(frontBB);
             upperBodyHomeOutdoorsPanel.Controls.Add(backCTS);
             upperBodyHomeOutdoorsPanel.Controls.Add(frontCTS);
@@ -3382,14 +3372,14 @@
             backBB.TabStop = false;
             backBB.Click += backBB_Click;
             // 
-            // pictureBox5
+            // vLine6
             // 
-            pictureBox5.Image = Properties.Resources.vline;
-            pictureBox5.Location = new Point(260, 65);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(1, 150);
-            pictureBox5.TabIndex = 50;
-            pictureBox5.TabStop = false;
+            vLine6.Image = Properties.Resources.vline;
+            vLine6.Location = new Point(260, 65);
+            vLine6.Name = "vLine6";
+            vLine6.Size = new Size(1, 150);
+            vLine6.TabIndex = 50;
+            vLine6.TabStop = false;
             // 
             // frontBB
             // 
@@ -3451,9 +3441,9 @@
             // 
             upperBodyHomeOutdoorsButPanel.BackColor = Color.WhiteSmoke;
             upperBodyHomeOutdoorsButPanel.Controls.Add(upperBodyHomeOutdoorsButton);
-            upperBodyHomeOutdoorsButPanel.Location = new Point(214, 221);
+            upperBodyHomeOutdoorsButPanel.Location = new Point(197, 221);
             upperBodyHomeOutdoorsButPanel.Name = "upperBodyHomeOutdoorsButPanel";
-            upperBodyHomeOutdoorsButPanel.Size = new Size(90, 25);
+            upperBodyHomeOutdoorsButPanel.Size = new Size(125, 25);
             upperBodyHomeOutdoorsButPanel.TabIndex = 32;
             // 
             // upperBodyHomeOutdoorsButton
@@ -3462,7 +3452,7 @@
             upperBodyHomeOutdoorsButton.Location = new Point(0, 0);
             upperBodyHomeOutdoorsButton.Name = "upperBodyHomeOutdoorsButton";
             upperBodyHomeOutdoorsButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            upperBodyHomeOutdoorsButton.Size = new Size(90, 25);
+            upperBodyHomeOutdoorsButton.Size = new Size(125, 25);
             upperBodyHomeOutdoorsButton.StateCommon.Back.Color1 = Color.FromArgb(92, 225, 230);
             upperBodyHomeOutdoorsButton.StateCommon.Back.Color2 = Color.FromArgb(92, 225, 230);
             upperBodyHomeOutdoorsButton.StateCommon.Back.ColorAngle = 45F;
@@ -3540,6 +3530,15 @@
             upperBodyHomeOutdoorsBorders.Size = new Size(518, 262);
             upperBodyHomeOutdoorsBorders.TabIndex = 0;
             upperBodyHomeOutdoorsBorders.TabStop = false;
+            // 
+            // createBorders
+            // 
+            createBorders.Image = (Image)resources.GetObject("createBorders.Image");
+            createBorders.Location = new Point(0, 0);
+            createBorders.Name = "createBorders";
+            createBorders.Size = new Size(553, 307);
+            createBorders.TabIndex = 0;
+            createBorders.TabStop = false;
             // 
             // Workouts
             // 
@@ -3623,7 +3622,6 @@
             createPanel.ResumeLayout(false);
             createPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)hLine3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)createBorders).EndInit();
             workoutPreviewPanel.ResumeLayout(false);
             workoutPreviewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)workoutPreviewClose).EndInit();
@@ -3676,21 +3674,20 @@
             workoutsDashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)workoutBorder1).EndInit();
             chooseWorkoutNumberPanel.ResumeLayout(false);
-            chooseWorkoutNumberPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)workoutNumberComboBox).EndInit();
             chooseWorkoutNumButPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chooseWorkoutNumberBorders).EndInit();
             upperBodyHomeOutdoorsPanel.ResumeLayout(false);
             upperBodyHomeOutdoorsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)backBB).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)vLine6).EndInit();
             ((System.ComponentModel.ISupportInitialize)frontBB).EndInit();
             ((System.ComponentModel.ISupportInitialize)backCTS).EndInit();
             ((System.ComponentModel.ISupportInitialize)frontCTS).EndInit();
             upperBodyHomeOutdoorsButPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)upperBodyHomeOutdoorsBorders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)createBorders).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -3713,7 +3710,7 @@
         private Panel activityGroupPanel;
         private Panel nextButtonPanel2;
         private Krypton.Toolkit.KryptonButton nextButton2;
-        private Label acticityGroupLabel;
+        private Label activityGroupLabel;
         private PictureBox activityGroupBorders;
         private ComboBox activityLevelComboBox;
         private Panel muscleGroupPanel;
@@ -3770,7 +3767,6 @@
         private PictureBox preBorders;
         private Panel createPanel;
         private Label createLabel;
-        private PictureBox createBorders;
         private Panel nextButtPanel;
         private Krypton.Toolkit.KryptonButton nextButt7;
         private FlowLayoutPanel workoutsList;
@@ -3906,11 +3902,12 @@
         private Krypton.Toolkit.KryptonButton upperBodyHomeOutdoorsButton;
         private Label upperBodyHomeOutdoorsLabel;
         private PictureBox upperBodyHomeOutdoorsBorders;
-        private PictureBox pictureBox5;
+        private PictureBox vLine6;
         private PictureBox backBB;
         private CheckBox backBicepsCheckBox;
         private Label workoutNameLabel;
         private Guna.UI2.WinForms.Guna2TextBox workoutNameTextBox;
         private Guna.UI2.WinForms.Guna2Button createNextButton;
+        private PictureBox createBorders;
     }
 }

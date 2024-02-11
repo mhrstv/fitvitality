@@ -16,6 +16,8 @@ namespace FitVitality
 {
     public partial class Form1 : KryptonForm
     {
+        string username;
+
         bool dashboard_Opened = false;
         bool calculators_Opened = false;
         bool workouts_Opened = false;
@@ -63,20 +65,21 @@ namespace FitVitality
                 nutrition_Opened = false;
                 settings_Opened = false;
             }
-            using(SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string query = "SELECT * FROM UserData WHERE UserID = @userID";
-                using(SqlCommand command = new SqlCommand(query, connection))
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@userID", _userID);
-                    using(SqlDataReader reader = command.ExecuteReader())
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
                         var cfg = new Config("FitVitality.ini");
                         if (cfg.Read("Language", "SETTINGS") == "en")
                         {
                             if (reader.Read())
                             {
+                                username = reader["Username"].ToString();
                                 loggedInAsLabel.Text = "Logged in as " + reader["Username"].ToString();
                             }
                         }
@@ -84,6 +87,7 @@ namespace FitVitality
                         {
                             if (reader.Read())
                             {
+                                username = reader["Username"].ToString();
                                 loggedInAsLabel.Text = "Влязъл като " + reader["Username"].ToString();
                             }
                         }
@@ -280,6 +284,19 @@ namespace FitVitality
                 workouts_Opened = false;
                 nutrition_Opened = true;
                 settings_Opened = false;
+            }
+        }
+
+        private void loggedAsTimer_Tick(object sender, EventArgs e)
+        {
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                loggedInAsLabel.Text = "Logged in as " + username;
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                loggedInAsLabel.Text = "Влязъл като " + username;
             }
         }
     }

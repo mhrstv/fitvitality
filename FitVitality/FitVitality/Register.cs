@@ -317,18 +317,19 @@ namespace FitVitality
                     {
                         email_Error = true;
                         emailError.Image = Properties.Resources.repassError;
-                        emailErrorLabel.Location = new Point(14, 5);
                         emailError.Location = new Point(0, 0);
                         emailError.Size = new Size(151, 27);
                         emailErrorLabel.Size = new Size(122, 14);
                         emailmark.Visible = true;
                         if (cfg.Read("Language", "SETTINGS") == "en")
                         {
+                            emailErrorLabel.Location = new Point(14, 5);
                             emailErrorLabel.Text = "Email is already in use!";
                         }
                         if (cfg.Read("Language", "SETTINGS") == "bg")
                         {
-                            emailErrorLabel.Text = "Имейлът вече съществува!";
+                            emailErrorLabel.Location = new Point(16, 5);
+                            emailErrorLabel.Text = "Имейлът вече е зает!";
                         }
                         textBoxEmail.Text = "";
                         textBoxEmail.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);

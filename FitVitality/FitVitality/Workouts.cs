@@ -133,6 +133,7 @@ namespace FitVitality
                 createLabel.Text = "Workout creation - #";
                 createNextButton.Text = "Next";
                 editWorkoutLabel.Text = "Edit Workouts";
+                editWorkoutLabel.Size = new Size(109, 21);
                 fridayLabel.Text = "Fri";
                 fridayShowButton.Text = "SHOW";
                 glutesCheckBox.Text = "Glutes";
@@ -145,7 +146,8 @@ namespace FitVitality
                 labelPanel5.Text = "Fri";
                 labelPanel6.Text = "Sat";
                 labelPanel7.Text = "Sun";
-                lowerBodyLabel.Text = "Which upper body muscles would you like to train?";
+                lowerBodyLabel.Text = "Which lower body muscles would you like to train?";
+                lowerBodyLabel2.Location = new Point(135, 29);
                 lowerBodyLabel2.Text = "lower";
                 mondayLabel.Text = "Mon";
                 multipleSelectionsLabel.Text = "You can select multiple muscle groups.";
@@ -182,6 +184,7 @@ namespace FitVitality
                 upperBodyHomeOutdoorsButton.Text = "Next";
                 upperBodyHomeOutdoorsLabel.Text = "Which upper body muscles would you like to train? ";
                 upperBodyLabel.Text = "Which upper body muscles would you like to train? ";
+                upperLabel.Location = new Point(135, 29);
                 upperLabel.Text = "upper";
                 upperLabel2.Text = "upper";
                 wdExercises.Text = "Exercises:";
@@ -207,30 +210,41 @@ namespace FitVitality
                 workoutNumberComboBox.Items.Add(5);
                 workoutNumberComboBox.Items.Add(6);
                 workoutNumberComboBox.Items.Add(7);
+                shouldersCheckBox.Text = "Shoulders";
                 workoutTypeLabel.Text = "Do you want to choose a pre-generated workout or\r\nwould you rather create your own?";
+                gymButton.Image = Properties.Resources.gym;
+                homeButton.Image = Properties.Resources.home1;
+                outdoorsButton.Image = Properties.Resources.outdoors;
+                createPicture.Image = Properties.Resources.create;
+                prePicture.Image = Properties.Resources.pre;
+                upperButton.Image = Properties.Resources.upper;
+                lowerButton.Image = Properties.Resources.lower;
+                coreButton.Image = Properties.Resources.core;
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 workoutsLabel.Text = "Тренировки";
                 activityGroupLabel.Text = "Колко често смятате да тренирате?";
                 activityLevelComboBox.Items.Clear();
-                activityLevelComboBox.Items.Add("1 ден / седминца");
-                activityLevelComboBox.Items.Add("2 дни / седминца");
-                activityLevelComboBox.Items.Add("3 дни / седминца");
-                activityLevelComboBox.Items.Add("4 дни / седминца");
-                activityLevelComboBox.Items.Add("5 дни / седминца");
-                activityLevelComboBox.Items.Add("6 дни / седминца");
-                activityLevelComboBox.Items.Add("7 дни / седминца");
+                activityLevelComboBox.Items.Add("1 ден / седмица");
+                activityLevelComboBox.Items.Add("2 дни / седмица");
+                activityLevelComboBox.Items.Add("3 дни / седмица");
+                activityLevelComboBox.Items.Add("4 дни / седмица");
+                activityLevelComboBox.Items.Add("5 дни / седмица");
+                activityLevelComboBox.Items.Add("6 дни / седмица");
+                activityLevelComboBox.Items.Add("7 дни / седмица");
                 armsCheckBox.Text = "Ръце";
                 backBicepsCheckBox.Text = "Гръб и бицепс";
                 backCheckBox.Text = "Гръб";
+                shouldersCheckBox.Text = "Рамене";
                 calvesCheckBox.Text = "Прасец";
                 chestCheckBox.Text = "Гърди";
                 chestTricepsShoulderCheckBox.Text = "Гърди, Трицепс и Рамена";
                 chooseWorkoutNumberLabel.Text = "Изберете колко\r\nтренировки желаете.";
                 chooseWorkoutNumberNextBut.Text = "Продължи";
                 createNextButton.Text = "Продължи";
-                editWorkoutLabel.Text = "Редактирай Тренировка";
+                editWorkoutLabel.Size = new Size(184, 21);
+                editWorkoutLabel.Text = "Редактирай тренировка";
                 fridayLabel.Text = "Пет";
                 fridayShowButton.Text = "ПОКАЖИ";
                 glutesCheckBox.Text = "Глутеус";
@@ -242,12 +256,13 @@ namespace FitVitality
                 labelPanel5.Text = "Пет";
                 labelPanel6.Text = "Съб";
                 labelPanel7.Text = "Нед";
-                lowerBodyLabel.Text = "Which upper body muscles would you like to train?";
-                lowerBodyLabel2.Text = "долна";
+                lowerBodyLabel.Text = "Кои мускули от долната част ще тренирате?";
+                lowerBodyLabel2.Location = new Point(197, 29);
+                lowerBodyLabel2.Text = "долната";
                 mondayLabel.Text = "Пон";
-                multipleSelectionsLabel.Text = "You can select multiple muscle groups.";
-                muscleGroupLabel.Text = "We would like to know which muscle groups from the ones\r\nbelow, you would like to train?";
-                nextButt7.Text = "Next";
+                multipleSelectionsLabel.Text = "Можете да избирате по няколко мускулни групи.";
+                muscleGroupLabel.Text = "Кои от изброените мускулни групи\r\nжелаете да тренирате?";
+                nextButt7.Text = "Продължи";
                 nextButton1.Text = "Продължи";
                 nextButton2.Text = "Продължи";
                 nextButton3.Text = "Продължи";
@@ -255,47 +270,48 @@ namespace FitVitality
                 nextButton5.Text = "Продължи";
                 preNextButton2.Text = "Продължи";
                 preNextButton3.Text = "Готово";
-                quadricepsCheckBox.Text = "Quadriceps";
-                restDay1.Text = "Rest Day";
-                restDay2.Text = "Rest Day";
-                restDay3.Text = "Rest Day";
-                restDay4.Text = "Rest Day";
-                restDay5.Text = "Rest Day";
-                restDay6.Text = "Rest Day";
-                restDay7.Text = "Rest Day";
-                saturdayLabel.Text = "Sat";
+                quadricepsCheckBox.Text = "Предно бедро";
+                restDay1.Text = "Поч.\r\nден";
+                restDay2.Text = "Поч.\r\nден";
+                restDay3.Text = "Поч.\r\nден";
+                restDay4.Text = "Поч.\r\nден";
+                restDay5.Text = "Поч.\r\nден";
+                restDay6.Text = "Поч.\r\nден";
+                restDay7.Text = "Поч.\r\nден";
+                saturdayLabel.Text = "Съб";
                 saturdayShowButton.Text = "ПОКАЖИ";
-                selectWorkoutButton.Text = "Select";
-                selectWorkoutsDescription.Text = "Please select a workout for every day.";
-                selectWorkoutsLabel.Text = "Select Workouts";
-                sundayLabel.Text = "Sun";
+                selectWorkoutButton.Text = "Избери";
+                selectWorkoutsDescription.Text = "Моля изберете тренировка за всеки ден.";
+                selectWorkoutsLabel.Text = "Избери тренировки";
+                sundayLabel.Text = "Нед";
                 sundayShowButton.Text = "ПОКАЖИ";
-                thursdayLabel.Text = "Thu";
+                thursdayLabel.Text = "Чет";
                 thursdayShowButton.Text = "ПОКАЖИ";
-                trainingDaysDescription.Text = "Please select which days you want to train in.";
-                trainingDaysLabel.Text = "Training days";
-                tuesdayLabel.Text = "Tue";
+                trainingDaysDescription.Text = "Моля изберете в кои дни ще тренирате.";
+                trainingDaysLabel.Text = "Тренировъчни дни";
+                tuesdayLabel.Text = "Вто";
                 tuesdayShowButton.Text = "ПОКАЖИ";
-                upperBodyHomeOutdoorsButton.Text = "Next";
-                upperBodyHomeOutdoorsLabel.Text = "Which upper body muscles would you like to train? ";
-                upperBodyLabel.Text = "Which upper body muscles would you like to train? ";
-                upperLabel.Text = "upper";
-                upperLabel2.Text = "upper";
-                wdExercises.Text = "Exercises:";
-                wdFriday.Text = "-    Friday";
-                wdMonday.Text = "-    Monday";
-                wdSaturday.Text = "-    Saturday";
-                wdSelectedLabel.Text = "Selected:";
-                wdSunday.Text = "-    Sunday";
-                wdThursday.Text = "-    Thursday";
-                wdTuesday.Text = "-    Tuesday";
-                wdWednesday.Text = "-    Wednesday";
-                wednesdayLabel.Text = "Wed";
+                upperBodyHomeOutdoorsButton.Text = "Продължи";
+                upperBodyHomeOutdoorsLabel.Text = "Кои мускули от горната част ще тренирате?";
+                upperBodyLabel.Text = "Кои мускули от горната част ще тренирате?";
+                upperLabel.Location = new Point(197, 29);
+                upperLabel.Text = "горната";
+                upperLabel2.Text = "горна";
+                wdExercises.Text = "Упражнения:";
+                wdFriday.Text = "-    Петък";
+                wdMonday.Text = "-    Понеделник";
+                wdSaturday.Text = "-    Събота";
+                wdSelectedLabel.Text = "Избрани:";
+                wdSunday.Text = "-    Неделя";
+                wdThursday.Text = "-    Четвъртък";
+                wdTuesday.Text = "-    Вторник";
+                wdWednesday.Text = "-    Сряда";
+                wednesdayLabel.Text = "Ср";
                 wednesdayShowButton.Text = "ПОКАЖИ";
                 mondayShowButton.Text = "ПОКАЖИ";
-                workoutDashboardLabel.Text = "Workout Dashboard";
-                workoutDaysHint.Text = "You must choose a workout for each day.";
-                workoutNameLabel.Text = "Name your workout:";
+                workoutDashboardLabel.Text = "Тренировъчно Табло";
+                workoutDaysHint.Text = "Трябва да изберете тренировка за всеки ден.";
+                workoutNameLabel.Text = "Наименувайте тренировката си:";
                 workoutNumberComboBox.Items.Clear();
                 workoutNumberComboBox.Items.Add(1);
                 workoutNumberComboBox.Items.Add(2);
@@ -304,7 +320,16 @@ namespace FitVitality
                 workoutNumberComboBox.Items.Add(5);
                 workoutNumberComboBox.Items.Add(6);
                 workoutNumberComboBox.Items.Add(7);
-                workoutTypeLabel.Text = "Do you want to choose a pre-generated workout or\r\nwould you rather create your own?";
+                workoutTypeLabel.Text = "Искате ли да изберете предварително генерирана\r\n" +
+                    "тренировка или предпочитате да създадете своя собствена?";
+                gymButton.Image = Properties.Resources.gymbg;
+                homeButton.Image = Properties.Resources.homebg;
+                outdoorsButton.Image = Properties.Resources.outdoorsbg;
+                createPicture.Image = Properties.Resources.createbg;
+                prePicture.Image = Properties.Resources.prebg;
+                upperButton.Image = Properties.Resources.upperbg;
+                lowerButton.Image = Properties.Resources.lowerbg;
+                coreButton.Image = Properties.Resources.corebg;
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -393,85 +418,196 @@ namespace FitVitality
 
         private void gymButton_Click(object sender, EventArgs e)
         {
-            gymButton.Image = Properties.Resources.gymPressed;
-            homeButton.Image = Properties.Resources.home1;
-            outdoorsButton.Image = Properties.Resources.outdoors;
-            gymClicked = true;
-            homeClicked = false;
-            outdoorsClicked = false;
-            nextButton1.Visible = true;
-            workoutPlace = "Gym";
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                gymButton.Image = Properties.Resources.gymPressed;
+                homeButton.Image = Properties.Resources.home1;
+                outdoorsButton.Image = Properties.Resources.outdoors;
+                gymClicked = true;
+                homeClicked = false;
+                outdoorsClicked = false;
+                nextButton1.Visible = true;
+                workoutPlace = "Gym";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                gymButton.Image = Properties.Resources.gymPressedbg;
+                homeButton.Image = Properties.Resources.homebg;
+                outdoorsButton.Image = Properties.Resources.outdoorsbg;
+                gymClicked = true;
+                homeClicked = false;
+                outdoorsClicked = false;
+                nextButton1.Visible = true;
+                workoutPlace = "Gym";
+            }
         }
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            gymButton.Image = Properties.Resources.gym;
-            homeButton.Image = Properties.Resources.homePressed;
-            outdoorsButton.Image = Properties.Resources.outdoors;
-            gymClicked = false;
-            homeClicked = true;
-            outdoorsClicked = false;
-            nextButton1.Visible = true;
-            workoutPlace = "Home";
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                gymButton.Image = Properties.Resources.gym;
+                homeButton.Image = Properties.Resources.homePressed;
+                outdoorsButton.Image = Properties.Resources.outdoors;
+                gymClicked = false;
+                homeClicked = true;
+                outdoorsClicked = false;
+                nextButton1.Visible = true;
+                workoutPlace = "Home";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                gymButton.Image = Properties.Resources.gymbg;
+                homeButton.Image = Properties.Resources.homePressedbg;
+                outdoorsButton.Image = Properties.Resources.outdoorsbg;
+                gymClicked = false;
+                homeClicked = true;
+                outdoorsClicked = false;
+                nextButton1.Visible = true;
+                workoutPlace = "Home";
+            }
         }
 
         private void outdoorsButton_Click(object sender, EventArgs e)
         {
-            gymButton.Image = Properties.Resources.gym;
-            homeButton.Image = Properties.Resources.home1;
-            outdoorsButton.Image = Properties.Resources.outdoorsPressed;
-            gymClicked = false;
-            homeClicked = false;
-            outdoorsClicked = true;
-            nextButton1.Visible = true;
-            workoutPlace = "Outdoors";
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                gymButton.Image = Properties.Resources.gym;
+                homeButton.Image = Properties.Resources.home1;
+                outdoorsButton.Image = Properties.Resources.outdoorsPressed;
+                gymClicked = false;
+                homeClicked = false;
+                outdoorsClicked = true;
+                nextButton1.Visible = true;
+                workoutPlace = "Outdoors";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                gymButton.Image = Properties.Resources.gymbg;
+                homeButton.Image = Properties.Resources.homebg;
+                outdoorsButton.Image = Properties.Resources.outdoorsPressedbg;
+                gymClicked = false;
+                homeClicked = false;
+                outdoorsClicked = true;
+                nextButton1.Visible = true;
+                workoutPlace = "Outdoors";
+            }
         }
 
         private void gymButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!gymClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                gymButton.Image = Properties.Resources.gymHover;
+                if (!gymClicked)
+                {
+                    gymButton.Image = Properties.Resources.gymHover;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!gymClicked)
+                {
+                    gymButton.Image = Properties.Resources.gymHoverbg;
+                }
             }
         }
 
         private void gymButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!gymClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                gymButton.Image = Properties.Resources.gym;
+                if (!gymClicked)
+                {
+                    gymButton.Image = Properties.Resources.gym;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!gymClicked)
+                {
+                    gymButton.Image = Properties.Resources.gymbg;
+                }
             }
         }
 
         private void homeButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!homeClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                homeButton.Image = Properties.Resources.homeHover;
+                if (!homeClicked)
+                {
+                    homeButton.Image = Properties.Resources.homeHover;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!homeClicked)
+                {
+                    homeButton.Image = Properties.Resources.homeHoverbg;
+                }
             }
         }
 
         private void homeButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!homeClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                homeButton.Image = Properties.Resources.home1;
+                if (!homeClicked)
+                {
+                    homeButton.Image = Properties.Resources.homebg;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!homeClicked)
+                {
+                    homeButton.Image = Properties.Resources.homebg;
+                }
             }
         }
 
         private void outdoorsButton_MouseEnter(object sender, EventArgs e)
         {
-            if (!outdoorsClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                outdoorsButton.Image = Properties.Resources.outdoorsHovered;
+                if (!outdoorsClicked)
+                {
+                    outdoorsButton.Image = Properties.Resources.outdoorsHovered;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!outdoorsClicked)
+                {
+                    outdoorsButton.Image = Properties.Resources.outdoorsHoveredbg;
+                }
             }
         }
 
         private void outdoorsButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!outdoorsClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                outdoorsButton.Image = Properties.Resources.outdoors;
+                if (!outdoorsClicked)
+                {
+                    outdoorsButton.Image = Properties.Resources.outdoorsbg;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!outdoorsClicked)
+                {
+                    outdoorsButton.Image = Properties.Resources.outdoorsbg;
+                }
             }
         }
 
@@ -540,11 +676,25 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                upToDaysLabel.Text = $"You must select {activity} days.";
+                if (activity == 1)
+                {
+                    upToDaysLabel.Text = $"You must select {activity} day.";
+                }
+                if (activity > 1)
+                {
+                    upToDaysLabel.Text = $"You must select {activity} days.";
+                }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                upToDaysLabel.Text = $"You must select {activity} days.";
+                if (activity == 1)
+                {
+                    upToDaysLabel.Text = $"Трябва да изберете {activity} ден.";
+                }
+                if (activity > 1)
+                {
+                    upToDaysLabel.Text = $"Трябва да изберете {activity} дни.";
+                }
             }
         }
 
@@ -2577,7 +2727,15 @@ namespace FitVitality
             exerciseList.Clear();
             exerciseListPanel.Controls.Clear();
             currentExerciseList.Controls.Clear();
-            createLabel.Text = "Workout creation - 1";
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                createLabel.Text = "Workout creation - 1";
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                createLabel.Text = "Създаване на тренировка - 1";
+            }
             loadItemsList();
         }
         private void loadItems(List<string> exercises, string type)
@@ -2737,7 +2895,15 @@ namespace FitVitality
                 }
                 WorkoutDays.Add($"{workoutNameTextBox.Text}");
                 workoutNames.Add($"{workoutNameTextBox.Text}");
-                createLabel.Text = $"Workout creation - {titleLabel_Number}";
+                var cfg = new Config("FitVitality.ini");
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    createLabel.Text = $"Workout creation - {titleLabel_Number}";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    createLabel.Text = $"Създаване на тренировка - {titleLabel_Number}";
+                }
                 exerciseListItems.Clear();
                 exerciseList.Clear();
                 exerciseListPanel.Controls.Clear();

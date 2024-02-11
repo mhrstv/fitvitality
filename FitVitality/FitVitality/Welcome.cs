@@ -331,7 +331,7 @@ namespace FitVitality
                     return false; // Връща false ако името съдържа символи различни от букви
                 }
             }
-            if (name.Length < 3 || name.Length > 20)
+            if (name.Length < 1 || name.Length > 20)
             {
                 return false;
             }

@@ -130,6 +130,7 @@ namespace FitVitality
                 {
                     themeComboBox.SelectedItem = "Тъмна";
                 }
+                beta.Image = Properties.Resources.Beta_Buttonbg;
             }
             else if (cfg.Read("Language", "SETTINGS") == "en")
             {
@@ -181,6 +182,7 @@ namespace FitVitality
                 {
                     themeComboBox.SelectedItem = "Dark";
                 }
+                beta.Image = Properties.Resources.Beta_Button;
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -552,6 +554,7 @@ namespace FitVitality
                 {
                     themeComboBox.SelectedItem = "Тъмна";
                 }
+                beta.Image = Properties.Resources.Beta_Buttonbg;
             }
             else if (languageComboBox.SelectedItem == "English" || languageComboBox.SelectedItem == "Английски")
             {
@@ -607,6 +610,7 @@ namespace FitVitality
                 {
                     themeComboBox.SelectedItem = "Dark";
                 }
+                beta.Image = Properties.Resources.Beta_Button;
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -869,12 +873,12 @@ namespace FitVitality
         private void themeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
-            if(themeComboBox.SelectedItem == "Light" || themeComboBox.SelectedItem == "Светла")
+            if (themeComboBox.SelectedItem == "Light" || themeComboBox.SelectedItem == "Светла")
             {
                 cfg.Write("Theme", "light", "SETTINGS");
             }
             else
-               cfg.Write("Theme", "dark", "SETTINGS");
+                cfg.Write("Theme", "dark", "SETTINGS");
         }
     }
 }

@@ -296,7 +296,8 @@ namespace FitVitality
                 upperBodyLabel.Text = "Кои мускули от горната част ще тренирате?";
                 upperLabel.Location = new Point(197, 29);
                 upperLabel.Text = "горната";
-                upperLabel2.Text = "горна";
+                upperLabel2.Location = new Point(197, 29);
+                upperLabel2.Text = "горната";
                 wdExercises.Text = "Упражнения:";
                 wdFriday.Text = "-    Петък";
                 wdMonday.Text = "-    Понеделник";
@@ -3137,12 +3138,32 @@ namespace FitVitality
         {
             if (trainPlacePanel.Visible == true)
             {
+                var cfg = new Config("FitVitality.ini");
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    gymButton.Image = Properties.Resources.gym;
+                    homeButton.Image = Properties.Resources.home1;
+                    outdoorsButton.Image = Properties.Resources.outdoors;
+                    prePicture.Image = Properties.Resources.pre;
+                    createPicture.Image = Properties.Resources.create;
+                    upperButton.Image = Properties.Resources.upper;
+                    lowerButton.Image = Properties.Resources.lower;
+                    coreButton.Image = Properties.Resources.core;
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    gymButton.Image = Properties.Resources.gymbg;
+                    homeButton.Image = Properties.Resources.homebg;
+                    outdoorsButton.Image = Properties.Resources.outdoorsbg;
+                    prePicture.Image = Properties.Resources.prebg;
+                    createPicture.Image = Properties.Resources.createbg;
+                    upperButton.Image = Properties.Resources.upperbg;
+                    lowerButton.Image = Properties.Resources.lowerbg;
+                    coreButton.Image = Properties.Resources.corebg;
+                }
                 gymClicked = false;
                 homeClicked = false;
                 outdoorsClicked = false;
-                gymButton.Image = Properties.Resources.gym;
-                homeButton.Image = Properties.Resources.home1;
-                outdoorsButton.Image = Properties.Resources.outdoors;
                 activityLevelComboBox.Text = "";
                 activityLevelComboBox.SelectedValue = "";
                 activityLevelComboBox.SelectedText = "";
@@ -3160,8 +3181,6 @@ namespace FitVitality
                 preNextButton3.Visible = false;
                 preClicked = false;
                 createClicked = false;
-                prePicture.Image = Properties.Resources.pre;
-                createPicture.Image = Properties.Resources.create;
                 mondayCheckBox.Checked = false;
                 tuesdayCheckBox.Checked = false;
                 wednesdayCheckBox.Checked = false;
@@ -3201,11 +3220,8 @@ namespace FitVitality
                 selectedDays = 0;
                 workoutNumber = 0;
                 upperBodyClicked = false;
-                upperButton.Image = Properties.Resources.upper;
                 lowerBodyClicked = false;
-                lowerButton.Image = Properties.Resources.lower;
                 coreClicked = false;
-                coreButton.Image = Properties.Resources.core;
                 backCheckBox.Checked = false;
                 backPicture.Image = Properties.Resources.back;
                 armsCheckBox.Checked = false;

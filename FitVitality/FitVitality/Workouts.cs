@@ -2284,7 +2284,7 @@ namespace FitVitality
                     {
                         workoutPreviewLabel.Text = $"Тренировка {i + 1}";
                     }
-                    labelExercises.Text = $"[Гръб and Бицепс]: {backbiceps[i]}\n[Гърди, Трицепс и Рамене]: {chesttricepsshoulders[i]}\n\n" +
+                    labelExercises.Text = $"[Гръб и Бицепс]: {backbiceps[i]}\n[Гърди, Трицепс и Рамене]: {chesttricepsshoulders[i]}\n\n" +
                     $"[Крака]: {legs[i]}\n\n" +
                     $"[Ядра]: {_core[i]}";
 

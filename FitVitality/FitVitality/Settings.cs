@@ -608,6 +608,73 @@ namespace FitVitality
                     themeComboBox.SelectedItem = "Dark";
                 }
             }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM UserSettings WHERE UserID = @UserID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@UserID", _userID);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (cfg.Read("Language", "SETTINGS") == "en")
+                            {
+                                if (reader["Gender"].ToString() == "Male")
+                                {
+                                    genderComboBox.SelectedItem = "Male";
+                                }
+                                else
+                                {
+                                    genderComboBox.SelectedItem = "Female";
+                                }
+                            }
+                            if (cfg.Read("Language", "SETTINGS") == "bg")
+                            {
+                                if (reader["Gender"].ToString() == "Male")
+                                {
+                                    genderComboBox.SelectedItem = "Мъж";
+                                }
+                                else
+                                {
+                                    genderComboBox.SelectedItem = "Жена";
+                                }
+                            }
+                            if (cfg.Read("Language", "SETTINGS") == "en")
+                            {
+                                if (reader["Goal"].ToString() == "Cut")
+                                {
+                                    goalComboBox.SelectedItem = "Cut";
+                                }
+                                else if (reader["Goal"].ToString() == "Maintain")
+                                {
+                                    goalComboBox.SelectedItem = "Maintain";
+                                }
+                                else
+                                {
+                                    goalComboBox.SelectedItem = "Bulk";
+                                }
+                            }
+                            if (cfg.Read("Language", "SETTINGS") == "bg")
+                            {
+                                if (reader["Goal"].ToString() == "Cut")
+                                {
+                                    goalComboBox.SelectedItem = "Сваляне";
+                                }
+                                else if (reader["Goal"].ToString() == "Maintain")
+                                {
+                                    goalComboBox.SelectedItem = "Поддържане";
+                                }
+                                else
+                                {
+                                    goalComboBox.SelectedItem = "Покачване";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void weightTextBox_TextChanged(object sender, EventArgs e)

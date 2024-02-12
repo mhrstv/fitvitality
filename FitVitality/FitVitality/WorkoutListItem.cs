@@ -29,16 +29,13 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                workoutNumLabel.Text = "Workout [Number]";
                 selectButton.Text = "Preview";
             }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
+            else
             {
-                workoutNumLabel.Text = "Тренировка [Number]";
                 selectButton.Text = "Преглед";
             }
         }
-
         private void selectButton_Click(object sender, EventArgs e)
         {
             ButtonClicked?.Invoke(this, EventArgs.Empty);

@@ -562,7 +562,7 @@ namespace FitVitality
             {
                 if (!homeClicked)
                 {
-                    homeButton.Image = Properties.Resources.homebg;
+                    homeButton.Image = Properties.Resources.home1;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
@@ -600,7 +600,7 @@ namespace FitVitality
             {
                 if (!outdoorsClicked)
                 {
-                    outdoorsButton.Image = Properties.Resources.outdoorsbg;
+                    outdoorsButton.Image = Properties.Resources.outdoors;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
@@ -873,7 +873,7 @@ namespace FitVitality
                     upperButton.Image = Properties.Resources.upperPressed;
                 }
             }
-            if (cfg.Read("Language", "SETTINGS") == "en")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 if (!upperBodyClicked)
                 {

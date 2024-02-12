@@ -3543,8 +3543,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
-            Controls.Add(workoutsDashboard);
             Controls.Add(createPanel);
+            Controls.Add(workoutsDashboard);
             Controls.Add(upperBodyHomeOutdoorsPanel);
             Controls.Add(chooseWorkoutNumberPanel);
             Controls.Add(workoutsList);

@@ -2667,7 +2667,7 @@ namespace FitVitality
         {
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
-            { 
+            {
                 if (preClicked)
                 {
                     if (gymClicked)
@@ -3219,6 +3219,7 @@ namespace FitVitality
                 workoutDaysDone = false;
                 selectedDays = 0;
                 workoutNumber = 0;
+                currentWorkoutNumber = 1;
                 upperBodyClicked = false;
                 lowerBodyClicked = false;
                 coreClicked = false;
@@ -3244,6 +3245,16 @@ namespace FitVitality
                 currentExerciseList.Controls.Clear();
                 workoutNames.Clear();
                 workoutNameTextBox.Clear();
+                WorkoutDays.Clear();
+                
+                workout1 = String.Empty;
+                workout2 = String.Empty;
+                workout3 = String.Empty;
+                workout4 = String.Empty;
+                workout5 = String.Empty;
+                workout6 = String.Empty;
+                workout7 = String.Empty;
+                createNextButton.Visible = false;
                 workoutNumberComboBox.Text = "";
                 workoutNumberComboBox.SelectedIndex = -1;
                 chooseWorkoutNumberPanel.Visible = false;

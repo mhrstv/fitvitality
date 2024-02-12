@@ -197,12 +197,15 @@
             // 
             loggedInAsLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             loggedInAsLabel.ForeColor = Color.FromArgb(92, 230, 225);
-            loggedInAsLabel.Location = new Point(447, 5);
+            loggedInAsLabel.Location = new Point(379, 5);
             loggedInAsLabel.Name = "loggedInAsLabel";
-            loggedInAsLabel.Size = new Size(156, 23);
+            loggedInAsLabel.Size = new Size(224, 23);
             loggedInAsLabel.TabIndex = 13;
             loggedInAsLabel.Text = "Logged in as {user}";
             loggedInAsLabel.TextAlign = ContentAlignment.MiddleRight;
+            loggedInAsLabel.MouseDown += loggedInAsLabel_MouseDown;
+            loggedInAsLabel.MouseMove += loggedInAsLabel_MouseMove;
+            loggedInAsLabel.MouseUp += loggedInAsLabel_MouseUp;
             // 
             // dietButton
             // 
@@ -449,6 +452,9 @@
             logo2.TabIndex = 1;
             logo2.TabStop = false;
             logo2.Click += pictureBox4_Click;
+            logo2.MouseDown += logo2_MouseDown;
+            logo2.MouseMove += logo2_MouseMove;
+            logo2.MouseUp += logo2_MouseUp;
             // 
             // logo1
             // 
@@ -460,6 +466,9 @@
             logo1.TabIndex = 1;
             logo1.TabStop = false;
             logo1.Click += pictureBox3_Click;
+            logo1.MouseDown += logo1_MouseDown;
+            logo1.MouseMove += logo1_MouseMove;
+            logo1.MouseUp += logo1_MouseUp;
             // 
             // hLine
             // 

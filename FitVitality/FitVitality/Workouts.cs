@@ -700,121 +700,268 @@ namespace FitVitality
 
         private void upperButton_Click(object sender, EventArgs e)
         {
-            if (upperBodyClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                upperBodyClicked = false;
-                upperButton.Image = Properties.Resources.upper;
-            }
-            else
-            {
-                upperBodyClicked = true;
-                upperButton.Image = Properties.Resources.upperPressed;
-            }
+                if (upperBodyClicked)
+                {
+                    upperBodyClicked = false;
+                    upperButton.Image = Properties.Resources.upper;
+                }
+                else
+                {
+                    upperBodyClicked = true;
+                    upperButton.Image = Properties.Resources.upperPressed;
+                }
 
-            if (upperBodyClicked || lowerBodyClicked || coreClicked)
-            {
-                nextButton3.Visible = true;
+                if (upperBodyClicked || lowerBodyClicked || coreClicked)
+                {
+                    nextButton3.Visible = true;
+                }
+                else
+                {
+                    nextButton3.Visible = false;
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                nextButton3.Visible = false;
+                if (upperBodyClicked)
+                {
+                    upperBodyClicked = false;
+                    upperButton.Image = Properties.Resources.upperbg;
+                }
+                else
+                {
+                    upperBodyClicked = true;
+                    upperButton.Image = Properties.Resources.upperPressedbg;
+                }
+
+                if (upperBodyClicked || lowerBodyClicked || coreClicked)
+                {
+                    nextButton3.Visible = true;
+                }
+                else
+                {
+                    nextButton3.Visible = false;
+                }
             }
         }
 
         private void lowerButton_Click(object sender, EventArgs e)
         {
-            if (lowerBodyClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                lowerBodyClicked = false;
-                lowerButton.Image = Properties.Resources.lower;
-            }
-            else
-            {
-                lowerBodyClicked = true;
-                lowerButton.Image = Properties.Resources.lowerPressed;
-            }
+                if (lowerBodyClicked)
+                {
+                    lowerBodyClicked = false;
+                    lowerButton.Image = Properties.Resources.lower;
+                }
+                else
+                {
+                    lowerBodyClicked = true;
+                    lowerButton.Image = Properties.Resources.lowerPressed;
+                }
 
-            if (upperBodyClicked || lowerBodyClicked || coreClicked)
-            {
-                nextButton3.Visible = true;
+                if (upperBodyClicked || lowerBodyClicked || coreClicked)
+                {
+                    nextButton3.Visible = true;
+                }
+                else
+                {
+                    nextButton3.Visible = false;
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                nextButton3.Visible = false;
+                if (lowerBodyClicked)
+                {
+                    lowerBodyClicked = false;
+                    lowerButton.Image = Properties.Resources.lowerbg;
+                }
+                else
+                {
+                    lowerBodyClicked = true;
+                    lowerButton.Image = Properties.Resources.lowerPressedbg;
+                }
+
+                if (upperBodyClicked || lowerBodyClicked || coreClicked)
+                {
+                    nextButton3.Visible = true;
+                }
+                else
+                {
+                    nextButton3.Visible = false;
+                }
             }
         }
 
         private void coreButton_Click(object sender, EventArgs e)
         {
-            if (coreClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                coreClicked = false;
-                coreButton.Image = Properties.Resources.core;
-            }
-            else
-            {
-                coreClicked = true;
-                coreButton.Image = Properties.Resources.corePressed;
-            }
+                if (coreClicked)
+                {
+                    coreClicked = false;
+                    coreButton.Image = Properties.Resources.core;
+                }
+                else
+                {
+                    coreClicked = true;
+                    coreButton.Image = Properties.Resources.corePressed;
+                }
 
-            if (upperBodyClicked || lowerBodyClicked || coreClicked)
-            {
-                nextButton3.Visible = true;
+                if (upperBodyClicked || lowerBodyClicked || coreClicked)
+                {
+                    nextButton3.Visible = true;
+                }
+                else
+                {
+                    nextButton3.Visible = false;
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                nextButton3.Visible = false;
+                if (coreClicked)
+                {
+                    coreClicked = false;
+                    coreButton.Image = Properties.Resources.corebg;
+                }
+                else
+                {
+                    coreClicked = true;
+                    coreButton.Image = Properties.Resources.corePressedbg;
+                }
+
+                if (upperBodyClicked || lowerBodyClicked || coreClicked)
+                {
+                    nextButton3.Visible = true;
+                }
+                else
+                {
+                    nextButton3.Visible = false;
+                }
             }
         }
 
         private void upperButton_MouseEnter(object sender, EventArgs e)
         {
-            upperButton.Image = Properties.Resources.upperHover;
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                upperButton.Image = Properties.Resources.upperHover;
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                upperButton.Image = Properties.Resources.upperHoverbg;
+            }
         }
 
         private void upperButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!upperBodyClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                upperButton.Image = Properties.Resources.upper;
+                if (!upperBodyClicked)
+                {
+                    upperButton.Image = Properties.Resources.upper;
+                }
+                else
+                {
+                    upperButton.Image = Properties.Resources.upperPressed;
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                upperButton.Image = Properties.Resources.upperPressed;
+                if (!upperBodyClicked)
+                {
+                    upperButton.Image = Properties.Resources.upperbg;
+                }
+                else
+                {
+                    upperButton.Image = Properties.Resources.upperPressedbg;
+                }
             }
         }
 
         private void lowerButton_MouseEnter(object sender, EventArgs e)
         {
-            lowerButton.Image = Properties.Resources.lowerHover;
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                lowerButton.Image = Properties.Resources.lowerHover;
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                lowerButton.Image = Properties.Resources.lowerHoverbg;
+            }
         }
 
         private void lowerButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!lowerBodyClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                lowerButton.Image = Properties.Resources.lower;
+                if (!lowerBodyClicked)
+                {
+                    lowerButton.Image = Properties.Resources.lower;
+                }
+                else
+                {
+                    lowerButton.Image = Properties.Resources.lowerPressed;
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                lowerButton.Image = Properties.Resources.lowerPressed;
+                if (!lowerBodyClicked)
+                {
+                    lowerButton.Image = Properties.Resources.lowerbg;
+                }
+                else
+                {
+                    lowerButton.Image = Properties.Resources.lowerPressedbg;
+                }
             }
         }
 
         private void coreButton_MouseEnter(object sender, EventArgs e)
         {
-            coreButton.Image = Properties.Resources.coreHovered;
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                coreButton.Image = Properties.Resources.coreHovered;
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                coreButton.Image = Properties.Resources.coreHoveredbg;
+            }
         }
 
         private void coreButton_MouseLeave(object sender, EventArgs e)
         {
-            if (!coreClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                coreButton.Image = Properties.Resources.core;
+                if (!coreClicked)
+                {
+                    coreButton.Image = Properties.Resources.core;
+                }
+                else
+                {
+                    coreButton.Image = Properties.Resources.corePressed;
+                }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                coreButton.Image = Properties.Resources.corePressed;
+                if (!coreClicked)
+                {
+                    coreButton.Image = Properties.Resources.corebg;
+                }
+                else
+                {
+                    coreButton.Image = Properties.Resources.corePressedbg;
+                }
             }
         }
 
@@ -1052,51 +1199,119 @@ namespace FitVitality
 
         private void prePicture_Click(object sender, EventArgs e)
         {
-            prePicture.Image = Properties.Resources.prePressed;
-            createPicture.Image = Properties.Resources.create;
-            preClicked = true;
-            createClicked = false;
-            nextButt7.Visible = true;
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                prePicture.Image = Properties.Resources.prePressed;
+                createPicture.Image = Properties.Resources.create;
+                preClicked = true;
+                createClicked = false;
+                nextButt7.Visible = true;
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                prePicture.Image = Properties.Resources.prePressedbg;
+                createPicture.Image = Properties.Resources.createbg;
+                preClicked = true;
+                createClicked = false;
+                nextButt7.Visible = true;
+            }
         }
 
         private void createPicture_Click(object sender, EventArgs e)
         {
-            prePicture.Image = Properties.Resources.pre;
-            createPicture.Image = Properties.Resources.createSelected;
-            preClicked = false;
-            createClicked = true;
-            nextButt7.Visible = true;
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            {
+                prePicture.Image = Properties.Resources.pre;
+                createPicture.Image = Properties.Resources.createSelected;
+                preClicked = false;
+                createClicked = true;
+                nextButt7.Visible = true;
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                prePicture.Image = Properties.Resources.prebg;
+                createPicture.Image = Properties.Resources.createSelectedbg;
+                preClicked = false;
+                createClicked = true;
+                nextButt7.Visible = true;
+            }
         }
 
         private void prePicture_MouseEnter(object sender, EventArgs e)
         {
-            if (!preClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                prePicture.Image = Properties.Resources.preHovered;
+                if (!preClicked)
+                {
+                    prePicture.Image = Properties.Resources.preHovered;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!preClicked)
+                {
+                    prePicture.Image = Properties.Resources.preHoveredbg;
+                }
             }
         }
 
         private void prePicture_MouseLeave(object sender, EventArgs e)
         {
-            if (!preClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                prePicture.Image = Properties.Resources.pre;
+                if (!preClicked)
+                {
+                    prePicture.Image = Properties.Resources.pre;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!preClicked)
+                {
+                    prePicture.Image = Properties.Resources.prebg;
+                }
             }
         }
 
         private void createPicture_MouseEnter(object sender, EventArgs e)
         {
-            if (!createClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                createPicture.Image = Properties.Resources.createHovered;
+                if (!createClicked)
+                {
+                    createPicture.Image = Properties.Resources.createHovered;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!createClicked)
+                {
+                    createPicture.Image = Properties.Resources.createHoveredbg;
+                }
             }
         }
 
         private void createPicture_MouseLeave(object sender, EventArgs e)
         {
-            if (!createClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                createPicture.Image = Properties.Resources.create;
+                if (!createClicked)
+                {
+                    createPicture.Image = Properties.Resources.create;
+                }
+            }
+            if (cfg.Read("Language", "SETTINGS") == "bg")
+            {
+                if (!createClicked)
+                {
+                    createPicture.Image = Properties.Resources.createbg;
+                }
             }
         }
 
@@ -1170,50 +1385,104 @@ namespace FitVitality
             }
             for (int i = 0; i < rowCount; i++)
             {
+                var cfg = new Config("FitVitality.ini");
                 WorkoutListItem workout = new WorkoutListItem();
-                workout.WorkoutNumber = $"Workout {i + 1}";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workout.WorkoutNumber = $"Workout {i + 1}";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workout.WorkoutNumber = $"Тренировка {i + 1}";
+                }
                 workout.ButtonClicked += (sender, e) => WorkoutListItemGym_ButtonClicked(sender, e);
                 workoutsList.Controls.Add(workout);
                 workouts.Add(workout);
-                if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
                     && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] != "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
-                $"[Core]: Abs, Obliques...";
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                    $"[Core]: Abs, Obliques...";
+                    }
+                    else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
+                        && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                    $"[Core]: Abs, Obliques...";
+                    }
+                    else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
+                        && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
+                    }
+                    else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
+                        && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n";
+                    }
+                    else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
+                       && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
+                    }
+                    else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
+                      && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    $"[Core]: Abs, Obliques...";
+                    }
+                    else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
+                      && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n";
+                    }
                 }
-                else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
-                    && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] != "None")
+                if (cfg.Read("Language", "SETTINGS") == "bg")
                 {
-                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
-                $"[Core]: Abs, Obliques...";
-                }
-                else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
-                    && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] != "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
-                }
-                else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
-                    && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n";
-                }
-                else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
-                   && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
-                }
-                else if (back[i] != "None" && biceps[i] != "None" && chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None"
-                  && quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None" && core[i] != "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                $"[Core]: Abs, Obliques...";
-                }
-                else if (back[i] == "None" && biceps[i] == "None" && chest[i] == "None" && triceps[i] == "None" && shoulders[i] == "None"
-                  && quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None" && core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n";
+                    if (back[i] != "Нищо" && biceps[i] != "Нищо" && chest[i] != "Нищо" && triceps[i] != "Нищо" && shoulders[i] != "Нищо"
+                    && quadriceps[i] != "Нищо" && hamstrings[i] != "Нищо" && glutes[i] != "Нищо" && calves[i] != "Нищо" && core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                    $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...\n" +
+                    $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (back[i] == "Нищо" && biceps[i] == "Нищо" && chest[i] == "Нищо" && triceps[i] == "Нищо" && shoulders[i] == "Нищо"
+                        && quadriceps[i] != "Нищо" && hamstrings[i] != "Нищо" && glutes[i] != "Нищо" && calves[i] != "Нищо" && core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...\n" +
+                    $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (back[i] == "Нищо" && biceps[i] == "Нищо" && chest[i] == "Нищо" && triceps[i] == "Нищо" && shoulders[i] == "Нищо"
+                        && quadriceps[i] == "Нищо" && hamstrings[i] == "Нищо" && glutes[i] == "Нищо" && calves[i] == "Нищо" && core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (back[i] != "Нищо" && biceps[i] != "Нищо" && chest[i] != "Нищо" && triceps[i] != "Нищо" && shoulders[i] != "Нищо"
+                        && quadriceps[i] != "Нищо" && hamstrings[i] != "Нищо" && glutes[i] != "Нищо" && calves[i] != "Нищо" && core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                    $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...\n";
+                    }
+                    else if (back[i] != "Нищо" && biceps[i] != "Нищо" && chest[i] != "Нищо" && triceps[i] != "Нищо" && shoulders[i] != "Нищо"
+                       && quadriceps[i] == "Нищо" && hamstrings[i] == "Нищо" && glutes[i] == "Нищо" && calves[i] == "Нищо" && core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n";
+                    }
+                    else if (back[i] != "Нищо" && biceps[i] != "Нищо" && chest[i] != "Нищо" && triceps[i] != "Нищо" && shoulders[i] != "Нищо"
+                      && quadriceps[i] == "Нищо" && hamstrings[i] == "Нищо" && glutes[i] == "Нищо" && calves[i] == "Нищо" && core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                    $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (back[i] == "Нищо" && biceps[i] == "Нищо" && chest[i] == "Нищо" && triceps[i] == "Нищо" && shoulders[i] == "Нищо"
+                      && quadriceps[i] != "Нищо" && hamstrings[i] != "Нищо" && glutes[i] != "Нищо" && calves[i] != "Нищо" && core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...\n";
+                    }
                 }
             }
         }
@@ -1249,43 +1518,90 @@ namespace FitVitality
             }
             for (int i = 0; i < rowCount; i++)
             {
+                var cfg = new Config("FitVitality.ini");
                 WorkoutListItem workout = new WorkoutListItem();
-                workout.WorkoutNumber = $"Workout {i + 1}";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workout.WorkoutNumber = $"Workout {i + 1}";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workout.WorkoutNumber = $"Тренировка {i + 1}";
+                }
                 workout.ButtonClicked += (sender, e) => HomeOutdoors_ButtonClicked(sender, e);
                 workoutsList.Controls.Add(workout);
                 workouts.Add(workout);
-                if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] != "None")
+                if (cfg.Read("Language", "SETTINGS") == "en")
                 {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
-                $"[Core]: Abs, Obliques...";
+                    if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                    $"[Core]: Abs, Obliques...";
+                    }
+                    else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                            $"[Core]: Abs, Obliques...";
+                    }
+                    else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] == "None" && _core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
+                    }
+                    else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
+                    }
+                    else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                            $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                    }
+                    else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                            $"[Core]: Abs, Obliques...";
+                    }
+                    else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                    }
                 }
-                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] != "None")
+                if (cfg.Read("Language", "SETTINGS") == "bg")
                 {
-                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
-                        $"[Core]: Abs, Obliques...";
-                }
-                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] == "None" && _core[i] != "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
-                }
-                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
-                }
-                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                        $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
-                }
-                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] != "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                        $"[Core]: Abs, Obliques...";
-                }
-                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                    if (backbiceps[i] != "Нищо" && chesttricepsshoulders[i] != "Нищо" && legs[i] != "Нищо" && _core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                    $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...\n" +
+                    $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (backbiceps[i] == "Нищо" && chesttricepsshoulders[i] == "Нищо" && legs[i] != "Нищо" && _core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...\n" +
+                            $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (backbiceps[i] == "Нищо" && chesttricepsshoulders[i] == "Нищо" && legs[i] == "Нищо" && _core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (backbiceps[i] != "Нищо" && chesttricepsshoulders[i] != "Нищо" && legs[i] == "Нищо" && _core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n";
+                    }
+                    else if (backbiceps[i] != "Нищо" && chesttricepsshoulders[i] != "Нищо" && legs[i] != "Нищо" && _core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                            $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...";
+                    }
+                    else if (backbiceps[i] != "Нищо" && chesttricepsshoulders[i] != "Нищо" && legs[i] == "Нищо" && _core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                            $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (backbiceps[i] == "Нищо" && chesttricepsshoulders[i] == "Нищо" && legs[i] != "Нищо" && _core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...";
+                    }
                 }
             }
         }
@@ -1321,43 +1637,90 @@ namespace FitVitality
 
             for (int i = 0; i < rowCount; i++)
             {
+                var cfg = new Config("FitVitality.ini");
                 WorkoutListItem workout = new WorkoutListItem();
-                workout.WorkoutNumber = $"Workout {i + 1}";
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    workout.WorkoutNumber = $"Workout {i + 1}";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    workout.WorkoutNumber = $"Тренировка {i + 1}";
+                }
                 workout.ButtonClicked += (sender, e) => HomeOutdoors_ButtonClicked(sender, e);
                 workoutsList.Controls.Add(workout);
                 workouts.Add(workout);
-                if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] != "None")
+                if (cfg.Read("Language", "SETTINGS") == "en")
                 {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
-                $"[Core]: Abs, Obliques...";
+                    if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                    $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                    $"[Core]: Abs, Obliques...";
+                    }
+                    else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
+                            $"[Core]: Abs, Obliques...";
+                    }
+                    else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] == "None" && _core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
+                    }
+                    else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
+                    }
+                    else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                            $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                    }
+                    else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] != "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
+                            $"[Core]: Abs, Obliques...";
+                    }
+                    else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] == "None")
+                    {
+                        workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                    }
                 }
-                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] != "None")
+                if (cfg.Read("Language", "SETTINGS") == "bg")
                 {
-                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...\n" +
-                        $"[Core]: Abs, Obliques...";
-                }
-                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] == "None" && _core[i] != "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Core]: Abs, Obliques...";
-                }
-                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n";
-                }
-                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] != "None" && _core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                        $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
-                }
-                else if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None" && legs[i] == "None" && _core[i] != "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Upper]: Back, Biceps, Chest, Triceps, Shoulders...\n" +
-                        $"[Core]: Abs, Obliques...";
-                }
-                else if (backbiceps[i] == "None" && chesttricepsshoulders[i] == "None" && legs[i] != "None" && _core[i] == "None")
-                {
-                    workouts[i].WorkoutExercises = $"[Lower]: Quadriceps, Hamstrings, Glutes, Calves...";
+                    if (backbiceps[i] != "Нищо" && chesttricepsshoulders[i] != "Нищо" && legs[i] != "Нищо" && _core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                    $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...\n" +
+                    $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (backbiceps[i] == "Нищо" && chesttricepsshoulders[i] == "Нищо" && legs[i] != "Нищо" && _core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...\n" +
+                            $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (backbiceps[i] == "Нищо" && chesttricepsshoulders[i] == "Нищо" && legs[i] == "Нищо" && _core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (backbiceps[i] != "Нищо" && chesttricepsshoulders[i] != "Нищо" && legs[i] == "Нищо" && _core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n";
+                    }
+                    else if (backbiceps[i] != "Нищо" && chesttricepsshoulders[i] != "Нищо" && legs[i] != "Нищо" && _core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                            $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...";
+                    }
+                    else if (backbiceps[i] != "Нищо" && chesttricepsshoulders[i] != "Нищо" && legs[i] == "Нищо" && _core[i] != "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Горна]: Гръб, Бицепс, Гърди, Трицепс, Рамене...\n" +
+                            $"[Ядро]: Плочки, Странични коремни мускули...";
+                    }
+                    else if (backbiceps[i] == "Нищо" && chesttricepsshoulders[i] == "Нищо" && legs[i] != "Нищо" && _core[i] == "Нищо")
+                    {
+                        workouts[i].WorkoutExercises = $"[Долна]: Предно бедро, Задно бедро, Глутеус, Прасец...";
+                    }
                 }
             }
         }
@@ -1567,163 +1930,334 @@ namespace FitVitality
                 {
                     workoutPreviewPanel.Visible = true;
                     workoutPreviewPanel.BringToFront();
-                    workoutPreviewLabel.Text = $"Workout {i + 1}";
-                    labelExercises.Text = $"[Back]: {back[i]}\n[Biceps]: {biceps[i]}\n[Chest]: {chest[i]}\n[Triceps]: {triceps[i]}\n[Shoulders]: {shoulders[i]}\n\n" +
-                    $"[Quadriceps]: {quadriceps[i]}\n[Hamstrings]: {hamstrings[i]}\n[Glutes]: {glutes[i]}\n[Calves]: {calves[i]}\n\n" +
-                    $"[Core]: {core[i]}";
+                    var cfg = new Config("FitVitality.ini");
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutPreviewLabel.Text = $"Workout {i + 1}";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutPreviewLabel.Text = $"Тренировка {i + 1}";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        labelExercises.Text = $"[Back]: {back[i]}\n[Biceps]: {biceps[i]}\n[Chest]: {chest[i]}\n[Triceps]: {triceps[i]}\n[Shoulders]: {shoulders[i]}\n\n" +
+                        $"[Quadriceps]: {quadriceps[i]}\n[Hamstrings]: {hamstrings[i]}\n[Glutes]: {glutes[i]}\n[Calves]: {calves[i]}\n\n" +
+                        $"[Core]: {core[i]}";
 
-                    if (back[i] != "None" && biceps[i] != "None")
-                    {
-                        WorkoutDays.Add("Back and Biceps");
-                        BackWorkout = back[i];
-                        BicepsWorkout = biceps[i];
+                        if (back[i] != "None" && biceps[i] != "None")
+                        {
+                            WorkoutDays.Add("Back and Biceps");
+                            BackWorkout = back[i];
+                            BicepsWorkout = biceps[i];
+                        }
+                        else if (back[i] != "None" && biceps[i] == "None")
+                        {
+                            WorkoutDays.Add("Back");
+                            BackWorkout = back[i];
+                        }
+                        else if (back[i] == "None" && biceps[i] != "None")
+                        {
+                            WorkoutDays.Add("Biceps");
+                            BicepsWorkout = biceps[i];
+                        }
+                        if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None")
+                        {
+                            WorkoutDays.Add("Chest, Triceps and Shoulders");
+                            ChestWorkout = chest[i];
+                            TricepsWorkout = triceps[i];
+                            ShouldersWorkout = shoulders[i];
+                        }
+                        else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] == "None")
+                        {
+                            WorkoutDays.Add("Chest");
+                            ChestWorkout = chest[i];
+                        }
+                        else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] == "None")
+                        {
+                            WorkoutDays.Add("Triceps");
+                            TricepsWorkout = triceps[i];
+                        }
+                        else if (chest[i] == "None" && triceps[i] == "None" && shoulders[i] != "None")
+                        {
+                            WorkoutDays.Add("Shoulders");
+                            ShouldersWorkout = shoulders[i];
+                        }
+                        else if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] == "None")
+                        {
+                            WorkoutDays.Add("Chest and Triceps");
+                            ChestWorkout = chest[i];
+                            TricepsWorkout = triceps[i];
+                        }
+                        else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] != "None")
+                        {
+                            WorkoutDays.Add("Chest and Shoulders");
+                            ChestWorkout = chest[i];
+                            ShouldersWorkout = shoulders[i];
+                        }
+                        else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] != "None")
+                        {
+                            WorkoutDays.Add("Triceps and Shoulders");
+                            TricepsWorkout = triceps[i];
+                            ShouldersWorkout = shoulders[i];
+                        }
+                        if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Legs");
+                            QuadricepsWorkout = quadriceps[i];
+                            HamstringsWorkout = hamstrings[i];
+                            GlutesWorkout = glutes[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Quadriceps");
+                            QuadricepsWorkout = quadriceps[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Hamstrings");
+                            HamstringsWorkout = hamstrings[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Glutes");
+                            GlutesWorkout = glutes[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Calves");
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Quadriceps and Hamstrings");
+                            QuadricepsWorkout = quadriceps[i];
+                            HamstringsWorkout = hamstrings[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Quadriceps and Glutes");
+                            QuadricepsWorkout = quadriceps[i];
+                            GlutesWorkout = glutes[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Quadriceps and Calves");
+                            QuadricepsWorkout = quadriceps[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Hamstrings and Glutes");
+                            HamstringsWorkout = hamstrings[i];
+                            GlutesWorkout = glutes[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Hamstrings and Calves");
+                            HamstringsWorkout = hamstrings[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Glutes and Calves");
+                            GlutesWorkout = glutes[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Quadriceps, Hamstrings and Glutes");
+                            QuadricepsWorkout = quadriceps[i];
+                            HamstringsWorkout = hamstrings[i];
+                            GlutesWorkout = glutes[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Quadriceps, Hamstrings and Calves");
+                            QuadricepsWorkout = quadriceps[i];
+                            HamstringsWorkout = hamstrings[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Quadriceps, Glutes and Calves");
+                            QuadricepsWorkout = quadriceps[i];
+                            GlutesWorkout = glutes[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Hamstrings, Glutes and Calves");
+                            HamstringsWorkout = hamstrings[i];
+                            GlutesWorkout = glutes[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        if (core[i] != "None")
+                        {
+                            WorkoutDays.Add("Core");
+                            CoreWorkout = core[i];
+                        }
                     }
-                    else if (back[i] != "None" && biceps[i] == "None")
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
                     {
-                        WorkoutDays.Add("Back");
-                        BackWorkout = back[i];
-                    }
-                    else if (back[i] == "None" && biceps[i] != "None")
-                    {
-                        WorkoutDays.Add("Biceps");
-                        BicepsWorkout = biceps[i];
-                    }
-                    if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None")
-                    {
-                        WorkoutDays.Add("Chest, Triceps and Shoulders");
-                        ChestWorkout = chest[i];
-                        TricepsWorkout = triceps[i];
-                        ShouldersWorkout = shoulders[i];
-                    }
-                    else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] == "None")
-                    {
-                        WorkoutDays.Add("Chest");
-                        ChestWorkout = chest[i];
-                    }
-                    else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] == "None")
-                    {
-                        WorkoutDays.Add("Triceps");
-                        TricepsWorkout = triceps[i];
-                    }
-                    else if (chest[i] == "None" && triceps[i] == "None" && shoulders[i] != "None")
-                    {
-                        WorkoutDays.Add("Shoulders");
-                        ShouldersWorkout = shoulders[i];
-                    }
-                    else if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] == "None")
-                    {
-                        WorkoutDays.Add("Chest and Triceps");
-                        ChestWorkout = chest[i];
-                        TricepsWorkout = triceps[i];
-                    }
-                    else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] != "None")
-                    {
-                        WorkoutDays.Add("Chest and Shoulders");
-                        ChestWorkout = chest[i];
-                        ShouldersWorkout = shoulders[i];
-                    }
-                    else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] != "None")
-                    {
-                        WorkoutDays.Add("Triceps and Shoulders");
-                        TricepsWorkout = triceps[i];
-                        ShouldersWorkout = shoulders[i];
-                    }
-                    if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
-                    {
-                        WorkoutDays.Add("Legs");
-                        QuadricepsWorkout = quadriceps[i];
-                        HamstringsWorkout = hamstrings[i];
-                        GlutesWorkout = glutes[i];
-                        CalvesWorkout = calves[i];
-                    }
-                    else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None")
-                    {
-                        WorkoutDays.Add("Quadriceps");
-                        QuadricepsWorkout = quadriceps[i];
-                    }
-                    else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
-                    {
-                        WorkoutDays.Add("Hamstrings");
-                        HamstringsWorkout = hamstrings[i];
-                    }
-                    else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
-                    {
-                        WorkoutDays.Add("Glutes");
-                        GlutesWorkout = glutes[i];
-                    }
-                    else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
-                    {
-                        WorkoutDays.Add("Calves");
-                        CalvesWorkout = calves[i];
-                    }
-                    else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
-                    {
-                        WorkoutDays.Add("Quadriceps and Hamstrings");
-                        QuadricepsWorkout = quadriceps[i];
-                        HamstringsWorkout = hamstrings[i];
-                    }
-                    else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
-                    {
-                        WorkoutDays.Add("Quadriceps and Glutes");
-                        QuadricepsWorkout = quadriceps[i];
-                        GlutesWorkout = glutes[i];
-                    }
-                    else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
-                    {
-                        WorkoutDays.Add("Quadriceps and Calves");
-                        QuadricepsWorkout = quadriceps[i];
-                        CalvesWorkout = calves[i];
-                    }
-                    else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
-                    {
-                        WorkoutDays.Add("Hamstrings and Glutes");
-                        HamstringsWorkout = hamstrings[i];
-                        GlutesWorkout = glutes[i];
-                    }
-                    else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
-                    {
-                        WorkoutDays.Add("Hamstrings and Calves");
-                        HamstringsWorkout = hamstrings[i];
-                        CalvesWorkout = calves[i];
-                    }
-                    else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
-                    {
-                        WorkoutDays.Add("Glutes and Calves");
-                        GlutesWorkout = glutes[i];
-                        CalvesWorkout = calves[i];
-                    }
-                    else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
-                    {
-                        WorkoutDays.Add("Quadriceps, Hamstrings and Glutes");
-                        QuadricepsWorkout = quadriceps[i];
-                        HamstringsWorkout = hamstrings[i];
-                        GlutesWorkout = glutes[i];
-                    }
-                    else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
-                    {
-                        WorkoutDays.Add("Quadriceps, Hamstrings and Calves");
-                        QuadricepsWorkout = quadriceps[i];
-                        HamstringsWorkout = hamstrings[i];
-                        CalvesWorkout = calves[i];
-                    }
-                    else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
-                    {
-                        WorkoutDays.Add("Quadriceps, Glutes and Calves");
-                        QuadricepsWorkout = quadriceps[i];
-                        GlutesWorkout = glutes[i];
-                        CalvesWorkout = calves[i];
-                    }
-                    else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
-                    {
-                        WorkoutDays.Add("Hamstrings, Glutes and Calves");
-                        HamstringsWorkout = hamstrings[i];
-                        GlutesWorkout = glutes[i];
-                        CalvesWorkout = calves[i];
-                    }
-                    if (core[i] != "None")
-                    {
-                        WorkoutDays.Add("Core");
-                        CoreWorkout = core[i];
+                        labelExercises.Text = $"[Гръб]: {back[i]}\n[Бицепс]: {biceps[i]}\n[Гърди]: {chest[i]}\n[Трицепс]: {triceps[i]}\n[Рамене]: {shoulders[i]}\n\n" +
+                        $"[Предно бедро]: {quadriceps[i]}\n[Задно бедро]: {hamstrings[i]}\n[Глутеус]: {glutes[i]}\n[Прасец]: {calves[i]}\n\n" +
+                        $"[Ядро]: {core[i]}";
+
+                        if (back[i] != "None" && biceps[i] != "None")
+                        {
+                            WorkoutDays.Add("Гръб и Бицепс");
+                            BackWorkout = back[i];
+                            BicepsWorkout = biceps[i];
+                        }
+                        else if (back[i] != "None" && biceps[i] == "None")
+                        {
+                            WorkoutDays.Add("Гръб");
+                            BackWorkout = back[i];
+                        }
+                        else if (back[i] == "None" && biceps[i] != "None")
+                        {
+                            WorkoutDays.Add("Бицепс");
+                            BicepsWorkout = biceps[i];
+                        }
+                        if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] != "None")
+                        {
+                            WorkoutDays.Add("Гърди, Трицепс и Рамене");
+                            ChestWorkout = chest[i];
+                            TricepsWorkout = triceps[i];
+                            ShouldersWorkout = shoulders[i];
+                        }
+                        else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] == "None")
+                        {
+                            WorkoutDays.Add("Гърди");
+                            ChestWorkout = chest[i];
+                        }
+                        else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] == "None")
+                        {
+                            WorkoutDays.Add("Трицепс");
+                            TricepsWorkout = triceps[i];
+                        }
+                        else if (chest[i] == "None" && triceps[i] == "None" && shoulders[i] != "None")
+                        {
+                            WorkoutDays.Add("Рамене");
+                            ShouldersWorkout = shoulders[i];
+                        }
+                        else if (chest[i] != "None" && triceps[i] != "None" && shoulders[i] == "None")
+                        {
+                            WorkoutDays.Add("Гърди и Трицепс");
+                            ChestWorkout = chest[i];
+                            TricepsWorkout = triceps[i];
+                        }
+                        else if (chest[i] != "None" && triceps[i] == "None" && shoulders[i] != "None")
+                        {
+                            WorkoutDays.Add("Гърди и Рамене");
+                            ChestWorkout = chest[i];
+                            ShouldersWorkout = shoulders[i];
+                        }
+                        else if (chest[i] == "None" && triceps[i] != "None" && shoulders[i] != "None")
+                        {
+                            WorkoutDays.Add("Трицепс и Рамене");
+                            TricepsWorkout = triceps[i];
+                            ShouldersWorkout = shoulders[i];
+                        }
+                        if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Крака");
+                            QuadricepsWorkout = quadriceps[i];
+                            HamstringsWorkout = hamstrings[i];
+                            GlutesWorkout = glutes[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Предно бедро");
+                            QuadricepsWorkout = quadriceps[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Задно бедро");
+                            HamstringsWorkout = hamstrings[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Глутеус");
+                            GlutesWorkout = glutes[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Прасец");
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Предно бедро и Задно бедро");
+                            QuadricepsWorkout = quadriceps[i];
+                            HamstringsWorkout = hamstrings[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Предно бедро и Глутеус");
+                            QuadricepsWorkout = quadriceps[i];
+                            GlutesWorkout = glutes[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] == "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Предно бедро и Прасец");
+                            QuadricepsWorkout = quadriceps[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Задно бедро и Глутеус");
+                            HamstringsWorkout = hamstrings[i];
+                            GlutesWorkout = glutes[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Задно бедро и Прасец");
+                            HamstringsWorkout = hamstrings[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Глутеус и Прасец");
+                            GlutesWorkout = glutes[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] == "None")
+                        {
+                            WorkoutDays.Add("Предно бедро, Задно бедро и Глутеус");
+                            QuadricepsWorkout = quadriceps[i];
+                            HamstringsWorkout = hamstrings[i];
+                            GlutesWorkout = glutes[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] != "None" && glutes[i] == "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Предно бедро, Задно бедро и Прасец");
+                            QuadricepsWorkout = quadriceps[i];
+                            HamstringsWorkout = hamstrings[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] != "None" && hamstrings[i] == "None" && glutes[i] != "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Предно бедро, Глутеус и Прасец");
+                            QuadricepsWorkout = quadriceps[i];
+                            GlutesWorkout = glutes[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        else if (quadriceps[i] == "None" && hamstrings[i] != "None" && glutes[i] != "None" && calves[i] != "None")
+                        {
+                            WorkoutDays.Add("Задно бедро, Глутеус и Прасец");
+                            HamstringsWorkout = hamstrings[i];
+                            GlutesWorkout = glutes[i];
+                            CalvesWorkout = calves[i];
+                        }
+                        if (core[i] != "None")
+                        {
+                            WorkoutDays.Add("Ядро");
+                            CoreWorkout = core[i];
+                        }
                     }
                 }
             }
@@ -1741,36 +2275,44 @@ namespace FitVitality
                 {
                     workoutPreviewPanel.Visible = true;
                     workoutPreviewPanel.BringToFront();
-                    workoutPreviewLabel.Text = $"Workout {i + 1}";
-                    labelExercises.Text = $"[Back and Biceps]: {backbiceps[i]}\n[Chest, Triceps and Shoulders]: {chesttricepsshoulders[i]}\n\n" +
-                    $"[Legs]: {legs[i]}\n\n" +
-                    $"[Core]: {_core[i]}";
+                    var cfg = new Config("FitVitality.ini");
+                    if (cfg.Read("Language", "SETTINGS") == "en")
+                    {
+                        workoutPreviewLabel.Text = $"Workout {i + 1}";
+                    }
+                    if (cfg.Read("Language", "SETTINGS") == "bg")
+                    {
+                        workoutPreviewLabel.Text = $"Тренировка {i + 1}";
+                    }
+                    labelExercises.Text = $"[Гръб and Бицепс]: {backbiceps[i]}\n[Гърди, Трицепс и Рамене]: {chesttricepsshoulders[i]}\n\n" +
+                    $"[Крака]: {legs[i]}\n\n" +
+                    $"[Ядра]: {_core[i]}";
 
                     if (backbiceps[i] != "None" && chesttricepsshoulders[i] != "None")
                     {
-                        WorkoutDays.Add("Back and Biceps");
-                        WorkoutDays.Add("Chest, Triceps and Shoulders");
+                        WorkoutDays.Add("Гръб и Бицепс");
+                        WorkoutDays.Add("Гърди, Трицепс и Рамене");
                         BackBicepsWorkout = backbiceps[i];
                         ChestTricepsShouldersWorkout = chesttricepsshoulders[i];
                     }
                     else if (backbiceps[i] != "None" && chesttricepsshoulders[i] == "None")
                     {
-                        WorkoutDays.Add("Back and Biceps");
+                        WorkoutDays.Add("Гръб и Бицепс");
                         BackBicepsWorkout = backbiceps[i];
                     }
                     else if (backbiceps[i] == "None" && chesttricepsshoulders[i] != "None")
                     {
-                        WorkoutDays.Add("Chest, Triceps and Shoulders");
+                        WorkoutDays.Add("Гърди, Трицепс и Рамене");
                         ChestTricepsShouldersWorkout = chesttricepsshoulders[i];
                     }
                     if (legs[i] != "None")
                     {
-                        WorkoutDays.Add("Legs");
+                        WorkoutDays.Add("Крака");
                         LegsWorkout = legs[i];
                     }
                     if (_core[i] != "None")
                     {
-                        WorkoutDays.Add("Core");
+                        WorkoutDays.Add("Ядро");
                         CoreWorkout = _core[i];
                     }
                 }
@@ -2122,171 +2664,347 @@ namespace FitVitality
         }
         private void saveWorkoutParameter(KryptonComboBox cb, string day, SqlCommand command)
         {
-            if (preClicked)
-            {
-                if (gymClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
+            { 
+                if (preClicked)
                 {
-                    if (cb.Text == "Back and Biceps")
+                    if (gymClicked)
                     {
-                        command.Parameters.AddWithValue(day, BackWorkout + BicepsWorkout);
+                        if (cb.Text == "Back and Biceps")
+                        {
+                            command.Parameters.AddWithValue(day, BackWorkout + BicepsWorkout);
+                        }
+                        else if (cb.Text == "Chest")
+                        {
+                            command.Parameters.AddWithValue(day, ChestWorkout);
+                        }
+                        else if (cb.Text == "Triceps")
+                        {
+                            command.Parameters.AddWithValue(day, TricepsWorkout);
+                        }
+                        else if (cb.Text == "Shoulders")
+                        {
+                            command.Parameters.AddWithValue(day, ShouldersWorkout);
+                        }
+                        else if (cb.Text == "Chest and Triceps")
+                        {
+                            command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout);
+                        }
+                        else if (cb.Text == "Chest and Shoulders")
+                        {
+                            command.Parameters.AddWithValue(day, ChestWorkout + ShouldersWorkout);
+                        }
+                        else if (cb.Text == "Triceps and Shoulders")
+                        {
+                            command.Parameters.AddWithValue(day, TricepsWorkout + ShouldersWorkout);
+                        }
+                        else if (cb.Text == "Quadriceps")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout);
+                        }
+                        else if (cb.Text == "Hamstrings")
+                        {
+                            command.Parameters.AddWithValue(day, HamstringsWorkout);
+                        }
+                        else if (cb.Text == "Glutes")
+                        {
+                            command.Parameters.AddWithValue(day, GlutesWorkout);
+                        }
+                        else if (cb.Text == "Calves")
+                        {
+                            command.Parameters.AddWithValue(day, CalvesWorkout);
+                        }
+                        else if (cb.Text == "Quadriceps and Hamstrings")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout);
+                        }
+                        else if (cb.Text == "Quadriceps and Glutes")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout);
+                        }
+                        else if (cb.Text == "Quadriceps and Calves")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Hamstrings and Glutes")
+                        {
+                            command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout);
+                        }
+                        else if (cb.Text == "Glutes and Calves")
+                        {
+                            command.Parameters.AddWithValue(day, GlutesWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Quadriceps, Hamstrings and Glutes")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                        }
+                        else if (cb.Text == "Quadriceps, Hamstrings and Calves")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Quadriceps, Glutes and Calves")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Hamstrings, Glutes and Calves")
+                        {
+                            command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Legs")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Core")
+                        {
+                            command.Parameters.AddWithValue(day, CoreWorkout);
+                        }
+                        else if (cb.Text == "Chest, Triceps and Shoulders")
+                        {
+                            command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                        }
                     }
-                    else if (cb.Text == "Chest")
+                    else
                     {
-                        command.Parameters.AddWithValue(day, ChestWorkout);
-                    }
-                    else if (cb.Text == "Triceps")
-                    {
-                        command.Parameters.AddWithValue(day, TricepsWorkout);
-                    }
-                    else if (cb.Text == "Shoulders")
-                    {
-                        command.Parameters.AddWithValue(day, ShouldersWorkout);
-                    }
-                    else if (cb.Text == "Chest and Triceps")
-                    {
-                        command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout);
-                    }
-                    else if (cb.Text == "Chest and Shoulders")
-                    {
-                        command.Parameters.AddWithValue(day, ChestWorkout + ShouldersWorkout);
-                    }
-                    else if (cb.Text == "Triceps and Shoulders")
-                    {
-                        command.Parameters.AddWithValue(day, TricepsWorkout + ShouldersWorkout);
-                    }
-                    else if (cb.Text == "Quadriceps")
-                    {
-                        command.Parameters.AddWithValue(day, QuadricepsWorkout);
-                    }
-                    else if (cb.Text == "Hamstrings")
-                    {
-                        command.Parameters.AddWithValue(day, HamstringsWorkout);
-                    }
-                    else if (cb.Text == "Glutes")
-                    {
-                        command.Parameters.AddWithValue(day, GlutesWorkout);
-                    }
-                    else if (cb.Text == "Calves")
-                    {
-                        command.Parameters.AddWithValue(day, CalvesWorkout);
-                    }
-                    else if (cb.Text == "Quadriceps and Hamstrings")
-                    {
-                        command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout);
-                    }
-                    else if (cb.Text == "Quadriceps and Glutes")
-                    {
-                        command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout);
-                    }
-                    else if (cb.Text == "Quadriceps and Calves")
-                    {
-                        command.Parameters.AddWithValue(day, QuadricepsWorkout + CalvesWorkout);
-                    }
-                    else if (cb.Text == "Hamstrings and Glutes")
-                    {
-                        command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout);
-                    }
-                    else if (cb.Text == "Glutes and Calves")
-                    {
-                        command.Parameters.AddWithValue(day, GlutesWorkout + CalvesWorkout);
-                    }
-                    else if (cb.Text == "Quadriceps, Hamstrings and Glutes")
-                    {
-                        command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
-                    }
-                    else if (cb.Text == "Quadriceps, Hamstrings and Calves")
-                    {
-                        command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
-                    }
-                    else if (cb.Text == "Quadriceps, Glutes and Calves")
-                    {
-                        command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
-                    }
-                    else if (cb.Text == "Hamstrings, Glutes and Calves")
-                    {
-                        command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout + CalvesWorkout);
-                    }
-                    else if (cb.Text == "Legs")
-                    {
-                        command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
-                    }
-                    else if (cb.Text == "Core")
-                    {
-                        command.Parameters.AddWithValue(day, CoreWorkout);
-                    }
-                    else if (cb.Text == "Chest, Triceps and Shoulders")
-                    {
-                        command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                        if (cb.Text == "Back and Biceps")
+                        {
+                            command.Parameters.AddWithValue(day, BackBicepsWorkout);
+                        }
+                        else if (cb.Text == "Chest, Triceps and Shoulders")
+                        {
+                            command.Parameters.AddWithValue(day, ChestTricepsShouldersWorkout);
+                        }
+                        else if (cb.Text == "Legs")
+                        {
+                            command.Parameters.AddWithValue(day, LegsWorkout);
+                        }
+                        else if (cb.Text == "Core")
+                        {
+                            command.Parameters.AddWithValue(day, CoreWorkout);
+                        }
                     }
                 }
                 else
                 {
-                    if (cb.Text == "Back and Biceps")
+                    for (int i = 0; i < workoutNames.Count; i++)
                     {
-                        command.Parameters.AddWithValue(day, BackBicepsWorkout);
-                    }
-                    else if (cb.Text == "Chest, Triceps and Shoulders")
-                    {
-                        command.Parameters.AddWithValue(day, ChestTricepsShouldersWorkout);
-                    }
-                    else if (cb.Text == "Legs")
-                    {
-                        command.Parameters.AddWithValue(day, LegsWorkout);
-                    }
-                    else if (cb.Text == "Core")
-                    {
-                        command.Parameters.AddWithValue(day, CoreWorkout);
+                        switch (i)
+                        {
+                            case 0:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout1);
+                                }
+                                break;
+                            case 1:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout2);
+                                }
+                                break;
+                            case 2:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout3);
+                                }
+                                break;
+                            case 3:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout4);
+                                }
+                                break;
+                            case 4:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout5);
+                                }
+                                break;
+                            case 5:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout6);
+                                }
+                                break;
+                            case 6:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout7);
+                                }
+                                break;
+                        }
                     }
                 }
             }
-            else
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                for (int i = 0; i < workoutNames.Count; i++)
+
+                if (preClicked)
                 {
-                    switch (i)
+                    if (gymClicked)
                     {
-                        case 0:
-                            if (cb.Text == workoutNames[i])
-                            {
-                                command.Parameters.AddWithValue(day, workout1);
-                            }
-                            break;
-                        case 1:
-                            if (cb.Text == workoutNames[i])
-                            {
-                                command.Parameters.AddWithValue(day, workout2);
-                            }
-                            break;
-                        case 2:
-                            if (cb.Text == workoutNames[i])
-                            {
-                                command.Parameters.AddWithValue(day, workout3);
-                            }
-                            break;
-                        case 3:
-                            if (cb.Text == workoutNames[i])
-                            {
-                                command.Parameters.AddWithValue(day, workout4);
-                            }
-                            break;
-                        case 4:
-                            if (cb.Text == workoutNames[i])
-                            {
-                                command.Parameters.AddWithValue(day, workout5);
-                            }
-                            break;
-                        case 5:
-                            if (cb.Text == workoutNames[i])
-                            {
-                                command.Parameters.AddWithValue(day, workout6);
-                            }
-                            break;
-                        case 6:
-                            if (cb.Text == workoutNames[i])
-                            {
-                                command.Parameters.AddWithValue(day, workout7);
-                            }
-                            break;
+                        if (cb.Text == "Гръб и Бицепс")
+                        {
+                            command.Parameters.AddWithValue(day, BackWorkout + BicepsWorkout);
+                        }
+                        else if (cb.Text == "Гърди")
+                        {
+                            command.Parameters.AddWithValue(day, ChestWorkout);
+                        }
+                        else if (cb.Text == "Трицепс")
+                        {
+                            command.Parameters.AddWithValue(day, TricepsWorkout);
+                        }
+                        else if (cb.Text == "Рамене")
+                        {
+                            command.Parameters.AddWithValue(day, ShouldersWorkout);
+                        }
+                        else if (cb.Text == "Гърди и Трицепс")
+                        {
+                            command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout);
+                        }
+                        else if (cb.Text == "Гърди и Рамене")
+                        {
+                            command.Parameters.AddWithValue(day, ChestWorkout + ShouldersWorkout);
+                        }
+                        else if (cb.Text == "Трицепс и Рамене")
+                        {
+                            command.Parameters.AddWithValue(day, TricepsWorkout + ShouldersWorkout);
+                        }
+                        else if (cb.Text == "Предно бедро")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout);
+                        }
+                        else if (cb.Text == "Задно бедро")
+                        {
+                            command.Parameters.AddWithValue(day, HamstringsWorkout);
+                        }
+                        else if (cb.Text == "Глутеус")
+                        {
+                            command.Parameters.AddWithValue(day, GlutesWorkout);
+                        }
+                        else if (cb.Text == "Прасец")
+                        {
+                            command.Parameters.AddWithValue(day, CalvesWorkout);
+                        }
+                        else if (cb.Text == "Предно бедро и Задно бедро")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout);
+                        }
+                        else if (cb.Text == "Предно бедро и Глутеус")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout);
+                        }
+                        else if (cb.Text == "Предно бедро и Прасец")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Задно бедро и Глутеус")
+                        {
+                            command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout);
+                        }
+                        else if (cb.Text == "Глутеус и Прасец")
+                        {
+                            command.Parameters.AddWithValue(day, GlutesWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Предно бедро, Задно бедро и Глутеус")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout);
+                        }
+                        else if (cb.Text == "Предно бедро, Задно бедро и Прасец")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Предно бедро, Глутеус и Прасец")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + GlutesWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Задно бедро, Глутеус и Прасец")
+                        {
+                            command.Parameters.AddWithValue(day, HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Крака")
+                        {
+                            command.Parameters.AddWithValue(day, QuadricepsWorkout + HamstringsWorkout + GlutesWorkout + CalvesWorkout);
+                        }
+                        else if (cb.Text == "Ядро")
+                        {
+                            command.Parameters.AddWithValue(day, CoreWorkout);
+                        }
+                        else if (cb.Text == "Гърди, Трицепс и Рамене")
+                        {
+                            command.Parameters.AddWithValue(day, ChestWorkout + TricepsWorkout + ShouldersWorkout);
+                        }
+                    }
+                    else
+                    {
+                        if (cb.Text == "Гръб и Бицепс")
+                        {
+                            command.Parameters.AddWithValue(day, BackBicepsWorkout);
+                        }
+                        else if (cb.Text == "Гърди, Трицепс и Рамене")
+                        {
+                            command.Parameters.AddWithValue(day, ChestTricepsShouldersWorkout);
+                        }
+                        else if (cb.Text == "Крака")
+                        {
+                            command.Parameters.AddWithValue(day, LegsWorkout);
+                        }
+                        else if (cb.Text == "Ядро")
+                        {
+                            command.Parameters.AddWithValue(day, CoreWorkout);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < workoutNames.Count; i++)
+                    {
+                        switch (i)
+                        {
+                            case 0:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout1);
+                                }
+                                break;
+                            case 1:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout2);
+                                }
+                                break;
+                            case 2:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout3);
+                                }
+                                break;
+                            case 3:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout4);
+                                }
+                                break;
+                            case 4:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout5);
+                                }
+                                break;
+                            case 5:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout6);
+                                }
+                                break;
+                            case 6:
+                                if (cb.Text == workoutNames[i])
+                                {
+                                    command.Parameters.AddWithValue(day, workout7);
+                                }
+                                break;
+                        }
                     }
                 }
             }
@@ -2402,7 +3120,15 @@ namespace FitVitality
 
             if (workoutSelection == "")
             {
-                wdSelectedDay.Text = "None";
+                var cfg = new Config("FitVitality.ini");
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    wdSelectedDay.Text = "None";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    wdSelectedDay.Text = "Нищо";
+                }
                 wdSelectedExercises.Text = "N/A";
             }
         }
@@ -2568,95 +3294,193 @@ namespace FitVitality
                     }
                 }
             }
-            if (day == "Monday")
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                wdSelectedDay.Text = "Monday";
-                for (int i = 0; i < monday_List.Count; i++)
+                if (day == "Monday")
                 {
-                    if (i < monday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + monday_List[i] + "\n";
-                    else wdSelectedExercises.Text += "3x12 - " + monday_List[i];
+                    wdSelectedDay.Text = "Monday";
+                    for (int i = 0; i < monday_List.Count; i++)
+                    {
+                        if (i < monday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + monday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + monday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "None - Rest Day";
+                    }
                 }
-                if (wdSelectedExercises.Text == "")
+                else if (day == "Tuesday")
                 {
-                    wdSelectedExercises.Text = "None - Rest Day";
+                    wdSelectedDay.Text = "Tuesday";
+                    for (int i = 0; i < tuesday_List.Count; i++)
+                    {
+                        if (i < tuesday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + tuesday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + tuesday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "None - Rest Day";
+                    }
+                }
+                else if (day == "Wednesday")
+                {
+                    wdSelectedDay.Text = "Wednesday";
+                    for (int i = 0; i < wednesday_List.Count; i++)
+                    {
+                        if (i < wednesday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + wednesday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + wednesday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "None - Rest Day";
+                    }
+                }
+                else if (day == "Thursday")
+                {
+                    wdSelectedDay.Text = "Thursday";
+                    for (int i = 0; i < thursday_List.Count; i++)
+                    {
+                        if (i < thursday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + thursday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + thursday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "None - Rest Day";
+                    }
+                }
+                else if (day == "Friday")
+                {
+                    wdSelectedDay.Text = "Friday";
+                    for (int i = 0; i < friday_List.Count; i++)
+                    {
+                        if (i < friday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + friday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + friday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "None - Rest Day";
+                    }
+                }
+                else if (day == "Saturday")
+                {
+                    wdSelectedDay.Text = "Saturday";
+                    for (int i = 0; i < saturday_List.Count; i++)
+                    {
+                        if (i < saturday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + saturday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + saturday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "None - Rest Day";
+                    }
+                }
+                else if (day == "Sunday")
+                {
+                    wdSelectedDay.Text = "Sunday";
+                    for (int i = 0; i < sunday_List.Count; i++)
+                    {
+                        if (i < sunday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + sunday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + sunday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "None - Rest Day";
+                    }
                 }
             }
-            else if (day == "Tuesday")
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                wdSelectedDay.Text = "Tuesday";
-                for (int i = 0; i < tuesday_List.Count; i++)
+                if (day == "Monday")
                 {
-                    if (i < tuesday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + tuesday_List[i] + "\n";
-                    else wdSelectedExercises.Text += "3x12 - " + tuesday_List[i];
+                    wdSelectedDay.Text = "Понеделник";
+                    for (int i = 0; i < monday_List.Count; i++)
+                    {
+                        if (i < monday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + monday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + monday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "Нищо - Почивен ден";
+                    }
                 }
-                if (wdSelectedExercises.Text == "")
+                else if (day == "Tuesday")
                 {
-                    wdSelectedExercises.Text = "None - Rest Day";
+                    wdSelectedDay.Text = "Вторник";
+                    for (int i = 0; i < tuesday_List.Count; i++)
+                    {
+                        if (i < tuesday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + tuesday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + tuesday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "Нищо - Почивен ден";
+                    }
                 }
-            }
-            else if (day == "Wednesday")
-            {
-                wdSelectedDay.Text = "Wednesday";
-                for (int i = 0; i < wednesday_List.Count; i++)
+                else if (day == "Wednesday")
                 {
-                    if (i < wednesday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + wednesday_List[i] + "\n";
-                    else wdSelectedExercises.Text += "3x12 - " + wednesday_List[i];
+                    wdSelectedDay.Text = "Сряда";
+                    for (int i = 0; i < wednesday_List.Count; i++)
+                    {
+                        if (i < wednesday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + wednesday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + wednesday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "Нищо - Почивен ден";
+                    }
                 }
-                if (wdSelectedExercises.Text == "")
+                else if (day == "Thursday")
                 {
-                    wdSelectedExercises.Text = "None - Rest Day";
+                    wdSelectedDay.Text = "Четвъртък";
+                    for (int i = 0; i < thursday_List.Count; i++)
+                    {
+                        if (i < thursday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + thursday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + thursday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "Нищо - Почивен ден";
+                    }
                 }
-            }
-            else if (day == "Thursday")
-            {
-                wdSelectedDay.Text = "Thursday";
-                for (int i = 0; i < thursday_List.Count; i++)
+                else if (day == "Friday")
                 {
-                    if (i < thursday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + thursday_List[i] + "\n";
-                    else wdSelectedExercises.Text += "3x12 - " + thursday_List[i];
+                    wdSelectedDay.Text = "Петък";
+                    for (int i = 0; i < friday_List.Count; i++)
+                    {
+                        if (i < friday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + friday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + friday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "Нищо - Почивен ден";
+                    }
                 }
-                if (wdSelectedExercises.Text == "")
+                else if (day == "Saturday")
                 {
-                    wdSelectedExercises.Text = "None - Rest Day";
+                    wdSelectedDay.Text = "Събота";
+                    for (int i = 0; i < saturday_List.Count; i++)
+                    {
+                        if (i < saturday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + saturday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + saturday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "Нищо - Почивен ден";
+                    }
                 }
-            }
-            else if (day == "Friday")
-            {
-                wdSelectedDay.Text = "Friday";
-                for (int i = 0; i < friday_List.Count; i++)
+                else if (day == "Sunday")
                 {
-                    if (i < friday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + friday_List[i] + "\n";
-                    else wdSelectedExercises.Text += "3x12 - " + friday_List[i];
-                }
-                if (wdSelectedExercises.Text == "")
-                {
-                    wdSelectedExercises.Text = "None - Rest Day";
-                }
-            }
-            else if (day == "Saturday")
-            {
-                wdSelectedDay.Text = "Saturday";
-                for (int i = 0; i < saturday_List.Count; i++)
-                {
-                    if (i < saturday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + saturday_List[i] + "\n";
-                    else wdSelectedExercises.Text += "3x12 - " + saturday_List[i];
-                }
-                if (wdSelectedExercises.Text == "")
-                {
-                    wdSelectedExercises.Text = "None - Rest Day";
-                }
-            }
-            else if (day == "Sunday")
-            {
-                wdSelectedDay.Text = "Sunday";
-                for (int i = 0; i < sunday_List.Count; i++)
-                {
-                    if (i < sunday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + sunday_List[i] + "\n";
-                    else wdSelectedExercises.Text += "3x12 - " + sunday_List[i];
-                }
-                if (wdSelectedExercises.Text == "")
-                {
-                    wdSelectedExercises.Text = "None - Rest Day";
+                    wdSelectedDay.Text = "Неделя";
+                    for (int i = 0; i < sunday_List.Count; i++)
+                    {
+                        if (i < sunday_List.Count - 1) wdSelectedExercises.Text += "3x12 - " + sunday_List[i] + "\n";
+                        else wdSelectedExercises.Text += "3x12 - " + sunday_List[i];
+                    }
+                    if (wdSelectedExercises.Text == "")
+                    {
+                        wdSelectedExercises.Text = "Нищо - Почивен ден";
+                    }
                 }
             }
         }
@@ -2752,78 +3576,159 @@ namespace FitVitality
         }
         private void loadItemsList()
         {
-            if (gymClicked)
+            var cfg = new Config("FitVitality.ini");
+            if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (armsCheckBox.Checked)
+                if (gymClicked)
                 {
-                    loadItems(gymBiceps, "Biceps");
-                    loadItems(gymBack, "Back");
+                    if (armsCheckBox.Checked)
+                    {
+                        loadItems(gymBiceps, "Biceps");
+                        loadItems(gymBack, "Back");
+                    }
+                    if (chestCheckBox.Checked)
+                    {
+                        loadItems(gymChest, "Chest");
+                    }
+                    if (shouldersCheckBox.Checked)
+                    {
+                        loadItems(gymShoulders, "Shoulders");
+                    }
+                    if (quadricepsCheckBox.Checked)
+                    {
+                        loadItems(gymQuadriceps, "Quadriceps");
+                    }
+                    if (hamstringsCheckBox.Checked)
+                    {
+                        loadItems(gymHamstrings, "Hamstrings");
+                    }
+                    if (glutesCheckBox.Checked)
+                    {
+                        loadItems(gymGlutes, "Glutes");
+                    }
+                    if (calvesCheckBox.Checked)
+                    {
+                        loadItems(gymCalves, "Calves");
+                    }
+                    if (coreClicked)
+                    {
+                        loadItems(gymCore, "Core");
+                    }
                 }
-                if (chestCheckBox.Checked)
+                else if (homeClicked)
                 {
-                    loadItems(gymChest, "Chest");
+                    if (chestTricepsShoulderCheckBox.Checked)
+                    {
+                        loadItems(homeChestTricepsShoulders, "Push");
+                    }
+                    if (backBicepsCheckBox.Checked)
+                    {
+                        loadItems(homeBackBiceps, "Pull");
+                    }
+                    if (lowerBodyClicked)
+                    {
+                        loadItems(homeLegs, "Legs");
+                    }
+                    if (coreClicked)
+                    {
+                        loadItems(homeCore, "Core");
+                    }
                 }
-                if (shouldersCheckBox.Checked)
+                else if (outdoorsClicked)
                 {
-                    loadItems(gymShoulders, "Shoulders");
-                }
-                if (quadricepsCheckBox.Checked)
-                {
-                    loadItems(gymQuadriceps, "Quadriceps");
-                }
-                if (hamstringsCheckBox.Checked)
-                {
-                    loadItems(gymHamstrings, "Hamstrings");
-                }
-                if (glutesCheckBox.Checked)
-                {
-                    loadItems(gymGlutes, "Glutes");
-                }
-                if (calvesCheckBox.Checked)
-                {
-                    loadItems(gymCalves, "Calves");
-                }
-                if (coreClicked)
-                {
-                    loadItems(gymCore, "Core");
+                    if (chestTricepsShoulderCheckBox.Checked)
+                    {
+                        loadItems(outdoorsChestTricepsShoulders, "Push");
+                    }
+                    if (backBicepsCheckBox.Checked)
+                    {
+                        loadItems(outdoorsBackBiceps, "Pull");
+                    }
+                    if (lowerBodyClicked)
+                    {
+                        loadItems(outdoorsLegs, "Legs");
+                    }
+                    if (coreClicked)
+                    {
+                        loadItems(outdoorsCore, "Core");
+                    }
                 }
             }
-            else if (homeClicked)
+            if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (chestTricepsShoulderCheckBox.Checked)
+                if (gymClicked)
                 {
-                    loadItems(homeChestTricepsShoulders, "Push");
+                    if (armsCheckBox.Checked)
+                    {
+                        loadItems(gymBiceps, "Бицепс");
+                        loadItems(gymBack, "Гръб");
+                    }
+                    if (chestCheckBox.Checked)
+                    {
+                        loadItems(gymChest, "Гърди");
+                    }
+                    if (shouldersCheckBox.Checked)
+                    {
+                        loadItems(gymShoulders, "Рамене");
+                    }
+                    if (quadricepsCheckBox.Checked)
+                    {
+                        loadItems(gymQuadriceps, "Предно бедро");
+                    }
+                    if (hamstringsCheckBox.Checked)
+                    {
+                        loadItems(gymHamstrings, "Задно бедро");
+                    }
+                    if (glutesCheckBox.Checked)
+                    {
+                        loadItems(gymGlutes, "Глутеус");
+                    }
+                    if (calvesCheckBox.Checked)
+                    {
+                        loadItems(gymCalves, "Прасец");
+                    }
+                    if (coreClicked)
+                    {
+                        loadItems(gymCore, "Ядро");
+                    }
                 }
-                if (backBicepsCheckBox.Checked)
+                else if (homeClicked)
                 {
-                    loadItems(homeBackBiceps, "Pull");
+                    if (chestTricepsShoulderCheckBox.Checked)
+                    {
+                        loadItems(homeChestTricepsShoulders, "Бутащи");
+                    }
+                    if (backBicepsCheckBox.Checked)
+                    {
+                        loadItems(homeBackBiceps, "Дърпащи");
+                    }
+                    if (lowerBodyClicked)
+                    {
+                        loadItems(homeLegs, "Крака");
+                    }
+                    if (coreClicked)
+                    {
+                        loadItems(homeCore, "Ядро");
+                    }
                 }
-                if (lowerBodyClicked)
+                else if (outdoorsClicked)
                 {
-                    loadItems(homeLegs, "Legs");
-                }
-                if (coreClicked)
-                {
-                    loadItems(homeCore, "Core");
-                }
-            }
-            else if (outdoorsClicked)
-            {
-                if (chestTricepsShoulderCheckBox.Checked)
-                {
-                    loadItems(outdoorsChestTricepsShoulders, "Push");
-                }
-                if (backBicepsCheckBox.Checked)
-                {
-                    loadItems(outdoorsBackBiceps, "Pull");
-                }
-                if (lowerBodyClicked)
-                {
-                    loadItems(outdoorsLegs, "Legs");
-                }
-                if (coreClicked)
-                {
-                    loadItems(outdoorsCore, "Core");
+                    if (chestTricepsShoulderCheckBox.Checked)
+                    {
+                        loadItems(outdoorsChestTricepsShoulders, "Бутащи");
+                    }
+                    if (backBicepsCheckBox.Checked)
+                    {
+                        loadItems(outdoorsBackBiceps, "Дърпащи");
+                    }
+                    if (lowerBodyClicked)
+                    {
+                        loadItems(outdoorsLegs, "Крака");
+                    }
+                    if (coreClicked)
+                    {
+                        loadItems(outdoorsCore, "Ядро");
+                    }
                 }
             }
         }

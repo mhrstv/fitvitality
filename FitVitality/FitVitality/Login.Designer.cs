@@ -272,6 +272,9 @@
             logo1.SizeMode = PictureBoxSizeMode.Zoom;
             logo1.TabIndex = 1;
             logo1.TabStop = false;
+            logo1.MouseDown += logo1_MouseDown;
+            logo1.MouseMove += logo1_MouseMove;
+            logo1.MouseUp += logo1_MouseUp;
             // 
             // vBorder1
             // 
@@ -332,6 +335,9 @@
             logo2.SizeMode = PictureBoxSizeMode.Zoom;
             logo2.TabIndex = 1;
             logo2.TabStop = false;
+            logo2.MouseDown += logo2_MouseDown;
+            logo2.MouseMove += logo2_MouseMove;
+            logo2.MouseUp += logo2_MouseUp;
             // 
             // rememberMe
             // 

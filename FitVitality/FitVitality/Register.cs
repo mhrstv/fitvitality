@@ -34,6 +34,8 @@ namespace FitVitality
         {
             InitializeComponent();
         }
+
+        //Метод за проверка дали потребителя вече съществува
         private bool userExists(string username)
         {
             using (SqlConnection connection = new SqlConnection(connectionstring))
@@ -51,6 +53,8 @@ namespace FitVitality
                 }
             }
         }
+
+        //Метод за проверка дали имейла вече съществува
         private bool emailExists(string email)
         {
             using (SqlConnection connection = new SqlConnection(connectionstring))
@@ -69,6 +73,7 @@ namespace FitVitality
             }
         }
 
+        //Метод за създаване на потребител
         private void createUser(string username, string email, string password)
         {
             using (SqlConnection connection = new SqlConnection(connectionstring))
@@ -133,6 +138,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за проверка дали паролата съдържа цифра
         private bool containsDigit(string str)
         {
             foreach (var c in str)
@@ -145,6 +151,7 @@ namespace FitVitality
             return false;
         }
 
+        //Метод за проверка дали паролата съдържа специален символ
         private static bool hasSpecialChar(string str)
         {
             string specialChar = @"\|!#$%&/()=?»«@£§€{}.-;'<>_,";
@@ -155,6 +162,7 @@ namespace FitVitality
 
             return false;
         }
+        //Метод за проверка дали паролата съдържа буква
         private bool containsLetters(string str)
         {
             foreach (char c in str)
@@ -166,11 +174,14 @@ namespace FitVitality
             }
             return false;
         }
+        //Метод за проверка дали имейла е валиден
         private bool isValidEmail(string str)
         {
             var emailValidation = new EmailAddressAttribute();
             return emailValidation.IsValid(str);
         }
+
+        //Метод за проверка дали потребителското име е валидно
         private bool isValidUsername(string str)
         {
             if (str.Length >= 4)
@@ -182,6 +193,8 @@ namespace FitVitality
             }
             return false;
         }
+
+        //Метод за проверка дали паролата е валидна
         private bool isValidPassword(string str)
         {
             if (str.Length >= 8)
@@ -199,6 +212,8 @@ namespace FitVitality
             }
             return false;
         }
+
+        //Метод за регистрация на потребител
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -356,6 +371,7 @@ namespace FitVitality
 
         }
 
+        //Метод при зареждане на формата
         private void Register_Load(object sender, EventArgs e)
         {
             opened = true;
@@ -401,6 +417,7 @@ namespace FitVitality
             }
         }
 
+        //Метод при затваряне на формата
         private void label5_Click(object sender, EventArgs e)
         {
             for (double i = this.Opacity; i >= 0; i = i - 0.00002)

@@ -45,6 +45,7 @@ namespace FitVitality
             pb.Dock = DockStyle.Fill;
         }
 
+        //Метод за показване само на панела за изтриване на акаунт
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             deleteAccPanel.Visible = true;
@@ -77,6 +78,7 @@ namespace FitVitality
             changePasswordButton.Visible = false;
         }
 
+        //Метод за зареждане на формата
         private void Settings_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -273,6 +275,7 @@ namespace FitVitality
             }
         }
 
+        //Метод за проверка на въведен текст в текстовото поле за потвърждение
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -300,6 +303,7 @@ namespace FitVitality
             }
         }
 
+        //Метод за изтриване на акаунт
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             string query = "DELETE FROM UserData WHERE UserID = @ID; DELETE FROM UserSettings WHERE UserID = @ID; DELETE FROM Workouts WHERE UserID = @ID; DELETE FROM UserNutrition WHERE UserID = @ID; DELETE FROM WeeklyInformation WHERE UserID = @ID";
@@ -321,6 +325,7 @@ namespace FitVitality
                 connection.Close();
             }
         }
+        //Метод за затваряне на панела за изтриване на акаунт
         private void buttonClose_Click(object sender, EventArgs e)
         {
             deleteAccPanel.Visible = false;
@@ -423,6 +428,7 @@ namespace FitVitality
             var emailValidation = new EmailAddressAttribute();
             return emailValidation.IsValid(email);
         }
+        //Метод за запазване на настройките
         private void buttonSave_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -496,7 +502,7 @@ namespace FitVitality
                 errorPanel.BringToFront();
             }
         }
-
+        //Метод за промяна на езика
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -700,6 +706,7 @@ namespace FitVitality
             changePasswordPanel.Visible = true;
         }
 
+        //Метод за смяна на парола
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             bool validOldPass = false;

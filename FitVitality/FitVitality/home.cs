@@ -29,7 +29,7 @@ namespace FitVitality
             _userID = userID;
         }
 
-
+        //Метод за зареждане на формата
         private void home_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -532,7 +532,7 @@ namespace FitVitality
                 }
             }
         }
-
+        //Метод за зареждане на форма
         public void loadForm(object Form)
         {
             if (this.Parent.Controls.Count > 0)

@@ -28,6 +28,7 @@ namespace FitVitality
         {
             InitializeComponent();
         }
+
         private void WelcomeScreen_Load(object sender, EventArgs e)
         {
             var activated = new Register();
@@ -75,6 +76,7 @@ namespace FitVitality
             }
         }
 
+        //Метод за анимация на формата
         private void WelcomeScreen_Shown(object sender, EventArgs e)
         {
             this.Opacity = 0;
@@ -89,6 +91,7 @@ namespace FitVitality
             Application.Exit();
         }
 
+        //Метод за влизане в системата
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             bool login = false;

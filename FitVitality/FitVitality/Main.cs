@@ -29,6 +29,8 @@ namespace FitVitality
         //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=fitvitality;Password=adminskaparola123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 
+
+        //Метод за зареждане на форми в главния прозорец
         public void loadForm(object Form)
         {
             if (this.mainPanel.Controls.Count > 0)
@@ -56,6 +58,7 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Зареждане на началната форма
             if (dashboard_Opened == false)
             {
                 loadForm(new home(_userID));
@@ -65,6 +68,8 @@ namespace FitVitality
                 nutrition_Opened = false;
                 settings_Opened = false;
             }
+
+            //Извежда потребителското име в лейбъла
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -96,6 +101,7 @@ namespace FitVitality
             }
         }
 
+        //Метод за плавно затваряне на формата
         private void Form1_Shown(object sender, EventArgs e)
         {
             this.Opacity = 0;
@@ -235,6 +241,7 @@ namespace FitVitality
             }
         }
 
+        //Метод за проверка за смяна на езика
         private void loggedAsTimer_Tick(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");

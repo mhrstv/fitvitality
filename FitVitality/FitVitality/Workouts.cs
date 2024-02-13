@@ -384,39 +384,6 @@ namespace FitVitality
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void gymButton_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -617,12 +584,6 @@ namespace FitVitality
             trainPlacePanel.Visible = false;
             activityGroupPanel.Visible = true;
         }
-
-        private void muscleGroupsBorders_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             using SqlConnection connection = new SqlConnection(connectionString);
@@ -965,12 +926,6 @@ namespace FitVitality
                 }
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void nextButton3_Click(object sender, EventArgs e)
         {
             if (preClicked)
@@ -1169,27 +1124,6 @@ namespace FitVitality
             chooseWorkoutNumberPanel.Visible = true;
             workoutsLabel.Visible = false;
         }
-
-
-
-
-
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
-
-
-
-
-
-
         private void nextButton6_Click(object sender, EventArgs e)
         {
             lowerBodyPanel.Visible = false;
@@ -1315,11 +1249,6 @@ namespace FitVitality
                 }
             }
         }
-
-        private void nextButton7_Click(object sender, EventArgs e)
-        {
-        }
-
         private void nextButt7_Click(object sender, EventArgs e)
         {
             workoutTypePanel.Visible = false;
@@ -1336,11 +1265,6 @@ namespace FitVitality
             }
             activityGroupPanel.Visible = false;
             trainPlacePanel.Visible = false;
-        }
-
-        private void preGenPanel_VisibleChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void addGymWorkouts()
@@ -1739,11 +1663,6 @@ namespace FitVitality
             {
                 addOutdoorsWorkouts();
             }
-        }
-
-        private void workoutListPanel_VisibleChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void calvesPicture_Click(object sender, EventArgs e)
@@ -2343,11 +2262,6 @@ namespace FitVitality
             workoutsList.Visible = false;
             workoutsLabel.Visible = false;
         }
-
-        private void preNextButton_Click(object sender, EventArgs e)
-        {
-
-        }
         private void weekDayClick(CheckBox a, PictureBox b, Label c)
         {
             if (a.Checked && selectedDays <= activity)
@@ -2385,34 +2299,6 @@ namespace FitVitality
                 mondayClicked = true;
             }
             else { mondayClicked = false; }
-        }
-
-        private void mondayPictureBox_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void tuesdayPictureBox_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void wednesdayPictureBox_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void thursdayPictureBox_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void fridayPictureBox_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void saturdayPictureBox_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void sundayPictureBox_Click(object sender, EventArgs e)
-        {
         }
 
         private void tuesdayCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -3015,11 +2901,6 @@ namespace FitVitality
             workoutsDashboard.Visible = false;
             trainPlacePanel.Visible = true;
         }
-
-        private void editWorkoutLabel_Click(object sender, EventArgs e)
-        {
-        }
-
         private void editWorkoutLabel_MouseEnter(object sender, EventArgs e)
         {
             editWorkoutButton.FillColor = Color.FromArgb(211, 211, 211);
@@ -4026,11 +3907,6 @@ namespace FitVitality
                 createNextButton.Visible = true;
             }
             else createNextButton.Visible = false;
-        }
-
-        private void chooseWorkoutNumberPanel_VisibleChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

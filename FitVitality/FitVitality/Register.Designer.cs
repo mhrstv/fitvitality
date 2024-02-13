@@ -170,7 +170,6 @@
             textBoxUsername.Size = new Size(199, 23);
             textBoxUsername.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             textBoxUsername.TabIndex = 8;
-            textBoxUsername.TextChanged += kryptonTextBox1_TextChanged;
             textBoxUsername.Enter += textBoxUsername_Enter;
             textBoxUsername.KeyDown += tbusername_KeyDown;
             textBoxUsername.Leave += textBoxUsername_Leave;
@@ -227,7 +226,6 @@
             topbar.Name = "topbar";
             topbar.Size = new Size(287, 32);
             topbar.TabIndex = 1;
-            topbar.Paint += panel1_Paint;
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;

@@ -95,7 +95,6 @@
             // 
             // rotationTimer
             // 
-            rotationTimer.Tick += rotationTimer_Tick_1;
             // 
             // hLine1
             // 
@@ -105,7 +104,6 @@
             hLine1.Size = new Size(664, 1);
             hLine1.TabIndex = 4;
             hLine1.TabStop = false;
-            hLine1.Click += pictureBox2_Click_1;
             // 
             // hLine2
             // 
@@ -417,7 +415,6 @@
             title1.Name = "Diet";
             title1.Text = "This week's goals %";
             dietChart.Titles.Add(title1);
-            dietChart.Click += dietChart_Click;
             // 
             // graphBorders
             // 

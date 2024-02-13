@@ -146,7 +146,6 @@
             textBoxUsername.Name = "textBoxUsername";
             textBoxUsername.Size = new Size(199, 23);
             textBoxUsername.TabIndex = 7;
-            textBoxUsername.TextChanged += kryptonTextBox1_TextChanged;
             textBoxUsername.KeyDown += kryptonTextBox1_KeyDown;
             // 
             // textBoxPassword
@@ -161,7 +160,6 @@
             textBoxPassword.Size = new Size(199, 23);
             textBoxPassword.TabIndex = 8;
             textBoxPassword.UseSystemPasswordChar = true;
-            textBoxPassword.TextChanged += textBoxPassword_TextChanged;
             textBoxPassword.KeyDown += kryptonTextBox2_KeyDown;
             // 
             // usernameLabel
@@ -226,7 +224,6 @@
             topbar.Name = "topbar";
             topbar.Size = new Size(287, 32);
             topbar.TabIndex = 1;
-            topbar.Paint += panel1_Paint;
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
@@ -351,7 +348,6 @@
             rememberMe.TabStop = false;
             rememberMe.Text = "Remember me";
             rememberMe.UseVisualStyleBackColor = true;
-            rememberMe.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // loginFail
             // 
@@ -537,11 +533,9 @@
             StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
             StateCommon.Border.Width = 1;
             Text = "FitVitality";
-            FormClosing += Login_FormClosing;
             FormClosed += WelcomeScreen_FormClosed;
             Load += WelcomeScreen_Load;
             Shown += WelcomeScreen_Shown;
-            MouseHover += WelcomeScreen_MouseHover;
             topbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)vBorder2).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo1).EndInit();

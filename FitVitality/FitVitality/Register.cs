@@ -441,12 +441,6 @@ namespace FitVitality
         {
             buttonMin.BackColor = Color.White;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
@@ -477,12 +471,6 @@ namespace FitVitality
                 this.Opacity += 0.00004;
             }
         }
-
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             panelAccCreated.Width += 2;

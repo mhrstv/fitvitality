@@ -99,7 +99,6 @@
             foodNameLabel.TabIndex = 4;
             foodNameLabel.Text = "Name";
             foodNameLabel.TextAlign = ContentAlignment.MiddleLeft;
-            foodNameLabel.Click += foodNameLabel_Click;
             // 
             // label_g
             // 
@@ -119,8 +118,6 @@
             textBoxGrams.Name = "textBoxGrams";
             textBoxGrams.Size = new Size(31, 23);
             textBoxGrams.TabIndex = 7;
-            textBoxGrams.TextChanged += textBoxGrams_TextChanged;
-            textBoxGrams.KeyDown += textBoxGrams_KeyDown;
             // 
             // caloriesLabel
             // 
@@ -233,7 +230,6 @@
             Controls.Add(foodImage);
             Name = "FoodItem";
             Size = new Size(209, 78);
-            Load += FoodItem_Load;
             ((System.ComponentModel.ISupportInitialize)foodImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)removeFoodItem).EndInit();
             ((System.ComponentModel.ISupportInitialize)borderLeft).EndInit();

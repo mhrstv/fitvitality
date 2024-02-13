@@ -87,7 +87,6 @@
             labelExercises.Size = new Size(276, 95);
             labelExercises.TabIndex = 15;
             labelExercises.Text = "[MUSCLE GROUP] - [EXERCISES]";
-            labelExercises.Click += labelExercises_Click;
             // 
             // workoutNumLabel
             // 
@@ -98,7 +97,6 @@
             workoutNumLabel.TabIndex = 14;
             workoutNumLabel.Text = "Workout [Number]";
             workoutNumLabel.TextAlign = ContentAlignment.MiddleCenter;
-            workoutNumLabel.Click += workoutNumLabel_Click;
             // 
             // selectButton
             // 

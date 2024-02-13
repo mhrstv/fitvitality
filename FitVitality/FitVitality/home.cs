@@ -533,26 +533,6 @@ namespace FitVitality
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bmi_label_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rotationTimer_Tick_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         public void loadForm(object Form)
         {
             if (this.Parent.Controls.Count > 0)
@@ -629,11 +609,6 @@ namespace FitVitality
                     command.ExecuteNonQuery();
                 }
             }
-        }
-
-        private void dietChart_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

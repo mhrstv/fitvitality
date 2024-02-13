@@ -59,25 +59,6 @@ namespace FitVitality
             double output;
             return double.TryParse(s, out output);
         }
-        private void textBoxGrams_TextChanged()
-        {
-
-        }
-
-        private void textBoxGrams_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void textBoxGrams_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void foodNameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void addButton_Click(object sender, EventArgs e)
         {
@@ -124,9 +105,6 @@ namespace FitVitality
             }
         }
 
-        private void FoodItem_Load(object sender, EventArgs e)
-        {
-        }
 
         [Category("Custom Props")]
         public string FoodName

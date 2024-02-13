@@ -1117,12 +1117,6 @@ namespace FitVitality
         {
             buttonCloseBMI.BackColor = Color.White;
         }
-
-        private void bmrBorders_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bmr_buttonOpen_Click(object sender, EventArgs e)
         {
             bmrCalcPanel.Size = new Size(547, 270);
@@ -1139,7 +1133,6 @@ namespace FitVitality
             buttonOpenMacro.Enabled = true;
             buttonOpenIdealWeight.Enabled = true;
         }
-
         private void buttonCloseBMR_MouseEnter(object sender, EventArgs e)
         {
             buttonCloseBMR.BackColor = Color.IndianRed;
@@ -1214,11 +1207,6 @@ namespace FitVitality
             buttonOpenCalorie.Enabled = false;
             buttonOpenMacro.Enabled = false;
             buttonOpenIdealWeight.Enabled = false;
-        }
-
-        private void neckTb_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

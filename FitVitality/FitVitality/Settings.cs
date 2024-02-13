@@ -681,21 +681,10 @@ namespace FitVitality
             }
         }
 
-        private void weightTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void errorClose_Click(object sender, EventArgs e)
         {
             errorPanel.Visible = false;
         }
-
-        private void errorClose_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
         private void errorClose_MouseEnter(object sender, EventArgs e)
         {
             errorClose.BackColor = Color.IndianRed;

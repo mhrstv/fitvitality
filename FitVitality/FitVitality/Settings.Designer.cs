@@ -502,7 +502,6 @@
             errorClose.Click += errorClose_Click;
             errorClose.MouseEnter += errorClose_MouseEnter;
             errorClose.MouseLeave += errorClose_MouseLeave;
-            errorClose.MouseHover += errorClose_MouseHover;
             // 
             // settingErrorLabel
             // 

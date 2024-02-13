@@ -2005,11 +2005,6 @@ namespace FitVitality
                 searchTextBox.CueHint.Color1 = Color.Red;
             }
         }
-
-        private void searchPanel_Leave(object sender, EventArgs e)
-        {
-
-        }
         private void ifSearchNotClicked(object sender, EventArgs e)
         {
             if (searchPanel.Visible == true)
@@ -2034,10 +2029,6 @@ namespace FitVitality
             }
         }
 
-        private void foodPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void foodPanel_Click(object sender, EventArgs e)
         {
@@ -2498,11 +2489,6 @@ namespace FitVitality
             searchTextBox.CueHint.Color1 = Color.FromArgb(177, 192, 214);
         }
 
-        private void searchTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void searchTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -2511,17 +2497,6 @@ namespace FitVitality
                 searchIcon_Click(this, new EventArgs());
             }
         }
-
-        private void searchIcon_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Diet_ControlRemoved(object sender, ControlEventArgs e)
-        {
-
-        }
-
         private void Diet_Leave(object sender, EventArgs e)
         {
 

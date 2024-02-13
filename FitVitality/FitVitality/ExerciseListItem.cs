@@ -19,11 +19,6 @@ namespace FitVitality
             InitializeComponent();
         }
 
-        private void ExerciseListItem_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void addLabel_Click(object sender, EventArgs e)
         {
             ButtonClicked?.Invoke(this, EventArgs.Empty);

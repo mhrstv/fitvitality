@@ -376,7 +376,6 @@
             leftCorner.Size = new Size(16, 15);
             leftCorner.TabIndex = 19;
             leftCorner.TabStop = false;
-            leftCorner.Click += pictureBox8_Click;
             // 
             // rightCorner
             // 
@@ -386,7 +385,6 @@
             rightCorner.Size = new Size(16, 15);
             rightCorner.TabIndex = 17;
             rightCorner.TabStop = false;
-            rightCorner.Click += pictureBox6_Click;
             // 
             // vLine1
             // 
@@ -396,7 +394,6 @@
             vLine1.Size = new Size(1, 355);
             vLine1.TabIndex = 16;
             vLine1.TabStop = false;
-            vLine1.Click += pictureBox5_Click;
             // 
             // vLine2
             // 
@@ -406,7 +403,6 @@
             vLine2.Size = new Size(1, 357);
             vLine2.TabIndex = 15;
             vLine2.TabStop = false;
-            vLine2.Click += pictureBox4_Click;
             // 
             // hLine2
             // 
@@ -416,7 +412,6 @@
             hLine2.Size = new Size(667, 1);
             hLine2.TabIndex = 14;
             hLine2.TabStop = false;
-            hLine2.Click += pictureBox3_Click;
             // 
             // hLine1
             // 
@@ -426,7 +421,6 @@
             hLine1.Size = new Size(664, 1);
             hLine1.TabIndex = 13;
             hLine1.TabStop = false;
-            hLine1.Click += pictureBox2_Click;
             // 
             // workoutsLabel
             // 
@@ -698,7 +692,6 @@
             activityGroupBorders.Size = new Size(518, 262);
             activityGroupBorders.TabIndex = 0;
             activityGroupBorders.TabStop = false;
-            activityGroupBorders.Click += muscleGroupsBorders_Click;
             // 
             // muscleGroupPanel
             // 
@@ -1479,7 +1472,6 @@
             nextButton7.TabIndex = 31;
             nextButton7.Values.Text = "Next";
             nextButton7.Visible = false;
-            nextButton7.Click += nextButton7_Click;
             // 
             // preNextButtonPanel
             // 
@@ -1551,7 +1543,6 @@
             preNextButton.TabIndex = 31;
             preNextButton.Values.Text = "Next";
             preNextButton.Visible = false;
-            preNextButton.Click += preNextButton_Click;
             // 
             // preBorders
             // 
@@ -1901,7 +1892,6 @@
             sundayPictureBox.Size = new Size(61, 122);
             sundayPictureBox.TabIndex = 53;
             sundayPictureBox.TabStop = false;
-            sundayPictureBox.Click += sundayPictureBox_Click;
             // 
             // saturdayPanel
             // 
@@ -1941,7 +1931,6 @@
             saturdayPictureBox.Size = new Size(61, 122);
             saturdayPictureBox.TabIndex = 52;
             saturdayPictureBox.TabStop = false;
-            saturdayPictureBox.Click += saturdayPictureBox_Click;
             // 
             // fridayPanel
             // 
@@ -1981,7 +1970,6 @@
             fridayPictureBox.Size = new Size(61, 122);
             fridayPictureBox.TabIndex = 51;
             fridayPictureBox.TabStop = false;
-            fridayPictureBox.Click += fridayPictureBox_Click;
             // 
             // thursdayPanel
             // 
@@ -2021,7 +2009,6 @@
             thursdayPictureBox.Size = new Size(61, 122);
             thursdayPictureBox.TabIndex = 50;
             thursdayPictureBox.TabStop = false;
-            thursdayPictureBox.Click += thursdayPictureBox_Click;
             // 
             // wednesdayPanel
             // 
@@ -2061,7 +2048,6 @@
             wednesdayPictureBox.Size = new Size(61, 122);
             wednesdayPictureBox.TabIndex = 49;
             wednesdayPictureBox.TabStop = false;
-            wednesdayPictureBox.Click += wednesdayPictureBox_Click;
             // 
             // tuesdayPanel
             // 
@@ -2101,7 +2087,6 @@
             tuesdayPictureBox.Size = new Size(61, 122);
             tuesdayPictureBox.TabIndex = 48;
             tuesdayPictureBox.TabStop = false;
-            tuesdayPictureBox.Click += tuesdayPictureBox_Click;
             // 
             // mondayPanel
             // 
@@ -2142,7 +2127,6 @@
             mondayPictureBox.Size = new Size(61, 122);
             mondayPictureBox.TabIndex = 2;
             mondayPictureBox.TabStop = false;
-            mondayPictureBox.Click += mondayPictureBox_Click;
             // 
             // trainingDaysDescription
             // 
@@ -3211,7 +3195,6 @@
             chooseWorkoutNumberPanel.Size = new Size(553, 307);
             chooseWorkoutNumberPanel.TabIndex = 48;
             chooseWorkoutNumberPanel.Visible = false;
-            chooseWorkoutNumberPanel.VisibleChanged += chooseWorkoutNumberPanel_VisibleChanged;
             // 
             // workoutNumberComboBox
             // 

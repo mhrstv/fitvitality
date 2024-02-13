@@ -258,7 +258,6 @@
             namePanel.Name = "namePanel";
             namePanel.Size = new Size(540, 300);
             namePanel.TabIndex = 21;
-            namePanel.Paint += panel1_Paint;
             // 
             // panel_nameUsage
             // 
@@ -295,7 +294,6 @@
             textBox_Name.TextAlign = HorizontalAlignment.Center;
             textBox_Name.Visible = false;
             textBox_Name.TextChanged += kryptonTextBox1_TextChanged;
-            textBox_Name.KeyDown += kryptonTextBox1_KeyDown;
             // 
             // namePanel2
             // 
@@ -521,8 +519,6 @@
             textBox_Age.TabIndex = 4;
             textBox_Age.TextAlign = HorizontalAlignment.Center;
             textBox_Age.Visible = false;
-            textBox_Age.TextChanged += tbAge_TextChanged;
-            textBox_Age.KeyDown += tbAge_KeyDown;
             // 
             // weightHeight_Panel
             // 
@@ -699,7 +695,6 @@
             textBox_Height.TabIndex = 4;
             textBox_Height.TextAlign = HorizontalAlignment.Center;
             textBox_Height.Visible = false;
-            textBox_Height.KeyDown += tbHeight_KeyDown;
             // 
             // textBox_Weight
             // 

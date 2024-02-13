@@ -120,10 +120,6 @@ namespace FitVitality
                 settings_Opened = false;
             }
         }
-        private void kryptonButton2_Click_3(object sender, EventArgs e)
-        {
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -176,49 +172,6 @@ namespace FitVitality
             mouseDown = false;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void panel3_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void panel3_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
-        {
-        }
-
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
-        {
-        }
-        private void topbar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-        }
-
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             if (dashboard_Opened == false)
@@ -267,11 +220,6 @@ namespace FitVitality
                 nutrition_Opened = false;
                 settings_Opened = false;
             }
-        }
-
-        private void pictureBox1_Click_2(object sender, EventArgs e)
-        {
-
         }
 
         private void kryptonButton1_Click_2(object sender, EventArgs e)

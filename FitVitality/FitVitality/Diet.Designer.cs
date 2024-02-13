@@ -411,7 +411,6 @@
             foodPanel.Size = new Size(241, 201);
             foodPanel.TabIndex = 51;
             foodPanel.Click += foodPanel_Click;
-            foodPanel.Paint += foodPanel_Paint;
             // 
             // searchTextBox
             // 
@@ -428,7 +427,6 @@
             searchTextBox.TabIndex = 52;
             searchTextBox.TextChanged += searchTextBox_TextChanged;
             searchTextBox.KeyDown += searchTextBox_KeyDown;
-            searchTextBox.KeyPress += searchTextBox_KeyPress;
             // 
             // searchIcon
             // 
@@ -441,7 +439,6 @@
             searchIcon.TabIndex = 53;
             searchIcon.TabStop = false;
             searchIcon.Click += searchIcon_Click;
-            searchIcon.MouseHover += searchIcon_MouseHover;
             // 
             // searchPanel
             // 
@@ -452,7 +449,6 @@
             searchPanel.TabIndex = 54;
             searchPanel.Visible = false;
             searchPanel.Paint += flowLayoutPanel1_Paint;
-            searchPanel.Leave += searchPanel_Leave;
             // 
             // hintLabel
             // 
@@ -559,7 +555,6 @@
             Text = "Diet";
             Load += Diet_Load;
             Click += Diet_Click;
-            ControlRemoved += Diet_ControlRemoved;
             Leave += Diet_Leave;
             ((System.ComponentModel.ISupportInitialize)leftC).EndInit();
             ((System.ComponentModel.ISupportInitialize)rightC).EndInit();

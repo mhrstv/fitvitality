@@ -24,10 +24,6 @@ namespace FitVitality
             ButtonClicked?.Invoke(this, EventArgs.Empty);
         }
 
-        private void Exercise_Load(object sender, EventArgs e)
-        {
-
-        }
         #region
         private string exerciseName;
         private string exerciseListName;

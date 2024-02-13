@@ -77,7 +77,6 @@ namespace FitVitality
 
         private void WelcomeScreen_Shown(object sender, EventArgs e)
         {
-
             this.Opacity = 0;
             while (this.Opacity != 1)
             {
@@ -247,12 +246,6 @@ namespace FitVitality
             }
         }
 
-
-        private void kryptonPalette2_PalettePaint(object sender, PaletteLayoutEventArgs e)
-        {
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -310,11 +303,6 @@ namespace FitVitality
             mouseDown = false;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label5_Click(object sender, EventArgs e)
         {
             for (double i = this.Opacity; i >= 0; i = i - 0.00002)
@@ -325,32 +313,6 @@ namespace FitVitality
             register.Show();
             this.Hide();
         }
-
-        private void kryptonButton1_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WelcomeScreen_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        public void Login_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (errorPanel.Height <= 33)
@@ -399,12 +361,6 @@ namespace FitVitality
             textBoxPassword.UseSystemPasswordChar = false;
             textBoxPassword.PasswordChar = '\0';
         }
-
-        private void textBoxPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void logo2_MouseDown(object sender, MouseEventArgs e)
         {
             mouseDown = true;

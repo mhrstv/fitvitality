@@ -196,16 +196,6 @@ namespace FitVitality
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonPrevious_Click(object sender, EventArgs e) // Метод при натискане на бутона за предишна страница
         {
             dbName = textBox_Name.Text.ToString(); // Присвояване на въведеното име в променливата dbName
@@ -513,12 +503,6 @@ namespace FitVitality
                 buttonNext.Visible = false; // Скриване на бутона за следваща страница
             }
         }
-
-        private void kryptonTextBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
         private void male_Click(object sender, EventArgs e) // Метод при натискане на бутона за мъжки пол
         {
             var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)
@@ -739,22 +723,6 @@ namespace FitVitality
                 timerWeight5.Enabled = true; // Включване на следващия таймер
             }
         }
-
-        private void tbAge_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbAge_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void tbHeight_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
         private void pictureBox5_Click(object sender, EventArgs e) // Метод при натискането на бутона за цел Bulk
         {
             var config = new Config("FitVitality.ini"); // Създаване на обект от класа Config за четене и писане във файла FitVitality.ini (конфигурационен файл)

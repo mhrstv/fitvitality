@@ -161,10 +161,6 @@
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(690, 368);
             mainPanel.TabIndex = 2;
-            mainPanel.Paint += panel3_Paint;
-            mainPanel.MouseDown += panel3_MouseDown;
-            mainPanel.MouseMove += panel3_MouseMove;
-            mainPanel.MouseUp += panel3_MouseUp;
             // 
             // topbar
             // 
@@ -188,7 +184,6 @@
             topbar.Name = "topbar";
             topbar.Size = new Size(690, 32);
             topbar.TabIndex = 19;
-            topbar.Paint += topbar_Paint;
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
@@ -451,7 +446,6 @@
             logo2.SizeMode = PictureBoxSizeMode.Zoom;
             logo2.TabIndex = 1;
             logo2.TabStop = false;
-            logo2.Click += pictureBox4_Click;
             logo2.MouseDown += logo2_MouseDown;
             logo2.MouseMove += logo2_MouseMove;
             logo2.MouseUp += logo2_MouseUp;
@@ -465,7 +459,6 @@
             logo1.SizeMode = PictureBoxSizeMode.Zoom;
             logo1.TabIndex = 1;
             logo1.TabStop = false;
-            logo1.Click += pictureBox3_Click;
             logo1.MouseDown += logo1_MouseDown;
             logo1.MouseMove += logo1_MouseMove;
             logo1.MouseUp += logo1_MouseUp;
@@ -549,9 +542,6 @@
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             Shown += Form1_Shown;
-            MouseDown += Form1_MouseDown;
-            MouseMove += Form1_MouseMove;
-            MouseUp += Form1_MouseUp;
             topbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)settingsButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();

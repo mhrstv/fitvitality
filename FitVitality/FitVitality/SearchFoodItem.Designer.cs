@@ -114,11 +114,9 @@
             Cursor = Cursors.Hand;
             Name = "SearchFoodItem";
             Size = new Size(190, 35);
-            Load += SearchFoodItem_Load;
             Click += SearchFoodItem_Click;
             MouseEnter += SearchFoodItem_MouseEnter;
             MouseLeave += SearchFoodItem_MouseLeave;
-            MouseHover += SearchFoodItem_MouseHover;
             ((System.ComponentModel.ISupportInitialize)foodImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

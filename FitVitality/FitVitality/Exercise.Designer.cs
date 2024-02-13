@@ -60,7 +60,6 @@
             Controls.Add(exerciseLabel);
             Name = "Exercise";
             Size = new Size(154, 23);
-            Load += Exercise_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -952,7 +952,6 @@
             bmrBorders.SizeMode = PictureBoxSizeMode.Zoom;
             bmrBorders.TabIndex = 0;
             bmrBorders.TabStop = false;
-            bmrBorders.Click += bmrBorders_Click;
             // 
             // bodyFatCalcPanel
             // 
@@ -1007,7 +1006,6 @@
             neckTb.ShadowDecoration.CustomizableEdges = customizableEdges14;
             neckTb.Size = new Size(56, 23);
             neckTb.TabIndex = 65;
-            neckTb.TextChanged += neckTb_TextChanged;
             // 
             // hipsTb
             // 

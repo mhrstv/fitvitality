@@ -78,8 +78,8 @@ namespace FitVitality
                 textBox_Height.CueHint.CueHintText = "ex.183";
                 textBox_Name.CueHint.CueHintText = "ex. \"John\"";
                 textBox_Weight.CueHint.CueHintText = "ex. 82";
-                maleButton.Image = Properties.Resources.male;
-                femaleButton.Image = Properties.Resources.female;
+                maleButton.Image = Properties.Resources.male1;
+                femaleButton.Image = Properties.Resources.female1;
                 buttonBulk.Image = Properties.Resources.gainNormal;
                 buttonCut.Image = Properties.Resources.loseNormal;
                 buttonMaintain.Image = Properties.Resources.maintainNormal;

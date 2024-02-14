@@ -30,38 +30,38 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             deleteAccPanel = new Panel();
             closeDAPanel = new Panel();
@@ -537,7 +537,7 @@
             // buttonSave
             // 
             buttonSave.BorderRadius = 10;
-            buttonSave.CustomizableEdges = customizableEdges33;
+            buttonSave.CustomizableEdges = customizableEdges1;
             buttonSave.DisabledState.BorderColor = Color.DarkGray;
             buttonSave.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -547,7 +547,7 @@
             buttonSave.ForeColor = Color.White;
             buttonSave.Location = new Point(515, 285);
             buttonSave.Name = "buttonSave";
-            buttonSave.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            buttonSave.ShadowDecoration.CustomizableEdges = customizableEdges2;
             buttonSave.Size = new Size(103, 40);
             buttonSave.TabIndex = 43;
             buttonSave.Text = "Save Settings";
@@ -566,7 +566,7 @@
             // deleteAccountButton
             // 
             deleteAccountButton.BorderRadius = 10;
-            deleteAccountButton.CustomizableEdges = customizableEdges35;
+            deleteAccountButton.CustomizableEdges = customizableEdges3;
             deleteAccountButton.DisabledState.BorderColor = Color.DarkGray;
             deleteAccountButton.DisabledState.CustomBorderColor = Color.DarkGray;
             deleteAccountButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -576,7 +576,7 @@
             deleteAccountButton.ForeColor = Color.White;
             deleteAccountButton.Location = new Point(424, 331);
             deleteAccountButton.Name = "deleteAccountButton";
-            deleteAccountButton.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            deleteAccountButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             deleteAccountButton.Size = new Size(194, 25);
             deleteAccountButton.TabIndex = 46;
             deleteAccountButton.Text = "Delete Account";
@@ -585,7 +585,7 @@
             // changePasswordButton
             // 
             changePasswordButton.BorderRadius = 10;
-            changePasswordButton.CustomizableEdges = customizableEdges37;
+            changePasswordButton.CustomizableEdges = customizableEdges5;
             changePasswordButton.DisabledState.BorderColor = Color.DarkGray;
             changePasswordButton.DisabledState.CustomBorderColor = Color.DarkGray;
             changePasswordButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -595,7 +595,7 @@
             changePasswordButton.ForeColor = Color.White;
             changePasswordButton.Location = new Point(424, 285);
             changePasswordButton.Name = "changePasswordButton";
-            changePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            changePasswordButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             changePasswordButton.Size = new Size(88, 40);
             changePasswordButton.TabIndex = 47;
             changePasswordButton.Text = "Change Password";
@@ -634,7 +634,7 @@
             changePasswordPanel.Controls.Add(oldPasswordLabel);
             changePasswordPanel.Controls.Add(changePasswordLabel);
             changePasswordPanel.Controls.Add(changePasswordBorders);
-            changePasswordPanel.Location = new Point(217, 45);
+            changePasswordPanel.Location = new Point(217, 50);
             changePasswordPanel.Name = "changePasswordPanel";
             changePasswordPanel.Size = new Size(257, 234);
             changePasswordPanel.TabIndex = 51;
@@ -658,7 +658,7 @@
             // 
             changePasswordConfirmButton.BackColor = Color.WhiteSmoke;
             changePasswordConfirmButton.BorderRadius = 10;
-            changePasswordConfirmButton.CustomizableEdges = customizableEdges39;
+            changePasswordConfirmButton.CustomizableEdges = customizableEdges7;
             changePasswordConfirmButton.DisabledState.BorderColor = Color.DarkGray;
             changePasswordConfirmButton.DisabledState.CustomBorderColor = Color.DarkGray;
             changePasswordConfirmButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -668,7 +668,7 @@
             changePasswordConfirmButton.ForeColor = Color.White;
             changePasswordConfirmButton.Location = new Point(80, 198);
             changePasswordConfirmButton.Name = "changePasswordConfirmButton";
-            changePasswordConfirmButton.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            changePasswordConfirmButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             changePasswordConfirmButton.Size = new Size(96, 25);
             changePasswordConfirmButton.TabIndex = 55;
             changePasswordConfirmButton.Text = "Confirm";
@@ -678,7 +678,7 @@
             // 
             confirmPasswordTextBox.BackColor = Color.WhiteSmoke;
             confirmPasswordTextBox.BorderRadius = 8;
-            confirmPasswordTextBox.CustomizableEdges = customizableEdges41;
+            confirmPasswordTextBox.CustomizableEdges = customizableEdges9;
             confirmPasswordTextBox.DefaultText = "";
             confirmPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             confirmPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -694,7 +694,7 @@
             confirmPasswordTextBox.PlaceholderForeColor = Color.Black;
             confirmPasswordTextBox.PlaceholderText = "";
             confirmPasswordTextBox.SelectedText = "";
-            confirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            confirmPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges10;
             confirmPasswordTextBox.Size = new Size(156, 25);
             confirmPasswordTextBox.TabIndex = 54;
             confirmPasswordTextBox.UseSystemPasswordChar = true;
@@ -703,7 +703,7 @@
             // 
             newPasswordTextBox.BackColor = Color.WhiteSmoke;
             newPasswordTextBox.BorderRadius = 8;
-            newPasswordTextBox.CustomizableEdges = customizableEdges43;
+            newPasswordTextBox.CustomizableEdges = customizableEdges11;
             newPasswordTextBox.DefaultText = "";
             newPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             newPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -719,7 +719,7 @@
             newPasswordTextBox.PlaceholderForeColor = Color.Black;
             newPasswordTextBox.PlaceholderText = "";
             newPasswordTextBox.SelectedText = "";
-            newPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            newPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
             newPasswordTextBox.Size = new Size(156, 25);
             newPasswordTextBox.TabIndex = 53;
             newPasswordTextBox.UseSystemPasswordChar = true;
@@ -728,7 +728,7 @@
             // 
             oldPasswordTextBox.BackColor = Color.WhiteSmoke;
             oldPasswordTextBox.BorderRadius = 8;
-            oldPasswordTextBox.CustomizableEdges = customizableEdges45;
+            oldPasswordTextBox.CustomizableEdges = customizableEdges13;
             oldPasswordTextBox.DefaultText = "";
             oldPasswordTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             oldPasswordTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -744,7 +744,7 @@
             oldPasswordTextBox.PlaceholderForeColor = Color.Black;
             oldPasswordTextBox.PlaceholderText = "";
             oldPasswordTextBox.SelectedText = "";
-            oldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            oldPasswordTextBox.ShadowDecoration.CustomizableEdges = customizableEdges14;
             oldPasswordTextBox.Size = new Size(156, 25);
             oldPasswordTextBox.TabIndex = 52;
             oldPasswordTextBox.UseSystemPasswordChar = true;
@@ -817,7 +817,7 @@
             nameTextBox.BackColor = Color.WhiteSmoke;
             nameTextBox.BorderColor = Color.FromArgb(92, 225, 230);
             nameTextBox.BorderRadius = 8;
-            nameTextBox.CustomizableEdges = customizableEdges47;
+            nameTextBox.CustomizableEdges = customizableEdges15;
             nameTextBox.DefaultText = "";
             nameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             nameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -833,7 +833,7 @@
             nameTextBox.PlaceholderForeColor = Color.Black;
             nameTextBox.PlaceholderText = "";
             nameTextBox.SelectedText = "";
-            nameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            nameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges16;
             nameTextBox.Size = new Size(124, 25);
             nameTextBox.TabIndex = 52;
             // 
@@ -842,7 +842,7 @@
             emailTextBox.BackColor = Color.WhiteSmoke;
             emailTextBox.BorderColor = Color.FromArgb(92, 225, 230);
             emailTextBox.BorderRadius = 8;
-            emailTextBox.CustomizableEdges = customizableEdges49;
+            emailTextBox.CustomizableEdges = customizableEdges17;
             emailTextBox.DefaultText = "";
             emailTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             emailTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -858,7 +858,7 @@
             emailTextBox.PlaceholderForeColor = Color.Black;
             emailTextBox.PlaceholderText = "";
             emailTextBox.SelectedText = "";
-            emailTextBox.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            emailTextBox.ShadowDecoration.CustomizableEdges = customizableEdges18;
             emailTextBox.Size = new Size(124, 25);
             emailTextBox.TabIndex = 53;
             // 
@@ -867,7 +867,7 @@
             ageTextBox.BackColor = Color.WhiteSmoke;
             ageTextBox.BorderColor = Color.FromArgb(92, 225, 230);
             ageTextBox.BorderRadius = 8;
-            ageTextBox.CustomizableEdges = customizableEdges51;
+            ageTextBox.CustomizableEdges = customizableEdges19;
             ageTextBox.DefaultText = "";
             ageTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             ageTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -883,7 +883,7 @@
             ageTextBox.PlaceholderForeColor = Color.Black;
             ageTextBox.PlaceholderText = "";
             ageTextBox.SelectedText = "";
-            ageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            ageTextBox.ShadowDecoration.CustomizableEdges = customizableEdges20;
             ageTextBox.Size = new Size(124, 25);
             ageTextBox.TabIndex = 54;
             // 
@@ -892,7 +892,7 @@
             weightTextBox.BackColor = Color.WhiteSmoke;
             weightTextBox.BorderColor = Color.FromArgb(92, 225, 230);
             weightTextBox.BorderRadius = 8;
-            weightTextBox.CustomizableEdges = customizableEdges53;
+            weightTextBox.CustomizableEdges = customizableEdges21;
             weightTextBox.DefaultText = "";
             weightTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             weightTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -908,7 +908,7 @@
             weightTextBox.PlaceholderForeColor = Color.Black;
             weightTextBox.PlaceholderText = "";
             weightTextBox.SelectedText = "";
-            weightTextBox.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            weightTextBox.ShadowDecoration.CustomizableEdges = customizableEdges22;
             weightTextBox.Size = new Size(124, 25);
             weightTextBox.TabIndex = 55;
             // 
@@ -917,7 +917,7 @@
             heightTextBox.BackColor = Color.WhiteSmoke;
             heightTextBox.BorderColor = Color.FromArgb(92, 225, 230);
             heightTextBox.BorderRadius = 8;
-            heightTextBox.CustomizableEdges = customizableEdges55;
+            heightTextBox.CustomizableEdges = customizableEdges23;
             heightTextBox.DefaultText = "";
             heightTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             heightTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -933,7 +933,7 @@
             heightTextBox.PlaceholderForeColor = Color.Black;
             heightTextBox.PlaceholderText = "";
             heightTextBox.SelectedText = "";
-            heightTextBox.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            heightTextBox.ShadowDecoration.CustomizableEdges = customizableEdges24;
             heightTextBox.Size = new Size(124, 25);
             heightTextBox.TabIndex = 56;
             // 
@@ -942,7 +942,7 @@
             themeComboBox.BackColor = Color.Transparent;
             themeComboBox.BorderColor = Color.FromArgb(92, 225, 230);
             themeComboBox.BorderRadius = 8;
-            themeComboBox.CustomizableEdges = customizableEdges57;
+            themeComboBox.CustomizableEdges = customizableEdges25;
             themeComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             themeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             themeComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -955,7 +955,7 @@
             themeComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             themeComboBox.Location = new Point(127, 121);
             themeComboBox.Name = "themeComboBox";
-            themeComboBox.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            themeComboBox.ShadowDecoration.CustomizableEdges = customizableEdges26;
             themeComboBox.Size = new Size(85, 24);
             themeComboBox.TabIndex = 59;
             themeComboBox.SelectedIndexChanged += themeComboBox_SelectedIndexChanged;
@@ -965,7 +965,7 @@
             languageComboBox.BackColor = Color.Transparent;
             languageComboBox.BorderColor = Color.FromArgb(92, 225, 230);
             languageComboBox.BorderRadius = 8;
-            languageComboBox.CustomizableEdges = customizableEdges59;
+            languageComboBox.CustomizableEdges = customizableEdges27;
             languageComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             languageComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             languageComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -978,7 +978,7 @@
             languageComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             languageComboBox.Location = new Point(127, 78);
             languageComboBox.Name = "languageComboBox";
-            languageComboBox.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            languageComboBox.ShadowDecoration.CustomizableEdges = customizableEdges28;
             languageComboBox.Size = new Size(121, 24);
             languageComboBox.TabIndex = 60;
             languageComboBox.SelectedIndexChanged += languageComboBox_SelectedIndexChanged;
@@ -988,7 +988,7 @@
             genderComboBox.BackColor = Color.Transparent;
             genderComboBox.BorderColor = Color.FromArgb(92, 225, 230);
             genderComboBox.BorderRadius = 8;
-            genderComboBox.CustomizableEdges = customizableEdges61;
+            genderComboBox.CustomizableEdges = customizableEdges29;
             genderComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             genderComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             genderComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -1001,7 +1001,7 @@
             genderComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             genderComboBox.Location = new Point(494, 167);
             genderComboBox.Name = "genderComboBox";
-            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges62;
+            genderComboBox.ShadowDecoration.CustomizableEdges = customizableEdges30;
             genderComboBox.Size = new Size(124, 21);
             genderComboBox.TabIndex = 61;
             // 
@@ -1010,7 +1010,7 @@
             goalComboBox.BackColor = Color.Transparent;
             goalComboBox.BorderColor = Color.FromArgb(92, 225, 230);
             goalComboBox.BorderRadius = 8;
-            goalComboBox.CustomizableEdges = customizableEdges63;
+            goalComboBox.CustomizableEdges = customizableEdges31;
             goalComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             goalComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             goalComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -1023,7 +1023,7 @@
             goalComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             goalComboBox.Location = new Point(494, 256);
             goalComboBox.Name = "goalComboBox";
-            goalComboBox.ShadowDecoration.CustomizableEdges = customizableEdges64;
+            goalComboBox.ShadowDecoration.CustomizableEdges = customizableEdges32;
             goalComboBox.Size = new Size(124, 21);
             goalComboBox.TabIndex = 62;
             // 

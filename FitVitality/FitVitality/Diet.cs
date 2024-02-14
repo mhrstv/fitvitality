@@ -66,6 +66,8 @@ namespace FitVitality
         int proteinGoal;
         int fatsGoal;
         int carbsGoal;
+
+        //Метод за калкулиране на балансирана консумация на макронутриенти
         public void MacroBalanced(double activity)
         {
             if (goal == "Cut")
@@ -225,6 +227,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за калкулиране на нискомаслена консумация на макронутриенти
         public void MacroLowFat(double activity)
         {
             if (goal == "Cut")
@@ -384,6 +387,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за калкулиране на нисковъглехидратна консумация на макронутриенти
         public void MacroLowCarb(double activity)
         {
             if (goal == "Cut")
@@ -543,6 +547,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за калкулиране на високопротеинова консумация на макронутриенти
         public void MacroHighProtein(double activity)
         {
             if (goal == "Cut")
@@ -1108,7 +1113,7 @@ namespace FitVitality
                 }
             }
         }
-
+        //Метод за смяна на нивото на активност
         private void activityComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -1256,7 +1261,7 @@ namespace FitVitality
                 }
             }
         }
-
+        //Метод за калкулиране на балансирана консумация на макронутриенти
         private void balancedButton_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -1367,7 +1372,7 @@ namespace FitVitality
                 }
             }
         }
-
+        //Метод за калкулиране на високопротеинова консумация на макронутриенти
         private void highProteinButton_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -1478,7 +1483,7 @@ namespace FitVitality
                 }
             }
         }
-
+        //Метод за калкулиране на нискомаслена консумация на макронутриенти
         private void lowFatButton_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -1589,7 +1594,7 @@ namespace FitVitality
                 }
             }
         }
-
+        //Метод за калкулиране на нисковъглехидратна консумация на макронутриенти
         private void lowCarbsButton_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -1857,7 +1862,7 @@ namespace FitVitality
         {
 
         }
-
+        //Метод за търсене на храна
         private void searchIcon_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -2120,6 +2125,7 @@ namespace FitVitality
         {
             ifSearchNotClicked(sender, e);
         }
+        //Метод за добавяне на обект в списък с храни
         private void searchFoodItem_Click(object sender, EventArgs e, string name, string nameorigin, double calories, double protein, double carbs, double fat, double grams, string image)
         {
             searchPanel.Visible = false;
@@ -2216,6 +2222,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за пресмятане и добавяне на макронутриенти и калории на определен грамаж
         private void foodItem_Add(object sender, EventArgs e, double calories, double protein, double carbs, double fat)
         {
             for (int i = 0; i < foodItems.Count; i++)
@@ -2300,7 +2307,7 @@ namespace FitVitality
                 }
             }
         }
-
+        //Метод за премахване на макронутриенти и калории на определен грамаж
         private void foodItem_Remove(object sender, EventArgs e, double calories, double protein, double carbs, double fat)
         {
             for (int i = 0; i < foodItems.Count; i++)
@@ -2384,6 +2391,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за премахване на обект от списък
         private void foodItem_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < foodItems.Count; i++)
@@ -2498,6 +2506,7 @@ namespace FitVitality
                 searchIcon_Click(this, new EventArgs());
             }
         }
+        //Метод за запазване на данни в базата данни
         private void Diet_Leave(object sender, EventArgs e)
         {
 

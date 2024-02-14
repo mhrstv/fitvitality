@@ -108,6 +108,7 @@ namespace FitVitality
 
 
         }
+        //Метод за зареждане на първи панел при създаване на тренировка
         private void Workouts_Load(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
@@ -599,7 +600,7 @@ namespace FitVitality
             workoutTypePanel.Visible = true;
             activityGroupPanel.Visible = false;
         }
-
+        //Метод при избиране на ниво на активност(в дни)
         private void activityLevelComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (activityLevelComboBox.SelectedIndex)
@@ -1267,7 +1268,7 @@ namespace FitVitality
             activityGroupPanel.Visible = false;
             trainPlacePanel.Visible = false;
         }
-
+        //Метод за зареждане на предварително генерирани тренировки за фитнес
         private void addGymWorkouts()
         {
             workouts.Clear();
@@ -1412,6 +1413,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за зареждане на предварително генерирани тренировки за у дома
         private void addHomeWorkouts()
         {
             workouts.Clear();
@@ -1531,6 +1533,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за зареждане на предварително генерирани тренировки за навън
         private void addOutdoorsWorkouts()
         {
             workouts.Clear();
@@ -1832,6 +1835,7 @@ namespace FitVitality
         {
             workoutPreviewClose.BackColor = Color.WhiteSmoke;
         }
+        //Метод за натискане на бутон за преглеждане на тренировка за фитнес
         private void WorkoutListItemGym_ButtonClicked(object sender, EventArgs e)
         {
             WorkoutDays.Clear();
@@ -2183,6 +2187,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за натискане на бутон за преглеждане на тренировка у дома
         private void HomeOutdoors_ButtonClicked(object sender, EventArgs e)
         {
             WorkoutDays.Clear();
@@ -2361,7 +2366,7 @@ namespace FitVitality
             }
             else { sundayClicked = false; }
         }
-
+        //Метод за избиране на тренировки в дадени дни
         private void preNextButton2_Click(object sender, EventArgs e)
         {
             trainingDaysPanel.Visible = false;
@@ -2430,6 +2435,7 @@ namespace FitVitality
             }
             else { restDay7.Visible = true; }
         }
+
         private void WorkoutDaysComboBox_Click(object sender, EventArgs e)
         {
             if (monComboBox.Visible == true)
@@ -2494,7 +2500,7 @@ namespace FitVitality
             }
             else preNextButton3.Visible = false;
         }
-
+        //Метод за запазване на тренировка в база данни
         private void preNextButton3_Click(object sender, EventArgs e)
         {
             selectWorkoutsPanel.Visible = false;
@@ -2550,6 +2556,7 @@ namespace FitVitality
             workoutsDashboard.BringToFront();
             trainPlacePanel.Visible = false;
         }
+        //Метод за запазване на упражнения в дадени дни
         private void saveWorkoutParameter(KryptonComboBox cb, string day, SqlCommand command)
         {
             var cfg = new Config("FitVitality.ini");
@@ -2913,7 +2920,7 @@ namespace FitVitality
             editWorkoutButton.FillColor = Color.Transparent;
             editWorkoutLabel.BackColor = Color.Transparent;
         }
-
+        //Метод при зареждане на табло с тренировки
         private void workoutsDashboard_VisibleChanged(object sender, EventArgs e)
         {
             if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
@@ -3148,6 +3155,7 @@ namespace FitVitality
                 backBB.Image = Properties.Resources.backBackBiceps;
             }
         }
+        //Метод за показване на тренировка
         private void workoutShow(string day)
         {
             wdSelectedExercises.Text = "";
@@ -3436,7 +3444,7 @@ namespace FitVitality
             workoutsLabel.Visible = false;
             workoutNumber = int.Parse(workoutNumberComboBox.Text);
         }
-
+        //Метод за създаване на тренировка
         private void workoutNumberComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (workoutNumberComboBox.Text != "")
@@ -3471,6 +3479,7 @@ namespace FitVitality
             }
             loadItemsList();
         }
+        //Метод за зареждане на упражнения
         private void loadItems(List<string> exercises, string type)
         {
             for (int i = 0; i < exercises.Count; i++)
@@ -3483,6 +3492,7 @@ namespace FitVitality
                 exerciseListItems.Add(exerciselistitem);
             }
         }
+        //Метод за зареждане на списъци с упражнения
         private void loadItemsList()
         {
             var cfg = new Config("FitVitality.ini");
@@ -3641,7 +3651,7 @@ namespace FitVitality
                 }
             }
         }
-
+        //Метод за добавяне на упражнение към тренировачния план
         private void addWorkoutItem(object sender, EventArgs e)
         {
             for (int i = 0; i < exerciseListItems.Count; i++)
@@ -3668,6 +3678,7 @@ namespace FitVitality
                 }
             }
         }
+        //Метод за премахване на упражнение от тренировачния план
         private void removeWorkoutItem(object sender, EventArgs e)
         {
             for (int i = 0; i < exerciseList.Count; i++)
@@ -3695,6 +3706,7 @@ namespace FitVitality
         }
 
         int currentWorkoutNumber = 1;
+        //Метод за създаване на тренировъчен план
         private void createWorkout(ref string workout, int titleLabel_Number)
         {
             if (currentWorkoutNumber < workoutNumber)

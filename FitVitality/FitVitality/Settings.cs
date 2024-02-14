@@ -19,6 +19,7 @@ using System.Xml.Linq;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic.Logging;
 using System.Collections;
+using Azure;
 
 namespace FitVitality
 {
@@ -49,6 +50,7 @@ namespace FitVitality
         //Метод за показване само на панела за изтриване на акаунт
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
+            beta.Visible = false;
             deleteAccPanel.Visible = true;
             confirmPanel.Visible = true;
             closeDAPanel.Visible = true;
@@ -330,6 +332,7 @@ namespace FitVitality
         private void buttonClose_Click(object sender, EventArgs e)
         {
             deleteAccPanel.Visible = false;
+            beta.Visible = true;
             deleteAccountButton.Visible = true;
             appSettings_label.Visible = true;
             accSettings_label.Visible = true;
@@ -704,7 +707,31 @@ namespace FitVitality
 
         private void changePasswordButton_Click(object sender, EventArgs e)
         {
+            beta.Visible = false;
             changePasswordPanel.Visible = true;
+            deleteAccountButton.Visible = false;
+            appSettings_label.Visible = false;
+            accSettings_label.Visible = false;
+            langLabel.Visible = false;
+            languageComboBox.Visible = false;
+            themeLabel.Visible = false;
+            nameLabel.Visible = false;
+            ageLabel.Visible = false;
+            genderLabel.Visible = false;
+            goalLabel.Visible = false;
+            weightLabel.Visible = false;
+            heightLabel.Visible = false;
+            nameTextBox.Visible = false;
+            ageTextBox.Visible = false;
+            genderComboBox.Visible = false;
+            weightTextBox.Visible = false;
+            heightTextBox.Visible = false;
+            goalComboBox.Visible = false;
+            buttonSave.Visible = false;
+            vLine3.Visible = false;
+            themeComboBox.Visible = false;
+            emailTextBox.Visible = false;
+            changePasswordButton.Visible = false;
         }
 
         //Метод за смяна на парола
@@ -854,7 +881,31 @@ namespace FitVitality
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            beta.Visible = true;
             changePasswordPanel.Visible = false;
+            deleteAccountButton.Visible = true;
+            appSettings_label.Visible = true;
+            accSettings_label.Visible = true;
+            langLabel.Visible = true;
+            languageComboBox.Visible = true;
+            themeLabel.Visible = true;
+            nameLabel.Visible = true;
+            ageLabel.Visible = true;
+            genderLabel.Visible = true;
+            goalLabel.Visible = true;
+            weightLabel.Visible = true;
+            heightLabel.Visible = true;
+            nameTextBox.Visible = true;
+            ageTextBox.Visible = true;
+            genderComboBox.Visible = true;
+            weightTextBox.Visible = true;
+            heightTextBox.Visible = true;
+            goalComboBox.Visible = true;
+            buttonSave.Visible = true;
+            vLine3.Visible = true;
+            themeComboBox.Visible = true;
+            emailTextBox.Visible = true;
+            changePasswordButton.Visible = true;
         }
 
         private void changePasswordClose_MouseEnter(object sender, EventArgs e)

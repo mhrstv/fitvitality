@@ -28,8 +28,9 @@ namespace FitVitality
         private bool password_Error = false;
         private bool email_Error = false;
         private bool passMatch_Error = false;
-        //private string connectionstring = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        private string connectionstring = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
+        //private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public Register()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace FitVitality
         //Метод за проверка дали потребителя вече съществува
         private bool userExists(string username)
         {
-            using (SqlConnection connection = new SqlConnection(connectionstring))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -57,7 +58,7 @@ namespace FitVitality
         //Метод за проверка дали имейла вече съществува
         private bool emailExists(string email)
         {
-            using (SqlConnection connection = new SqlConnection(connectionstring))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -76,7 +77,7 @@ namespace FitVitality
         //Метод за създаване на потребител
         private void createUser(string username, string email, string password)
         {
-            using (SqlConnection connection = new SqlConnection(connectionstring))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -96,7 +97,7 @@ namespace FitVitality
             }
             if (userID != null)
             {
-                using (SqlConnection connection = new SqlConnection(connectionstring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = "INSERT INTO WeeklyInformation (UserID) VALUES (@UserID)";
@@ -106,7 +107,7 @@ namespace FitVitality
                         command.ExecuteNonQuery();
                     }
                 }
-                using (SqlConnection connection = new SqlConnection(connectionstring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = "INSERT INTO UserNutrition (UserID) VALUES (@UserID)";
@@ -116,7 +117,7 @@ namespace FitVitality
                         command.ExecuteNonQuery();
                     }
                 }
-                using (SqlConnection connection = new SqlConnection(connectionstring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = "INSERT INTO Workouts (UserID) VALUES (@UserID)";
@@ -126,7 +127,7 @@ namespace FitVitality
                         command.ExecuteNonQuery();
                     }
                 }
-                using (SqlConnection connection = new SqlConnection(connectionstring))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string query = "INSERT INTO UserSettings (UserID) VALUES (@UserID)";

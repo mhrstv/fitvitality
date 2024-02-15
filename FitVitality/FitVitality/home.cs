@@ -450,7 +450,6 @@ namespace FitVitality
             int friVal = 0;
             int satVal = 0;
             int sunVal = 0;
-            SqlDataAdapter da = new SqlDataAdapter();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

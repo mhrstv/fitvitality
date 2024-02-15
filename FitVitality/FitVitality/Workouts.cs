@@ -3659,7 +3659,6 @@ namespace FitVitality
                 if (exerciseListItems[i].Equals(sender))
                 {
                     exerciseListPanel.Controls.RemoveAt(i);
-                    exerciseListItems.RemoveAt(i);
                     if (exerciseListItems.Count > 0)
                     {
                         Exercise exercise = new Exercise();
@@ -3670,6 +3669,7 @@ namespace FitVitality
                         exerciseList.Add(exercise);
                         createNextButton.Visible = true;
                     }
+                    exerciseListItems.RemoveAt(i);
                     if (exerciseList.Count > 0 && workoutNameTextBox.Text != "")
                     {
                         createNextButton.Visible = true;

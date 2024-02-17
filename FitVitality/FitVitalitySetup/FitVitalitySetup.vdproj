@@ -15,19 +15,19 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_25A5CCCDCB6D4E76AAFB5F440339816A"
+        "MsmKey" = "8:_1E974C1132B6462799BCB7D7CBBD8AAA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_60491F2AE12A467E91603049813E8ACC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_780DE548DDC5465E814643BA112ACC9B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D4828E147637444095BF53F1E47F101B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -49,6 +49,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -65,6 +81,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -96,7 +128,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_25A5CCCDCB6D4E76AAFB5F440339816A"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1E974C1132B6462799BCB7D7CBBD8AAA"
             {
             "SourcePath" = "8:C:\\Users\\ADMIN\\Downloads\\FitVitality.ico"
             "TargetName" = "8:FitVitality.ico"
@@ -313,7 +345,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3933FBC6F9454F889E1C86BD40640512"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DCC6FD043DB74FC1AAB21C890D1BE6A2"
             {
             "Name" = "8:FitVitality"
             "Arguments" = "8:"
@@ -321,24 +353,24 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_D4828E147637444095BF53F1E47F101B"
-            "Folder" = "8:_C2D3D57D22A0475E860EDC698C08B925"
-            "WorkingFolder" = "8:_BDEFED3A6E184D7B8C34AAC1E181E637"
-            "Icon" = "8:_25A5CCCDCB6D4E76AAFB5F440339816A"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F0F97B145A7E42A2A02AC54F4FF7E374"
-            {
-            "Name" = "8:FitVitality"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_D4828E147637444095BF53F1E47F101B"
+            "Target" = "8:_60491F2AE12A467E91603049813E8ACC"
             "Folder" = "8:_3532A9C6846A4F66AA0E672BF960B80B"
             "WorkingFolder" = "8:_BDEFED3A6E184D7B8C34AAC1E181E637"
-            "Icon" = "8:_25A5CCCDCB6D4E76AAFB5F440339816A"
+            "Icon" = "8:_1E974C1132B6462799BCB7D7CBBD8AAA"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F6C43D3384334EBA976D1BF440EADD5D"
+            {
+            "Name" = "8:FitVitality"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_60491F2AE12A467E91603049813E8ACC"
+            "Folder" = "8:_C2D3D57D22A0475E860EDC698C08B925"
+            "WorkingFolder" = "8:_BDEFED3A6E184D7B8C34AAC1E181E637"
+            "Icon" = "8:_1E974C1132B6462799BCB7D7CBBD8AAA"
             "Feature" = "8:"
             }
         }
@@ -740,7 +772,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D4828E147637444095BF53F1E47F101B"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_60491F2AE12A467E91603049813E8ACC"
             {
             "SourcePath" = "8:..\\FitVitality\\obj\\Debug\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"

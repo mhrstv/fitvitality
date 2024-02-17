@@ -117,9 +117,6 @@ namespace FitVitality
                 confirmLabel2.Text = "ВНИМАНИЕ: Всички твои данни ще изчезнат ЗАВИНАГИ.";
                 textBoxConfirm.CueHint.CueHintText = "ПОТВЪРДИ";
                 confirmButton.Text = "Потвърди";
-                themeComboBox.Items.Clear();
-                themeComboBox.Items.Add("Тъмна");
-                themeComboBox.Items.Add("Светла");
                 genderComboBox.Items.Clear();
                 genderComboBox.Items.Add("Мъж");
                 genderComboBox.Items.Add("Жена");
@@ -129,10 +126,16 @@ namespace FitVitality
                 goalComboBox.Items.Add("Покачване");
                 if (cfg.Read("Theme", "SETTINGS") == "light")
                 {
+                    themeComboBox.Items.Clear();
+                    themeComboBox.Items.Add("Тъмна");
+                    themeComboBox.Items.Add("Светла");
                     themeComboBox.SelectedItem = "Светла";
                 }
-                else
+                else if (cfg.Read("Theme", "SETTINGS") == "dark")
                 {
+                    themeComboBox.Items.Clear();
+                    themeComboBox.Items.Add("Тъмна");
+                    themeComboBox.Items.Add("Светла");
                     themeComboBox.SelectedItem = "Тъмна";
                 }
                 beta.Image = Properties.Resources.Beta_Buttonbg;
@@ -169,9 +172,6 @@ namespace FitVitality
                 confirmLabel2.Text = "WARNING: All your data and stored information will be GONE.";
                 textBoxConfirm.CueHint.CueHintText = "CONFIRM";
                 confirmButton.Text = "Confirm";
-                themeComboBox.Items.Clear();
-                themeComboBox.Items.Add("Dark");
-                themeComboBox.Items.Add("Light");
                 genderComboBox.Items.Clear();
                 genderComboBox.Items.Add("Male");
                 genderComboBox.Items.Add("Female");
@@ -181,10 +181,16 @@ namespace FitVitality
                 goalComboBox.Items.Add("Bulk");
                 if (cfg.Read("Theme", "SETTINGS") == "light")
                 {
+                    themeComboBox.Items.Clear();
+                    themeComboBox.Items.Add("Dark");
+                    themeComboBox.Items.Add("Light");
                     themeComboBox.SelectedItem = "Light";
                 }
-                else
+                else if (cfg.Read("Theme", "SETTINGS") == "dark")
                 {
+                    themeComboBox.Items.Clear();
+                    themeComboBox.Items.Add("Dark");
+                    themeComboBox.Items.Add("Light");
                     themeComboBox.SelectedItem = "Dark";
                 }
                 beta.Image = Properties.Resources.Beta_Button;
@@ -546,9 +552,7 @@ namespace FitVitality
                 confirmLabel2.Text = "ВНИМАНИЕ: Всички твои данни ще изчезнат ЗАВИНАГИ.";
                 textBoxConfirm.CueHint.CueHintText = "ПОТВЪРДИ";
                 confirmButton.Text = "Потвърди";
-                themeComboBox.Items.Clear();
-                themeComboBox.Items.Add("Тъмна");
-                themeComboBox.Items.Add("Светла");
+               
                 genderComboBox.Items.Clear();
                 genderComboBox.Items.Add("Мъж");
                 genderComboBox.Items.Add("Жена");
@@ -556,12 +560,18 @@ namespace FitVitality
                 goalComboBox.Items.Add("Сваляне");
                 goalComboBox.Items.Add("Поддържане");
                 goalComboBox.Items.Add("Покачване");
-                if (themeComboBox.SelectedItem == "Light" || themeComboBox.SelectedItem == "Светла")
+                if (themeComboBox.SelectedItem == "Light")
                 {
+                    themeComboBox.Items.Clear();
+                    themeComboBox.Items.Add("Тъмна");
+                    themeComboBox.Items.Add("Светла");
                     themeComboBox.SelectedItem = "Светла";
                 }
-                else
+                else if (themeComboBox.SelectedItem == "Dark")
                 {
+                    themeComboBox.Items.Clear();
+                    themeComboBox.Items.Add("Тъмна");
+                    themeComboBox.Items.Add("Светла");
                     themeComboBox.SelectedItem = "Тъмна";
                 }
                 beta.Image = Properties.Resources.Beta_Buttonbg;
@@ -602,9 +612,7 @@ namespace FitVitality
                 confirmLabel2.Text = "WARNING: All your data and stored information will be GONE.";
                 textBoxConfirm.CueHint.CueHintText = "CONFIRM";
                 confirmButton.Text = "Confirm";
-                themeComboBox.Items.Clear();
-                themeComboBox.Items.Add("Dark");
-                themeComboBox.Items.Add("Light");
+                
                 genderComboBox.Items.Clear();
                 genderComboBox.Items.Add("Male");
                 genderComboBox.Items.Add("Female");
@@ -612,12 +620,18 @@ namespace FitVitality
                 goalComboBox.Items.Add("Cut");
                 goalComboBox.Items.Add("Maintain");
                 goalComboBox.Items.Add("Bulk");
-                if (themeComboBox.SelectedItem == "Light" || themeComboBox.SelectedItem == "Светла")
+                if (themeComboBox.SelectedItem == "Светла")
                 {
+                    themeComboBox.Items.Clear();
+                    themeComboBox.Items.Add("Dark");
+                    themeComboBox.Items.Add("Light");
                     themeComboBox.SelectedItem = "Light";
                 }
-                else
+                else if(themeComboBox.SelectedItem == "Тъмна")
                 {
+                    themeComboBox.Items.Clear();
+                    themeComboBox.Items.Add("Dark");
+                    themeComboBox.Items.Add("Light");
                     themeComboBox.SelectedItem = "Dark";
                 }
                 beta.Image = Properties.Resources.Beta_Button;

@@ -27,7 +27,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A92D7076424D4CB894B4C934CDBABC73"
+        "MsmKey" = "8:_A57499C067054E27BEE8190A968BA253"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -187,7 +187,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_BDEFED3A6E184D7B8C34AAC1E181E637"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:C:\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -225,7 +225,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FitVitality"
         "ProductCode" = "8:{55BC2B7E-55D0-4527-B8D4-B67FD2D30FA8}"
-        "PackageCode" = "8:{6419B676-2D72-421A-B107-69609FB1757C}"
+        "PackageCode" = "8:{A306D713-21C3-4CFD-A52D-E3C5BC9AAA8B}"
         "UpgradeCode" = "8:{45312FE8-4B1D-48E5-8D12-90925FF1258A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -233,12 +233,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Marto&Paco"
+        "Manufacturer" = "8:Marto & Paco"
         "ARPHELPTELEPHONE" = "8:"
-        "ARPHELPLINK" = "8:"
+        "ARPHELPLINK" = "8:https://fitvitality.me"
         "Title" = "8:FitVitalitySetup"
-        "Subject" = "8:"
-        "ARPCONTACT" = "8:Marto&Paco"
+        "Subject" = "8:Fitness & Health"
+        "ARPCONTACT" = "8:Marto & Paco"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -345,7 +345,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2413869FDAE64FECAEF2C8085597059C"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0FB9B9CAB53E413987945057785614B2"
             {
             "Name" = "8:FitVitality"
             "Arguments" = "8:"
@@ -353,13 +353,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_A92D7076424D4CB894B4C934CDBABC73"
-            "Folder" = "8:_C2D3D57D22A0475E860EDC698C08B925"
+            "Target" = "8:_A57499C067054E27BEE8190A968BA253"
+            "Folder" = "8:_3532A9C6846A4F66AA0E672BF960B80B"
             "WorkingFolder" = "8:_BDEFED3A6E184D7B8C34AAC1E181E637"
             "Icon" = "8:_1E974C1132B6462799BCB7D7CBBD8AAA"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_681EF6C90C3D4BFAA11E1B77F58AB63D"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9F8705886F3F4903990619CC15C33F86"
             {
             "Name" = "8:FitVitality"
             "Arguments" = "8:"
@@ -367,8 +367,8 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_A92D7076424D4CB894B4C934CDBABC73"
-            "Folder" = "8:_3532A9C6846A4F66AA0E672BF960B80B"
+            "Target" = "8:_A57499C067054E27BEE8190A968BA253"
+            "Folder" = "8:_C2D3D57D22A0475E860EDC698C08B925"
             "WorkingFolder" = "8:_BDEFED3A6E184D7B8C34AAC1E181E637"
             "Icon" = "8:_1E974C1132B6462799BCB7D7CBBD8AAA"
             "Feature" = "8:"
@@ -772,7 +772,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A92D7076424D4CB894B4C934CDBABC73"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A57499C067054E27BEE8190A968BA253"
             {
             "SourcePath" = "8:..\\FitVitality\\obj\\Debug\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"

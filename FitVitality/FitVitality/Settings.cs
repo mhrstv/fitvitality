@@ -290,7 +290,7 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (textBoxConfirm.Text == "ПОТВЪРДИ")
+                if (textBoxConfirm.Text == "ПОТВЪРДЖДАВАМ")
                 {
                     confirmButton.Enabled = true;
                 }
@@ -550,7 +550,7 @@ namespace FitVitality
                 goalLabel.Text = "Цел";
                 confirmLabel1.Text = "Напиши \"ПОТВЪРЖДАВАМ\" за да потвърдиш, изтриването на акаунта.";
                 confirmLabel2.Text = "ВНИМАНИЕ: Всички твои данни ще изчезнат ЗАВИНАГИ.";
-                textBoxConfirm.CueHint.CueHintText = "ПОТВЪРДИ";
+                textBoxConfirm.CueHint.CueHintText = "ПОТВЪРЖДАВАМ";
                 confirmButton.Text = "Потвърди";
 
                 genderComboBox.Items.Clear();

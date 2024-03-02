@@ -122,7 +122,7 @@ namespace FitVitality
         public double FoodCalories
         {
             get { return _foodCalories; }
-            set { _foodCalories = value; caloriesLabel.Text = $"kCal:{value}"; }
+            set { _foodCalories = value; caloriesLabel.Text = $"kCal:{Math.Round(value, 0):f0}"; }
         }
         [Category("Custom Props")]
         public double FoodProtein
@@ -147,7 +147,7 @@ namespace FitVitality
         public double FoodGrams
         {
             get { return _foodGrams; }
-            set { _foodGrams = value; gramsLabel.Text = $"{FoodGrams}g"; }
+            set { _foodGrams = value; gramsLabel.Text = $"{Math.Round(FoodGrams, 0):f0}g"; }
         }
         [Category("Custom Props")]
         public string FoodImage

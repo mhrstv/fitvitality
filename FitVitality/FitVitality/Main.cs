@@ -85,7 +85,7 @@ namespace FitVitality
                             if (reader.Read())
                             {
                                 username = reader["Username"].ToString();
-                                loggedInAsLabel.Text = "Logged in as " + reader["Username"].ToString();
+                                loggedInAsLabel.Text = "Logged in as: " + reader["Username"].ToString();
                             }
                         }
                         if (cfg.Read("Language", "SETTINGS") == "bg")
@@ -93,7 +93,7 @@ namespace FitVitality
                             if (reader.Read())
                             {
                                 username = reader["Username"].ToString();
-                                loggedInAsLabel.Text = "Влязъл като " + reader["Username"].ToString();
+                                loggedInAsLabel.Text = "Влязъл като: " + reader["Username"].ToString();
                             }
                         }
                     }
@@ -247,11 +247,11 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                loggedInAsLabel.Text = "Logged in as " + username;
+                loggedInAsLabel.Text = "Logged in as: " + username;
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                loggedInAsLabel.Text = "Влязъл като " + username;
+                loggedInAsLabel.Text = "Влязъл като: " + username;
             }
         }
 

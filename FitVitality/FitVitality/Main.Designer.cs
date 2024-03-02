@@ -196,7 +196,7 @@
             loggedInAsLabel.Name = "loggedInAsLabel";
             loggedInAsLabel.Size = new Size(224, 23);
             loggedInAsLabel.TabIndex = 13;
-            loggedInAsLabel.Text = "Logged in as {user}";
+            loggedInAsLabel.Text = "Logged in as: {user}";
             loggedInAsLabel.TextAlign = ContentAlignment.MiddleRight;
             loggedInAsLabel.MouseDown += loggedInAsLabel_MouseDown;
             loggedInAsLabel.MouseMove += loggedInAsLabel_MouseMove;

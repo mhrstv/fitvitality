@@ -28,10 +28,6 @@ namespace FitVitality
 {
     public partial class Diet : Form
     {
-        bool balancedClicked = false;
-        bool highProteinClicked = false;
-        bool lowFatClicked = false;
-        bool lowCarbsClicked = false;
         double bmr;
         double sedentaryBMR;
         double exerciseBMR13;
@@ -731,6 +727,11 @@ namespace FitVitality
                 chooseActivityLabel.Text = "Please select the desired\r\nactivity level and " +
                     "nutrition goal\r\nin order to make all the tabs visible!\r\n";
                 searchTextBox.CueHint.CueHintText = "Search";
+                balancedButton.Text = "Balanced";
+                lowFatButton.Text = "Low-fat";
+                highProteinButton.Text = "High-protein";
+                lowCarbsButton.Text = "Low-carbs";
+                rightSideLabel.Text = "This is your current daily goal.\r\nYou can change your goal by selecting\r\nanother type of diet on the left side\r\nof the menu.\r\n";
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
@@ -741,7 +742,7 @@ namespace FitVitality
                 activityLevelLabel.Text = "Активност:";
                 manageGoalDescription.Text = "В тази секция въвеждате\r\nцелта и активността си\r\n" +
                     "според вашата заетост\r\nи желан външен вид.";
-                macroАbbreviation.Text = "C -  Въглехидрат, P - Протеин, F - Мазнини\r\n";
+                macroАbbreviation.Text = "C -  Въглехидрати, P - Протеин, F - Мазнини\r\n";
                 activityComboBox.Items.Clear();
                 activityComboBox.Items.Add("Заседналост");
                 activityComboBox.Items.Add("Лека");
@@ -753,6 +754,11 @@ namespace FitVitality
                 chooseActivityLabel.Text = "Моля изберете желаната\r\nактивност и цел " +
                     "за да\r\nнаправите всички панели\r\nвидими.";
                 searchTextBox.CueHint.CueHintText = "Търси";
+                balancedButton.Text = "Балансирана";
+                lowFatButton.Text = "Нискомазнинна";
+                highProteinButton.Text = "Високопротеинова";
+                lowCarbsButton.Text = "Нисковъглехидр.";
+                rightSideLabel.Text = "Това е текущата ви дневна цел.\r\nМожете да променяте целта си\r\nкато изберете друг вид диета\r\nот лявата част на менюто.\r\n";
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -1128,10 +1134,6 @@ namespace FitVitality
                 fat.Visible = true;
                 protein.Visible = true;
                 balancedButton.Visible = true;
-                balancedButton.Image = Properties.Resources.balanced;
-                highProteinButton.Image = Properties.Resources.highProtein;
-                lowFatButton.Image = Properties.Resources.lowFat;
-                lowCarbsButton.Image = Properties.Resources.lowCarbs;
                 lowCarbsButton.Visible = true;
                 lowFatButton.Visible = true;
                 highProteinButton.Visible = true;
@@ -1197,10 +1199,6 @@ namespace FitVitality
                 fat.Visible = true;
                 protein.Visible = true;
                 balancedButton.Visible = true;
-                balancedButton.Image = Properties.Resources.balancedbg;
-                highProteinButton.Image = Properties.Resources.highProteinbg;
-                lowFatButton.Image = Properties.Resources.lowFatbg;
-                lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
                 lowCarbsButton.Visible = true;
                 lowFatButton.Visible = true;
                 highProteinButton.Visible = true;
@@ -1268,14 +1266,10 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
                 ifSearchNotClicked(sender, e);
-                balancedButton.Image = Properties.Resources.balancedSelected;
-                highProteinButton.Image = Properties.Resources.highProtein;
-                lowFatButton.Image = Properties.Resources.lowFat;
-                lowCarbsButton.Image = Properties.Resources.lowCarbs;
-                balancedClicked = true;
-                highProteinClicked = false;
-                lowFatClicked = false;
-                lowCarbsClicked = false;
+                balancedButton.Checked = true;
+                highProteinButton.Checked = false;
+                lowFatButton.Checked = false;
+                lowCarbsButton.Checked = false;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE UserNutrition " +
@@ -1321,14 +1315,10 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 ifSearchNotClicked(sender, e);
-                balancedButton.Image = Properties.Resources.balancedSelectedbg;
-                highProteinButton.Image = Properties.Resources.highProteinbg;
-                lowFatButton.Image = Properties.Resources.lowFatbg;
-                lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
-                balancedClicked = true;
-                highProteinClicked = false;
-                lowFatClicked = false;
-                lowCarbsClicked = false;
+                balancedButton.Checked = true;
+                highProteinButton.Checked = false;
+                lowFatButton.Checked = false;
+                lowCarbsButton.Checked = false;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE UserNutrition " +
@@ -1379,14 +1369,10 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
                 ifSearchNotClicked(sender, e);
-                balancedButton.Image = Properties.Resources.balanced;
-                highProteinButton.Image = Properties.Resources.highProteinSelected;
-                lowFatButton.Image = Properties.Resources.lowFat;
-                lowCarbsButton.Image = Properties.Resources.lowCarbs;
-                balancedClicked = false;
-                highProteinClicked = true;
-                lowFatClicked = false;
-                lowCarbsClicked = false;
+                balancedButton.Checked = false;
+                highProteinButton.Checked = true;
+                lowFatButton.Checked = false;
+                lowCarbsButton.Checked = false;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE UserNutrition " +
@@ -1432,14 +1418,10 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 ifSearchNotClicked(sender, e);
-                balancedButton.Image = Properties.Resources.balancedbg;
-                highProteinButton.Image = Properties.Resources.highProteinSelectedbg;
-                lowFatButton.Image = Properties.Resources.lowFatbg;
-                lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
-                balancedClicked = false;
-                highProteinClicked = true;
-                lowFatClicked = false;
-                lowCarbsClicked = false;
+                balancedButton.Checked = false;
+                highProteinButton.Checked = true;
+                lowFatButton.Checked = false;
+                lowCarbsButton.Checked = false;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE UserNutrition " +
@@ -1490,14 +1472,10 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
                 ifSearchNotClicked(sender, e);
-                balancedButton.Image = Properties.Resources.balanced;
-                highProteinButton.Image = Properties.Resources.highProtein;
-                lowFatButton.Image = Properties.Resources.lowFatSelected;
-                lowCarbsButton.Image = Properties.Resources.lowCarbs;
-                balancedClicked = false;
-                highProteinClicked = false;
-                lowFatClicked = true;
-                lowCarbsClicked = false;
+                balancedButton.Checked = false;
+                highProteinButton.Checked = false;
+                lowFatButton.Checked = true;
+                lowCarbsButton.Checked = false;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE UserNutrition " +
@@ -1543,14 +1521,10 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 ifSearchNotClicked(sender, e);
-                balancedButton.Image = Properties.Resources.balancedbg;
-                highProteinButton.Image = Properties.Resources.highProteinbg;
-                lowFatButton.Image = Properties.Resources.lowFatSelectedbg;
-                lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
-                balancedClicked = false;
-                highProteinClicked = false;
-                lowFatClicked = true;
-                lowCarbsClicked = false;
+                balancedButton.Checked = false;
+                highProteinButton.Checked = false;
+                lowFatButton.Checked = true;
+                lowCarbsButton.Checked = false;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE UserNutrition " +
@@ -1601,14 +1575,10 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
                 ifSearchNotClicked(sender, e);
-                balancedButton.Image = Properties.Resources.balanced;
-                highProteinButton.Image = Properties.Resources.highProtein;
-                lowFatButton.Image = Properties.Resources.lowFat;
-                lowCarbsButton.Image = Properties.Resources.lowCarbsSelected;
-                balancedClicked = false;
-                highProteinClicked = false;
-                lowFatClicked = false;
-                lowCarbsClicked = true;
+                balancedButton.Checked = false;
+                highProteinButton.Checked = false;
+                lowFatButton.Checked = false;
+                lowCarbsButton.Checked = true;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE UserNutrition " +
@@ -1654,14 +1624,10 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 ifSearchNotClicked(sender, e);
-                balancedButton.Image = Properties.Resources.balancedbg;
-                highProteinButton.Image = Properties.Resources.highProteinbg;
-                lowFatButton.Image = Properties.Resources.lowFatbg;
-                lowCarbsButton.Image = Properties.Resources.lowCarbsSelectedbg;
-                balancedClicked = false;
-                highProteinClicked = false;
-                lowFatClicked = false;
-                lowCarbsClicked = true;
+                balancedButton.Checked = false;
+                highProteinButton.Checked = false;
+                lowFatButton.Checked = false;
+                lowCarbsButton.Checked = true;
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE UserNutrition " +
@@ -1708,154 +1674,42 @@ namespace FitVitality
 
         private void balancedButton_MouseEnter(object sender, EventArgs e)
         {
-            var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "en")
-            {
-                if (!balancedClicked)
-                {
-                    balancedButton.Image = Properties.Resources.balancedHover;
-                }
-            }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
-            {
-                if (!balancedClicked)
-                {
-                    balancedButton.Image = Properties.Resources.balancedHoverbg;
-                }
-            }
+
         }
 
         private void balancedButton_MouseLeave(object sender, EventArgs e)
         {
-            var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "en")
-            {
-                if (!balancedClicked)
-                {
-                    balancedButton.Image = Properties.Resources.balanced;
-                }
-            }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
-            {
-                if (!balancedClicked)
-                {
-                    balancedButton.Image = Properties.Resources.balancedbg;
-                }
-            }
+
         }
 
         private void highProteinButton_MouseEnter(object sender, EventArgs e)
         {
-            var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "en")
-            {
-                if (!highProteinClicked)
-                {
-                    highProteinButton.Image = Properties.Resources.highProteinHover;
-                }
-            }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
-            {
-                if (!highProteinClicked)
-                {
-                    highProteinButton.Image = Properties.Resources.highProteinHoverbg;
-                }
-            }
+
         }
 
         private void highProteinButton_MouseLeave(object sender, EventArgs e)
         {
-            var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "en")
-            {
-                if (!highProteinClicked)
-                {
-                    highProteinButton.Image = Properties.Resources.highProtein;
-                }
-            }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
-            {
-                if (!highProteinClicked)
-                {
-                    highProteinButton.Image = Properties.Resources.highProteinbg;
-                }
-            }
+
         }
 
         private void lowFatButton_MouseEnter(object sender, EventArgs e)
         {
-            var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "en")
-            {
-                if (!lowFatClicked)
-                {
-                    lowFatButton.Image = Properties.Resources.lowFatHover;
-                }
-            }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
-            {
-                if (!lowFatClicked)
-                {
-                    lowFatButton.Image = Properties.Resources.lowFatHoverbg;
-                }
-            }
+
         }
 
         private void lowFatButton_MouseLeave(object sender, EventArgs e)
         {
-            var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "en")
-            {
-                if (!lowFatClicked)
-                {
-                    lowFatButton.Image = Properties.Resources.lowFat;
-                }
-            }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
-            {
-                if (!lowFatClicked)
-                {
-                    lowFatButton.Image = Properties.Resources.lowFatbg;
-                }
-            }
+
         }
 
         private void lowCarbsButton_MouseEnter(object sender, EventArgs e)
         {
-            var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "en")
-            {
-                if (!lowCarbsClicked)
-                {
-                    lowCarbsButton.Image = Properties.Resources.lowCarbsHover;
-                }
-            }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
-            {
-                if (!lowCarbsClicked)
-                {
-                    lowCarbsButton.Image = Properties.Resources.lowCarbsHoverbg;
-                }
-            }
+
         }
 
         private void lowCarbsButton_MouseLeave(object sender, EventArgs e)
         {
-            var cfg = new Config("FitVitality.ini");
-            if (cfg.Read("Language", "SETTINGS") == "en")
-            {
-                if (!lowCarbsClicked)
-                {
-                    lowCarbsButton.Image = Properties.Resources.lowCarbs;
-                }
-            }
-            if (cfg.Read("Language", "SETTINGS") == "bg")
-            {
-                if (!lowCarbsClicked)
-                {
-                    lowCarbsButton.Image = Properties.Resources.lowCarbsbg;
-                }
-            }
+
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

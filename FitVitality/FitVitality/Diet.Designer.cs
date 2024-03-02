@@ -31,6 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diet));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftC = new PictureBox();
             rightC = new PictureBox();
             vLine1 = new PictureBox();
@@ -50,10 +58,6 @@
             manageGoalDescription = new Label();
             manageGoalLabel = new Label();
             activityLevelLabel = new Label();
-            balancedButton = new PictureBox();
-            highProteinButton = new PictureBox();
-            lowCarbsButton = new PictureBox();
-            lowFatButton = new PictureBox();
             kCalLabel = new Label();
             cLabel = new Label();
             pLabel = new Label();
@@ -67,6 +71,11 @@
             chooseActivityLabel = new Label();
             hiddenPanel2 = new Panel();
             activityComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            balancedButton = new Guna.UI2.WinForms.Guna2Button();
+            lowCarbsButton = new Guna.UI2.WinForms.Guna2Button();
+            highProteinButton = new Guna.UI2.WinForms.Guna2Button();
+            lowFatButton = new Guna.UI2.WinForms.Guna2Button();
+            rightSideLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)leftC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine1).BeginInit();
@@ -75,10 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dietBorder2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dietBorder1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)balancedButton).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)highProteinButton).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)lowCarbsButton).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)lowFatButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)searchIcon).BeginInit();
             hiddenPanel1.SuspendLayout();
             SuspendLayout();
@@ -195,7 +200,7 @@
             calorieIntake.AutoSize = true;
             calorieIntake.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             calorieIntake.ForeColor = Color.Black;
-            calorieIntake.Location = new Point(548, 117);
+            calorieIntake.Location = new Point(548, 118);
             calorieIntake.Name = "calorieIntake";
             calorieIntake.Size = new Size(31, 19);
             calorieIntake.TabIndex = 27;
@@ -223,7 +228,7 @@
             fat.AutoSize = true;
             fat.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             fat.ForeColor = Color.Black;
-            fat.Location = new Point(527, 238);
+            fat.Location = new Point(527, 233);
             fat.Name = "fat";
             fat.Size = new Size(31, 19);
             fat.TabIndex = 29;
@@ -262,7 +267,7 @@
             // 
             manageGoalDescription.AutoSize = true;
             manageGoalDescription.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            manageGoalDescription.Location = new Point(30, 273);
+            manageGoalDescription.Location = new Point(36, 273);
             manageGoalDescription.Name = "manageGoalDescription";
             manageGoalDescription.Size = new Size(159, 60);
             manageGoalDescription.TabIndex = 38;
@@ -285,7 +290,7 @@
             // 
             activityLevelLabel.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             activityLevelLabel.ForeColor = Color.Black;
-            activityLevelLabel.Location = new Point(13, 137);
+            activityLevelLabel.Location = new Point(13, 114);
             activityLevelLabel.Name = "activityLevelLabel";
             activityLevelLabel.Size = new Size(79, 15);
             activityLevelLabel.TabIndex = 42;
@@ -293,64 +298,12 @@
             activityLevelLabel.TextAlign = ContentAlignment.MiddleRight;
             activityLevelLabel.Click += activityLevelLabel_Click;
             // 
-            // balancedButton
-            // 
-            balancedButton.Image = Properties.Resources.balanced;
-            balancedButton.Location = new Point(503, 273);
-            balancedButton.Name = "balancedButton";
-            balancedButton.Size = new Size(77, 31);
-            balancedButton.TabIndex = 43;
-            balancedButton.TabStop = false;
-            balancedButton.Visible = false;
-            balancedButton.Click += balancedButton_Click;
-            balancedButton.MouseEnter += balancedButton_MouseEnter;
-            balancedButton.MouseLeave += balancedButton_MouseLeave;
-            // 
-            // highProteinButton
-            // 
-            highProteinButton.Image = Properties.Resources.highProtein;
-            highProteinButton.Location = new Point(579, 273);
-            highProteinButton.Name = "highProteinButton";
-            highProteinButton.Size = new Size(77, 31);
-            highProteinButton.TabIndex = 44;
-            highProteinButton.TabStop = false;
-            highProteinButton.Visible = false;
-            highProteinButton.Click += highProteinButton_Click;
-            highProteinButton.MouseEnter += highProteinButton_MouseEnter;
-            highProteinButton.MouseLeave += highProteinButton_MouseLeave;
-            // 
-            // lowCarbsButton
-            // 
-            lowCarbsButton.Image = Properties.Resources.lowCarbs;
-            lowCarbsButton.Location = new Point(579, 303);
-            lowCarbsButton.Name = "lowCarbsButton";
-            lowCarbsButton.Size = new Size(77, 31);
-            lowCarbsButton.TabIndex = 46;
-            lowCarbsButton.TabStop = false;
-            lowCarbsButton.Visible = false;
-            lowCarbsButton.Click += lowCarbsButton_Click;
-            lowCarbsButton.MouseEnter += lowCarbsButton_MouseEnter;
-            lowCarbsButton.MouseLeave += lowCarbsButton_MouseLeave;
-            // 
-            // lowFatButton
-            // 
-            lowFatButton.Image = Properties.Resources.lowFat;
-            lowFatButton.Location = new Point(503, 303);
-            lowFatButton.Name = "lowFatButton";
-            lowFatButton.Size = new Size(77, 31);
-            lowFatButton.TabIndex = 45;
-            lowFatButton.TabStop = false;
-            lowFatButton.Visible = false;
-            lowFatButton.Click += lowFatButton_Click;
-            lowFatButton.MouseEnter += lowFatButton_MouseEnter;
-            lowFatButton.MouseLeave += lowFatButton_MouseLeave;
-            // 
             // kCalLabel
             // 
             kCalLabel.AutoSize = true;
             kCalLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             kCalLabel.ForeColor = Color.Black;
-            kCalLabel.Location = new Point(497, 117);
+            kCalLabel.Location = new Point(497, 118);
             kCalLabel.Name = "kCalLabel";
             kCalLabel.Size = new Size(53, 19);
             kCalLabel.TabIndex = 47;
@@ -392,7 +345,7 @@
             fLabel.AutoSize = true;
             fLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             fLabel.ForeColor = Color.Black;
-            fLabel.Location = new Point(497, 238);
+            fLabel.Location = new Point(497, 233);
             fLabel.Name = "fLabel";
             fLabel.Size = new Size(32, 19);
             fLabel.TabIndex = 50;
@@ -501,7 +454,7 @@
             activityComboBox.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
             activityComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             activityComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            activityComboBox.Location = new Point(94, 133);
+            activityComboBox.Location = new Point(94, 110);
             activityComboBox.Name = "activityComboBox";
             activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
             activityComboBox.Size = new Size(119, 24);
@@ -509,11 +462,134 @@
             activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
             activityComboBox.Click += activityComboBox_Click_1;
             // 
+            // balancedButton
+            // 
+            balancedButton.BorderRadius = 10;
+            balancedButton.BorderThickness = 1;
+            balancedButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            balancedButton.CheckedState.BorderColor = Color.Black;
+            balancedButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
+            balancedButton.CheckedState.ForeColor = Color.Black;
+            customizableEdges3.BottomLeft = false;
+            customizableEdges3.BottomRight = false;
+            balancedButton.CustomizableEdges = customizableEdges3;
+            balancedButton.DisabledState.BorderColor = Color.DarkGray;
+            balancedButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            balancedButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            balancedButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            balancedButton.FillColor = SystemColors.Control;
+            balancedButton.Font = new Font("Arial Narrow", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            balancedButton.ForeColor = Color.Black;
+            balancedButton.Location = new Point(50, 152);
+            balancedButton.Name = "balancedButton";
+            balancedButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            balancedButton.Size = new Size(121, 28);
+            balancedButton.TabIndex = 59;
+            balancedButton.Text = "Balanced";
+            balancedButton.Click += balancedButton_Click;
+            // 
+            // lowCarbsButton
+            // 
+            lowCarbsButton.BorderRadius = 10;
+            lowCarbsButton.BorderThickness = 1;
+            lowCarbsButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            lowCarbsButton.CheckedState.BorderColor = Color.Black;
+            lowCarbsButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
+            lowCarbsButton.CheckedState.ForeColor = Color.Black;
+            customizableEdges5.BottomLeft = false;
+            customizableEdges5.BottomRight = false;
+            customizableEdges5.TopLeft = false;
+            customizableEdges5.TopRight = false;
+            lowCarbsButton.CustomizableEdges = customizableEdges5;
+            lowCarbsButton.DisabledState.BorderColor = Color.DarkGray;
+            lowCarbsButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            lowCarbsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            lowCarbsButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            lowCarbsButton.FillColor = SystemColors.Control;
+            lowCarbsButton.Font = new Font("Arial Narrow", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lowCarbsButton.ForeColor = Color.Black;
+            lowCarbsButton.Location = new Point(50, 206);
+            lowCarbsButton.Name = "lowCarbsButton";
+            lowCarbsButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            lowCarbsButton.Size = new Size(121, 28);
+            lowCarbsButton.TabIndex = 60;
+            lowCarbsButton.Text = "Low-carbs";
+            lowCarbsButton.Click += lowCarbsButton_Click;
+            // 
+            // highProteinButton
+            // 
+            highProteinButton.BorderRadius = 10;
+            highProteinButton.BorderThickness = 1;
+            highProteinButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            highProteinButton.CheckedState.BorderColor = Color.Black;
+            highProteinButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
+            highProteinButton.CheckedState.ForeColor = Color.Black;
+            customizableEdges7.BottomLeft = false;
+            customizableEdges7.BottomRight = false;
+            customizableEdges7.TopLeft = false;
+            customizableEdges7.TopRight = false;
+            highProteinButton.CustomizableEdges = customizableEdges7;
+            highProteinButton.DisabledState.BorderColor = Color.DarkGray;
+            highProteinButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            highProteinButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            highProteinButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            highProteinButton.FillColor = SystemColors.Control;
+            highProteinButton.Font = new Font("Arial Narrow", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            highProteinButton.ForeColor = Color.Black;
+            highProteinButton.Location = new Point(50, 179);
+            highProteinButton.Name = "highProteinButton";
+            highProteinButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            highProteinButton.Size = new Size(121, 28);
+            highProteinButton.TabIndex = 61;
+            highProteinButton.Text = "High-protein";
+            highProteinButton.Click += highProteinButton_Click;
+            // 
+            // lowFatButton
+            // 
+            lowFatButton.BorderRadius = 10;
+            lowFatButton.BorderThickness = 1;
+            lowFatButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            lowFatButton.CheckedState.BorderColor = Color.Black;
+            lowFatButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
+            lowFatButton.CheckedState.ForeColor = Color.Black;
+            customizableEdges9.TopLeft = false;
+            customizableEdges9.TopRight = false;
+            lowFatButton.CustomizableEdges = customizableEdges9;
+            lowFatButton.DisabledState.BorderColor = Color.DarkGray;
+            lowFatButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            lowFatButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            lowFatButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            lowFatButton.FillColor = SystemColors.Control;
+            lowFatButton.Font = new Font("Arial Narrow", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lowFatButton.ForeColor = Color.Black;
+            lowFatButton.Location = new Point(50, 233);
+            lowFatButton.Name = "lowFatButton";
+            lowFatButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            lowFatButton.Size = new Size(121, 28);
+            lowFatButton.TabIndex = 62;
+            lowFatButton.Text = "Low-fat";
+            lowFatButton.Click += lowFatButton_Click;
+            // 
+            // rightSideLabel
+            // 
+            rightSideLabel.AutoSize = true;
+            rightSideLabel.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
+            rightSideLabel.Location = new Point(481, 272);
+            rightSideLabel.Name = "rightSideLabel";
+            rightSideLabel.Size = new Size(208, 60);
+            rightSideLabel.TabIndex = 63;
+            rightSideLabel.Text = "This is your current daily goal.\r\nYou can change your goal by selecting\r\nanother type of diet on the left side\r\nof the menu.";
+            // 
             // Diet
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(rightSideLabel);
+            Controls.Add(lowCarbsButton);
+            Controls.Add(lowFatButton);
+            Controls.Add(highProteinButton);
+            Controls.Add(balancedButton);
             Controls.Add(activityComboBox);
             Controls.Add(hiddenPanel2);
             Controls.Add(hiddenPanel1);
@@ -525,10 +601,6 @@
             Controls.Add(pLabel);
             Controls.Add(cLabel);
             Controls.Add(kCalLabel);
-            Controls.Add(lowCarbsButton);
-            Controls.Add(lowFatButton);
-            Controls.Add(highProteinButton);
-            Controls.Add(balancedButton);
             Controls.Add(activityLevelLabel);
             Controls.Add(manageGoalLabel);
             Controls.Add(manageGoalDescription);
@@ -563,10 +635,6 @@
             ((System.ComponentModel.ISupportInitialize)hLine1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dietBorder2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dietBorder1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)balancedButton).EndInit();
-            ((System.ComponentModel.ISupportInitialize)highProteinButton).EndInit();
-            ((System.ComponentModel.ISupportInitialize)lowCarbsButton).EndInit();
-            ((System.ComponentModel.ISupportInitialize)lowFatButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)searchIcon).EndInit();
             hiddenPanel1.ResumeLayout(false);
             ResumeLayout(false);
@@ -594,10 +662,6 @@
         private Label manageGoalDescription;
         private Label manageGoalLabel;
         private Label activityLevelLabel;
-        private PictureBox balancedButton;
-        private PictureBox highProteinButton;
-        private PictureBox lowCarbsButton;
-        private PictureBox lowFatButton;
         private Label kCalLabel;
         private Label cLabel;
         private Label pLabel;
@@ -611,5 +675,10 @@
         private Label chooseActivityLabel;
         private Panel hiddenPanel2;
         private Guna.UI2.WinForms.Guna2ComboBox activityComboBox;
+        private Guna.UI2.WinForms.Guna2Button balancedButton;
+        private Guna.UI2.WinForms.Guna2Button lowCarbsButton;
+        private Guna.UI2.WinForms.Guna2Button highProteinButton;
+        private Guna.UI2.WinForms.Guna2Button lowFatButton;
+        private Label rightSideLabel;
     }
 }

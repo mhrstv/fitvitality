@@ -30,8 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             haveAnAccButton = new Label();
             passLabel = new Label();
             usrLabel = new Label();
@@ -78,6 +78,10 @@
             hLine2 = new PictureBox();
             vLine2 = new PictureBox();
             buttonRegister = new Guna.UI2.WinForms.Guna2Button();
+            passShown1 = new PictureBox();
+            passShown2 = new PictureBox();
+            passHidden1 = new PictureBox();
+            passHidden2 = new PictureBox();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)rightCUp2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
@@ -106,6 +110,10 @@
             ((System.ComponentModel.ISupportInitialize)rightC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passShown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passShown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passHidden1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)passHidden2).BeginInit();
             SuspendLayout();
             // 
             // haveAnAccButton
@@ -516,6 +524,8 @@
             usrmark.TabIndex = 19;
             usrmark.TabStop = false;
             usrmark.Visible = false;
+            usrmark.MouseEnter += usrmark_MouseEnter;
+            usrmark.MouseLeave += usrmark_MouseLeave;
             // 
             // emailmark
             // 
@@ -527,6 +537,8 @@
             emailmark.TabIndex = 20;
             emailmark.TabStop = false;
             emailmark.Visible = false;
+            emailmark.MouseEnter += emailmark_MouseEnter;
+            emailmark.MouseLeave += emailmark_MouseLeave;
             // 
             // passmark
             // 
@@ -538,6 +550,8 @@
             passmark.TabIndex = 21;
             passmark.TabStop = false;
             passmark.Visible = false;
+            passmark.MouseEnter += passmark_MouseEnter;
+            passmark.MouseLeave += passmark_MouseLeave;
             // 
             // repassmark
             // 
@@ -549,6 +563,8 @@
             repassmark.TabIndex = 22;
             repassmark.TabStop = false;
             repassmark.Visible = false;
+            repassmark.MouseEnter += repassmark_MouseEnter;
+            repassmark.MouseLeave += repassmark_MouseLeave;
             // 
             // labelcreated
             // 
@@ -622,7 +638,7 @@
             // buttonRegister
             // 
             buttonRegister.BorderRadius = 10;
-            buttonRegister.CustomizableEdges = customizableEdges11;
+            buttonRegister.CustomizableEdges = customizableEdges3;
             buttonRegister.DisabledState.BorderColor = Color.DarkGray;
             buttonRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -632,11 +648,57 @@
             buttonRegister.ForeColor = Color.White;
             buttonRegister.Location = new Point(82, 332);
             buttonRegister.Name = "buttonRegister";
-            buttonRegister.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            buttonRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
             buttonRegister.Size = new Size(122, 25);
             buttonRegister.TabIndex = 45;
             buttonRegister.Text = "Register";
             buttonRegister.Click += kryptonButton1_Click;
+            // 
+            // passShown1
+            // 
+            passShown1.Image = Properties.Resources.hidePass;
+            passShown1.Location = new Point(245, 232);
+            passShown1.Name = "passShown1";
+            passShown1.Size = new Size(23, 21);
+            passShown1.SizeMode = PictureBoxSizeMode.Zoom;
+            passShown1.TabIndex = 46;
+            passShown1.TabStop = false;
+            passShown1.Click += passShown1_Click;
+            // 
+            // passShown2
+            // 
+            passShown2.Image = Properties.Resources.hidePass;
+            passShown2.Location = new Point(245, 285);
+            passShown2.Name = "passShown2";
+            passShown2.Size = new Size(23, 21);
+            passShown2.SizeMode = PictureBoxSizeMode.Zoom;
+            passShown2.TabIndex = 47;
+            passShown2.TabStop = false;
+            passShown2.Click += passShown2_Click;
+            // 
+            // passHidden1
+            // 
+            passHidden1.Image = (Image)resources.GetObject("passHidden1.Image");
+            passHidden1.Location = new Point(247, 234);
+            passHidden1.Name = "passHidden1";
+            passHidden1.Size = new Size(21, 19);
+            passHidden1.SizeMode = PictureBoxSizeMode.Zoom;
+            passHidden1.TabIndex = 48;
+            passHidden1.TabStop = false;
+            passHidden1.Visible = false;
+            passHidden1.Click += passHidden1_Click;
+            // 
+            // passHidden2
+            // 
+            passHidden2.Image = (Image)resources.GetObject("passHidden2.Image");
+            passHidden2.Location = new Point(247, 287);
+            passHidden2.Name = "passHidden2";
+            passHidden2.Size = new Size(21, 19);
+            passHidden2.SizeMode = PictureBoxSizeMode.Zoom;
+            passHidden2.TabIndex = 49;
+            passHidden2.TabStop = false;
+            passHidden2.Visible = false;
+            passHidden2.Click += passHidden2_Click;
             // 
             // Register
             // 
@@ -644,6 +706,10 @@
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(passHidden2);
+            Controls.Add(passHidden1);
+            Controls.Add(passShown2);
+            Controls.Add(passShown1);
             Controls.Add(buttonRegister);
             Controls.Add(vLine2);
             Controls.Add(hLine2);
@@ -708,6 +774,10 @@
             ((System.ComponentModel.ISupportInitialize)rightC).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passShown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passShown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passHidden1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)passHidden2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -759,5 +829,9 @@
         private PictureBox hLine2;
         private PictureBox vLine2;
         private Guna.UI2.WinForms.Guna2Button buttonRegister;
+        private PictureBox passShown1;
+        private PictureBox passShown2;
+        private PictureBox passHidden1;
+        private PictureBox passHidden2;
     }
 }

@@ -3223,6 +3223,30 @@
   <metadata name="accCreated.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>261, 17</value>
   </metadata>
+  <data name="passHidden1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAAABGdBTUEAALGPC/xhBQAAAWpJREFUSEu1
+        lC1uAzEQhff/D1RaFQUlNCwnCGxJDtETVOU9QFFwpZ4hNLSgKGdYGhgpZ+h8q7E0uxoFecGL7TfvjWds
+        Z5PXj8NicEkPfd/nAV7cg0sGdF33VFXVtizLl6Io3gJYwxP3fAEu2bbtMwnyPD+maXrJsuwq4y1A1xfi
+        6NB7eSYLWqYiMX2JedBkJP8R7lPwzsgaXuMDenzzI5skpgoxnsVwl/GPZGLazdvX49oRR6f6M367wSSx
+        VoPwG3MQMjZNs4FjtDwcenz47QYh8V4T32ixrusVQSDztR7FLxpG1vBGs8KHXzfYkzeRnbdiOAl5F8HR
+        Xg5zODUNouPIxrt4oKXzE3kTmXA5I2GrAXpUJBuroULT5UDc6vGHQsmbyGR8XrxfKwRwxBCGKhm1oIce
+        sGzli575oq+FoG4Q/53zYzcQYdx/aIBWEv/bYsHlUIWY4n0V59D2437PPdBygBf34JJxcEj+AVqbX/n3
+        Q/TRAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="passHidden2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAAABGdBTUEAALGPC/xhBQAAAWpJREFUSEu1
+        lC1uAzEQhff/D1RaFQUlNCwnCGxJDtETVOU9QFFwpZ4hNLSgKGdYGhgpZ+h8q7E0uxoFecGL7TfvjWds
+        Z5PXj8NicEkPfd/nAV7cg0sGdF33VFXVtizLl6Io3gJYwxP3fAEu2bbtMwnyPD+maXrJsuwq4y1A1xfi
+        6NB7eSYLWqYiMX2JedBkJP8R7lPwzsgaXuMDenzzI5skpgoxnsVwl/GPZGLazdvX49oRR6f6M367wSSx
+        VoPwG3MQMjZNs4FjtDwcenz47QYh8V4T32ixrusVQSDztR7FLxpG1vBGs8KHXzfYkzeRnbdiOAl5F8HR
+        Xg5zODUNouPIxrt4oKXzE3kTmXA5I2GrAXpUJBuroULT5UDc6vGHQsmbyGR8XrxfKwRwxBCGKhm1oIce
+        sGzli575oq+FoG4Q/53zYzcQYdx/aIBWEv/bYsHlUIWY4n0V59D2437PPdBygBf34JJxcEj+AVqbX/n3
+        Q/TRAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>52</value>
   </metadata>

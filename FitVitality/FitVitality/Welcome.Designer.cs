@@ -1031,8 +1031,7 @@
             // 
             // Welcome
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(36, 41, 46);
             ClientSize = new Size(690, 400);
             Controls.Add(errorPanel);

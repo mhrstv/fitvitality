@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diet));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftC = new PictureBox();
             rightC = new PictureBox();
             vLine1 = new PictureBox();
@@ -490,7 +490,7 @@
             activityComboBox.BackColor = Color.Transparent;
             activityComboBox.BorderColor = Color.FromArgb(92, 225, 230);
             activityComboBox.BorderRadius = 8;
-            activityComboBox.CustomizableEdges = customizableEdges3;
+            activityComboBox.CustomizableEdges = customizableEdges1;
             activityComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             activityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             activityComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -503,7 +503,7 @@
             activityComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             activityComboBox.Location = new Point(94, 133);
             activityComboBox.Name = "activityComboBox";
-            activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
             activityComboBox.Size = new Size(119, 24);
             activityComboBox.TabIndex = 58;
             activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
@@ -511,8 +511,7 @@
             // 
             // Diet
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
             Controls.Add(activityComboBox);

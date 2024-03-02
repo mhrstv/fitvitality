@@ -670,5 +670,128 @@ namespace FitVitality
         {
             mouseDown = false;
         }
+
+        private void passShown1_Click(object sender, EventArgs e)
+        {
+            passHidden1.Visible = true;
+            passShown1.Visible = false;
+            textBoxPass.UseSystemPasswordChar = false;
+            textBoxPass.PasswordChar = '\0';
+        }
+
+        private void passHidden1_Click(object sender, EventArgs e)
+        {
+            passHidden1.Visible = false;
+            passShown1.Visible = true;
+            textBoxPass.UseSystemPasswordChar = true;
+            textBoxPass.PasswordChar = '●';
+        }
+
+        private void passShown2_Click(object sender, EventArgs e)
+        {
+            passHidden2.Visible = true;
+            passShown2.Visible = false;
+            textBoxRepass.UseSystemPasswordChar = false;
+            textBoxRepass.PasswordChar = '\0';
+        }
+
+        private void passHidden2_Click(object sender, EventArgs e)
+        {
+            passHidden2.Visible = false;
+            passShown2.Visible = true;
+            textBoxRepass.UseSystemPasswordChar = true;
+            textBoxRepass.PasswordChar = '●';
+        }
+
+        private void passmark_MouseEnter(object sender, EventArgs e)
+        {
+            var cfg = new Config("FitVitality.ini");
+            if (password_Error)
+            {
+                passPanel.Visible = true;
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    passErrorLabel.Text = "Enter a combination of at least 8 letters, numbers and symbols!";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    passErrorLabel.Text = "Въведи комбинация от поне 8 цифри, букви и символи!";
+                }
+            }
+        }
+
+        private void passmark_MouseLeave(object sender, EventArgs e)
+        {
+            if (password_Error)
+            {
+                passPanel.Visible = false;
+            }
+        }
+
+        private void repassmark_MouseEnter(object sender, EventArgs e)
+        {
+            var cfg = new Config("FitVitality.ini");
+            if (passMatch_Error)
+            {
+                repassErrorPanel.Visible = true;
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    repassErrorLabel.Text = "Passwords do not match!";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    repassErrorLabel.Text = "Паролите не съвпадат!";
+                }
+            }
+        }
+
+        private void repassmark_MouseLeave(object sender, EventArgs e)
+        {
+            if (passMatch_Error)
+            {
+                repassErrorPanel.Visible = false;
+            }
+        }
+
+        private void emailmark_MouseEnter(object sender, EventArgs e)
+        {
+            if (email_Error)
+            {
+                emailPanel.Visible = true;
+            }
+        }
+
+        private void emailmark_MouseLeave(object sender, EventArgs e)
+        {
+            if (email_Error)
+            {
+                emailPanel.Visible = false;
+            }
+        }
+
+        private void usrmark_MouseEnter(object sender, EventArgs e)
+        {
+            var cfg = new Config("FitVitality.ini");
+            if (user_Error)
+            {
+                userError.Visible = true;
+                if (cfg.Read("Language", "SETTINGS") == "en")
+                {
+                    usrError.Text = "Username must contain only digits or letters!";
+                }
+                if (cfg.Read("Language", "SETTINGS") == "bg")
+                {
+                    usrError.Text = "Трябва да съдържа само букви и цифри!";
+                }
+            }
+        }
+
+        private void usrmark_MouseLeave(object sender, EventArgs e)
+        {
+            if (user_Error)
+            {
+                userError.Visible = false;
+            }
+        }
     }
 }

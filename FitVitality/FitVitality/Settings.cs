@@ -552,7 +552,7 @@ namespace FitVitality
                 confirmLabel2.Text = "ВНИМАНИЕ: Всички твои данни ще изчезнат ЗАВИНАГИ.";
                 textBoxConfirm.CueHint.CueHintText = "ПОТВЪРДИ";
                 confirmButton.Text = "Потвърди";
-               
+
                 genderComboBox.Items.Clear();
                 genderComboBox.Items.Add("Мъж");
                 genderComboBox.Items.Add("Жена");
@@ -612,7 +612,7 @@ namespace FitVitality
                 confirmLabel2.Text = "WARNING: All your data and stored information will be GONE.";
                 textBoxConfirm.CueHint.CueHintText = "CONFIRM";
                 confirmButton.Text = "Confirm";
-                
+
                 genderComboBox.Items.Clear();
                 genderComboBox.Items.Add("Male");
                 genderComboBox.Items.Add("Female");
@@ -627,7 +627,7 @@ namespace FitVitality
                     themeComboBox.Items.Add("Light");
                     themeComboBox.SelectedItem = "Light";
                 }
-                else if(themeComboBox.SelectedItem == "Тъмна")
+                else if (themeComboBox.SelectedItem == "Тъмна")
                 {
                     themeComboBox.Items.Clear();
                     themeComboBox.Items.Add("Dark");

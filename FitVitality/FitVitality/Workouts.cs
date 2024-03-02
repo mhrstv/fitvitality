@@ -3135,7 +3135,7 @@ namespace FitVitality
                 workoutNames.Clear();
                 workoutNameTextBox.Clear();
                 WorkoutDays.Clear();
-                
+
                 workout1 = String.Empty;
                 workout2 = String.Empty;
                 workout3 = String.Empty;
@@ -3220,7 +3220,7 @@ namespace FitVitality
                     for (int i = 0; i < monday_List.Count; i++)
                     {
                         if (i < monday_List.Count - 1 && monday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + monday_List[i] + "\n";
-                        else if(monday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + monday_List[i];
+                        else if (monday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + monday_List[i];
                     }
                     if (wdSelectedExercises.Text == "")
                     {
@@ -3233,7 +3233,7 @@ namespace FitVitality
                     for (int i = 0; i < tuesday_List.Count; i++)
                     {
                         if (i < tuesday_List.Count - 1 && tuesday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + tuesday_List[i] + "\n";
-                        else if(tuesday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + tuesday_List[i];
+                        else if (tuesday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + tuesday_List[i];
                     }
                     if (wdSelectedExercises.Text == "")
                     {
@@ -3246,7 +3246,7 @@ namespace FitVitality
                     for (int i = 0; i < wednesday_List.Count; i++)
                     {
                         if (i < wednesday_List.Count - 1 && wednesday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + wednesday_List[i] + "\n";
-                        else if(wednesday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + wednesday_List[i];
+                        else if (wednesday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + wednesday_List[i];
                     }
                     if (wdSelectedExercises.Text == "")
                     {
@@ -3259,7 +3259,7 @@ namespace FitVitality
                     for (int i = 0; i < thursday_List.Count; i++)
                     {
                         if (i < thursday_List.Count - 1 && thursday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + thursday_List[i] + "\n";
-                        else if(thursday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + thursday_List[i];
+                        else if (thursday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + thursday_List[i];
                     }
                     if (wdSelectedExercises.Text == "")
                     {
@@ -3272,7 +3272,7 @@ namespace FitVitality
                     for (int i = 0; i < friday_List.Count; i++)
                     {
                         if (i < friday_List.Count - 1 && friday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + friday_List[i] + "\n";
-                        else if(friday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + friday_List[i];
+                        else if (friday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + friday_List[i];
                     }
                     if (wdSelectedExercises.Text == "")
                     {
@@ -3285,7 +3285,7 @@ namespace FitVitality
                     for (int i = 0; i < saturday_List.Count; i++)
                     {
                         if (i < saturday_List.Count - 1 && saturday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + saturday_List[i] + "\n";
-                        else if(saturday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + saturday_List[i];
+                        else if (saturday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + saturday_List[i];
                     }
                     if (wdSelectedExercises.Text == "")
                     {
@@ -3298,7 +3298,7 @@ namespace FitVitality
                     for (int i = 0; i < sunday_List.Count; i++)
                     {
                         if (i < sunday_List.Count - 1 && sunday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + sunday_List[i] + "\n";
-                        else if(sunday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + sunday_List[i];
+                        else if (sunday_List[i] != "") wdSelectedExercises.Text += "3x12 - " + sunday_List[i];
                     }
                     if (wdSelectedExercises.Text == "")
                     {

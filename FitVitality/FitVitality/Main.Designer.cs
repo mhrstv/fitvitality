@@ -150,6 +150,10 @@
             buttonDashboard.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
             buttonDashboard.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDashboard.TabIndex = 0;
+            buttonDashboard.ToolTipValues.Description = "";
+            buttonDashboard.ToolTipValues.EnableToolTips = true;
+            buttonDashboard.ToolTipValues.Heading = "Workouts";
+            buttonDashboard.ToolTipValues.ToolTipStyle = Krypton.Toolkit.LabelStyle.NormalControl;
             buttonDashboard.Values.Text = "";
             buttonDashboard.Click += kryptonButton1_Click_1;
             // 
@@ -249,14 +253,18 @@
             settingsButton.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
             settingsButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             settingsButton.TabIndex = 13;
+            settingsButton.ToolTipValues.Description = "";
+            settingsButton.ToolTipValues.EnableToolTips = true;
+            settingsButton.ToolTipValues.Heading = "Settings";
+            settingsButton.ToolTipValues.ToolTipStyle = Krypton.Toolkit.LabelStyle.NormalControl;
             settingsButton.Values.Text = "";
             settingsButton.Click += settingsButton_Click;
             // 
             // loggedInAsLabel
             // 
             loggedInAsLabel.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            loggedInAsLabel.ForeColor = Color.FromArgb(92, 230, 225);
-            loggedInAsLabel.Location = new Point(379, 5);
+            loggedInAsLabel.ForeColor = Color.Black;
+            loggedInAsLabel.Location = new Point(379, 6);
             loggedInAsLabel.Name = "loggedInAsLabel";
             loggedInAsLabel.Size = new Size(224, 23);
             loggedInAsLabel.TabIndex = 13;
@@ -328,6 +336,10 @@
             dietButton.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
             dietButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             dietButton.TabIndex = 12;
+            dietButton.ToolTipValues.Description = "";
+            dietButton.ToolTipValues.EnableToolTips = true;
+            dietButton.ToolTipValues.Heading = "Diet";
+            dietButton.ToolTipValues.ToolTipStyle = Krypton.Toolkit.LabelStyle.NormalControl;
             dietButton.Values.Text = "";
             dietButton.Click += kryptonButton1_Click_2;
             // 
@@ -421,6 +433,10 @@
             buttonCalculators.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
             buttonCalculators.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCalculators.TabIndex = 6;
+            buttonCalculators.ToolTipValues.Description = "";
+            buttonCalculators.ToolTipValues.EnableToolTips = true;
+            buttonCalculators.ToolTipValues.Heading = "Calculators";
+            buttonCalculators.ToolTipValues.ToolTipStyle = Krypton.Toolkit.LabelStyle.NormalControl;
             buttonCalculators.Values.Text = "";
             buttonCalculators.Click += buttonCalculators_Click;
             // 
@@ -486,6 +502,10 @@
             buttonHome.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
             buttonHome.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             buttonHome.TabIndex = 4;
+            buttonHome.ToolTipValues.Description = "";
+            buttonHome.ToolTipValues.EnableToolTips = true;
+            buttonHome.ToolTipValues.Heading = "Dashboard";
+            buttonHome.ToolTipValues.ToolTipStyle = Krypton.Toolkit.LabelStyle.NormalControl;
             buttonHome.Values.Text = "";
             buttonHome.Click += kryptonButton1_Click;
             // 

@@ -124,8 +124,8 @@
   <data name="lower" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rightC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rightC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gymbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gymbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="glutes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glutes2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,11 +145,8 @@
   <data name="arms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arms2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hamstrings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hamstrings2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="leftC" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\leftC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rightC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rightC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gymHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gymHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +190,8 @@
   <data name="yesHovered" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yesHovered.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="female" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="noSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\noSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="highProteinHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\highProteinHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +202,20 @@
   <data name="createHovered" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\createHovered.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="createHoveredbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\createHoveredbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="calculatorButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\calculatorButton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="closebuttonsenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closebuttonsenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shouldersSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shouldersSelected1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="core" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\core.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="male" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loseNormalbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loseNormalbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +238,14 @@
   <data name="frontBackBiceps" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frontBackBiceps1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backChestShouldersTriceps" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backChestShouldersTriceps1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="upperHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upperHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="prebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\prebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gainNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gainNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="femalepressed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\femalepressed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -252,9 +261,6 @@
   </data>
   <data name="gymPressedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gymPressedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trianglenext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trianglenext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="upper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\upper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,6 +280,9 @@
   <data name="lowCarbs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowCarbs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Beta_Buttonbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Beta_Buttonbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="closebuttonss" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closebuttonss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -283,11 +292,11 @@
   <data name="outdoorsPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\outdoorsPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coreHoveredbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coreHoveredbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="weekBordersChecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weekBordersChecked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bmiFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bmiFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="leftC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leftC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,6 +310,9 @@
   <data name="quadriceps" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quadriceps2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="balancedHoverbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balancedHoverbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="maletracked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maletracked1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -312,9 +324,6 @@
   </data>
   <data name="highProteinSelectedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\highProteinSelectedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="balancedSelectedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\balancedSelectedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sett__1___1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sett__1___1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -355,23 +364,17 @@
   <data name="glutesSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glutesSelected1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gainTrackedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gainTrackedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="createSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\createSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gymbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gymbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gainTrackedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gainTrackedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="closebuttonsenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closebuttonsenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coreHoveredbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coreHoveredbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="malepressed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\malepressed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="outdoorsbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\outdoorsbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="errorReg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\errorReg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -388,8 +391,8 @@
   <data name="balancedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balancedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settingsError" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settingsError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="corePressedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corePressedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="no" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -427,8 +430,11 @@
   <data name="losePressedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\losePressedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="calculatorButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\calculatorButton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="femalebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\femalebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backChestShouldersTriceps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backChestShouldersTriceps1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maletracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maletracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -436,17 +442,14 @@
   <data name="chestSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chestSelected1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="male" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="minimizebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="calvesSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calvesSelected1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="workoutMainBorders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\workoutMainBorders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="female" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\female.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bmiMalki" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bmiMalki.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -454,14 +457,17 @@
   <data name="welcomeError" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\welcomeError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="upperHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\upperHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="secondPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\secondPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minimizebutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizebutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="balancedSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balancedSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upperPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upperPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gainPressedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gainPressedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -487,8 +493,8 @@
   <data name="createSelectedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\createSelectedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="highProteinHoverbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\highProteinHoverbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="createHoveredbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\createHoveredbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lowerPressedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowerPressedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -511,9 +517,6 @@
   <data name="malepressedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\malepressedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backChestShouldersTricepsBordered" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backChestShouldersTricepsBordered1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="loseTracked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\loseTracked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -529,8 +532,8 @@
   <data name="lowerPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowerPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="corePressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\corePressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="yesHoveredbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yesHoveredbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logregVline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logregVline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -547,11 +550,14 @@
   <data name="createbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\createbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="noSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="highProteinHoverbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\highProteinHoverbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="highProtein" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\highProtein.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="edit-svgrepo-com" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit-svgrepo-com.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -562,8 +568,8 @@
   <data name="graphBorders" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graphBorders1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="balancedHoverbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\balancedHoverbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="balancedSelectedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\balancedSelectedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="workout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\workout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -571,8 +577,8 @@
   <data name="fourthPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fourthPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="workoutMainBorders" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\workoutMainBorders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="outdoorsbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outdoorsbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hidePass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hidePass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -586,8 +592,8 @@
   <data name="lowFat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowFat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="yesHoveredbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yesHoveredbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maintainPressedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maintainPressedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -601,20 +607,17 @@
   <data name="balanced" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balanced.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="corePressedbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\corePressedbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backChestShouldersTricepsBordered" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backChestShouldersTricepsBordered1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gainNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gainNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bmiFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bmiFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bodyFatWoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bodyFatWoman1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="forwardArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forwardArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maintainNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maintainNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gainPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gainPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -658,8 +661,8 @@
   <data name="weightChangeBorders" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weightChangeBorders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="femalebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\femalebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trianglenext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trianglenext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="yes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -679,23 +682,23 @@
   <data name="highProteinSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\highProteinSelected.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="upperPressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\upperPressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settingsError" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settingsError.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrowFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shouldersSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shouldersSelected1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maintainNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maintainNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="homebg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homebg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hamstrings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hamstrings2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lowFatHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lowFatHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weekBordersChecked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weekBordersChecked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="corePressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corePressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cross-close-icon-free-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cross-close-icon-free-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -727,7 +730,7 @@
   <data name="malepressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\malepressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Beta_Buttonbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Beta_Buttonbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Warning_Sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Warning_Sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

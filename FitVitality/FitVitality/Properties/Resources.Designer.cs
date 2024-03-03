@@ -1973,6 +1973,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Warning_Sign {
+            get {
+                object obj = ResourceManager.GetObject("Warning_Sign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap weekBorders {
             get {
                 object obj = ResourceManager.GetObject("weekBorders", resourceCulture);

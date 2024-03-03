@@ -187,7 +187,7 @@
             // newUserLabel
             // 
             newUserLabel.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            newUserLabel.ForeColor = Color.FromArgb(150, 208, 250);
+            newUserLabel.ForeColor = Color.Black;
             newUserLabel.Location = new Point(68, 348);
             newUserLabel.Name = "newUserLabel";
             newUserLabel.Size = new Size(151, 14);
@@ -199,7 +199,7 @@
             // 
             createAccButton.Cursor = Cursors.Hand;
             createAccButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            createAccButton.ForeColor = Color.FromArgb(150, 208, 250);
+            createAccButton.ForeColor = Color.Black;
             createAccButton.Location = new Point(68, 364);
             createAccButton.Name = "createAccButton";
             createAccButton.Size = new Size(151, 14);

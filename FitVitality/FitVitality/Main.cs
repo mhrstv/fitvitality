@@ -86,6 +86,11 @@ namespace FitVitality
                             {
                                 username = reader["Username"].ToString();
                                 loggedInAsLabel.Text = "Logged in as: " + reader["Username"].ToString();
+                                buttonHome.ToolTipValues.Heading = "Dashboard";
+                                buttonCalculators.ToolTipValues.Heading = "Calculators";
+                                buttonDashboard.ToolTipValues.Heading = "Workouts";
+                                dietButton.ToolTipValues.Heading = "Diet";
+                                settingsButton.ToolTipValues.Heading = "Settings";
                             }
                         }
                         if (cfg.Read("Language", "SETTINGS") == "bg")
@@ -94,6 +99,11 @@ namespace FitVitality
                             {
                                 username = reader["Username"].ToString();
                                 loggedInAsLabel.Text = "Влязъл като: " + reader["Username"].ToString();
+                                buttonHome.ToolTipValues.Heading = "Табло";
+                                buttonCalculators.ToolTipValues.Heading = "Калкулатори";
+                                buttonDashboard.ToolTipValues.Heading = "Тренировки";
+                                dietButton.ToolTipValues.Heading = "Диета";
+                                settingsButton.ToolTipValues.Heading = "Настройки";
                             }
                         }
                     }
@@ -248,10 +258,20 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
                 loggedInAsLabel.Text = "Logged in as: " + username;
+                buttonHome.ToolTipValues.Heading = "Dashboard";
+                buttonCalculators.ToolTipValues.Heading = "Calculators";
+                buttonDashboard.ToolTipValues.Heading = "Workouts";
+                dietButton.ToolTipValues.Heading = "Diet";
+                settingsButton.ToolTipValues.Heading = "Settings";
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 loggedInAsLabel.Text = "Влязъл като: " + username;
+                buttonHome.ToolTipValues.Heading = "Табло";
+                buttonCalculators.ToolTipValues.Heading = "Калкулатори";
+                buttonDashboard.ToolTipValues.Heading = "Тренировки";
+                dietButton.ToolTipValues.Heading = "Диета";
+                settingsButton.ToolTipValues.Heading = "Настройки";
             }
         }
 

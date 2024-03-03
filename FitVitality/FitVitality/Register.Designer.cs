@@ -30,8 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             haveAnAccButton = new Label();
             passLabel = new Label();
             usrLabel = new Label();
@@ -120,7 +120,7 @@
             // 
             haveAnAccButton.Cursor = Cursors.Hand;
             haveAnAccButton.Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            haveAnAccButton.ForeColor = Color.FromArgb(150, 208, 250);
+            haveAnAccButton.ForeColor = Color.Black;
             haveAnAccButton.Location = new Point(31, 368);
             haveAnAccButton.Name = "haveAnAccButton";
             haveAnAccButton.Size = new Size(225, 14);
@@ -638,7 +638,7 @@
             // buttonRegister
             // 
             buttonRegister.BorderRadius = 10;
-            buttonRegister.CustomizableEdges = customizableEdges3;
+            buttonRegister.CustomizableEdges = customizableEdges1;
             buttonRegister.DisabledState.BorderColor = Color.DarkGray;
             buttonRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -648,7 +648,7 @@
             buttonRegister.ForeColor = Color.White;
             buttonRegister.Location = new Point(82, 332);
             buttonRegister.Name = "buttonRegister";
-            buttonRegister.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            buttonRegister.ShadowDecoration.CustomizableEdges = customizableEdges2;
             buttonRegister.Size = new Size(122, 25);
             buttonRegister.TabIndex = 45;
             buttonRegister.Text = "Register";

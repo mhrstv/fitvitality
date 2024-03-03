@@ -38,9 +38,7 @@ namespace FitVitality
         private string unit_selection;
         public double bmi;
 
-        //private string connectionString = @"Server=tcp:fitvitality.database.windows.net,1433;Initial Catalog=FitVitality-AWS;Persist Security Info=False;User ID=Member;Password=useraccessPass1!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
-        //private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
         public string _userID;
 
         public void CalorieCalculation(double activity)
@@ -110,7 +108,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity *= Math.Round(0.75, 0);
-                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 0.88, 0)}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {Math.Round(activity * 0.88, 0)}.";
                     protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.25 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.5 / 4:f1}г/ден";
@@ -121,7 +119,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity = activity;
-                    calorieIntake.Text = $"Дневното приемане на калории е {activity.ToString()}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {activity.ToString()}.";
                     protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.25 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.5 / 4:f1}г/ден";
@@ -132,7 +130,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity *= Math.Round(1.25, 0);
-                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 1.12, 0)}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {Math.Round(activity * 1.12, 0)}.";
                     protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.25 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.5 / 4:f1}г/ден";
@@ -186,7 +184,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity *= Math.Round(0.75, 0);
-                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 0.88, 0)}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {Math.Round(activity * 0.88, 0)}.";
                     protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.55 / 4:f1}г/ден";
@@ -197,7 +195,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity = activity;
-                    calorieIntake.Text = $"Дневното приемане на калории е {activity.ToString()}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {activity.ToString()}.";
                     protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.55 / 4:f1}г/ден";
@@ -208,7 +206,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity *= Math.Round(1.25, 0);
-                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 1.12, 0)}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {Math.Round(activity * 1.12, 0)}.";
                     protein.Text = $"{activity * 0.25 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.55 / 4:f1}г/ден";
@@ -263,7 +261,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity *= Math.Round(0.75, 0);
-                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 0.88, 0)}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {Math.Round(activity * 0.88, 0)}.";
                     protein.Text = $"{activity * 0.3 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.3 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.4 / 4:f1}г/ден";
@@ -274,7 +272,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity = activity;
-                    calorieIntake.Text = $"Дневното приемане на калории е {activity.ToString()}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {activity.ToString()}.";
                     protein.Text = $"{activity * 0.3 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.3 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.4 / 4:f1}г/ден";
@@ -285,7 +283,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity *= Math.Round(1.25, 0);
-                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 1.12, 0)}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {Math.Round(activity * 1.12, 0)}.";
                     protein.Text = $"{activity * 0.3 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.3 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.4 / 4:f1}г/ден";
@@ -339,7 +337,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity *= Math.Round(0.75, 0);
-                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 0.88, 0)}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {Math.Round(activity * 0.88, 0)}.";
                     protein.Text = $"{activity * 0.35 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.45 / 4:f1}г/ден";
@@ -350,7 +348,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity = activity;
-                    calorieIntake.Text = $"Дневното приемане на калории е {activity.ToString()}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {activity.ToString()}.";
                     protein.Text = $"{activity * 0.35 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.45 / 4:f1}г/ден";
@@ -361,7 +359,7 @@ namespace FitVitality
                     carbohydrates.Location = new Point(405, 130);
                     fat.Location = new Point(381, 168);
                     activity *= Math.Round(1.25, 0);
-                    calorieIntake.Text = $"Дневното приемане на калории е {Math.Round(activity * 1.12, 0)}.";
+                    calorieIntake.Text = $"Дневният прием на калории е {Math.Round(activity * 1.12, 0)}.";
                     protein.Text = $"{activity * 0.35 / 4:f1}г/ден";
                     fat.Text = $"{activity * 0.2 / 9:f1}г/ден";
                     carbohydrates.Text = $"{activity * 0.45 / 4:f1}г/ден";
@@ -572,10 +570,14 @@ namespace FitVitality
                 fitnessLabel.Text = "Фитнес";
                 averageLabel.Text = "Средно";
                 obeseLabel.Text = "Затлъстял";
-                calorieCalcLabel.Text = "Калкулатор за калории";
-                extraMeasurementsL.Text = "Нуждаем се от ниво на активност.";
+                calorieCalcLabel.Text = "Калкулатор на калории";
+                extraMeasurementsL.Text = "Нуждаем се от вашето ниво на активност.";
+                extraMeasurementsL.Location = new Point(extraMeasurementsL.Location.X + 20, extraMeasurementsL.Location.Y);
+                extraMeasurementsL.Width += 5;
                 activityLabel.Text = "Активност:";
+                activityLabel.Location = new Point(activityLabel.Location.X + 25, activityLabel.Location.Y);
                 calorieCalcButton.Text = "Изчисли";
+                calorieCalcButton.Location = new Point(calorieCalcButton.Location.X + 35, calorieCalcButton.Location.Y);
                 calorieDescription.Text = "Този калкулатор може да\r\nпредостави някои прости насоки\r\nза " +
                     "покачване, загуба\r\nили поддържане на тегло\r\nвъз основа на вашето\r\nниво на активност.";
                 activityComboBox.Items.Clear();
@@ -585,7 +587,9 @@ namespace FitVitality
                 activityComboBox.Items.Add("Активна");
                 activityComboBox.Items.Add("Много активна");
                 activityComboBox.Items.Add("Екстра активна");
-                macroCalcLabel.Text = "Макро Калкулатор";
+                activityComboBox.Location = new Point(activityComboBox.Location.X + 25, activityComboBox.Location.Y);
+                activityComboBox.Width += 10;
+                macroCalcLabel.Text = "Калкулатор на макронутриенти";
                 balancedButton.Text = "Баланс";
                 lowFatButton.Text = "Ниска мазнина";
                 lowCarbsButton.Text = "Нисък въглехидрат";
@@ -593,6 +597,7 @@ namespace FitVitality
                 macroCalcDescription.Text = "Макро калкулаторът\r\nопределя приема на\r\nмакронутриенти " +
                     "въз основа на\r\nтегло, височина, активност\r\nи цели. Изчислява\r\nколичеството " +
                     "протеини, мазнини\r\nи въглехидрати, които\r\nтрябва да се консумират.";
+                macroCalcDescription.Location = new Point(macroCalcDescription.Location.X - 5, macroCalcDescription.Location.Y);
                 activityLevelNeedLabel.Text = "Ще ни трябва нивото ви на активност:";
                 actLevelLabel.Text = "Активност:";
                 changeGoalLabel.Location = new Point(340, 238);
@@ -608,10 +613,11 @@ namespace FitVitality
                 activityComboBoxMacro.Items.Add("Активна");
                 activityComboBoxMacro.Items.Add("Много активна");
                 activityComboBoxMacro.Items.Add("Екстра активна");
-                idealWeightCalcLabel.Text = "Калкулатор за идеално тегло";
-                idealWeightDescription.Text = "Калкулаторът за идеално тегло\r\nеинструмент, " +
+                idealWeightCalcLabel.Text = "Калкулатор на идеално тегло";
+                idealWeightDescription.Text = "Калкулаторът за идеално тегло\r\nе инструмент, " +
                     "предназначен да\r\nоцени диапазона на\r\nздравословно тегло";
                 idealWeightLabel1.Text = "Идеалното тегло за вас\r\nспоред формулата на Робинсон е";
+                calorieIntake.Location = new Point(calorieIntake.Location.X - 15, calorieIntake.Location.Y);
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -845,11 +851,11 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 sedentaryLabel.Text = $"Заседналост =  ≈{sedentaryBMR.ToString()} к/д";
-                exerciseLabel1.Text = $"Упражнения 1 - 3 дни =  ≈{exerciseBMR13.ToString()} к/д";
-                exerciseLabel2.Text = $"Упражнения 4 - 5 дни =  ≈{exerciseBMR45.ToString()} к/д";
-                dailyLabel.Text = $"Дневни упражнения =  ≈{DailyBMR34.ToString()} к/д";
-                intenseLabel.Text = $"Интензивни упражнения =  ≈{intenseBMR67.ToString()} к/д";
-                veryIntenseLabel.Text = $"Много интензивни упражнения =  ≈{veryIntenseBMR.ToString()} к/д";
+                exerciseLabel1.Text = $"Упражнение 1 - 3 дни =  ≈{exerciseBMR13.ToString()} к/д";
+                exerciseLabel2.Text = $"Упражнение 4 - 5 дни =  ≈{exerciseBMR45.ToString()} к/д";
+                dailyLabel.Text = $"Дневно упражнение =  ≈{DailyBMR34.ToString()} к/д";
+                intenseLabel.Text = $"Интензивно упражнение =  ≈{intenseBMR67.ToString()} к/д";
+                veryIntenseLabel.Text = $"Много интензивно упражнение =  ≈{veryIntenseBMR.ToString()} к/д";
             }
 
             //Body Fat Percentage

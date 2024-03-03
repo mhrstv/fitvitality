@@ -574,7 +574,7 @@
             // 
             rightSideLabel.AutoSize = true;
             rightSideLabel.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            rightSideLabel.Location = new Point(481, 272);
+            rightSideLabel.Location = new Point(483, 272);
             rightSideLabel.Name = "rightSideLabel";
             rightSideLabel.Size = new Size(208, 60);
             rightSideLabel.TabIndex = 63;

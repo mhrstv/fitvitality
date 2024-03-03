@@ -550,6 +550,7 @@ namespace FitVitality
                 bmiDescription.Text = "Индексът на телесната маса е\r\nизмерване " +
                     "на\r\nслабостта на човек\r\nспоред ръстта и теглото му.\r\n" +
                     "По конкретно се използва\r\nза категоризиране дали дадено\r\nлице е с поднормено, нормално\r\nили наднормено тегло.";
+                bmiDescription.Location = new Point(bmiDescription.Location.X, bmiDescription.Location.Y +20);
                 bmrCalcLabel.Text = "BMR Калкулатор";
                 bmrDescription.Text = "Вашата базална метаболитна\r\nскорост е броят калории,\r\n" +
                     "които изгаряте през деня\r\nспоред нивото ви на активност\r\n(можете да промените това\r\nот настройките).";
@@ -560,11 +561,12 @@ namespace FitVitality
                 bodyFatDescription.Text = "Измерването на телесните\r\nмазнини е от ключово " +
                     "значение\r\nза оценката дали дадено\r\nлице е с " +
                     "наднормено\r\nтегло, със затлъстяване или\r\nсъс здравословно тегло.";
+                bodyFatDescription.Location = new Point(bodyFatDescription.Location.X - 15, bodyFatDescription.Location.Y);
                 extraMeasurementsLabel.Text = "Нуждаем се от допълнителни измервания.";
                 neckLabel.Text = "Врат (cm)";
                 waistLabel.Text = "Талия (cm)";
                 hipsLabel.Text = "Бедра (само жени)";
-                bodyFatCalculateButton.Text = "Калкулирай";
+                bodyFatCalculateButton.Text = "Изчисли";
                 essentialLabel.Text = "Съществен";
                 athletesLabel.Text = "Атлет";
                 fitnessLabel.Text = "Фитнес";
@@ -573,7 +575,7 @@ namespace FitVitality
                 calorieCalcLabel.Text = "Калкулатор за калории";
                 extraMeasurementsL.Text = "Нуждаем се от ниво на активност.";
                 activityLabel.Text = "Активност:";
-                calorieCalcButton.Text = "Калкулирай";
+                calorieCalcButton.Text = "Изчисли";
                 calorieDescription.Text = "Този калкулатор може да\r\nпредостави някои прости насоки\r\nза " +
                     "покачване, загуба\r\nили поддържане на тегло\r\nвъз основа на вашето\r\nниво на активност.";
                 activityComboBox.Items.Clear();
@@ -595,7 +597,7 @@ namespace FitVitality
                 actLevelLabel.Text = "Активност:";
                 changeGoalLabel.Location = new Point(340, 238);
                 changeGoalLabel.Text = "Можете да смените целта\r\nот настройките!";
-                macroCalcButton.Text = "Калкулирай";
+                macroCalcButton.Text = "Изчисли";
                 proteinLabel.Text = "Протеин - ";
                 carbsLabel.Text = "Въглехидрат - ";
                 fatLabel.Text = "Мазнини - ";

@@ -194,12 +194,12 @@ namespace FitVitality
 
         private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
         {
-            settingsButton.BackColor = Color.Silver;
+
         }
 
         private void pictureBox1_MouseLeave_1(object sender, EventArgs e)
         {
-            settingsButton.BackColor = Color.White;
+
         }
 
         private void settingsButton_Click(object sender, EventArgs e)

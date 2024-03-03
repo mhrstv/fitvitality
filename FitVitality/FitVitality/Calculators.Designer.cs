@@ -240,7 +240,7 @@
             // calculators_label
             // 
             calculators_label.Font = new Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            calculators_label.Location = new Point(251, 22);
+            calculators_label.Location = new Point(251, 35);
             calculators_label.Name = "calculators_label";
             calculators_label.Size = new Size(189, 24);
             calculators_label.TabIndex = 0;
@@ -765,6 +765,7 @@
             buttonCloseBMI.Location = new Point(519, 9);
             buttonCloseBMI.Name = "buttonCloseBMI";
             buttonCloseBMI.Size = new Size(17, 17);
+            buttonCloseBMI.SizeMode = PictureBoxSizeMode.Zoom;
             buttonCloseBMI.TabIndex = 1;
             buttonCloseBMI.TabStop = false;
             buttonCloseBMI.Click += pictureBox14_Click;

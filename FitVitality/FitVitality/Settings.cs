@@ -115,8 +115,8 @@ namespace FitVitality
                 goalLabel.Text = "Цел";
                 confirmLabel1.Text = "Напиши \"ПОТВЪРЖДАВАМ\" за да потвърдиш, изтриването на акаунта.";
                 confirmLabel2.Text = "ВНИМАНИЕ: Всички твои данни ще изчезнат ЗАВИНАГИ.";
-                textBoxConfirm.CueHint.CueHintText = "ПОТВЪРДИ";
-                confirmButton.Text = "Потвърди";
+                textBoxConfirm.CueHint.CueHintText = "ПОТВЪРЖДАВАМ";
+                confirmButton.Text = "Потвърждавам";
                 genderComboBox.Items.Clear();
                 genderComboBox.Items.Add("Мъж");
                 genderComboBox.Items.Add("Жена");

@@ -282,6 +282,12 @@ namespace FitVitality
                 textBoxPass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
                 textBoxPass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
 
+                passMatch_Error = false;
+                passMatch = true;
+                repassmark.Visible = false;
+                repassErrorPanel.Visible = false;
+                textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
             }
             else
             {
@@ -290,11 +296,35 @@ namespace FitVitality
                 textBoxPass.Text = "";
                 textBoxPass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxPass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+
+                passMatch_Error = true;
+                repassmark.Visible = true;
+                textBoxRepass.Text = "";
+                textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
+            }
+            if (password_Error)
+            {
+                passMatch_Error = false;
+                passMatch = true;
+                repassmark.Visible = false;
+                repassErrorPanel.Visible = false;
+                textBoxRepass.Text = "";
+                textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(177, 192, 214);
+                textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(177, 192, 214);
+            }
+            else
+            {
+                passMatch_Error = true;
+                repassmark.Visible = true;
+                textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
+                textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }
             if ((regPassword != confirmPass) || confirmPass == "")
             {
                 passMatch_Error = true;
                 repassmark.Visible = true;
+                textBoxRepass.Text = "";
                 textBoxRepass.StateCommon.Border.Color1 = Color.FromArgb(255, 0, 42);
                 textBoxRepass.StateCommon.Border.Color2 = Color.FromArgb(255, 0, 42);
             }

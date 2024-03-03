@@ -34,9 +34,9 @@
             buttonDashboard = new Krypton.Toolkit.KryptonButton();
             mainPanel = new Panel();
             topbar = new Panel();
+            settingsButton = new Krypton.Toolkit.KryptonButton();
             loggedInAsLabel = new Label();
             dietButton = new Krypton.Toolkit.KryptonButton();
-            settingsButton = new PictureBox();
             buttonMin = new PictureBox();
             buttonClose = new PictureBox();
             buttonCalculators = new Krypton.Toolkit.KryptonButton();
@@ -50,7 +50,6 @@
             topRightC = new PictureBox();
             loggedAsTimer = new System.Windows.Forms.Timer(components);
             topbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)settingsButton).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo2).BeginInit();
@@ -164,9 +163,9 @@
             // 
             // topbar
             // 
+            topbar.Controls.Add(settingsButton);
             topbar.Controls.Add(loggedInAsLabel);
             topbar.Controls.Add(dietButton);
-            topbar.Controls.Add(settingsButton);
             topbar.Controls.Add(buttonMin);
             topbar.Controls.Add(buttonClose);
             topbar.Controls.Add(buttonCalculators);
@@ -187,6 +186,71 @@
             topbar.MouseDown += panel1_MouseDown;
             topbar.MouseMove += panel1_MouseMove;
             topbar.MouseUp += panel1_MouseUp;
+            // 
+            // settingsButton
+            // 
+            settingsButton.CornerRoundingRadius = 0F;
+            settingsButton.Location = new Point(613, 8);
+            settingsButton.Name = "settingsButton";
+            settingsButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            settingsButton.Size = new Size(19, 19);
+            settingsButton.StateCommon.Back.Color1 = Color.White;
+            settingsButton.StateCommon.Back.Color2 = Color.White;
+            settingsButton.StateCommon.Back.ColorAngle = 45F;
+            settingsButton.StateCommon.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            settingsButton.StateCommon.Back.Image = Properties.Resources.sett__1___1__removebg_preview;
+            settingsButton.StateCommon.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            settingsButton.StateCommon.Border.Color1 = Color.Silver;
+            settingsButton.StateCommon.Border.Color2 = Color.Silver;
+            settingsButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            settingsButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            settingsButton.StateCommon.Border.Rounding = 0F;
+            settingsButton.StateCommon.Content.Padding = new Padding(-1, 32, -1, -1);
+            settingsButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            settingsButton.StateNormal.Back.Color1 = Color.FromArgb(250, 252, 252);
+            settingsButton.StateNormal.Back.Color2 = Color.FromArgb(250, 252, 252);
+            settingsButton.StateNormal.Back.ColorAngle = 45F;
+            settingsButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            settingsButton.StateNormal.Back.Image = Properties.Resources.sett__1___1__removebg_preview;
+            settingsButton.StateNormal.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            settingsButton.StateNormal.Border.Color1 = Color.Transparent;
+            settingsButton.StateNormal.Border.Color2 = Color.Transparent;
+            settingsButton.StateNormal.Border.ColorAngle = 45F;
+            settingsButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            settingsButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            settingsButton.StateNormal.Border.Rounding = 0F;
+            settingsButton.StateNormal.Content.Padding = new Padding(-1, 32, -1, -1);
+            settingsButton.StateNormal.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            settingsButton.StatePressed.Back.Color1 = Color.FromArgb(250, 252, 252);
+            settingsButton.StatePressed.Back.Color2 = Color.FromArgb(250, 252, 252);
+            settingsButton.StatePressed.Back.ColorAngle = 45F;
+            settingsButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            settingsButton.StatePressed.Back.Image = Properties.Resources.sett__1___1__removebg_preview;
+            settingsButton.StatePressed.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            settingsButton.StatePressed.Border.Color1 = Color.Transparent;
+            settingsButton.StatePressed.Border.Color2 = Color.Transparent;
+            settingsButton.StatePressed.Border.ColorAngle = 45F;
+            settingsButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            settingsButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            settingsButton.StatePressed.Border.Rounding = 0F;
+            settingsButton.StatePressed.Content.Padding = new Padding(-1, 32, -1, -1);
+            settingsButton.StatePressed.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            settingsButton.StateTracking.Back.Color1 = Color.FromArgb(224, 224, 224);
+            settingsButton.StateTracking.Back.Color2 = Color.FromArgb(224, 224, 224);
+            settingsButton.StateTracking.Back.ColorAngle = 45F;
+            settingsButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            settingsButton.StateTracking.Back.Image = Properties.Resources.sett__1___1__removebg_preview;
+            settingsButton.StateTracking.Back.ImageStyle = Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            settingsButton.StateTracking.Border.Color1 = Color.Transparent;
+            settingsButton.StateTracking.Border.Color2 = Color.Transparent;
+            settingsButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
+            settingsButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            settingsButton.StateTracking.Border.Rounding = 0F;
+            settingsButton.StateTracking.Content.Padding = new Padding(-1, 32, -1, -1);
+            settingsButton.StateTracking.Content.ShortText.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
+            settingsButton.TabIndex = 13;
+            settingsButton.Values.Text = "";
+            settingsButton.Click += settingsButton_Click;
             // 
             // loggedInAsLabel
             // 
@@ -267,18 +331,6 @@
             dietButton.Values.Text = "";
             dietButton.Click += kryptonButton1_Click_2;
             // 
-            // settingsButton
-            // 
-            settingsButton.Image = (Image)resources.GetObject("settingsButton.Image");
-            settingsButton.Location = new Point(613, 8);
-            settingsButton.Name = "settingsButton";
-            settingsButton.Size = new Size(19, 19);
-            settingsButton.TabIndex = 5;
-            settingsButton.TabStop = false;
-            settingsButton.Click += settingsButton_Click;
-            settingsButton.MouseEnter += pictureBox1_MouseEnter_1;
-            settingsButton.MouseLeave += pictureBox1_MouseLeave_1;
-            // 
             // buttonMin
             // 
             buttonMin.BackColor = Color.White;
@@ -286,7 +338,7 @@
             buttonMin.Location = new Point(638, 8);
             buttonMin.Name = "buttonMin";
             buttonMin.Size = new Size(19, 19);
-            buttonMin.SizeMode = PictureBoxSizeMode.CenterImage;
+            buttonMin.SizeMode = PictureBoxSizeMode.Zoom;
             buttonMin.TabIndex = 2;
             buttonMin.TabStop = false;
             buttonMin.Click += pictureBox2_Click;
@@ -542,7 +594,6 @@
             Load += Form1_Load;
             Shown += Form1_Shown;
             topbar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)settingsButton).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonMin).EndInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
             ((System.ComponentModel.ISupportInitialize)logo2).EndInit();
@@ -566,7 +617,6 @@
         private PictureBox buttonMin;
         private PictureBox buttonClose;
         private Krypton.Toolkit.KryptonButton buttonHome;
-        private PictureBox settingsButton;
         private Krypton.Toolkit.KryptonButton buttonCalculators;
         private PictureBox topRightC;
         private PictureBox vLine2;
@@ -576,5 +626,6 @@
         private Krypton.Toolkit.KryptonButton dietButton;
         private Label loggedInAsLabel;
         private System.Windows.Forms.Timer loggedAsTimer;
+        private Krypton.Toolkit.KryptonButton settingsButton;
     }
 }

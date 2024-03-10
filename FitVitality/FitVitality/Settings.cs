@@ -288,7 +288,7 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (textBoxConfirm.Text == "ПОТВЪРДЖДАВАМ")
+                if (textBoxConfirm.Text == "ПОТВЪРЖДАВАМ")
                 {
                     confirmButton.Enabled = true;
                 }

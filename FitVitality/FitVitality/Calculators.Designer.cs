@@ -1332,7 +1332,7 @@
             gainLabel.Name = "gainLabel";
             gainLabel.Size = new Size(256, 23);
             gainLabel.TabIndex = 41;
-            gainLabel.TextAlign = ContentAlignment.MiddleCenter;
+            gainLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // mildGainLabel
             // 
@@ -1341,7 +1341,7 @@
             mildGainLabel.Name = "mildGainLabel";
             mildGainLabel.Size = new Size(256, 23);
             mildGainLabel.TabIndex = 40;
-            mildGainLabel.TextAlign = ContentAlignment.MiddleCenter;
+            mildGainLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // maintainLabel
             // 
@@ -1350,7 +1350,7 @@
             maintainLabel.Name = "maintainLabel";
             maintainLabel.Size = new Size(256, 23);
             maintainLabel.TabIndex = 38;
-            maintainLabel.TextAlign = ContentAlignment.MiddleCenter;
+            maintainLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // mildLossLabel
             // 
@@ -1359,7 +1359,7 @@
             mildLossLabel.Name = "mildLossLabel";
             mildLossLabel.Size = new Size(256, 23);
             mildLossLabel.TabIndex = 37;
-            mildLossLabel.TextAlign = ContentAlignment.MiddleCenter;
+            mildLossLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // activityLabel
             // 
@@ -1378,7 +1378,7 @@
             lossLabel.Name = "lossLabel";
             lossLabel.Size = new Size(256, 23);
             lossLabel.TabIndex = 27;
-            lossLabel.TextAlign = ContentAlignment.MiddleCenter;
+            lossLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
             // extraMeasurementsL
             // 
@@ -1672,7 +1672,7 @@
             fat.Name = "fat";
             fat.Size = new Size(0, 23);
             fat.TabIndex = 53;
-            fat.TextAlign = ContentAlignment.MiddleCenter;
+            fat.TextAlign = ContentAlignment.MiddleRight;
             // 
             // carbohydrates
             // 
@@ -1682,7 +1682,7 @@
             carbohydrates.Name = "carbohydrates";
             carbohydrates.Size = new Size(0, 23);
             carbohydrates.TabIndex = 52;
-            carbohydrates.TextAlign = ContentAlignment.MiddleCenter;
+            carbohydrates.TextAlign = ContentAlignment.MiddleRight;
             // 
             // protein
             // 
@@ -1692,7 +1692,7 @@
             protein.Name = "protein";
             protein.Size = new Size(0, 23);
             protein.TabIndex = 51;
-            protein.TextAlign = ContentAlignment.MiddleCenter;
+            protein.TextAlign = ContentAlignment.MiddleRight;
             // 
             // proteinLabel
             // 

@@ -38,6 +38,11 @@ namespace FitVitality
         private string unit_selection;
         public double bmi;
 
+        bool balancedClicked;
+        bool lowFatClicked;
+        bool lowCarbsClicked;
+        bool highProteinClicked;
+
         private string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
         public string _userID;
 
@@ -548,7 +553,7 @@ namespace FitVitality
                 bmiDescription.Text = "Индексът на телесната маса е\r\nизмерване " +
                     "на\r\nслабостта на човек\r\nспоред ръстта и теглото му.\r\n" +
                     "По конкретно се използва\r\nза категоризиране дали дадено\r\nлице е с поднормено, нормално\r\nили наднормено тегло.";
-                bmiDescription.Location = new Point(bmiDescription.Location.X, bmiDescription.Location.Y +20);
+                bmiDescription.Location = new Point(bmiDescription.Location.X, bmiDescription.Location.Y + 20);
                 bmrCalcLabel.Text = "BMR Калкулатор";
                 bmrDescription.Text = "Вашата базална метаболитна\r\nскорост е броят калории,\r\n" +
                     "които изгаряте през деня\r\nспоред нивото ви на активност\r\n(можете да промените това\r\nот настройките).";
@@ -617,6 +622,7 @@ namespace FitVitality
                 idealWeightDescription.Text = "Калкулаторът за идеално тегло\r\nе инструмент, " +
                     "предназначен да\r\nоцени диапазона на\r\nздравословно тегло";
                 idealWeightLabel1.Text = "Идеалното тегло за вас\r\nспоред формулата на Робинсон е";
+                idealWeightLabel1.Location = new Point(idealWeightLabel1.Location.X, idealWeightLabel1.Location.Y - 5);
                 calorieIntake.Location = new Point(calorieIntake.Location.X - 15, calorieIntake.Location.Y);
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -1388,54 +1394,234 @@ namespace FitVitality
             {
                 if (activityComboBoxMacro.SelectedItem == "Sedentary")
                 {
-                    MacroBalanced(sedentaryBMR);
+                    if (balancedClicked)
+                    {
+                        MacroBalanced(sedentaryBMR);
+                    }
+                    else if(lowCarbsClicked)
+                    {
+                        MacroLowCarb(sedentaryBMR);
+                    }
+                    else if(lowFatClicked)
+                    {
+                        MacroLowFat(sedentaryBMR);
+                    }
+                    else if(highProteinClicked)
+                    {
+                        MacroHighProtein(sedentaryBMR);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Light")
                 {
-                    MacroBalanced(exerciseBMR13);
+                    if (balancedClicked)
+                    { 
+                        MacroBalanced(exerciseBMR13);
+                    }
+                    else if(lowCarbsClicked)
+                    {
+                        MacroLowCarb(exerciseBMR13);
+                    }
+                    else if(lowFatClicked)
+                    {
+                        MacroLowFat(exerciseBMR13);
+                    }
+                    else if(highProteinClicked)
+                    {
+                        MacroHighProtein(exerciseBMR13);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Moderate")
                 {
-                    MacroBalanced(exerciseBMR45);
+                    if (balancedClicked)
+                    {
+                        MacroBalanced(exerciseBMR45);
+                    }
+                    else if(lowCarbsClicked)
+                    {
+                        MacroLowCarb(exerciseBMR45);
+                    }
+                    else if(lowFatClicked)
+                    {
+                        MacroLowFat(exerciseBMR45);
+                    }
+                    else if(highProteinClicked)
+                    {
+                        MacroHighProtein(exerciseBMR45);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Active")
                 {
-                    MacroBalanced(DailyBMR34);
+                    if(balancedClicked)
+                    {
+                        MacroBalanced(DailyBMR34);
+                    }
+                    else if(lowCarbsClicked)
+                    {
+                        MacroLowCarb(DailyBMR34);
+                    }
+                    else if(lowFatClicked)
+                    {
+                        MacroLowFat(DailyBMR34);
+                    }
+                    else if(highProteinClicked)
+                    {
+                        MacroHighProtein(DailyBMR34);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Very active")
                 {
-                    MacroBalanced(intenseBMR67);
+                    if(balancedClicked)
+                    {
+                        MacroBalanced(intenseBMR67);
+                    }
+                    else if(lowCarbsClicked)
+                    {
+                        MacroLowCarb(intenseBMR67);
+                    }
+                    else if(lowFatClicked)
+                    {
+                        MacroLowFat(intenseBMR67);
+                    }
+                    else if(highProteinClicked)
+                    {
+                        MacroHighProtein(intenseBMR67);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Extra active")
                 {
-                    MacroBalanced(veryIntenseBMR);
+                    if(balancedClicked)
+                    {
+                        MacroBalanced(veryIntenseBMR);
+                    }
+                    else if(lowCarbsClicked)
+                    {
+                        MacroLowCarb(veryIntenseBMR);
+                    }
+                    else if(lowFatClicked)
+                    {
+                        MacroLowFat(veryIntenseBMR);
+                    }
+                    else if(highProteinClicked)
+                    {
+                        MacroHighProtein(veryIntenseBMR);
+                    }
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 if (activityComboBoxMacro.SelectedItem == "Заседналост")
                 {
-                    MacroBalanced(sedentaryBMR);
+                    if (balancedClicked)
+                    {
+                        MacroBalanced(sedentaryBMR);
+                    }
+                    else if (lowCarbsClicked)
+                    {
+                        MacroLowCarb(sedentaryBMR);
+                    }
+                    else if (lowFatClicked)
+                    {
+                        MacroLowFat(sedentaryBMR);
+                    }
+                    else if (highProteinClicked)
+                    {
+                        MacroHighProtein(sedentaryBMR);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Лека")
                 {
-                    MacroBalanced(exerciseBMR13);
+                    if (balancedClicked)
+                    {
+                        MacroBalanced(exerciseBMR13);
+                    }
+                    else if (lowCarbsClicked)
+                    {
+                        MacroLowCarb(exerciseBMR13);
+                    }
+                    else if (lowFatClicked)
+                    {
+                        MacroLowFat(exerciseBMR13);
+                    }
+                    else if (highProteinClicked)
+                    {
+                        MacroHighProtein(exerciseBMR13);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Умерена")
                 {
-                    MacroBalanced(exerciseBMR45);
+                    if (balancedClicked)
+                    {
+                        MacroBalanced(exerciseBMR45);
+                    }
+                    else if (lowCarbsClicked)
+                    {
+                        MacroLowCarb(exerciseBMR45);
+                    }
+                    else if (lowFatClicked)
+                    {
+                        MacroLowFat(exerciseBMR45);
+                    }
+                    else if (highProteinClicked)
+                    {
+                        MacroHighProtein(exerciseBMR45);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Активна")
                 {
-                    MacroBalanced(DailyBMR34);
+                    if (balancedClicked)
+                    {
+                        MacroBalanced(DailyBMR34);
+                    }
+                    else if (lowCarbsClicked)
+                    {
+                        MacroLowCarb(DailyBMR34);
+                    }
+                    else if (lowFatClicked)
+                    {
+                        MacroLowFat(DailyBMR34);
+                    }
+                    else if (highProteinClicked)
+                    {
+                        MacroHighProtein(DailyBMR34);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Много активна")
                 {
-                    MacroBalanced(intenseBMR67);
+                    if (balancedClicked)
+                    {
+                        MacroBalanced(intenseBMR67);
+                    }
+                    else if (lowCarbsClicked)
+                    {
+                        MacroLowCarb(intenseBMR67);
+                    }
+                    else if (lowFatClicked)
+                    {
+                        MacroLowFat(intenseBMR67);
+                    }
+                    else if (highProteinClicked)
+                    {
+                        MacroHighProtein(intenseBMR67);
+                    }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Екстра активна")
                 {
-                    MacroBalanced(veryIntenseBMR);
+                    if (balancedClicked)
+                    {
+                        MacroBalanced(veryIntenseBMR);
+                    }
+                    else if (lowCarbsClicked)
+                    {
+                        MacroLowCarb(veryIntenseBMR);
+                    }
+                    else if (lowFatClicked)
+                    {
+                        MacroLowFat(veryIntenseBMR);
+                    }
+                    else if (highProteinClicked)
+                    {
+                        MacroHighProtein(veryIntenseBMR);
+                    }
                 }
             }
         }

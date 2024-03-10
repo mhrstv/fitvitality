@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 15D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 30D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 20D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 50D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 70D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 60D);
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(1D, 15D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(2D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(3D, 30D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(4D, 20D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(5D, 50D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(6D, 70D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(7D, 60D);
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             rotationTimer = new System.Windows.Forms.Timer(components);
             hLine1 = new PictureBox();
             hLine2 = new PictureBox();
@@ -190,7 +190,7 @@
             // workoutsTextBox
             // 
             workoutsTextBox.BorderColor = Color.White;
-            workoutsTextBox.CustomizableEdges = customizableEdges7;
+            workoutsTextBox.CustomizableEdges = customizableEdges1;
             workoutsTextBox.DefaultText = "";
             workoutsTextBox.DisabledState.BorderColor = Color.White;
             workoutsTextBox.DisabledState.FillColor = Color.White;
@@ -208,7 +208,7 @@
             workoutsTextBox.PlaceholderForeColor = Color.White;
             workoutsTextBox.PlaceholderText = "";
             workoutsTextBox.SelectedText = "";
-            workoutsTextBox.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            workoutsTextBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
             workoutsTextBox.Size = new Size(186, 182);
             workoutsTextBox.TabIndex = 2;
             // 
@@ -364,54 +364,57 @@
             // 
             dietChart.BorderlineColor = Color.Empty;
             dietChart.BorderlineWidth = 0;
-            chartArea2.AxisX.Maximum = 7D;
-            chartArea2.AxisX.Minimum = 1D;
-            chartArea2.AxisY.Maximum = 100D;
-            chartArea2.AxisY.Minimum = 0D;
-            chartArea2.Name = "ChartArea";
-            dietChart.ChartAreas.Add(chartArea2);
+            dietChart.BorderSkin.BorderWidth = 0;
+            chartArea1.AxisX.Maximum = 7D;
+            chartArea1.AxisX.Minimum = 1D;
+            chartArea1.AxisY.Maximum = 100D;
+            chartArea1.AxisY.Minimum = 0D;
+            chartArea1.Name = "ChartArea";
+            dietChart.ChartAreas.Add(chartArea1);
+            dietChart.Enabled = false;
             dietChart.Location = new Point(51, 71);
             dietChart.Name = "dietChart";
             dietChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             dietChart.PaletteCustomColors = new Color[] { Color.FromArgb(92, 225, 230) };
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series2.Font = new Font("Arial", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            series2.Name = "WeeklyGoals";
-            dataPoint8.AxisLabel = "Mon";
-            dataPoint8.Color = Color.FromArgb(92, 230, 255);
-            dataPoint8.Label = "";
-            dataPoint8.LabelForeColor = Color.Black;
-            dataPoint9.AxisLabel = "Tue";
-            dataPoint9.Color = Color.FromArgb(92, 230, 255);
-            dataPoint10.AxisLabel = "Wed";
-            dataPoint10.Color = Color.FromArgb(92, 230, 255);
-            dataPoint11.AxisLabel = "Thu";
-            dataPoint11.Color = Color.FromArgb(92, 230, 255);
-            dataPoint12.AxisLabel = "Fri";
-            dataPoint12.Color = Color.FromArgb(92, 230, 255);
-            dataPoint13.AxisLabel = "Sat";
-            dataPoint13.Color = Color.FromArgb(92, 230, 255);
-            dataPoint14.AxisLabel = "Sun";
-            dataPoint14.Color = Color.FromArgb(92, 230, 255);
-            dataPoint14.Label = "";
-            series2.Points.Add(dataPoint8);
-            series2.Points.Add(dataPoint9);
-            series2.Points.Add(dataPoint10);
-            series2.Points.Add(dataPoint11);
-            series2.Points.Add(dataPoint12);
-            series2.Points.Add(dataPoint13);
-            series2.Points.Add(dataPoint14);
-            dietChart.Series.Add(series2);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Font = new Font("Arial", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            series1.Name = "WeeklyGoals";
+            dataPoint1.AxisLabel = "Mon";
+            dataPoint1.Color = Color.FromArgb(92, 230, 255);
+            dataPoint1.Label = "";
+            dataPoint1.LabelForeColor = Color.Black;
+            dataPoint2.AxisLabel = "Tue";
+            dataPoint2.Color = Color.FromArgb(92, 230, 255);
+            dataPoint3.AxisLabel = "Wed";
+            dataPoint3.Color = Color.FromArgb(92, 230, 255);
+            dataPoint4.AxisLabel = "Thu";
+            dataPoint4.Color = Color.FromArgb(92, 230, 255);
+            dataPoint5.AxisLabel = "Fri";
+            dataPoint5.Color = Color.FromArgb(92, 230, 255);
+            dataPoint6.AxisLabel = "Sat";
+            dataPoint6.Color = Color.FromArgb(92, 230, 255);
+            dataPoint7.AxisLabel = "Sun";
+            dataPoint7.Color = Color.FromArgb(92, 230, 255);
+            dataPoint7.Label = "";
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            series1.Points.Add(dataPoint4);
+            series1.Points.Add(dataPoint5);
+            series1.Points.Add(dataPoint6);
+            series1.Points.Add(dataPoint7);
+            dietChart.Series.Add(series1);
             dietChart.Size = new Size(340, 135);
             dietChart.TabIndex = 16;
+            dietChart.TabStop = false;
             dietChart.Text = "Diet";
-            title2.Alignment = ContentAlignment.BottomCenter;
-            title2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            title2.Name = "Diet";
-            title2.Text = "This week's goals %";
-            dietChart.Titles.Add(title2);
+            title1.Alignment = ContentAlignment.BottomCenter;
+            title1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            title1.Name = "Diet";
+            title1.Text = "This week's goals %";
+            dietChart.Titles.Add(title1);
             // 
             // graphBorders
             // 
@@ -431,17 +434,17 @@
             weightChangesPanel.Controls.Add(weightChangesTextBox);
             weightChangesPanel.Controls.Add(weightChangesLabel);
             weightChangesPanel.Controls.Add(weightChangesBorders);
-            weightChangesPanel.CustomizableEdges = customizableEdges11;
+            weightChangesPanel.CustomizableEdges = customizableEdges5;
             weightChangesPanel.Location = new Point(251, 223);
             weightChangesPanel.Name = "weightChangesPanel";
-            weightChangesPanel.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            weightChangesPanel.ShadowDecoration.CustomizableEdges = customizableEdges6;
             weightChangesPanel.Size = new Size(173, 127);
             weightChangesPanel.TabIndex = 18;
             // 
             // weightChangesButton
             // 
             weightChangesButton.BorderRadius = 8;
-            weightChangesButton.CustomizableEdges = customizableEdges9;
+            weightChangesButton.CustomizableEdges = customizableEdges3;
             weightChangesButton.DisabledState.BorderColor = Color.DarkGray;
             weightChangesButton.DisabledState.CustomBorderColor = Color.DarkGray;
             weightChangesButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -451,7 +454,7 @@
             weightChangesButton.ForeColor = Color.White;
             weightChangesButton.Location = new Point(39, 95);
             weightChangesButton.Name = "weightChangesButton";
-            weightChangesButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            weightChangesButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             weightChangesButton.Size = new Size(94, 24);
             weightChangesButton.TabIndex = 4;
             weightChangesButton.Text = "Change";

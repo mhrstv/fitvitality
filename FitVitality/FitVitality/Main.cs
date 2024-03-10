@@ -340,5 +340,15 @@ namespace FitVitality
                 this.Update();
             }
         }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

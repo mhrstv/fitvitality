@@ -49,6 +49,7 @@
             vLine2 = new PictureBox();
             topRightC = new PictureBox();
             loggedAsTimer = new System.Windows.Forms.Timer(components);
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
@@ -585,6 +586,11 @@
             loggedAsTimer.Enabled = true;
             loggedAsTimer.Tick += loggedAsTimer_Tick;
             // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 25;
+            guna2Elipse1.TargetControl = this;
+            // 
             // Form1
             // 
             AutoScaleMode = AutoScaleMode.None;
@@ -610,6 +616,7 @@
             StateCommon.Border.Rounding = 15F;
             StateCommon.Border.Width = 1;
             Text = "FitVitality";
+            Activated += Form1_Activated;
             FormClosed += Form1_FormClosed;
             Load += Form1_Load;
             Shown += Form1_Shown;
@@ -647,5 +654,6 @@
         private Label loggedInAsLabel;
         private System.Windows.Forms.Timer loggedAsTimer;
         private Krypton.Toolkit.KryptonButton settingsButton;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

@@ -618,11 +618,11 @@ namespace FitVitality
 
         private void timerage1_Tick(object sender, EventArgs e) // Таймер за анимация на страницата за въвеждане на възраст и пол
         {
-            if (helloPanel.Width <= 378) // Проверка дали ширината на панела е по-малка от 378
+            if (helloPanel.Width <= 451) // Проверка дали ширината на панела е по-малка от 378
             {
                 helloPanel.Width += 6; // Увеличаване на ширината на панела с 6
             }
-            if (helloPanel.Width >= 378) // Проверка дали ширината на панела  е по-голяма от 378
+            if (helloPanel.Width >= 451) // Проверка дали ширината на панела  е по-голяма от 378
             {
                 timerAge1.Enabled = false; // Изключване на таймера
                 timerAge2.Enabled = true; // Включване на следващия таймер

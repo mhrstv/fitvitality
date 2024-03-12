@@ -553,6 +553,16 @@ namespace FitVitality.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap deleteaccpan {
+            get {
+                object obj = ResourceManager.GetObject("deleteaccpan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dietButton {
             get {
                 object obj = ResourceManager.GetObject("dietButton", resourceCulture);

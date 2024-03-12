@@ -30,8 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             topbar = new Panel();
             logo2 = new PictureBox();
@@ -488,7 +488,7 @@
             // helloPanel
             // 
             helloPanel.Controls.Add(helloLabel);
-            helloPanel.Location = new Point(81, 15);
+            helloPanel.Location = new Point(45, 15);
             helloPanel.Name = "helloPanel";
             helloPanel.Size = new Size(1, 26);
             helloPanel.TabIndex = 9;
@@ -497,9 +497,9 @@
             // 
             helloLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             helloLabel.ForeColor = SystemColors.Control;
-            helloLabel.Location = new Point(3, 4);
+            helloLabel.Location = new Point(0, 4);
             helloLabel.Name = "helloLabel";
-            helloLabel.Size = new Size(372, 19);
+            helloLabel.Size = new Size(451, 19);
             helloLabel.TabIndex = 0;
             helloLabel.Text = "Hello, ! Thank you for choosing FitVitality!";
             helloLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -726,7 +726,7 @@
             // buttonDone
             // 
             buttonDone.BorderRadius = 10;
-            buttonDone.CustomizableEdges = customizableEdges1;
+            buttonDone.CustomizableEdges = customizableEdges3;
             buttonDone.DisabledState.BorderColor = Color.DarkGray;
             buttonDone.DisabledState.CustomBorderColor = Color.DarkGray;
             buttonDone.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -736,7 +736,7 @@
             buttonDone.ForeColor = Color.White;
             buttonDone.Location = new Point(225, 242);
             buttonDone.Name = "buttonDone";
-            buttonDone.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            buttonDone.ShadowDecoration.CustomizableEdges = customizableEdges4;
             buttonDone.Size = new Size(90, 25);
             buttonDone.TabIndex = 45;
             buttonDone.Text = "Done";

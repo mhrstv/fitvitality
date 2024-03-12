@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -64,9 +63,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             deleteAccPanel = new Panel();
-            closeDAPanel = new Panel();
-            buttonClose = new PictureBox();
-            confirmPanel = new Panel();
+            closeDeleteAccPanel = new PictureBox();
             confirmButton = new Krypton.Toolkit.KryptonButton();
             textBoxConfirm = new Krypton.Toolkit.KryptonTextBox();
             confirmLabel1 = new Label();
@@ -120,9 +117,7 @@
             genderComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             goalComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             deleteAccPanel.SuspendLayout();
-            closeDAPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)buttonClose).BeginInit();
-            confirmPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)closeDeleteAccPanel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)deletePanel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
@@ -173,55 +168,37 @@
             // 
             // deleteAccPanel
             // 
-            deleteAccPanel.Controls.Add(closeDAPanel);
-            deleteAccPanel.Controls.Add(confirmPanel);
+            deleteAccPanel.Controls.Add(closeDeleteAccPanel);
+            deleteAccPanel.Controls.Add(confirmButton);
             deleteAccPanel.Controls.Add(textBoxConfirm);
             deleteAccPanel.Controls.Add(confirmLabel1);
             deleteAccPanel.Controls.Add(confirmLabel2);
             deleteAccPanel.Controls.Add(deletePanel);
-            deleteAccPanel.Location = new Point(188, 97);
+            deleteAccPanel.Location = new Point(175, 87);
             deleteAccPanel.Name = "deleteAccPanel";
-            deleteAccPanel.Size = new Size(0, 0);
+            deleteAccPanel.Size = new Size(341, 174);
             deleteAccPanel.TabIndex = 11;
             deleteAccPanel.Visible = false;
             // 
-            // closeDAPanel
+            // closeDeleteAccPanel
             // 
-            closeDAPanel.BackColor = Color.FromArgb(74, 74, 74);
-            closeDAPanel.Controls.Add(buttonClose);
-            closeDAPanel.Location = new Point(314, 8);
-            closeDAPanel.Name = "closeDAPanel";
-            closeDAPanel.Size = new Size(17, 17);
-            closeDAPanel.TabIndex = 16;
-            // 
-            // buttonClose
-            // 
-            buttonClose.BackColor = Color.FromArgb(74, 74, 74);
-            buttonClose.Image = (Image)resources.GetObject("buttonClose.Image");
-            buttonClose.Location = new Point(0, 0);
-            buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(17, 17);
-            buttonClose.SizeMode = PictureBoxSizeMode.Zoom;
-            buttonClose.TabIndex = 12;
-            buttonClose.TabStop = false;
-            buttonClose.Click += buttonClose_Click;
-            buttonClose.MouseEnter += buttonClose_MouseEnter;
-            buttonClose.MouseLeave += buttonClose_MouseLeave;
-            // 
-            // confirmPanel
-            // 
-            confirmPanel.BackColor = Color.FromArgb(74, 74, 74);
-            confirmPanel.Controls.Add(confirmButton);
-            confirmPanel.Location = new Point(101, 133);
-            confirmPanel.Name = "confirmPanel";
-            confirmPanel.Size = new Size(138, 25);
-            confirmPanel.TabIndex = 15;
+            closeDeleteAccPanel.BackColor = Color.WhiteSmoke;
+            closeDeleteAccPanel.Image = Properties.Resources.closebutton;
+            closeDeleteAccPanel.Location = new Point(312, 8);
+            closeDeleteAccPanel.Name = "closeDeleteAccPanel";
+            closeDeleteAccPanel.Size = new Size(19, 19);
+            closeDeleteAccPanel.SizeMode = PictureBoxSizeMode.Zoom;
+            closeDeleteAccPanel.TabIndex = 64;
+            closeDeleteAccPanel.TabStop = false;
+            closeDeleteAccPanel.Click += pictureBox1_Click_1;
+            closeDeleteAccPanel.MouseEnter += closeDeleteAccPanel_MouseEnter;
+            closeDeleteAccPanel.MouseLeave += closeDeleteAccPanel_MouseLeave;
             // 
             // confirmButton
             // 
             confirmButton.CornerRoundingRadius = 15F;
             confirmButton.Enabled = false;
-            confirmButton.Location = new Point(0, 0);
+            confirmButton.Location = new Point(101, 135);
             confirmButton.Name = "confirmButton";
             confirmButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             confirmButton.Size = new Size(138, 25);
@@ -302,9 +279,9 @@
             // 
             // confirmLabel1
             // 
-            confirmLabel1.BackColor = Color.FromArgb(74, 74, 74);
+            confirmLabel1.BackColor = Color.WhiteSmoke;
             confirmLabel1.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            confirmLabel1.ForeColor = SystemColors.Control;
+            confirmLabel1.ForeColor = SystemColors.ActiveCaptionText;
             confirmLabel1.Location = new Point(13, 28);
             confirmLabel1.Name = "confirmLabel1";
             confirmLabel1.Size = new Size(315, 33);
@@ -313,9 +290,9 @@
             // 
             // confirmLabel2
             // 
-            confirmLabel2.BackColor = Color.FromArgb(74, 74, 74);
+            confirmLabel2.BackColor = Color.WhiteSmoke;
             confirmLabel2.Font = new Font("Arial Rounded MT Bold", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            confirmLabel2.ForeColor = SystemColors.Control;
+            confirmLabel2.ForeColor = SystemColors.ActiveCaptionText;
             confirmLabel2.Location = new Point(13, 61);
             confirmLabel2.Name = "confirmLabel2";
             confirmLabel2.Size = new Size(315, 33);
@@ -324,7 +301,7 @@
             // 
             // deletePanel
             // 
-            deletePanel.Image = (Image)resources.GetObject("deletePanel.Image");
+            deletePanel.Image = Properties.Resources.deleteaccpan;
             deletePanel.Location = new Point(0, 0);
             deletePanel.Name = "deletePanel";
             deletePanel.Size = new Size(341, 174);
@@ -1033,6 +1010,7 @@
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(690, 368);
+            Controls.Add(deleteAccPanel);
             Controls.Add(changePasswordPanel);
             Controls.Add(errorPanel);
             Controls.Add(vLine3);
@@ -1056,7 +1034,6 @@
             Controls.Add(langLabel);
             Controls.Add(accSettings_label);
             Controls.Add(appSettings_label);
-            Controls.Add(deleteAccPanel);
             Controls.Add(goalComboBox);
             Controls.Add(genderComboBox);
             Controls.Add(themeComboBox);
@@ -1073,9 +1050,7 @@
             Load += Settings_Load;
             deleteAccPanel.ResumeLayout(false);
             deleteAccPanel.PerformLayout();
-            closeDAPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)buttonClose).EndInit();
-            confirmPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)closeDeleteAccPanel).EndInit();
             ((System.ComponentModel.ISupportInitialize)deletePanel).EndInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).EndInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).EndInit();
@@ -1103,10 +1078,7 @@
         private Label confirmLabel1;
         private Krypton.Toolkit.KryptonButton confirmButton;
         private Label confirmLabel2;
-        private PictureBox buttonClose;
         private PictureBox deletePanel;
-        private Panel confirmPanel;
-        private Panel closeDAPanel;
         private Label appSettings_label;
         private Label accSettings_label;
         private Label langLabel;
@@ -1158,5 +1130,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox genderComboBox;
         private Guna.UI2.WinForms.Guna2ComboBox goalComboBox;
         private PictureBox beta;
+        private PictureBox closeDeleteAccPanel;
     }
 }

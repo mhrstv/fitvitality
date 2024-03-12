@@ -50,8 +50,6 @@ namespace FitVitality
         {
             beta.Visible = false;
             deleteAccPanel.Visible = true;
-            confirmPanel.Visible = true;
-            closeDAPanel.Visible = true;
             deleteAccPanel.Height = 174;
             deleteAccPanel.Width = 341;
             deleteAccountButton.Visible = false;
@@ -332,45 +330,7 @@ namespace FitVitality
                 connection.Close();
             }
         }
-        //Метод за затваряне на панела за изтриване на акаунт
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            deleteAccPanel.Visible = false;
-            beta.Visible = true;
-            deleteAccountButton.Visible = true;
-            appSettings_label.Visible = true;
-            accSettings_label.Visible = true;
-            langLabel.Visible = true;
-            languageComboBox.Visible = true;
-            themeLabel.Visible = true;
-            nameLabel.Visible = true;
-            ageLabel.Visible = true;
-            genderLabel.Visible = true;
-            goalLabel.Visible = true;
-            weightLabel.Visible = true;
-            heightLabel.Visible = true;
-            nameTextBox.Visible = true;
-            ageTextBox.Visible = true;
-            genderComboBox.Visible = true;
-            weightTextBox.Visible = true;
-            heightTextBox.Visible = true;
-            goalComboBox.Visible = true;
-            buttonSave.Visible = true;
-            vLine3.Visible = true;
-            themeComboBox.Visible = true;
-            emailTextBox.Visible = true;
-            changePasswordButton.Visible = true;
-        }
 
-        private void buttonClose_MouseEnter(object sender, EventArgs e)
-        {
-            buttonClose.BackColor = Color.DimGray;
-        }
-
-        private void buttonClose_MouseLeave(object sender, EventArgs e)
-        {
-            buttonClose.BackColor = Color.FromArgb(74, 74, 74);
-        }
         private bool validName(string name)
         {
             foreach (char c in name)
@@ -939,6 +899,46 @@ namespace FitVitality
             }
             else
                 cfg.Write("Theme", "dark", "SETTINGS");
+        }
+
+        //Метод за затваряне на панела за изтриване на акаунт
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            deleteAccPanel.Visible = false;
+            beta.Visible = true;
+            deleteAccountButton.Visible = true;
+            appSettings_label.Visible = true;
+            accSettings_label.Visible = true;
+            langLabel.Visible = true;
+            languageComboBox.Visible = true;
+            themeLabel.Visible = true;
+            nameLabel.Visible = true;
+            ageLabel.Visible = true;
+            genderLabel.Visible = true;
+            goalLabel.Visible = true;
+            weightLabel.Visible = true;
+            heightLabel.Visible = true;
+            nameTextBox.Visible = true;
+            ageTextBox.Visible = true;
+            genderComboBox.Visible = true;
+            weightTextBox.Visible = true;
+            heightTextBox.Visible = true;
+            goalComboBox.Visible = true;
+            buttonSave.Visible = true;
+            vLine3.Visible = true;
+            themeComboBox.Visible = true;
+            emailTextBox.Visible = true;
+            changePasswordButton.Visible = true;
+        }
+
+        private void closeDeleteAccPanel_MouseEnter(object sender, EventArgs e)
+        {
+            closeDeleteAccPanel.BackColor = Color.IndianRed;
+        }
+
+        private void closeDeleteAccPanel_MouseLeave(object sender, EventArgs e)
+        {
+            closeDeleteAccPanel.BackColor = Color.WhiteSmoke;
         }
     }
 }

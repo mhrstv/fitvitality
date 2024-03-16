@@ -98,7 +98,7 @@ namespace FitVitality
         List<string> glutes = new List<string>();
         List<string> calves = new List<string>();
         List<string> core = new List<string>();
-        private string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
+        const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
         public Workouts(string userID)
         {
             InitializeComponent();

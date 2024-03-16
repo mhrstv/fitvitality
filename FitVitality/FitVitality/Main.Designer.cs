@@ -588,7 +588,7 @@
             // 
             // guna2Elipse1
             // 
-            guna2Elipse1.BorderRadius = 25;
+            guna2Elipse1.BorderRadius = 30;
             guna2Elipse1.TargetControl = this;
             // 
             // Form1

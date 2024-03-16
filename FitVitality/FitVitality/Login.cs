@@ -14,6 +14,11 @@ using System.Data.Common;
 using Microsoft.Data.SqlClient;
 using Microsoft.Identity.Client;
 using System.Security.Cryptography;
+using Newtonsoft.Json;
+using System.Diagnostics;
+using System.Net.Sockets;
+using System.Net;
+using System.Runtime.InteropServices;
 
 namespace FitVitality
 {
@@ -22,7 +27,7 @@ namespace FitVitality
         private bool mouseDown;
         private Point lastLocation;
         public string userID;
-        private string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
+        const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
         public Login()
         {
             InitializeComponent();

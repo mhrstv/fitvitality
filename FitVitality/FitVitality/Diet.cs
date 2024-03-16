@@ -46,7 +46,7 @@ namespace FitVitality
         private int currentFats = 0;
         string currentGoal;
 
-        private string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
+        const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
         public string _userID;
 
         List<SearchFoodItem> searchFoodItems = new List<SearchFoodItem>();

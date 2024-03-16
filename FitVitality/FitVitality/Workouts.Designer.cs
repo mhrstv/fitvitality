@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Workouts));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftCorner = new PictureBox();
             rightCorner = new PictureBox();
             vLine1 = new PictureBox();
@@ -829,7 +829,7 @@
             // 
             // muscleGroupLabel
             // 
-            muscleGroupLabel.BackColor = Color.FromArgb(242, 242, 242);
+            muscleGroupLabel.BackColor = Color.WhiteSmoke;
             muscleGroupLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             muscleGroupLabel.ForeColor = SystemColors.ControlText;
             muscleGroupLabel.Location = new Point(46, 28);
@@ -1044,7 +1044,7 @@
             // upperBodyLabel
             // 
             upperBodyLabel.AutoSize = true;
-            upperBodyLabel.BackColor = Color.FromArgb(242, 242, 242);
+            upperBodyLabel.BackColor = Color.WhiteSmoke;
             upperBodyLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             upperBodyLabel.ForeColor = SystemColors.ControlText;
             upperBodyLabel.Location = new Point(89, 28);
@@ -1259,7 +1259,7 @@
             // lowerBodyLabel
             // 
             lowerBodyLabel.AutoSize = true;
-            lowerBodyLabel.BackColor = Color.FromArgb(242, 242, 242);
+            lowerBodyLabel.BackColor = Color.WhiteSmoke;
             lowerBodyLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lowerBodyLabel.ForeColor = SystemColors.ControlText;
             lowerBodyLabel.Location = new Point(89, 28);
@@ -1585,7 +1585,7 @@
             // 
             createNextButton.BackColor = Color.WhiteSmoke;
             createNextButton.BorderRadius = 10;
-            createNextButton.CustomizableEdges = customizableEdges41;
+            createNextButton.CustomizableEdges = customizableEdges1;
             createNextButton.DisabledState.BorderColor = Color.DarkGray;
             createNextButton.DisabledState.CustomBorderColor = Color.DarkGray;
             createNextButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -1596,7 +1596,7 @@
             createNextButton.Location = new Point(214, 274);
             createNextButton.Name = "createNextButton";
             createNextButton.PressedColor = Color.LightGray;
-            createNextButton.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            createNextButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
             createNextButton.Size = new Size(125, 25);
             createNextButton.TabIndex = 50;
             createNextButton.Text = "Next";
@@ -1616,7 +1616,7 @@
             // 
             workoutNameTextBox.BackColor = Color.WhiteSmoke;
             workoutNameTextBox.BorderRadius = 8;
-            workoutNameTextBox.CustomizableEdges = customizableEdges43;
+            workoutNameTextBox.CustomizableEdges = customizableEdges3;
             workoutNameTextBox.DefaultText = "";
             workoutNameTextBox.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             workoutNameTextBox.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -1632,7 +1632,7 @@
             workoutNameTextBox.PlaceholderForeColor = Color.Black;
             workoutNameTextBox.PlaceholderText = "";
             workoutNameTextBox.SelectedText = "";
-            workoutNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            workoutNameTextBox.ShadowDecoration.CustomizableEdges = customizableEdges4;
             workoutNameTextBox.Size = new Size(140, 22);
             workoutNameTextBox.TabIndex = 51;
             workoutNameTextBox.TextChanged += workoutNameTextBox_TextChanged;
@@ -2820,7 +2820,7 @@
             // 
             editWorkoutButton.BackColor = Color.White;
             editWorkoutButton.BorderRadius = 8;
-            editWorkoutButton.CustomizableEdges = customizableEdges45;
+            editWorkoutButton.CustomizableEdges = customizableEdges5;
             editWorkoutButton.DisabledState.BorderColor = Color.DarkGray;
             editWorkoutButton.DisabledState.CustomBorderColor = Color.DarkGray;
             editWorkoutButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2833,7 +2833,7 @@
             editWorkoutButton.Location = new Point(14, 14);
             editWorkoutButton.Name = "editWorkoutButton";
             editWorkoutButton.PressedColor = Color.LightGray;
-            editWorkoutButton.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            editWorkoutButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             editWorkoutButton.Size = new Size(30, 30);
             editWorkoutButton.TabIndex = 1;
             editWorkoutButton.Click += guna2Button1_Click;
@@ -2881,7 +2881,7 @@
             // sundayShowButton
             // 
             sundayShowButton.BorderRadius = 10;
-            sundayShowButton.CustomizableEdges = customizableEdges47;
+            sundayShowButton.CustomizableEdges = customizableEdges7;
             sundayShowButton.DisabledState.BorderColor = Color.DarkGray;
             sundayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             sundayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2893,7 +2893,7 @@
             sundayShowButton.ForeColor = Color.White;
             sundayShowButton.Location = new Point(190, 279);
             sundayShowButton.Name = "sundayShowButton";
-            sundayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            sundayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             sundayShowButton.Size = new Size(83, 23);
             sundayShowButton.TabIndex = 8;
             sundayShowButton.Text = "SHOW";
@@ -2902,7 +2902,7 @@
             // saturdayShowButton
             // 
             saturdayShowButton.BorderRadius = 10;
-            saturdayShowButton.CustomizableEdges = customizableEdges49;
+            saturdayShowButton.CustomizableEdges = customizableEdges9;
             saturdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             saturdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             saturdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2914,7 +2914,7 @@
             saturdayShowButton.ForeColor = Color.White;
             saturdayShowButton.Location = new Point(190, 244);
             saturdayShowButton.Name = "saturdayShowButton";
-            saturdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            saturdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             saturdayShowButton.Size = new Size(83, 23);
             saturdayShowButton.TabIndex = 7;
             saturdayShowButton.Text = "SHOW";
@@ -2923,7 +2923,7 @@
             // fridayShowButton
             // 
             fridayShowButton.BorderRadius = 10;
-            fridayShowButton.CustomizableEdges = customizableEdges51;
+            fridayShowButton.CustomizableEdges = customizableEdges11;
             fridayShowButton.DisabledState.BorderColor = Color.DarkGray;
             fridayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             fridayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2935,7 +2935,7 @@
             fridayShowButton.ForeColor = Color.White;
             fridayShowButton.Location = new Point(190, 209);
             fridayShowButton.Name = "fridayShowButton";
-            fridayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            fridayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
             fridayShowButton.Size = new Size(83, 23);
             fridayShowButton.TabIndex = 6;
             fridayShowButton.Text = "SHOW";
@@ -2944,7 +2944,7 @@
             // thursdayShowButton
             // 
             thursdayShowButton.BorderRadius = 10;
-            thursdayShowButton.CustomizableEdges = customizableEdges53;
+            thursdayShowButton.CustomizableEdges = customizableEdges13;
             thursdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             thursdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             thursdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2956,7 +2956,7 @@
             thursdayShowButton.ForeColor = Color.White;
             thursdayShowButton.Location = new Point(190, 174);
             thursdayShowButton.Name = "thursdayShowButton";
-            thursdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            thursdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
             thursdayShowButton.Size = new Size(83, 23);
             thursdayShowButton.TabIndex = 5;
             thursdayShowButton.Text = "SHOW";
@@ -2965,7 +2965,7 @@
             // wednesdayShowButton
             // 
             wednesdayShowButton.BorderRadius = 10;
-            wednesdayShowButton.CustomizableEdges = customizableEdges55;
+            wednesdayShowButton.CustomizableEdges = customizableEdges15;
             wednesdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             wednesdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             wednesdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2977,7 +2977,7 @@
             wednesdayShowButton.ForeColor = Color.White;
             wednesdayShowButton.Location = new Point(190, 139);
             wednesdayShowButton.Name = "wednesdayShowButton";
-            wednesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            wednesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
             wednesdayShowButton.Size = new Size(83, 23);
             wednesdayShowButton.TabIndex = 4;
             wednesdayShowButton.Text = "SHOW";
@@ -2986,7 +2986,7 @@
             // tuesdayShowButton
             // 
             tuesdayShowButton.BorderRadius = 10;
-            tuesdayShowButton.CustomizableEdges = customizableEdges57;
+            tuesdayShowButton.CustomizableEdges = customizableEdges17;
             tuesdayShowButton.DisabledState.BorderColor = Color.DarkGray;
             tuesdayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             tuesdayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -2998,7 +2998,7 @@
             tuesdayShowButton.ForeColor = Color.White;
             tuesdayShowButton.Location = new Point(190, 106);
             tuesdayShowButton.Name = "tuesdayShowButton";
-            tuesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            tuesdayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
             tuesdayShowButton.Size = new Size(83, 23);
             tuesdayShowButton.TabIndex = 3;
             tuesdayShowButton.Text = "SHOW";
@@ -3007,7 +3007,7 @@
             // mondayShowButton
             // 
             mondayShowButton.BorderRadius = 10;
-            mondayShowButton.CustomizableEdges = customizableEdges59;
+            mondayShowButton.CustomizableEdges = customizableEdges19;
             mondayShowButton.DisabledState.BorderColor = Color.DarkGray;
             mondayShowButton.DisabledState.CustomBorderColor = Color.DarkGray;
             mondayShowButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -3019,7 +3019,7 @@
             mondayShowButton.ForeColor = Color.White;
             mondayShowButton.Location = new Point(190, 69);
             mondayShowButton.Name = "mondayShowButton";
-            mondayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            mondayShowButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
             mondayShowButton.Size = new Size(83, 23);
             mondayShowButton.TabIndex = 2;
             mondayShowButton.Text = "SHOW";
@@ -3404,7 +3404,7 @@
             // upperLabel2
             // 
             upperLabel2.AutoSize = true;
-            upperLabel2.BackColor = Color.FromArgb(242, 242, 242);
+            upperLabel2.BackColor = Color.WhiteSmoke;
             upperLabel2.Font = new Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             upperLabel2.ForeColor = SystemColors.ControlText;
             upperLabel2.Location = new Point(135, 29);
@@ -3501,7 +3501,7 @@
             // upperBodyHomeOutdoorsLabel
             // 
             upperBodyHomeOutdoorsLabel.AutoSize = true;
-            upperBodyHomeOutdoorsLabel.BackColor = Color.FromArgb(242, 242, 242);
+            upperBodyHomeOutdoorsLabel.BackColor = Color.WhiteSmoke;
             upperBodyHomeOutdoorsLabel.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point);
             upperBodyHomeOutdoorsLabel.ForeColor = SystemColors.ControlText;
             upperBodyHomeOutdoorsLabel.Location = new Point(89, 28);

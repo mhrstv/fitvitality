@@ -30,10 +30,11 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkoutListItem));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             kryptonPalette1 = new Krypton.Toolkit.KryptonPalette(components);
             labelExercises = new Label();
             workoutNumLabel = new Label();
-            selectButton = new Krypton.Toolkit.KryptonButton();
             leftTopC = new PictureBox();
             rightTopC = new PictureBox();
             leftBottomCorner = new PictureBox();
@@ -42,6 +43,7 @@
             vLine1 = new PictureBox();
             hLine2 = new PictureBox();
             hLine1 = new PictureBox();
+            selectButton = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)leftTopC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)rightTopC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)leftBottomCorner).BeginInit();
@@ -97,76 +99,6 @@
             workoutNumLabel.TabIndex = 14;
             workoutNumLabel.Text = "Workout [Number]";
             workoutNumLabel.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // selectButton
-            // 
-            selectButton.CornerRoundingRadius = 15F;
-            selectButton.Location = new Point(115, 149);
-            selectButton.Name = "selectButton";
-            selectButton.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            selectButton.Size = new Size(70, 25);
-            selectButton.StateCommon.Back.Color1 = Color.FromArgb(90, 220, 225);
-            selectButton.StateCommon.Back.Color2 = Color.FromArgb(94, 229, 235);
-            selectButton.StateCommon.Back.ColorAngle = 0F;
-            selectButton.StateCommon.Border.Color1 = Color.FromArgb(90, 220, 225);
-            selectButton.StateCommon.Border.Color2 = Color.FromArgb(94, 229, 235);
-            selectButton.StateCommon.Border.ColorAngle = 0F;
-            selectButton.StateCommon.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            selectButton.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            selectButton.StateCommon.Border.Rounding = 15F;
-            selectButton.StateCommon.Border.Width = 1;
-            selectButton.StateCommon.Content.ShortText.Color1 = Color.White;
-            selectButton.StateCommon.Content.ShortText.Color2 = Color.White;
-            selectButton.StateCommon.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            selectButton.StateDisabled.Back.Color1 = Color.FromArgb(92, 225, 230);
-            selectButton.StateDisabled.Back.Color2 = Color.FromArgb(92, 225, 230);
-            selectButton.StateDisabled.Back.ColorAngle = 45F;
-            selectButton.StateDisabled.Border.Color1 = Color.FromArgb(92, 225, 230);
-            selectButton.StateDisabled.Border.Color2 = Color.FromArgb(92, 225, 230);
-            selectButton.StateDisabled.Border.ColorAngle = 45F;
-            selectButton.StateDisabled.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            selectButton.StateDisabled.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            selectButton.StateDisabled.Border.Rounding = 15F;
-            selectButton.StateDisabled.Border.Width = 1;
-            selectButton.StateDisabled.Content.ShortText.Color1 = Color.White;
-            selectButton.StateDisabled.Content.ShortText.Color2 = Color.White;
-            selectButton.StateDisabled.Content.ShortText.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            selectButton.StateNormal.Back.Color1 = Color.FromArgb(92, 225, 230);
-            selectButton.StateNormal.Back.Color2 = Color.FromArgb(92, 225, 230);
-            selectButton.StateNormal.Back.ColorAngle = 0F;
-            selectButton.StateNormal.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            selectButton.StateNormal.Border.Color1 = Color.FromArgb(92, 225, 230);
-            selectButton.StateNormal.Border.Color2 = Color.FromArgb(92, 225, 230);
-            selectButton.StateNormal.Border.ColorAngle = 0F;
-            selectButton.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            selectButton.StateNormal.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            selectButton.StateNormal.Border.Rounding = 15F;
-            selectButton.StateNormal.Border.Width = 1;
-            selectButton.StatePressed.Back.Color1 = Color.FromArgb(0, 160, 192);
-            selectButton.StatePressed.Back.Color2 = Color.FromArgb(0, 160, 192);
-            selectButton.StatePressed.Back.ColorAngle = 45F;
-            selectButton.StatePressed.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            selectButton.StatePressed.Border.Color1 = Color.FromArgb(0, 160, 192);
-            selectButton.StatePressed.Border.Color2 = Color.FromArgb(0, 160, 192);
-            selectButton.StatePressed.Border.ColorAngle = 45F;
-            selectButton.StatePressed.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            selectButton.StatePressed.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            selectButton.StatePressed.Border.Rounding = 15F;
-            selectButton.StatePressed.Border.Width = 1;
-            selectButton.StateTracking.Back.Color1 = Color.FromArgb(161, 234, 230);
-            selectButton.StateTracking.Back.Color2 = Color.FromArgb(161, 234, 230);
-            selectButton.StateTracking.Back.ColorAngle = 45F;
-            selectButton.StateTracking.Back.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            selectButton.StateTracking.Border.Color1 = Color.FromArgb(161, 234, 230);
-            selectButton.StateTracking.Border.Color2 = Color.FromArgb(161, 234, 230);
-            selectButton.StateTracking.Border.ColorAngle = 45F;
-            selectButton.StateTracking.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            selectButton.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            selectButton.StateTracking.Border.Rounding = 15F;
-            selectButton.StateTracking.Border.Width = 1;
-            selectButton.TabIndex = 13;
-            selectButton.Values.Text = "Preview";
-            selectButton.Click += selectButton_Click;
             // 
             // leftTopC
             // 
@@ -240,10 +172,32 @@
             hLine1.TabIndex = 25;
             hLine1.TabStop = false;
             // 
+            // selectButton
+            // 
+            selectButton.BackColor = Color.WhiteSmoke;
+            selectButton.BorderRadius = 10;
+            selectButton.CustomizableEdges = customizableEdges1;
+            selectButton.DisabledState.BorderColor = Color.DarkGray;
+            selectButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            selectButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            selectButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            selectButton.FillColor = Color.FromArgb(92, 225, 230);
+            selectButton.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            selectButton.ForeColor = Color.White;
+            selectButton.Location = new Point(110, 146);
+            selectButton.Name = "selectButton";
+            selectButton.PressedColor = Color.LightGray;
+            selectButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            selectButton.Size = new Size(81, 25);
+            selectButton.TabIndex = 51;
+            selectButton.Text = "Preview";
+            selectButton.Click += selectButton_Click;
+            // 
             // WorkoutListItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(selectButton);
             Controls.Add(hLine1);
             Controls.Add(hLine2);
             Controls.Add(vLine1);
@@ -254,7 +208,6 @@
             Controls.Add(rightTopC);
             Controls.Add(labelExercises);
             Controls.Add(workoutNumLabel);
-            Controls.Add(selectButton);
             Name = "WorkoutListItem";
             Size = new Size(300, 182);
             Load += WorkoutListItem_Load;
@@ -274,7 +227,6 @@
         private Krypton.Toolkit.KryptonPalette kryptonPalette1;
         private Label labelExercises;
         private Label workoutNumLabel;
-        private Krypton.Toolkit.KryptonButton selectButton;
         private PictureBox leftTopC;
         private PictureBox rightTopC;
         private PictureBox leftBottomCorner;
@@ -283,5 +235,6 @@
         private PictureBox vLine1;
         private PictureBox hLine2;
         private PictureBox hLine1;
+        private Guna.UI2.WinForms.Guna2Button selectButton;
     }
 }

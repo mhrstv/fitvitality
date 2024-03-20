@@ -199,16 +199,6 @@ namespace FitVitality
 
         }
 
-        private void pictureBox1_MouseEnter_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_MouseLeave_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void settingsButton_Click(object sender, EventArgs e)
         {
             if (settings_Opened == false)
@@ -336,16 +326,6 @@ namespace FitVitality
 
                 this.Update();
             }
-        }
-
-        private void Form1_Activated(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
         }
     }
 }

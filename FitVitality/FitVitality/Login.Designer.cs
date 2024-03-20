@@ -249,7 +249,6 @@
             buttonClose.Click += pictureBox1_Click;
             buttonClose.MouseEnter += pictureBox1_MouseEnter;
             buttonClose.MouseLeave += pictureBox1_MouseLeave;
-            buttonClose.MouseHover += pictureBox1_MouseHover;
             // 
             // vBorder2
             // 

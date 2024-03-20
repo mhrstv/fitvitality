@@ -263,11 +263,6 @@ namespace FitVitality
             Application.Exit();
         }
 
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
             buttonClose.BackColor = Color.IndianRed;

@@ -1765,51 +1765,6 @@ namespace FitVitality
                 }
             }
         }
-
-        private void balancedButton_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void balancedButton_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void highProteinButton_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void highProteinButton_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lowFatButton_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lowFatButton_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lowCarbsButton_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lowCarbsButton_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         //Метод за търсене на храна
         private void searchIcon_Click(object sender, EventArgs e)
         {

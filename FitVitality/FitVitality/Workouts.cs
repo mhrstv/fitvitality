@@ -1061,11 +1061,6 @@ namespace FitVitality
             else nextButton5.Visible = true;
         }
 
-        private void pictureBox5_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             if (hamstringsCheckBox.Checked)

@@ -1291,7 +1291,6 @@
             lowerBodyPanelBorders.Size = new Size(518, 262);
             lowerBodyPanelBorders.TabIndex = 0;
             lowerBodyPanelBorders.TabStop = false;
-            lowerBodyPanelBorders.Click += pictureBox5_Click_1;
             // 
             // workoutTypePanel
             // 

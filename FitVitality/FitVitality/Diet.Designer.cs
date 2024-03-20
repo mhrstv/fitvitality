@@ -409,7 +409,6 @@
             searchPanel.Size = new Size(216, 125);
             searchPanel.TabIndex = 54;
             searchPanel.Visible = false;
-            searchPanel.Paint += flowLayoutPanel1_Paint;
             // 
             // hintLabel
             // 

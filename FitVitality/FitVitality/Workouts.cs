@@ -22,9 +22,13 @@ namespace FitVitality
         public string _userID;
 
         // Булеви променливи, които отбелязват къде ще се изпълнява тренировката
-        bool gymClicked = false;
-        bool homeClicked = false;
-        bool outdoorsClicked = false;
+        enum workoutType { 
+            gym = 0,
+            home,
+            outdoors,
+            NULL
+        }
+        workoutType workoutTypeSelection;
 
         // Булеви променливи, които отбелязват кои части от тялото ще се тренират
         bool upperBodyClicked = false;
@@ -69,7 +73,7 @@ namespace FitVitality
         List<string> gymGlutes = new List<string> { "Hip thrust", "Glute bridge", "Barbell glute bridge" };
         List<string> gymCore = new List<string> { "Hanging leg raises", "Hanging side-to-side raises", "Cable oblique crunches", "Weighted oblique crunches" };
 
-        //
+        //Home
         List<string> homeBackBiceps = new List<string> { "Towel pull-ups", "Iron man flyes", "Boat lifts", "Butterflyes", "Rocking leafs", "Bodyweight lat pulldowns", "Bodyweight rows", "Straight arm pulldown", "Bed sheet face pulls", "Prone arm circles" };
         List<string> homeChestTricepsShoulders = new List<string> { "Diamond push-ups", "Pike push-ups", "Decline push-ups", "Handstand push-ups", "Dips", "Triceps dips", "Triceps push-ups", "Triceps bench dips", "Triceps floor dips" };
         List<string> homeLegs = new List<string> { "Squats", "Pistol squats", "Lunges", "Bulgarian split squats", "Jumping lunges", "Jumping squats", "Calf raises", "Glute bridges", "Single leg glute bridges", "Wall sit" };
@@ -392,9 +396,7 @@ namespace FitVitality
                 gymButton.Image = Properties.Resources.gymPressed;
                 homeButton.Image = Properties.Resources.home1;
                 outdoorsButton.Image = Properties.Resources.outdoors;
-                gymClicked = true;
-                homeClicked = false;
-                outdoorsClicked = false;
+                workoutTypeSelection = workoutType.gym;
                 nextButton1.Visible = true;
                 workoutPlace = "Gym";
             }
@@ -403,9 +405,7 @@ namespace FitVitality
                 gymButton.Image = Properties.Resources.gymPressedbg;
                 homeButton.Image = Properties.Resources.homebg;
                 outdoorsButton.Image = Properties.Resources.outdoorsbg;
-                gymClicked = true;
-                homeClicked = false;
-                outdoorsClicked = false;
+                workoutTypeSelection = workoutType.gym;
                 nextButton1.Visible = true;
                 workoutPlace = "Gym";
             }
@@ -419,9 +419,7 @@ namespace FitVitality
                 gymButton.Image = Properties.Resources.gym;
                 homeButton.Image = Properties.Resources.homePressed;
                 outdoorsButton.Image = Properties.Resources.outdoors;
-                gymClicked = false;
-                homeClicked = true;
-                outdoorsClicked = false;
+                workoutTypeSelection = workoutType.home;
                 nextButton1.Visible = true;
                 workoutPlace = "Home";
             }
@@ -430,9 +428,7 @@ namespace FitVitality
                 gymButton.Image = Properties.Resources.gymbg;
                 homeButton.Image = Properties.Resources.homePressedbg;
                 outdoorsButton.Image = Properties.Resources.outdoorsbg;
-                gymClicked = false;
-                homeClicked = true;
-                outdoorsClicked = false;
+                workoutTypeSelection = workoutType.home;
                 nextButton1.Visible = true;
                 workoutPlace = "Home";
             }
@@ -446,9 +442,7 @@ namespace FitVitality
                 gymButton.Image = Properties.Resources.gym;
                 homeButton.Image = Properties.Resources.home1;
                 outdoorsButton.Image = Properties.Resources.outdoorsPressed;
-                gymClicked = false;
-                homeClicked = false;
-                outdoorsClicked = true;
+                workoutTypeSelection = workoutType.outdoors;
                 nextButton1.Visible = true;
                 workoutPlace = "Outdoors";
             }
@@ -457,9 +451,7 @@ namespace FitVitality
                 gymButton.Image = Properties.Resources.gymbg;
                 homeButton.Image = Properties.Resources.homebg;
                 outdoorsButton.Image = Properties.Resources.outdoorsPressedbg;
-                gymClicked = false;
-                homeClicked = false;
-                outdoorsClicked = true;
+                workoutTypeSelection = workoutType.outdoors;
                 nextButton1.Visible = true;
                 workoutPlace = "Outdoors";
             }
@@ -470,14 +462,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!gymClicked)
+                if (workoutTypeSelection != workoutType.gym)
                 {
                     gymButton.Image = Properties.Resources.gymHover;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!gymClicked)
+                if (workoutTypeSelection != workoutType.gym)
                 {
                     gymButton.Image = Properties.Resources.gymHoverbg;
                 }
@@ -489,14 +481,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!gymClicked)
+                if (workoutTypeSelection != workoutType.gym)
                 {
                     gymButton.Image = Properties.Resources.gym;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!gymClicked)
+                if (workoutTypeSelection != workoutType.gym)
                 {
                     gymButton.Image = Properties.Resources.gymbg;
                 }
@@ -508,14 +500,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!homeClicked)
+                if (workoutTypeSelection != workoutType.home)
                 {
                     homeButton.Image = Properties.Resources.homeHover;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!homeClicked)
+                if (workoutTypeSelection != workoutType.home)
                 {
                     homeButton.Image = Properties.Resources.homeHoverbg;
                 }
@@ -527,14 +519,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!homeClicked)
+                if (workoutTypeSelection != workoutType.home)
                 {
                     homeButton.Image = Properties.Resources.home1;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!homeClicked)
+                if (workoutTypeSelection != workoutType.home)
                 {
                     homeButton.Image = Properties.Resources.homebg;
                 }
@@ -546,14 +538,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!outdoorsClicked)
+                if (workoutTypeSelection != workoutType.outdoors)
                 {
                     outdoorsButton.Image = Properties.Resources.outdoorsHovered;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!outdoorsClicked)
+                if (workoutTypeSelection != workoutType.outdoors)
                 {
                     outdoorsButton.Image = Properties.Resources.outdoorsHoveredbg;
                 }
@@ -565,14 +557,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!outdoorsClicked)
+                if (workoutTypeSelection != workoutType.outdoors)
                 {
                     outdoorsButton.Image = Properties.Resources.outdoors;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!outdoorsClicked)
+                if (workoutTypeSelection != workoutType.outdoors)
                 {
                     outdoorsButton.Image = Properties.Resources.outdoorsbg;
                 }
@@ -936,19 +928,19 @@ namespace FitVitality
             else if (createClicked)
             {
                 muscleGroupPanel.Visible = false;
-                if (gymClicked && upperBodyClicked)
+                if (workoutTypeSelection == workoutType.gym && upperBodyClicked)
                 {
                     upperBodyPanel.Visible = true;
                 }
-                else if ((homeClicked || outdoorsClicked) && upperBodyClicked)
+                else if ((workoutTypeSelection == workoutType.home || workoutTypeSelection == workoutType.outdoors) && upperBodyClicked)
                 {
                     upperBodyHomeOutdoorsPanel.Visible = true;
                 }
-                if (gymClicked && lowerBodyClicked && !upperBodyClicked)
+                if (workoutTypeSelection == workoutType.gym && lowerBodyClicked && !upperBodyClicked)
                 {
                     lowerBodyPanel.Visible = true;
                 }
-                else if ((homeClicked || outdoorsClicked) && lowerBodyClicked && !upperBodyClicked)
+                else if ((workoutTypeSelection == workoutType.home || workoutTypeSelection == workoutType.outdoors) && lowerBodyClicked && !upperBodyClicked)
                 {
                     chooseWorkoutNumberPanel.Visible = true;
                     workoutsLabel.Visible = false;
@@ -1648,15 +1640,15 @@ namespace FitVitality
         }
         private void workoutsList_VisibleChanged(object sender, EventArgs e)
         {
-            if (gymClicked)
+            if (workoutTypeSelection == workoutType.gym)
             {
                 addGymWorkouts();
             }
-            else if (homeClicked)
+            else if (workoutTypeSelection == workoutType.home)
             {
                 addHomeWorkouts();
             }
-            else if (outdoorsClicked)
+            else if (workoutTypeSelection == workoutType.outdoors)
             {
                 addOutdoorsWorkouts();
             }
@@ -2557,7 +2549,7 @@ namespace FitVitality
             {
                 if (preClicked)
                 {
-                    if (gymClicked)
+                    if (workoutTypeSelection == workoutType.gym)
                     {
                         if (cb.Text == "Back and Biceps")
                         {
@@ -2729,7 +2721,7 @@ namespace FitVitality
 
                 if (preClicked)
                 {
-                    if (gymClicked)
+                    if (workoutTypeSelection == workoutType.gym)
                     {
                         if (cb.Text == "Гръб и Бицепс")
                         {
@@ -3016,7 +3008,7 @@ namespace FitVitality
             }
         }
 
-        private void trainPlacePanel_VisibleChanged(object sender, EventArgs e)
+        private async void trainPlacePanel_VisibleChanged(object sender, EventArgs e)
         {
             if (trainPlacePanel.Visible == true)
             {
@@ -3043,9 +3035,7 @@ namespace FitVitality
                     lowerButton.Image = Properties.Resources.lowerbg;
                     coreButton.Image = Properties.Resources.corebg;
                 }
-                gymClicked = false;
-                homeClicked = false;
-                outdoorsClicked = false;
+                workoutTypeSelection = workoutType.NULL;
                 activityLevelComboBox.Text = "";
                 activityLevelComboBox.SelectedValue = "";
                 activityLevelComboBox.SelectedText = "";
@@ -3491,7 +3481,7 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (gymClicked)
+                if (workoutTypeSelection == workoutType.gym)
                 {
                     if (armsCheckBox.Checked)
                     {
@@ -3527,7 +3517,7 @@ namespace FitVitality
                         loadItems(gymCore, "Core");
                     }
                 }
-                else if (homeClicked)
+                else if (workoutTypeSelection == workoutType.home)
                 {
                     if (chestTricepsShoulderCheckBox.Checked)
                     {
@@ -3546,7 +3536,7 @@ namespace FitVitality
                         loadItems(homeCore, "Core");
                     }
                 }
-                else if (outdoorsClicked)
+                else if (workoutTypeSelection == workoutType.outdoors)
                 {
                     if (chestTricepsShoulderCheckBox.Checked)
                     {
@@ -3568,7 +3558,7 @@ namespace FitVitality
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (gymClicked)
+                if (workoutTypeSelection == workoutType.gym)
                 {
                     if (armsCheckBox.Checked)
                     {
@@ -3604,7 +3594,7 @@ namespace FitVitality
                         loadItems(gymCore, "Ядро");
                     }
                 }
-                else if (homeClicked)
+                else if (workoutTypeSelection == workoutType.home)
                 {
                     if (chestTricepsShoulderCheckBox.Checked)
                     {
@@ -3623,7 +3613,7 @@ namespace FitVitality
                         loadItems(homeCore, "Ядро");
                     }
                 }
-                else if (outdoorsClicked)
+                else if (workoutTypeSelection == workoutType.outdoors)
                 {
                     if (chestTricepsShoulderCheckBox.Checked)
                     {

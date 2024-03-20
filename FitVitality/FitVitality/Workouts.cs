@@ -38,10 +38,15 @@ namespace FitVitality
         string name = "";
 
         // Булеви променливи, които отбелязват дали е натиснато готова тренировка или създаване на собствена
-        bool preClicked = false;
-        bool createClicked = false;
+        enum workoutCreation
+        {
+            pre = 0,
+            create,
+            NULL
+        }
+        workoutCreation workoutCreationSelection;
 
-        string workoutPlace = "";
+        string workoutPlace = String.Empty;
         int activity;
         int workoutNumber;
 
@@ -55,11 +60,11 @@ namespace FitVitality
         bool sundayClicked = false;
 
         bool workoutDaysDone = false;
-        string workoutSelection = "";
+        string workoutSelection = String.Empty;
 
         int selectedDays = 0;
 
-        //Exercises list
+        //Списък с упражнения
 
         //Gym
         List<string> gymBack = new List<string> { "Deadlift", "Pull-ups", "Bent-over row", "Lat pulldown", "Seated cable row", "T-bar row", "One-arm dumbbell row", "Inverted row", "Single arm lat pulldown" };
@@ -920,12 +925,12 @@ namespace FitVitality
         }
         private void nextButton3_Click(object sender, EventArgs e)
         {
-            if (preClicked)
+            if (workoutCreationSelection == workoutCreation.pre)
             {
                 workoutsList.Visible = true;
                 workoutsList.BringToFront();
             }
-            else if (createClicked)
+            else if (workoutCreationSelection == workoutCreation.create)
             {
                 muscleGroupPanel.Visible = false;
                 if (workoutTypeSelection == workoutType.gym && upperBodyClicked)
@@ -1126,16 +1131,14 @@ namespace FitVitality
             {
                 prePicture.Image = Properties.Resources.prePressed;
                 createPicture.Image = Properties.Resources.create;
-                preClicked = true;
-                createClicked = false;
+                workoutCreationSelection = workoutCreation.pre;
                 nextButt7.Visible = true;
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 prePicture.Image = Properties.Resources.prePressedbg;
                 createPicture.Image = Properties.Resources.createbg;
-                preClicked = true;
-                createClicked = false;
+                workoutCreationSelection = workoutCreation.pre;
                 nextButt7.Visible = true;
             }
         }
@@ -1147,16 +1150,14 @@ namespace FitVitality
             {
                 prePicture.Image = Properties.Resources.pre;
                 createPicture.Image = Properties.Resources.createSelected;
-                preClicked = false;
-                createClicked = true;
+                workoutCreationSelection = workoutCreation.create;
                 nextButt7.Visible = true;
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
                 prePicture.Image = Properties.Resources.prebg;
                 createPicture.Image = Properties.Resources.createSelectedbg;
-                preClicked = false;
-                createClicked = true;
+                workoutCreationSelection = workoutCreation.create;
                 nextButt7.Visible = true;
             }
         }
@@ -1166,14 +1167,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!preClicked)
+                if (workoutCreationSelection != workoutCreation.pre)
                 {
                     prePicture.Image = Properties.Resources.preHovered;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!preClicked)
+                if (workoutCreationSelection != workoutCreation.pre)
                 {
                     prePicture.Image = Properties.Resources.preHoveredbg;
                 }
@@ -1185,14 +1186,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!preClicked)
+                if (workoutCreationSelection != workoutCreation.pre)
                 {
                     prePicture.Image = Properties.Resources.pre;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!preClicked)
+                if (workoutCreationSelection != workoutCreation.pre)
                 {
                     prePicture.Image = Properties.Resources.prebg;
                 }
@@ -1204,14 +1205,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!createClicked)
+                if (workoutCreationSelection != workoutCreation.create)
                 {
                     createPicture.Image = Properties.Resources.createHovered;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!createClicked)
+                if (workoutCreationSelection != workoutCreation.create)
                 {
                     createPicture.Image = Properties.Resources.createHoveredbg;
                 }
@@ -1223,14 +1224,14 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (!createClicked)
+                if (workoutCreationSelection != workoutCreation.create)
                 {
                     createPicture.Image = Properties.Resources.create;
                 }
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
-                if (!createClicked)
+                if (workoutCreationSelection != workoutCreation.create)
                 {
                     createPicture.Image = Properties.Resources.createbg;
                 }
@@ -1242,11 +1243,11 @@ namespace FitVitality
             lowerBodyPanel.Visible = false;
             upperBodyPanel.Visible = false;
             chooseWorkoutNumberPanel.Visible = false;
-            if (preClicked)
+            if (workoutCreationSelection == workoutCreation.pre)
             {
                 workoutsList.Visible = true;
             }
-            else if (createClicked)
+            else if (workoutCreationSelection == workoutCreation.create)
             {
                 muscleGroupPanel.Visible = true;
             }
@@ -2547,7 +2548,7 @@ namespace FitVitality
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
-                if (preClicked)
+                if (workoutCreationSelection == workoutCreation.pre)
                 {
                     if (workoutTypeSelection == workoutType.gym)
                     {
@@ -2719,7 +2720,7 @@ namespace FitVitality
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
 
-                if (preClicked)
+                if (workoutCreationSelection == workoutCreation.pre)
                 {
                     if (workoutTypeSelection == workoutType.gym)
                     {
@@ -3051,8 +3052,7 @@ namespace FitVitality
                 preNextButton.Visible = false;
                 preNextButton2.Visible = false;
                 preNextButton3.Visible = false;
-                preClicked = false;
-                createClicked = false;
+                workoutCreationSelection = workoutCreation.NULL;
                 mondayCheckBox.Checked = false;
                 tuesdayCheckBox.Checked = false;
                 wednesdayCheckBox.Checked = false;
@@ -3486,6 +3486,10 @@ namespace FitVitality
                     if (armsCheckBox.Checked)
                     {
                         loadItems(gymBiceps, "Biceps");
+                        loadItems(gymTriceps, "Triceps");
+                    }
+                    if(backCheckBox.Checked)
+                    {
                         loadItems(gymBack, "Back");
                     }
                     if (chestCheckBox.Checked)
@@ -3563,6 +3567,10 @@ namespace FitVitality
                     if (armsCheckBox.Checked)
                     {
                         loadItems(gymBiceps, "Бицепс");
+                        loadItems(gymTriceps, "Трицепс");
+                    }
+                    if(backCheckBox.Checked)
+                    {
                         loadItems(gymBack, "Гръб");
                     }
                     if (chestCheckBox.Checked)

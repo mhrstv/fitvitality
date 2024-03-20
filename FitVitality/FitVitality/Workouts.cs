@@ -21,7 +21,7 @@ namespace FitVitality
     {
         public string _userID;
 
-        // Булеви променливи, които отбелязват къде ще се изпълнява тренировката
+        // Следене на избор на местоположение на тренировка
         enum workoutType { 
             gym = 0,
             home,
@@ -37,7 +37,7 @@ namespace FitVitality
 
         string name = "";
 
-        // Булеви променливи, които отбелязват дали е натиснато готова тренировка или създаване на собствена
+        // Следене на избор за създаване на тренировка или избор на предварително генерирана
         enum workoutCreation
         {
             pre = 0,
@@ -46,7 +46,6 @@ namespace FitVitality
         }
         workoutCreation workoutCreationSelection;
 
-        string workoutPlace = String.Empty;
         int activity;
         int workoutNumber;
 
@@ -112,8 +111,6 @@ namespace FitVitality
         {
             InitializeComponent();
             _userID = userID;
-
-
         }
         //Метод за зареждане на първи панел при създаване на тренировка
         private void Workouts_Load(object sender, EventArgs e)
@@ -403,7 +400,6 @@ namespace FitVitality
                 outdoorsButton.Image = Properties.Resources.outdoors;
                 workoutTypeSelection = workoutType.gym;
                 nextButton1.Visible = true;
-                workoutPlace = "Gym";
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
@@ -412,7 +408,6 @@ namespace FitVitality
                 outdoorsButton.Image = Properties.Resources.outdoorsbg;
                 workoutTypeSelection = workoutType.gym;
                 nextButton1.Visible = true;
-                workoutPlace = "Gym";
             }
         }
 
@@ -426,7 +421,6 @@ namespace FitVitality
                 outdoorsButton.Image = Properties.Resources.outdoors;
                 workoutTypeSelection = workoutType.home;
                 nextButton1.Visible = true;
-                workoutPlace = "Home";
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
@@ -435,7 +429,6 @@ namespace FitVitality
                 outdoorsButton.Image = Properties.Resources.outdoorsbg;
                 workoutTypeSelection = workoutType.home;
                 nextButton1.Visible = true;
-                workoutPlace = "Home";
             }
         }
 
@@ -449,7 +442,6 @@ namespace FitVitality
                 outdoorsButton.Image = Properties.Resources.outdoorsPressed;
                 workoutTypeSelection = workoutType.outdoors;
                 nextButton1.Visible = true;
-                workoutPlace = "Outdoors";
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
@@ -458,7 +450,6 @@ namespace FitVitality
                 outdoorsButton.Image = Properties.Resources.outdoorsPressedbg;
                 workoutTypeSelection = workoutType.outdoors;
                 nextButton1.Visible = true;
-                workoutPlace = "Outdoors";
             }
         }
 

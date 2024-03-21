@@ -1567,7 +1567,13 @@
             // highProteinButton
             // 
             highProteinButton.BackColor = Color.FromArgb(250, 252, 252);
+            highProteinButton.BorderColor = Color.FromArgb(92, 225, 230);
             highProteinButton.BorderRadius = 10;
+            highProteinButton.BorderThickness = 1;
+            highProteinButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            highProteinButton.CheckedState.BorderColor = Color.Black;
+            highProteinButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
+            highProteinButton.CheckedState.ForeColor = Color.Black;
             highProteinButton.CustomizableEdges = customizableEdges27;
             highProteinButton.DisabledState.BorderColor = Color.DarkGray;
             highProteinButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -1576,7 +1582,7 @@
             highProteinButton.FillColor = Color.FromArgb(92, 225, 230);
             highProteinButton.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             highProteinButton.ForeColor = Color.Black;
-            highProteinButton.Location = new Point(457, 53);
+            highProteinButton.Location = new Point(458, 53);
             highProteinButton.Name = "highProteinButton";
             highProteinButton.ShadowDecoration.CustomizableEdges = customizableEdges28;
             highProteinButton.Size = new Size(84, 29);
@@ -1587,7 +1593,13 @@
             // lowCarbsButton
             // 
             lowCarbsButton.BackColor = Color.FromArgb(250, 252, 252);
+            lowCarbsButton.BorderColor = Color.FromArgb(92, 225, 230);
             lowCarbsButton.BorderRadius = 10;
+            lowCarbsButton.BorderThickness = 1;
+            lowCarbsButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            lowCarbsButton.CheckedState.BorderColor = Color.Black;
+            lowCarbsButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
+            lowCarbsButton.CheckedState.ForeColor = Color.Black;
             lowCarbsButton.CustomizableEdges = customizableEdges29;
             lowCarbsButton.DisabledState.BorderColor = Color.DarkGray;
             lowCarbsButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -1596,7 +1608,7 @@
             lowCarbsButton.FillColor = Color.FromArgb(92, 225, 230);
             lowCarbsButton.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             lowCarbsButton.ForeColor = Color.Black;
-            lowCarbsButton.Location = new Point(379, 53);
+            lowCarbsButton.Location = new Point(378, 53);
             lowCarbsButton.Name = "lowCarbsButton";
             lowCarbsButton.ShadowDecoration.CustomizableEdges = customizableEdges30;
             lowCarbsButton.Size = new Size(79, 29);
@@ -1607,7 +1619,13 @@
             // lowFatButton
             // 
             lowFatButton.BackColor = Color.FromArgb(250, 252, 252);
+            lowFatButton.BorderColor = Color.FromArgb(92, 225, 230);
             lowFatButton.BorderRadius = 10;
+            lowFatButton.BorderThickness = 1;
+            lowFatButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            lowFatButton.CheckedState.BorderColor = Color.Black;
+            lowFatButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
+            lowFatButton.CheckedState.ForeColor = Color.Black;
             lowFatButton.CustomizableEdges = customizableEdges31;
             lowFatButton.DisabledState.BorderColor = Color.DarkGray;
             lowFatButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -1616,7 +1634,7 @@
             lowFatButton.FillColor = Color.FromArgb(92, 225, 230);
             lowFatButton.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             lowFatButton.ForeColor = Color.Black;
-            lowFatButton.Location = new Point(304, 53);
+            lowFatButton.Location = new Point(302, 53);
             lowFatButton.Name = "lowFatButton";
             lowFatButton.ShadowDecoration.CustomizableEdges = customizableEdges32;
             lowFatButton.Size = new Size(75, 29);
@@ -1627,7 +1645,13 @@
             // balancedButton
             // 
             balancedButton.BackColor = Color.FromArgb(250, 252, 252);
+            balancedButton.BorderColor = Color.FromArgb(92, 225, 230);
             balancedButton.BorderRadius = 10;
+            balancedButton.BorderThickness = 1;
+            balancedButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            balancedButton.CheckedState.BorderColor = Color.Black;
+            balancedButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
+            balancedButton.CheckedState.ForeColor = Color.Black;
             balancedButton.CustomizableEdges = customizableEdges33;
             balancedButton.DisabledState.BorderColor = Color.DarkGray;
             balancedButton.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -1636,7 +1660,7 @@
             balancedButton.FillColor = Color.FromArgb(92, 225, 230);
             balancedButton.Font = new Font("Microsoft Sans Serif", 6.75F, FontStyle.Regular, GraphicsUnit.Point);
             balancedButton.ForeColor = Color.Black;
-            balancedButton.Location = new Point(230, 53);
+            balancedButton.Location = new Point(226, 53);
             balancedButton.Name = "balancedButton";
             balancedButton.ShadowDecoration.CustomizableEdges = customizableEdges34;
             balancedButton.Size = new Size(75, 29);

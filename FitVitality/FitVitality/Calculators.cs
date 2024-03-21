@@ -35,13 +35,7 @@ namespace FitVitality
         private string weight;
         private string height;
         private string goal;
-        private string unit_selection;
         public double bmi;
-
-        bool balancedClicked;
-        bool lowFatClicked;
-        bool lowCarbsClicked;
-        bool highProteinClicked;
 
         const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
         public string _userID;
@@ -1394,114 +1388,114 @@ namespace FitVitality
             {
                 if (activityComboBoxMacro.SelectedItem == "Sedentary")
                 {
-                    if (balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(sedentaryBMR);
                     }
-                    else if(lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(sedentaryBMR);
                     }
-                    else if(lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(sedentaryBMR);
                     }
-                    else if(highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(sedentaryBMR);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Light")
                 {
-                    if (balancedClicked)
-                    { 
+                    if (balancedButton.Checked)
+                    {
                         MacroBalanced(exerciseBMR13);
                     }
-                    else if(lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(exerciseBMR13);
                     }
-                    else if(lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(exerciseBMR13);
                     }
-                    else if(highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(exerciseBMR13);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Moderate")
                 {
-                    if (balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(exerciseBMR45);
                     }
-                    else if(lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(exerciseBMR45);
                     }
-                    else if(lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(exerciseBMR45);
                     }
-                    else if(highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(exerciseBMR45);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Active")
                 {
-                    if(balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(DailyBMR34);
                     }
-                    else if(lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(DailyBMR34);
                     }
-                    else if(lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(DailyBMR34);
                     }
-                    else if(highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(DailyBMR34);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Very active")
                 {
-                    if(balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(intenseBMR67);
                     }
-                    else if(lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(intenseBMR67);
                     }
-                    else if(lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(intenseBMR67);
                     }
-                    else if(highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(intenseBMR67);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Extra active")
                 {
-                    if(balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(veryIntenseBMR);
                     }
-                    else if(lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(veryIntenseBMR);
                     }
-                    else if(lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(veryIntenseBMR);
                     }
-                    else if(highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(veryIntenseBMR);
                     }
@@ -1511,114 +1505,114 @@ namespace FitVitality
             {
                 if (activityComboBoxMacro.SelectedItem == "Заседналост")
                 {
-                    if (balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(sedentaryBMR);
                     }
-                    else if (lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(sedentaryBMR);
                     }
-                    else if (lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(sedentaryBMR);
                     }
-                    else if (highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(sedentaryBMR);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Лека")
                 {
-                    if (balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(exerciseBMR13);
                     }
-                    else if (lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(exerciseBMR13);
                     }
-                    else if (lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(exerciseBMR13);
                     }
-                    else if (highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(exerciseBMR13);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Умерена")
                 {
-                    if (balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(exerciseBMR45);
                     }
-                    else if (lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(exerciseBMR45);
                     }
-                    else if (lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(exerciseBMR45);
                     }
-                    else if (highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(exerciseBMR45);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Активна")
                 {
-                    if (balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(DailyBMR34);
                     }
-                    else if (lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(DailyBMR34);
                     }
-                    else if (lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(DailyBMR34);
                     }
-                    else if (highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(DailyBMR34);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Много активна")
                 {
-                    if (balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(intenseBMR67);
                     }
-                    else if (lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(intenseBMR67);
                     }
-                    else if (lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(intenseBMR67);
                     }
-                    else if (highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(intenseBMR67);
                     }
                 }
                 if (activityComboBoxMacro.SelectedItem == "Екстра активна")
                 {
-                    if (balancedClicked)
+                    if (balancedButton.Checked)
                     {
                         MacroBalanced(veryIntenseBMR);
                     }
-                    else if (lowCarbsClicked)
+                    else if (lowCarbsButton.Checked)
                     {
                         MacroLowCarb(veryIntenseBMR);
                     }
-                    else if (lowFatClicked)
+                    else if (lowFatButton.Checked)
                     {
                         MacroLowFat(veryIntenseBMR);
                     }
-                    else if (highProteinClicked)
+                    else if (highProteinButton.Checked)
                     {
                         MacroHighProtein(veryIntenseBMR);
                     }
@@ -1647,6 +1641,9 @@ namespace FitVitality
 
         private void balancedButton_Click(object sender, EventArgs e)
         {
+            lowFatButton.Checked = false;
+            lowCarbsButton.Checked = false;
+            highProteinButton.Checked = false;
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
@@ -1706,6 +1703,9 @@ namespace FitVitality
 
         private void lowFatButton_Click(object sender, EventArgs e)
         {
+            balancedButton.Checked = false;
+            lowCarbsButton.Checked = false;
+            highProteinButton.Checked = false;
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
@@ -1765,6 +1765,9 @@ namespace FitVitality
 
         private void lowCarbsButton_Click(object sender, EventArgs e)
         {
+            balancedButton.Checked = false;
+            lowFatButton.Checked = false;
+            highProteinButton.Checked = false;
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {
@@ -1824,6 +1827,9 @@ namespace FitVitality
 
         private void highProteinButton_Click(object sender, EventArgs e)
         {
+            balancedButton.Checked = false;
+            lowFatButton.Checked = false;
+            lowCarbsButton.Checked = false;
             var cfg = new Config("FitVitality.ini");
             if (cfg.Read("Language", "SETTINGS") == "en")
             {

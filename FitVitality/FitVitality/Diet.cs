@@ -44,7 +44,6 @@ namespace FitVitality
         private int currentCarbs = 0;
         private int currentProtein = 0;
         private int currentFats = 0;
-        string currentGoal;
 
         const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
         public string _userID;

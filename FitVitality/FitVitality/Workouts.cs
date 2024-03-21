@@ -35,7 +35,7 @@ namespace FitVitality
         bool coreClicked = false;
         bool lowerBodyClicked = false;
 
-        string name = "";
+        string name = String.Empty;
 
         // Следене на избор за създаване на тренировка или избор на предварително генерирана
         enum workoutCreation

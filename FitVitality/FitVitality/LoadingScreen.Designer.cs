@@ -52,7 +52,6 @@
             panelLogo.Name = "panelLogo";
             panelLogo.Size = new Size(335, 302);
             panelLogo.TabIndex = 1;
-            panelLogo.Paint += panel1_Paint;
             // 
             // panelLoad2
             // 
@@ -98,7 +97,6 @@
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color1 = Color.Black;
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.Color2 = Color.Black;
             kryptonPalette1.HeaderStyles.HeaderForm.StateNormal.Border.DrawBorders = Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom | Krypton.Toolkit.PaletteDrawBorders.Left | Krypton.Toolkit.PaletteDrawBorders.Right;
-            kryptonPalette1.PalettePaint += kryptonPalette1_PalettePaint;
             // 
             // percentages
             // 
@@ -113,7 +111,6 @@
             percentages.TabIndex = 5;
             percentages.TabStop = false;
             percentages.TextAlign = HorizontalAlignment.Center;
-            percentages.TextChanged += textBox1_TextChanged;
             // 
             // loadingScreen
             // 

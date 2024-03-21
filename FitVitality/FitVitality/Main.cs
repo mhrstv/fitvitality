@@ -18,11 +18,15 @@ namespace FitVitality
     {
         string username;
 
-        bool dashboard_Opened = false;
-        bool calculators_Opened = false;
-        bool workouts_Opened = false;
-        bool nutrition_Opened = false;
-        bool settings_Opened = false;
+        enum Modules
+        {
+            Dashboard,
+            Calculators,
+            Workouts,
+            Nutrition,
+            Settings
+        }
+        Modules module;
 
         public string _userID;
 
@@ -55,16 +59,8 @@ namespace FitVitality
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Зареждане на началната форма
-            if (dashboard_Opened == false)
-            {
-                loadForm(new home(_userID));
-                dashboard_Opened = true;
-                calculators_Opened = false;
-                workouts_Opened = false;
-                nutrition_Opened = false;
-                settings_Opened = false;
-            }
+            loadForm(new home(_userID));
+            module = Modules.Dashboard;
 
             //Извежда потребителското име в лейбъла
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -123,14 +119,10 @@ namespace FitVitality
         }
         private void kryptonButton1_Click_1(object sender, EventArgs e)
         {
-            if (workouts_Opened == false)
+            if (module != Modules.Workouts)
             {
                 loadForm(new Workouts(_userID));
-                dashboard_Opened = false;
-                calculators_Opened = false;
-                workouts_Opened = true;
-                nutrition_Opened = false;
-                settings_Opened = false;
+                module = Modules.Workouts;
             }
         }
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -187,54 +179,38 @@ namespace FitVitality
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            if (dashboard_Opened == false)
+            if (module != Modules.Dashboard)
             {
                 loadForm(new home(_userID));
-                dashboard_Opened = true;
-                calculators_Opened = false;
-                workouts_Opened = false;
-                nutrition_Opened = false;
-                settings_Opened = false;
+                module = Modules.Dashboard;
             }
 
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            if (settings_Opened == false)
+            if (module != Modules.Settings)
             {
                 loadForm(new Settings(_userID));
-                dashboard_Opened = false;
-                calculators_Opened = false;
-                workouts_Opened = false;
-                nutrition_Opened = false;
-                settings_Opened = true;
+                module = Modules.Settings;
             }
         }
 
         private void buttonCalculators_Click(object sender, EventArgs e)
         {
-            if (calculators_Opened == false)
+            if (module != Modules.Calculators)
             {
                 loadForm(new Calculators(_userID));
-                dashboard_Opened = false;
-                calculators_Opened = true;
-                workouts_Opened = false;
-                nutrition_Opened = false;
-                settings_Opened = false;
+                module = Modules.Calculators;
             }
         }
 
         private void kryptonButton1_Click_2(object sender, EventArgs e)
         {
-            if (nutrition_Opened == false)
+            if (module != Modules.Nutrition)
             {
                 loadForm(new Diet(_userID));
-                dashboard_Opened = false;
-                calculators_Opened = false;
-                workouts_Opened = false;
-                nutrition_Opened = true;
-                settings_Opened = false;
+                module = Modules.Nutrition;
             }
         }
 

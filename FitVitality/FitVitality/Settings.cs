@@ -27,10 +27,10 @@ namespace FitVitality
     {
         private string dbName;
         private string dbEmail;
-        private string dbAge;
+        private int dbAge;
         private string dbGender;
-        private string dbWeight;
-        private string dbHeight;
+        private double dbWeight;
+        private double dbHeight;
         private string dbGoal;
         public string _userID;
         private PictureBox pb;
@@ -88,9 +88,10 @@ namespace FitVitality
                 languageComboBox.Items.Add("Английски");
                 languageComboBox.SelectedItem = "Български";
                 appSettings_label.Text = "Настройки на програма";
+                appSettings_label.Location = new Point(appSettings_label.Location.X + 10, appSettings_label.Location.Y);
                 accSettings_label.Text = "Настройки на акаунт";
                 langLabel.Text = "Език";
-                langLabel.Location = new Point(58, langLabel.Location.Y);
+                langLabel.Location = new Point(65, langLabel.Location.Y);
                 themeLabel.Text = "Тема";
                 changePasswordLabel.Text = "Смени парола";
                 oldPasswordLabel.Text = "Въведи стара парола";
@@ -346,46 +347,25 @@ namespace FitVitality
             }
             return true;
         }
-        private bool validAge(string age)
+        private bool validAge(int age)
         {
-            foreach (char c in age)
-            {
-                if (!char.IsNumber(c))
-                {
-                    return false;
-                }
-            }
-            if (int.Parse(age) < 13 || int.Parse(age) > 120)
+            if (age < 13 || age > 120)
             {
                 return false;
             }
             return true;
         }
-        private bool validWeight(string weight)
+        private bool validWeight(double weight)
         {
-            foreach (char c in weight)
-            {
-                if (!char.IsNumber(c))
-                {
-                    return false;
-                }
-            }
-            if (double.Parse(weight) < 30.00 && double.Parse(weight) > 400.00)
+            if (weight < 30.00 && weight > 400.00)
             {
                 return false;
             }
             return true;
         }
-        private bool validHeight(string height)
+        private bool validHeight(double height)
         {
-            foreach (char c in height)
-            {
-                if (!char.IsNumber(c))
-                {
-                    return false;
-                }
-            }
-            if (double.Parse(height) < 50 && double.Parse(height) > 300)
+            if (height < 50 && height > 300)
             {
                 return false;
             }
@@ -400,75 +380,82 @@ namespace FitVitality
         private void buttonSave_Click(object sender, EventArgs e)
         {
             var cfg = new Config("FitVitality.ini");
-            dbName = nameTextBox.Text.ToString();
-            dbEmail = emailTextBox.Text.ToString();
-            dbAge = ageTextBox.Text;
-            dbWeight = weightTextBox.Text;
-            dbHeight = heightTextBox.Text;
-            if (genderComboBox.SelectedItem == "Male" || genderComboBox.SelectedItem == "Мъж")
+            try
             {
-                dbGender = "Male";
-            }
-            else
-            {
-                dbGender = "Female";
-            }
-            if (goalComboBox.SelectedItem == "Cut" || goalComboBox.SelectedItem == "Сваляне")
-            {
-                dbGoal = "Cut";
-            }
-            else if (goalComboBox.SelectedItem == "Maintain" || goalComboBox.SelectedItem == "Поддържане")
-            {
-                dbGoal = "Maintain";
-            }
-            else
-            {
-                dbGoal = "Bulk";
-            }
-            if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && validEmail(dbEmail) && dbGender != "" && dbGoal != "")
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                dbName = nameTextBox.Text.ToString();
+                dbEmail = emailTextBox.Text.ToString();
+                dbAge = int.Parse(ageTextBox.Text);
+                dbWeight = double.Parse(weightTextBox.Text);
+                dbHeight = double.Parse(heightTextBox.Text);
+                if (genderComboBox.SelectedItem == "Male" || genderComboBox.SelectedItem == "Мъж")
                 {
-                    connection.Open();
-                    string query = "UPDATE UserSettings " +
-                               "SET Name = @Name, Age = @Age, Gender = @Gender, Weight = @Weight, Height = @Height, Goal = @Goal " +
-                               "WHERE UserID = @UserID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    dbGender = "Male";
+                }
+                else
+                {
+                    dbGender = "Female";
+                }
+                if (goalComboBox.SelectedItem == "Cut" || goalComboBox.SelectedItem == "Сваляне")
+                {
+                    dbGoal = "Cut";
+                }
+                else if (goalComboBox.SelectedItem == "Maintain" || goalComboBox.SelectedItem == "Поддържане")
+                {
+                    dbGoal = "Maintain";
+                }
+                else
+                {
+                    dbGoal = "Bulk";
+                }
+                if (validName(dbName) && validAge(dbAge) && validWeight(dbWeight) && validHeight(dbHeight) && validEmail(dbEmail) && dbGender != "" && dbGoal != "")
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
                     {
-                        int age = int.Parse(dbAge);
-                        double weight = double.Parse(dbWeight);
-                        weight = Math.Round(weight, 1);
-                        int height = int.Parse(dbHeight);
-                        command.Parameters.AddWithValue("@UserID", _userID);
-                        command.Parameters.AddWithValue("@Name", dbName);
-                        command.Parameters.AddWithValue("@Email", dbEmail);
-                        command.Parameters.AddWithValue("@Age", age);
-                        command.Parameters.AddWithValue("@Gender", dbGender);
-                        command.Parameters.AddWithValue("@Weight", weight);
-                        command.Parameters.AddWithValue("@Height", height);
-                        command.Parameters.AddWithValue("@Goal", dbGoal);
-                        command.ExecuteNonQuery();
+                        connection.Open();
+                        string query = "UPDATE UserSettings " +
+                                   "SET Name = @Name, Age = @Age, Gender = @Gender, Weight = @Weight, Height = @Height, Goal = @Goal " +
+                                   "WHERE UserID = @UserID";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            int age = dbAge;
+                            double weight = dbWeight;
+                            weight = Math.Round(weight, 1);
+                            double height = dbHeight;
+                            command.Parameters.AddWithValue("@UserID", _userID);
+                            command.Parameters.AddWithValue("@Name", dbName);
+                            command.Parameters.AddWithValue("@Email", dbEmail);
+                            command.Parameters.AddWithValue("@Age", age);
+                            command.Parameters.AddWithValue("@Gender", dbGender);
+                            command.Parameters.AddWithValue("@Weight", weight);
+                            command.Parameters.AddWithValue("@Height", height);
+                            command.Parameters.AddWithValue("@Goal", dbGoal);
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        string query = "UPDATE UserData " +
+                                   "SET Email = @Email " +
+                                   "WHERE UserID = @UserID";
+                        using (SqlCommand command = new SqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@UserID", _userID);
+                            command.Parameters.AddWithValue("@Email", dbEmail);
+                            command.ExecuteNonQuery();
+                        }
                     }
                 }
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                else
                 {
-                    connection.Open();
-                    string query = "UPDATE UserData " +
-                               "SET Email = @Email " +
-                               "WHERE UserID = @UserID";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@UserID", _userID);
-                        command.Parameters.AddWithValue("@Email", dbEmail);
-                        command.ExecuteNonQuery();
-                    }
+                    errorPanel.Visible = true;
                 }
             }
-            else
+            catch (FormatException)
             {
                 errorPanel.Visible = true;
-                errorPanel.BringToFront();
             }
+            
         }
         //Метод за промяна на езика
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -485,9 +472,10 @@ namespace FitVitality
                     languageComboBox.SelectedItem = "Български";
                 }
                 appSettings_label.Text = "Настройки на програма";
+                appSettings_label.Location = new Point(appSettings_label.Location.X + 10, appSettings_label.Location.Y);
                 accSettings_label.Text = "Настройки на акаунт";
                 langLabel.Text = "Език";
-                langLabel.Location = new Point(58, langLabel.Location.Y);
+                langLabel.Location = new Point(65, langLabel.Location.Y);
                 themeLabel.Text = "Тема";
                 changePasswordLabel.Text = "Смени парола";
                 oldPasswordLabel.Text = "Въведи стара парола";

@@ -77,6 +77,11 @@
             weightChangesTextBox = new TextBox();
             weightChangesLabel = new Label();
             weightChangesBorders = new PictureBox();
+            errorPanel = new Panel();
+            settingErrorLabel = new Label();
+            errorClose = new PictureBox();
+            errorLabel = new Label();
+            settingsError = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)hLine1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)hLine2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)vLine2).BeginInit();
@@ -91,6 +96,9 @@
             ((System.ComponentModel.ISupportInitialize)graphBorders).BeginInit();
             weightChangesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)weightChangesBorders).BeginInit();
+            errorPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)settingsError).BeginInit();
             SuspendLayout();
             // 
             // hLine1
@@ -475,6 +483,7 @@
             weightChangesTextBox.Location = new Point(66, 67);
             weightChangesTextBox.MaxLength = 4;
             weightChangesTextBox.Name = "weightChangesTextBox";
+            weightChangesTextBox.PlaceholderText = "ex. 0.3";
             weightChangesTextBox.Size = new Size(41, 23);
             weightChangesTextBox.TabIndex = 1;
             // 
@@ -497,11 +506,69 @@
             weightChangesBorders.TabIndex = 5;
             weightChangesBorders.TabStop = false;
             // 
+            // errorPanel
+            // 
+            errorPanel.Controls.Add(settingErrorLabel);
+            errorPanel.Controls.Add(errorClose);
+            errorPanel.Controls.Add(errorLabel);
+            errorPanel.Controls.Add(settingsError);
+            errorPanel.Location = new Point(227, 120);
+            errorPanel.Name = "errorPanel";
+            errorPanel.Size = new Size(237, 128);
+            errorPanel.TabIndex = 51;
+            errorPanel.Visible = false;
+            // 
+            // settingErrorLabel
+            // 
+            settingErrorLabel.BackColor = Color.WhiteSmoke;
+            settingErrorLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            settingErrorLabel.Location = new Point(24, 50);
+            settingErrorLabel.Name = "settingErrorLabel";
+            settingErrorLabel.Size = new Size(188, 36);
+            settingErrorLabel.TabIndex = 2;
+            settingErrorLabel.Text = "You have input incorrect\r\ndata!";
+            settingErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // errorClose
+            // 
+            errorClose.BackColor = Color.WhiteSmoke;
+            errorClose.Image = Properties.Resources.closebutton;
+            errorClose.Location = new Point(207, 9);
+            errorClose.Name = "errorClose";
+            errorClose.Size = new Size(19, 19);
+            errorClose.SizeMode = PictureBoxSizeMode.Zoom;
+            errorClose.TabIndex = 34;
+            errorClose.TabStop = false;
+            errorClose.Click += errorClose_Click;
+            errorClose.MouseEnter += errorClose_MouseEnter;
+            errorClose.MouseLeave += errorClose_MouseLeave;
+            // 
+            // errorLabel
+            // 
+            errorLabel.BackColor = Color.WhiteSmoke;
+            errorLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            errorLabel.Location = new Point(81, 29);
+            errorLabel.Name = "errorLabel";
+            errorLabel.Size = new Size(75, 19);
+            errorLabel.TabIndex = 1;
+            errorLabel.Text = "Error";
+            errorLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // settingsError
+            // 
+            settingsError.Image = Properties.Resources.errorPanel;
+            settingsError.Location = new Point(0, 0);
+            settingsError.Name = "settingsError";
+            settingsError.Size = new Size(237, 128);
+            settingsError.TabIndex = 0;
+            settingsError.TabStop = false;
+            // 
             // home
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.White;
             ClientSize = new Size(690, 368);
+            Controls.Add(errorPanel);
             Controls.Add(weightChangesPanel);
             Controls.Add(dietChart);
             Controls.Add(graphBorders);
@@ -535,6 +602,9 @@
             weightChangesPanel.ResumeLayout(false);
             weightChangesPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)weightChangesBorders).EndInit();
+            errorPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)settingsError).EndInit();
             ResumeLayout(false);
         }
 
@@ -571,5 +641,10 @@
         private Label todaysDate;
         private Guna.UI2.WinForms.Guna2Button weightChangesButton;
         private PictureBox weightChangesBorders;
+        private Panel errorPanel;
+        private Label settingErrorLabel;
+        private PictureBox errorClose;
+        private Label errorLabel;
+        private PictureBox settingsError;
     }
 }

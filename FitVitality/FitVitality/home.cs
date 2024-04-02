@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Aspose.Imaging.FileFormats.Emf.Emf.Records;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,6 +41,8 @@ namespace FitVitality
                 weightChangesButton.Text = "Change";
                 workoutCompletedCheckBox.Text = "Completed";
                 dietChart.Titles["Diet"].Text = "This week`s goals %";
+                errorLabel.Text = "Error";
+                settingErrorLabel.Text = "You have input incorrect data!";
                 dietChart.Series["WeeklyGoals"].Points[0].AxisLabel = "Mon";
                 dietChart.Series["WeeklyGoals"].Points[1].AxisLabel = "Tue";
                 dietChart.Series["WeeklyGoals"].Points[2].AxisLabel = "Wed";
@@ -47,6 +50,7 @@ namespace FitVitality
                 dietChart.Series["WeeklyGoals"].Points[4].AxisLabel = "Fri";
                 dietChart.Series["WeeklyGoals"].Points[5].AxisLabel = "Sat";
                 dietChart.Series["WeeklyGoals"].Points[6].AxisLabel = "Sun";
+                weightChangesTextBox.PlaceholderText = "ex. 0.3";
             }
             if (cfg.Read("Language", "SETTINGS") == "bg")
             {
@@ -56,6 +60,8 @@ namespace FitVitality
                 weightChangesButton.Text = "Промяна";
                 workoutCompletedCheckBox.Text = "Завършена";
                 dietChart.Titles["Diet"].Text = "Седмични цели %";
+                errorLabel.Text = "Грешка";
+                settingErrorLabel.Text = "Въвели сте грешни данни!";
                 dietChart.Series["WeeklyGoals"].Points[0].AxisLabel = "Пон";
                 dietChart.Series["WeeklyGoals"].Points[1].AxisLabel = "Вт";
                 dietChart.Series["WeeklyGoals"].Points[2].AxisLabel = "Ср";
@@ -63,6 +69,7 @@ namespace FitVitality
                 dietChart.Series["WeeklyGoals"].Points[4].AxisLabel = "Пет";
                 dietChart.Series["WeeklyGoals"].Points[5].AxisLabel = "Съб";
                 dietChart.Series["WeeklyGoals"].Points[6].AxisLabel = "Нед";
+                weightChangesTextBox.PlaceholderText = "пр. 0.3";
             }
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -595,18 +602,39 @@ namespace FitVitality
                     }
                 }
             }
-            double weight = weightChangesTextBox.Text != "" ? double.Parse(weightChangesTextBox.Text) : 0;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                string query = "UPDATE UserSettings SET Weight = @Weight WHERE UserID = @UserID";
-                using (SqlCommand command = new SqlCommand(query, connection))
+                double weight = weightChangesTextBox.Text != "" ? double.Parse(weightChangesTextBox.Text) : 0;
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    command.Parameters.AddWithValue("@UserID", _userID);
-                    command.Parameters.AddWithValue("@Weight", dbWeight + weight);
-                    command.ExecuteNonQuery();
+                    connection.Open();
+                    string query = "UPDATE UserSettings SET Weight = @Weight WHERE UserID = @UserID";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@UserID", _userID);
+                        command.Parameters.AddWithValue("@Weight", dbWeight + weight);
+                        command.ExecuteNonQuery();
+                    }
                 }
             }
+            catch (FormatException)
+            {
+                errorPanel.Visible = true;
+            }
+        }
+
+        private void errorClose_Click(object sender, EventArgs e)
+        {
+            errorPanel.Visible = false;
+        }
+        private void errorClose_MouseEnter(object sender, EventArgs e)
+        {
+            errorClose.BackColor = Color.IndianRed;
+        }
+
+        private void errorClose_MouseLeave(object sender, EventArgs e)
+        {
+            errorClose.BackColor = Color.WhiteSmoke;
         }
     }
 }

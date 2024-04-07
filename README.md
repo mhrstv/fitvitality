@@ -1,1 +1,55 @@
 # FitVitality
+
+FitVitality is a comprehensive fitness and health companion designed to help users achieve their wellness goals by providing personalized guidance, tracking, and motivation.
+
+## Features
+
+- **Personalized Workouts:** Tailored exercise routines based on user preferences, fitness level, and goals.
+- **Nutrition Tracking:** Easily log and monitor daily food intake, with nutritional breakdowns for better dietary management.
+- **Activity Tracking:** Record daily activities and monitor progress over time, including steps taken, distance covered, and calories burned.
+- **Goal Setting:** Set specific fitness and health goals, track progress, and receive actionable insights to stay on track.
+
+## Installation
+
+1. Download the latest release
+2. Install dependencies
+3. Open the installer and finish the setup
+
+## Usage
+
+1. Register or log in to your FitVitality account.
+2. Set up your profile by providing basic information such as age, gender, weight, and fitness goals.
+3. Explore the various features available, such as personalized workouts, nutrition tracking, and activity monitoring.
+4. Track your progress over time and adjust your routines and goals accordingly.
+5. Engage with the community, participate in challenges, and share your journey for added motivation.
+
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to FitVitality, please follow these steps:
+
+1. Fork the repository.
+2. Create your feature branch: `git checkout -b feature/new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Submit a pull request.
+
+## Support
+
+If you encounter any issues or have any questions or suggestions, please feel free to open an issue on the GitHub repository.
+
+## License
+
+This project is licensed under the GNU 3.0 License.
+
+## Acknowledgements
+
+FitVitality would like to acknowledge the following libraries and resources used in development:
+
+- [C#](https://dotnet.microsoft.com/en-us/languages/csharp)
+- [.NET](https://dotnet.microsoft.com/en-us/)
+- [Guna Framework](https://gunaui.com/)
+- [Krypton](https://github.com/Krypton-Suite/Standard-Toolkit)
+- [WinForms DataVisualization](https://github.com/kirsan31/winforms-datavisualization)
+- [Aspose Imaging](https://products.aspose.com/imaging/)
+- [Calculator.net](https://www.calculator.net/)
+- [Nutritionix.com](https://www.nutritionix.com/database)

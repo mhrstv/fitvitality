@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_713A9E1F178141B8A618F90428A8D1A2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_780DE548DDC5465E814643BA112ACC9B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -28,6 +22,12 @@
         "Entry"
         {
         "MsmKey" = "8:_96BE512D7490454F93B861E2ED7AEEE0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D2158FCB2C39417586AA423118AE1750"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -345,7 +345,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_1EA94E8E5D074E639A3ED7A59B9704E8"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_949319FD42EE42F5A6EE5452F573495E"
             {
             "Name" = "8:FitVitality"
             "Arguments" = "8:"
@@ -353,13 +353,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_713A9E1F178141B8A618F90428A8D1A2"
+            "Target" = "8:_D2158FCB2C39417586AA423118AE1750"
             "Folder" = "8:_C2D3D57D22A0475E860EDC698C08B925"
             "WorkingFolder" = "8:_BDEFED3A6E184D7B8C34AAC1E181E637"
             "Icon" = "8:_96BE512D7490454F93B861E2ED7AEEE0"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_414C273BB7754A5A837B58D7B2605561"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F5251D94D5B94A8ABEF141FB87AC851A"
             {
             "Name" = "8:FitVitality"
             "Arguments" = "8:"
@@ -367,7 +367,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_713A9E1F178141B8A618F90428A8D1A2"
+            "Target" = "8:_D2158FCB2C39417586AA423118AE1750"
             "Folder" = "8:_3532A9C6846A4F66AA0E672BF960B80B"
             "WorkingFolder" = "8:_BDEFED3A6E184D7B8C34AAC1E181E637"
             "Icon" = "8:_96BE512D7490454F93B861E2ED7AEEE0"
@@ -772,7 +772,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_713A9E1F178141B8A618F90428A8D1A2"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D2158FCB2C39417586AA423118AE1750"
             {
             "SourcePath" = "8:..\\FitVitality\\obj\\Debug\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"

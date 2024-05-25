@@ -66,6 +66,11 @@
             passHidden = new PictureBox();
             passShown = new PictureBox();
             buttonLogin = new Guna.UI2.WinForms.Guna2Button();
+            panel1 = new Panel();
+            settingErrorLabel = new Label();
+            errorClose = new PictureBox();
+            errorLabel = new Label();
+            settingsError = new PictureBox();
             topbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)vBorder2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logo1).BeginInit();
@@ -86,6 +91,9 @@
             ((System.ComponentModel.ISupportInitialize)vBorder4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passHidden).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passShown).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorClose).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)settingsError).BeginInit();
             SuspendLayout();
             // 
             // kryptonPalette1
@@ -368,6 +376,7 @@
             errorPanel.Name = "errorPanel";
             errorPanel.Size = new Size(199, 0);
             errorPanel.TabIndex = 11;
+            errorPanel.Visible = false;
             // 
             // logError
             // 
@@ -492,11 +501,69 @@
             buttonLogin.Text = "Login";
             buttonLogin.Click += kryptonButton1_Click;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(settingErrorLabel);
+            panel1.Controls.Add(errorClose);
+            panel1.Controls.Add(errorLabel);
+            panel1.Controls.Add(settingsError);
+            panel1.Location = new Point(25, 143);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(237, 128);
+            panel1.TabIndex = 51;
+            panel1.Visible = false;
+            // 
+            // settingErrorLabel
+            // 
+            settingErrorLabel.BackColor = Color.WhiteSmoke;
+            settingErrorLabel.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            settingErrorLabel.ForeColor = Color.Black;
+            settingErrorLabel.Location = new Point(24, 50);
+            settingErrorLabel.Name = "settingErrorLabel";
+            settingErrorLabel.Size = new Size(188, 58);
+            settingErrorLabel.TabIndex = 2;
+            settingErrorLabel.Text = "The server is currently unavailable or you are not able to connect properly.";
+            settingErrorLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // errorClose
+            // 
+            errorClose.BackColor = Color.WhiteSmoke;
+            errorClose.Image = Properties.Resources.closebutton;
+            errorClose.Location = new Point(207, 9);
+            errorClose.Name = "errorClose";
+            errorClose.Size = new Size(19, 19);
+            errorClose.SizeMode = PictureBoxSizeMode.Zoom;
+            errorClose.TabIndex = 34;
+            errorClose.TabStop = false;
+            errorClose.Click += errorClose_Click;
+            // 
+            // errorLabel
+            // 
+            errorLabel.BackColor = Color.WhiteSmoke;
+            errorLabel.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            errorLabel.ForeColor = Color.Black;
+            errorLabel.Location = new Point(24, 29);
+            errorLabel.Name = "errorLabel";
+            errorLabel.Size = new Size(188, 19);
+            errorLabel.TabIndex = 1;
+            errorLabel.Text = "Connection Error";
+            errorLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // settingsError
+            // 
+            settingsError.Image = Properties.Resources.errorPanel;
+            settingsError.Location = new Point(0, 0);
+            settingsError.Name = "settingsError";
+            settingsError.Size = new Size(237, 128);
+            settingsError.TabIndex = 0;
+            settingsError.TabStop = false;
+            // 
             // Login
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(250, 252, 252);
             ClientSize = new Size(287, 415);
+            Controls.Add(panel1);
             Controls.Add(buttonLogin);
             Controls.Add(vBorder3);
             Controls.Add(vBorder4);
@@ -555,6 +622,9 @@
             ((System.ComponentModel.ISupportInitialize)vBorder4).EndInit();
             ((System.ComponentModel.ISupportInitialize)passHidden).EndInit();
             ((System.ComponentModel.ISupportInitialize)passShown).EndInit();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)errorClose).EndInit();
+            ((System.ComponentModel.ISupportInitialize)settingsError).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -594,5 +664,10 @@
         private PictureBox passShown;
         private Guna.UI2.WinForms.Guna2CircleButton buttonClose;
         private Guna.UI2.WinForms.Guna2Button buttonLogin;
+        private Panel panel1;
+        private Label settingErrorLabel;
+        private PictureBox errorClose;
+        private Label errorLabel;
+        private PictureBox settingsError;
     }
 }

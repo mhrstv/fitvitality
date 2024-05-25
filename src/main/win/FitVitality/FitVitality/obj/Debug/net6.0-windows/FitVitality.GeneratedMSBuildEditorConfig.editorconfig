@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FitVitality
-build_property.ProjectDir = E:\Project\fitvitality-win\FitVitality\FitVitality\
+build_property.ProjectDir = E:\Project\fitvitality\src\main\win\FitVitality\FitVitality\

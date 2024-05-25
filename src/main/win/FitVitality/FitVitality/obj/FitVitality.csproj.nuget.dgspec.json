@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Project\\fitvitality-win\\FitVitality\\FitVitality\\FitVitality.csproj": {}
+    "E:\\Project\\fitvitality\\src\\main\\win\\FitVitality\\FitVitality\\FitVitality.csproj": {}
   },
   "projects": {
-    "E:\\Project\\fitvitality-win\\FitVitality\\FitVitality\\FitVitality.csproj": {
+    "E:\\Project\\fitvitality\\src\\main\\win\\FitVitality\\FitVitality\\FitVitality.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Project\\fitvitality-win\\FitVitality\\FitVitality\\FitVitality.csproj",
+        "projectUniqueName": "E:\\Project\\fitvitality\\src\\main\\win\\FitVitality\\FitVitality\\FitVitality.csproj",
         "projectName": "FitVitality",
-        "projectPath": "E:\\Project\\fitvitality-win\\FitVitality\\FitVitality\\FitVitality.csproj",
+        "projectPath": "E:\\Project\\fitvitality\\src\\main\\win\\FitVitality\\FitVitality\\FitVitality.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "E:\\Project\\fitvitality-win\\FitVitality\\FitVitality\\obj\\",
+        "outputPath": "E:\\Project\\fitvitality\\src\\main\\win\\FitVitality\\FitVitality\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

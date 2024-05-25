@@ -30,7 +30,7 @@ namespace FitVitality
 
         public string _userID;
 
-        const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
+        const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 11009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
         //Метод за зареждане на форми в главния прозорец
         public void loadForm(object Form)
         {

@@ -19,6 +19,7 @@ using System.Diagnostics;
 using System.Net.Sockets;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace FitVitality
 {
@@ -27,7 +28,7 @@ namespace FitVitality
         private bool mouseDown;
         private Point lastLocation;
         public string userID;
-        const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 10009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
+        const string connectionString = @"Server=tcp: mssql-163547-0.cloudclusters.net, 11009;Initial Catalog=FitVitality;User ID=Member;Password=Userpass123!;Connection Timeout=30;TrustServerCertificate=True";
         public Login()
         {
             InitializeComponent();
@@ -160,6 +161,8 @@ namespace FitVitality
                     }
                 }
             }
+            
+
             if (login)
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -405,6 +408,11 @@ namespace FitVitality
         private void logo1_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
+        }
+
+        private void errorClose_Click(object sender, EventArgs e)
+        {
+            errorPanel.Visible = false;
         }
     }
 }

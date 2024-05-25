@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6cf6wWPc0CV5ybqKi4v/+42nHf6GOZW9W4z0hg+VG3JslJ1KcY1EsVw105SLlfynay8qZ/h969JSkzTc57/wQQ==",
+  "dgSpecHash": "YxjYtSafK3Xh1VB8W/YA2Cx5BdR36dQlm/ceIsbDN4H72zn6ZsTvQpgRVqho/RZrqUO0PpyHkhd2pYf4CdQTtQ==",
   "success": true,
-  "projectFilePath": "E:\\Project\\fitvitality-win\\FitVitality\\FitVitality\\FitVitality.csproj",
+  "projectFilePath": "E:\\Project\\fitvitality\\src\\main\\win\\FitVitality\\FitVitality\\FitVitality.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\aspose.imaging\\23.12.0\\aspose.imaging.23.12.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

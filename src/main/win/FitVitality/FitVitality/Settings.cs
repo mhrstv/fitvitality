@@ -455,7 +455,7 @@ namespace FitVitality
             {
                 errorPanel.Visible = true;
             }
-            
+
         }
         //Метод за промяна на езика
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)

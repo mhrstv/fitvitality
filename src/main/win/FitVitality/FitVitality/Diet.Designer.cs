@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Diet));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             leftC = new PictureBox();
             rightC = new PictureBox();
             vLine1 = new PictureBox();
@@ -298,7 +298,7 @@
             // 
             activityLevelLabel.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             activityLevelLabel.ForeColor = Color.Black;
-            activityLevelLabel.Location = new Point(13, 114);
+            activityLevelLabel.Location = new Point(3, 114);
             activityLevelLabel.Name = "activityLevelLabel";
             activityLevelLabel.Size = new Size(79, 15);
             activityLevelLabel.TabIndex = 42;
@@ -450,7 +450,7 @@
             activityComboBox.BackColor = Color.Transparent;
             activityComboBox.BorderColor = Color.FromArgb(92, 225, 230);
             activityComboBox.BorderRadius = 8;
-            activityComboBox.CustomizableEdges = customizableEdges11;
+            activityComboBox.CustomizableEdges = customizableEdges1;
             activityComboBox.DrawMode = DrawMode.OwnerDrawFixed;
             activityComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
             activityComboBox.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -461,10 +461,10 @@
             activityComboBox.Items.AddRange(new object[] { "Sedentary", "Light", "Moderate", "Active", "Very active", "Extra active" });
             activityComboBox.ItemsAppearance.Font = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             activityComboBox.ItemsAppearance.SelectedFont = new Font("Calibri", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
-            activityComboBox.Location = new Point(94, 110);
+            activityComboBox.Location = new Point(81, 110);
             activityComboBox.Name = "activityComboBox";
-            activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            activityComboBox.Size = new Size(119, 24);
+            activityComboBox.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            activityComboBox.Size = new Size(137, 24);
             activityComboBox.TabIndex = 58;
             activityComboBox.SelectedIndexChanged += activityComboBox_SelectedIndexChanged;
             activityComboBox.Click += activityComboBox_Click_1;
@@ -477,9 +477,9 @@
             balancedButton.CheckedState.BorderColor = Color.Black;
             balancedButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
             balancedButton.CheckedState.ForeColor = Color.Black;
-            customizableEdges13.BottomLeft = false;
-            customizableEdges13.BottomRight = false;
-            balancedButton.CustomizableEdges = customizableEdges13;
+            customizableEdges3.BottomLeft = false;
+            customizableEdges3.BottomRight = false;
+            balancedButton.CustomizableEdges = customizableEdges3;
             balancedButton.DisabledState.BorderColor = Color.DarkGray;
             balancedButton.DisabledState.CustomBorderColor = Color.DarkGray;
             balancedButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -489,7 +489,7 @@
             balancedButton.ForeColor = Color.Black;
             balancedButton.Location = new Point(50, 152);
             balancedButton.Name = "balancedButton";
-            balancedButton.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            balancedButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
             balancedButton.Size = new Size(121, 28);
             balancedButton.TabIndex = 59;
             balancedButton.Text = "Balanced";
@@ -503,11 +503,11 @@
             lowCarbsButton.CheckedState.BorderColor = Color.Black;
             lowCarbsButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
             lowCarbsButton.CheckedState.ForeColor = Color.Black;
-            customizableEdges15.BottomLeft = false;
-            customizableEdges15.BottomRight = false;
-            customizableEdges15.TopLeft = false;
-            customizableEdges15.TopRight = false;
-            lowCarbsButton.CustomizableEdges = customizableEdges15;
+            customizableEdges5.BottomLeft = false;
+            customizableEdges5.BottomRight = false;
+            customizableEdges5.TopLeft = false;
+            customizableEdges5.TopRight = false;
+            lowCarbsButton.CustomizableEdges = customizableEdges5;
             lowCarbsButton.DisabledState.BorderColor = Color.DarkGray;
             lowCarbsButton.DisabledState.CustomBorderColor = Color.DarkGray;
             lowCarbsButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -517,7 +517,7 @@
             lowCarbsButton.ForeColor = Color.Black;
             lowCarbsButton.Location = new Point(50, 206);
             lowCarbsButton.Name = "lowCarbsButton";
-            lowCarbsButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            lowCarbsButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
             lowCarbsButton.Size = new Size(121, 28);
             lowCarbsButton.TabIndex = 60;
             lowCarbsButton.Text = "Low-carbs";
@@ -531,11 +531,11 @@
             highProteinButton.CheckedState.BorderColor = Color.Black;
             highProteinButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
             highProteinButton.CheckedState.ForeColor = Color.Black;
-            customizableEdges17.BottomLeft = false;
-            customizableEdges17.BottomRight = false;
-            customizableEdges17.TopLeft = false;
-            customizableEdges17.TopRight = false;
-            highProteinButton.CustomizableEdges = customizableEdges17;
+            customizableEdges7.BottomLeft = false;
+            customizableEdges7.BottomRight = false;
+            customizableEdges7.TopLeft = false;
+            customizableEdges7.TopRight = false;
+            highProteinButton.CustomizableEdges = customizableEdges7;
             highProteinButton.DisabledState.BorderColor = Color.DarkGray;
             highProteinButton.DisabledState.CustomBorderColor = Color.DarkGray;
             highProteinButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -545,7 +545,7 @@
             highProteinButton.ForeColor = Color.Black;
             highProteinButton.Location = new Point(50, 179);
             highProteinButton.Name = "highProteinButton";
-            highProteinButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            highProteinButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             highProteinButton.Size = new Size(121, 28);
             highProteinButton.TabIndex = 61;
             highProteinButton.Text = "High-protein";
@@ -559,9 +559,9 @@
             lowFatButton.CheckedState.BorderColor = Color.Black;
             lowFatButton.CheckedState.FillColor = Color.FromArgb(92, 225, 230);
             lowFatButton.CheckedState.ForeColor = Color.Black;
-            customizableEdges19.TopLeft = false;
-            customizableEdges19.TopRight = false;
-            lowFatButton.CustomizableEdges = customizableEdges19;
+            customizableEdges9.TopLeft = false;
+            customizableEdges9.TopRight = false;
+            lowFatButton.CustomizableEdges = customizableEdges9;
             lowFatButton.DisabledState.BorderColor = Color.DarkGray;
             lowFatButton.DisabledState.CustomBorderColor = Color.DarkGray;
             lowFatButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -571,7 +571,7 @@
             lowFatButton.ForeColor = Color.Black;
             lowFatButton.Location = new Point(50, 233);
             lowFatButton.Name = "lowFatButton";
-            lowFatButton.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            lowFatButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
             lowFatButton.Size = new Size(121, 28);
             lowFatButton.TabIndex = 62;
             lowFatButton.Text = "Low-fat";

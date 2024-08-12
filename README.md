@@ -1,5 +1,5 @@
 # FitVitality
-
+<h6>Please have in mind that the tools and software used are out-of-date and mostly not as user-friendly as somebody would want to. This is just a simple, clamped project.</h6>
 FitVitality is a comprehensive fitness and health companion designed to help users achieve their wellness goals by providing personalized guidance, tracking, and motivation.
 
 ## Features
